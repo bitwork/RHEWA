@@ -860,7 +860,9 @@ Public Class uco_7EichprotokollDaten
     End Sub
 
 #Region "Prüfscheinnummern"
+    Private ListPruefscheinnnummernGesperrt As List(Of StatusPrüfscheinnummer)
     Private ListPruefscheinnnummern As List(Of StatusPrüfscheinnummer)
+
     Private Sub CheckPruefscheinnummer(sender As Object)
         Try
             Dim txt As Telerik.WinControls.UI.RadTextBox = DirectCast(sender, Telerik.WinControls.UI.RadTextBox)
@@ -875,11 +877,13 @@ Public Class uco_7EichprotokollDaten
     Private Sub BackgroundWorkerPruefscheinnummern_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorkerPruefscheinnummern.DoWork
         If ListPruefscheinnnummern Is Nothing Then
             ListPruefscheinnnummern = clsWebserviceFunctions.GetStatusPruefscheinnummern()
+            ListPruefscheinnnummernGesperrt = (From o In ListPruefscheinnnummern Where o.Gesperrt = True Or o.GesperrtDurchDatum = True).ToList
+            ListPruefscheinnnummern = (From o In ListPruefscheinnnummern Where o.Gesperrt = False And o.GesperrtDurchDatum = False).ToList
         End If
-        Dim Vergleichswerte = RadTextBoxControlNormalienPruefscheinnummer.Text.Replace(",", ";")
+        Dim Vergleichswerte = RadTextBoxControlNormalienPruefscheinnummer.Text.Replace(",", ";").Replace(" ", "").Trim
         Try
             Dim ArrVergleichswerte = Vergleichswerte.Split(";")
-            Dim results = (From o In ListPruefscheinnnummern Where ArrVergleichswerte.Contains(o.Nummer)).ToList
+            Dim results = (From o In ListPruefscheinnnummernGesperrt Where ArrVergleichswerte.Contains(o.Nummer)).ToList
             Dim negativeResults = (From o In ArrVergleichswerte Where Not ListPruefscheinnnummern.Select(Function(c) c.Nummer.ToString).Contains(o)).ToList
 
             'e.Result = results
@@ -896,6 +900,7 @@ Public Class uco_7EichprotokollDaten
             Next
 
             For Each result In negativeResults
+                If result = "" Then Continue For
                 returnString += String.Format("Das Gewicht mit der Nummer {0} wurde nicht gefunden.", result) & vbNewLine & vbNewLine
             Next
             e.Result = returnString

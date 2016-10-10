@@ -189,7 +189,8 @@
 </value>
   </data>
   <data name="lblPunkt4I3.Text" xml:space="preserve">
-    <value>i = 3</value>
+    <value>i = 
+3</value>
   </data>
   <data name="RadGroupBoxPunkt4.HeaderText" xml:space="preserve">
     <value>(4) Größte zul. Anzahl der Teilungswerte des AWG und Anzahl der Eichwerte der NSW
@@ -286,8 +287,7 @@
 </value>
   </data>
   <data name="RadGroupBoxPunkt10.Text" xml:space="preserve">
-    <value>(10) Verlängerungskabel zum Anschluss der WZ: Kabellänge pro Leiterquerschnitt  in  m/mm²
-</value>
+    <value>(10) Verlängerungskabel zum Anschluss der WZ: Kabellänge pro Leiterquerschnitt  in  m/mm²</value>
   </data>
   <data name="lblFabriknummer.Size" type="System.Drawing.Size, System.Drawing">
     <value>73, 21</value>

@@ -142,4 +142,55 @@
   <data name="RadGroupBox4.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
+  <data name="RadGroupBox1.HeaderText" xml:space="preserve">
+    <value>DE</value>
+  </data>
+  <data name="RadGroupBox1.Text" xml:space="preserve">
+    <value>DE</value>
+  </data>
+  <data name="RadGroupBox2.HeaderText" xml:space="preserve">
+    <value>EN</value>
+  </data>
+  <data name="RadGroupBox2.Text" xml:space="preserve">
+    <value>EN</value>
+  </data>
+  <data name="RadButtonExportEichprozessDE.Text" xml:space="preserve">
+    <value>Export Eichprozess DE</value>
+  </data>
+  <data name="RadButtonExportErstEichungDE.Text" xml:space="preserve">
+    <value>Export Ersteichung DE </value>
+  </data>
+  <data name="RadButtonExportErstEichungEN.Text" xml:space="preserve">
+    <value>Export Ersteichung EN</value>
+  </data>
+  <data name="RadButtonExportErstEichungPL.Text" xml:space="preserve">
+    <value>Eksport legalizacji pierwotnej PL</value>
+  </data>
+  <data name="RadButtonExportKompatibliaetsnachweisEN.Text" xml:space="preserve">
+    <value>Export Kompatibilitätsnachweis EN</value>
+  </data>
+  <data name="RadButtonExportKonformitaetserklaerungDE.Text" xml:space="preserve">
+    <value>Export Konformitätserklärung DE</value>
+  </data>
+  <data name="RadButtonExportKonformitaetserklaerungPL.Text" xml:space="preserve">
+    <value>Eksport świadectwa zgodności PL </value>
+  </data>
+  <data name="RadButtonExportKonformitaetserklaerungRO.Text" xml:space="preserve">
+    <value>Export Konformitätserklärung RO </value>
+  </data>
+  <data name="RadButtonExportKompatibliaetsnachweisDE.Text" xml:space="preserve">
+    <value>ExportKompatibilitätsnachweis DE </value>
+  </data>
+  <data name="RadGroupBox3.HeaderText" xml:space="preserve">
+    <value>PL</value>
+  </data>
+  <data name="RadGroupBox3.Text" xml:space="preserve">
+    <value>PL</value>
+  </data>
+  <data name="RadGroupBox4.HeaderText" xml:space="preserve">
+    <value>RO</value>
+  </data>
+  <data name="RadGroupBox4.Text" xml:space="preserve">
+    <value>RO</value>
+  </data>
 </root>

@@ -199,8 +199,7 @@
     <value>GBL</value>
   </data>
   <data name="lblMessOrtBereich3.Text" xml:space="preserve">
-    <value>templesendalles
-</value>
+    <value>Miejsca obciążeniowe</value>
   </data>
   <data name="lblBereich3FehlerGrenzen.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 33</value>
@@ -234,8 +233,7 @@
 </value>
   </data>
   <data name="lblMessOrtBereich2.Text" xml:space="preserve">
-    <value>templesendalles
-</value>
+    <value>Miejsca obciążeniowe</value>
   </data>
   <data name="lblBereich2FehlerGrenzen.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 33</value>
@@ -269,7 +267,7 @@
 </value>
   </data>
   <data name="lblMessOrtBereich1.Text" xml:space="preserve">
-    <value>templesendalles
+    <value>Miejsca obciążeniowe
 </value>
   </data>
   <data name="lblBereich1FehlerGrenzen.Size" type="System.Drawing.Size, System.Drawing">
@@ -308,5 +306,23 @@
   </data>
   <data name="RadGroupBoxPruefungAussermittigeBelastung.Text" xml:space="preserve">
     <value>Badanie przy mimośrodowym obciążeniu</value>
+  </data>
+  <data name="RadGroupBoxBereich1.HeaderText" xml:space="preserve">
+    <value>Zakres 1 </value>
+  </data>
+  <data name="RadGroupBoxBereich1.Text" xml:space="preserve">
+    <value>Zakres 1</value>
+  </data>
+  <data name="RadGroupBoxBereich2.HeaderText" xml:space="preserve">
+    <value>Zakres 2</value>
+  </data>
+  <data name="RadGroupBoxBereich2.Text" xml:space="preserve">
+    <value>Zakres 2</value>
+  </data>
+  <data name="RadGroupBoxBereich3.HeaderText" xml:space="preserve">
+    <value>Zakres 3</value>
+  </data>
+  <data name="RadGroupBoxBereich3.Text" xml:space="preserve">
+    <value>Zakres 3</value>
   </data>
 </root>

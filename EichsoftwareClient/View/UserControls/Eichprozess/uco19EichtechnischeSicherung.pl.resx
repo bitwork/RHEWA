@@ -128,7 +128,7 @@
     <value>175, 18</value>
   </data>
   <data name="lblEichsiegel13x13.Text" xml:space="preserve">
-    <value>Naklejka "Cecha legalizacji" 14x14</value>
+    <value>Naklejka "Cecha legalizacji" 13x13</value>
   </data>
   <data name="lblEichsiegelRund.Size" type="System.Drawing.Size, System.Drawing">
     <value>183, 18</value>
@@ -174,5 +174,14 @@
   </data>
   <data name="lblAnzahl.Text" xml:space="preserve">
     <value>Ilość</value>
+  </data>
+  <data name="lblBenannteStelle.Text" xml:space="preserve">
+    <value>Naklejka "Jednostka notyfikacyjna"</value>
+  </data>
+  <data name="lblCEKennzeichen.Text" xml:space="preserve">
+    <value>Oznaczenie CE</value>
+  </data>
+  <data name="lblGruenesM.Text" xml:space="preserve">
+    <value>Zielone "M"</value>
   </data>
 </root>

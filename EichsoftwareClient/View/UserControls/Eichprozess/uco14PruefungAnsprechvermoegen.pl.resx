@@ -154,4 +154,16 @@
   <data name="lblLastBeschreibung.Text" xml:space="preserve">
     <value>Postawić należy odpowiednie obciążenie. Przy zawyżeniu obciążenia o 1d musi nastąpić przeskok cyfry.</value>
   </data>
+  <data name="RadLabel3.Text" xml:space="preserve">
+    <value>Max.</value>
+  </data>
+  <data name="RadLabel1.Text" xml:space="preserve">
+    <value>Min.</value>
+  </data>
+  <data name="RadLabel4.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="RadButtonShowEFG.Text" xml:space="preserve">
+    <value>Pokarz GBL</value>
+  </data>
 </root>

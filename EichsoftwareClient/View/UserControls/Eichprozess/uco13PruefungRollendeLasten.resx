@@ -1830,4 +1830,7 @@
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.6108.20583, Culture=neutral, PublicKeyToken=null</value>
   </data>
+  <data name="lblEichfehlergrenze.Text" xml:space="preserve">
+    <value>The verification error limits are behold</value>
+  </data>
 </root>

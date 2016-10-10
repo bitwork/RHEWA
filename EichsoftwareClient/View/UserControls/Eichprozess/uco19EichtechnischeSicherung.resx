@@ -442,7 +442,7 @@
     <value>5</value>
   </data>
   <data name="lblEichsiegel13x13.Text" xml:space="preserve">
-    <value>verification marking "Eichsiegel 14x14"</value>
+    <value>verification marking "Eichsiegel 13x13"</value>
   </data>
   <data name="&gt;&gt;lblEichsiegel13x13.Name" xml:space="preserve">
     <value>lblEichsiegel13x13</value>
@@ -1046,5 +1046,14 @@
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.6109.26419, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="lblBenannteStelle.Text" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="lblCEKennzeichen.Text" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="lblGruenesM.Text" xml:space="preserve">
+    <value></value>
   </data>
 </root>

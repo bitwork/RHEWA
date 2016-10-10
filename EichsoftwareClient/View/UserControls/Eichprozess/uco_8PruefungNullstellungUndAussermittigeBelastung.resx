@@ -9759,4 +9759,10 @@
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.6108.21803, Culture=neutral, PublicKeyToken=null</value>
   </data>
+  <data name="RadLabel15.Text" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="RadLabel34.Text" xml:space="preserve">
+    <value>Center</value>
+  </data>
 </root>

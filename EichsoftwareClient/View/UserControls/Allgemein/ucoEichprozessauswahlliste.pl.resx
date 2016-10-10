@@ -133,4 +133,58 @@
   <data name="RadCheckBoxAusblendenGeloeschterDokumente.Text" xml:space="preserve">
     <value>Polnisch</value>
   </data>
+  <data name="RadButtonEichprozessAblehnenRHEWA.Text" xml:space="preserve">
+    <value>Odrzucić</value>
+  </data>
+  <data name="RadPageViewPageAlle.Text" xml:space="preserve">
+    <value>Wszystkie</value>
+  </data>
+  <data name="RadCheckBoxLadeAlleEichprozesse.Text" xml:space="preserve">
+    <value>Wszystkie załadować ( niezależnie od filtra)</value>
+  </data>
+  <data name="RadButtonEichungAnsehenRHEWA.Text" xml:space="preserve">
+    <value>Popatrz</value>
+  </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>do</value>
+  </data>
+  <data name="RadPageViewPageEigene.Text" xml:space="preserve">
+    <value>Własne</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Filtrowanie według miesiąca uploadu</value>
+  </data>
+  <data name="RadButtonEichprozessGenehmigenRHEWA.Text" xml:space="preserve">
+    <value>Zezwolić</value>
+  </data>
+  <data name="RadButtonEichprozessKopierenRHEWA.Text" xml:space="preserve">
+    <value>Skopiować</value>
+  </data>
+  <data name="RadButtonRefresh.Text" xml:space="preserve">
+    <value>Zaktualizować listę</value>
+  </data>
+  <data name="RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.CustomFormat" xml:space="preserve">
+    <value>MM.rrrr</value>
+  </data>
+  <data name="RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.CustomFormat" xml:space="preserve">
+    <value>MM.rrrr</value>
+  </data>
+  <data name="RadPageView1.Text" xml:space="preserve">
+    <value>własne</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>z</value>
+  </data>
+  <data name="RadCheckBoxAusblendenClientGeloeschterDokumente.Text" xml:space="preserve">
+    <value>&lt;html&gt;  Wskazać uprzednio &lt;br /&gt;  uktyte procesy legalizacji&lt;/html&gt;</value>
+  </data>
+  <data name="RadButtonClientNeu.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;Tworzenie&lt;/p&gt;&lt;p&gt;procesu&lt;/p&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="RadButtonClientAusblenden.Text" xml:space="preserve">
+    <value>Proces schować</value>
+  </data>
+  <data name="RadButtonClientBearbeiten.Text" xml:space="preserve">
+    <value>Proces opracować</value>
+  </data>
 </root>

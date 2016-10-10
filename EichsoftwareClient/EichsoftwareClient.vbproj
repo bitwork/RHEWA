@@ -44,7 +44,7 @@
     <PublisherName>RHEWA Waagenfabrik GmbH</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>95</ApplicationRevision>
+    <ApplicationRevision>115</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -123,6 +123,14 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\SqlServerCompact.4.0.8482.1\lib\System.Data.SqlServerCe.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SqlServerCe.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.SqlServerCompact.4.3.6\lib\net40\System.Data.SqlServerCe.Entity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Deployment" />
     <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
@@ -553,9 +561,18 @@
       <DependentUpon>frmBenutzerauswahl.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\frmEichfehlergrenzen.en.resx">
+      <DependentUpon>frmEichfehlergrenzen.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\frmEinstellungen.de.resx">
       <DependentUpon>frmEinstellungen.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\frmEinstellungen.en.resx">
+      <DependentUpon>frmEinstellungen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\frmEinstellungen.pl.resx">
+      <DependentUpon>frmEinstellungen.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\frmEinstellungen.resx">
       <DependentUpon>frmEinstellungen.vb</DependentUpon>
@@ -564,6 +581,12 @@
     <EmbeddedResource Include="View\Forms\frmLizenz.de.resx">
       <DependentUpon>frmLizenz.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\frmLizenz.en.resx">
+      <DependentUpon>frmLizenz.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\frmLizenz.pl.resx">
+      <DependentUpon>frmLizenz.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\frmLizenz.resx">
       <DependentUpon>frmLizenz.vb</DependentUpon>
@@ -597,6 +620,12 @@
     <EmbeddedResource Include="View\Forms\frmNeueWaegezele.de.resx">
       <DependentUpon>frmNeueWaegezele.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\frmNeueWaegezele.en.resx">
+      <DependentUpon>frmNeueWaegezele.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\frmNeueWaegezele.pl.resx">
+      <DependentUpon>frmNeueWaegezele.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\frmNeueWaegezele.resx">
       <DependentUpon>frmNeueWaegezele.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -607,6 +636,9 @@
     <EmbeddedResource Include="View\UserControls\Allgemein\ucoAmpel.resx">
       <DependentUpon>ucoAmpel.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Allgemein\ucoContent.en.resx">
+      <DependentUpon>ucoContent.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Allgemein\ucoEichfehlergrenzen.de.resx">
       <DependentUpon>ucoEichfehlergrenzen.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -615,9 +647,42 @@
       <DependentUpon>ucoBenutzerwechsel.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Allgemein\ucoEichfehlergrenzen.en.resx">
+      <DependentUpon>ucoEichfehlergrenzen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Allgemein\ucoEichfehlergrenzen.pl.resx">
+      <DependentUpon>ucoEichfehlergrenzen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\uco10PruefungStaffelverfahren.en.resx">
+      <DependentUpon>uco10PruefungStaffelverfahren.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\uco11PruefungWiederholbarkeitBelastung.en.resx">
+      <DependentUpon>uco11PruefungWiederholbarkeitBelastung.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\uco11PruefungWiederholbarkeitBelastung.pl.resx">
+      <DependentUpon>uco11PruefungWiederholbarkeitBelastung.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\uco12PruefungUeberlastanzeige.en.resx">
+      <DependentUpon>uco12PruefungUeberlastanzeige.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\uco13PruefungRollendeLasten.en.resx">
+      <DependentUpon>uco13PruefungRollendeLasten.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\uco14PruefungAnsprechvermoegen.en.resx">
+      <DependentUpon>uco14PruefungAnsprechvermoegen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\uco15PruefungStabilitaet.en.resx">
+      <DependentUpon>uco15PruefungStabilitaet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\uco16Taraeinrichtung.en.resx">
+      <DependentUpon>uco16Taraeinrichtung.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco17PruefungEignungFuerAchlastwaegungen.de.resx">
       <DependentUpon>uco17PruefungEignungFuerAchlastwaegungen.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\uco17PruefungEignungFuerAchlastwaegungen.en.resx">
+      <DependentUpon>uco17PruefungEignungFuerAchlastwaegungen.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco17PruefungEignungFuerAchlastwaegungen.pl.resx">
       <DependentUpon>uco17PruefungEignungFuerAchlastwaegungen.vb</DependentUpon>
@@ -627,16 +692,43 @@
       <DependentUpon>uco17PruefungEignungFuerAchlastwaegungen.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\uco18Fallbeschleunigung.en.resx">
+      <DependentUpon>uco18Fallbeschleunigung.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco19EichtechnischeSicherung.en.resx">
       <DependentUpon>uco19EichtechnischeSicherung.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\uco20Reports.en.resx">
+      <DependentUpon>uco20Reports.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco21Versenden.en.resx">
       <DependentUpon>uco21Versenden.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\uco_2StammdatenEingabe.en.resx">
+      <DependentUpon>uco_2StammdatenEingabe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\uco_2StammdatenEingabe.pl.resx">
+      <DependentUpon>uco_2StammdatenEingabe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\uco_3Kompatiblititaetsnachweis.en.resx">
+      <DependentUpon>uco_3Kompatiblititaetsnachweis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\uco_3Kompatiblititaetsnachweis.pl.resx">
+      <DependentUpon>uco_3Kompatiblititaetsnachweis.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco_4KompatiblititaetsnachweisErgebnis.en.resx">
       <DependentUpon>uco_4KompatiblititaetsnachweisErgebnis.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\uco_4KompatiblititaetsnachweisErgebnis.pl.resx">
+      <DependentUpon>uco_4KompatiblititaetsnachweisErgebnis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\uco_5Beschaffenheitspruefung.en.resx">
+      <DependentUpon>uco_5Beschaffenheitspruefung.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\uco_7EichprotokollDaten.en.resx">
+      <DependentUpon>uco_7EichprotokollDaten.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco_8PruefungNullstellungUndAussermittigeBelastung.de.resx">
       <DependentUpon>uco_8PruefungNullstellungUndAussermittigeBelastung.vb</DependentUpon>
@@ -693,6 +785,9 @@
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco13PruefungRollendeLasten.resx">
       <DependentUpon>uco13PruefungRollendeLasten.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\uco_8PruefungNullstellungUndAussermittigeBelastung.en.resx">
+      <DependentUpon>uco_8PruefungNullstellungUndAussermittigeBelastung.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco_8PruefungNullstellungUndAussermittigeBelastung.pl.resx">
       <DependentUpon>uco_8PruefungNullstellungUndAussermittigeBelastung.vb</DependentUpon>
@@ -785,6 +880,9 @@
       <DependentUpon>uco_5Beschaffenheitspruefung.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco_9PruefungLinearitaet.de.resx">
+      <DependentUpon>uco_9PruefungLinearitaet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\uco_9PruefungLinearitaet.en.resx">
       <DependentUpon>uco_9PruefungLinearitaet.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco_9PruefungLinearitaet.pl.resx">
@@ -1153,6 +1251,106 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
+    <PublishFile Include="Telerik.WinControls.PdfViewer">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Telerik.WinControls.PivotGrid">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Telerik.WinControls.RadChart">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Telerik.WinControls.RadDiagram">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Telerik.WinControls.RadDock">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Telerik.WinControls.RadMap">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Telerik.WinControls.RadMarkupEditor">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Telerik.WinControls.RichTextEditor">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Telerik.WinControls.Scheduler">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Telerik.WinControls.Themes.HighContrastBlack">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
     <PublishFile Include="Telerik.WinControls.UI">
       <Visible>False</Visible>
       <Group>
@@ -1161,6 +1359,16 @@
       </TargetPath>
       <PublishState>Include</PublishState>
       <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Telerik.WinControls.UI.Design">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="TelerikCommon">
@@ -1184,6 +1392,13 @@
   <PropertyGroup>
     <PreBuildEvent>
     </PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+if not exist "$(TargetDir)x86" md "$(TargetDir)x86"
+xcopy /s /y "$(SolutionDir)packages\SqlServerCompact.4.0.8482.1\NativeBinaries\x86\*.*" "$(TargetDir)x86"
+if not exist "$(TargetDir)amd64" md "$(TargetDir)amd64"
+xcopy /s /y "$(SolutionDir)packages\SqlServerCompact.4.0.8482.1\NativeBinaries\amd64\*.*" "$(TargetDir)amd64"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -302,10 +302,10 @@
     <value>Zakres 1</value>
   </data>
   <data name="RadGroupBoxStaffel5.HeaderText" xml:space="preserve">
-    <value>5. stopień procedury</value>
+    <value>5. Stopień procedury</value>
   </data>
   <data name="RadGroupBoxStaffel5.Text" xml:space="preserve">
-    <value>5. stopień procedury</value>
+    <value>5. Stopień procedury</value>
   </data>
   <data name="lblStaffel4Bereich3ErsatzLastUnten.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 18</value>
@@ -491,10 +491,10 @@
     <value>Zakres 1</value>
   </data>
   <data name="RadGroupBoxStaffel4.HeaderText" xml:space="preserve">
-    <value>4. stopień procedury</value>
+    <value>4. Stopień procedury</value>
   </data>
   <data name="RadGroupBoxStaffel4.Text" xml:space="preserve">
-    <value>4. stopień procedury</value>
+    <value>4. Stopień procedury</value>
   </data>
   <data name="lblStaffel3Bereich3ErsatzLastUnten.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 18</value>
@@ -680,10 +680,10 @@
     <value>Zakres 1</value>
   </data>
   <data name="RadGroupBoxStaffel3.HeaderText" xml:space="preserve">
-    <value>3. stopień procedury</value>
+    <value>3. Stopień procedury</value>
   </data>
   <data name="RadGroupBoxStaffel3.Text" xml:space="preserve">
-    <value>3. stopień procedury</value>
+    <value>3. Stopień procedury</value>
   </data>
   <data name="lblStaffel2Bereich3ErsatzLastUnten.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 18</value>
@@ -869,10 +869,10 @@
     <value>Zakres 1</value>
   </data>
   <data name="RadGroupBoxStaffel2.HeaderText" xml:space="preserve">
-    <value>2. stopień procedury</value>
+    <value>2. Stopień procedury</value>
   </data>
   <data name="RadGroupBoxStaffel2.Text" xml:space="preserve">
-    <value>2. stopień procedury</value>
+    <value>2. Stopień procedury</value>
   </data>
   <data name="lblStaffel1Bereich3NormalLast.Size" type="System.Drawing.Size, System.Drawing">
     <value>125, 17</value>
@@ -995,9 +995,9 @@
     <value>Zakres 1</value>
   </data>
   <data name="RadGroupBoxStaffel1.HeaderText" xml:space="preserve">
-    <value>1. stopień procedury</value>
+    <value>1. Stopień procedury</value>
   </data>
   <data name="RadGroupBoxStaffel1.Text" xml:space="preserve">
-    <value>1. stopień procedury</value>
+    <value>1. Stopień procedury</value>
   </data>
 </root>

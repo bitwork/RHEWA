@@ -122,25 +122,25 @@
     <value>100, 18</value>
   </data>
   <data name="lblBelastungsstelleLinks.Text" xml:space="preserve">
-    <value>Miejsce obciążenia</value>
+    <value>Punkt obciążenia</value>
   </data>
   <data name="lblAuffahrtLinks1.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 18</value>
   </data>
   <data name="lblAuffahrtLinks1.Text" xml:space="preserve">
-    <value>Podjazd z le.1</value>
+    <value>Podjazd z lewej 1</value>
   </data>
   <data name="lblAuffahrtLinks2.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 18</value>
   </data>
   <data name="lblAuffahrtLinks2.Text" xml:space="preserve">
-    <value>Podjazd z le.2</value>
+    <value>Podjazd z lewej 2</value>
   </data>
   <data name="lblAuffahrtLinks3.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 18</value>
   </data>
   <data name="lblAuffahrtLinks3.Text" xml:space="preserve">
-    <value>Podjazd z le.3</value>
+    <value>Podjazd z lewej 3</value>
   </data>
   <data name="lblLastLinks.Location" type="System.Drawing.Point, System.Drawing">
     <value>138, 141</value>
@@ -261,5 +261,14 @@
   </data>
   <data name="PictureBox4.Location" type="System.Drawing.Point, System.Drawing">
     <value>138, 256</value>
+  </data>
+  <data name="lblBelastungsstelleRechts.Text" xml:space="preserve">
+    <value>Punkt obciążenia</value>
+  </data>
+  <data name="RadButton1.Text" xml:space="preserve">
+    <value>Pokarz GBL</value>
+  </data>
+  <data name="RadButtonShowEFG.Text" xml:space="preserve">
+    <value>Pokarz GBL</value>
   </data>
 </root>

@@ -352,6 +352,24 @@
       <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="View\frmEingabeAuswertegeraet.de.resx">
+      <DependentUpon>frmEingabeAuswertegeraet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmEingabeAuswertegeraet.en.resx">
+      <DependentUpon>frmEingabeAuswertegeraet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmEingabeAuswertegeraet.pl.resx">
+      <DependentUpon>frmEingabeAuswertegeraet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmEingabeWaegezelle.de.resx">
+      <DependentUpon>frmEingabeWaegezelle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmEingabeWaegezelle.en.resx">
+      <DependentUpon>frmEingabeWaegezelle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmEingabeWaegezelle.pl.resx">
+      <DependentUpon>frmEingabeWaegezelle.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmFirmenZusatzdaten.resx">
       <DependentUpon>frmFirmenZusatzdaten.vb</DependentUpon>
       <SubType>Designer</SubType>

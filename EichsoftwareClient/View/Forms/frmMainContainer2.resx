@@ -202,7 +202,7 @@
     <value>MiddleCenter</value>
   </data>
   <data name="RadButtonChangeLanguageToGerman.Location" type="System.Drawing.Point, System.Drawing">
-    <value>201, 674</value>
+    <value>238, 674</value>
   </data>
   <data name="RadButtonChangeLanguageToGerman.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 50</value>
@@ -235,7 +235,7 @@
     <value>MiddleCenter</value>
   </data>
   <data name="RadButtonChangeLanguageToEnglish.Location" type="System.Drawing.Point, System.Drawing">
-    <value>247, 674</value>
+    <value>284, 674</value>
   </data>
   <data name="RadButtonChangeLanguageToEnglish.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 50</value>
@@ -268,7 +268,7 @@
     <value>MiddleCenter</value>
   </data>
   <data name="RadButtonChangeLanguageToPolish.Location" type="System.Drawing.Point, System.Drawing">
-    <value>293, 674</value>
+    <value>331, 674</value>
   </data>
   <data name="RadButtonChangeLanguageToPolish.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 50</value>
@@ -581,7 +581,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAB6
-        EgAAAk1TRnQBSQFMAgEBAwEAAQgBBQEIAQUBIAEAASABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAGA
+        EgAAAk1TRnQBSQFMAgEBAwEAARABBQEQAQUBIAEAASABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAGA
         AwABIAMAAQEBAAEgBgABQP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wBPAAEBAwQBBgMLAQ8DEAEV
         AxABFgMQARYDEAEVAwsBDwMEAQYDAAEBWwABAQMEAQYDCwEPAxABFQMQARYDEAEWAxABFQMLAQ8DBAEG
         AwABAVsAAQEDBAEGAwsBDwMQARUDEAEWAxABFgMQARUDCwEPAwQBBgMAAQHUAAMCAQMDCgEOAxcBIAMj
@@ -883,12 +883,6 @@
     <value>radlabelContextHelp</value>
   </data>
   <data name="&gt;&gt;radlabelContextHelp.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.LayoutControlLabelItem, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;LayoutControlLabelItem2.Name" xml:space="preserve">
-    <value>LayoutControlLabelItem2</value>
-  </data>
-  <data name="&gt;&gt;LayoutControlLabelItem2.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.LayoutControlLabelItem, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;LayoutControlSplitterItem1.Name" xml:space="preserve">

@@ -124,4 +124,7 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Granice błędów legalizacyjnych</value>
   </data>
+  <data name="cmdOK.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
 </root>

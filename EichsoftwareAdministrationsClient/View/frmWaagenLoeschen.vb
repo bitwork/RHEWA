@@ -80,7 +80,10 @@ Eichprozess.ID,
                             Dim Protokoll = (From Protokolle In context.ServerEichprotokoll Where Protokolle.ID = EichprotokollID).FirstOrDefault
 
                             Dim Konform = (From Vorgaenge In context.ServerKompatiblitaetsnachweis Where Vorgaenge.ID = Prozess.FK_Kompatibilitaetsnachweis).FirstOrDefault
-
+                            Dim queryMogelstatistik = From a In context.ServerMogelstatistik Where a.FK_Eichprozess = Prozess.ID
+                            For Each obj In queryMogelstatistik
+                                context.ServerMogelstatistik.Remove(obj)
+                            Next
                             Dim query = From a In context.ServerPruefungAnsprechvermoegen Where a.FK_Eichprotokoll = EichprotokollID
                             For Each obj In query
                                 context.ServerPruefungAnsprechvermoegen.Remove(obj)

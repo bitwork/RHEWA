@@ -122,7 +122,7 @@
     <value>141, 18</value>
   </data>
   <data name="lblTruck.Text" xml:space="preserve">
-    <value>Pojazd legalizacyjny Firma		
+    <value>Pojazd legalizacyjny Firmy		
 </value>
   </data>
   <data name="lblZertifikatnr.Size" type="System.Drawing.Size, System.Drawing">
@@ -154,12 +154,10 @@
 </value>
   </data>
   <data name="RadGroupBoxBeschaffenheitspruefungNormalien.HeaderText" xml:space="preserve">
-    <value>Zastosowane wzorce
-</value>
+    <value>Untere Grenze für die an das Auswertegerät anschließbaren Lastwiderstände</value>
   </data>
   <data name="RadGroupBoxBeschaffenheitspruefungNormalien.Text" xml:space="preserve">
-    <value>Zastosowane wzorce
-</value>
+    <value>Erläuterung zu Lastwiderstand:</value>
   </data>
   <data name="RadCheckBoxAnzeigen.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 143</value>
@@ -168,8 +166,7 @@
     <value>429, 18</value>
   </data>
   <data name="RadCheckBoxAnzeigen.Text" xml:space="preserve">
-    <value>Czy wskazania i wydruki odpowiadają wymaganiom?					
-</value>
+    <value>Wskazania i wydruki odpowiadają wymaganiom!				</value>
   </data>
   <data name="RadCheckBoxKompatiblitaetsnachweisVorhanden.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 167</value>
@@ -186,7 +183,7 @@
 </value>
   </data>
   <data name="RadCheckBoxZulassungsunterlagen.Text" xml:space="preserve">
-    <value>Czy dokumenty zatwierdzenia są dostępne?					
+    <value>Czy są dostępne dokumenty zatwierdzenia w formie pisemnej ?					
 </value>
   </data>
   <data name="RadCheckBoxMesstechnischeMerkmale.Size" type="System.Drawing.Size, System.Drawing">
@@ -375,7 +372,7 @@
     <value>36, 18</value>
   </data>
   <data name="lblAnzahlWZ.Text" xml:space="preserve">
-    <value>Ilość:		
+    <value>Ilość czujników tensometrycznych:		
 </value>
   </data>
   <data name="lblTyp.Location" type="System.Drawing.Point, System.Drawing">
@@ -405,9 +402,7 @@
     <value>155, 33</value>
   </data>
   <data name="lblZeichen.Text" xml:space="preserve">
-    <value>Stan licznika legalizacyjnego:
-
-</value>
+    <value>Stan licznika legalizacyjnego:</value>
   </data>
   <data name="RadTextBoxControlEichzaehlerstand.Location" type="System.Drawing.Point, System.Drawing">
     <value>185, 82</value>
@@ -461,9 +456,7 @@
     <value>211, 28</value>
   </data>
   <data name="RadCheckBoxVolleNormallast.Text" xml:space="preserve">
-    <value>Pełne obciążenie wzorcowe
-
-</value>
+    <value>Näherungsweise kleinstmöglicher Eingangswiderstand der einzelnen (parallelgeschalteten) Wägezelle(n) bzw. näherungsweise größtmöglicher Eingangswiderstand der Wägezelle(n)</value>
   </data>
   <data name="RadGroupBoxPruefverfahren.HeaderText" xml:space="preserve">
     <value>1. Procedura badania
@@ -497,5 +490,48 @@
   </data>
   <data name="RadGroupBoxIdentifikationsdaten.Text" xml:space="preserve">
     <value>0. Dane identyfikacyjne</value>
+  </data>
+  <data name="RadLabel13.Text" xml:space="preserve">
+    <value>e₁=d₁=</value>
+  </data>
+  <data name="RadLabel14.Text" xml:space="preserve">
+    <value>e₂=d₂=</value>
+  </data>
+  <data name="RadLabel17.Text" xml:space="preserve">
+    <value>e₃=d₃=</value>
+  </data>
+  <data name="RadTextBoxControlNormalienGenauigkeitsklasse.Text" xml:space="preserve">
+    <value>M1</value>
+  </data>
+  <data name="RadLabel12.Text" xml:space="preserve">
+    <value>Min₁</value>
+  </data>
+  <data name="RadLabel15.Text" xml:space="preserve">
+    <value>Min₂</value>
+  </data>
+  <data name="RadLabel18.Text" xml:space="preserve">
+    <value>Min₃</value>
+  </data>
+  <data name="RadRadioButtonTaraeingabe.Text" xml:space="preserve">
+    <value>Podanie tary</value>
+  </data>
+  <data name="lblOrt.Text" xml:space="preserve">
+    <value>Miejsce instalacji:</value>
+  </data>
+  <data name="lblHerstellungsjahr.Text" xml:space="preserve">
+    <value>Rok budowy:</value>
+  </data>
+  <data name="lblBenutzer.Text" xml:space="preserve">
+    <value>Użytkownik</value>
+  </data>
+  <data name="lblDatum.Text" xml:space="preserve">
+    <value>Data:</value>
+  </data>
+  <data name="lblFabriknummer.Text" xml:space="preserve">
+    <value>Numer fabryczny:</value>
+  </data>
+  <data name="lblGenauigkeitsklasse.Text" xml:space="preserve">
+    <value>Klasa dokładności		
+</value>
   </data>
 </root>

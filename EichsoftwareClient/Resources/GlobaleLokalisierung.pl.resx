@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AuswerteGeraet" xml:space="preserve">
-    <value>Polnisch</value>
+    <value>Miernik</value>
   </data>
   <data name="Hilfe_Beschaffenheitspruefung" xml:space="preserve">
-    <value>To badanie obowiazuje przy towarzyszacej produkcji kontroli wszystkich wag, które zostaly montowane lub przebudowane przez wspólpracowników firmy RHEWA lub na jej zlecenie przez zewnetrznych upowaznionych pelnomocników.										
+    <value>To badanie obowiazuje przy towarzyszącej produkcji kontroli wszystkich wag, które zostaly montowane lub przebudowane przez wspólpracowników firmy RHEWA lub na jej zlecenie przez zewnetrznych upowaznionych pelnomocników.										
 															
 Odpowiedzialny lub upowazniony wspólpracownik sprawdza ponizej podane kryteria 100%-owo.										
 										
@@ -149,7 +149,7 @@ Wskazówki:
  - Wprowadzenie sily musi byc zgodne z jednym z przykladów pokazanych w przewodniku WELMEC (WELMEC 2.4).</value>
   </data>
   <data name="Hilfe_Hauptmenue" xml:space="preserve">
-    <value>Polnisch</value>
+    <value>Lista wyboru</value>
   </data>
   <data name="Hilfe_KompatiblitaetsnachweisErgebnisHilfe" xml:space="preserve">
     <value>Polnisch</value>
@@ -158,17 +158,13 @@ Wskazówki:
     <value>Polnisch</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_AWGAnschlussart" xml:space="preserve">
-    <value>cable connection  (4- or 6-wire) between 
-load cell junction box and indicator
-
-The original 4-wire load cell cable have to be kept in any case,
-
-The connection of original 4-wire load cell cables just beside the indicator is also allowed in any case</value>
+    <value>Rodzaj podłączenia czujnika tensometrycznego (technika 4- lub 6-przewodowa)
+Przy zastosowaniu techniki 4-przewodowej do podłączenia czujników do miernika zastosowane kable przez producenta nie mogą być zmienione. Wspólne podłączenie kilku czujników przed miernikiem jest dozwolone.</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_AWGBruchteilEichfehlergrenze" xml:space="preserve">
-    <value>fraction of the maximum permissible error of the weighing instrument used for the indicator
-according to R76 No 3.5.4
-standard  pind = 0,5 ;   allowable  0,3 &gt; pind &gt; 0,8</value>
+    <value>Ułamek błędu legalizacyjnego dla miernika 
+0,3 £ pind £ 0,8
+Według DIN EN 45501 Nr.3.5.4 dla miernika można wpisać pind = 0,5.</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_AWGGrenzwerteLastwiderstandMax" xml:space="preserve">
     <value>upper limit of the impedance 
@@ -182,16 +178,17 @@ Indicator       82a          ges.3300 Ohm
 Indicator       82b,c,e    ges.5250 Ohm</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_AWGGrenzwerteLastwiderstandMin" xml:space="preserve">
-    <value>lower limit of the impedance of the load cell(s) to be supplied
-the load cells are connected in parallel
-(limitted by power supply fittted by the indicator)
+    <value>Dolna granica miernika do której może być podłączony opornik obciążeniowy
+      83 N             cał. 87 Ohm
+      83 plus           cał. 87 Ohm
+      83 Z              cał. 35 Ohm
+      84                cał. 44 Ohm
+      82a               cał.50 Ohm
+      82b,c,e          cał.40 Ohm
 
-Indicator      83 N              ges. 87 Ohm
-Indicator      83 plus          ges. 87 Ohm
-Indicator      83 Z              ges. 35 Ohm
-Indicator      84                 ges. 44 Ohm
-Indicator      82a               ges. 50 Ohm
-Indicator      82b,c,e         ges. 40 Ohm</value>
+Dolna granica miernika do której może być podłączony opornik obciążeniowy
+Wyjaśnienie oporu obciążenia:
+Näherungsweise kleinstmöglicher Eingangswiderstand der einzelnen (parallelgeschalteten) Wägezelle(n) bzw. näherungsweise größtmöglicher Eingangswiderstand der Wägezelle(n)</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_AWGKabellaenge" xml:space="preserve">
     <value>Maximal allowed ratio of cable length per wire cross section 
@@ -216,14 +213,14 @@ this indicator is not able to measure changing polarity of voltage
 If no Umin is required  insert   0</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_AWGMindestmesssignal" xml:space="preserve">
-    <value>The minimum value allowed for the signal voltage per verification scale interval is:
+    <value>Dla miernika podany najmniejszy sygnał pomiarowy na wartość legalizacyjną:
 
-Indicator        83N             0,5üV/ e
-Indicator        83+            0,5 üV/ e
-Indicator        83Z             0,6 üV/ e
-Indicator        84               0,7 üV/ e
-Indicator        82a             0,5 üV/ e
-Indicator        82b,c,e       0,3 üV/ e</value>
+Miernik        83N             0,5üV/ e
+Miernik        83+            0,5 üV/ e
+Miernik        83Z             0,6 üV/ e
+Miernik        84               0,7 üV/ e
+Miernik        82a             0,5 üV/ e
+Miernik        82b,c,e       0,3 üV/ e</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_AWGSpeisespannung" xml:space="preserve">
     <value>Excitation power supply for the load cell(s)
@@ -261,7 +258,7 @@ upper limit of the environment temperature
 for the indicator</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_AWGTemperaturbereichMin" xml:space="preserve">
-    <value>limit of the temperature range
+    <value>Granice zakresu temperatury
 lower limit of the environment temperature
 for the indicator</value>
   </data>
@@ -269,11 +266,9 @@ for the indicator</value>
     <value>&lt;html&gt;&lt;p&gt;Function for setting the indication to zero at&lt;br /&gt;the time the indicator is switched on.&lt;br /&gt;&lt;strong&gt;Standard setting Rhewa:&lt;br /&gt;15% upper limit for permissible initial zero setting&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;        3kg = 0,450kg&lt;br /&gt;        6kg = 0,900kg&lt;br /&gt;      15kg = 2,250kg&lt;br /&gt;      30kg = 4,5kg&lt;br /&gt;      60kg = 9,0kg&lt;br /&gt;    150kg = 22,5kg&lt;br /&gt;    300kg = 45kg&lt;br /&gt;    600kg = 90kg&lt;br /&gt;  1500kg = 225kg&lt;br /&gt;  3000kg = 450kg&lt;br /&gt;  6000kg = 900kg &lt;br /&gt;15000kg = 2250kg&lt;br /&gt;&lt;/strong&gt;&lt;/p&gt;&lt;/html&gt;</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_VerbindungselementeBruchteilEichfehlergrenze" xml:space="preserve">
-    <value>fraction of the maximum permissible error of the weighing instrument
-applied for connecting elements  pcon ,
-For the fraction of all unknown mechanical and electrical connection elements between load receptor, load cell(s) a d indicator.
-
- acceptable according to R76 No 3.4.5     pcon = 0,5</value>
+    <value>Ułamek błędu legalizacyjnego dla elementów złącznych pcon.
+0,3 £ pcon £ 0,8
+Dla pewnej części wszystkich nieznanych mechanicznych jak i elektrycznych elementów złącznych między nośnikiem, czujnikiem(i) a miernikiem można według DIN EN 45501 Nr. 3.5.4 wpisać pcon = 0,5.</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_WaageAdditiveTarahoechstlast" xml:space="preserve">
     <value>maximum value of the additive tare device (if existing)
@@ -281,26 +276,22 @@ For the fraction of all unknown mechanical and electrical connection elements be
 if no device of Additive Tare,    fill out with    0</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_WaageAnzahlWaegezellen" xml:space="preserve">
-    <value>number of load cells</value>
+    <value>Numer czujnika tensometrycznego</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_WaageEcklastzuschlag" xml:space="preserve">
     <value>&lt;html&gt;&lt;p&gt;factor NUD:        (WI = weighing instrument, LC = load cell)&lt;/p&gt;&lt;p&gt;Factor for  &lt;strong&gt;N&lt;/strong&gt;on  &lt;strong&gt;U&lt;/strong&gt;niform  &lt;strong&gt;D&lt;/strong&gt;istributed  load   caused  by excentric loading,&lt;br /&gt;NUD shall prohibit that a load cell is applied with load outside of the garanteed measuring range.&lt;/p&gt;&lt;p&gt;According to WELMEC 2 (Issue 3) Nr. 3.1.6.6 followig values may be accepted for NUD:&lt;br /&gt;- WIs with lever work and with one LC, WIs with one single point LC and&lt;br /&gt;  WIs with load receptors which allöw only minimal eccentric load application &lt;br /&gt;   (eg hopper scales, but without shaker on the receptor )        0 %  Max&lt;/p&gt;&lt;p&gt;- other conventional instruments :                                            20 % Max&lt;/p&gt;&lt;p&gt;- over head track scales, fork lift scales and weighbridges :    50 % Max &lt;/p&gt;&lt;p&gt;- Multi-platform WIs with more than one load receptor&lt;br /&gt;       fix combined                                          50 % Max  (total)&lt;br /&gt;       variable selection or combined              50 % Max  (of single platform)&lt;br /&gt;   &lt;/p&gt;&lt;/html&gt;</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_WaageEichwert" xml:space="preserve">
-    <value>Maximum capacity  of   One range weighing instrument</value>
+    <value>Wartość legalizacyjna wagi jednozakresowej</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_WaageEichwert1" xml:space="preserve">
-    <value>verification interval of the lower weighing range 
-of a multiple range or multi-interval  weighing instrument</value>
+    <value>Wartość legalizacyjna dolnego zakresu wagowego wag wielopodziałkowych i wag wielozakresowych</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_WaageEichwert2" xml:space="preserve">
-    <value>verification interval of  the 2nd weighing range of
-multiple range or multi-interval  weighing instrument
-(e 1 = smallest weighing range)</value>
+    <value>Wartość legalizacyjna 2. zakresu wagowego wag wielopodziałkowych i wag wielozakresowych (e1 = najmniejsza wartość legalizacyjna)</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_WaageEichwert3" xml:space="preserve">
-    <value>verification interval of the upper weighing range of multi-interval weighing instrument
-(e1 = smallest verification interval)</value>
+    <value>Wartość legalizacyjna 3. zakresu wagowego wagi wielopodziałkowej (e1 = najmniejsza wartość legalizacyjna)</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_WaageHoechstlast" xml:space="preserve">
     <value>verification interval of  
@@ -345,7 +336,7 @@ upper limit of the environment temperature
 for the whole weighing instrument</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_WaageTemperaturbereichMin" xml:space="preserve">
-    <value>limit of the temperature range
+    <value>Granice zakresu temperatury
 lower limit of the environment temperature
 for the whole weighing instrument</value>
   </data>
@@ -369,9 +360,9 @@ Excample of wrong format   1:4, inputs with ":" will be treated as time
                     correct format  1/4 or 0,25</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_WZBruchteilEichfehlergrenze" xml:space="preserve">
-    <value>fraction of the maximum permissible error of the weighing instrument
-applied for the load cells
-if not indicated in the test certificate , pLC = 0,7.</value>
+    <value>Ułamek błędu legalizacyjnego dla czujnika tensometrycznego pLC.
+0,3 £ pLC £ 0,8
+Jeżeli w świadectwie badania czujnika tensometrycznego nic nie podano, można wpisać według DIN EN 45501 Nr. 3.5.4 pLC = 0,7.</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_WZGenauigkeitsklasse" xml:space="preserve">
     <value>&lt;html&gt;&lt;p&gt;Accuracy class:&lt;br /&gt;The accuracy classes of NAWI, Ind  and  LCs  are compatible, if they follow table below:&lt;/p&gt;&lt;p&gt;&lt;strong&gt;         NAWI           I          II                III               IIII&lt;br /&gt;   Ind               I        I*), II          II*), III      III, IIII&lt;br /&gt;   LC                A       A*), B           B*), C          C, D&lt;/strong&gt;&lt;br /&gt; &lt;br /&gt;      *) at sufficient temperature range and evaluation of stability against &lt;br /&gt;      humidity and creep correspond to requirement in the lower &lt;br /&gt;      (more accurate) class&lt;/p&gt;&lt;/html&gt;</value>
@@ -414,20 +405,49 @@ Where DR or Z not known
 nLC will be used instead of Z.</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_WZTemperaturbereichMIN" xml:space="preserve">
-    <value>limit of the temperature range
+    <value>Granice zakresu temperatury
 lower limit of the environment temperature
 for the load cell</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_WZWaegezellenkennwert" xml:space="preserve">
-    <value>rated output of the load cell 
-when loading  with maximum capacity  (in mV/V)</value>
+    <value>Wartośś znamionowa czujnika(Wielkość sygnału przy całkowitym obciążeniu w mV/V)</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_WZWiderstand" xml:space="preserve">
-    <value>Input impedance of one load cell:
+    <value>Czujniki-Opór wejściowy
 
-The WI may have N load cells.
-The smallest ratio of RLC / N is limitted 
-by the power supply of the indicator</value>
+Opór wejściowy jednego czujnika.
+Ewentualnie jest podłączonych równolegle N czujników.
+Stosunek RLC / N musi leżeć w granicach całkowitego dopuszczalnego oporu wejściowego miernika.
+
+
+Typ       C            Y              Z        E min      C        R LC
+1022       3         10000                        0          2         415
+1042       3         15000                        0          2         415
+1042       6         20000                        0          2         415
+1130       3         15000                        0          2         385
+1242       3         20000                        0          2         415  
+1242       6         20000                        0          2         415
+1260       3         15000                        0          2         415
+1510       3         12000                        0          2         380
+PC1         3         10000                        0          2         390
+PC1         3         15000                        0          2         390
+PC6         3         12500                        0          2       1106 
+PC6 MI6  3         12500        6000        0          2       1106 
+PC6         3         25000                        0          2       1106
+PC6 MI6  3         25000         6000       0          2       1106 
+PCB         3         12500                        0          2       1106
+0531       3         11500                        0          2       1106
+      
+3410       3         10000                        0          2         380
+3510       3         12000          4000      0          2         400
+3510       6         24000          8000      0          2         400
+HSB         3         10000                        0          2         420
+BK2         
+SLB          3         11500                        0          2        1106
+SB6          3         10000                        0          2        1106
+SB14        3         11500                        0          2        1100
+HCB          3        10000                         0         2        1000
+RC3          3        15000                        0          2        1100</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_WZTemperaturbereichMAX" xml:space="preserve">
     <value>limit of the temperature range
@@ -438,43 +458,45 @@ for the load cell</value>
     <value>Polnisch</value>
   </data>
   <data name="PflichtfelderAusfuellen" xml:space="preserve">
-    <value>Please fill in all required fields</value>
+    <value>Proszę wypełnić wszystkie obowiązujące pola. Brakujące pola są zaznaczone na czerwono.</value>
   </data>
   <data name="Ueberschrift_Beschaffenheitspruefung" xml:space="preserve">
-    <value>Polnisch</value>
+    <value>Badanie jakości</value>
   </data>
   <data name="Ueberschrift_Hauptmenue" xml:space="preserve">
-    <value>Polnisch</value>
+    <value>Lista wyboru</value>
   </data>
   <data name="Ueberschrift_Kompatiblitaetsnachweis" xml:space="preserve">
     <value>Polnisch</value>
   </data>
   <data name="Ueberschrift_KompatiblitaetsnachweisErgebnis" xml:space="preserve">
-    <value>Polnisch</value>
+    <value>Wynik dowodu kompatybilności</value>
   </data>
   <data name="Ueberschrift_Stammdaten" xml:space="preserve">
     <value>Polnisch</value>
   </data>
   <data name="Waagenart" xml:space="preserve">
-    <value>Polnisch</value>
+    <value>Rodzaj wagi</value>
   </data>
   <data name="Waagentyp" xml:space="preserve">
-    <value>Polnisch</value>
+    <value>Typ wagi	
+</value>
   </data>
   <data name="Waegezelle" xml:space="preserve">
-    <value>Polnisch</value>
+    <value>Czujnik tensometryczny
+</value>
   </data>
   <data name="KompatiblitätNichtGeleistet" xml:space="preserve">
-    <value>Polnisch Kompatilbität</value>
+    <value>Kompatybilność składników niestety nie istnieje.  Proces oceny zgodności nie może być kontynuowany.</value>
   </data>
   <data name="Hilfe_Auswahlliste" xml:space="preserve">
-    <value>Polnisch</value>
+    <value>Proszę wybrać istniejącą procedurę oceny zgodności albo za pomocą okienka "Założyć" wpisać nową procedurę.</value>
   </data>
   <data name="Hilfe_Eichprotokollverfahrensauswahl" xml:space="preserve">
     <value>Polnisch</value>
   </data>
   <data name="Ueberschrift_Eichprotokollverfahrensauswahl" xml:space="preserve">
-    <value>Polnisch</value>
+    <value>      84                 ges. 44 Ohm</value>
   </data>
   <data name="Hilfe_EichprotokollStammdaten" xml:space="preserve">
     <value>Polnisch</value>
@@ -483,13 +505,13 @@ for the load cell</value>
     <value>Polnisch</value>
   </data>
   <data name="Eichprotokoll_Dimension" xml:space="preserve">
-    <value>Brückenabmessung Polnisch</value>
+    <value>Wymiary pomostu wagowego</value>
   </data>
   <data name="Hilfe_Nullstellung" xml:space="preserve">
     <value>&lt;html&gt;&lt;p&gt;&lt;strong&gt;4.5.2 Dokładność&lt;/strong&gt;&lt;br /&gt;Po ustawieniu zera, wpływ błędu zerowania na WYNIK WAżENIA nie powinien przekraczać 0,25 e, a dla wag z POMOCNICZYMI URZąDZENIAMI WSKAZUJąCYMI wpływ ten nie powinien przekraczać 0,5 d.&lt;br /&gt;&lt;span style="color: #ff0000"&gt;Podtrzymanie zera należy wyłączyć za pomocą odpowiedniego obciążenia.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;A.4.2.3 Dokładność zerowania (4.5.2)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;A.4.2.3.1 Zerowanie nieautomatyczne i półautomatyczne&lt;/strong&gt;&lt;br /&gt;Dokładność URZąDZENIA ZERUJąCEGO jest sprawdzana przez wyzerowanie wagi a następnie wyznaczenie dodatkowego obciążenia, przy którym wskazanie zerowe zmienia się na jedną działkę elementarną powyżej zera. BłąD zera jest obliczony według A.4.4.3.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;A.4.2.3.2 Zerowanie automatyczne lub podtrzymywanie zera&lt;/strong&gt;&lt;br /&gt;Wskazanie przenosi się poza zakres automatycznego zerowania (np. przez obciążenie równe 10e). Następnie wyznacza się dodatkowe obciążenie, przy którym zwiększa się wskazanie na następną działkę elementarną i oblicza BŁąD zgodnie z A.4.4.3. Przyjmuje się, że BŁąD przy obciążeniu zerowym będzie równy BŁęDOWI przy tym obciążeniu.&lt;/p&gt;&lt;/html&gt;</value>
   </data>
   <data name="Fabriknummer" xml:space="preserve">
-    <value>Serial Number PL</value>
+    <value>Numer fabryczny</value>
   </data>
   <data name="Hilfe_PruefungAussermittigerBelastung" xml:space="preserve">
     <value>Hilfe_PrüfungAussermittigerBelastung(PL)</value>
@@ -537,13 +559,13 @@ for the load cell</value>
     <value>Ueberschrift_PruefungAnsprechvermoegen(PL)</value>
   </data>
   <data name="Ueberschrift_PruefungEichtechnischeSicherung" xml:space="preserve">
-    <value>Ueberschrift_PruefungEichtechnischeSicherung (PL)</value>
+    <value>Zabezpieczenie danych legalizacyjnych i innych danych</value>
   </data>
   <data name="Ueberschrift_PruefungFallbeschleunigung" xml:space="preserve">
-    <value>Ueberschrift_PruefungFallbeschleunigung  (PL)</value>
+    <value>Uwzględnienie przyspieszenia grawitacyjnego</value>
   </data>
   <data name="Ueberschrift_PruefungRollendelasten" xml:space="preserve">
-    <value>Ueberschrift_PruefungRollendelasten(PL)</value>
+    <value>Wagi dla ładunków tocznych</value>
   </data>
   <data name="Ueberschrift_PruefungStabilitaet" xml:space="preserve">
     <value>Ueberschrift_PruefungStabilitaet(PL)</value>
@@ -558,22 +580,22 @@ for the load cell</value>
     <value>Ueberschrift_PruefungUeberlastAnzeige (PL)</value>
   </data>
   <data name="Hilfe_PruefungStaffelverfahrenErsatzlastErsatzlast2" xml:space="preserve">
-    <value>Ablesen und eintragen des Anzeigewertes nach Abnahme der aufgebrachten Normallast.</value>
+    <value>Odczytanie i wpisanie wyświetlanej wartości po zdjęciu obciążenia wzorcowego.</value>
   </data>
   <data name="Hilfe_PruefungStaffelverfahrenErsatzlastErsatzPlusNormallast" xml:space="preserve">
-    <value>Ablesen und eintragen des Anzeigewertes der mit entsprechender Ersatzlast und deraufgebrachten Normallast nachgebildet wurde.</value>
+    <value>Odczytanie i wpisanie wyświetlanej wartości, która została utworzona z odpowiednim obciążeniem zastępczym i naniesionym obciążeniem wzorcowym. </value>
   </data>
   <data name="Hilfe_PruefungStaffelverfahrenErsatzlastIst" xml:space="preserve">
-    <value>Ablesen und eintragen des Anzeigewertes der mit entsprechender Ersatzlast nachgebildet wurde. Abweichungen von maximal ±10e möglich</value>
+    <value>Odczytanie i wpisanie wyświetlanej wartości, która została utworzona z odpowiednim obciążeniem zastępczym. Odchyłki do maximalnie ±10e są możliwe. </value>
   </data>
   <data name="Hilfe_PruefungStaffelverfahrenErsatzlastNormallast" xml:space="preserve">
-    <value>Eintragung der zur Verfügung stehenden vollen Normallast oder des Betrages der benötigt wird um die Höchstlast der Waage zu erreichen.</value>
+    <value>Wpisanie całego stojącego do dyspozycji obciążenia wzorcowego lub wartości potrzebnej do osiągnięcia maksymalnego obciążenia wagi.</value>
   </data>
   <data name="Hilfe_PruefungStaffelverfahrenErsatzlastSoll" xml:space="preserve">
-    <value>Eintragung des Wertes der mit einer Ersatzlast nachgebildet werden soll.</value>
+    <value>Wpisanie wartości, która ma być zreprodukowana za pomocą ciężaru zastępczego.</value>
   </data>
   <data name="Hilfe_PruefungStaffelverfahrenNormallast" xml:space="preserve">
-    <value>Ablesen und eintragen des Anzeigewertes der aufgebrachten Normallast.</value>
+    <value>Odczytanie i wpisanie wyświetlanej wartości naniesionego obciążenia wzorcowego.</value>
   </data>
   <data name="Hilfe_PruefungWiederholbarkeitStaffelverfahren" xml:space="preserve">
     <value>Badanie z 0,5 maks. należy przeprowadzić również przed zastosowaniem procesu stopniowego w celu określenia wymaganego obciążenia wzorcowego.													
@@ -589,16 +611,16 @@ Jest błąd ≤ 0,3e → L = 0,5 Max = potrzebne są wzorce 50% z Max.</value>
     <value>Zdatność do ważenia obciążeń osiowych</value>
   </data>
   <data name="EichfehlergrenzenNichtEingehalten" xml:space="preserve">
-    <value>Die Eichfehlergrenzen werden nicht eingehalten. Der Vorgang kann nicht weitergeführt werden. (PL)</value>
+    <value>Granice błędów legalizacyjnych nie zostały dotrzymane. Proces nie może być dalej kontynuowany.</value>
   </data>
   <data name="Hilfe_Exports" xml:space="preserve">
-    <value>Export Data into Excel and Word Templates</value>
+    <value>Eksport danych do wzorów Excel i Word</value>
   </data>
   <data name="Hilfe_Versenden" xml:space="preserve">
     <value>Send Data to RHEWA</value>
   </data>
   <data name="Ueberschrift_Exports" xml:space="preserve">
-    <value>Export Data</value>
+    <value>Eksport danych</value>
   </data>
   <data name="Ueberschrift_Versenden" xml:space="preserve">
     <value>Send Data to RHEWA</value>
@@ -610,52 +632,52 @@ Jest błąd ≤ 0,3e → L = 0,5 Max = potrzebne są wzorce 50% z Max.</value>
     <value>Create a new Load Cell (PL)</value>
   </data>
   <data name="BitteNeuStarten" xml:space="preserve">
-    <value>Please restart the application to complete the registration</value>
+    <value>Proszę uruchomić aplikację na nowo w celu zakończenia procesu zapisania wniosku licencji.</value>
   </data>
   <data name="KeineVerbindung" xml:space="preserve">
-    <value>Cant establish connection to RHEWA Server. Make sure you are connected to the internet and try again.</value>
+    <value>Nie można nawiązać połączenia. Proszę nawiązać połączenie z internetem i spróbować ponownie.</value>
   </data>
   <data name="Aktualisierung_Erfolgreich" xml:space="preserve">
-    <value>Synced successfully (PL)</value>
+    <value>Pomyślna aktualizacja</value>
   </data>
   <data name="Aktualisierung_NeuAWG" xml:space="preserve">
-    <value>Added or changed weighing instruments y (PL)</value>
+    <value>Nastąpiły zmiany w miernikach</value>
   </data>
   <data name="Aktualisierung_NeuEichung" xml:space="preserve">
-    <value>Polnisch y (PL)</value>
+    <value>Nastąpiły zmiany w załadowanych legalizacjach pierwotnych</value>
   </data>
   <data name="Aktualisierung_NeuWZ" xml:space="preserve">
-    <value>Added or changed Load Cells y (PL)</value>
+    <value>Nastąpiły zmiany w czujnikach tensometrycznych</value>
   </data>
   <data name="Fehler" xml:space="preserve">
-    <value>Error</value>
+    <value>Błąd</value>
   </data>
   <data name="Fehler_EichprotokollBereitsAbgelehnt" xml:space="preserve">
-    <value>Der Vorgang kann nicht bearbeitet werden. Er ist schon als fehlerhaft markiert und wird bearbeitet</value>
+    <value>Ten proces nie może być opracowany. On jest już zaznaczony jako błędny i zostaje opracowany.</value>
   </data>
   <data name="Fehler_EichprotokollBereitsGenehmigt" xml:space="preserve">
-    <value>Der Vorgang kann nicht bearbeitet werden. Er ist schon als genehmigt markiert</value>
+    <value>Ten proces nie może być opracowany. On jest już zaznaczony jako dozwolony.</value>
   </data>
   <data name="Fehler_GenaugigkeitsklasseUnguelitg" xml:space="preserve">
-    <value>Bitte geben Sie eine gültige Genauigkeitsklasse ein (A,B,C oder D)</value>
+    <value>Proszę podać obowiązującą klasę dokładności (A,B,C albo D)</value>
   </data>
   <data name="Fehler_KeinServerObjektEichung" xml:space="preserve">
-    <value>Es konnte kein passender Konformitätsbewertungsprozess gefunden werden. Bitte wenden Sie sich an RHEWA</value>
+    <value>Nie znaleziono pasującego procesu oceny zgodności. Prosimy zwrócić się do firmy RHEWA</value>
   </data>
   <data name="Fehler_Laden" xml:space="preserve">
-    <value>Error while loading data (PL)</value>
+    <value>Błąd przy ładowaniu danych (PL)</value>
   </data>
   <data name="Fehler_SpeicherAnomalie" xml:space="preserve">
-    <value>Der Konformitätsbewertungsvorgang konnte nicht gespeichert werden. Bitte rufen sie die aktuellsten Informationen von RHEWA ab und versuchen es erneut.</value>
+    <value>Proces oceny zgodności nie mógł być zapisany. Proszę pobrać aktualne informacje od RHEWA i spróbować ponownie.</value>
   </data>
   <data name="Fehler_SpeicherAnomalieRhewaZusatztext" xml:space="preserve">
-    <value>Falls auch das nicht hilft, kontrollieren Sie den ""deaktiviert"" Status der Auswertegeräte und Wägezellen im Admin Client.</value>
+    <value>Jeżeli to nie pomoże, należy sprawdzić stan ""deaktywowany"" mierników i czujników tensometrycznych w Admin Client.</value>
   </data>
   <data name="Fehler_Speichern" xml:space="preserve">
-    <value>Error while saving data</value>
+    <value>Błąd przy zapisie</value>
   </data>
   <data name="Fehler_UngueltigeLizenz" xml:space="preserve">
-    <value>Invalid license. Please contact RHEWA (PL)</value>
+    <value>Nie ważna licencja. Proszę skontaktować się z firmą RHEWA</value>
   </data>
   <data name="Frage" xml:space="preserve">
     <value>Question</value>
@@ -673,15 +695,15 @@ Jest błąd ≤ 0,3e → L = 0,5 Max = potrzebne są wzorce 50% z Max.</value>
     <value>Möchten Sie den gewählten Konformitätsbewertungsprozess kopieren um ihn als Vorlage zu verwenden?</value>
   </data>
   <data name="Warnung_EichungenWerdenGeloescht" xml:space="preserve">
-    <value>Choosing 'Yes' will delete remaining unsent assessments. Are you sure you want to resync your data, while loosing unsent assesments?</value>
+    <value>Znaleziono niewysłane procesy oceny zgodności. Potwierdzając przez "Tak" dane te zostaną poprzez resynchronizację skasowane.  Przed nową synchronizacją neleży być świadomym, że wszystkie niewysłane procesy oceny zgodności zostaną usunięte.</value>
   </data>
   <data name="Bearbeitungsstatus" xml:space="preserve">
-    <value>Global Status</value>
+    <value>Stan opracowania</value>
   </data>
   <data name="Sitzung" xml:space="preserve">
-    <value>Session: </value>
+    <value>Aktualny użytkownik: </value>
   </data>
   <data name="ValidierungUeberspringen" xml:space="preserve">
-    <value>Skip validation? PL</value>
+    <value>      83 N              ges. 87 Ohm</value>
   </data>
 </root>

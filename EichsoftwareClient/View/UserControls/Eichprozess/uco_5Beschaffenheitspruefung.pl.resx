@@ -161,22 +161,21 @@
     <value>318, 18</value>
   </data>
   <data name="RadLabel7.Text" xml:space="preserve">
-    <value>Przy zalewanych czujnikach zalewa nie może być uszkodzona.								
+    <value>Płyty montażowe muszą być czyste i płaskie.
 </value>
   </data>
   <data name="RadLabel5.Size" type="System.Drawing.Size, System.Drawing">
     <value>229, 18</value>
   </data>
   <data name="RadLabel5.Text" xml:space="preserve">
-    <value>Płyty montażowe muszą być równe i czyste.								
+    <value>Przy czujnikach zalanych masą uszczelniającą, masa musi być nieuszkodzona.								
 </value>
   </data>
   <data name="RadLabel3.Size" type="System.Drawing.Size, System.Drawing">
     <value>400, 18</value>
   </data>
   <data name="RadLabel3.Text" xml:space="preserve">
-    <value>Czujnik(i) tensometryczny(e) muszą posiadać zatwierdzenie według OIML R60.								
-</value>
+    <value>Czujnik(i) tensometryczny(e) muszą posiadać zatwierdzenie według OIML R60.								 Dokumenty zatwierdzające są dostępne w postaci czytelnej.</value>
   </data>
   <data name="RadLabel6.Size" type="System.Drawing.Size, System.Drawing">
     <value>670, 18</value>
@@ -300,5 +299,25 @@
   </data>
   <data name="RadGroupBoxAuswerteGeraete.Text" xml:space="preserve">
     <value>Kryteria dla mierników RHEWA:										</value>
+  </data>
+  <data name="RadLabel17.Text" xml:space="preserve">
+    <value>Wskaźniki i wydruki zgadzają się z wymogami (UE)</value>
+  </data>
+  <data name="RadLabel20.Text" xml:space="preserve">
+    <value>Warunki instalacji są w porządku</value>
+  </data>
+  <data name="RadLabel9.Text" xml:space="preserve">
+    <value>Dokumenty zatwierdzające miernika są w postaci czytelnej.</value>
+  </data>
+  <data name="RadLabel19.Text" xml:space="preserve">
+    <value>Sprawdziłem wszystkie wyżej wymienione kryteria. Wszystkie kryteria są spełnione.</value>
+  </data>
+  <data name="RadGroupBoxAufstellbedingungen.HeaderText" xml:space="preserve">
+    <value>Kriterien für den Aufstellungsort (EN):									
+</value>
+  </data>
+  <data name="RadGroupBoxAufstellbedingungen.Text" xml:space="preserve">
+    <value>Kriterien für den Aufstellungsort (EN):									
+</value>
   </data>
 </root>

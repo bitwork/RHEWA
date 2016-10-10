@@ -317,7 +317,7 @@
     <value />
   </data>
   <data name="lblBeschreibung.Text" xml:space="preserve">
-    <value>1. Wydruk przy zakłóceniu i wywołaniu wydruku. Wskazanie po wydruku w przeciągu 5 s.</value>
+    <value>Wydruk przy zakłóceniu i wywołaniu wydruku. Wskazanie po wydruku w przeciągu 5 s.</value>
   </data>
   <data name="lblPrintBeschreibung.RootElement.KeyTip" xml:space="preserve">
     <value />
@@ -341,7 +341,7 @@
     <value>85, 18</value>
   </data>
   <data name="lblAbdruck.Text" xml:space="preserve">
-    <value>print out ok? PL</value>
+    <value>Wydruk ok?</value>
   </data>
   <data name="RadCheckBoxAbdruck1.RootElement.KeyTip" xml:space="preserve">
     <value />
@@ -375,5 +375,14 @@
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
     <value>809, 305</value>
+  </data>
+  <data name="RadLabel3.Text" xml:space="preserve">
+    <value>Maksimum</value>
+  </data>
+  <data name="RadLabel2.Text" xml:space="preserve">
+    <value>Minimum</value>
+  </data>
+  <data name="RadLabel1.Text" xml:space="preserve">
+    <value>Nr.</value>
   </data>
 </root>

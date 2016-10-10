@@ -805,7 +805,7 @@
     <value>59</value>
   </data>
   <data name="lblStaffel5Bereich3EFG.Text" xml:space="preserve">
-    <value>VEL</value>
+    <value>VEL [kg]</value>
   </data>
   <data name="&gt;&gt;lblStaffel5Bereich3EFG.Name" xml:space="preserve">
     <value>lblStaffel5Bereich3EFG</value>
@@ -1597,7 +1597,7 @@
     <value>59</value>
   </data>
   <data name="lblStaffel5Bereich2EFG.Text" xml:space="preserve">
-    <value>VEL</value>
+    <value>VEL [kg]</value>
   </data>
   <data name="&gt;&gt;lblStaffel5Bereich2EFG.Name" xml:space="preserve">
     <value>lblStaffel5Bereich2EFG</value>
@@ -2389,7 +2389,7 @@
     <value>59</value>
   </data>
   <data name="lblStaffel5Bereich1EFG.Text" xml:space="preserve">
-    <value>VEL</value>
+    <value>VEL [kg]</value>
   </data>
   <data name="&gt;&gt;lblStaffel5Bereich1EFG.Name" xml:space="preserve">
     <value>lblStaffel5Bereich1EFG</value>
@@ -3181,7 +3181,7 @@
     <value>59</value>
   </data>
   <data name="lblStaffel4Bereich3EFG.Text" xml:space="preserve">
-    <value>VEL</value>
+    <value>VEL [kg]</value>
   </data>
   <data name="&gt;&gt;lblStaffel4Bereich3EFG.Name" xml:space="preserve">
     <value>lblStaffel4Bereich3EFG</value>
@@ -3973,7 +3973,7 @@
     <value>59</value>
   </data>
   <data name="lblStaffel4Bereich2EFG.Text" xml:space="preserve">
-    <value>VEL</value>
+    <value>VEL [kg]</value>
   </data>
   <data name="&gt;&gt;lblStaffel4Bereich2EFG.Name" xml:space="preserve">
     <value>lblStaffel4Bereich2EFG</value>
@@ -4765,7 +4765,7 @@
     <value>59</value>
   </data>
   <data name="lblStaffel4Bereich1EFG.Text" xml:space="preserve">
-    <value>VEL</value>
+    <value>VEL [kg]</value>
   </data>
   <data name="&gt;&gt;lblStaffel4Bereich1EFG.Name" xml:space="preserve">
     <value>lblStaffel4Bereich1EFG</value>
@@ -5557,7 +5557,7 @@
     <value>59</value>
   </data>
   <data name="lblStaffel3Bereich3EFG.Text" xml:space="preserve">
-    <value>VEL</value>
+    <value>VEL [kg]</value>
   </data>
   <data name="&gt;&gt;lblStaffel3Bereich3EFG.Name" xml:space="preserve">
     <value>lblStaffel3Bereich3EFG</value>
@@ -6349,7 +6349,7 @@
     <value>59</value>
   </data>
   <data name="lblStaffel3Bereich2EFG.Text" xml:space="preserve">
-    <value>VEL</value>
+    <value>VEL [kg]</value>
   </data>
   <data name="&gt;&gt;lblStaffel3Bereich2EFG.Name" xml:space="preserve">
     <value>lblStaffel3Bereich2EFG</value>
@@ -7141,7 +7141,7 @@
     <value>59</value>
   </data>
   <data name="lblStaffel3Bereich1EFG.Text" xml:space="preserve">
-    <value>VEL</value>
+    <value>VEL [kg]</value>
   </data>
   <data name="&gt;&gt;lblStaffel3Bereich1EFG.Name" xml:space="preserve">
     <value>lblStaffel3Bereich1EFG</value>
@@ -7933,7 +7933,7 @@
     <value>59</value>
   </data>
   <data name="lblStaffel2Bereich3EFG.Text" xml:space="preserve">
-    <value>VEL</value>
+    <value>VEL [kg]</value>
   </data>
   <data name="&gt;&gt;lblStaffel2Bereich3EFG.Name" xml:space="preserve">
     <value>lblStaffel2Bereich3EFG</value>
