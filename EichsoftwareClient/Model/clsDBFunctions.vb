@@ -180,7 +180,7 @@ Public Class clsDBFunctions
     ''' <param name="pLizenzschluessel"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Shared Function HoleLizenzObjekt(ByVal pLizenzschluessel As string) As Lizensierung
+    Public Shared Function HoleLizenzObjekt(ByVal pLizenzschluessel As String) As Lizensierung
         Try
             Using context As New EichsoftwareClientdatabaseEntities1
                 Dim objLic = (From lizenz In context.Lizensierung Where lizenz.Lizenzschluessel = pLizenzschluessel)
@@ -221,7 +221,7 @@ Public Class clsDBFunctions
     ''' <param name="Vorgangsnummer"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Shared Function HoleVorhandenenEichprozess(ByVal Vorgangsnummer As string) As Eichprozess
+    Public Shared Function HoleVorhandenenEichprozess(ByVal Vorgangsnummer As String) As Eichprozess
         Using Context As New EichsoftwareClientdatabaseEntities1
             Dim objEichprozess = (From Obj In Context.Eichprozess Select Obj Where Obj.Vorgangsnummer = Vorgangsnummer).FirstOrDefault 'firstor default um erstes element zurückzugeben das übereintrifft(bei ID Spalten sollte es eh nur 1 sein)
             Return objEichprozess
@@ -283,7 +283,7 @@ Public Class clsDBFunctions
     ''' <param name="Vorgangsnummer"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Shared Function BlendeEichprozessAus(ByVal Vorgangsnummer As string) As Boolean
+    Public Shared Function BlendeEichprozessAus(ByVal Vorgangsnummer As String) As Boolean
         Using context As New EichsoftwareClientdatabaseEntities1
             Dim objEichprozess = (From Obj In context.Eichprozess Select Obj Where Obj.Vorgangsnummer = Vorgangsnummer).FirstOrDefault 'firstor default um erstes element zurückzugeben
             If Not objEichprozess Is Nothing Then
@@ -370,7 +370,7 @@ Public Class clsDBFunctions
                                                            .Fabriknummer = Eichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer,
                                                         .Lookup_Waegezelle = Eichprozess.Lookup_Waegezelle.Typ,
                                                         .Lookup_Waagentyp = Eichprozess.Lookup_Waagentyp.Typ_PL,
-                                                        .Lookup_Waagenart = Eichprozess.Lookup_Waagenart.Art_EN,
+                                                        .Lookup_Waagenart = Eichprozess.Lookup_Waagenart.Art_PL,
                                                         .Lookup_Auswertegeraet = Eichprozess.Lookup_Auswertegeraet.Typ,
                                                         Eichprozess.Ausgeblendet,
                                                          Eichprozess.Bearbeitungsdatum,
