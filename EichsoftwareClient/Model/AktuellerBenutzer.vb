@@ -30,7 +30,7 @@ Public Class AktuellerBenutzer
     ''' Gets the Lizenz.
     ''' </summary>
     ''' <value>The  lizenz.</value>
-    Public ReadOnly Property Lizenz() As Lizensierung
+    Public ReadOnly Property Lizenz As Lizensierung
         Get
             Return mvarObjLizenz
         End Get
@@ -40,7 +40,7 @@ Public Class AktuellerBenutzer
     ''' Gets the  letztes update.
     ''' </summary>
     ''' <value>The  letztes update.</value>
-    Public Property LetztesUpdate() As DateTime
+    Public Property LetztesUpdate As DateTime
         Get
             Return mvarLetztesUpdate
         End Get
@@ -53,11 +53,14 @@ Public Class AktuellerBenutzer
     ''' Gets the  aktuelle sprache.
     ''' </summary>
     ''' <value>The  aktuelle sprache.</value>
-    Public Property AktuelleSprache() As string
+    Public Property AktuelleSprache As String
         Get
+            If String.IsNullOrEmpty(mvarAktuelleSprache) Then
+                Return "en"
+            End If
             Return mvarAktuelleSprache
         End Get
-        Set(value As string)
+        Set(value As String)
             mvarAktuelleSprache = value
         End Set
     End Property
@@ -66,11 +69,11 @@ Public Class AktuellerBenutzer
     ''' Gets the  synchronisierungsmodus.
     ''' </summary>
     ''' <value>The  synchronisierungsmodus.</value>
-    Public Property Synchronisierungsmodus() As string
+    Public Property Synchronisierungsmodus As String
         Get
             Return mvarSynchronisierungsmodus
         End Get
-        Set(value As string)
+        Set(value As String)
             'speichern in Konfig DB
             mvarSynchronisierungsmodus = value
         End Set
@@ -80,7 +83,7 @@ Public Class AktuellerBenutzer
     ''' Gets the  sync ab.
     ''' </summary>
     ''' <value>The  sync ab.</value>
-    Public Property SyncAb() As DateTime
+    Public Property SyncAb As DateTime
         Get
             Return mvarSyncAb
         End Get
@@ -93,7 +96,7 @@ Public Class AktuellerBenutzer
     ''' Gets the  sync bis.
     ''' </summary>
     ''' <value>The  sync bis.</value>
-    Public Property SyncBis() As DateTime
+    Public Property SyncBis As DateTime
         Get
             Return mvarSyncBis
         End Get
@@ -106,7 +109,7 @@ Public Class AktuellerBenutzer
     ''' Gets the  hole alleeigenen eichungen vom server.
     ''' </summary>
     ''' <value>The  hole alleeigenen eichungen vom server.</value>
-    Public Property HoleAlleeigenenEichungenVomServer() As Boolean
+    Public Property HoleAlleeigenenEichungenVomServer As Boolean
         Get
             Return mvarHoleAlleeigenenEichungenVomServer
         End Get
@@ -119,11 +122,11 @@ Public Class AktuellerBenutzer
     ''' Gets the  grid settings.
     ''' </summary>
     ''' <value>The  grid settings.</value>
-    Public Property GridSettings() As string
+    Public Property GridSettings As String
         Get
             Return mvarGridSettings
         End Get
-        Set(value As string)
+        Set(value As String)
             mvarGridSettings = value
         End Set
     End Property
@@ -132,11 +135,11 @@ Public Class AktuellerBenutzer
     ''' Gets the  grid settings rhewa.
     ''' </summary>
     ''' <value>The  grid settings rhewa.</value>
-    Public Property GridSettingsRhewa() As string
+    Public Property GridSettingsRhewa As String
         Get
             Return mvarGridSettingsRHEWA
         End Get
-        Set(value As string)
+        Set(value As String)
             mvarGridSettingsRHEWA = value
         End Set
     End Property
@@ -145,7 +148,7 @@ Public Class AktuellerBenutzer
     ''' Gets the  grid settings.
     ''' </summary>
     ''' <value>The  grid settings.</value>
-    Public ReadOnly Property GridDefaultSettings() As string
+    Public ReadOnly Property GridDefaultSettings As String
         Get
             Return mvarDefaultGridSettings
         End Get
@@ -155,13 +158,13 @@ Public Class AktuellerBenutzer
     ''' Gets the  grid settings rhewa.
     ''' </summary>
     ''' <value>The  grid settings rhewa.</value>
-    Public ReadOnly Property GridDefaultSettingsRhewa() As string
+    Public ReadOnly Property GridDefaultSettingsRhewa As String
         Get
             Return mvarDefaultGridSettingsRHEWA
         End Get
     End Property
 
-    Public Shared ReadOnly Property Instance() As AktuellerBenutzer
+    Public Shared ReadOnly Property Instance As AktuellerBenutzer
         Get
             Return mobjSingletonObject
         End Get
@@ -178,15 +181,20 @@ Public Class AktuellerBenutzer
         Using Context As New EichsoftwareClientdatabaseEntities1
             Context.Configuration.LazyLoadingEnabled = True
             Dim Konfig = (From Konfiguration In Context.Konfiguration Where Konfiguration.BenutzerLizenz = mobjSingletonObject.mvarObjLizenz.Lizenzschluessel).FirstOrDefault
+            If Konfig Is Nothing Then
+                mobjSingletonObject.mvarAktuelleSprache = "en"
 
-            mobjSingletonObject.mvarAktuelleSprache = Konfig.AktuelleSprache
-            mobjSingletonObject.mvarGridSettings = Konfig.GridSettings
-            mobjSingletonObject.mvarGridSettingsRHEWA = Konfig.GridSettingsRHEWA
-            mobjSingletonObject.mvarHoleAlleeigenenEichungenVomServer = Konfig.HoleAlleeigenenEichungenVomServer
-            mobjSingletonObject.mvarLetztesUpdate = Konfig.LetztesUpdate
-            mobjSingletonObject.mvarSyncAb = Konfig.SyncAb
-            mobjSingletonObject.mvarSyncBis = Konfig.SyncBis
-            mobjSingletonObject.mvarSynchronisierungsmodus = Konfig.Synchronisierungsmodus
+            Else
+
+                mobjSingletonObject.AktuelleSprache = Konfig.AktuelleSprache
+                mobjSingletonObject.GridSettings = Konfig.GridSettings
+                mobjSingletonObject.GridSettingsRhewa = Konfig.GridSettingsRHEWA
+                mobjSingletonObject.HoleAlleeigenenEichungenVomServer = Konfig.HoleAlleeigenenEichungenVomServer
+                mobjSingletonObject.LetztesUpdate = Konfig.LetztesUpdate
+                mobjSingletonObject.SyncAb = Konfig.SyncAb
+                mobjSingletonObject.SyncBis = Konfig.SyncBis
+                mobjSingletonObject.Synchronisierungsmodus = Konfig.Synchronisierungsmodus
+            End If
 
         End Using
 
