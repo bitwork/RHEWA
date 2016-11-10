@@ -70,6 +70,7 @@ Public Class FrmLizenz
                                 objLic.Aktiv = objLizenzdaten.Aktiv
                                 DBContext.SaveChanges()
                             Catch ex As Exception
+                                Console.WriteLine(ex.Message)
                             End Try
 
                             Try
@@ -93,6 +94,8 @@ Public Class FrmLizenz
                                 DBContext.Konfiguration.Add(objKonfig)
                                 DBContext.SaveChanges()
                             Catch ex As Exception
+                                Console.WriteLine(ex.Message)
+
                             End Try
 
                             'abschluss des dialoges

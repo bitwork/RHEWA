@@ -44,6 +44,20 @@ Public Class clsDBFunctions
     '    End Try
     'End Sub
 
+    Public Shared Function LoescheLokaleBenutzer() As Boolean
+        'alle Tabellen iterieren und löschen. Das commit wird erst am Ende ausgeführt, deswegen ist die löschreihenefolge egal
+        Using DBContext As New EichsoftwareClientdatabaseEntities1
+            For Each o In DBContext.Lizensierung.ToList
+                DBContext.Lizensierung.Remove(o)
+
+            Next
+            For Each o In DBContext.Konfiguration.ToList
+                DBContext.Konfiguration.Remove(o)
+            Next
+            DBContext.SaveChanges()
+        End Using
+    End Function
+
     ''' <summary>
     '''  löscht lokale Datenbank, für resyncronisierung des aktuellen Benutzers
     ''' </summary>

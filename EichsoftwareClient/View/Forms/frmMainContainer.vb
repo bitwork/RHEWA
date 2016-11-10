@@ -353,7 +353,7 @@ Public Class FrmMainContainer
             Me.WindowState = FormWindowState.Maximized
             Me.Visible = True
         Catch ex As Exception
-
+            MessageBox.Show(String.Format("{0} Stacktrace:{1}", ex.Message, ex.StackTrace))
         End Try
     End Sub
 

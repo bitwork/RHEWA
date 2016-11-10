@@ -92,12 +92,48 @@ Public Class FrmBenutzerauswahl
                 Exit Sub
             End If
         End If
+        Try
 
-        AktuellerBenutzer.GetNewInstance(RadListControlBenutzer.SelectedValue)
-        mvarGewaehlteBenutzerLizenz = AktuellerBenutzer.Instance.Lizenz
-        My.Settings.LetzterBenutzer = mvarGewaehlteBenutzerLizenz.Lizenzschluessel
-        My.Settings.Save()
-        Me.DialogResult = Windows.Forms.DialogResult.OK
+            AktuellerBenutzer.GetNewInstance(RadListControlBenutzer.SelectedValue)
+
+            Dim error1 As Boolean = False
+            'versuchen sonderfälle abzudecken
+            If AktuellerBenutzer.Instance Is Nothing Then
+                MessageBox.Show("There is an error with your User Account. Please retry entering your license")
+                error1 = True
+            End If
+            If AktuellerBenutzer.Instance.Lizenz Is Nothing Then
+                MessageBox.Show("There is an error with your User Account. Please retry entering your license")
+                error1 = True
+
+            End If
+
+            mvarGewaehlteBenutzerLizenz = AktuellerBenutzer.Instance.Lizenz
+            If mvarGewaehlteBenutzerLizenz Is Nothing Then
+                MessageBox.Show("There is an error with your User Account. Please retry entering your license")
+                error1 = True
+
+            End If
+            If mvarGewaehlteBenutzerLizenz.Lizenzschluessel Is Nothing Then
+                MessageBox.Show("There is an error with your User Account. Please retry entering your license")
+                error1 = True
+
+            End If
+
+            If error1 = True Then
+                clsDBFunctions.LoescheLokaleDatenbank()
+                clsDBFunctions.LoescheLokaleBenutzer()
+                Application.Restart()
+                Exit Sub
+
+            End If
+
+            My.Settings.LetzterBenutzer = mvarGewaehlteBenutzerLizenz.Lizenzschluessel
+            My.Settings.Save()
+            Me.DialogResult = Windows.Forms.DialogResult.OK
+        Catch ex As Exception
+            MessageBox.Show(String.Format("{0} Stacktrace:{1}", ex.Message, ex.StackTrace))
+        End Try
     End Sub
 
     ''' <summary>
