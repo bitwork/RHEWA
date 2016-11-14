@@ -170,7 +170,7 @@ Public Class AktuellerBenutzer
         End Get
     End Property
 
-    Public Shared Function GetNewInstance(ByVal pLizenzschluessel As string)
+    Public Shared Function GetNewInstance(ByVal pLizenzschluessel As String)
         mobjSingletonObject = New AktuellerBenutzer
         mobjSingletonObject.mvarObjLizenz = clsDBFunctions.HoleLizenzObjekt(pLizenzschluessel)
 
@@ -211,15 +211,51 @@ Public Class AktuellerBenutzer
         Using Context As New EichsoftwareClientdatabaseEntities1
             Context.Configuration.LazyLoadingEnabled = True
             Dim Konfig = (From Konfiguration In Context.Konfiguration Where Konfiguration.BenutzerLizenz = mobjSingletonObject.mvarObjLizenz.Lizenzschluessel).FirstOrDefault
+            If Konfig Is Nothing Then
+                Konfig = New Konfiguration
+                Context.Konfiguration.Add(Konfig)
+            End If
 
-            Konfig.AktuelleSprache = mobjSingletonObject.mvarAktuelleSprache
-            Konfig.GridSettings = mobjSingletonObject.mvarGridSettings
-            Konfig.GridSettingsRHEWA = mobjSingletonObject.mvarGridSettingsRHEWA
-            Konfig.HoleAlleeigenenEichungenVomServer = mobjSingletonObject.mvarHoleAlleeigenenEichungenVomServer
-            Konfig.LetztesUpdate = mobjSingletonObject.mvarLetztesUpdate
-            Konfig.SyncAb = mobjSingletonObject.mvarSyncAb
-            Konfig.SyncBis = mobjSingletonObject.mvarSyncBis
-            Konfig.Synchronisierungsmodus = mobjSingletonObject.mvarSynchronisierungsmodus
+            Try
+                Konfig.AktuelleSprache = IIf(String.IsNullOrEmpty(mobjSingletonObject.mvarAktuelleSprache) = True, "en", mobjSingletonObject.AktuelleSprache)
+            Catch ex As Exception
+                MessageBox.Show("Debug Info 1. Please Report to RHEWA")
+            End Try
+            Try
+                Konfig.GridSettings = mobjSingletonObject.mvarGridSettings
+            Catch ex As Exception
+                MessageBox.Show("Debug Info 2. Please Report to RHEWA")
+            End Try
+            Try
+                Konfig.GridSettingsRHEWA = mobjSingletonObject.mvarGridSettingsRHEWA
+            Catch ex As Exception
+                MessageBox.Show("Debug Info 3. Please Report to RHEWA")
+            End Try
+            Try
+                Konfig.HoleAlleeigenenEichungenVomServer = mobjSingletonObject.mvarHoleAlleeigenenEichungenVomServer
+            Catch ex As Exception
+                MessageBox.Show("Debug Info 4. Please Report to RHEWA")
+            End Try
+            Try
+                Konfig.LetztesUpdate = mobjSingletonObject.mvarLetztesUpdate
+            Catch ex As Exception
+                MessageBox.Show("Debug Info 5. Please Report to RHEWA")
+            End Try
+            Try
+                Konfig.SyncAb = mobjSingletonObject.mvarSyncAb
+            Catch ex As Exception
+                MessageBox.Show("Debug Info 6. Please Report to RHEWA")
+            End Try
+            Try
+                Konfig.SyncBis = mobjSingletonObject.mvarSyncBis
+            Catch ex As Exception
+                MessageBox.Show("Debug Info 7. Please Report to RHEWA")
+            End Try
+            Try
+                Konfig.Synchronisierungsmodus = mobjSingletonObject.mvarSynchronisierungsmodus
+            Catch ex As Exception
+                MessageBox.Show("Debug Info 8. Please Report to RHEWA")
+            End Try
 
             Context.SaveChanges()
             Return True
