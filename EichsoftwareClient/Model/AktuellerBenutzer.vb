@@ -261,6 +261,14 @@ Public Class AktuellerBenutzer
             Try
                 Context.SaveChanges()
             Catch ex As Exception
+                MessageBox.Show(ex.Message)
+                If Not ex.InnerException Is Nothing Then
+                    MessageBox.Show(ex.InnerException.Message)
+                    If Not ex.InnerException.InnerException Is Nothing Then
+                        MessageBox.Show(ex.InnerException.InnerException.Message)
+                    End If
+
+                End If
                 MessageBox.Show("Debug Info 9. Please Report to RHEWA")
             End Try
             Return True
