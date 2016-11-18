@@ -212,6 +212,7 @@ Public Class AktuellerBenutzer
             Context.Configuration.LazyLoadingEnabled = True
             Dim Konfig = (From Konfiguration In Context.Konfiguration Where Konfiguration.BenutzerLizenz = mobjSingletonObject.mvarObjLizenz.Lizenzschluessel).FirstOrDefault
             If Konfig Is Nothing Then
+                MessageBox.Show("Debug Info 0. Please Report to RHEWA")
                 Konfig = New Konfiguration
                 Context.Konfiguration.Add(Konfig)
             End If
@@ -257,7 +258,11 @@ Public Class AktuellerBenutzer
                 MessageBox.Show("Debug Info 8. Please Report to RHEWA")
             End Try
 
-            Context.SaveChanges()
+            Try
+                Context.SaveChanges()
+            Catch ex As Exception
+                MessageBox.Show("Debug Info 9. Please Report to RHEWA")
+            End Try
             Return True
         End Using
     End Function
