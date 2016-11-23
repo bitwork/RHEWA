@@ -1,3 +1,6 @@
+Imports System.IO
+Imports System.Runtime.Serialization
+
 Public Class clsDBFunctions
 
     ' ''' <summary>
@@ -67,12 +70,14 @@ Public Class clsDBFunctions
         Try
             'alle Tabellen iterieren und löschen. Das commit wird erst am Ende ausgeführt, deswegen ist die löschreihenefolge egal
             Using DBContext As New EichsoftwareClientdatabaseEntities1
-                Dim Eichprozesse = From eichprozess In DBContext.Eichprozess Where eichprozess.ErzeugerLizenz = AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel And eichprozess.FK_Bearbeitungsstatus <> GlobaleEnumeratoren.enuBearbeitungsstatus.noch_nicht_versendet
+                DBContext.Configuration.ProxyCreationEnabled = False
+                Dim Eichprozesse = (From eichprozess In DBContext.Eichprozess Where eichprozess.ErzeugerLizenz = AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel And eichprozess.FK_Bearbeitungsstatus <> GlobaleEnumeratoren.enuBearbeitungsstatus.noch_nicht_versendet).ToList
 
                 'liste mit gelöschten eichprozessen
                 Dim listIDsEichprozess As New List(Of String)
                 Dim listIDsEichprotokoll As New List(Of String)
                 Dim listIDsKompatiblitaetsnachweis As New List(Of String)
+                DBContext.Configuration.AutoDetectChangesEnabled = False
 
                 'aufbereiten der Listen mit allen IDS.
                 For Each obj In Eichprozesse
@@ -87,72 +92,85 @@ Public Class clsDBFunctions
                     DBContext.Eichprozess.Remove(obj)
                 Next
 
+                Dim listMogelstatistik = (From Mogelstatistik In DBContext.Mogelstatistik).ToList
                 For Each ID In listIDsEichprozess
-                    Dim Mogelstatistiken = From Mogelstatistik In DBContext.Mogelstatistik Where Mogelstatistik.FK_Eichprozess = ID
+                    Dim Mogelstatistiken = From Mogelstatistik In listMogelstatistik Where Mogelstatistik.FK_Eichprozess = ID
                     For Each obj In Mogelstatistiken
                         DBContext.Mogelstatistik.Remove(obj)
                     Next
                 Next
 
+                Dim listKompnachweis = (From Kompatiblitaetsnachweis In DBContext.Kompatiblitaetsnachweis).ToList
                 For Each ID In listIDsKompatiblitaetsnachweis
-                    Dim Kompatiblitaetsnachweise = From Kompatiblitaetsnachweis In DBContext.Kompatiblitaetsnachweis Where Kompatiblitaetsnachweis.ID = ID
+                    Dim Kompatiblitaetsnachweise = From Kompatiblitaetsnachweis In listKompnachweis Where Kompatiblitaetsnachweis.ID = ID
                     For Each obj In Kompatiblitaetsnachweise
                         DBContext.Kompatiblitaetsnachweis.Remove(obj)
                     Next
                 Next
 
-                For Each ID In listIDsEichprotokoll
-                    Dim eichprotokolle = From eichprotokoll In DBContext.Eichprotokoll Where eichprotokoll.ID = ID
-                    For Each obj In eichprotokolle
-                        DBContext.Eichprotokoll.Remove(obj)
-                    Next
+                Dim listEichprotokoll = (From Kompatiblitaetsnachweis In DBContext.Eichprotokoll).ToList
 
-                    Dim PruefungAnsprechvermoegen = From pruefung In DBContext.PruefungAnsprechvermoegen Where pruefung.FK_Eichprotokoll = ID
-                    For Each obj In PruefungAnsprechvermoegen
-                        DBContext.PruefungAnsprechvermoegen.Remove(obj)
-                    Next
+                Dim listPruefungAnsprechvermoegen = DBContext.PruefungAnsprechvermoegen.ToList
+                Dim listPruefungLinearitaetFallend = DBContext.PruefungLinearitaetFallend.ToList
+                Dim listPruefungLinearitaetSteigend = DBContext.PruefungLinearitaetSteigend.ToList
+                Dim listPruefungRollendeLasten = DBContext.PruefungRollendeLasten.ToList
+                Dim listPruefungAussermittigeBelastung = DBContext.PruefungAussermittigeBelastung.ToList
+                Dim listPruefungStabilitaetGleichgewichtslage = DBContext.PruefungStabilitaetGleichgewichtslage.ToList
+                Dim listPruefungStaffelverfahrenErsatzlast = DBContext.PruefungStaffelverfahrenErsatzlast.ToList
+                Dim listPruefungStaffelverfahrenNormallast = DBContext.PruefungStaffelverfahrenNormallast.ToList
+                Dim listPruefungWiederholbarkeit = DBContext.PruefungWiederholbarkeit.ToList
 
-                    Dim PruefungLinearitaetFallend = From pruefung In DBContext.PruefungLinearitaetFallend Where pruefung.FK_Eichprotokoll = ID
-                    For Each obj In PruefungLinearitaetFallend
-                        DBContext.PruefungLinearitaetFallend.Remove(obj)
-                    Next
-
-                    Dim PruefungLinearitaetSteigend = From pruefung In DBContext.PruefungLinearitaetSteigend Where pruefung.FK_Eichprotokoll = ID
-                    For Each obj In PruefungLinearitaetSteigend
-                        DBContext.PruefungLinearitaetSteigend.Remove(obj)
-                    Next
-
-                    Dim PruefungRollendeLasten = From pruefung In DBContext.PruefungRollendeLasten Where pruefung.FK_Eichprotokoll = ID
-                    For Each obj In PruefungRollendeLasten
-                        DBContext.PruefungRollendeLasten.Remove(obj)
-                    Next
-
-                    Dim PruefungAussermittigeBelastung = From pruefung In DBContext.PruefungAussermittigeBelastung Where pruefung.FK_Eichprotokoll = ID
-                    For Each obj In PruefungAussermittigeBelastung
-                        DBContext.PruefungAussermittigeBelastung.Remove(obj)
-                    Next
-
-                    Dim PruefungStabilitaetGleichgewichtslage = From pruefung In DBContext.PruefungStabilitaetGleichgewichtslage Where pruefung.FK_Eichprotokoll = ID
-                    For Each obj In PruefungStabilitaetGleichgewichtslage
-                        DBContext.PruefungStabilitaetGleichgewichtslage.Remove(obj)
-                    Next
-
-                    Dim PruefungStaffelverfahrenErsatzlast = From pruefung In DBContext.PruefungStaffelverfahrenErsatzlast Where pruefung.FK_Eichprotokoll = ID
-                    For Each obj In PruefungStaffelverfahrenErsatzlast
-                        DBContext.PruefungStaffelverfahrenErsatzlast.Remove(obj)
-                    Next
-
-                    Dim PruefungStaffelverfahrenNormallast = From pruefung In DBContext.PruefungStaffelverfahrenNormallast Where pruefung.FK_Eichprotokoll = ID
-                    For Each obj In PruefungStaffelverfahrenNormallast
-                        DBContext.PruefungStaffelverfahrenNormallast.Remove(obj)
-                    Next
-
-                    Dim PruefungWiederholbarkeit = From pruefung In DBContext.PruefungWiederholbarkeit Where pruefung.FK_Eichprotokoll = ID
-                    For Each obj In PruefungWiederholbarkeit
-                        DBContext.PruefungWiederholbarkeit.Remove(obj)
-                    Next
-
+                Dim eichprotokolle = From eichprotokoll In listEichprotokoll Where listIDsEichprotokoll.Contains(eichprotokoll.ID)
+                For Each obj In eichprotokolle
+                    DBContext.Eichprotokoll.Remove(obj)
                 Next
+
+                Dim PruefungAnsprechvermoegen = From pruefung In listPruefungAnsprechvermoegen Where listIDsEichprotokoll.Contains(pruefung.FK_Eichprotokoll)
+                For Each obj In PruefungAnsprechvermoegen
+                    DBContext.PruefungAnsprechvermoegen.Remove(obj)
+                Next
+
+                Dim PruefungLinearitaetFallend = From pruefung In listPruefungLinearitaetFallend Where listIDsEichprotokoll.Contains(pruefung.FK_Eichprotokoll)
+                For Each obj In PruefungLinearitaetFallend
+                    DBContext.PruefungLinearitaetFallend.Remove(obj)
+                Next
+
+                Dim PruefungLinearitaetSteigend = From pruefung In listPruefungLinearitaetSteigend Where listIDsEichprotokoll.Contains(pruefung.FK_Eichprotokoll)
+                For Each obj In PruefungLinearitaetSteigend
+                    DBContext.PruefungLinearitaetSteigend.Remove(obj)
+                Next
+
+                Dim PruefungRollendeLasten = From pruefung In listPruefungRollendeLasten Where listIDsEichprotokoll.Contains(pruefung.FK_Eichprotokoll)
+                For Each obj In PruefungRollendeLasten
+                    DBContext.PruefungRollendeLasten.Remove(obj)
+                Next
+
+                Dim PruefungAussermittigeBelastung = From pruefung In listPruefungAussermittigeBelastung Where listIDsEichprotokoll.Contains(pruefung.FK_Eichprotokoll)
+
+                For Each obj In PruefungAussermittigeBelastung
+                    DBContext.PruefungAussermittigeBelastung.Remove(obj)
+                Next
+
+                Dim PruefungStabilitaetGleichgewichtslage = From pruefung In listPruefungStabilitaetGleichgewichtslage Where listIDsEichprotokoll.Contains(pruefung.FK_Eichprotokoll)
+                For Each obj In PruefungStabilitaetGleichgewichtslage
+                    DBContext.PruefungStabilitaetGleichgewichtslage.Remove(obj)
+                Next
+
+                Dim PruefungStaffelverfahrenErsatzlast = From pruefung In listPruefungStaffelverfahrenErsatzlast Where listIDsEichprotokoll.Contains(pruefung.FK_Eichprotokoll)
+                For Each obj In PruefungStaffelverfahrenErsatzlast
+                    DBContext.PruefungStaffelverfahrenErsatzlast.Remove(obj)
+                Next
+
+                Dim PruefungStaffelverfahrenNormallast = From pruefung In listPruefungStaffelverfahrenNormallast Where listIDsEichprotokoll.Contains(pruefung.FK_Eichprotokoll)
+                For Each obj In PruefungStaffelverfahrenNormallast
+                    DBContext.PruefungStaffelverfahrenNormallast.Remove(obj)
+                Next
+
+                Dim PruefungWiederholbarkeit = From pruefung In listPruefungWiederholbarkeit Where listIDsEichprotokoll.Contains(pruefung.FK_Eichprotokoll)
+                For Each obj In PruefungWiederholbarkeit
+                    DBContext.PruefungWiederholbarkeit.Remove(obj)
+                Next
+                DBContext.ChangeTracker.DetectChanges()
 
                 DBContext.SaveChanges()
                 Return True
@@ -420,5 +438,31 @@ Public Class clsDBFunctions
 
         End Using
     End Function
+
+
+
+
+    Public Shared Function Serialize(obj As Object) As String
+        Using memoryStream As New MemoryStream()
+            Using reader As New StreamReader(memoryStream)
+                Dim serializer As New DataContractSerializer(obj.[GetType]())
+                serializer.WriteObject(memoryStream, obj)
+                memoryStream.Position = 0
+                Return reader.ReadToEnd()
+            End Using
+        End Using
+    End Function
+
+    Public Shared Function Deserialize(xml As String, toType As Type) As Object
+        Using stream As Stream = New MemoryStream()
+            Dim data As Byte() = System.Text.Encoding.UTF8.GetBytes(xml)
+            stream.Write(data, 0, data.Length)
+            stream.Position = 0
+            Dim deserializer As New DataContractSerializer(toType)
+            Return deserializer.ReadObject(stream)
+        End Using
+    End Function
+
+
 
 End Class

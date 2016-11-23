@@ -117,12 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="RadGridViewAuswahlliste.MasterTemplate.Caption" xml:space="preserve">
-    <value />
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="RadButtonNeuStandardwaage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>853, 410</value>
+    <value>1023, 410</value>
   </data>
   <data name="RadButtonClientUpdateDatabase.Text" xml:space="preserve">
     <value>Status der abgeschickten Verfahren prüfen</value>
@@ -136,14 +133,8 @@
   <data name="RadCheckBoxAusblendenClientGeloeschterDokumente.Text" xml:space="preserve">
     <value>&lt;html&gt;  Zuvor ausgeblendete &lt;br /&gt;  Eichvoränge anzeigen&lt;/html&gt;</value>
   </data>
-  <data name="RadButtonClientAusblenden.Location" type="System.Drawing.Point, System.Drawing">
-    <value>391, 410</value>
-  </data>
   <data name="RadButtonClientAusblenden.Text" xml:space="preserve">
     <value>Vorgang ausblenden</value>
-  </data>
-  <data name="RadButtonClientNeu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>751, 410</value>
   </data>
   <data name="RadButtonClientNeu.Size" type="System.Drawing.Size, System.Drawing">
     <value>96, 63</value>
@@ -151,13 +142,7 @@
   <data name="RadButtonClientNeu.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;p&gt;Vorgang&lt;/p&gt;&lt;p&gt;erstellen&lt;/p&gt;&lt;/html&gt;</value>
   </data>
-  <data name="RadButtonClientBearbeiten.Location" type="System.Drawing.Point, System.Drawing">
-    <value>571, 410</value>
-  </data>
   <data name="RadButtonClientBearbeiten.Text" xml:space="preserve">
     <value>Vorgang bearbeiten</value>
-  </data>
-  <data name="RadGridViewRHEWAAlle.MasterTemplate.Caption" xml:space="preserve">
-    <value />
   </data>
 </root>

@@ -290,8 +290,7 @@ Public Class ucoEichprozessauswahlliste
         If f.DialogResult = DialogResult.OK Then
             'neu aktualisierung der Eichungen
             VerbindeMitWebserviceUndHoleAlles()
-            'aktualisieren des Grids
-            LoadFromDatabase()
+
         ElseIf f.DialogResult = DialogResult.Retry Then
             RadGridViewAuswahlliste.DataSource = Nothing
             RadGridViewRHEWAAlle.DataSource = Nothing
@@ -859,6 +858,20 @@ Public Class ucoEichprozessauswahlliste
 
 #End Region
 
+    ''' <summary>
+    ''' Validations the needed.
+    ''' </summary>
+    ''' <returns></returns>
+    Protected Friend Overrides Function ValidationNeeded() As Boolean
+        Return True
+    End Function
+
+    Private Sub RadGridView_ViewCellFormatting(sender As Object, e As CellFormattingEventArgs) Handles RadGridViewAuswahlliste.ViewCellFormatting, RadGridViewRHEWAAlle.ViewCellFormatting
+        If (TypeOf e.CellElement Is GridHeaderCellElement) Then
+            e.CellElement.TextWrap = True
+        End If
+    End Sub
+
 #Region "Updates aus Webservice"
 
     ''' <summary>
@@ -866,70 +879,13 @@ Public Class ucoEichprozessauswahlliste
     ''' </summary>
     ''' <remarks></remarks>
     Private Sub VerbindeMitWebserviceUndHoleAlles()
-        Dim bolSyncData As Boolean = True 'Wert der genutzt wird um ggfs die Synchrosierung abzubrechen, falls ein Benutzer noch ungesendete Konformitätsbewertungsvorgänge hat
-        If clsWebserviceFunctions.TesteVerbindung() Then
+        Me.Enabled = False
+        Me.Parent.Enabled = False
 
-            'variablen zur Ausgabe ob es änderungen gibt:
-            Dim bolNeuStammdaten As Boolean = False
-            Dim bolNeuWZ As Boolean = False
-            Dim bolNeuAWG As Boolean = False
-            Dim bolNeuGenehmigung As Boolean = False
-
-            'prüfen ob noch nicht abgeschickte Eichungen vorlieren. Wenn ja Hinweismeldung und Abbruchmöglichkeit für Benutzer
-            If clsDBFunctions.PruefeAufUngesendeteEichungen() = True Then
-                If MessageBox.Show(My.Resources.GlobaleLokalisierung.Warnung_EichungenWerdenGeloescht, My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo) = DialogResult.Yes Then
-                    bolSyncData = True
-                Else
-                    AktuellerBenutzer.Instance.HoleAlleeigenenEichungenVomServer = False
-                    AktuellerBenutzer.SaveSettings()
-                    bolSyncData = False
-                End If
-            End If
-
-            If bolSyncData Then
-
-                'für den Fall das die Anwendung gerade erst installiert wurde, oder die einstellung zur Synchronisierung geändert wurde, sollen alle Eichungen vom RHEWA Server geholt werden, die einmal angelegt wurden
-                If clsDBFunctions.LoescheLokaleDatenbank() Then
-                    AktuellerBenutzer.Instance.LetztesUpdate = "01.01.2000"
-                    AktuellerBenutzer.SaveSettings()
-                    'neue Stammdaten zum Benutzer holen
-                    clsWebserviceFunctions.GetNeueStammdaten(bolNeuStammdaten)
-                    'hole alle WZ
-                    clsWebserviceFunctions.GetNeueWZ(bolNeuWZ)
-                    'prüfen ob es neue AWG gibt
-                    clsWebserviceFunctions.GetNeuesAWG(bolNeuAWG)
-
-                    'prüfen ob Eichprozesse die versendet wurden genehmigt oder abgelehnt wurden
-                    clsWebserviceFunctions.GetGenehmigungsstatus(bolNeuGenehmigung)
-
-                    AktuellerBenutzer.Instance.LetztesUpdate = Date.Now
-                    AktuellerBenutzer.SaveSettings()
-
-                    clsWebserviceFunctions.GetEichprotokolleVomServer()
-
-                    AktuellerBenutzer.Instance.HoleAlleeigenenEichungenVomServer = False
-                    AktuellerBenutzer.SaveSettings()
-
-                    Dim returnMessage As String = My.Resources.GlobaleLokalisierung.Aktualisierung_Erfolgreich
-                    If bolNeuWZ Then
-                        returnMessage += vbNewLine & vbNewLine & My.Resources.GlobaleLokalisierung.Aktualisierung_NeuWZ & " "
-                    End If
-                    If bolNeuAWG Then
-                        returnMessage += vbNewLine & vbNewLine & My.Resources.GlobaleLokalisierung.Aktualisierung_NeuAWG & " "
-                    End If
-
-                    If bolNeuGenehmigung Then
-                        returnMessage += vbNewLine & vbNewLine & My.Resources.GlobaleLokalisierung.Aktualisierung_NeuEichung & " "
-                    End If
-
-                    If bolNeuStammdaten Then
-
-                    End If
-                End If
-            End If
-        Else
-            MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung)
-        End If
+        FlowLayoutPanel2.Visible = True
+        RadProgressBar1.Visible = True
+        RadProgressBar1.Value1 = 0
+        BackgroundWorkerSyncAlles.RunWorkerAsync()
     End Sub
 
     ''' <summary>
@@ -983,6 +939,108 @@ Public Class ucoEichprozessauswahlliste
         End If
     End Sub
 
+    Private Sub BackgroundWorkerSyncAlles_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorkerSyncAlles.DoWork
+        Dim bolSyncData As Boolean = True 'Wert der genutzt wird um ggfs die Synchrosierung abzubrechen, falls ein Benutzer noch ungesendete Konformitätsbewertungsvorgänge hat
+        If clsWebserviceFunctions.TesteVerbindung() Then
+            BackgroundWorkerSyncAlles.ReportProgress(10)
+            'variablen zur Ausgabe ob es änderungen gibt:
+            Dim bolNeuStammdaten As Boolean = False
+            Dim bolNeuWZ As Boolean = False
+            Dim bolNeuAWG As Boolean = False
+            Dim bolNeuGenehmigung As Boolean = False
+
+            'prüfen ob noch nicht abgeschickte Eichungen vorlieren. Wenn ja Hinweismeldung und Abbruchmöglichkeit für Benutzer
+            If clsDBFunctions.PruefeAufUngesendeteEichungen() = True Then
+                If MessageBox.Show(My.Resources.GlobaleLokalisierung.Warnung_EichungenWerdenGeloescht, My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo) = DialogResult.Yes Then
+                    bolSyncData = True
+                Else
+                    AktuellerBenutzer.Instance.HoleAlleeigenenEichungenVomServer = False
+                    AktuellerBenutzer.SaveSettings()
+                    bolSyncData = False
+                End If
+            End If
+            BackgroundWorkerSyncAlles.ReportProgress(20)
+
+            If bolSyncData Then
+
+                'für den Fall das die Anwendung gerade erst installiert wurde, oder die einstellung zur Synchronisierung geändert wurde, sollen alle Eichungen vom RHEWA Server geholt werden, die einmal angelegt wurden
+                If clsDBFunctions.LoescheLokaleDatenbank() Then
+                    BackgroundWorkerSyncAlles.ReportProgress(30)
+
+                    AktuellerBenutzer.Instance.LetztesUpdate = "01.01.2000"
+                    AktuellerBenutzer.SaveSettings()
+                    'neue Stammdaten zum Benutzer holen
+                    clsWebserviceFunctions.GetNeueStammdaten(bolNeuStammdaten)
+                    BackgroundWorkerSyncAlles.ReportProgress(40)
+
+                    'hole alle WZ
+                    clsWebserviceFunctions.GetNeueWZ(bolNeuWZ)
+                    BackgroundWorkerSyncAlles.ReportProgress(50)
+
+                    'prüfen ob es neue AWG gibt
+                    clsWebserviceFunctions.GetNeuesAWG(bolNeuAWG)
+                    BackgroundWorkerSyncAlles.ReportProgress(60)
+
+                    'prüfen ob Eichprozesse die versendet wurden genehmigt oder abgelehnt wurden
+                    clsWebserviceFunctions.GetGenehmigungsstatus(bolNeuGenehmigung)
+                    BackgroundWorkerSyncAlles.ReportProgress(70)
+
+                    AktuellerBenutzer.Instance.LetztesUpdate = Date.Now
+                    AktuellerBenutzer.SaveSettings()
+                    BackgroundWorkerSyncAlles.ReportProgress(80)
+
+                    clsWebserviceFunctions.GetEichprotokolleVomServer()
+                    BackgroundWorkerSyncAlles.ReportProgress(90)
+
+                    AktuellerBenutzer.Instance.HoleAlleeigenenEichungenVomServer = False
+                    AktuellerBenutzer.SaveSettings()
+
+                    Dim returnMessage As String = My.Resources.GlobaleLokalisierung.Aktualisierung_Erfolgreich
+                    If bolNeuWZ Then
+                        returnMessage += vbNewLine & vbNewLine & My.Resources.GlobaleLokalisierung.Aktualisierung_NeuWZ & " "
+                    End If
+                    If bolNeuAWG Then
+                        returnMessage += vbNewLine & vbNewLine & My.Resources.GlobaleLokalisierung.Aktualisierung_NeuAWG & " "
+                    End If
+
+                    If bolNeuGenehmigung Then
+                        returnMessage += vbNewLine & vbNewLine & My.Resources.GlobaleLokalisierung.Aktualisierung_NeuEichung & " "
+                    End If
+
+                    If bolNeuStammdaten Then
+
+                    End If
+                End If
+            End If
+        Else
+            e.Result = My.Resources.GlobaleLokalisierung.KeineVerbindung
+        End If
+
+        BackgroundWorkerSyncAlles.ReportProgress(100)
+
+    End Sub
+
+    Private Sub BackgroundWorkerSyncAlles_ProgressChanged(sender As Object, e As System.ComponentModel.ProgressChangedEventArgs) Handles BackgroundWorkerSyncAlles.ProgressChanged
+        RadProgressBar1.Value1 = e.ProgressPercentage
+        Me.Enabled = False
+        Me.Parent.Enabled = False
+    End Sub
+
+    Private Sub BackgroundWorkerSyncAlles_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorkerSyncAlles.RunWorkerCompleted
+        RadProgressBar1.Value1 = 100
+        If Not e.Result Is Nothing Then
+            MessageBox.Show(e.Result)
+        End If
+
+        FlowLayoutPanel2.Visible = False
+        RadProgressBar1.Visible = False
+        Me.Enabled = True
+        Me.Parent.Enabled = True
+
+        'aktualisieren des Grids
+        LoadFromDatabase()
+    End Sub
+
     ''' <summary>
     ''' Methode welche sich mit dem Webservice verbinduet und nach aktualisierungen für WZ, AWGs und eigenen Eichungen guckt
     ''' </summary>
@@ -992,17 +1050,15 @@ Public Class ucoEichprozessauswahlliste
     End Sub
 #End Region
 
-    ''' <summary>
-    ''' Validations the needed.
-    ''' </summary>
-    ''' <returns></returns>
-    Protected Friend Overrides Function ValidationNeeded() As Boolean
-        Return True
-    End Function
+#Region "Protokoll ablegen"
 
-    Private Sub RadGridView_ViewCellFormatting(sender As Object, e As CellFormattingEventArgs) Handles RadGridViewAuswahlliste.ViewCellFormatting, RadGridViewRHEWAAlle.ViewCellFormatting
-        If (TypeOf e.CellElement Is GridHeaderCellElement) Then
-            e.CellElement.TextWrap = True
+    Private Sub RadButtonProtokollAblegen_Click(sender As Object, e As EventArgs) Handles RadButtonProtokollAblegen.Click
+        If Not Me.VorgangsnummerGridClient.Equals("") Then
+            clsWebserviceFunctions.LegeEichprotokollAb(VorgangsnummerGridClient)
+            'neu laden der Liste
+            LoadFromDatabase()
         End If
     End Sub
+#End Region
+
 End Class

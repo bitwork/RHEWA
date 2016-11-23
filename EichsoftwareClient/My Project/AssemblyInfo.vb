@@ -14,7 +14,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("")>
 <Assembly: AssemblyCompany("RHEWA")>
 <Assembly: AssemblyProduct("RHEWA Konformitätsbewertungs Software")>
-<Assembly: AssemblyCopyright("Copyright ©  2014")>
+<Assembly: AssemblyCopyright("Copyright ©  2017")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
@@ -33,6 +33,6 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")>
 <Assembly: AssemblyVersion("1.0.*")>
-<Assembly: AssemblyFileVersion("1.0.0.88")>
+<Assembly: AssemblyFileVersion("1.0.0.133")>
 
 <Assembly: NeutralResourcesLanguageAttribute("EN")>

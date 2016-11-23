@@ -1,3 +1,4 @@
+Imports Newtonsoft.Json
 ''' <summary>
 ''' Klasse mit allegmeinen aufrufen des Webservices
 ''' </summary>
@@ -438,22 +439,24 @@ Public Class clsWebserviceFunctions
 
                             'erzeuge lokale Kopie
                             clsClientServerConversionFunctions.CopyClientObjectPropertiesWithNewIDs(Eichprozess, objectServerEichprozess, True)
-                            Try
-                                DBContext.Eichprozess.Add(Eichprozess)
-                                DBContext.SaveChanges()
-                            Catch ex As Entity.Infrastructure.DbUpdateException
-                                MessageBox.Show(ex.InnerException.InnerException.Message)
-                            Catch ex2 As Entity.Validation.DbEntityValidationException
-                                For Each o In ex2.EntityValidationErrors
-                                    For Each v In o.ValidationErrors
-                                        MessageBox.Show(v.ErrorMessage & " " & v.PropertyName)
-                                    Next
-                                Next
-                            End Try
+                            DBContext.Eichprozess.Add(Eichprozess)
+
                         Next
                     Catch ex As Exception
                         MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_Speichern, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
                         MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    End Try
+
+                    Try
+                        DBContext.SaveChanges()
+                    Catch ex As Entity.Infrastructure.DbUpdateException
+                        MessageBox.Show(ex.InnerException.InnerException.Message)
+                    Catch ex2 As Entity.Validation.DbEntityValidationException
+                        For Each o In ex2.EntityValidationErrors
+                            For Each v In o.ValidationErrors
+                                MessageBox.Show(v.ErrorMessage & " " & v.PropertyName)
+                            Next
+                        Next
                     End Try
                 End Using
             End Using
@@ -584,7 +587,7 @@ Public Class clsWebserviceFunctions
     ''' <param name="NeueFabriknummer"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Shared Function GetLokaleKopieVonEichprozess(ByVal Vorgangsnummer As string, ByVal NeueFabriknummer As string) As Eichprozess
+    Public Shared Function GetLokaleKopieVonEichprozess(ByVal Vorgangsnummer As String, ByVal NeueFabriknummer As String) As Eichprozess
         Dim objServerEichprozess As EichsoftwareWebservice.ServerEichprozess = Nothing
         Dim objClientEichprozess As Eichprozess = Nothing
         'neue Datenbankverbindung
@@ -735,7 +738,7 @@ Public Class clsWebserviceFunctions
     ''' <param name="Vorgangsnummer"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Shared Function GenehmigeEichprozess(ByVal Vorgangsnummer As string)
+    Public Shared Function GenehmigeEichprozess(ByVal Vorgangsnummer As String)
         Dim result As String = ""
         Dim Messagetext As String = ""
         Dim bolSetGueltig As Boolean = True 'variable zum abbrechen des Prozesses, falls jemand anderes an dem DS arbeitet
@@ -772,13 +775,34 @@ Public Class clsWebserviceFunctions
         Return False
     End Function
 
+    Friend Shared Sub LegeEichprotokollAb(Vorgangsnummer As String)
+
+        'Eichobjekt Serialisieren
+        Using DBContext As New EichsoftwareClientdatabaseEntities1
+            DBContext.Configuration.ProxyCreationEnabled = False
+            Dim eichung = (DBContext.Eichprozess.Include("Eichprotokoll").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik").Where(Function(C) C.Vorgangsnummer = Vorgangsnummer)).FirstOrDefault
+
+            If Not eichung Is Nothing Then
+                Dim str = clsDBFunctions.Serialize(eichung)
+
+                Dim o = clsDBFunctions.Deserialize(str, GetType(Eichprozess))
+            End If
+        End Using
+
+        Dim jsonSerializerSettings = New JsonSerializerSettings()
+        jsonSerializerSettings.PreserveReferencesHandling = PreserveReferencesHandling.Objects
+        GlobalConfiguration.Configuration.Formatters.Clear()
+        GlobalConfiguration.Configuration.Formatters.Add(New JsonNetFormatter(jsonSerializerSettings))
+
+    End Sub
+
     ''' <summary>
     '''  lehnt Eichprozess ab, anhand von Vorgangsnummer auf dem Server
     ''' </summary>
     ''' <param name="Vorgangsnummer"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Shared Function AblehnenEichprozess(ByVal Vorgangsnummer As string) As Boolean
+    Public Shared Function AblehnenEichprozess(ByVal Vorgangsnummer As String) As Boolean
         Dim result As String = ""
         Dim bolSetUnueltig As Boolean = True 'variable zum abbrechen des Prozesses, falls jemand anderes an dem DS arbeitet
         Dim Messagetext As String = ""
@@ -821,7 +845,7 @@ Public Class clsWebserviceFunctions
     ''' <param name="Vorgangsnummer"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Shared Function ZeigeServerEichprozess(ByVal Vorgangsnummer As string) As Eichprozess
+    Public Shared Function ZeigeServerEichprozess(ByVal Vorgangsnummer As String) As Eichprozess
         Dim objServerEichprozess As EichsoftwareWebservice.ServerEichprozess = Nothing
         Dim objClientEichprozess As Eichprozess = Nothing
         'neue Datenbankverbindung
@@ -858,7 +882,7 @@ Public Class clsWebserviceFunctions
     ''' <remarks></remarks>
     ''' <author></author>
     ''' <commentauthor></commentauthor>
-    Public Shared Function SetzeSperrung(ByVal bolSperren As Boolean, ByVal EichprozessVorgangsnummer As string) As Boolean
+    Public Shared Function SetzeSperrung(ByVal bolSperren As Boolean, ByVal EichprozessVorgangsnummer As String) As Boolean
         Dim result As String = ""
         Dim bolSetSperrung As Boolean = True 'variable zum abbrechen des Prozesses, falls jemand anderes an dem DS arbeitet
         Dim Messagetext As String = "" 'variable bekommt Ergebniss der Sperrprüfung. Ist anschließend leer wenn keine Sperrung vorliegt
@@ -912,7 +936,7 @@ Public Class clsWebserviceFunctions
     ''' <remarks></remarks>
     ''' <author></author>
     ''' <commentauthor></commentauthor>
-    Public Shared Function PruefeSperrung(ByVal EichprozessVorgangsnummer As String) As string
+    Public Shared Function PruefeSperrung(ByVal EichprozessVorgangsnummer As String) As String
         Dim Messagetext As String = ""
 
         Try
@@ -972,7 +996,7 @@ Public Class clsWebserviceFunctions
         End Try
     End Function
 
-    Public Shared Function InitDownloadDateiVonFTP(ByVal vorgangsnummer As String, objFTP As clsFTP, backgroundworker As System.ComponentModel.BackgroundWorker) As string
+    Public Shared Function InitDownloadDateiVonFTP(ByVal vorgangsnummer As String, objFTP As clsFTP, backgroundworker As System.ComponentModel.BackgroundWorker) As String
 
         Using Webcontext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
             Try
