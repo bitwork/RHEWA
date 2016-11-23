@@ -210,6 +210,19 @@ Public Class AktuellerBenutzer
     Public Shared Function SaveSettings()
         Using Context As New EichsoftwareClientdatabaseEntities1
             Context.Configuration.LazyLoadingEnabled = True
+
+            Try
+                If mobjSingletonObject Is Nothing Then
+                    MessageBox.Show("Debug Info -1. Please Report to RHEWA")
+                ElseIf mobjSingletonObject.mvarObjLizenz Is Nothing Then
+                    MessageBox.Show("Debug Info -2. Please Report to RHEWA")
+                ElseIf mobjSingletonObject.mvarObjLizenz.Lizenzschluessel Is Nothing Then
+                    MessageBox.Show("Debug Info -3. Please Report to RHEWA")
+                End If
+            Catch ex As Exception
+
+            End Try
+
             Dim Konfig = (From Konfiguration In Context.Konfiguration Where Konfiguration.BenutzerLizenz = mobjSingletonObject.mvarObjLizenz.Lizenzschluessel).FirstOrDefault
             If Konfig Is Nothing Then
                 MessageBox.Show("Debug Info 0. Please Report to RHEWA")
@@ -259,17 +272,29 @@ Public Class AktuellerBenutzer
             End Try
 
             Try
-                Context.SaveChanges()
+                Konfig.BenutzerLizenz = mobjSingletonObject.mvarObjLizenz.Lizenzschluessel
             Catch ex As Exception
+                MessageBox.Show("Debug Info 9. Please Report to RHEWA")
+
+            End Try
+
+            Try
+                Context.SaveChanges()
+            Catch ex As Entity.Validation.DbEntityValidationException
                 MessageBox.Show(ex.Message)
+
+                For Each validerrorresult In ex.EntityValidationErrors
+                    For Each validerror In validerrorresult.ValidationErrors
+                        MessageBox.Show(String.Format("Message: {0}  Property: {1}", validerror.ErrorMessage, validerror.PropertyName))
+
+                    Next
+                Next
                 If Not ex.InnerException Is Nothing Then
                     MessageBox.Show(ex.InnerException.Message)
                     If Not ex.InnerException.InnerException Is Nothing Then
                         MessageBox.Show(ex.InnerException.InnerException.Message)
                     End If
-
                 End If
-                MessageBox.Show("Debug Info 9. Please Report to RHEWA")
             End Try
             Return True
         End Using
