@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Product
+  xmlns="http://schemas.microsoft.com/developer/2004/01/bootstrapper"
+  ProductCode="RHEWA EULA">
+  <!-- Defines list of files to be copied on build -->
+  <PackageFiles>
+    <PackageFile Name="en/eula.txt"/>
+	<PackageFile Name="en/eula.bat"/>
+  </PackageFiles>
+
+
+  <Commands>
+    <!-- TOpen eula.bat without any parameters -->
+    <Command PackageFile="en/eula.bat" Arguments='' >
+	
+	  <!-- These checks determine whether the package is to be installed -->
+	  <!-- No install conditions -->
+      <InstallConditions>
+        
+      </InstallConditions>
+	  
+	   <!-- Exit codes -->
+	   <ExitCodes>
+        <ExitCode Value="0" Result="Success" />
+      </ExitCodes>
+
+    </Command>
+  </Commands>
+</Product>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Package xmlns="http://schemas.microsoft.com/developer/2004/01/bootstrapper" Name="RHEWA EULA" Culture="Culture" LicenseAgreement="eula.txt">
+
+  <!-- Defines list of files to be copied on build -->
+    <PackageFiles>
+        <PackageFile Name="eula.txt"/>
+		<PackageFile Name="eula.bat"/>
+    </PackageFiles>
+
+  <!-- Defines a localizable string table for error messages and url's  -->
+  <Strings>
+    <String Name="DisplayName">RHEWA EULA 1.0 (x86 and x64)</String>
+    <String Name="Culture">en</String>
+
+    <String Name="CancelFailure">User Refuse to Accept to RHEWA End User License Agreement.</String>
+    <String Name="GeneralFailure">A fatal error occurred during the installation of EULA Component Execution</String>
+    <String Name="AdminRequired">You do not have the permissions required to install this application.  Please contact your administrator.</String>
+  </Strings>    
+</Package>
+

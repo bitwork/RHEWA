@@ -1,0 +1,1 @@
+REM diese Datei verhindert das Darstellen der eula.txt bei der Installation

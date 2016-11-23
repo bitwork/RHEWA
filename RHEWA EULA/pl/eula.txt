@@ -1,0 +1,33 @@
+﻿1.Deutsch:
+
+Gewährleistungsbeschränkung
+
+Die Software und ihre Dokumentation wird so wie sie ist, zur Verfügung gestellt.
+Da Fehlfunktionen auch bei ausführlich getesteter Software durch die Vielzahl an verschiedenen Rechnerkonfigurationen niemals ausgeschlossen werden können, übernimmt die RHEWA-WAAGENFABRIK keinerlei Haftung für jedwede Folgeschäden, die sich durch direkten oder indirekten Einsatz der Software oder der Dokumentation ergeben.
+Uneingeschränkt ausgeschlossen ist vor allem die Haftung für Schäden aus entgangenem Gewinn, Betriebsunterbrechung, Verlust von Informationen und Daten und Schäden an anderer Software, auch wenn diese bekannt sein sollten.
+Ausschließlich der Benutzer haftet für Folgen der Benutzung dieser Software.
+
+
+
+
+2.English:
+
+Restriction of guarantee 
+ 
+The software and its documentation made available like that as it is. 
+Since also at in detail tested software by the multiplicity at different computer configurations malfunctions can be never excluded, RHEWA WAAGENFABRIK dose no takes over adhesion for any kind of damages, which arise as a result of direct or indirect use of the software or the documentation. 
+First of all impossible is the adhesion for damage from escaped profit, business interruption, loss of information and data and damage to other software, even if this was known. 
+Excluding the users is responsible for consequences of the use of this software.
+
+
+
+
+3.Polski:
+
+Ograniczenie gwarancji
+
+Ten program oraz jego dokumnetacja stoja do dyspozycji w takim stanie 
+jakim sa.
+Poniewaz, mimo szczególowemu przetestowaniu programu, nie mozna wykluczyc przy tak duzej ilosci róznorodnych konfiguracji komputerowych blednych funkcjonalnosci, nie przejmuje firma RHEWA zadnej odpowiedzialnosci za szkody, które moga wyniknac z bezposredniego lub niebezposredniego uzytku tego programu lub dokumnetacji.
+Nieograniczono wyklucza sie przede wszystkim odpowiedzialnosc za szkody w uniknietym zysku, przerwaniu trybu pracy, utraceniu informacji, danych oraz uszkodzeniu innych programów, równiez wtedy, gdy bylyby znane.
+Wylacznie uzytkownik ponosi odpowiedzialnosc za skutki uzytku tego programu.
