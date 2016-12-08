@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://win7mobdev01.bitworkgmbh.local:12000/RhewaHerstellerersteichung/EichsoftwareWebservice.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice" />
+  <xs:import schemaLocation="http://win7mobdev01.bitworkgmbh.local:12000/RhewaHerstellerersteichung/EichsoftwareWebservice.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <xs:element name="Test">
     <xs:complexType>
       <xs:sequence />
@@ -437,6 +438,62 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice" minOccurs="0" name="GetGesperrtePrüfscheinnummernResult" nillable="true" type="q13:ArrayOfStatusPrüfscheinnummer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetAblageEichprozess">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="JSONEichprozess" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="HEKennung" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Lizenzschluessel" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Vorgangsnummer" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="WindowsUsername" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Domainname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Computername" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetAblageEichprozessResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetAblageEichprozessResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAblageEichprozesse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HEKennung" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Lizenzschluessel" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="WindowsUsername" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Domainname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Computername" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAblageEichprozesseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="getAblageEichprozesseResult" nillable="true" type="q14:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deleteAblageEichprozesse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HEKennung" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Lizenzschluessel" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="WindowsUsername" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Domainname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Computername" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deleteAblageEichprozesseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="deleteAblageEichprozesseResult" type="xs:boolean" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

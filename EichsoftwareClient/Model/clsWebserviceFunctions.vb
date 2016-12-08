@@ -1,4 +1,5 @@
 Imports Newtonsoft.Json
+Imports System.Data.Entity.Migrations
 ''' <summary>
 ''' Klasse mit allegmeinen aufrufen des Webservices
 ''' </summary>
@@ -775,34 +776,123 @@ Public Class clsWebserviceFunctions
         Return False
     End Function
 
-    Friend Shared Sub LegeEichprotokollAb(Vorgangsnummer As String)
+    Friend Shared Function LegeEichprotokollAb(Vorgangsnummer As String) As Boolean
         Dim jsonSerializerSettings = New JsonSerializerSettings()
         jsonSerializerSettings.PreserveReferencesHandling = PreserveReferencesHandling.Objects
         'Eichobjekt Serialisieren
         Using DBContext As New EichsoftwareClientdatabaseEntities1
             DBContext.Configuration.ProxyCreationEnabled = False
             'Kopie der Eichung anlegen
-            Dim eichung = (DBContext.Eichprozess.Include("Eichprotokoll").Include("Lookup_Auswertegeraet").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik").Where(Function(C) C.Vorgangsnummer = Vorgangsnummer)).FirstOrDefault
+            'Dim eichung = (DBContext.Eichprozess.Include("Eichprotokoll").Include("Lookup_Auswertegeraet").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik").Where(Function(C) C.Vorgangsnummer = Vorgangsnummer)).FirstOrDefault
+            Dim eichung = (DBContext.Eichprozess.Include("Eichprotokoll") _
+                .Include("Lookup_Waegezelle") _
+                .Include("Eichprotokoll.PruefungAnsprechvermoegen") _
+                 .Include("Eichprotokoll.PruefungLinearitaetFallend") _
+                    .Include("Eichprotokoll.PruefungLinearitaetSteigend") _
+                      .Include("Eichprotokoll.PruefungRollendeLasten") _
+                        .Include("Eichprotokoll.PruefungAussermittigeBelastung") _
+                          .Include("Eichprotokoll.PruefungStabilitaetGleichgewichtslage") _
+                           .Include("Eichprotokoll.PruefungStaffelverfahrenErsatzlast") _
+                            .Include("Eichprotokoll.PruefungStaffelverfahrenNormallast") _
+                             .Include("Eichprotokoll.PruefungWiederholbarkeit") _
+            .Include("Kompatiblitaetsnachweis") _
+            .Include("Mogelstatistik") _
+            .Where(Function(C) C.Vorgangsnummer = Vorgangsnummer)).FirstOrDefault
+
             If Not eichung Is Nothing Then
+                If eichung.FK_Bearbeitungsstatus = 3 Then
+                    'nur nicht versendete dürfen abgelegt werden
+                    MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_EichprotokollBereitsGenehmigt, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    Return False
+                End If
+                If eichung.FK_Bearbeitungsstatus = 2 Then
+                    'nur nicht versendete dürfen abgelegt werden
+                    MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_EichprotokollBereitsAbgelehnt, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    Return False
+                End If
+                If eichung.FK_Bearbeitungsstatus = 1 Then
+                    'nur nicht versendete dürfen abgelegt werden
+                    MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_SpeicherAnomalie, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    Return False
+                End If
+
+                If eichung.Lookup_Waegezelle.Neu = False Then
+                    eichung.Lookup_Waegezelle = Nothing
+                End If
+
                 Dim jsonstring As String = JsonConvert.SerializeObject(eichung, jsonSerializerSettings)
                 'Kopie in Datenbank auf Server speichern
+                Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
+                    Try
+                        webContext.Open()
+                    Catch ex As Exception
+                        MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    End Try
+                    Dim result = webContext.SetAblageEichprozess(jsonstring, AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                    If result Then
 
+                        If clsDBFunctions.LoescheEichprozess(Vorgangsnummer) Then
+                            Return True
+                        Else
+                            Return False ' fehlermeldung
+                        End If
+                    Else
+                        Return False ' fehlermeldung
+                    End If
+                End Using
             End If
         End Using
 
-    End Sub
+        Return False
+    End Function
 
     Friend Shared Sub RufeAbgelegteEichprozesseab()
         Dim jsonSerializerSettings = New JsonSerializerSettings()
         jsonSerializerSettings.PreserveReferencesHandling = PreserveReferencesHandling.Objects
 
         Dim jsonStrings = New List(Of String) 'TODO aus webservice
+        Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
+            Try
+                webContext.Open()
+            Catch ex As Exception
+                MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End Try
 
-        For Each jsonString In jsonStrings
-            Dim neweichung = JsonConvert.DeserializeObject(jsonString, GetType(Eichprozess), jsonSerializerSettings)
-            'TODO
+            Dim result = webContext.getAblageEichprozesse(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+            jsonStrings.AddRange(result)
+            Dim successful As Boolean = False
+            Using DBContext As New EichsoftwareClientdatabaseEntities1
+                For Each jsonString In jsonStrings
+                    Dim neweichung As Eichprozess = JsonConvert.DeserializeObject(jsonString, GetType(Eichprozess), jsonSerializerSettings)
+                    ' lokal hinzufügen
+                    If neweichung.Lookup_Waegezelle Is Nothing = False Then
+                        Dim allreadyexists = DBContext.Lookup_Waegezelle.Where(Function(c) c.ID = neweichung.Lookup_Waegezelle.ID).FirstOrDefault
+                        If Not allreadyexists Is Nothing Then
+                            neweichung.Lookup_Waegezelle = Nothing
+                        End If
+                    End If
+                    For Each o In neweichung.Mogelstatistik
+                        o.Lookup_Waegezelle = Nothing
+                    Next
+                    DBContext.Eichprozess.Add(neweichung)
+                Next
+                Try
+                    DBContext.SaveChanges()
+                    successful = True
+                Catch ex As Entity.Infrastructure.DbUpdateException
+                    Console.WriteLine(ex.Message)
+                    successful = False
+                Catch ex As DBConcurrencyException
+                    Console.WriteLine(ex.Message)
+                    successful = False
+                End Try
+            End Using
 
-        Next
+            'Extern löschen
+            If successful Then
+                webContext.deleteAblageEichprozesse(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+            End If
+        End Using
 
     End Sub
 

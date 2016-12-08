@@ -118,11 +118,23 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="RadButtonProtokollAblegen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>423, 410</value>
+  </data>
+  <data name="RadButtonProtokollAblegen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>132, 63</value>
+  </data>
+  <data name="RadButtonProtokollAblegen.Text" xml:space="preserve">
+    <value>Vorgang in Cloud ablegen</value>
+  </data>
   <data name="RadButtonNeuStandardwaage.Location" type="System.Drawing.Point, System.Drawing">
     <value>1023, 410</value>
   </data>
+  <data name="RadButtonNeuStandardwaage.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;Standard-&lt;/p&gt;&lt;p&gt;waage erstellen&lt;/p&gt;&lt;/html&gt;</value>
+  </data>
   <data name="RadButtonClientUpdateDatabase.Text" xml:space="preserve">
-    <value>Status der abgeschickten Verfahren prüfen</value>
+    <value>Synchronisieren der abgeschickten Verfahren</value>
   </data>
   <data name="RadCheckBoxAusblendenClientGeloeschterDokumente.Location" type="System.Drawing.Point, System.Drawing">
     <value>256, 426</value>

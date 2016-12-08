@@ -915,6 +915,9 @@ Public Class ucoEichprozessauswahlliste
             'prüfen ob Eichprozesse die versendet wurden genehmigt oder abgelehnt wurden
             clsWebserviceFunctions.GetGenehmigungsstatus(bolNeuGenehmigung)
 
+            'abgelegte Datein abrufen
+            clsWebserviceFunctions.RufeAbgelegteEichprozesseab()
+
             'refresh
             LoadFromDatabase()
 

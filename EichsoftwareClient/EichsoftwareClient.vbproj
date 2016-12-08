@@ -45,7 +45,7 @@
     <PublisherName>RHEWA Waagenfabrik</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>136</ApplicationRevision>
+    <ApplicationRevision>139</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -1173,6 +1173,9 @@
     <None Include="Resources\user_add.png" />
     <None Include="Resources\user_delete.png" />
     <None Include="Resources\user_edit.png" />
+    <None Include="Service References\EichsoftwareWebservice\EichsoftwareWebservice3.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\EichsoftwareWebservice\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.vb</LastGenOutput>
