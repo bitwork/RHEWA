@@ -88,13 +88,13 @@
         'nehme Änderung an Syncverhalten vor
         'If alterSyncmodus <> AktuellerBenutzer.Instance.Synchronisierungsmodus Or alterSyncAbWert <> AktuellerBenutzer.Instance.SyncAb Or alterSyncBisWert <> AktuellerBenutzer.Instance.SyncBis Then
         AktuellerBenutzer.Instance.LetztesUpdate = "01.01.2000"
-            AktuellerBenutzer.Instance.HoleAlleeigenenEichungenVomServer = True
-            AktuellerBenutzer.SaveSettings()
+        AktuellerBenutzer.Instance.HoleAlleeigenenEichungenVomServer = True
+        AktuellerBenutzer.SaveSettings()
 
-            'initiere neuen Download der Daten durch Dialogresult = ok. dies wird in ucoEichprozessauswahlliste abgefragt
-            Me.DialogResult = Windows.Forms.DialogResult.OK
-            Me.Close()
-            Exit Sub
+        'initiere neuen Download der Daten durch Dialogresult = ok. dies wird in ucoEichprozessauswahlliste abgefragt
+        Me.DialogResult = Windows.Forms.DialogResult.OK
+        Me.Close()
+        Exit Sub
         'End If
 
         'es wurde nichts geändert, also muss auch nichts heruntergeladen werden
@@ -149,6 +149,15 @@
                 RadDateTimePickerStart.Culture = New System.Globalization.CultureInfo("en")
                 RadDateTimePickerSince.Culture = New System.Globalization.CultureInfo("en")
         End Select
+    End Sub
+
+    Private Sub cmdSendDiagnosticData_Click(sender As Object, e As EventArgs) Handles cmdSendDiagnosticData.Click
+        'lokale Datenbank instanz per FTP an RHEWA senden
+        If clsDBFunctions.SendLocalDatabaseToRHEWAFTP Then
+            MsgBox("OK")
+        Else
+            MsgBox("Error")
+        End If
     End Sub
 
 #End Region

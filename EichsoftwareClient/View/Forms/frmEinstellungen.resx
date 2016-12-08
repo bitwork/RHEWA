@@ -133,6 +133,9 @@
   <data name="&gt;&gt;RadGroupBox1.Name" xml:space="preserve">
     <value>RadGroupBox1</value>
   </data>
+  <data name="&gt;&gt;cmdSendDiagnosticData.Name" xml:space="preserve">
+    <value>cmdSendDiagnosticData</value>
+  </data>
   <data name="&gt;&gt;RadRadioButtonSyncSeit.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadRadioButton, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
@@ -184,7 +187,7 @@
     <value>6</value>
   </data>
   <data name="&gt;&gt;RadButtonAbbrechen.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;RadDateTimePickerStart.Parent" xml:space="preserve">
     <value>RadGroupBox1</value>
@@ -193,16 +196,25 @@
     <value>de</value>
   </data>
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>559, 135</value>
+    <value>405, 189</value>
+  </data>
+  <data name="RadButtonGridSettingsZuruecksetzen.Text" xml:space="preserve">
+    <value>Reset Table Settings</value>
+  </data>
+  <data name="&gt;&gt;cmdSendDiagnosticData.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadRadioButtonSyncAlles.AccessibleName" xml:space="preserve">
     <value />
   </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+  <data name="cmdSendDiagnosticData.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
   </data>
   <data name="Label1.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
+  </data>
+  <data name="cmdSendDiagnosticData.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
   </data>
   <data name="RadDateTimePickerEnd.Size" type="System.Drawing.Size, System.Drawing">
     <value>144, 20</value>
@@ -256,7 +268,10 @@
     <value>5</value>
   </data>
   <data name="RadButtonOK.Location" type="System.Drawing.Point, System.Drawing">
-    <value>470, 240</value>
+    <value>470, 279</value>
+  </data>
+  <data name="cmdSendDiagnosticData.Text" xml:space="preserve">
+    <value>Send diagnostic data to RHEWA</value>
   </data>
   <data name="RadDateTimePickerStart.CustomFormat" xml:space="preserve">
     <value />
@@ -267,6 +282,9 @@
   <data name="&gt;&gt;RadDateTimePickerStart.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadDateTimePicker, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
   <data name="&gt;&gt;RadDateTimePickerEnd.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
@@ -274,13 +292,13 @@
     <value>RadDateTimePickerSince</value>
   </data>
   <data name="RadButtonGridSettingsZuruecksetzen.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 250</value>
+    <value>3, 279</value>
   </data>
   <data name="&gt;&gt;RadButtonGridSettingsZuruecksetzen.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;RadGroupBox1.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
     <value>RadGroupBox1</value>
@@ -358,7 +376,7 @@ Keep in mind: No data will be deleted. If you click "sync everything" all data w
     <value>6</value>
   </data>
   <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>354, 37</value>
+    <value>354, 21</value>
   </data>
   <data name="RadRadioButtonSyncAlles.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -381,6 +399,9 @@ Keep in mind: No data will be deleted. If you click "sync everything" all data w
   <data name="&gt;&gt;RadRadioButtonSyncSeit.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="RadButtonOK.Size" type="System.Drawing.Size, System.Drawing">
     <value>151, 40</value>
   </data>
@@ -402,14 +423,20 @@ Keep in mind: No data will be deleted. If you click "sync everything" all data w
   <data name="RadGroupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
+  <data name="RadButtonGridSettingsZuruecksetzen.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
   <data name="&gt;&gt;RadRadioButtonSyncAlles.Parent" xml:space="preserve">
     <value>RadGroupBox1</value>
+  </data>
+  <data name="cmdSendDiagnosticData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>308, 42</value>
   </data>
   <data name="&gt;&gt;RadRadioButtonSyncSeit.Name" xml:space="preserve">
     <value>RadRadioButtonSyncSeit</value>
   </data>
   <data name="&gt;&gt;RadButtonOK.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;RadDateTimePickerEnd.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadDateTimePicker, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
@@ -417,8 +444,11 @@ Keep in mind: No data will be deleted. If you click "sync everything" all data w
   <data name="&gt;&gt;RadDateTimePickerSince.Parent" xml:space="preserve">
     <value>RadGroupBox1</value>
   </data>
+  <data name="&gt;&gt;cmdSendDiagnosticData.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="RadButtonAbbrechen.Location" type="System.Drawing.Point, System.Drawing">
-    <value>627, 240</value>
+    <value>627, 279</value>
   </data>
   <data name="RadGroupBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>775, 209</value>
@@ -427,7 +457,7 @@ Keep in mind: No data will be deleted. If you click "sync everything" all data w
     <value>Telerik.WinControls.UI.RadRadioButton, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>790, 292</value>
+    <value>790, 331</value>
   </data>
   <data name="RadRadioButtonSyncZwischen.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -435,8 +465,14 @@ Keep in mind: No data will be deleted. If you click "sync everything" all data w
   <data name="&gt;&gt;RadDateTimePickerSince.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="cmdSendDiagnosticData.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 231</value>
+  </data>
   <data name="RadDateTimePickerSince.Text" xml:space="preserve">
     <value>12.02.2014</value>
+  </data>
+  <data name="&gt;&gt;cmdSendDiagnosticData.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="RadGroupBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -452,8 +488,5 @@ Keep in mind: No data will be deleted. If you click "sync everything" all data w
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>de</value>
   </metadata>
 </root>

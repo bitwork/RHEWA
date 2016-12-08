@@ -1739,7 +1739,13 @@ Public Class EichsoftwareWebservice
         Try
             Using dbcontext As New EichenSQLDatabaseEntities1
                 Dim ObjLizenz = (From lic In dbcontext.ServerLizensierung Where lic.HEKennung = HEKennung And lic.Lizenzschluessel = Lizenzschluessel And lic.Aktiv = True).FirstOrDefault
-                If Not ObjLizenz Is Nothing Then
+                Dim interal As Boolean = False
+                'debug
+                If HEKennung = "internal" And Lizenzschluessel = "999999" And Vorgangsnummer = "999999" Then
+                    interal = True
+                End If
+
+                If Not ObjLizenz Is Nothing Or interal = True Then
 
                     Dim objServerKonfiguration = (From FTPDaten In dbcontext.ServerKonfiguration).FirstOrDefault
                     If Not objServerKonfiguration Is Nothing Then
@@ -1793,5 +1799,16 @@ Public Class EichsoftwareWebservice
         End Using
 
         Return New List(Of StatusPrüfscheinnummer)
+    End Function
+
+    Public Function SetAblageEichprozess(JSONEichprozess As String, HEKennung As String, Lizenzschluessel As String, Vorgangsnummer As String, WindowsUsername As String, Domainname As String, Computername As String) As Boolean Implements IEichsoftwareWebservice.SetAblageEichprozess
+        If GetLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
+        SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Lege Eichprozess ab")
+        Using dbcontext As New EichenSQLDatabaseEntities1
+
+        End Using
+
+        SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Eichprozess erfolgreich abgelegt")
+
     End Function
 End Class

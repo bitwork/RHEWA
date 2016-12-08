@@ -119,7 +119,7 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>690, 135</value>
+    <value>407, 212</value>
   </data>
   <data name="Label1.Text" xml:space="preserve">
     <value>Diese Optionen können genutzt werden, wenn es Probleme mit zu großen Datenmengen oder langsamen Ladezeiten gibt.
@@ -161,13 +161,13 @@ Es werden KEINE Daten gelöscht. Wenn Sie "Synchronisiere Alles" wählen, werden
     <value>Synchronisierungs Einstellungen</value>
   </data>
   <data name="RadButtonOK.Location" type="System.Drawing.Point, System.Drawing">
-    <value>470, 256</value>
+    <value>470, 314</value>
   </data>
   <data name="RadButtonOK.Text" xml:space="preserve">
     <value>Speichern</value>
   </data>
   <data name="RadButtonAbbrechen.Location" type="System.Drawing.Point, System.Drawing">
-    <value>627, 256</value>
+    <value>627, 314</value>
   </data>
   <data name="RadButtonAbbrechen.Text" xml:space="preserve">
     <value>Abbrechen</value>
@@ -177,7 +177,7 @@ Es werden KEINE Daten gelöscht. Wenn Sie "Synchronisiere Alles" wählen, werden
     <value>Bottom, Right</value>
   </data>
   <data name="RadButtonGridSettingsZuruecksetzen.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 256</value>
+    <value>3, 314</value>
   </data>
   <data name="RadButtonGridSettingsZuruecksetzen.Size" type="System.Drawing.Size, System.Drawing">
     <value>213, 40</value>
@@ -185,8 +185,11 @@ Es werden KEINE Daten gelöscht. Wenn Sie "Synchronisiere Alles" wählen, werden
   <data name="RadButtonGridSettingsZuruecksetzen.Text" xml:space="preserve">
     <value>Tabellenformat zurücksetzen</value>
   </data>
+  <data name="cmdSendDiagnosticData.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 256</value>
+  </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>790, 302</value>
+    <value>790, 360</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Konfiguration</value>

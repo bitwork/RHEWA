@@ -35,6 +35,7 @@ Partial Class FrmEinstellungen
         Me.RadButtonOK = New Telerik.WinControls.UI.RadButton()
         Me.RadButtonAbbrechen = New Telerik.WinControls.UI.RadButton()
         Me.RadButtonGridSettingsZuruecksetzen = New Telerik.WinControls.UI.RadButton()
+        Me.cmdSendDiagnosticData = New Telerik.WinControls.UI.RadButton()
         CType(Me.RadGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBox1.SuspendLayout()
         CType(Me.RadDateTimePickerEnd, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -47,6 +48,7 @@ Partial Class FrmEinstellungen
         CType(Me.RadButtonOK, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonAbbrechen, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonGridSettingsZuruecksetzen, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cmdSendDiagnosticData, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -126,10 +128,17 @@ Partial Class FrmEinstellungen
         resources.ApplyResources(Me.RadButtonGridSettingsZuruecksetzen, "RadButtonGridSettingsZuruecksetzen")
         Me.RadButtonGridSettingsZuruecksetzen.Name = "RadButtonGridSettingsZuruecksetzen"
         '
+        'cmdSendDiagnosticData
+        '
+        resources.ApplyResources(Me.cmdSendDiagnosticData, "cmdSendDiagnosticData")
+        Me.cmdSendDiagnosticData.Image = Global.EichsoftwareClient.My.Resources.Resources.cog
+        Me.cmdSendDiagnosticData.Name = "cmdSendDiagnosticData"
+        '
         'FrmEinstellungen
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.cmdSendDiagnosticData)
         Me.Controls.Add(Me.RadButtonGridSettingsZuruecksetzen)
         Me.Controls.Add(Me.RadButtonAbbrechen)
         Me.Controls.Add(Me.RadButtonOK)
@@ -154,6 +163,7 @@ Partial Class FrmEinstellungen
         CType(Me.RadButtonOK, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonAbbrechen, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonGridSettingsZuruecksetzen, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cmdSendDiagnosticData, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -169,5 +179,6 @@ Partial Class FrmEinstellungen
     Friend WithEvents RadDateTimePickerStart As Telerik.WinControls.UI.RadDateTimePicker
     Friend WithEvents RadDateTimePickerSince As Telerik.WinControls.UI.RadDateTimePicker
     Friend WithEvents RadButtonGridSettingsZuruecksetzen As Telerik.WinControls.UI.RadButton
+    Friend WithEvents cmdSendDiagnosticData As Telerik.WinControls.UI.RadButton
 End Class
 

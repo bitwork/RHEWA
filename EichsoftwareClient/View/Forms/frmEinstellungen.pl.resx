@@ -117,8 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="RadButtonAbbrechen.Text" xml:space="preserve">
-    <value>Przerwać</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>343, 13</value>
+  </data>
+  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>427, 191</value>
   </data>
   <data name="Label1.Text" xml:space="preserve">
     <value>Te opcje można stosować, jeżeli występują problemy z dużą ilością danych lub powolnym czasem ładowania.
@@ -131,20 +135,23 @@ Aby synchronizować określony okres czasu, można wybrać datę początku i ko�
 
 Dane nie zostaną skasowane. Po wybraniu "Synchronizuj wszystko", zostaną wszystkie dane zpowrotem załadowane z RHEWA na Pański Client.</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Konfiguracja</value>
+  <data name="RadRadioButtonSyncZwischen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 18</value>
   </data>
-  <data name="RadButtonOK.Text" xml:space="preserve">
-    <value>Zapisz</value>
+  <data name="RadRadioButtonSyncZwischen.Text" xml:space="preserve">
+    <value>Wszystko synchronizować między</value>
   </data>
-  <data name="RadRadioButtonSyncAlles.Text" xml:space="preserve">
-    <value>Wszystko synchronizować</value>
+  <data name="RadRadioButtonSyncSeit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 18</value>
   </data>
   <data name="RadRadioButtonSyncSeit.Text" xml:space="preserve">
     <value>Wszystko synchronizować od</value>
   </data>
-  <data name="RadRadioButtonSyncZwischen.Text" xml:space="preserve">
-    <value>Wszystko synchronizować między</value>
+  <data name="RadRadioButtonSyncAlles.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 18</value>
+  </data>
+  <data name="RadRadioButtonSyncAlles.Text" xml:space="preserve">
+    <value>Wszystko synchronizować</value>
   </data>
   <data name="RadGroupBox1.HeaderText" xml:space="preserve">
     <value>Ustawienia synchronizacji</value>
@@ -152,7 +159,16 @@ Dane nie zostaną skasowane. Po wybraniu "Synchronizuj wszystko", zostaną wszys
   <data name="RadGroupBox1.Text" xml:space="preserve">
     <value>Ustawienia synchronizacji</value>
   </data>
+  <data name="RadButtonOK.Text" xml:space="preserve">
+    <value>Zapisz</value>
+  </data>
+  <data name="RadButtonAbbrechen.Text" xml:space="preserve">
+    <value>Przerwać</value>
+  </data>
   <data name="RadButtonGridSettingsZuruecksetzen.Text" xml:space="preserve">
     <value>Rezetowanie formatu tabeli</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Konfiguracja</value>
   </data>
 </root>

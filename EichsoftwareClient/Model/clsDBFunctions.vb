@@ -439,9 +439,6 @@ Public Class clsDBFunctions
         End Using
     End Function
 
-
-
-
     Public Shared Function Serialize(obj As Object) As String
         Using memoryStream As New MemoryStream()
             Using reader As New StreamReader(memoryStream)
@@ -463,6 +460,62 @@ Public Class clsDBFunctions
         End Using
     End Function
 
+    Public Shared Function SendLocalDatabaseToRHEWAFTP()
+        Dim objFTP As New clsFTP
+        Dim path As String
+        Try 'clickonce pfad
+            Try
+                path = Deployment.Application.ApplicationDeployment.CurrentDeployment?.DataDirectory & "\EichsoftwareClientdatabase.sdf"
+            Catch ex2 As Exception
+                path = Application.StartupPath & "\EichsoftwareClientdatabase.sdf"
+            End Try
 
+            If path = "" Then Return False
+
+            Using Webcontext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
+                Try
+                    Webcontext.Open()
+                Catch ex As Exception
+                    MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End Try
+
+                'daten von WebDB holen
+                Dim objFTPDaten = Webcontext.GetFTPCredentials("internal", "999999", "999999", My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+
+                'aufbereiten der für FTP benötigten Verbindungsdaten
+                If Not objFTPDaten Is Nothing Then
+
+                    'get decrypted Password and configuration from Database
+
+                    Dim password As String = objFTPDaten.FTPEncryptedPassword
+                    ' original plaintext
+                    Dim passPhrase As String = "Pas5pr@se"
+                    ' can be any string
+                    Dim saltValue As String = objFTPDaten.FTPSaltKey
+                    ' can be any string
+                    Dim hashAlgorithm As String = "SHA1"
+                    ' can be "MD5"
+                    Dim passwordIterations As Integer = 2
+                    ' can be any number
+                    Dim initVector As String = "@1B2c3D4e5F6g7H8"
+                    ' must be 16 bytes
+                    Dim keySize As Integer = 256
+                    ' can be 192 or 128
+                    Dim UploadfilePath = path
+
+                    password = RijndaelSimple.Decrypt(password, passPhrase, saltValue, hashAlgorithm, passwordIterations, initVector,
+                    keySize)
+
+                    'datei upload. FTPUploadPath bekommt den reelen Pfad auf dem FTP Server
+                    Dim FTPUploadPath = objFTP.UploadDatabaseFiletoFTP(objFTPDaten.FTPServername, objFTPDaten.FTPUserName, password, UploadfilePath, My.Computer.Name)
+                End If
+            End Using
+
+        Catch ex As Exception
+            Return False
+        End Try
+        Return True
+
+    End Function
 
 End Class

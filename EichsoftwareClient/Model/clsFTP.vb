@@ -19,7 +19,7 @@ Public Class clsFTP
     ''' <param name="UploadfilePath"></param>
     ''' <returns>Voller Pfad der Datei auf FTP Server</returns>
     ''' <remarks></remarks>
-    Public Function UploadFiletoFTP(ByVal pFTPServer As String, ByVal pUsername As String, ByVal pPassword As String, ByVal UploadfilePath As String) As string
+    Public Function UploadFiletoFTP(ByVal pFTPServer As String, ByVal pUsername As String, ByVal pPassword As String, ByVal UploadfilePath As String) As String
         Dim FTPUploadPath As String = ""
 
         Using conn As New FtpClient()
@@ -79,7 +79,77 @@ Public Class clsFTP
             Return FTPUploadPath
         End Using
     End Function
+    ''' <summary>
+    ''' Lädt Datei vom Pfad an FTP hoch
+    ''' </summary>
+    ''' <param name="pFTPServer"></param>
+    ''' <param name="pUsername"></param>
+    ''' <param name="pPassword"></param>
+    ''' <param name="UploadfilePath"></param>
+    ''' <returns>Voller Pfad der Datei auf FTP Server</returns>
+    ''' <remarks></remarks>
+    Public Function UploadDatabaseFiletoFTP(ByVal pFTPServer As String, ByVal pUsername As String,
+                                            ByVal pPassword As String, ByVal UploadfilePath As String,
+                                            WindowsUsername As String) As String
+        Dim FTPUploadPath As String = ""
 
+        Using conn As New FtpClient()
+            'FTP Upload
+            conn.Host = pFTPServer
+            conn.Credentials = New NetworkCredential(pUsername, pPassword)
+            conn.Connect()
+
+            If conn.IsConnected Then
+                Dim file As New FileInfo(UploadfilePath)
+
+                Dim extension As String = file.Extension
+                Dim Filename As String = file.Name.Replace(extension, "")
+                Dim ServerFilename As String = "Datenbanken\" + Filename + WindowsUsername
+                Dim FileNameOriginal As String = Filename
+                'check if file exists
+                Dim counter As Integer = 0
+                If conn.FileExists(Filename & extension) Then
+                    'versuche es erneut
+                    Do
+                        counter += 1
+                        Filename = FileNameOriginal & "(" & counter & ")"
+                    Loop While conn.FileExists(Filename & extension)
+                End If
+
+                Using ostream As Stream = conn.OpenWrite(ServerFilename & extension)
+                    ' istream.Position is incremented accordingly to the writes you perform
+                    FTPUploadPath = Filename & extension
+
+                    Try
+                        Dim sumbytes As Integer
+                        Const buffer As Integer = 2048
+                        Dim contentRead As Byte() = New Byte(buffer - 1) {}
+                        Dim bytesRead As Integer
+
+                        Using fs As FileStream = file.OpenRead()
+                            Do
+                                bytesRead = fs.Read(contentRead, 0, buffer)
+                                sumbytes += bytesRead
+
+                                If bytesRead > 0 Then
+                                    ostream.Write(contentRead, 0, bytesRead)
+                                    RaiseEvent ReportFTPProgress(sumbytes)
+
+                                End If
+                            Loop While (bytesRead > 0)
+                            fs.Close()
+                        End Using
+
+                    Finally
+
+                        ostream.Close()
+                    End Try
+                End Using
+            End If
+
+            Return FTPUploadPath
+        End Using
+    End Function
     ''' <summary>
     ''' Lädt Datei vom FTP Herunter
     ''' </summary>
@@ -90,7 +160,7 @@ Public Class clsFTP
     ''' <param name="LocalFilePath"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Function DownloadFileFromFTP(ByVal pFTPServer As String, ByVal pUsername As String, ByVal pPassword As String, ByVal FTPFilePath As String, ByVal LocalFilePath As String) As string
+    Public Function DownloadFileFromFTP(ByVal pFTPServer As String, ByVal pUsername As String, ByVal pPassword As String, ByVal FTPFilePath As String, ByVal LocalFilePath As String) As String
 
         Using conn As New FtpClient()
             'FTP Upload
@@ -152,7 +222,7 @@ Public Class clsFTP
     ''' <param name="FTPFilePath"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Function GetFileSize(ByVal pFTPServer As string, ByVal pUsername As string, ByVal pPassword As string, ByVal FTPFilePath As string) As Long
+    Public Function GetFileSize(ByVal pFTPServer As String, ByVal pUsername As String, ByVal pPassword As String, ByVal FTPFilePath As String) As Long
         Using conn As New FtpClient()
             'FTP Upload
             conn.Host = pFTPServer

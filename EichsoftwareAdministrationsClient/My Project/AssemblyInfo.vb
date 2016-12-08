@@ -8,11 +8,11 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("EichsoftwareAdministrationsClient")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("EichsoftwareAdministrationsClient")> 
-<Assembly: AssemblyCopyright("Copyright ©  2013")> 
+<Assembly: AssemblyTitle("RHEWA Konformitätsbewertungssoftware Administration")>
+<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyCompany("RHEWA")>
+<Assembly: AssemblyProduct("RHEWA Konformitätsbewertungssoftware Administration")>
+<Assembly: AssemblyCopyright("Copyright ©  2017")>
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>

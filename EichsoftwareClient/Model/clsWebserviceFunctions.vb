@@ -776,23 +776,33 @@ Public Class clsWebserviceFunctions
     End Function
 
     Friend Shared Sub LegeEichprotokollAb(Vorgangsnummer As String)
-
+        Dim jsonSerializerSettings = New JsonSerializerSettings()
+        jsonSerializerSettings.PreserveReferencesHandling = PreserveReferencesHandling.Objects
         'Eichobjekt Serialisieren
         Using DBContext As New EichsoftwareClientdatabaseEntities1
             DBContext.Configuration.ProxyCreationEnabled = False
-            Dim eichung = (DBContext.Eichprozess.Include("Eichprotokoll").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik").Where(Function(C) C.Vorgangsnummer = Vorgangsnummer)).FirstOrDefault
-
+            'Kopie der Eichung anlegen
+            Dim eichung = (DBContext.Eichprozess.Include("Eichprotokoll").Include("Lookup_Auswertegeraet").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik").Where(Function(C) C.Vorgangsnummer = Vorgangsnummer)).FirstOrDefault
             If Not eichung Is Nothing Then
-                Dim str = clsDBFunctions.Serialize(eichung)
+                Dim jsonstring As String = JsonConvert.SerializeObject(eichung, jsonSerializerSettings)
+                'Kopie in Datenbank auf Server speichern
 
-                Dim o = clsDBFunctions.Deserialize(str, GetType(Eichprozess))
             End If
         End Using
 
+    End Sub
+
+    Friend Shared Sub RufeAbgelegteEichprozesseab()
         Dim jsonSerializerSettings = New JsonSerializerSettings()
         jsonSerializerSettings.PreserveReferencesHandling = PreserveReferencesHandling.Objects
-        GlobalConfiguration.Configuration.Formatters.Clear()
-        GlobalConfiguration.Configuration.Formatters.Add(New JsonNetFormatter(jsonSerializerSettings))
+
+        Dim jsonStrings = New List(Of String) 'TODO aus webservice
+
+        For Each jsonString In jsonStrings
+            Dim neweichung = JsonConvert.DeserializeObject(jsonString, GetType(Eichprozess), jsonSerializerSettings)
+            'TODO
+
+        Next
 
     End Sub
 
