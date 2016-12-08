@@ -57,6 +57,7 @@
         <AssociationConnector Association="EichenSQLDatabaseModel.FK_ServerLizensierung_Benutzer" />
         <AssociationConnector Association="EichenSQLDatabaseModel.FK_ServerFirmenZusatzdaten_Firmen" />
         <EntityTypeShape EntityType="EichenSQLDatabaseModel.StatusPrüfscheinnummer" Width="1.5" PointX="11.625" PointY="0.75" />
+        <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerAblageEichprozesse" Width="1.5" PointX="11.375" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

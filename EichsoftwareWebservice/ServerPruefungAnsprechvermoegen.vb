@@ -13,10 +13,10 @@ Imports System.Collections.Generic
 Partial Public Class ServerPruefungAnsprechvermoegen
     Public Property ID As Integer
     Public Property FK_Eichprotokoll As Integer
-    Public Property LastL As string
-    Public Property Last As string
-    Public Property Anzeige As string
-    Public Property Last1d As string
+    Public Property LastL As String
+    Public Property Last As String
+    Public Property Anzeige As String
+    Public Property Last1d As String
     Public Property Ziffernsprung As Boolean
 
     Public Overridable Property ServerEichprotokoll As ServerEichprotokoll

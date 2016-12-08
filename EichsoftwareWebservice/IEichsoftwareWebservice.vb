@@ -67,8 +67,17 @@ Public Interface IEichsoftwareWebservice
     <OperationContract()>
     Function GetGesperrtePrüfscheinnummern(ByVal HEKennung As String, Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As List(Of StatusPrüfscheinnummer)
 
+#Region "Ablageprozess"
     <OperationContract()>
     Function SetAblageEichprozess(ByVal JSONEichprozess As String, ByVal HEKennung As String, Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean
+
+    <OperationContract()>
+    Function getAblageEichprozesse(ByVal HEKennung As String, Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As List(Of String)
+
+    <OperationContract()>
+    Function deleteAblageEichprozesse(ByVal HEKennung As String, Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean
+
+#End Region
 
 End Interface
 

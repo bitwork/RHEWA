@@ -12,12 +12,12 @@ Imports System.Collections.Generic
 
 Partial Public Class ServerLizensierung
     Public Property ID As Integer
-    Public Property Lizenzschluessel As string
+    Public Property Lizenzschluessel As String
     Public Property LetzteAktivierung As Nullable(Of Date)
     Public Property RHEWALizenz As Boolean
     Public Property Aktiv As Boolean
-    Public Property HEKennung As string
-    Public Property FK_BenutzerID As string
+    Public Property HEKennung As String
+    Public Property FK_BenutzerID As String
 
     Public Overridable Property Benutzer As Benutzer
 

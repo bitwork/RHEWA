@@ -15,28 +15,28 @@ Partial Public Class ServerPruefungStaffelverfahrenNormallast
     Public Property FK_Eichprotokoll As Integer
     Public Property Staffel As Byte
     Public Property Bereich As Byte
-    Public Property NormalLast_Last_1 As string
-    Public Property NormalLast_Last_2 As string
-    Public Property NormalLast_Last_3 As string
-    Public Property NormalLast_Last_4 As string
-    Public Property NormalLast_Anzeige_1 As string
-    Public Property NormalLast_Fehler_1 As string
-    Public Property NormalLast_EFG_1 As string
-    Public Property NormalLast_Anzeige_2 As string
-    Public Property NormalLast_Fehler_2 As string
-    Public Property NormalLast_EFG_2 As string
-    Public Property NormalLast_Anzeige_4 As string
-    Public Property NormalLast_Fehler_4 As string
-    Public Property NormalLast_EFG_4 As string
-    Public Property NormalLast_Anzeige_3 As string
-    Public Property NormalLast_Fehler_3 As string
-    Public Property NormalLast_EFG_3 As string
-    Public Property DifferenzAnzeigewerte_Fehler As string
-    Public Property DifferenzAnzeigewerte_EFG As string
-    Public Property MessabweichungStaffel_Fehler As string
-    Public Property MessabweichungStaffel_EFG As string
-    Public Property MessabweichungWaage_Fehler As string
-    Public Property MessabweichungWaage_EFG As string
+    Public Property NormalLast_Last_1 As String
+    Public Property NormalLast_Last_2 As String
+    Public Property NormalLast_Last_3 As String
+    Public Property NormalLast_Last_4 As String
+    Public Property NormalLast_Anzeige_1 As String
+    Public Property NormalLast_Fehler_1 As String
+    Public Property NormalLast_EFG_1 As String
+    Public Property NormalLast_Anzeige_2 As String
+    Public Property NormalLast_Fehler_2 As String
+    Public Property NormalLast_EFG_2 As String
+    Public Property NormalLast_Anzeige_4 As String
+    Public Property NormalLast_Fehler_4 As String
+    Public Property NormalLast_EFG_4 As String
+    Public Property NormalLast_Anzeige_3 As String
+    Public Property NormalLast_Fehler_3 As String
+    Public Property NormalLast_EFG_3 As String
+    Public Property DifferenzAnzeigewerte_Fehler As String
+    Public Property DifferenzAnzeigewerte_EFG As String
+    Public Property MessabweichungStaffel_Fehler As String
+    Public Property MessabweichungStaffel_EFG As String
+    Public Property MessabweichungWaage_Fehler As String
+    Public Property MessabweichungWaage_EFG As String
 
     Public Overridable Property ServerEichprotokoll As ServerEichprotokoll
 

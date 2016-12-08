@@ -29,6 +29,16 @@
           <Property Name="Ort" Type="nvarchar" MaxLength="50" />
           <Property Name="Land" Type="nvarchar" MaxLength="50" />
         </EntityType>
+        <EntityType Name="ServerAblageEichprozesse">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Lizenz" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="HEKennung" Type="nvarchar(max)" />
+          <Property Name="Vorgangsnummer" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="JSON" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
         <EntityType Name="ServerEichmarkenverwaltung">
           <Key>
             <PropertyRef Name="ID" />
@@ -776,6 +786,7 @@
         <EntityContainer Name="EichenSQLDatabaseModelStoreContainer">
           <EntitySet Name="Benutzer" EntityType="Self.Benutzer" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Firmen" EntityType="Self.Firmen" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServerAblageEichprozesse" EntityType="Self.ServerAblageEichprozesse" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ServerEichmarkenverwaltung" EntityType="Self.ServerEichmarkenverwaltung" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ServerEichprotokoll" EntityType="Self.ServerEichprotokoll" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ServerEichprozess" EntityType="Self.ServerEichprozess" Schema="dbo" store:Type="Tables" />
@@ -998,6 +1009,7 @@
             <End Role="ServerFirmenZusatzdaten" EntitySet="ServerFirmenZusatzdaten" />
           </AssociationSet>
           <EntitySet Name="StatusPrüfscheinnummer" EntityType="EichenSQLDatabaseModel.StatusPrüfscheinnummer" />
+          <EntitySet Name="ServerAblageEichprozesse" EntityType="EichenSQLDatabaseModel.ServerAblageEichprozesse" />
         </EntityContainer>
         <EntityType Name="ServerEichmarkenverwaltung">
           <Key>
@@ -1911,6 +1923,16 @@
           <Property Name="Gesperrt" Type="Boolean" />
           <Property Name="GesperrtDurchDatum" Type="Boolean" />
         </EntityType>
+        <EntityType Name="ServerAblageEichprozesse">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Lizenz" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HEKennung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Vorgangsnummer" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="JSON" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -2519,6 +2541,17 @@
                 <ScalarProperty Name="GesperrtDurchDatum" ColumnName="GesperrtDurchDatum" />
                 <ScalarProperty Name="Gesperrt" ColumnName="Gesperrt" />
                 <ScalarProperty Name="Nummer" ColumnName="Nummer" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServerAblageEichprozesse">
+            <EntityTypeMapping TypeName="EichenSQLDatabaseModel.ServerAblageEichprozesse">
+              <MappingFragment StoreEntitySet="ServerAblageEichprozesse">
+                <ScalarProperty Name="JSON" ColumnName="JSON" />
+                <ScalarProperty Name="Vorgangsnummer" ColumnName="Vorgangsnummer" />
+                <ScalarProperty Name="HEKennung" ColumnName="HEKennung" />
+                <ScalarProperty Name="Lizenz" ColumnName="Lizenz" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

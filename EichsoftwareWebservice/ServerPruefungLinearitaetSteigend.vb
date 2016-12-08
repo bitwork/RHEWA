@@ -14,11 +14,11 @@ Partial Public Class ServerPruefungLinearitaetSteigend
     Public Property ID As Integer
     Public Property FK_Eichprotokoll As Integer
     Public Property Bereich As Byte
-    Public Property Messpunkt As string
-    Public Property Last As string
-    Public Property Anzeige As string
-    Public Property Fehler As string
-    Public Property EFG As string
+    Public Property Messpunkt As String
+    Public Property Last As String
+    Public Property Anzeige As String
+    Public Property Fehler As String
+    Public Property EFG As String
 
     Public Overridable Property ServerEichprotokoll As ServerEichprotokoll
 

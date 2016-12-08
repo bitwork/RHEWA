@@ -1804,11 +1804,67 @@ Public Class EichsoftwareWebservice
     Public Function SetAblageEichprozess(JSONEichprozess As String, HEKennung As String, Lizenzschluessel As String, Vorgangsnummer As String, WindowsUsername As String, Domainname As String, Computername As String) As Boolean Implements IEichsoftwareWebservice.SetAblageEichprozess
         If GetLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
         SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Lege Eichprozess ab")
-        Using dbcontext As New EichenSQLDatabaseEntities1
+        Try
+            Using dbcontext As New EichenSQLDatabaseEntities1
+                Dim Ablage As New ServerAblageEichprozesse()
+                Ablage.HEKennung = HEKennung
+                Ablage.Lizenz = Lizenzschluessel
+                Ablage.Vorgangsnummer = Vorgangsnummer
+                Ablage.JSON = JSONEichprozess
 
-        End Using
+                dbcontext.ServerAblageEichprozesse.Add(Ablage)
+                dbcontext.SaveChanges()
+                Return True
 
+            End Using
+        Catch ex As Exception
+            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
+            Return False
+        End Try
         SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Eichprozess erfolgreich abgelegt")
+    End Function
+
+    Public Function getAblageEichprozesse(HEKennung As String, Lizenzschluessel As String, WindowsUsername As String, Domainname As String, Computername As String) As List(Of String) Implements IEichsoftwareWebservice.getAblageEichprozesse
+        If GetLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
+        SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Rufe abgelegte Eichprozesse ab von Lizenz " + Lizenzschluessel)
+        Try
+            Using dbcontext As New EichenSQLDatabaseEntities1
+                Dim ablagen = From Ablage In dbcontext.ServerAblageEichprozesse Where Ablage.HEKennung = HEKennung And Ablage.Lizenz = Lizenzschluessel
+                Dim returnlist As New List(Of String)
+
+                For Each ablage In ablagen
+                    returnlist.Add(ablage.JSON)
+                Next
+
+                Return returnlist
+            End Using
+        Catch ex As Exception
+            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
+            Return Nothing
+        End Try
+        SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Eichprozesse erfolgreich aus Ablage geladen")
+
+    End Function
+
+    Public Function deleteAblageEichprozesse(HEKennung As String, Lizenzschluessel As String, WindowsUsername As String, Domainname As String, Computername As String) As Boolean Implements IEichsoftwareWebservice.deleteAblageEichprozesse
+        If GetLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
+        SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Lösche abgelegte Eichprozesse von Lizenz " + Lizenzschluessel)
+        Try
+            Using dbcontext As New EichenSQLDatabaseEntities1
+                Dim ablagen = From Ablage In dbcontext.ServerAblageEichprozesse Where Ablage.HEKennung = HEKennung And Ablage.Lizenz = Lizenzschluessel
+
+                For Each ablage In ablagen
+                    dbcontext.ServerAblageEichprozesse.Remove(ablage)
+                Next
+                dbcontext.SaveChanges()
+
+                Return True
+            End Using
+        Catch ex As Exception
+            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
+            Return False
+        End Try
+        SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Eichprozesse erfolgreich aus Ablage entfernt")
 
     End Function
 End Class

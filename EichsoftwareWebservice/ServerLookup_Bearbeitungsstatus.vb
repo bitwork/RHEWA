@@ -12,9 +12,9 @@ Imports System.Collections.Generic
 
 Partial Public Class ServerLookup_Bearbeitungsstatus
     Public Property ID As Byte
-    Public Property Status As string
-    Public Property Status_EN As string
-    Public Property Status_PL As string
+    Public Property Status As String
+    Public Property Status_EN As String
+    Public Property Status_PL As String
 
     Public Overridable Property ServerEichprozess As ICollection(Of ServerEichprozess) = New HashSet(Of ServerEichprozess)
 

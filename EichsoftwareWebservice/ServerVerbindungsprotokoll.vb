@@ -12,11 +12,11 @@ Imports System.Collections.Generic
 
 Partial Public Class ServerVerbindungsprotokoll
     Public Property ID As Integer
-    Public Property Domain As string
-    Public Property Computername As string
-    Public Property Windowsbenutzer As string
-    Public Property Aktion As string
+    Public Property Domain As String
+    Public Property Computername As String
+    Public Property Windowsbenutzer As String
+    Public Property Aktion As String
     Public Property Zeitstempel As Nullable(Of Date)
-    Public Property Lizenzschluessel_FK As string
+    Public Property Lizenzschluessel_FK As String
 
 End Class
