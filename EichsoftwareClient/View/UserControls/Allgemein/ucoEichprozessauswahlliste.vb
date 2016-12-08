@@ -222,25 +222,35 @@ Public Class ucoEichprozessauswahlliste
         If Me.Equals(UserControl) Then
             MyBase.LokalisierungNeeded(UserControl)
             'übersetzen und formatierung der Tabelle
-            LoadFromDatabase()
+
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucoEichprozessauswahlliste))
 
             Me.RadButtonClientAusblenden.Text = resources.GetString("RadButtonClientAusblenden.Text")
             Me.RadButtonClientBearbeiten.Text = resources.GetString("RadButtonClientBearbeiten.Text")
             Me.RadButtonClientUpdateDatabase.Text = resources.GetString("RadButtonClientUpdateDatabase.Text")
+            Me.RadButtonEinstellungen.Text = resources.GetString(".Text")
+            Me.RadButtonProtokollAblegen.Text = resources.GetString("RadButtonProtokollAblegen.Text")
             Me.RadButtonClientNeu.Text = resources.GetString("RadButtonClientNeu.Text")
             Me.RadCheckBoxAusblendenClientGeloeschterDokumente.Text = resources.GetString("RadCheckBoxAusblendenClientGeloeschterDokumente.Text")
 
             If AktuellerBenutzer.Instance.AktuelleSprache = "de" Then
                 Telerik.WinControls.UI.Localization.RadGridLocalizationProvider.CurrentProvider = New telerikgridlocalizerDE
+            ElseIf AktuellerBenutzer.Instance.AktuelleSprache = "pl" Then
+                Telerik.WinControls.UI.Localization.RadGridLocalizationProvider.CurrentProvider = New telerikgridlocalizerPL
             Else
                 Telerik.WinControls.UI.Localization.RadGridLocalizationProvider.CurrentProvider = New telerikgridlocalizerEN
-
             End If
             'Hilfetext setzen
             ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_Auswahlliste)
             'Überschrift setzen
             ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_Hauptmenue
+
+            LoadFromDatabase()
+
+            RadGridViewAuswahlliste.Refresh()
+            LoadFromDatabase()
+
+
         End If
     End Sub
 

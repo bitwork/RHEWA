@@ -44,4 +44,8 @@
     Private Sub RadButton1_Click(sender As Object, e As EventArgs) Handles RadButton1.Click
         OpenBenutzerAuswahl()
     End Sub
+
+    Public Sub TriggerLokalisierung()
+        RadButton1.Text = My.Resources.GlobaleLokalisierung.Sitzung & " " & mvarObjLizenz.Vorname & " " & mvarObjLizenz.Name
+    End Sub
 End Class

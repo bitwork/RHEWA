@@ -4,7 +4,7 @@ Public Class telerikgridlocalizerEN
 
     Inherits RadGridLocalizationProvider
 
-    Public Overrides Function GetLocalizedString(id As String) As string
+    Public Overrides Function GetLocalizedString(id As String) As String
         Select Case id
             Case RadGridStringId.ConditionalFormattingPleaseSelectValidCellValue
                 Return "Please select valid cell value"
@@ -403,7 +403,7 @@ Public Class telerikgridlocalizerDE
 
     Inherits RadGridLocalizationProvider
 
-    Public Overrides Function GetLocalizedString(id As String) As string
+    Public Overrides Function GetLocalizedString(id As String) As String
         Select Case id
             Case RadGridStringId.ConditionalFormattingPleaseSelectValidCellValue
                 Return "Please select valid cell value"
@@ -797,3 +797,258 @@ Public Class telerikgridlocalizerDE
     End Function
 
 End Class
+
+Public Class telerikgridlocalizerPL
+    Inherits RadGridLocalizationProvider
+    Public Overrides Function GetLocalizedString(id As String) As String
+        Select Case id
+            Case RadGridStringId.AddNewRowString
+                Return "Dodaj nowy wiersz"
+            Case RadGridStringId.BestFitMenuItem
+                Return "Najlepsze dopasowanie"
+            Case RadGridStringId.ClearSortingMenuItem
+                Return "Wyczysc sortowanie"
+            Case RadGridStringId.ClearValueMenuItem
+                Return "Wyczysc wartosc"
+            Case RadGridStringId.ColumnChooserFormCaption
+                Return "Wybór kolumn"
+            Case RadGridStringId.ColumnChooserFormMessage
+                Return "Przeciagnij tu z tabeli naglówek kolumny" & vbLf & "aby usunac ja" & vbLf & "z biezacego widoku."
+            Case RadGridStringId.ColumnChooserMenuItem
+                Return "Wybierz kolumny"
+            Case RadGridStringId.CompositeFilterFormErrorCaption
+                Return "Blad filtru"
+            Case RadGridStringId.ConditionalFormattingBtnAdd
+                Return "Dodaj nowa regule"
+            Case RadGridStringId.ConditionalFormattingBtnApply
+                Return "Zastosuj"
+            Case RadGridStringId.ConditionalFormattingBtnCancel
+                Return "Anuluj"
+            Case RadGridStringId.ConditionalFormattingBtnOK
+                Return "OK"
+            Case RadGridStringId.ConditionalFormattingBtnRemove
+                Return "Usun"
+            Case RadGridStringId.ConditionalFormattingCaption
+                Return "Menedzer regul formatowania warunkowego"
+            Case RadGridStringId.ConditionalFormattingChkApplyToRow
+                Return "Zastosuj ta regule do calego wiersza"
+            Case RadGridStringId.ConditionalFormattingChooseOne
+                Return "[Wybierz jedna z opcji]"
+            Case RadGridStringId.ConditionalFormattingContains
+                Return "zawiera [Wartosc 1]"
+            Case RadGridStringId.ConditionalFormattingDoesNotContain
+                Return "nie zawiera [Wartosc 1]"
+            Case RadGridStringId.ConditionalFormattingEndsWith
+                Return "konczy sie na [Wartosc 1]"
+            Case RadGridStringId.ConditionalFormattingEqualsTo
+                Return "jest równa [Wartosc 1]"
+            Case RadGridStringId.ConditionalFormattingGrpConditions
+                Return "Reguly"
+            Case RadGridStringId.ConditionalFormattingGrpProperties
+                Return "Wlasciwosci reguly"
+            Case RadGridStringId.ConditionalFormattingIsBetween
+                Return "jest z przedzialu od [Wartosc 1] do [Wartosc 2]"
+            Case RadGridStringId.ConditionalFormattingIsGreaterThan
+                Return "jest wieksza niz [Wartosc 1]"
+            Case RadGridStringId.ConditionalFormattingIsGreaterThanOrEqual
+                Return "jest wieksza lub równe [Wartosc 1]"
+            Case RadGridStringId.ConditionalFormattingIsLessThan
+                Return "jest mniejsza niz [Wartosc 1]"
+            Case RadGridStringId.ConditionalFormattingIsLessThanOrEqual
+                Return "jest mniejsza lub równe [Wartosc 1]"
+            Case RadGridStringId.ConditionalFormattingIsNotBetween
+                Return "jest spoza przedzialu od [Wartosc 1] do [Wartosc 2]"
+            Case RadGridStringId.ConditionalFormattingIsNotEqualTo
+                Return "jest rózna od [Wartosc 1]"
+            Case RadGridStringId.ConditionalFormattingLblColumn
+                Return "Formatuj jedynie komórki, które"
+            Case RadGridStringId.ConditionalFormattingLblName
+                Return "Nazwa reguly:"
+            Case RadGridStringId.ConditionalFormattingLblType
+                Return "Wartosc:"
+            Case RadGridStringId.SearchRowMatchCase
+                Return "aA"
+            Case RadGridStringId.ConditionalFormattingLblValue1
+                Return "Wartosc 1:"
+            Case RadGridStringId.ConditionalFormattingLblValue2
+                Return "Wartosc 2:"
+            Case RadGridStringId.ConditionalFormattingMenuItem
+                Return "Formatowanie warunkowe"
+            Case RadGridStringId.ConditionalFormattingRuleAppliesOn
+                Return "Regula jest stosowana dla:"
+            Case RadGridStringId.ConditionalFormattingStartsWith
+                Return "zaczyna sie od [Wartosc 1]"
+            Case RadGridStringId.CopyMenuItem
+                Return "Kopiuj"
+            Case RadGridStringId.CustomFilterDialogBtnCancel
+                Return "Anuluj"
+            Case RadGridStringId.CustomFilterDialogBtnOk
+                Return "OK"
+            Case RadGridStringId.CustomFilterDialogCaption
+                Return "Wlasny filtr"
+            Case RadGridStringId.CustomFilterDialogCheckBoxNot
+                Return "Nie"
+            Case RadGridStringId.CustomFilterDialogFalse
+                Return "Falsz"
+            Case RadGridStringId.CustomFilterDialogLabel
+                Return "Pokazuj wiersze, dla których:"
+            Case RadGridStringId.CustomFilterDialogRbAnd
+                Return "Oraz"
+            Case RadGridStringId.CustomFilterDialogRbOr
+                Return "Lub"
+            Case RadGridStringId.CustomFilterDialogTrue
+                Return "Prawda"
+            Case RadGridStringId.CustomFilterMenuItem
+                Return "Wlasny filtr"
+            Case RadGridStringId.DeleteRowMenuItem
+                Return "Usun wiersz"
+            Case RadGridStringId.EditMenuItem
+                Return "Edytuj"
+            Case RadGridStringId.FilterCompositeNotOperator
+                Return "NIE"
+            Case RadGridStringId.FilterFunctionBetween
+                Return "Pomiedzy"
+            Case RadGridStringId.FilterFunctionContains
+                Return "Zawiera"
+            Case RadGridStringId.FilterFunctionCustom
+                Return "Wlasny"
+            Case RadGridStringId.FilterFunctionDoesNotContain
+                Return "Nie zawiera"
+            Case RadGridStringId.FilterFunctionEndsWith
+                Return "Konczy sie na"
+            Case RadGridStringId.FilterFunctionEqualTo
+                Return "Jest równe"
+            Case RadGridStringId.FilterFunctionGreaterThan
+                Return "Jest wieksze niz"
+            Case RadGridStringId.FilterFunctionGreaterThanOrEqualTo
+                Return "Jest wieksze lub równe"
+            Case RadGridStringId.FilterFunctionIsEmpty
+                Return "Jest puste"
+            Case RadGridStringId.FilterFunctionIsNull
+                Return "Jest równe NULL"
+            Case RadGridStringId.FilterFunctionLessThan
+                Return "Jest mniejsze niz"
+            Case RadGridStringId.FilterFunctionLessThanOrEqualTo
+                Return "Jest mniejsze lub równe"
+            Case RadGridStringId.FilterFunctionNoFilter
+                Return "Bez filtrowania"
+            Case RadGridStringId.FilterFunctionNotBetween
+                Return "Jest spoza zakresu"
+            Case RadGridStringId.FilterFunctionNotEqualTo
+                Return "Jest rózne od"
+            Case RadGridStringId.FilterFunctionNotIsEmpty
+                Return "Jest niepuste"
+            Case RadGridStringId.FilterFunctionNotIsNull
+                Return "Jest rózne od NULL"
+            Case RadGridStringId.FilterFunctionStartsWith
+                Return "Zaczyna sie od"
+            Case RadGridStringId.FilterLogicalOperatorAnd
+                Return "ORAZ"
+            Case RadGridStringId.FilterLogicalOperatorOr
+                Return "LUB"
+            Case RadGridStringId.FilterMenuAvailableFilters
+                Return "Dostepne filtry"
+            Case RadGridStringId.FilterMenuButtonCancel
+                Return "Anuluj"
+            Case RadGridStringId.FilterMenuButtonOK
+                Return "OK"
+            Case RadGridStringId.FilterMenuClearFilters
+                Return "Wyczysc filtry"
+            Case RadGridStringId.FilterMenuSearchBoxText
+                Return "Szukaj..."
+            Case RadGridStringId.FilterMenuSelectionAll
+                Return "Wszystkie"
+            Case RadGridStringId.FilterMenuSelectionAllSearched
+                Return "Wszystkie wyniki wyszukiwania"
+            Case RadGridStringId.FilterMenuSelectionNotNull
+                Return "Rózne od NULL"
+            Case RadGridStringId.FilterMenuSelectionNull
+                Return "Równe NULL"
+            Case RadGridStringId.FilterOperatorBetween
+                Return "Pomiedzy"
+            Case RadGridStringId.FilterOperatorContains
+                Return "Zawiera"
+            Case RadGridStringId.FilterOperatorCustom
+                Return "Wlasny filtr"
+            Case RadGridStringId.FilterOperatorDoesNotContain
+                Return "Nie zawiera"
+            Case RadGridStringId.FilterOperatorEndsWith
+                Return "Konczy sie na"
+            Case RadGridStringId.FilterOperatorEqualTo
+                Return "Jest równe"
+            Case RadGridStringId.FilterOperatorGreaterThan
+                Return "Jest wieksze niz"
+            Case RadGridStringId.FilterOperatorGreaterThanOrEqualTo
+                Return "Jest wieksze lub równe"
+            Case RadGridStringId.FilterOperatorIsContainedIn
+                Return "Zawiera sie w"
+            Case RadGridStringId.FilterOperatorIsEmpty
+                Return "Jest puste"
+            Case RadGridStringId.FilterOperatorIsLike
+                Return "Wyglada jak"
+            Case RadGridStringId.FilterOperatorIsNull
+                Return "Jest równe NULL"
+            Case RadGridStringId.FilterOperatorLessThan
+                Return "Jest mniejsze niz"
+            Case RadGridStringId.FilterOperatorLessThanOrEqualTo
+                Return "Jest mniejsze lub równe"
+            Case RadGridStringId.FilterOperatorNoFilter
+                Return "Brak filtru"
+            Case RadGridStringId.FilterOperatorNotBetween
+                Return "Nie zawiera sie w przedziale"
+            Case RadGridStringId.FilterOperatorNotEqualTo
+                Return "Jest rózne od"
+            Case RadGridStringId.FilterOperatorNotIsContainedIn
+                Return "Nie zawiera sie w"
+            Case RadGridStringId.FilterOperatorNotIsEmpty
+                Return "Jest niepuste"
+            Case RadGridStringId.FilterOperatorNotIsLike
+                Return "Nie wyglada jak"
+            Case RadGridStringId.FilterOperatorNotIsNull
+                Return "Jest rózne od NULL"
+            Case RadGridStringId.FilterOperatorStartsWith
+                Return "Zaczyna sie od"
+            Case RadGridStringId.GroupByThisColumnMenuItem
+                Return "Grupuj wedlug tej kolumny"
+            Case RadGridStringId.GroupingPanelDefaultMessage
+                Return "Przeciagnij tu kolumne aby pogrupowac"
+            Case RadGridStringId.GroupingPanelHeader
+                Return "Grupuj wedlug:"
+            Case RadGridStringId.HideMenuItem
+                Return "Ukryj kolumne"
+            Case RadGridStringId.NoDataText
+                Return "Brak danych do wyswietlenia"
+            Case RadGridStringId.PasteMenuItem
+                Return "Wklej"
+            Case RadGridStringId.PinAtBottomMenuItem
+                Return "Przypnij na dole"
+            Case RadGridStringId.PinAtLeftMenuItem
+                Return "Przypnij po lewej"
+            Case RadGridStringId.PinAtRightMenuItem
+                Return "Przypnij po prawej"
+            Case RadGridStringId.PinAtTopMenuItem
+                Return "Przypnij na górze"
+            Case RadGridStringId.PinMenuItem
+                Return "Przypnij"
+            Case RadGridStringId.SortAscendingMenuItem
+                Return "Sortuj rosnaco"
+            Case RadGridStringId.SortDescendingMenuItem
+                Return "Sortuj malejaco"
+            Case RadGridStringId.UngroupThisColumn
+                Return "Rozgrupuj ta kolumne"
+            Case RadGridStringId.UnpinMenuItem
+                Return "Odepnij kolumne"
+            Case RadGridStringId.UnpinRowMenuItem
+                Return "Odepnij wiersz"
+        End Select
+
+        Return String.Empty
+    End Function
+End Class
+
+'=======================================================
+'Service provided by Telerik (www.telerik.com)
+'Conversion powered by NRefactory.
+'Twitter: @telerik
+'Facebook: facebook.com/telerik
+'=======================================================

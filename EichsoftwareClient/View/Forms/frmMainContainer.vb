@@ -252,7 +252,9 @@ Public Class FrmMainContainer
 
         'speichern der aktuellen Eingaben ins Objekt
         RaiseEvent LokalisierungNeeded(_CurrentUco)
-
+        If Not objUCOBenutzerwechsel Is Nothing Then
+            objUCOBenutzerwechsel.TriggerLokalisierung()
+        End If
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMainContainer))
         'übersetzung der Formular elemente von frmMainContainer
 
@@ -270,9 +272,14 @@ Public Class FrmMainContainer
     Private Sub RadButtonChangeLanguage_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonChangeLanguageToGerman.Click, RadButtonChangeLanguageToEnglish.Click, RadButtonChangeLanguageToPolish.Click
         If sender.Equals(RadButtonChangeLanguageToEnglish) Then
             changeCulture("en")
+            changeCulture("en")
+
         ElseIf sender.Equals(RadButtonChangeLanguageToGerman) Then
             changeCulture("de")
+            changeCulture("de")
+
         ElseIf sender.Equals(RadButtonChangeLanguageToPolish) Then
+            changeCulture("pl")
             changeCulture("pl")
         End If
     End Sub
