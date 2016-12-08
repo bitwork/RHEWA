@@ -69,4 +69,9 @@
         Dim f As New frmWaagenLoeschen
         f.ShowDialog()
     End Sub
+
+    Private Sub RadButtonImportPruefscheine_Click(sender As Object, e As EventArgs) Handles RadButtonImportPruefscheine.Click
+        Dim f As New FrmImportPruefschein
+        f.ShowDialog()
+    End Sub
 End Class

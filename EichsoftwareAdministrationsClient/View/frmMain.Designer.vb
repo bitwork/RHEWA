@@ -28,6 +28,7 @@ Partial Class frmMain
         Me.RadButtonLizenzen = New Telerik.WinControls.UI.RadButton()
         Me.RadButtonEichmarkenStatistik = New Telerik.WinControls.UI.RadButton()
         Me.RadGroupBox1 = New Telerik.WinControls.UI.RadGroupBox()
+        Me.RadButtonEichungenloeschen = New Telerik.WinControls.UI.RadButton()
         Me.RadButtonStandardwaagen = New Telerik.WinControls.UI.RadButton()
         Me.RadButtonFirmenZusatzDaten = New Telerik.WinControls.UI.RadButton()
         Me.RadButtonFirmenZuordnung = New Telerik.WinControls.UI.RadButton()
@@ -37,13 +38,15 @@ Partial Class frmMain
         Me.RadButtonVerbindungsprotokoll = New Telerik.WinControls.UI.RadButton()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.RadButtonSync = New Telerik.WinControls.UI.RadButton()
-        Me.RadButtonEichungenloeschen = New Telerik.WinControls.UI.RadButton()
+        Me.RadGroupBox3 = New Telerik.WinControls.UI.RadGroupBox()
+        Me.RadButtonImportPruefscheine = New Telerik.WinControls.UI.RadButton()
         CType(Me.RadButtonAuswertegeraet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonWaegezelle, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonLizenzen, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonEichmarkenStatistik, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBox1.SuspendLayout()
+        CType(Me.RadButtonEichungenloeschen, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonStandardwaagen, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonFirmenZusatzDaten, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonFirmenZuordnung, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -54,7 +57,9 @@ Partial Class frmMain
         CType(Me.RadButtonVerbindungsprotokoll, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonSync, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadButtonEichungenloeschen, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadGroupBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.RadGroupBox3.SuspendLayout()
+        CType(Me.RadButtonImportPruefscheine, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -62,11 +67,6 @@ Partial Class frmMain
         '
         Me.RadButtonAuswertegeraet.Location = New System.Drawing.Point(5, 37)
         Me.RadButtonAuswertegeraet.Name = "RadButtonAuswertegeraet"
-        '
-        '
-        '
-        Me.RadButtonAuswertegeraet.RootElement.AccessibleDescription = Nothing
-        Me.RadButtonAuswertegeraet.RootElement.AccessibleName = Nothing
         Me.RadButtonAuswertegeraet.Size = New System.Drawing.Size(203, 24)
         Me.RadButtonAuswertegeraet.TabIndex = 0
         Me.RadButtonAuswertegeraet.Text = "Auswertegeräte verwalten"
@@ -75,11 +75,6 @@ Partial Class frmMain
         '
         Me.RadButtonWaegezelle.Location = New System.Drawing.Point(5, 67)
         Me.RadButtonWaegezelle.Name = "RadButtonWaegezelle"
-        '
-        '
-        '
-        Me.RadButtonWaegezelle.RootElement.AccessibleDescription = Nothing
-        Me.RadButtonWaegezelle.RootElement.AccessibleName = Nothing
         Me.RadButtonWaegezelle.Size = New System.Drawing.Size(203, 24)
         Me.RadButtonWaegezelle.TabIndex = 1
         Me.RadButtonWaegezelle.Text = "Wägezellen verwalten"
@@ -88,11 +83,6 @@ Partial Class frmMain
         '
         Me.RadButtonLizenzen.Location = New System.Drawing.Point(5, 97)
         Me.RadButtonLizenzen.Name = "RadButtonLizenzen"
-        '
-        '
-        '
-        Me.RadButtonLizenzen.RootElement.AccessibleDescription = Nothing
-        Me.RadButtonLizenzen.RootElement.AccessibleName = Nothing
         Me.RadButtonLizenzen.Size = New System.Drawing.Size(203, 24)
         Me.RadButtonLizenzen.TabIndex = 2
         Me.RadButtonLizenzen.Text = "Lizenzen verwalten"
@@ -101,11 +91,6 @@ Partial Class frmMain
         '
         Me.RadButtonEichmarkenStatistik.Location = New System.Drawing.Point(7, 37)
         Me.RadButtonEichmarkenStatistik.Name = "RadButtonEichmarkenStatistik"
-        '
-        '
-        '
-        Me.RadButtonEichmarkenStatistik.RootElement.AccessibleDescription = Nothing
-        Me.RadButtonEichmarkenStatistik.RootElement.AccessibleName = Nothing
         Me.RadButtonEichmarkenStatistik.Size = New System.Drawing.Size(206, 24)
         Me.RadButtonEichmarkenStatistik.TabIndex = 3
         Me.RadButtonEichmarkenStatistik.Text = "Eichmarken Übersicht"
@@ -127,15 +112,18 @@ Partial Class frmMain
         Me.RadGroupBox1.TabIndex = 4
         Me.RadGroupBox1.Text = "Verwaltung"
         '
+        'RadButtonEichungenloeschen
+        '
+        Me.RadButtonEichungenloeschen.Location = New System.Drawing.Point(5, 217)
+        Me.RadButtonEichungenloeschen.Name = "RadButtonEichungenloeschen"
+        Me.RadButtonEichungenloeschen.Size = New System.Drawing.Size(203, 24)
+        Me.RadButtonEichungenloeschen.TabIndex = 6
+        Me.RadButtonEichungenloeschen.Text = "Eichungen löschen"
+        '
         'RadButtonStandardwaagen
         '
         Me.RadButtonStandardwaagen.Location = New System.Drawing.Point(5, 187)
         Me.RadButtonStandardwaagen.Name = "RadButtonStandardwaagen"
-        '
-        '
-        '
-        Me.RadButtonStandardwaagen.RootElement.AccessibleDescription = Nothing
-        Me.RadButtonStandardwaagen.RootElement.AccessibleName = Nothing
         Me.RadButtonStandardwaagen.Size = New System.Drawing.Size(203, 24)
         Me.RadButtonStandardwaagen.TabIndex = 5
         Me.RadButtonStandardwaagen.Text = "Standardwaagen definieren"
@@ -144,11 +132,6 @@ Partial Class frmMain
         '
         Me.RadButtonFirmenZusatzDaten.Location = New System.Drawing.Point(5, 157)
         Me.RadButtonFirmenZusatzDaten.Name = "RadButtonFirmenZusatzDaten"
-        '
-        '
-        '
-        Me.RadButtonFirmenZusatzDaten.RootElement.AccessibleDescription = Nothing
-        Me.RadButtonFirmenZusatzDaten.RootElement.AccessibleName = Nothing
         Me.RadButtonFirmenZusatzDaten.Size = New System.Drawing.Size(203, 24)
         Me.RadButtonFirmenZusatzDaten.TabIndex = 4
         Me.RadButtonFirmenZusatzDaten.Text = "Firmen Zusatzdaten pflegen"
@@ -157,11 +140,6 @@ Partial Class frmMain
         '
         Me.RadButtonFirmenZuordnung.Location = New System.Drawing.Point(5, 127)
         Me.RadButtonFirmenZuordnung.Name = "RadButtonFirmenZuordnung"
-        '
-        '
-        '
-        Me.RadButtonFirmenZuordnung.RootElement.AccessibleDescription = Nothing
-        Me.RadButtonFirmenZuordnung.RootElement.AccessibleName = Nothing
         Me.RadButtonFirmenZuordnung.Size = New System.Drawing.Size(203, 24)
         Me.RadButtonFirmenZuordnung.TabIndex = 3
         Me.RadButtonFirmenZuordnung.Text = "Firmen Zuordnung"
@@ -184,11 +162,6 @@ Partial Class frmMain
         '
         Me.RadButtonPruefscheinnummersuche.Location = New System.Drawing.Point(7, 127)
         Me.RadButtonPruefscheinnummersuche.Name = "RadButtonPruefscheinnummersuche"
-        '
-        '
-        '
-        Me.RadButtonPruefscheinnummersuche.RootElement.AccessibleDescription = Nothing
-        Me.RadButtonPruefscheinnummersuche.RootElement.AccessibleName = Nothing
         Me.RadButtonPruefscheinnummersuche.Size = New System.Drawing.Size(206, 24)
         Me.RadButtonPruefscheinnummersuche.TabIndex = 5
         Me.RadButtonPruefscheinnummersuche.Text = "Prüfscheinnummer Suche"
@@ -197,11 +170,6 @@ Partial Class frmMain
         '
         Me.RadButtonMogelstatistik.Location = New System.Drawing.Point(7, 97)
         Me.RadButtonMogelstatistik.Name = "RadButtonMogelstatistik"
-        '
-        '
-        '
-        Me.RadButtonMogelstatistik.RootElement.AccessibleDescription = Nothing
-        Me.RadButtonMogelstatistik.RootElement.AccessibleName = Nothing
         Me.RadButtonMogelstatistik.Size = New System.Drawing.Size(206, 24)
         Me.RadButtonMogelstatistik.TabIndex = 4
         Me.RadButtonMogelstatistik.Text = "Mogel Statistik"
@@ -210,11 +178,6 @@ Partial Class frmMain
         '
         Me.RadButtonVerbindungsprotokoll.Location = New System.Drawing.Point(7, 67)
         Me.RadButtonVerbindungsprotokoll.Name = "RadButtonVerbindungsprotokoll"
-        '
-        '
-        '
-        Me.RadButtonVerbindungsprotokoll.RootElement.AccessibleDescription = Nothing
-        Me.RadButtonVerbindungsprotokoll.RootElement.AccessibleName = Nothing
         Me.RadButtonVerbindungsprotokoll.Size = New System.Drawing.Size(206, 24)
         Me.RadButtonVerbindungsprotokoll.TabIndex = 4
         Me.RadButtonVerbindungsprotokoll.Text = "Verbindungsprotokoll"
@@ -233,28 +196,35 @@ Partial Class frmMain
         '
         Me.RadButtonSync.Location = New System.Drawing.Point(238, 314)
         Me.RadButtonSync.Name = "RadButtonSync"
-        '
-        '
-        '
-        Me.RadButtonSync.RootElement.AccessibleDescription = Nothing
-        Me.RadButtonSync.RootElement.AccessibleName = Nothing
         Me.RadButtonSync.Size = New System.Drawing.Size(203, 24)
         Me.RadButtonSync.TabIndex = 4
         Me.RadButtonSync.Text = "Datenbank Synchronisieren"
         '
-        'RadButtonEichungenloeschen
+        'RadGroupBox3
         '
-        Me.RadButtonEichungenloeschen.Location = New System.Drawing.Point(5, 217)
-        Me.RadButtonEichungenloeschen.Name = "RadButtonEichungenloeschen"
-        Me.RadButtonEichungenloeschen.Size = New System.Drawing.Size(203, 24)
-        Me.RadButtonEichungenloeschen.TabIndex = 6
-        Me.RadButtonEichungenloeschen.Text = "Eichungen löschen"
+        Me.RadGroupBox3.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.RadGroupBox3.Controls.Add(Me.RadButtonImportPruefscheine)
+        Me.RadGroupBox3.HeaderText = "Statistik / Auswertung"
+        Me.RadGroupBox3.Location = New System.Drawing.Point(455, 12)
+        Me.RadGroupBox3.Name = "RadGroupBox3"
+        Me.RadGroupBox3.Size = New System.Drawing.Size(218, 258)
+        Me.RadGroupBox3.TabIndex = 6
+        Me.RadGroupBox3.Text = "Statistik / Auswertung"
+        '
+        'RadButtonImportPruefscheine
+        '
+        Me.RadButtonImportPruefscheine.Location = New System.Drawing.Point(7, 37)
+        Me.RadButtonImportPruefscheine.Name = "RadButtonImportPruefscheine"
+        Me.RadButtonImportPruefscheine.Size = New System.Drawing.Size(206, 24)
+        Me.RadButtonImportPruefscheine.TabIndex = 3
+        Me.RadButtonImportPruefscheine.Text = "Prüfscheine importieren"
         '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(465, 350)
+        Me.ClientSize = New System.Drawing.Size(685, 350)
+        Me.Controls.Add(Me.RadGroupBox3)
         Me.Controls.Add(Me.RadButtonSync)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.RadGroupBox2)
@@ -263,8 +233,6 @@ Partial Class frmMain
         '
         '
         '
-        Me.RootElement.AccessibleDescription = Nothing
-        Me.RootElement.AccessibleName = Nothing
         Me.RootElement.ApplyShapeToControl = True
         Me.Text = "Herstellerersteichung Verwaltung und Statistik"
         CType(Me.RadButtonAuswertegeraet, System.ComponentModel.ISupportInitialize).EndInit()
@@ -273,6 +241,7 @@ Partial Class frmMain
         CType(Me.RadButtonEichmarkenStatistik, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBox1.ResumeLayout(False)
+        CType(Me.RadButtonEichungenloeschen, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonStandardwaagen, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonFirmenZusatzDaten, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonFirmenZuordnung, System.ComponentModel.ISupportInitialize).EndInit()
@@ -283,7 +252,9 @@ Partial Class frmMain
         CType(Me.RadButtonVerbindungsprotokoll, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonSync, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadButtonEichungenloeschen, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadGroupBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.RadGroupBox3.ResumeLayout(False)
+        CType(Me.RadButtonImportPruefscheine, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -303,5 +274,7 @@ Partial Class frmMain
     Friend WithEvents RadButtonPruefscheinnummersuche As Telerik.WinControls.UI.RadButton
     Friend WithEvents RadButtonStandardwaagen As Telerik.WinControls.UI.RadButton
     Friend WithEvents RadButtonEichungenloeschen As Telerik.WinControls.UI.RadButton
+    Friend WithEvents RadGroupBox3 As Telerik.WinControls.UI.RadGroupBox
+    Friend WithEvents RadButtonImportPruefscheine As Telerik.WinControls.UI.RadButton
 End Class
 
