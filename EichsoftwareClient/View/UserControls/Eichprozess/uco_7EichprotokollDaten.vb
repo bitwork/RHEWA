@@ -685,7 +685,7 @@ Public Class uco_7EichprotokollDaten
     End Sub
 
     Protected Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
-        If Me.Equals(UserControl) = False Then Exit Sub
+        If Me.Name.Equals(UserControl.Name) = False Then Exit Sub
 
         MyBase.LokalisierungNeeded(UserControl)
 
@@ -738,6 +738,20 @@ Public Class uco_7EichprotokollDaten
 
         RadTextBoxControlNormalienGenauigkeitsklasse.Text = resources.GetString("RadTextBoxControlNormalienGenauigkeitsklasse.Text")
         RadTextBoxControlNormalienPruefintervall.Text = resources.GetString("RadTextBoxControlNormalienPruefintervall.Text")
+
+        RadGroupBoxBeschaffenheitspruefung.Text = resources.GetString("RadGroupBoxBeschaffenheitspruefung.Text")
+        RadGroupBoxBeschaffenheitspruefungNormalien.Text = resources.GetString("RadGroupBoxBeschaffenheitspruefungNormalien.Text")
+        RadGroupBoxIdentifikationsdaten.Text = resources.GetString("RadGroupBoxIdentifikationsdaten.Text")
+        RadGroupBoxKomponenten.Text = resources.GetString("RadGroupBoxKomponenten.Text")
+        RadGroupBoxMax1.Text = resources.GetString("RadGroupBoxMax1.Text")
+        RadGroupBoxMax2.Text = resources.GetString("RadGroupBoxMax2.Text")
+        RadGroupBoxMax3.Text = resources.GetString("RadGroupBoxMax3.Text")
+        RadGroupBoxPruefverfahren.Text = resources.GetString("RadGroupRadGroupBoxPruefverfahren.Text")
+        RadGroupBoxVerwendungszweck.Text = resources.GetString("RadGroupBoxVerwendungszweck.Text")
+        RadGroupBoxVerwendungszweckArtderWaage.Text = resources.GetString("RadGroupBoxVerwendungszweckArtderWaage.Text")
+        RadGroupBoxVerwendungszweckEquipment.Text = resources.GetString("RadGroupBoxVerwendungszweckEquipment.Text")
+        RadGroupBoxVerwendungszweckNullstellung.Text = resources.GetString("RadGroupBoxVerwendungszweckNullstellung.Text")
+        RadGroupBoxVerwendungszweckTara.Text = resources.GetString("RadGroupBoxVerwendungszweckTara.Text")
 
         If Not ParentFormular Is Nothing Then
             Try
