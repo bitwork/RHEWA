@@ -117,9 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="RadGroupBoxAufstellbedingungen.HeaderText" xml:space="preserve">
+    <value>Kriterien für den Aufstellungsort:									
+</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="RadGroupBoxAufstellbedingungen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>5228, 59</value>
+    <value>6236, 59</value>
+  </data>
+  <data name="RadGroupBoxAufstellbedingungen.Text" xml:space="preserve">
+    <value>Kriterien für den Aufstellungsort:									
+</value>
   </data>
   <data name="RadLabel15.Size" type="System.Drawing.Size, System.Drawing">
     <value>450, 18</value>
@@ -147,7 +155,7 @@
     <value>Kriterien für die einzusetzende Wägebrücke:										</value>
   </data>
   <data name="RadGroupBoxWaegebruecke.Size" type="System.Drawing.Size, System.Drawing">
-    <value>2202, 169</value>
+    <value>3210, 169</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="RadGroupBoxWaegebruecke.TabIndex" type="System.Int32, mscorlib">
@@ -199,7 +207,7 @@
     <value>Kriterien für die einzusetzende(n) Wägezelle(n):</value>
   </data>
   <data name="RadGroupBoxWaegezellen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>2202, 193</value>
+    <value>3210, 193</value>
   </data>
   <data name="RadGroupBoxWaegezellen.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -240,7 +248,7 @@
     <value>&lt;html&gt;Kriterien für die einzusetzenden Verbindungselemente:       &lt;/html&gt;</value>
   </data>
   <data name="RadGroupBoxVerbindungselemente.Size" type="System.Drawing.Size, System.Drawing">
-    <value>2202, 191</value>
+    <value>3210, 191</value>
   </data>
   <data name="RadGroupBoxVerbindungselemente.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -272,7 +280,7 @@
     <value>Kriterien für Rhewa Auswertegeräte:										</value>
   </data>
   <data name="RadGroupBoxAuswerteGeraete.Size" type="System.Drawing.Size, System.Drawing">
-    <value>2202, 212</value>
+    <value>3210, 212</value>
   </data>
   <data name="RadGroupBoxAuswerteGeraete.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>

@@ -118,21 +118,44 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="RadLabel20.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 18</value>
+  </data>
+  <data name="RadLabel20.Text" xml:space="preserve">
+    <value>Warunki instalacji są w porządku</value>
+  </data>
+  <data name="RadGroupBoxAufstellbedingungen.HeaderText" xml:space="preserve">
+    <value>Kryteria dla miejsca instalacji wagi:									
+</value>
+  </data>
+  <data name="RadGroupBoxAufstellbedingungen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>9260, 59</value>
+  </data>
+  <data name="RadGroupBoxAufstellbedingungen.Text" xml:space="preserve">
+    <value>Kryteria dla miejsca instalacji wagi:									
+</value>
+  </data>
+  <data name="RadCheckBoxApprove.Location" type="System.Drawing.Point, System.Drawing">
+    <value>987, 895</value>
+  </data>
+  <data name="lblPflichtfeld1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>964, 7</value>
+  </data>
+  <data name="RadLabel19.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 885</value>
+  </data>
+  <data name="RadLabel19.Size" type="System.Drawing.Size, System.Drawing">
+    <value>978, 37</value>
+  </data>
+  <data name="RadLabel19.Text" xml:space="preserve">
+    <value>Sprawdziłem wszystkie wyżej wymienione kryteria. Wszystkie kryteria są spełnione.</value>
+  </data>
   <data name="RadLabel15.Size" type="System.Drawing.Size, System.Drawing">
     <value>552, 18</value>
   </data>
   <data name="RadLabel15.Text" xml:space="preserve">
     <value>Czy konstrukcja pomostu jest odpowiednio zaprojektowana, aby zrealizować zaplanowane zadania wagowe?								
 </value>
-  </data>
-  <data name="RadCheckBoxBruecke1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>913, 34</value>
-  </data>
-  <data name="RadCheckBoxBruecke3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>913, 111</value>
-  </data>
-  <data name="RadCheckBoxBruecke2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>913, 72</value>
   </data>
   <data name="RadLabel11.Size" type="System.Drawing.Size, System.Drawing">
     <value>868, 33</value>
@@ -153,26 +176,29 @@
     <value>Kryteria dla stosowanego pomostu wagowego:										
 </value>
   </data>
+  <data name="RadGroupBoxWaegebruecke.Size" type="System.Drawing.Size, System.Drawing">
+    <value>9260, 153</value>
+  </data>
   <data name="RadGroupBoxWaegebruecke.Text" xml:space="preserve">
     <value>Kryteria dla stosowanego pomostu wagowego:										
 </value>
   </data>
   <data name="RadLabel7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>318, 18</value>
+    <value>232, 18</value>
   </data>
   <data name="RadLabel7.Text" xml:space="preserve">
     <value>Płyty montażowe muszą być czyste i płaskie.
 </value>
   </data>
   <data name="RadLabel5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>229, 18</value>
+    <value>394, 18</value>
   </data>
   <data name="RadLabel5.Text" xml:space="preserve">
     <value>Przy czujnikach zalanych masą uszczelniającą, masa musi być nieuszkodzona.								
 </value>
   </data>
   <data name="RadLabel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>400, 18</value>
+    <value>695, 18</value>
   </data>
   <data name="RadLabel3.Text" xml:space="preserve">
     <value>Czujnik(i) tensometryczny(e) muszą posiadać zatwierdzenie według OIML R60.								 Dokumenty zatwierdzające są dostępne w postaci czytelnej.</value>
@@ -192,24 +218,12 @@
 								
 </value>
   </data>
-  <data name="RadCheckBoxWZ1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>913, 23</value>
-  </data>
-  <data name="RadCheckBoxWZ2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>913, 61</value>
-  </data>
-  <data name="RadCheckBoxWZ4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>913, 135</value>
-  </data>
-  <data name="RadCheckBoxWZ3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>913, 97</value>
-  </data>
-  <data name="RadCheckBoxWZ5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>913, 173</value>
-  </data>
   <data name="RadGroupBoxWaegezellen.HeaderText" xml:space="preserve">
     <value>Kryteria dla stosowanego(ych) czujnika(ów) tensometrycznego(ych):										
 </value>
+  </data>
+  <data name="RadGroupBoxWaegezellen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>9260, 193</value>
   </data>
   <data name="RadGroupBoxWaegezellen.Text" xml:space="preserve">
     <value>Kryteria dla stosowanego(ych) czujnika(ów) tensometrycznego(ych):										
@@ -244,25 +258,28 @@
 								
 </value>
   </data>
-  <data name="RadCheckBoxVerbindungelemente1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>913, 33</value>
-  </data>
-  <data name="RadCheckBoxVerbindungelemente3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>913, 112</value>
-  </data>
-  <data name="RadCheckBoxVerbindungelemente2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>913, 74</value>
-  </data>
-  <data name="RadCheckBoxVerbindungelemente4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>913, 149</value>
-  </data>
   <data name="RadGroupBoxVerbindungselemente.HeaderText" xml:space="preserve">
     <value>Kryteria dla używanych elementów łączących:										
 </value>
   </data>
+  <data name="RadGroupBoxVerbindungselemente.Size" type="System.Drawing.Size, System.Drawing">
+    <value>9260, 191</value>
+  </data>
   <data name="RadGroupBoxVerbindungselemente.Text" xml:space="preserve">
     <value>Kryteria dla używanych elementów łączących:										
 </value>
+  </data>
+  <data name="RadLabel17.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 18</value>
+  </data>
+  <data name="RadLabel17.Text" xml:space="preserve">
+    <value>Wskaźniki i wydruki zgadzają się z wymogami (UE)</value>
+  </data>
+  <data name="RadLabel9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>299, 18</value>
+  </data>
+  <data name="RadLabel9.Text" xml:space="preserve">
+    <value>Dokumenty zatwierdzające miernika są w postaci czytelnej.</value>
   </data>
   <data name="RadLabel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>475, 18</value>
@@ -285,39 +302,13 @@
     <value>Dane metrologiczne muszą być dostępne. Max. / Min. / e= / klasa / znak zatwierdzenia / producent / symbol WEEE								
 </value>
   </data>
-  <data name="RadCheckBoxAWG1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>913, 30</value>
-  </data>
-  <data name="RadCheckBoxAWG3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>913, 93</value>
-  </data>
-  <data name="RadCheckBoxAWG2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>913, 61</value>
-  </data>
   <data name="RadGroupBoxAuswerteGeraete.HeaderText" xml:space="preserve">
     <value>Kryteria dla mierników RHEWA:										</value>
   </data>
+  <data name="RadGroupBoxAuswerteGeraete.Size" type="System.Drawing.Size, System.Drawing">
+    <value>9260, 205</value>
+  </data>
   <data name="RadGroupBoxAuswerteGeraete.Text" xml:space="preserve">
     <value>Kryteria dla mierników RHEWA:										</value>
-  </data>
-  <data name="RadLabel17.Text" xml:space="preserve">
-    <value>Wskaźniki i wydruki zgadzają się z wymogami (UE)</value>
-  </data>
-  <data name="RadLabel20.Text" xml:space="preserve">
-    <value>Warunki instalacji są w porządku</value>
-  </data>
-  <data name="RadLabel9.Text" xml:space="preserve">
-    <value>Dokumenty zatwierdzające miernika są w postaci czytelnej.</value>
-  </data>
-  <data name="RadLabel19.Text" xml:space="preserve">
-    <value>Sprawdziłem wszystkie wyżej wymienione kryteria. Wszystkie kryteria są spełnione.</value>
-  </data>
-  <data name="RadGroupBoxAufstellbedingungen.HeaderText" xml:space="preserve">
-    <value>Kryteria dla miejsca instalacji wagi:									
-</value>
-  </data>
-  <data name="RadGroupBoxAufstellbedingungen.Text" xml:space="preserve">
-    <value>Kryteria dla miejsca instalacji wagi:									
-</value>
   </data>
 </root>
