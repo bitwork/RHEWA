@@ -667,30 +667,49 @@ Public Class uco10PruefungStaffelverfahren
     ''' <remarks></remarks>
     ''' <author></author>
     ''' <commentauthor></commentauthor>
-    Private Function ValidateStaffelAusgefuellt(StaffelGroupBox As Telerik.WinControls.UI.RadGroupBox) As Boolean
+    Private Function ValidateStaffelAusgefuellt(BereichGroupBox As Telerik.WinControls.UI.RadGroupBox, ByRef einFeldGefuelltInStaffel As Boolean) As Boolean
         Dim returnvalue As Boolean = True
-        Dim einFeldGefuellt As Boolean = False 'nur rot markieren wenn überhaupt ein Feld gefüllt ist
-        For Each BereichGroupBox In StaffelGroupBox.Controls
-            If CType(BereichGroupBox, Telerik.WinControls.UI.RadGroupBox).Visible = True Then 'Nur wenn der Bereich auch sichtbar ist
-                For Each Control In BereichGroupBox.controls
-                    Try
-                        If CType(Control, Telerik.WinControls.UI.RadTextBox).ReadOnly = False And CType(Control, Telerik.WinControls.UI.RadTextBox).Enabled = True Then
-                            If CType(Control, Telerik.WinControls.UI.RadTextBox).Text.Trim = "" Then
-                                returnvalue = False
-                                If einFeldGefuellt = True Then
-                                    CType(Control, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
-                                End If
-                            Else
-                                CType(Control, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Transparent
-                                einFeldGefuellt = True
+
+        If BereichGroupBox.Visible = True Then 'Nur wenn der Bereich auch sichtbar ist
+            For Each Control In BereichGroupBox.Controls
+                Try
+                    If CType(Control, Telerik.WinControls.UI.RadTextBox).ReadOnly = False And CType(Control, Telerik.WinControls.UI.RadTextBox).Enabled = True Then
+                        If CType(Control, Telerik.WinControls.UI.RadTextBox).Text.Trim = "" Then
+                            returnvalue = False
+                            If einFeldGefuelltInStaffel = True Then
+                                CType(Control, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
                             End If
+                        Else
+                            CType(Control, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Transparent
+                            einFeldGefuelltInStaffel = True
                         End If
-                    Catch ex As Exception
-                    End Try
-                Next
-            End If
-        Next
+                    End If
+                Catch ex As Exception
+                End Try
+            Next
+        End If
         Return returnvalue
+        'For Each BereichGroupBox In StaffelGroupBox.Controls
+        '    If CType(BereichGroupBox, Telerik.WinControls.UI.RadGroupBox).Visible = True Then 'Nur wenn der Bereich auch sichtbar ist
+        '        For Each Control In BereichGroupBox.controls
+        '            Try
+        '                If CType(Control, Telerik.WinControls.UI.RadTextBox).ReadOnly = False And CType(Control, Telerik.WinControls.UI.RadTextBox).Enabled = True Then
+        '                    If CType(Control, Telerik.WinControls.UI.RadTextBox).Text.Trim = "" Then
+        '                        returnvalue = False
+        '                        If einFeldGefuellt = True Then
+        '                            CType(Control, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
+        '                        End If
+        '                    Else
+        '                        CType(Control, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Transparent
+        '                        einFeldGefuellt = True
+        '                    End If
+        '                End If
+        '            Catch ex As Exception
+        '            End Try
+        '        Next
+        '    End If
+        'Next
+        '  Return returnvalue
     End Function
 
     Private Sub ValidateStaffelEFG(staffel As Integer, bereich As Integer)
@@ -724,15 +743,22 @@ Public Class uco10PruefungStaffelverfahren
         AbortSaving = False
 
         Dim intausgefuellteStaffeln As Integer = 0
-        If ValidateStaffelAusgefuellt(RadGroupBoxStaffel1) Then
+        Dim einFeldGefuelltInStaffel As Boolean = False
+        If ValidateStaffelAusgefuellt(RadGroupBoxStaffel1Bereich1, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel1Bereich2, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel1Bereich3, einFeldGefuelltInStaffel) Then
             intausgefuellteStaffeln = 1
-            If ValidateStaffelAusgefuellt(RadGroupBoxStaffel2) Then
+            einFeldGefuelltInStaffel = False
+            If ValidateStaffelAusgefuellt(RadGroupBoxStaffel2Bereich1, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel2Bereich2, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel2Bereich3, einFeldGefuelltInStaffel) Then
                 intausgefuellteStaffeln = 2
-                If ValidateStaffelAusgefuellt(RadGroupBoxStaffel3) Then
+                einFeldGefuelltInStaffel = False
+                If ValidateStaffelAusgefuellt(RadGroupBoxStaffel3Bereich1, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel3Bereich2, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel3Bereich3, einFeldGefuelltInStaffel) Then
                     intausgefuellteStaffeln = 3
-                    If ValidateStaffelAusgefuellt(RadGroupBoxStaffel4) Then
+                    einFeldGefuelltInStaffel = False
+                    If ValidateStaffelAusgefuellt(RadGroupBoxStaffel4Bereich1, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel4Bereich2, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel4Bereich3, einFeldGefuelltInStaffel) Then
                         intausgefuellteStaffeln = 4
-                        If ValidateStaffelAusgefuellt(RadGroupBoxStaffel5) Then intausgefuellteStaffeln = 5
+                        einFeldGefuelltInStaffel = False
+                        If ValidateStaffelAusgefuellt(RadGroupBoxStaffel5Bereich1, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel5Bereich2, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel5Bereich3, einFeldGefuelltInStaffel) Then
+                            intausgefuellteStaffeln = 5
+                        End If
                     End If
                 End If
             End If
