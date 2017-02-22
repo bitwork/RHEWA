@@ -763,4 +763,17 @@ Jest błąd ≤ 0,3e → L = 0,5 Max = potrzebne są wzorce 50% z Max.</value>
   <data name="ValidierungUeberspringen" xml:space="preserve">
     <value>Czy przeskoczyć walidację? Przesyłka jest tylko wtedy możliwa, jeżeli wszystko pomyślnie zostało zwalidowane.</value>
   </data>
+  <data name="Hilfe_StammdateBereichWZ" xml:space="preserve">
+    <value>Wszystkie czujniki tensometryczne mogą być używane w ramach dopuszczenia typu budowy miernika, zakładając, że wypełnione zostaną następujące warunki:
+
+ - Istnieje właściwe Zaświadczenie Zgodności OIML (R60) lub raport z badań (EN45501) dla czujnika tensometrycznego wystawiony przez jednostkę notyfikacyjną, która jest odpowiedzialna za sprawdzenie typu w ramach wytycznej 2014/31/UE.
+
+ - Raport z badania zawiera typ czujnika tensometrycznego oraz niezbędne dane czujnika, aby wystawić oświadczenie producenta o zgodności moduli (WELMEC 2, wydanie 4, 2004, Nr.11) oraz spełnić specjalne wymagania dotyczące instalacji.
+
+Czujnik tensometryczny z oznaczeniem NH jest tylko wtedy dozwolony, gdy dla tego czujnika przeprowadzone zostało badanie wilgotności według EN 45501.
+
+ - Kompatybilność czujnika i miernika została stwierdzona za pomocą odpowiedniego formularza.
+
+ - Wprowadzenie siły musi być zgodne z jednym z przykładów pokazanych w przewodniku WELMEC (WELMEC 2.4).</value>
+  </data>
 </root>

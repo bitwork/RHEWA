@@ -83,6 +83,10 @@ Partial Class uco_2StammdatenEingabe
         Me.RadScrollablePanel1.SuspendLayout()
         CType(Me.RadGroupBoxStammdaten, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxStammdaten.SuspendLayout()
+        CType(Me.Label3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblPflichtfeld, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxStammdatenPLZ, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblPLZ, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxStammdatenOrt, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -93,6 +97,8 @@ Partial Class uco_2StammdatenEingabe
         CType(Me.lblWaagenbaufirma, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBoxWZ, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxWZ.SuspendLayout()
+        CType(Me.Label9, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonNeueWaegezelle, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -106,6 +112,9 @@ Partial Class uco_2StammdatenEingabe
         CType(Me.lblAWZHersteller, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBoxWaage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxWaage.SuspendLayout()
+        CType(Me.Label6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblWaagenart, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadDropDownListWaagenArt, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -117,6 +126,7 @@ Partial Class uco_2StammdatenEingabe
         CType(Me.lblAWaageSeriennummer, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBoxAWG, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxAWG.SuspendLayout()
+        CType(Me.Label7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -163,26 +173,26 @@ Partial Class uco_2StammdatenEingabe
         '
         'Label3
         '
-        resources.ApplyResources(Me.Label3, "Label3")
         Me.Label3.ForeColor = System.Drawing.Color.Red
+        resources.ApplyResources(Me.Label3, "Label3")
         Me.Label3.Name = "Label3"
         '
         'Label2
         '
-        resources.ApplyResources(Me.Label2, "Label2")
         Me.Label2.ForeColor = System.Drawing.Color.Red
+        resources.ApplyResources(Me.Label2, "Label2")
         Me.Label2.Name = "Label2"
         '
         'Label1
         '
-        resources.ApplyResources(Me.Label1, "Label1")
         Me.Label1.ForeColor = System.Drawing.Color.Red
+        resources.ApplyResources(Me.Label1, "Label1")
         Me.Label1.Name = "Label1"
         '
         'lblPflichtfeld
         '
-        resources.ApplyResources(Me.lblPflichtfeld, "lblPflichtfeld")
         Me.lblPflichtfeld.ForeColor = System.Drawing.Color.Red
+        resources.ApplyResources(Me.lblPflichtfeld, "lblPflichtfeld")
         Me.lblPflichtfeld.Name = "lblPflichtfeld"
         '
         'RadTextBoxStammdatenPLZ
@@ -250,14 +260,14 @@ Partial Class uco_2StammdatenEingabe
         '
         'Label9
         '
-        resources.ApplyResources(Me.Label9, "Label9")
         Me.Label9.ForeColor = System.Drawing.Color.Red
+        resources.ApplyResources(Me.Label9, "Label9")
         Me.Label9.Name = "Label9"
         '
         'Label8
         '
-        resources.ApplyResources(Me.Label8, "Label8")
         Me.Label8.ForeColor = System.Drawing.Color.Red
+        resources.ApplyResources(Me.Label8, "Label8")
         Me.Label8.Name = "Label8"
         '
         'PictureBox6
@@ -283,14 +293,14 @@ Partial Class uco_2StammdatenEingabe
         'RadDropdownlistlWZHersteller
         '
         Me.RadDropdownlistlWZHersteller.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.RadDropdownlistlWZHersteller.DropDownStyle  = Telerik.WinControls.RadDropDownStyle.DropDownList
+        Me.RadDropdownlistlWZHersteller.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList
         resources.ApplyResources(Me.RadDropdownlistlWZHersteller, "RadDropdownlistlWZHersteller")
         Me.RadDropdownlistlWZHersteller.Name = "RadDropdownlistlWZHersteller"
         '
         'RadDropdownlistlWZTyp
         '
         Me.RadDropdownlistlWZTyp.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.RadDropdownlistlWZTyp.DropDownStyle  = Telerik.WinControls.RadDropDownStyle.DropDownList
+        Me.RadDropdownlistlWZTyp.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList
         resources.ApplyResources(Me.RadDropdownlistlWZTyp, "RadDropdownlistlWZTyp")
         Me.RadDropdownlistlWZTyp.Name = "RadDropdownlistlWZTyp"
         '
@@ -350,20 +360,20 @@ Partial Class uco_2StammdatenEingabe
         '
         'Label6
         '
-        resources.ApplyResources(Me.Label6, "Label6")
         Me.Label6.ForeColor = System.Drawing.Color.Red
+        resources.ApplyResources(Me.Label6, "Label6")
         Me.Label6.Name = "Label6"
         '
         'Label5
         '
-        resources.ApplyResources(Me.Label5, "Label5")
         Me.Label5.ForeColor = System.Drawing.Color.Red
+        resources.ApplyResources(Me.Label5, "Label5")
         Me.Label5.Name = "Label5"
         '
         'Label4
         '
-        resources.ApplyResources(Me.Label4, "Label4")
         Me.Label4.ForeColor = System.Drawing.Color.Red
+        resources.ApplyResources(Me.Label4, "Label4")
         Me.Label4.Name = "Label4"
         '
         'lblWaagenart
@@ -381,7 +391,7 @@ Partial Class uco_2StammdatenEingabe
         'RadDropDownListWaagenArt
         '
         Me.RadDropDownListWaagenArt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.RadDropDownListWaagenArt.DropDownStyle  = Telerik.WinControls.RadDropDownStyle.DropDownList
+        Me.RadDropDownListWaagenArt.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList
         resources.ApplyResources(Me.RadDropDownListWaagenArt, "RadDropDownListWaagenArt")
         Me.RadDropDownListWaagenArt.Name = "RadDropDownListWaagenArt"
         '
@@ -393,7 +403,7 @@ Partial Class uco_2StammdatenEingabe
         'RadDropdownlistWaagenTyp
         '
         Me.RadDropdownlistWaagenTyp.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.RadDropdownlistWaagenTyp.DropDownStyle  = Telerik.WinControls.RadDropDownStyle.DropDownList
+        Me.RadDropdownlistWaagenTyp.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList
         resources.ApplyResources(Me.RadDropdownlistWaagenTyp, "RadDropdownlistWaagenTyp")
         Me.RadDropdownlistWaagenTyp.Name = "RadDropdownlistWaagenTyp"
         '
@@ -441,8 +451,8 @@ Partial Class uco_2StammdatenEingabe
         '
         'Label7
         '
-        resources.ApplyResources(Me.Label7, "Label7")
         Me.Label7.ForeColor = System.Drawing.Color.Red
+        resources.ApplyResources(Me.Label7, "Label7")
         Me.Label7.Name = "Label7"
         '
         'PictureBox2
@@ -469,7 +479,7 @@ Partial Class uco_2StammdatenEingabe
         'RadDropdownlistAWGTyp
         '
         Me.RadDropdownlistAWGTyp.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.RadDropdownlistAWGTyp.DropDownStyle  = Telerik.WinControls.RadDropDownStyle.DropDownList
+        Me.RadDropdownlistAWGTyp.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList
         resources.ApplyResources(Me.RadDropdownlistAWGTyp, "RadDropdownlistAWGTyp")
         Me.RadDropdownlistAWGTyp.Name = "RadDropdownlistAWGTyp"
         '
@@ -529,6 +539,10 @@ Partial Class uco_2StammdatenEingabe
         CType(Me.RadGroupBoxStammdaten, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBoxStammdaten.ResumeLayout(False)
         Me.RadGroupBoxStammdaten.PerformLayout()
+        CType(Me.Label3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblPflichtfeld, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxStammdatenPLZ, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblPLZ, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxStammdatenOrt, System.ComponentModel.ISupportInitialize).EndInit()
@@ -540,6 +554,8 @@ Partial Class uco_2StammdatenEingabe
         CType(Me.RadGroupBoxWZ, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBoxWZ.ResumeLayout(False)
         Me.RadGroupBoxWZ.PerformLayout()
+        CType(Me.Label9, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonNeueWaegezelle, System.ComponentModel.ISupportInitialize).EndInit()
@@ -554,6 +570,9 @@ Partial Class uco_2StammdatenEingabe
         CType(Me.RadGroupBoxWaage, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBoxWaage.ResumeLayout(False)
         Me.RadGroupBoxWaage.PerformLayout()
+        CType(Me.Label6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblWaagenart, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadDropDownListWaagenArt, System.ComponentModel.ISupportInitialize).EndInit()
@@ -566,6 +585,7 @@ Partial Class uco_2StammdatenEingabe
         CType(Me.RadGroupBoxAWG, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBoxAWG.ResumeLayout(False)
         Me.RadGroupBoxAWG.PerformLayout()
+        CType(Me.Label7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblPflichtfeld1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>964, 7</value>
+  </data>
   <data name="RadLabel20.Size" type="System.Drawing.Size, System.Drawing">
     <value>168, 18</value>
   </data>
@@ -129,7 +132,7 @@
 </value>
   </data>
   <data name="RadGroupBoxAufstellbedingungen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>9260, 59</value>
+    <value>12284, 59</value>
   </data>
   <data name="RadGroupBoxAufstellbedingungen.Text" xml:space="preserve">
     <value>Kryteria dla miejsca instalacji wagi:									
@@ -137,9 +140,6 @@
   </data>
   <data name="RadCheckBoxApprove.Location" type="System.Drawing.Point, System.Drawing">
     <value>987, 895</value>
-  </data>
-  <data name="lblPflichtfeld1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>964, 7</value>
   </data>
   <data name="RadLabel19.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 885</value>
@@ -151,33 +151,29 @@
     <value>Sprawdziłem wszystkie wyżej wymienione kryteria. Wszystkie kryteria są spełnione.</value>
   </data>
   <data name="RadLabel15.Size" type="System.Drawing.Size, System.Drawing">
-    <value>552, 18</value>
+    <value>507, 18</value>
   </data>
   <data name="RadLabel15.Text" xml:space="preserve">
-    <value>Czy konstrukcja pomostu jest odpowiednio zaprojektowana, aby zrealizować zaplanowane zadania wagowe?								
-</value>
+    <value>Konstrukcja pomostu jest tak zaprojektowana, że wszystkie zadania wagowe mogą być zrealizowane.</value>
   </data>
   <data name="RadLabel11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>868, 33</value>
+    <value>845, 18</value>
   </data>
   <data name="RadLabel11.Text" xml:space="preserve">
-    <value>Czy konstrukcja jest wolna od korozji? Przy betonowych wagach samochodowych nie powinno się znaleźć żadnych odpryśniętych cząstek betonu lub widocznego zbrojenia.								
-								
-</value>
+    <value>Konstrukcja jest wolna od korozji. Przy betonowych wagach samochodowych nie ma żadnych odpryśnięć cząstek betonu jak i żadnych widocznych części zbrojeniowych.</value>
   </data>
   <data name="RadLabel13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>417, 18</value>
+    <value>654, 18</value>
   </data>
   <data name="RadLabel13.Text" xml:space="preserve">
-    <value>Czy zamocowania czujników tensometrycznych znajdują się na jednym poziomie?								
-</value>
+    <value>Zamocowanie czujników tensometrycznych znajduje się w płaszczyźnie poziomej ułożone nawzajem do siebie. (Punkt odniesienia)</value>
   </data>
   <data name="RadGroupBoxWaegebruecke.HeaderText" xml:space="preserve">
     <value>Kryteria dla stosowanego pomostu wagowego:										
 </value>
   </data>
   <data name="RadGroupBoxWaegebruecke.Size" type="System.Drawing.Size, System.Drawing">
-    <value>9260, 153</value>
+    <value>12284, 153</value>
   </data>
   <data name="RadGroupBoxWaegebruecke.Text" xml:space="preserve">
     <value>Kryteria dla stosowanego pomostu wagowego:										
@@ -223,7 +219,7 @@
 </value>
   </data>
   <data name="RadGroupBoxWaegezellen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>9260, 193</value>
+    <value>12284, 193</value>
   </data>
   <data name="RadGroupBoxWaegezellen.Text" xml:space="preserve">
     <value>Kryteria dla stosowanego(ych) czujnika(ów) tensometrycznego(ych):										
@@ -263,17 +259,17 @@
 </value>
   </data>
   <data name="RadGroupBoxVerbindungselemente.Size" type="System.Drawing.Size, System.Drawing">
-    <value>9260, 191</value>
+    <value>12284, 191</value>
   </data>
   <data name="RadGroupBoxVerbindungselemente.Text" xml:space="preserve">
     <value>Kryteria dla używanych elementów łączących:										
 </value>
   </data>
   <data name="RadLabel17.Size" type="System.Drawing.Size, System.Drawing">
-    <value>257, 18</value>
+    <value>233, 18</value>
   </data>
   <data name="RadLabel17.Text" xml:space="preserve">
-    <value>Wskaźniki i wydruki zgadzają się z wymogami (UE)</value>
+    <value>Wskaźniki i wydruki zgadzają się z wymogami</value>
   </data>
   <data name="RadLabel9.Size" type="System.Drawing.Size, System.Drawing">
     <value>299, 18</value>
@@ -306,7 +302,7 @@
     <value>Kryteria dla mierników RHEWA:										</value>
   </data>
   <data name="RadGroupBoxAuswerteGeraete.Size" type="System.Drawing.Size, System.Drawing">
-    <value>9260, 205</value>
+    <value>12284, 205</value>
   </data>
   <data name="RadGroupBoxAuswerteGeraete.Text" xml:space="preserve">
     <value>Kryteria dla mierników RHEWA:										</value>

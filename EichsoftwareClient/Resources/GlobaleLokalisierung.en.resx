@@ -687,4 +687,17 @@ If the repeatability error is greater than 0.35 e, the portion of standard weigh
   <data name="ValidierungUeberspringen" xml:space="preserve">
     <value>Skip validation? </value>
   </data>
+  <data name="Hilfe_StammdateBereichWZ" xml:space="preserve">
+    <value>Any load cell(s) may be used for instruments under this EC type approval certificate, provided the following conditions are met:
+
+ - There is a respective OIML Certificate of Conformity (R60) or a test certificat (EN45501) issued for the load cell by a Notified Body responsible for types examination under Directive 2014/31/EU.
+
+ - The certificate contains the loadcell types and the necessary load cell data required for the manufacturer's declaration of compatibility of modules (WELMEC 2, issue 2, 1996, No11), and any particular installation requirements.
+
+A load cell marked NH is allowed only if humidity testing to EN45501 has been conducted on this load cell.
+
+ - The compatibility of the load cells and the indicator is established by the manufacturer by means of a corresponding form.
+
+ - The load transmission must conform to one of the examples shown in the WELMEC guide for load cells (WELMEC 2.4).</value>
+  </data>
 </root>

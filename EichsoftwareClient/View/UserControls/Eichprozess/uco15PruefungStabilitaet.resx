@@ -586,7 +586,7 @@
     <value>31</value>
   </data>
   <data name="lblPrintBeschreibung.Text" xml:space="preserve">
-    <value>Stable equilibrium, Printer accordance to EN 45501 A. 4.4.1 - 4.4.3)</value>
+    <value>Stable equilibrium, Printer accordance to EN 45501 A. 4.12)</value>
   </data>
   <data name="&gt;&gt;lblPrintBeschreibung.Name" xml:space="preserve">
     <value>lblPrintBeschreibung</value>

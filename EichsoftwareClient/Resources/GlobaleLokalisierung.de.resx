@@ -758,4 +758,17 @@ Ist der Fehler &gt; 0,3e → L = 0,5 Max = Normalien von 50% von Max werden ben�
   <data name="ValidierungUeberspringen" xml:space="preserve">
     <value>Validierung überspringen? Ein versenden ist nur möglich wenn alles erfolgreich validiert wurde.</value>
   </data>
+  <data name="Hilfe_StammdateBereichWZ" xml:space="preserve">
+    <value>Alle Wägezellen können im Rahmen der EG Bauartzulassung des Auswertegerätes benutzt werden, vorausgesetzt die folgenden Bedingungen sind erfüllt:
+
+ - Es gibt eine entsprechende OIML Konformitätsbescheinigung (R60) oder einen Prüfbericht (EN45501) für die Wägezelle, herausgegeben von einer Benannten Stelle die verantwortlich für die Typprüfung im Rahmen der Richtlinie 2014/31/EU ist.
+
+ - Der Prüfbericht enthält den Wägezellentyp und die notwendigen Wägezellendaten, um die Herstellererklärung der Kompatibilität von Modulen (WELMEC 2, Ausgabe4, 2004, Nr.11) auszustellen und alle speziellen Installationsanforderungen zu erfüllen.
+
+Eine Wägezelle mit der Markierung NH ist nur zulässig, wenn die Feuchtigkeitsprüfung nach EN45501 für diese Wägezelle durchgeführt wurde.
+
+ - Die Kompatibilität von Wägezelle und Auswertegerät wurde festgestellt durch ein entsprechendes Formblatt.
+
+ - Die Krafteinleitung muss konform sein mit einem der Beispiele, die im WELMEC Führer (WELMEC 2.4) gezeigt werden.</value>
+  </data>
 </root>

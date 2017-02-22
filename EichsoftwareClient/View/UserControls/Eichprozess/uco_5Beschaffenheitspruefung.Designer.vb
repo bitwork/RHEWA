@@ -26,11 +26,11 @@ Partial Class uco_5Beschaffenheitspruefung
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco_5Beschaffenheitspruefung))
         Me.RadScrollablePanel1 = New Telerik.WinControls.UI.RadScrollablePanel()
+        Me.lblPflichtfeld1 = New Telerik.WinControls.UI.RadLabel()
         Me.RadGroupBoxAufstellbedingungen = New Telerik.WinControls.UI.RadGroupBox()
         Me.RadLabel20 = New Telerik.WinControls.UI.RadLabel()
         Me.RadCheckBoxApprove = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadLabel19 = New Telerik.WinControls.UI.RadLabel()
-        Me.lblPflichtfeld1 = New Telerik.WinControls.UI.RadLabel()
         Me.RadGroupBoxWaegebruecke = New Telerik.WinControls.UI.RadGroupBox()
         Me.RadSeparator14 = New Telerik.WinControls.UI.RadSeparator()
         Me.RadSeparator11 = New Telerik.WinControls.UI.RadSeparator()
@@ -69,12 +69,12 @@ Partial Class uco_5Beschaffenheitspruefung
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadScrollablePanel1.PanelContainer.SuspendLayout()
         Me.RadScrollablePanel1.SuspendLayout()
+        CType(Me.lblPflichtfeld1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBoxAufstellbedingungen, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxAufstellbedingungen.SuspendLayout()
         CType(Me.RadLabel20, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadCheckBoxApprove, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel19, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.lblPflichtfeld1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBoxWaegebruecke, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxWaegebruecke.SuspendLayout()
         CType(Me.RadSeparator14, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -133,6 +133,12 @@ Partial Class uco_5Beschaffenheitspruefung
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadGroupBoxAuswerteGeraete)
         resources.ApplyResources(Me.RadScrollablePanel1.PanelContainer, "RadScrollablePanel1.PanelContainer")
         '
+        'lblPflichtfeld1
+        '
+        Me.lblPflichtfeld1.ForeColor = System.Drawing.Color.Red
+        resources.ApplyResources(Me.lblPflichtfeld1, "lblPflichtfeld1")
+        Me.lblPflichtfeld1.Name = "lblPflichtfeld1"
+        '
         'RadGroupBoxAufstellbedingungen
         '
         Me.RadGroupBoxAufstellbedingungen.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
@@ -155,12 +161,6 @@ Partial Class uco_5Beschaffenheitspruefung
         '
         resources.ApplyResources(Me.RadLabel19, "RadLabel19")
         Me.RadLabel19.Name = "RadLabel19"
-        '
-        'lblPflichtfeld1
-        '
-        Me.lblPflichtfeld1.ForeColor = System.Drawing.Color.Red
-        resources.ApplyResources(Me.lblPflichtfeld1, "lblPflichtfeld1")
-        Me.lblPflichtfeld1.Name = "lblPflichtfeld1"
         '
         'RadGroupBoxWaegebruecke
         '
@@ -415,13 +415,13 @@ Partial Class uco_5Beschaffenheitspruefung
         Me.RadScrollablePanel1.PanelContainer.PerformLayout()
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadScrollablePanel1.ResumeLayout(False)
+        CType(Me.lblPflichtfeld1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBoxAufstellbedingungen, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBoxAufstellbedingungen.ResumeLayout(False)
         Me.RadGroupBoxAufstellbedingungen.PerformLayout()
         CType(Me.RadLabel20, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadCheckBoxApprove, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel19, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.lblPflichtfeld1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBoxWaegebruecke, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBoxWaegebruecke.ResumeLayout(False)
         Me.RadGroupBoxWaegebruecke.PerformLayout()
