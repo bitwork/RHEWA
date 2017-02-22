@@ -353,7 +353,7 @@ Public Class uco_2StammdatenEingabe
 
             End If
 
-            Dim db5 = (From dbLookup In context.Lookup_Waagenart Select dbLookup)
+            Dim db5 = (From dbLookup In context.Lookup_Waagenart Where dbLookup.Art <> "Zweiteilungswaage" And dbLookup.Art <> "Dreiteilungswaage" Select dbLookup)
             _DatasourceDropdownListWaagenArt = db5.ToList
 
         End Using
@@ -808,7 +808,7 @@ Public Class uco_2StammdatenEingabe
         If (TypeOf sender Is Telerik.WinControls.UI.RadDropDownList) Then
             c = CType(sender, Telerik.WinControls.UI.RadDropDownList)
 
-            If (c.DropDownStyle  = Telerik.WinControls.RadDropDownStyle.DropDownList) AndAlso (Not c.DropDownListElement.ContainsFocus) Then
+            If (c.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList) AndAlso (Not c.DropDownListElement.ContainsFocus) Then
 
                 c.DropDownListElement.Focus()
                 'If c.DropDownListElement.IsPopupOpen = False Then
