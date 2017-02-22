@@ -717,18 +717,24 @@ Public Class uco10PruefungStaffelverfahren
         Dim EFGWertStaffel As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblStaffel{0}Bereich{1}EFGWert{2}", CInt(staffel), CInt(bereich), 7))
 
         Dim decAbsoluteFehlergrenze As Decimal = 0
-        If Fehler7.Text.Trim.StartsWith("-") Then
-            decAbsoluteFehlergrenze = CDec(Fehler7.Text.Replace("-", "")) 'entfernen des minuszeichens
-        Else
-            decAbsoluteFehlergrenze = CDec(Fehler7.Text)
-        End If
+        Try
+            If Fehler7.Text.Trim.StartsWith("-") Then
+                decAbsoluteFehlergrenze = CDec(Fehler7.Text.Replace("-", "")) 'entfernen des minuszeichens
+            Else
+                decAbsoluteFehlergrenze = CDec(Fehler7.Text)
+            End If
 
-        If decAbsoluteFehlergrenze > CDec(EFGWertStaffel.Text) Then 'eichwerte unterschritten/überschritten
+            If decAbsoluteFehlergrenze > CDec(EFGWertStaffel.Text) Then 'eichwerte unterschritten/überschritten
+                Fehler7.TextBoxElement.Border.ForeColor = Color.Red
+                AbortSaving = True
+            Else
+                Fehler7.TextBoxElement.Border.ForeColor = Color.Transparent
+            End If
+        Catch ex As InvalidCastException
             Fehler7.TextBoxElement.Border.ForeColor = Color.Red
             AbortSaving = True
-        Else
-            Fehler7.TextBoxElement.Border.ForeColor = Color.Transparent
-        End If
+
+        End Try
     End Sub
 
     ''' <summary>
@@ -744,19 +750,19 @@ Public Class uco10PruefungStaffelverfahren
 
         Dim intausgefuellteStaffeln As Integer = 0
         Dim einFeldGefuelltInStaffel As Boolean = False
-        If ValidateStaffelAusgefuellt(RadGroupBoxStaffel1Bereich1, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel1Bereich2, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel1Bereich3, einFeldGefuelltInStaffel) Then
+        If ValidateStaffelAusgefuellt(RadGroupBoxStaffel1Bereich1, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel1Bereich2, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel1Bereich3, einFeldGefuelltInStaffel) Or einFeldGefuelltInStaffel Then
             intausgefuellteStaffeln = 1
             einFeldGefuelltInStaffel = False
-            If ValidateStaffelAusgefuellt(RadGroupBoxStaffel2Bereich1, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel2Bereich2, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel2Bereich3, einFeldGefuelltInStaffel) Then
+            If ValidateStaffelAusgefuellt(RadGroupBoxStaffel2Bereich1, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel2Bereich2, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel2Bereich3, einFeldGefuelltInStaffel) Or einFeldGefuelltInStaffel Then
                 intausgefuellteStaffeln = 2
                 einFeldGefuelltInStaffel = False
-                If ValidateStaffelAusgefuellt(RadGroupBoxStaffel3Bereich1, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel3Bereich2, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel3Bereich3, einFeldGefuelltInStaffel) Then
+                If ValidateStaffelAusgefuellt(RadGroupBoxStaffel3Bereich1, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel3Bereich2, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel3Bereich3, einFeldGefuelltInStaffel) Or einFeldGefuelltInStaffel Then
                     intausgefuellteStaffeln = 3
                     einFeldGefuelltInStaffel = False
-                    If ValidateStaffelAusgefuellt(RadGroupBoxStaffel4Bereich1, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel4Bereich2, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel4Bereich3, einFeldGefuelltInStaffel) Then
+                    If ValidateStaffelAusgefuellt(RadGroupBoxStaffel4Bereich1, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel4Bereich2, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel4Bereich3, einFeldGefuelltInStaffel) Or einFeldGefuelltInStaffel Then
                         intausgefuellteStaffeln = 4
                         einFeldGefuelltInStaffel = False
-                        If ValidateStaffelAusgefuellt(RadGroupBoxStaffel5Bereich1, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel5Bereich2, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel5Bereich3, einFeldGefuelltInStaffel) Then
+                        If ValidateStaffelAusgefuellt(RadGroupBoxStaffel5Bereich1, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel5Bereich2, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel5Bereich3, einFeldGefuelltInStaffel) Or einFeldGefuelltInStaffel Then
                             intausgefuellteStaffeln = 5
                         End If
                     End If
