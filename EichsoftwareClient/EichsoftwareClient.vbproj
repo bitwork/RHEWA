@@ -1151,6 +1151,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\TenLCs.PNG" />
     <None Include="DLLs\System.Net.FtpClient.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

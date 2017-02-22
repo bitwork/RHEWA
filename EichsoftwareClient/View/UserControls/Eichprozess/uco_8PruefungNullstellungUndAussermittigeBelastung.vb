@@ -995,24 +995,35 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
             PictureBox4LC.Visible = False
             PictureBox6LC.Visible = False
             PictureBox8LC.Visible = False
+            PictureBox10LC.Visible = False
             PictureBox12LC.Visible = True
+        End If
+        If objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen <= 10 Then
+            PictureBox4LC.Visible = False
+            PictureBox6LC.Visible = False
+            PictureBox8LC.Visible = False
+            PictureBox10LC.Visible = True
+            PictureBox12LC.Visible = False
         End If
         If objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen <= 8 Then
             PictureBox4LC.Visible = False
             PictureBox6LC.Visible = False
             PictureBox8LC.Visible = True
+            PictureBox10LC.Visible = False
             PictureBox12LC.Visible = False
         End If
         If objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen <= 6 Then
             PictureBox4LC.Visible = False
             PictureBox6LC.Visible = True
             PictureBox8LC.Visible = False
+            PictureBox10LC.Visible = False
             PictureBox12LC.Visible = False
         End If
         If objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen <= 4 Then
             PictureBox4LC.Visible = True
             PictureBox6LC.Visible = False
             PictureBox8LC.Visible = False
+            PictureBox10LC.Visible = False
             PictureBox12LC.Visible = False
         End If
     End Sub
