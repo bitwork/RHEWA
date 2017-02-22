@@ -188,7 +188,7 @@ Public Class uco_2StammdatenEingabe
 
     Protected Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
         '  UpdateObject()
-        If Me.Equals(UserControl) = False Then Exit Sub
+        If Me.Name.Equals(UserControl.Name) = False Then Exit Sub
 
         MyBase.LokalisierungNeeded(UserControl)
 

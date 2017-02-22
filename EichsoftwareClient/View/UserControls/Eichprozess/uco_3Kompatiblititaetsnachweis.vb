@@ -757,7 +757,7 @@ Public Class uco_3Kompatiblititaetsnachweis
 #End Region
 
     Protected Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
-        If Me.Equals(UserControl) = False Then Exit Sub
+        If Me.Name.Equals(UserControl.Name) = False Then Exit Sub
 
         MyBase.LokalisierungNeeded(UserControl)
 
