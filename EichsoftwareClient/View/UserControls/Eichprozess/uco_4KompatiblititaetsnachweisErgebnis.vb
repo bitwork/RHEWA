@@ -595,7 +595,7 @@ Public Class uco_4KompatiblititaetsnachweisErgebnis
         '=WENN('Daten-Eingabe'!$G$38="";"";'Daten-Eingabe'!$G$38)
 
         If Not objEichprozess.Lookup_Waegezelle.MindestvorlastProzent Is Nothing Then
-            RadTextBoxPunkt6dEMin.Text = (objEichprozess.Lookup_Waegezelle.MindestvorlastProzent / 100) * objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast
+            RadTextBoxPunkt6dEMin.Text = (objEichprozess.Lookup_Waegezelle.MindestvorlastProzent / 100) * objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast.Split(";")(0)
         Else
             RadTextBoxPunkt6dEMin.Text = objEichprozess.Lookup_Waegezelle.Mindestvorlast
         End If
