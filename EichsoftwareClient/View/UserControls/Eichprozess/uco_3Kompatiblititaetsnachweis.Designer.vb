@@ -259,6 +259,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label10, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxWZ1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxWZ7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxWZ9, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -321,6 +322,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         CType(Me.lblWZHoechstlast, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBoxAWG, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxAWG.SuspendLayout()
+        CType(Me.Label8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel30, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -377,6 +379,24 @@ Partial Class uco_3Kompatiblititaetsnachweis
         CType(Me.lblAWGmaxAnzahlTeilungswerte, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBoxWaage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxWaage.SuspendLayout()
+        CType(Me.lblPflichtfeld6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblPflichtfeld4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblPflichtfeld2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblPflichtfeld5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblPflichtfeld3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label13, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label14, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label11, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label12, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label9, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblPflichtfeld11, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblPflichtfeld1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel92, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel91, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -457,14 +477,15 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadScrollablePanel1.PanelContainer
         '
+        resources.ApplyResources(Me.RadScrollablePanel1.PanelContainer, "RadScrollablePanel1.PanelContainer")
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadGroupBoxVerbindungselemente)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadGroupBoxWZ)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadGroupBoxAWG)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadGroupBoxWaage)
-        resources.ApplyResources(Me.RadScrollablePanel1.PanelContainer, "RadScrollablePanel1.PanelContainer")
         '
         'RadGroupBoxVerbindungselemente
         '
+        resources.ApplyResources(Me.RadGroupBoxVerbindungselemente, "RadGroupBoxVerbindungselemente")
         Me.RadGroupBoxVerbindungselemente.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBoxVerbindungselemente.Controls.Add(Me.PictureBox8)
         Me.RadGroupBoxVerbindungselemente.Controls.Add(Me.RadSeparator15)
@@ -472,13 +493,12 @@ Partial Class uco_3Kompatiblititaetsnachweis
         Me.RadGroupBoxVerbindungselemente.Controls.Add(Me.RadSeparator16)
         Me.RadGroupBoxVerbindungselemente.Controls.Add(Me.RadLabel76)
         Me.RadGroupBoxVerbindungselemente.Controls.Add(Me.lblVerbindungEichfehlergrenze)
-        resources.ApplyResources(Me.RadGroupBoxVerbindungselemente, "RadGroupBoxVerbindungselemente")
         Me.RadGroupBoxVerbindungselemente.Name = "RadGroupBoxVerbindungselemente"
         '
         'PictureBox8
         '
-        Me.PictureBox8.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox8, "PictureBox8")
+        Me.PictureBox8.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox8.Name = "PictureBox8"
         Me.PictureBox8.TabStop = False
         '
@@ -516,6 +536,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadGroupBoxWZ
         '
+        resources.ApplyResources(Me.RadGroupBoxWZ, "RadGroupBoxWZ")
         Me.RadGroupBoxWZ.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBoxWZ.Controls.Add(Me.RadButton1)
         Me.RadGroupBoxWZ.Controls.Add(Me.RadLabel1)
@@ -581,7 +602,6 @@ Partial Class uco_3Kompatiblititaetsnachweis
         Me.RadGroupBoxWZ.Controls.Add(Me.lblWZWaegezellenkennwert)
         Me.RadGroupBoxWZ.Controls.Add(Me.lblWZMindestvorlast)
         Me.RadGroupBoxWZ.Controls.Add(Me.lblWZHoechstlast)
-        resources.ApplyResources(Me.RadGroupBoxWZ, "RadGroupBoxWZ")
         Me.RadGroupBoxWZ.Name = "RadGroupBoxWZ"
         '
         'RadButton1
@@ -609,78 +629,78 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'PictureBoxWZ1
         '
-        Me.PictureBoxWZ1.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBoxWZ1, "PictureBoxWZ1")
+        Me.PictureBoxWZ1.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBoxWZ1.Name = "PictureBoxWZ1"
         Me.PictureBoxWZ1.TabStop = False
         '
         'PictureBoxWZ7
         '
-        Me.PictureBoxWZ7.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBoxWZ7, "PictureBoxWZ7")
+        Me.PictureBoxWZ7.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBoxWZ7.Name = "PictureBoxWZ7"
         Me.PictureBoxWZ7.TabStop = False
         '
         'PictureBoxWZ9
         '
-        Me.PictureBoxWZ9.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBoxWZ9, "PictureBoxWZ9")
+        Me.PictureBoxWZ9.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBoxWZ9.Name = "PictureBoxWZ9"
         Me.PictureBoxWZ9.TabStop = False
         '
         'PictureBoxWZ8
         '
-        Me.PictureBoxWZ8.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBoxWZ8, "PictureBoxWZ8")
+        Me.PictureBoxWZ8.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBoxWZ8.Name = "PictureBoxWZ8"
         Me.PictureBoxWZ8.TabStop = False
         '
         'PictureBoxWZ4
         '
-        Me.PictureBoxWZ4.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBoxWZ4, "PictureBoxWZ4")
+        Me.PictureBoxWZ4.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBoxWZ4.Name = "PictureBoxWZ4"
         Me.PictureBoxWZ4.TabStop = False
         '
         'PictureBoxWZ6
         '
-        Me.PictureBoxWZ6.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBoxWZ6, "PictureBoxWZ6")
+        Me.PictureBoxWZ6.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBoxWZ6.Name = "PictureBoxWZ6"
         Me.PictureBoxWZ6.TabStop = False
         '
         'PictureBoxWZ5
         '
-        Me.PictureBoxWZ5.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBoxWZ5, "PictureBoxWZ5")
+        Me.PictureBoxWZ5.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBoxWZ5.Name = "PictureBoxWZ5"
         Me.PictureBoxWZ5.TabStop = False
         '
         'PictureBoxWZ3
         '
-        Me.PictureBoxWZ3.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBoxWZ3, "PictureBoxWZ3")
+        Me.PictureBoxWZ3.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBoxWZ3.Name = "PictureBoxWZ3"
         Me.PictureBoxWZ3.TabStop = False
         '
         'PictureBoxWZ11
         '
-        Me.PictureBoxWZ11.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBoxWZ11, "PictureBoxWZ11")
+        Me.PictureBoxWZ11.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBoxWZ11.Name = "PictureBoxWZ11"
         Me.PictureBoxWZ11.TabStop = False
         '
         'PictureBoxWZ2
         '
-        Me.PictureBoxWZ2.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBoxWZ2, "PictureBoxWZ2")
+        Me.PictureBoxWZ2.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBoxWZ2.Name = "PictureBoxWZ2"
         Me.PictureBoxWZ2.TabStop = False
         '
         'PictureBoxWZ10
         '
-        Me.PictureBoxWZ10.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBoxWZ10, "PictureBoxWZ10")
+        Me.PictureBoxWZ10.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBoxWZ10.Name = "PictureBoxWZ10"
         Me.PictureBoxWZ10.TabStop = False
         '
@@ -964,6 +984,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadGroupBoxAWG
         '
+        resources.ApplyResources(Me.RadGroupBoxAWG, "RadGroupBoxAWG")
         Me.RadGroupBoxAWG.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBoxAWG.Controls.Add(Me.Label8)
         Me.RadGroupBoxAWG.Controls.Add(Me.RadLabel30)
@@ -1020,7 +1041,6 @@ Partial Class uco_3Kompatiblititaetsnachweis
         Me.RadGroupBoxAWG.Controls.Add(Me.lblAWGMindesteingangsspannung)
         Me.RadGroupBoxAWG.Controls.Add(Me.lblAWGSpeisespannung)
         Me.RadGroupBoxAWG.Controls.Add(Me.lblAWGmaxAnzahlTeilungswerte)
-        resources.ApplyResources(Me.RadGroupBoxAWG, "RadGroupBoxAWG")
         Me.RadGroupBoxAWG.Name = "RadGroupBoxAWG"
         '
         'Label8
@@ -1036,64 +1056,64 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'PictureBox15
         '
-        Me.PictureBox15.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox15, "PictureBox15")
+        Me.PictureBox15.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox15.Name = "PictureBox15"
         Me.PictureBox15.TabStop = False
         '
         'PictureBox14
         '
-        Me.PictureBox14.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox14, "PictureBox14")
+        Me.PictureBox14.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox14.Name = "PictureBox14"
         Me.PictureBox14.TabStop = False
         '
         'PictureBox13
         '
-        Me.PictureBox13.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox13, "PictureBox13")
+        Me.PictureBox13.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox13.Name = "PictureBox13"
         Me.PictureBox13.TabStop = False
         '
         'PictureBox12
         '
-        Me.PictureBox12.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox12, "PictureBox12")
+        Me.PictureBox12.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox12.Name = "PictureBox12"
         Me.PictureBox12.TabStop = False
         '
         'PictureBox11
         '
-        Me.PictureBox11.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox11, "PictureBox11")
+        Me.PictureBox11.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox11.Name = "PictureBox11"
         Me.PictureBox11.TabStop = False
         '
         'PictureBox10
         '
-        Me.PictureBox10.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox10, "PictureBox10")
+        Me.PictureBox10.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox10.Name = "PictureBox10"
         Me.PictureBox10.TabStop = False
         '
         'PictureBox5
         '
-        Me.PictureBox5.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox5, "PictureBox5")
+        Me.PictureBox5.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.TabStop = False
         '
         'PictureBox4
         '
-        Me.PictureBox4.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox4, "PictureBox4")
+        Me.PictureBox4.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.TabStop = False
         '
         'PictureBox3
         '
-        Me.PictureBox3.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox3, "PictureBox3")
+        Me.PictureBox3.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.TabStop = False
         '
@@ -1346,6 +1366,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadGroupBoxWaage
         '
+        resources.ApplyResources(Me.RadGroupBoxWaage, "RadGroupBoxWaage")
         Me.RadGroupBoxWaage.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBoxWaage.Controls.Add(Me.lblPflichtfeld6)
         Me.RadGroupBoxWaage.Controls.Add(Me.lblPflichtfeld4)
@@ -1436,7 +1457,6 @@ Partial Class uco_3Kompatiblititaetsnachweis
         Me.RadGroupBoxWaage.Controls.Add(Me.lblWIMaxCap)
         Me.RadGroupBoxWaage.Controls.Add(Me.RadTextBoxControlWaageKlasse)
         Me.RadGroupBoxWaage.Controls.Add(Me.lblWIKlasse)
-        resources.ApplyResources(Me.RadGroupBoxWaage, "RadGroupBoxWaage")
         Me.RadGroupBoxWaage.Name = "RadGroupBoxWaage"
         '
         'lblPflichtfeld6
@@ -1471,26 +1491,26 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'Label13
         '
-        Me.Label13.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label13, "Label13")
+        Me.Label13.ForeColor = System.Drawing.Color.Red
         Me.Label13.Name = "Label13"
         '
         'Label14
         '
-        Me.Label14.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label14, "Label14")
+        Me.Label14.ForeColor = System.Drawing.Color.Red
         Me.Label14.Name = "Label14"
         '
         'Label11
         '
-        Me.Label11.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label11, "Label11")
+        Me.Label11.ForeColor = System.Drawing.Color.Red
         Me.Label11.Name = "Label11"
         '
         'Label12
         '
-        Me.Label12.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label12, "Label12")
+        Me.Label12.ForeColor = System.Drawing.Color.Red
         Me.Label12.Name = "Label12"
         '
         'Label6
@@ -1537,8 +1557,8 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'lblPflichtfeld11
         '
-        Me.lblPflichtfeld11.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.lblPflichtfeld11, "lblPflichtfeld11")
+        Me.lblPflichtfeld11.ForeColor = System.Drawing.Color.Red
         Me.lblPflichtfeld11.Name = "lblPflichtfeld11"
         '
         'lblPflichtfeld1
@@ -1549,8 +1569,8 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'PictureBox9
         '
-        Me.PictureBox9.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox9, "PictureBox9")
+        Me.PictureBox9.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox9.Name = "PictureBox9"
         Me.PictureBox9.TabStop = False
         '
@@ -1626,15 +1646,15 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'PictureBox2
         '
-        Me.PictureBox2.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox2, "PictureBox2")
+        Me.PictureBox2.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.TabStop = False
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox1, "PictureBox1")
+        Me.PictureBox1.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.TabStop = False
         '
@@ -1967,6 +1987,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label10, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxWZ1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxWZ7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxWZ9, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2030,6 +2051,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         CType(Me.RadGroupBoxAWG, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBoxAWG.ResumeLayout(False)
         Me.RadGroupBoxAWG.PerformLayout()
+        CType(Me.Label8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel30, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2087,6 +2109,24 @@ Partial Class uco_3Kompatiblititaetsnachweis
         CType(Me.RadGroupBoxWaage, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBoxWaage.ResumeLayout(False)
         Me.RadGroupBoxWaage.PerformLayout()
+        CType(Me.lblPflichtfeld6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblPflichtfeld4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblPflichtfeld2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblPflichtfeld5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblPflichtfeld3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label13, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label14, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label11, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label12, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label9, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblPflichtfeld11, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblPflichtfeld1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel92, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel91, System.ComponentModel.ISupportInitialize).EndInit()

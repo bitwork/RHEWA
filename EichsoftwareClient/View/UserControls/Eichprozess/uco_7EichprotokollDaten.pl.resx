@@ -139,6 +139,9 @@
     <value>Ostatnie badanie		
 </value>
   </data>
+  <data name="RadTextBoxControlNormalienPruefintervall.Text" xml:space="preserve">
+    <value>rocznie</value>
+  </data>
   <data name="lblPruefzeitraum.Size" type="System.Drawing.Size, System.Drawing">
     <value>86, 18</value>
   </data>
@@ -161,57 +164,6 @@
     <value>Zastosowane wzorce
 </value>
   </data>
-  <data name="RadCheckBoxAnzeigen.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 143</value>
-  </data>
-  <data name="RadCheckBoxAnzeigen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>429, 18</value>
-  </data>
-  <data name="RadCheckBoxAnzeigen.Text" xml:space="preserve">
-    <value>Wskazania i wydruki odpowiadają wymaganiom!				</value>
-  </data>
-  <data name="RadCheckBoxKompatiblitaetsnachweisVorhanden.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 167</value>
-  </data>
-  <data name="RadCheckBoxKompatiblitaetsnachweisVorhanden.Size" type="System.Drawing.Size, System.Drawing">
-    <value>429, 18</value>
-  </data>
-  <data name="RadCheckBoxKompatiblitaetsnachweisVorhanden.Text" xml:space="preserve">
-    <value>Czy istnieje świadectwo kompatybilności?					
-</value>
-  </data>
-  <data name="RadCheckBoxAufstellungsbedingungen.Text" xml:space="preserve">
-    <value>Czy warunki instalacyjne są w porządku?					
-</value>
-  </data>
-  <data name="RadCheckBoxZulassungsunterlagen.Text" xml:space="preserve">
-    <value>Czy dokumenty zatwierdzenia są dostępne w formie czytelnej?					
-</value>
-  </data>
-  <data name="RadCheckBoxMesstechnischeMerkmale.Size" type="System.Drawing.Size, System.Drawing">
-    <value>426, 35</value>
-  </data>
-  <data name="RadCheckBoxMesstechnischeMerkmale.Text" xml:space="preserve">
-    <value>Czy cechy metrologiczne (klasa, min, maks, e oraz d) są w porządku?</value>
-  </data>
-  <data name="RadCheckBoxAufschriften.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 119</value>
-  </data>
-  <data name="RadCheckBoxAufschriften.Size" type="System.Drawing.Size, System.Drawing">
-    <value>429, 18</value>
-  </data>
-  <data name="RadCheckBoxAufschriften.Text" xml:space="preserve">
-    <value>Czy napisy oraz oznaczenia są w porządku?					
-</value>
-  </data>
-  <data name="RadGroupBoxBeschaffenheitspruefungEquipment.HeaderText" xml:space="preserve">
-    <value>Badanie jakości
-</value>
-  </data>
-  <data name="RadGroupBoxBeschaffenheitspruefungEquipment.Text" xml:space="preserve">
-    <value>Badanie jakości
-</value>
-  </data>
   <data name="RadGroupBoxBeschaffenheitspruefung.HeaderText" xml:space="preserve">
     <value>4. Badanie jakości
 </value>
@@ -220,15 +172,21 @@
     <value>4. Badanie jakości
 </value>
   </data>
+  <data name="RadRadioButtonTaraeingabe.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 18</value>
+  </data>
+  <data name="RadRadioButtonTaraeingabe.Text" xml:space="preserve">
+    <value>Podanie tary</value>
+  </data>
   <data name="RadRadioButtonHandTara.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 18</value>
+    <value>115, 18</value>
   </data>
   <data name="RadRadioButtonHandTara.Text" xml:space="preserve">
     <value>półautomatycznie	
 </value>
   </data>
   <data name="RadRadioButtonAutoTara.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 18</value>
+    <value>93, 18</value>
   </data>
   <data name="RadRadioButtonAutoTara.Text" xml:space="preserve">
     <value>automatycznie</value>
@@ -240,6 +198,12 @@
   <data name="RadGroupBoxVerwendungszweckTara.Text" xml:space="preserve">
     <value>Urządzenia tary		
 </value>
+  </data>
+  <data name="RadTextBoxControlDruckerTyp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>287, 30</value>
+  </data>
+  <data name="RadTextBoxControlDruckerTyp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 20</value>
   </data>
   <data name="RadCheckBoxDrucker.Size" type="System.Drawing.Size, System.Drawing">
     <value>171, 18</value>
@@ -268,12 +232,6 @@
   <data name="RadCheckBoxSonstiges.Text" xml:space="preserve">
     <value>Inne	
 </value>
-  </data>
-  <data name="RadTextBoxControlDruckerTyp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>287, 30</value>
-  </data>
-  <data name="RadTextBoxControlDruckerTyp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 20</value>
   </data>
   <data name="lblDruckerart.Location" type="System.Drawing.Point, System.Drawing">
     <value>209, 30</value>
@@ -351,6 +309,9 @@
     <value>3. Cel zastosowania
 </value>
   </data>
+  <data name="PictureBox20.Location" type="System.Drawing.Point, System.Drawing">
+    <value>444, 94</value>
+  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lblFabriknummernWZ.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -359,7 +320,7 @@
     <value>644, 14</value>
   </data>
   <data name="lblFabriknummernWZ.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 29</value>
+    <value>258, 29</value>
   </data>
   <data name="lblFabriknummernWZ.Text" xml:space="preserve">
     <value>Numery fabryczne czujników tensometrycznych:			
@@ -368,15 +329,21 @@
   <data name="RadTextBoxControlWZFabriknummer.Location" type="System.Drawing.Point, System.Drawing">
     <value>644, 56</value>
   </data>
+  <data name="lblAnzahlWZ.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblAnzahlWZ.Location" type="System.Drawing.Point, System.Drawing">
     <value>325, 81</value>
   </data>
   <data name="lblAnzahlWZ.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 18</value>
+    <value>104, 33</value>
   </data>
   <data name="lblAnzahlWZ.Text" xml:space="preserve">
     <value>Ilość czujników tensometrycznych:		
 </value>
+  </data>
+  <data name="RadTextBoxControlWZAnzahl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>466, 94</value>
   </data>
   <data name="lblTyp.Location" type="System.Drawing.Point, System.Drawing">
     <value>325, 55</value>
@@ -402,7 +369,7 @@
 </value>
   </data>
   <data name="lblZeichen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 33</value>
+    <value>150, 18</value>
   </data>
   <data name="lblZeichen.Text" xml:space="preserve">
     <value>Stan licznika legalizacyjnego:</value>
@@ -435,8 +402,11 @@
     <value>2. Składniki
 </value>
   </data>
+  <data name="Label12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>281, 62</value>
+  </data>
   <data name="RadLabel6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>284, 62</value>
+    <value>299, 62</value>
   </data>
   <data name="lblNormalienGewichte.Size" type="System.Drawing.Size, System.Drawing">
     <value>165, 18</value>
@@ -447,6 +417,9 @@
   </data>
   <data name="RadTextBoxControlBetragNormallast.Location" type="System.Drawing.Point, System.Drawing">
     <value>194, 62</value>
+  </data>
+  <data name="RadCheckBoxVollstaendigesStaffelverfahren.Size" type="System.Drawing.Size, System.Drawing">
+    <value>186, 16</value>
   </data>
   <data name="RadCheckBoxVollstaendigesStaffelverfahren.Text" xml:space="preserve">
     <value>Całkowita procedura stopniowa
@@ -471,93 +444,77 @@
     <value>1. Procedura badania
 </value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="RadGroupBoxMax1.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="lblGenauigkeitsklasse.Location" type="System.Drawing.Point, System.Drawing">
+    <value>664, 113</value>
   </data>
-  <data name="RadGroupBoxMax1.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="lblGenauigkeitsklasse.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 18</value>
   </data>
-  <data name="RadGroupBoxMax3.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="lblGenauigkeitsklasse.Text" xml:space="preserve">
+    <value>Klasa dokładności		
+</value>
   </data>
-  <data name="RadGroupBoxMax3.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="RadCheckBoxNichtselbsteinspielend.Text" xml:space="preserve">
+    <value>niesamowgrywający:</value>
   </data>
-  <data name="RadGroupBoxMax2.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="RadCheckBoxMehrteilungswaage.Text" xml:space="preserve">
+    <value>Waga wielopodziałkowa:</value>
   </data>
-  <data name="RadGroupBoxMax2.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="RadCheckBoxHybridMechWaage.Text" xml:space="preserve">
+    <value>Waga  mech. / hybrydowa:</value>
+  </data>
+  <data name="RadCheckBoxMehrbereichswaage.Text" xml:space="preserve">
+    <value>Waga wielozakresowa:</value>
+  </data>
+  <data name="RadCheckBoxHalbSelbsteinspielend.Text" xml:space="preserve">
+    <value>pół-/somozgrywająca:</value>
+  </data>
+  <data name="lblHerstellungsjahr.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 18</value>
+  </data>
+  <data name="lblHerstellungsjahr.Text" xml:space="preserve">
+    <value>Rok budowy:</value>
+  </data>
+  <data name="lblPruefer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>654, 65</value>
+  </data>
+  <data name="lblPruefer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 18</value>
+  </data>
+  <data name="lblPruefer.Text" xml:space="preserve">
+    <value>Kontroler:</value>
+  </data>
+  <data name="lblDatum.Location" type="System.Drawing.Point, System.Drawing">
+    <value>677, 39</value>
+  </data>
+  <data name="lblDatum.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 18</value>
+  </data>
+  <data name="lblDatum.Text" xml:space="preserve">
+    <value>Data:</value>
+  </data>
+  <data name="lblFabriknummer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 18</value>
+  </data>
+  <data name="lblFabriknummer.Text" xml:space="preserve">
+    <value>Numer fabryczny:</value>
+  </data>
+  <data name="lblOrt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 18</value>
+  </data>
+  <data name="lblOrt.Text" xml:space="preserve">
+    <value>Miejsce instalacji:</value>
+  </data>
+  <data name="lblBenutzer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 18</value>
+  </data>
+  <data name="lblBenutzer.Text" xml:space="preserve">
+    <value>Użytkownik</value>
   </data>
   <data name="RadGroupBoxIdentifikationsdaten.HeaderText" xml:space="preserve">
     <value>0. Dane identyfikacyjne</value>
   </data>
   <data name="RadGroupBoxIdentifikationsdaten.Text" xml:space="preserve">
     <value>0. Dane identyfikacyjne</value>
-  </data>
-  <data name="RadLabel13.Text" xml:space="preserve">
-    <value>e₁=d₁=</value>
-  </data>
-  <data name="RadLabel14.Text" xml:space="preserve">
-    <value>e₂=d₂=</value>
-  </data>
-  <data name="RadLabel17.Text" xml:space="preserve">
-    <value>e₃=d₃=</value>
-  </data>
-  <data name="RadTextBoxControlNormalienGenauigkeitsklasse.Text" xml:space="preserve">
-    <value>M1</value>
-  </data>
-  <data name="RadLabel12.Text" xml:space="preserve">
-    <value>Min₁</value>
-  </data>
-  <data name="RadLabel15.Text" xml:space="preserve">
-    <value>Min₂</value>
-  </data>
-  <data name="RadLabel18.Text" xml:space="preserve">
-    <value>Min₃</value>
-  </data>
-  <data name="RadRadioButtonTaraeingabe.Text" xml:space="preserve">
-    <value>Podanie tary</value>
-  </data>
-  <data name="lblOrt.Text" xml:space="preserve">
-    <value>Miejsce instalacji:</value>
-  </data>
-  <data name="lblHerstellungsjahr.Text" xml:space="preserve">
-    <value>Rok budowy:</value>
-  </data>
-  <data name="lblBenutzer.Text" xml:space="preserve">
-    <value>Użytkownik</value>
-  </data>
-  <data name="lblDatum.Text" xml:space="preserve">
-    <value>Data:</value>
-  </data>
-  <data name="lblFabriknummer.Text" xml:space="preserve">
-    <value>Numer fabryczny:</value>
-  </data>
-  <data name="lblGenauigkeitsklasse.Text" xml:space="preserve">
-    <value>Klasa dokładności		
-</value>
-  </data>
-  <data name="RadCheckBoxHalbSelbsteinspielend.Text" xml:space="preserve">
-    <value>pół-/somozgrywająca:</value>
-  </data>
-  <data name="RadCheckBoxHybridMechWaage.Text" xml:space="preserve">
-    <value>Waga  mech. / hybrydowa:</value>
-  </data>
-  <data name="RadTextBoxControlNormalienPruefintervall.Text" xml:space="preserve">
-    <value>rocznie</value>
-  </data>
-  <data name="RadCheckBoxMehrbereichswaage.Text" xml:space="preserve">
-    <value>Waga wielozakresowa:</value>
-  </data>
-  <data name="RadCheckBoxMehrteilungswaage.Text" xml:space="preserve">
-    <value>Waga wielopodziałkowa:</value>
-  </data>
-  <data name="RadCheckBoxNichtselbsteinspielend.Text" xml:space="preserve">
-    <value>niesamowgrywający:</value>
-  </data>
-  <data name="lblPruefer.Text" xml:space="preserve">
-    <value>Kontroler:</value>
   </data>
 </root>

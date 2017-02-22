@@ -662,7 +662,6 @@ Public Class uco10PruefungStaffelverfahren
     ''' <summary>
     ''' prüft innerhalb einer Staffel ob alle Felder ausgefüllt sind und gibt true zurück wenn dem so ist, prüft nur wenn überhaupt eintragungen vorgenommen wurden
     ''' </summary>
-    ''' <param name="StaffelGroupBox"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
     ''' <author></author>
@@ -1198,21 +1197,15 @@ Public Class uco10PruefungStaffelverfahren
         'da auch informationen wie Positionen und Größen "lokalisiert" gespeichert werden. Wenn nun zur Laufzeit, also das Fenster größer gemacht wurde, setzt er die Anchor etc. auf die Ursprungsgröße
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco10PruefungStaffelverfahren))
 
-        For Each Control In RadScrollablePanel1.PanelContainer.Controls
-            If TypeOf Control Is Telerik.WinControls.UI.RadGroupBox Then
-                If CType(Control, Telerik.WinControls.UI.RadGroupBox).Visible = True Then
-                    CType(Control, Telerik.WinControls.UI.RadGroupBox).Text = resources.GetString(String.Format("{0}.Text", CType(Control, Telerik.WinControls.UI.RadGroupBox).Name))
-                    For Each control2 In CType(Control, Telerik.WinControls.UI.RadGroupBox).Controls
-                        If TypeOf control2 Is Telerik.WinControls.UI.RadGroupBox Then
-                            CType(control2, Telerik.WinControls.UI.RadGroupBox).Text = resources.GetString(String.Format("{0}.Text", CType(control2, Telerik.WinControls.UI.RadGroupBox).Name))
-                            For Each control3 In CType(control2, Telerik.WinControls.UI.RadGroupBox).Controls
-                                If TypeOf control3 Is Telerik.WinControls.UI.RadLabel Then
-                                    CType(control3, Telerik.WinControls.UI.RadLabel).Text = resources.GetString(String.Format("{0}.Text", CType(control3, Telerik.WinControls.UI.RadLabel).Name))
-                                End If
-                            Next
-                        End If
-                    Next
-                End If
+        For Each Control As Control In RadScrollablePanel1.PanelContainer.Controls
+            If TypeOf Control Is Telerik.WinControls.UI.RadGroupBox And Control.Visible Then
+                CType(Control, Telerik.WinControls.UI.RadGroupBox).Text = resources.GetString(String.Format("{0}.Text", CType(Control, Telerik.WinControls.UI.RadGroupBox).Name))
+                For Each control2 In CType(Control, Telerik.WinControls.UI.RadGroupBox).Controls
+
+                    If TypeOf control2 Is Telerik.WinControls.UI.RadLabel Then
+                        CType(control2, Telerik.WinControls.UI.RadLabel).Text = resources.GetString(String.Format("{0}.Text", CType(control2, Telerik.WinControls.UI.RadLabel).Name))
+                    End If
+                Next
             End If
         Next
 

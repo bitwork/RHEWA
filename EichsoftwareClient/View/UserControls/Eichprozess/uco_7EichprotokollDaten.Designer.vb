@@ -172,6 +172,10 @@ Partial Class uco_7EichprotokollDaten
         Me.RadGroupBoxBeschaffenheitspruefung.SuspendLayout()
         CType(Me.RadGroupBoxBeschaffenheitspruefungNormalien, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxBeschaffenheitspruefungNormalien.SuspendLayout()
+        CType(Me.Label11, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label10, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label9, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadDateTimePickerNormalienLetztePruefung, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlNormalienEichfahrzeugFirma, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblTruck, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -192,6 +196,7 @@ Partial Class uco_7EichprotokollDaten
         CType(Me.RadGroupBoxVerwendungszweckEquipment, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxVerwendungszweckEquipment.SuspendLayout()
         CType(Me.RadTextBoxControlDruckerTyp, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblPflichtfeldDrucker, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadCheckBoxDrucker, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadCheckBoxEichfaehigerSpeicher, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadCheckBoxPC, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -204,6 +209,7 @@ Partial Class uco_7EichprotokollDaten
         CType(Me.RadRadioButtonNustellungHalbAutomatisch, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBoxVerwendungszweckArtderWaage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxVerwendungszweckArtderWaage.SuspendLayout()
+        CType(Me.Label7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblArtWaage, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlWaagentyp, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -214,6 +220,9 @@ Partial Class uco_7EichprotokollDaten
         CType(Me.RadTextBoxControlMxM, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBoxKomponenten, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxKomponenten.SuspendLayout()
+        CType(Me.Label6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -234,6 +243,7 @@ Partial Class uco_7EichprotokollDaten
         CType(Me.lblAWG, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBoxPruefverfahren, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxPruefverfahren.SuspendLayout()
+        CType(Me.Label12, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblNormalienGewichte, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -242,6 +252,9 @@ Partial Class uco_7EichprotokollDaten
         CType(Me.RadCheckBoxVolleNormallast, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBoxIdentifikationsdaten, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxIdentifikationsdaten.SuspendLayout()
+        CType(Me.Label3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBoxMax1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxMax1.SuspendLayout()
         CType(Me.RadLabel11, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -320,22 +333,23 @@ Partial Class uco_7EichprotokollDaten
         '
         'RadScrollablePanel1.PanelContainer
         '
+        resources.ApplyResources(Me.RadScrollablePanel1.PanelContainer, "RadScrollablePanel1.PanelContainer")
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadGroupBoxBeschaffenheitspruefung)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadGroupBoxVerwendungszweck)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadGroupBoxKomponenten)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadGroupBoxPruefverfahren)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadGroupBoxIdentifikationsdaten)
-        resources.ApplyResources(Me.RadScrollablePanel1.PanelContainer, "RadScrollablePanel1.PanelContainer")
         '
         'RadGroupBoxBeschaffenheitspruefung
         '
+        resources.ApplyResources(Me.RadGroupBoxBeschaffenheitspruefung, "RadGroupBoxBeschaffenheitspruefung")
         Me.RadGroupBoxBeschaffenheitspruefung.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBoxBeschaffenheitspruefung.Controls.Add(Me.RadGroupBoxBeschaffenheitspruefungNormalien)
-        resources.ApplyResources(Me.RadGroupBoxBeschaffenheitspruefung, "RadGroupBoxBeschaffenheitspruefung")
         Me.RadGroupBoxBeschaffenheitspruefung.Name = "RadGroupBoxBeschaffenheitspruefung"
         '
         'RadGroupBoxBeschaffenheitspruefungNormalien
         '
+        resources.ApplyResources(Me.RadGroupBoxBeschaffenheitspruefungNormalien, "RadGroupBoxBeschaffenheitspruefungNormalien")
         Me.RadGroupBoxBeschaffenheitspruefungNormalien.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBoxBeschaffenheitspruefungNormalien.Controls.Add(Me.Label11)
         Me.RadGroupBoxBeschaffenheitspruefungNormalien.Controls.Add(Me.Label10)
@@ -351,7 +365,6 @@ Partial Class uco_7EichprotokollDaten
         Me.RadGroupBoxBeschaffenheitspruefungNormalien.Controls.Add(Me.lblPruefzeitraum)
         Me.RadGroupBoxBeschaffenheitspruefungNormalien.Controls.Add(Me.RadTextBoxControlNormalienGenauigkeitsklasse)
         Me.RadGroupBoxBeschaffenheitspruefungNormalien.Controls.Add(Me.lblGenauigkeitsklasse2)
-        resources.ApplyResources(Me.RadGroupBoxBeschaffenheitspruefungNormalien, "RadGroupBoxBeschaffenheitspruefungNormalien")
         Me.RadGroupBoxBeschaffenheitspruefungNormalien.Name = "RadGroupBoxBeschaffenheitspruefungNormalien"
         '
         'Label11
@@ -438,21 +451,21 @@ Partial Class uco_7EichprotokollDaten
         '
         'RadGroupBoxVerwendungszweck
         '
+        resources.ApplyResources(Me.RadGroupBoxVerwendungszweck, "RadGroupBoxVerwendungszweck")
         Me.RadGroupBoxVerwendungszweck.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBoxVerwendungszweck.Controls.Add(Me.RadGroupBoxVerwendungszweckTara)
         Me.RadGroupBoxVerwendungszweck.Controls.Add(Me.RadGroupBoxVerwendungszweckEquipment)
         Me.RadGroupBoxVerwendungszweck.Controls.Add(Me.RadGroupBoxVerwendungszweckNullstellung)
         Me.RadGroupBoxVerwendungszweck.Controls.Add(Me.RadGroupBoxVerwendungszweckArtderWaage)
-        resources.ApplyResources(Me.RadGroupBoxVerwendungszweck, "RadGroupBoxVerwendungszweck")
         Me.RadGroupBoxVerwendungszweck.Name = "RadGroupBoxVerwendungszweck"
         '
         'RadGroupBoxVerwendungszweckTara
         '
+        resources.ApplyResources(Me.RadGroupBoxVerwendungszweckTara, "RadGroupBoxVerwendungszweckTara")
         Me.RadGroupBoxVerwendungszweckTara.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBoxVerwendungszweckTara.Controls.Add(Me.RadRadioButtonTaraeingabe)
         Me.RadGroupBoxVerwendungszweckTara.Controls.Add(Me.RadRadioButtonHandTara)
         Me.RadGroupBoxVerwendungszweckTara.Controls.Add(Me.RadRadioButtonAutoTara)
-        resources.ApplyResources(Me.RadGroupBoxVerwendungszweckTara, "RadGroupBoxVerwendungszweckTara")
         Me.RadGroupBoxVerwendungszweckTara.Name = "RadGroupBoxVerwendungszweckTara"
         '
         'RadRadioButtonTaraeingabe
@@ -472,6 +485,7 @@ Partial Class uco_7EichprotokollDaten
         '
         'RadGroupBoxVerwendungszweckEquipment
         '
+        resources.ApplyResources(Me.RadGroupBoxVerwendungszweckEquipment, "RadGroupBoxVerwendungszweckEquipment")
         Me.RadGroupBoxVerwendungszweckEquipment.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBoxVerwendungszweckEquipment.Controls.Add(Me.RadTextBoxControlDruckerTyp)
         Me.RadGroupBoxVerwendungszweckEquipment.Controls.Add(Me.lblPflichtfeldDrucker)
@@ -480,13 +494,12 @@ Partial Class uco_7EichprotokollDaten
         Me.RadGroupBoxVerwendungszweckEquipment.Controls.Add(Me.RadCheckBoxPC)
         Me.RadGroupBoxVerwendungszweckEquipment.Controls.Add(Me.RadCheckBoxSonstiges)
         Me.RadGroupBoxVerwendungszweckEquipment.Controls.Add(Me.lblDruckerart)
-        resources.ApplyResources(Me.RadGroupBoxVerwendungszweckEquipment, "RadGroupBoxVerwendungszweckEquipment")
         Me.RadGroupBoxVerwendungszweckEquipment.Name = "RadGroupBoxVerwendungszweckEquipment"
         '
         'RadTextBoxControlDruckerTyp
         '
-        Me.RadTextBoxControlDruckerTyp.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         resources.ApplyResources(Me.RadTextBoxControlDruckerTyp, "RadTextBoxControlDruckerTyp")
+        Me.RadTextBoxControlDruckerTyp.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.RadTextBoxControlDruckerTyp.Name = "RadTextBoxControlDruckerTyp"
         '
         'lblPflichtfeldDrucker
@@ -525,11 +538,11 @@ Partial Class uco_7EichprotokollDaten
         '
         'RadGroupBoxVerwendungszweckNullstellung
         '
+        resources.ApplyResources(Me.RadGroupBoxVerwendungszweckNullstellung, "RadGroupBoxVerwendungszweckNullstellung")
         Me.RadGroupBoxVerwendungszweckNullstellung.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBoxVerwendungszweckNullstellung.Controls.Add(Me.RadRadioButtonNustellungNullNachfuehrung)
         Me.RadGroupBoxVerwendungszweckNullstellung.Controls.Add(Me.RadRadioButtonNustellungAutomatisch)
         Me.RadGroupBoxVerwendungszweckNullstellung.Controls.Add(Me.RadRadioButtonNustellungHalbAutomatisch)
-        resources.ApplyResources(Me.RadGroupBoxVerwendungszweckNullstellung, "RadGroupBoxVerwendungszweckNullstellung")
         Me.RadGroupBoxVerwendungszweckNullstellung.Name = "RadGroupBoxVerwendungszweckNullstellung"
         '
         'RadRadioButtonNustellungNullNachfuehrung
@@ -549,6 +562,7 @@ Partial Class uco_7EichprotokollDaten
         '
         'RadGroupBoxVerwendungszweckArtderWaage
         '
+        resources.ApplyResources(Me.RadGroupBoxVerwendungszweckArtderWaage, "RadGroupBoxVerwendungszweckArtderWaage")
         Me.RadGroupBoxVerwendungszweckArtderWaage.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBoxVerwendungszweckArtderWaage.Controls.Add(Me.Label7)
         Me.RadGroupBoxVerwendungszweckArtderWaage.Controls.Add(Me.lblArtWaage)
@@ -559,7 +573,6 @@ Partial Class uco_7EichprotokollDaten
         Me.RadGroupBoxVerwendungszweckArtderWaage.Controls.Add(Me.RadLabel38)
         Me.RadGroupBoxVerwendungszweckArtderWaage.Controls.Add(Me.lblDimension)
         Me.RadGroupBoxVerwendungszweckArtderWaage.Controls.Add(Me.RadTextBoxControlMxM)
-        resources.ApplyResources(Me.RadGroupBoxVerwendungszweckArtderWaage, "RadGroupBoxVerwendungszweckArtderWaage")
         Me.RadGroupBoxVerwendungszweckArtderWaage.Name = "RadGroupBoxVerwendungszweckArtderWaage"
         '
         'Label7
@@ -575,8 +588,8 @@ Partial Class uco_7EichprotokollDaten
         '
         'PictureBox16
         '
-        Me.PictureBox16.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox16, "PictureBox16")
+        Me.PictureBox16.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox16.Name = "PictureBox16"
         Me.PictureBox16.TabStop = False
         '
@@ -590,8 +603,8 @@ Partial Class uco_7EichprotokollDaten
         '
         'PictureBox13
         '
-        Me.PictureBox13.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox13, "PictureBox13")
+        Me.PictureBox13.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox13.Name = "PictureBox13"
         Me.PictureBox13.TabStop = False
         '
@@ -621,6 +634,7 @@ Partial Class uco_7EichprotokollDaten
         '
         'RadGroupBoxKomponenten
         '
+        resources.ApplyResources(Me.RadGroupBoxKomponenten, "RadGroupBoxKomponenten")
         Me.RadGroupBoxKomponenten.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBoxKomponenten.Controls.Add(Me.Label6)
         Me.RadGroupBoxKomponenten.Controls.Add(Me.Label4)
@@ -643,7 +657,6 @@ Partial Class uco_7EichprotokollDaten
         Me.RadGroupBoxKomponenten.Controls.Add(Me.lblSoftwareversion)
         Me.RadGroupBoxKomponenten.Controls.Add(Me.RadTextBoxControlSoftwarestand)
         Me.RadGroupBoxKomponenten.Controls.Add(Me.lblAWG)
-        resources.ApplyResources(Me.RadGroupBoxKomponenten, "RadGroupBoxKomponenten")
         Me.RadGroupBoxKomponenten.Name = "RadGroupBoxKomponenten"
         '
         'Label6
@@ -666,29 +679,29 @@ Partial Class uco_7EichprotokollDaten
         '
         'PictureBox4
         '
-        Me.PictureBox4.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox4, "PictureBox4")
+        Me.PictureBox4.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.TabStop = False
         '
         'PictureBox20
         '
-        Me.PictureBox20.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox20, "PictureBox20")
+        Me.PictureBox20.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox20.Name = "PictureBox20"
         Me.PictureBox20.TabStop = False
         '
         'PictureBox19
         '
-        Me.PictureBox19.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox19, "PictureBox19")
+        Me.PictureBox19.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox19.Name = "PictureBox19"
         Me.PictureBox19.TabStop = False
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox1, "PictureBox1")
+        Me.PictureBox1.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.TabStop = False
         '
@@ -780,6 +793,7 @@ Partial Class uco_7EichprotokollDaten
         '
         'RadGroupBoxPruefverfahren
         '
+        resources.ApplyResources(Me.RadGroupBoxPruefverfahren, "RadGroupBoxPruefverfahren")
         Me.RadGroupBoxPruefverfahren.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBoxPruefverfahren.Controls.Add(Me.Label12)
         Me.RadGroupBoxPruefverfahren.Controls.Add(Me.PictureBox5)
@@ -788,7 +802,6 @@ Partial Class uco_7EichprotokollDaten
         Me.RadGroupBoxPruefverfahren.Controls.Add(Me.RadTextBoxControlBetragNormallast)
         Me.RadGroupBoxPruefverfahren.Controls.Add(Me.RadCheckBoxVollstaendigesStaffelverfahren)
         Me.RadGroupBoxPruefverfahren.Controls.Add(Me.RadCheckBoxVolleNormallast)
-        resources.ApplyResources(Me.RadGroupBoxPruefverfahren, "RadGroupBoxPruefverfahren")
         Me.RadGroupBoxPruefverfahren.Name = "RadGroupBoxPruefverfahren"
         '
         'Label12
@@ -799,8 +812,8 @@ Partial Class uco_7EichprotokollDaten
         '
         'PictureBox5
         '
-        Me.PictureBox5.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox5, "PictureBox5")
+        Me.PictureBox5.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.TabStop = False
         '
@@ -835,6 +848,7 @@ Partial Class uco_7EichprotokollDaten
         '
         'RadGroupBoxIdentifikationsdaten
         '
+        resources.ApplyResources(Me.RadGroupBoxIdentifikationsdaten, "RadGroupBoxIdentifikationsdaten")
         Me.RadGroupBoxIdentifikationsdaten.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBoxIdentifikationsdaten.Controls.Add(Me.Label3)
         Me.RadGroupBoxIdentifikationsdaten.Controls.Add(Me.Label2)
@@ -864,7 +878,6 @@ Partial Class uco_7EichprotokollDaten
         Me.RadGroupBoxIdentifikationsdaten.Controls.Add(Me.RadTextBoxControlAufstellungsort)
         Me.RadGroupBoxIdentifikationsdaten.Controls.Add(Me.lblBenutzer)
         Me.RadGroupBoxIdentifikationsdaten.Controls.Add(Me.RadTextBoxControlBenutzer)
-        resources.ApplyResources(Me.RadGroupBoxIdentifikationsdaten, "RadGroupBoxIdentifikationsdaten")
         Me.RadGroupBoxIdentifikationsdaten.Name = "RadGroupBoxIdentifikationsdaten"
         '
         'Label3
@@ -887,6 +900,7 @@ Partial Class uco_7EichprotokollDaten
         '
         'RadGroupBoxMax1
         '
+        resources.ApplyResources(Me.RadGroupBoxMax1, "RadGroupBoxMax1")
         Me.RadGroupBoxMax1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBoxMax1.Controls.Add(Me.RadLabel11)
         Me.RadGroupBoxMax1.Controls.Add(Me.RadTextBoxControl1Hoechstwert1)
@@ -899,7 +913,6 @@ Partial Class uco_7EichprotokollDaten
         Me.RadGroupBoxMax1.Controls.Add(Me.RadLabel20)
         Me.RadGroupBoxMax1.Controls.Add(Me.RadLabel21)
         Me.RadGroupBoxMax1.Controls.Add(Me.RadLabel22)
-        resources.ApplyResources(Me.RadGroupBoxMax1, "RadGroupBoxMax1")
         Me.RadGroupBoxMax1.Name = "RadGroupBoxMax1"
         '
         'RadLabel11
@@ -923,8 +936,8 @@ Partial Class uco_7EichprotokollDaten
         '
         'PictureBox11
         '
-        Me.PictureBox11.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox11, "PictureBox11")
+        Me.PictureBox11.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox11.Name = "PictureBox11"
         Me.PictureBox11.TabStop = False
         '
@@ -935,8 +948,8 @@ Partial Class uco_7EichprotokollDaten
         '
         'PictureBox12
         '
-        Me.PictureBox12.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox12, "PictureBox12")
+        Me.PictureBox12.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox12.Name = "PictureBox12"
         Me.PictureBox12.TabStop = False
         '
@@ -970,6 +983,7 @@ Partial Class uco_7EichprotokollDaten
         '
         'RadGroupBoxMax3
         '
+        resources.ApplyResources(Me.RadGroupBoxMax3, "RadGroupBoxMax3")
         Me.RadGroupBoxMax3.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBoxMax3.Controls.Add(Me.RadTextBoxControl1Hoechstwert3)
         Me.RadGroupBoxMax3.Controls.Add(Me.RadLabel19)
@@ -982,7 +996,6 @@ Partial Class uco_7EichprotokollDaten
         Me.RadGroupBoxMax3.Controls.Add(Me.RadLabel28)
         Me.RadGroupBoxMax3.Controls.Add(Me.RadLabel27)
         Me.RadGroupBoxMax3.Controls.Add(Me.RadLabel26)
-        resources.ApplyResources(Me.RadGroupBoxMax3, "RadGroupBoxMax3")
         Me.RadGroupBoxMax3.Name = "RadGroupBoxMax3"
         '
         'RadTextBoxControl1Hoechstwert3
@@ -1000,8 +1013,8 @@ Partial Class uco_7EichprotokollDaten
         '
         'PictureBox17
         '
-        Me.PictureBox17.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox17, "PictureBox17")
+        Me.PictureBox17.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox17.Name = "PictureBox17"
         Me.PictureBox17.TabStop = False
         '
@@ -1013,8 +1026,8 @@ Partial Class uco_7EichprotokollDaten
         '
         'PictureBox18
         '
-        Me.PictureBox18.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox18, "PictureBox18")
+        Me.PictureBox18.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox18.Name = "PictureBox18"
         Me.PictureBox18.TabStop = False
         '
@@ -1053,6 +1066,7 @@ Partial Class uco_7EichprotokollDaten
         '
         'RadGroupBoxMax2
         '
+        resources.ApplyResources(Me.RadGroupBoxMax2, "RadGroupBoxMax2")
         Me.RadGroupBoxMax2.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBoxMax2.Controls.Add(Me.RadTextBoxControl1Hoechstwert2)
         Me.RadGroupBoxMax2.Controls.Add(Me.RadLabel16)
@@ -1065,7 +1079,6 @@ Partial Class uco_7EichprotokollDaten
         Me.RadGroupBoxMax2.Controls.Add(Me.RadLabel25)
         Me.RadGroupBoxMax2.Controls.Add(Me.RadLabel24)
         Me.RadGroupBoxMax2.Controls.Add(Me.RadLabel23)
-        resources.ApplyResources(Me.RadGroupBoxMax2, "RadGroupBoxMax2")
         Me.RadGroupBoxMax2.Name = "RadGroupBoxMax2"
         '
         'RadTextBoxControl1Hoechstwert2
@@ -1089,8 +1102,8 @@ Partial Class uco_7EichprotokollDaten
         '
         'PictureBox14
         '
-        Me.PictureBox14.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox14, "PictureBox14")
+        Me.PictureBox14.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox14.Name = "PictureBox14"
         Me.PictureBox14.TabStop = False
         '
@@ -1101,8 +1114,8 @@ Partial Class uco_7EichprotokollDaten
         '
         'PictureBox15
         '
-        Me.PictureBox15.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox15, "PictureBox15")
+        Me.PictureBox15.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox15.Name = "PictureBox15"
         Me.PictureBox15.TabStop = False
         '
@@ -1136,22 +1149,22 @@ Partial Class uco_7EichprotokollDaten
         '
         'PictureBox6
         '
-        Me.PictureBox6.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox6, "PictureBox6")
+        Me.PictureBox6.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox6.Name = "PictureBox6"
         Me.PictureBox6.TabStop = False
         '
         'PictureBox3
         '
-        Me.PictureBox3.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox3, "PictureBox3")
+        Me.PictureBox3.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.TabStop = False
         '
         'PictureBox2
         '
-        Me.PictureBox2.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox2, "PictureBox2")
+        Me.PictureBox2.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.TabStop = False
         '
@@ -1162,8 +1175,8 @@ Partial Class uco_7EichprotokollDaten
         '
         'PictureBoxGenauigkeitsklasse
         '
-        Me.PictureBoxGenauigkeitsklasse.Image = Global.EichsoftwareClient.My.Resources.Resources.Genauigkeitsklasse3
         resources.ApplyResources(Me.PictureBoxGenauigkeitsklasse, "PictureBoxGenauigkeitsklasse")
+        Me.PictureBoxGenauigkeitsklasse.Image = Global.EichsoftwareClient.My.Resources.Resources.Genauigkeitsklasse3
         Me.PictureBoxGenauigkeitsklasse.Name = "PictureBoxGenauigkeitsklasse"
         Me.PictureBoxGenauigkeitsklasse.TabStop = False
         '
@@ -1177,8 +1190,8 @@ Partial Class uco_7EichprotokollDaten
         '
         'PictureBox7
         '
-        Me.PictureBox7.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox7, "PictureBox7")
+        Me.PictureBox7.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox7.Name = "PictureBox7"
         Me.PictureBox7.TabStop = False
         '
@@ -1192,8 +1205,8 @@ Partial Class uco_7EichprotokollDaten
         '
         'PictureBox8
         '
-        Me.PictureBox8.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox8, "PictureBox8")
+        Me.PictureBox8.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox8.Name = "PictureBox8"
         Me.PictureBox8.TabStop = False
         '
@@ -1213,8 +1226,8 @@ Partial Class uco_7EichprotokollDaten
         '
         'PictureBox9
         '
-        Me.PictureBox9.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox9, "PictureBox9")
+        Me.PictureBox9.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox9.Name = "PictureBox9"
         Me.PictureBox9.TabStop = False
         '
@@ -1230,8 +1243,8 @@ Partial Class uco_7EichprotokollDaten
         '
         'PictureBox10
         '
-        Me.PictureBox10.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox10, "PictureBox10")
+        Me.PictureBox10.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox10.Name = "PictureBox10"
         Me.PictureBox10.TabStop = False
         '
@@ -1324,6 +1337,10 @@ Partial Class uco_7EichprotokollDaten
         CType(Me.RadGroupBoxBeschaffenheitspruefungNormalien, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBoxBeschaffenheitspruefungNormalien.ResumeLayout(False)
         Me.RadGroupBoxBeschaffenheitspruefungNormalien.PerformLayout()
+        CType(Me.Label11, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label10, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label9, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadDateTimePickerNormalienLetztePruefung, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlNormalienEichfahrzeugFirma, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblTruck, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1346,6 +1363,7 @@ Partial Class uco_7EichprotokollDaten
         Me.RadGroupBoxVerwendungszweckEquipment.ResumeLayout(False)
         Me.RadGroupBoxVerwendungszweckEquipment.PerformLayout()
         CType(Me.RadTextBoxControlDruckerTyp, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblPflichtfeldDrucker, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadCheckBoxDrucker, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadCheckBoxEichfaehigerSpeicher, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadCheckBoxPC, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1360,6 +1378,7 @@ Partial Class uco_7EichprotokollDaten
         CType(Me.RadGroupBoxVerwendungszweckArtderWaage, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBoxVerwendungszweckArtderWaage.ResumeLayout(False)
         Me.RadGroupBoxVerwendungszweckArtderWaage.PerformLayout()
+        CType(Me.Label7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblArtWaage, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlWaagentyp, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1371,6 +1390,9 @@ Partial Class uco_7EichprotokollDaten
         CType(Me.RadGroupBoxKomponenten, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBoxKomponenten.ResumeLayout(False)
         Me.RadGroupBoxKomponenten.PerformLayout()
+        CType(Me.Label6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1392,6 +1414,7 @@ Partial Class uco_7EichprotokollDaten
         CType(Me.RadGroupBoxPruefverfahren, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBoxPruefverfahren.ResumeLayout(False)
         Me.RadGroupBoxPruefverfahren.PerformLayout()
+        CType(Me.Label12, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblNormalienGewichte, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1401,6 +1424,9 @@ Partial Class uco_7EichprotokollDaten
         CType(Me.RadGroupBoxIdentifikationsdaten, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBoxIdentifikationsdaten.ResumeLayout(False)
         Me.RadGroupBoxIdentifikationsdaten.PerformLayout()
+        CType(Me.Label3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBoxMax1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBoxMax1.ResumeLayout(False)
         Me.RadGroupBoxMax1.PerformLayout()

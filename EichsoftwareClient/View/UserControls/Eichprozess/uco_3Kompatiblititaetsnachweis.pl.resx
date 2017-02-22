@@ -117,126 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="RadLabel1.Text" xml:space="preserve">
-    <value>nadrukowane:</value>
-  </data>
-  <data name="RadLabel64.Text" xml:space="preserve">
-    <value>C</value>
-  </data>
-  <data name="lblE1.Text" xml:space="preserve">
-    <value>e1</value>
-  </data>
-  <data name="lblE2.Text" xml:space="preserve">
-    <value>e2</value>
-  </data>
-  <data name="lblE3.Text" xml:space="preserve">
-    <value>e3</value>
-  </data>
-  <data name="RadLabel15.Text" xml:space="preserve">
-    <value>IZSR</value>
-  </data>
-  <data name="RadLabel26.Text" xml:space="preserve">
-    <value>L</value>
-  </data>
-  <data name="RadLabel100.Text" xml:space="preserve">
-    <value>mm²</value>
-  </data>
-  <data name="RadLabel92.Text" xml:space="preserve">
-    <value>mm²</value>
-  </data>
-  <data name="RadLabel97.Text" xml:space="preserve">
-    <value>mV
-</value>
-  </data>
-  <data name="RadLabel105.Text" xml:space="preserve">
-    <value>mV/V
-</value>
-  </data>
-  <data name="RadLabel16.Text" xml:space="preserve">
-    <value>N</value>
-  </data>
-  <data name="RadLabel14.Text" xml:space="preserve">
-    <value>NUD</value>
-  </data>
-  <data name="RadLabel103.Text" xml:space="preserve">
-    <value>Ohm</value>
-  </data>
-  <data name="RadLabel95.Text" xml:space="preserve">
-    <value>Ohm</value>
-  </data>
-  <data name="RadLabel99.Text" xml:space="preserve">
-    <value>Ohm</value>
-  </data>
-  <data name="RadLabel17.Text" xml:space="preserve">
-    <value>R</value>
-  </data>
-  <data name="RadLabel12.Text" xml:space="preserve">
-    <value>T+
-</value>
-  </data>
-  <data name="RadLabel96.Text" xml:space="preserve">
-    <value>uV
-</value>
-  </data>
-  <data name="RadLabel98.Text" xml:space="preserve">
-    <value>V</value>
-  </data>
-  <data name="RadLabel61.Text" xml:space="preserve">
-    <value>Y</value>
-  </data>
-  <data name="RadLabel60.Text" xml:space="preserve">
-    <value>Z</value>
-  </data>
-  <data name="lbladditiveTarahoechstlast.Text" xml:space="preserve">
-    <value>Maksymalne dodatnie obciążenie tary</value>
-  </data>
-  <data name="lblAWGAnschlussart.Text" xml:space="preserve">
-    <value>Rodzaj podłączenia czujnika tensometrycznego (technika 4- lub 6-przewodowa)</value>
-  </data>
-  <data name="lblAnzWaeegezellen.Text" xml:space="preserve">
-    <value>Numer czujnika tensometrycznego</value>
-  </data>
-  <data name="RadGroupBoxAWG.HeaderText" xml:space="preserve">
-    <value>Miernik</value>
-  </data>
-  <data name="lblAWGEichfehlergrenze.Text" xml:space="preserve">
-    <value>Ułamek błędu legalizacyjnego</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblVerbindungEichfehlergrenze.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 18</value>
   </data>
   <data name="lblVerbindungEichfehlergrenze.Text" xml:space="preserve">
     <value>Ułamek błędu legalizacyjnego</value>
-  </data>
-  <data name="lblWZEichfehlergrenze.Text" xml:space="preserve">
-    <value>Ułamek błędu legalizacyjnego</value>
-  </data>
-  <data name="lblEcklastzuschalg.Text" xml:space="preserve">
-    <value>Dodatek do obciążenia rogowego.</value>
-  </data>
-  <data name="lblEichwert.Text" xml:space="preserve">
-    <value>Wartość legalizacyjna</value>
-  </data>
-  <data name="lblEinschaltnullbereich.Text" xml:space="preserve">
-    <value>Zakres zerowania włączeniowego</value>
-  </data>
-  <data name="lblAWGKlasse.Text" xml:space="preserve">
-    <value>Klasa dokładności		
-</value>
-  </data>
-  <data name="lblWIKlasse.Text" xml:space="preserve">
-    <value>Klasa dokładności		
-</value>
-  </data>
-  <data name="lblWZKlasse.Text" xml:space="preserve">
-    <value>Klasa dokładności		
-</value>
-  </data>
-  <data name="lblAWGTemperatur.Text" xml:space="preserve">
-    <value>Granice zakresu temperatury</value>
-  </data>
-  <data name="lblGrenzenTemp.Text" xml:space="preserve">
-    <value>Granice zakresu temperatury</value>
-  </data>
-  <data name="lblWZTemperatur.Text" xml:space="preserve">
-    <value>Granice zakresu temperatury</value>
   </data>
   <data name="RadGroupBoxVerbindungselemente.HeaderText" xml:space="preserve">
     <value>Elementy złączne</value>
@@ -244,83 +130,285 @@
   <data name="RadGroupBoxVerbindungselemente.Text" xml:space="preserve">
     <value>Elementy złączne</value>
   </data>
+  <data name="RadLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 18</value>
+  </data>
+  <data name="RadLabel1.Text" xml:space="preserve">
+    <value>nadrukowane:</value>
+  </data>
+  <data name="lblWZEichfehlergrenze.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 18</value>
+  </data>
+  <data name="lblWZEichfehlergrenze.Text" xml:space="preserve">
+    <value>Ułamek błędu legalizacyjnego</value>
+  </data>
+  <data name="lblWZTemperatur.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 18</value>
+  </data>
+  <data name="lblWZTemperatur.Text" xml:space="preserve">
+    <value>Granice zakresu temperatury</value>
+  </data>
+  <data name="lblWZKlasse2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 18</value>
+  </data>
+  <data name="lblWZKlasse2.Text" xml:space="preserve">
+    <value>Klasa</value>
+  </data>
+  <data name="lblWZKlasse.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 18</value>
+  </data>
+  <data name="lblWZKlasse.Text" xml:space="preserve">
+    <value>Klasa dokładności		
+</value>
+  </data>
+  <data name="lblWZWiderstandWZ.Size" type="System.Drawing.Size, System.Drawing">
+    <value>251, 18</value>
+  </data>
+  <data name="lblWZWiderstandWZ.Text" xml:space="preserve">
+    <value>Opór (pojedyńczego) czujnika tensometrycznego</value>
+  </data>
+  <data name="lblWZRueckkehrVorlastsignal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>198, 18</value>
+  </data>
+  <data name="lblWZRueckkehrVorlastsignal.Text" xml:space="preserve">
+    <value>Powrót sygnału obciążenia wstępnego</value>
+  </data>
+  <data name="RadLabel60.Size" type="System.Drawing.Size, System.Drawing">
+    <value>13, 18</value>
+  </data>
+  <data name="RadLabel60.Text" xml:space="preserve">
+    <value>Z</value>
+  </data>
+  <data name="RadLabel61.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 18</value>
+  </data>
+  <data name="RadLabel61.Text" xml:space="preserve">
+    <value>Y</value>
+  </data>
+  <data name="RadLabel64.Size" type="System.Drawing.Size, System.Drawing">
+    <value>13, 18</value>
+  </data>
+  <data name="RadLabel64.Text" xml:space="preserve">
+    <value>C</value>
+  </data>
+  <data name="lblwzKriechteilungsfaktor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>194, 18</value>
+  </data>
+  <data name="lblwzKriechteilungsfaktor.Text" xml:space="preserve">
+    <value>Współczynnik podziałki pełzającej lub</value>
+  </data>
+  <data name="lblWZHoechstteilungswert.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 18</value>
+  </data>
+  <data name="lblWZHoechstteilungswert.Text" xml:space="preserve">
+    <value>Największy współczynnik podziałkowy</value>
+  </data>
+  <data name="lblWZMinTeilungswert.Size" type="System.Drawing.Size, System.Drawing">
+    <value>251, 18</value>
+  </data>
+  <data name="lblWZMinTeilungswert.Text" xml:space="preserve">
+    <value>Najmniejsza dopuszyczalna wartość podziałki lub</value>
+  </data>
+  <data name="lblWZTeilungswerte.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 18</value>
+  </data>
+  <data name="lblWZTeilungswerte.Text" xml:space="preserve">
+    <value>Największa dopuszczalna ilość wartości podziałki</value>
+  </data>
+  <data name="lblWZWaegezellenkennwert.Size" type="System.Drawing.Size, System.Drawing">
+    <value>252, 18</value>
+  </data>
+  <data name="lblWZWaegezellenkennwert.Text" xml:space="preserve">
+    <value>Wartość znamionowa czujnika tensometrycznego</value>
+  </data>
+  <data name="lblWZMindestvorlast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 18</value>
+  </data>
+  <data name="lblWZMindestvorlast.Text" xml:space="preserve">
+    <value>Najmniejsze obciążenie wstępne</value>
+  </data>
+  <data name="lblWZHoechstlast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 18</value>
+  </data>
+  <data name="lblWZHoechstlast.Text" xml:space="preserve">
+    <value>Obciążenie maksymalne (obciążenie nominalne)</value>
+  </data>
   <data name="RadGroupBoxWZ.HeaderText" xml:space="preserve">
     <value>Czujnik(i) tensometryczny (e )</value>
   </data>
   <data name="RadGroupBoxWZ.Text" xml:space="preserve">
     <value>Czujnik(i) tensometryczny (e )</value>
   </data>
-  <data name="lblWZWaegezellenkennwert.Text" xml:space="preserve">
-    <value>Wartość znamionowa czujnika tensometrycznego</value>
+  <data name="RadLabel30.Location" type="System.Drawing.Point, System.Drawing">
+    <value>315, 282</value>
   </data>
-  <data name="lblWZWiderstandWZ.Text" xml:space="preserve">
-    <value>Opór (pojedyńczego) czujnika tensometrycznego</value>
+  <data name="PictureBox15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>371, 283</value>
   </data>
-  <data name="lblAWGWiderstand.Text" xml:space="preserve">
-    <value>Wartości graniczne opornika obciążającego</value>
+  <data name="RadLabel100.Location" type="System.Drawing.Point, System.Drawing">
+    <value>450, 284</value>
   </data>
-  <data name="lblAWGmaxAnzahlTeilungswerte.Text" xml:space="preserve">
-    <value>Największa dopuszczalna ilość wartości podziałki</value>
-  </data>
-  <data name="lblWZTeilungswerte.Text" xml:space="preserve">
-    <value>Największa dopuszczalna ilość wartości podziałki</value>
-  </data>
-  <data name="lblWZHoechstlast.Text" xml:space="preserve">
-    <value>Obciążenie maksymalne (obciążenie nominalne)</value>
-  </data>
-  <data name="lblWIMaxCap.Text" xml:space="preserve">
-    <value>Obciążenie maksymalne</value>
-  </data>
-  <data name="lblWZHoechstteilungswert.Text" xml:space="preserve">
-    <value>Największy współczynnik podziałkowy</value>
-  </data>
-  <data name="lblKabellaenge.Text" xml:space="preserve">
-    <value>Długość kabla</value>
-  </data>
-  <data name="lblKabelquerschnitt.Text" xml:space="preserve">
-    <value>Przekrój kabla</value>
+  <data name="lblAWGKlasse2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 18</value>
   </data>
   <data name="lblAWGKlasse2.Text" xml:space="preserve">
     <value>Klasa</value>
   </data>
-  <data name="lblWaageKlasse2.Text" xml:space="preserve">
-    <value>Klasa</value>
+  <data name="lblAWGKlasse.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 18</value>
   </data>
-  <data name="lblWZKlasse2.Text" xml:space="preserve">
-    <value>Klasa</value>
+  <data name="lblAWGKlasse.Text" xml:space="preserve">
+    <value>Klasa dokładności		
+</value>
   </data>
-  <data name="lblWZMinTeilungswert.Text" xml:space="preserve">
-    <value>Najmniejsza dopuszyczalna wartość podziałki lub</value>
+  <data name="RadTextBoxControlAWGKabellaenge.Location" type="System.Drawing.Point, System.Drawing">
+    <value>390, 283</value>
   </data>
-  <data name="lblwzKriechteilungsfaktor.Text" xml:space="preserve">
-    <value>Współczynnik podziałki pełzającej lub</value>
+  <data name="lblKabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 18</value>
   </data>
   <data name="lblKabel.Text" xml:space="preserve">
     <value>Przewód</value>
   </data>
+  <data name="lblAWGKabellaenge.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 283</value>
+  </data>
+  <data name="lblAWGKabellaenge.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 18</value>
+  </data>
   <data name="lblAWGKabellaenge.Text" xml:space="preserve">
     <value>max. długość lub przekrój kabla </value>
   </data>
-  <data name="lblAWGMindesteingangsspannung.Text" xml:space="preserve">
-    <value>Najmniejsze napięcie wejściowe miernika</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblAWGAnschlussart.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lblAWGAnschlussart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>266, 34</value>
+  </data>
+  <data name="lblAWGAnschlussart.Text" xml:space="preserve">
+    <value>Rodzaj podłączenia czujnika tensometrycznego (technika 4- lub 6-przewodowa)</value>
+  </data>
+  <data name="lblAWGEichfehlergrenze.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 18</value>
+  </data>
+  <data name="lblAWGEichfehlergrenze.Text" xml:space="preserve">
+    <value>Ułamek błędu legalizacyjnego</value>
+  </data>
+  <data name="lblAWGTemperatur.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 18</value>
+  </data>
+  <data name="lblAWGTemperatur.Text" xml:space="preserve">
+    <value>Granice zakresu temperatury</value>
+  </data>
+  <data name="lblAWGWiderstand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 18</value>
+  </data>
+  <data name="lblAWGWiderstand.Text" xml:space="preserve">
+    <value>Wartości graniczne opornika obciążającego</value>
+  </data>
+  <data name="lblAWGMinMessSignal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>318, 18</value>
   </data>
   <data name="lblAWGMinMessSignal.Text" xml:space="preserve">
     <value>Najmniejszy sygnał pomiarowy na jedną wartość legaluzacyjną</value>
   </data>
-  <data name="lblWZMindestvorlast.Text" xml:space="preserve">
-    <value>Najmniejsze obciążenie wstępne</value>
+  <data name="lblAWGMindesteingangsspannung.Size" type="System.Drawing.Size, System.Drawing">
+    <value>211, 18</value>
   </data>
-  <data name="lblWZRueckkehrVorlastsignal.Text" xml:space="preserve">
-    <value>Powrót sygnału obciążenia wstępnego</value>
+  <data name="lblAWGMindesteingangsspannung.Text" xml:space="preserve">
+    <value>Najmniejsze napięcie wejściowe miernika</value>
+  </data>
+  <data name="lblAWGSpeisespannung.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 18</value>
   </data>
   <data name="lblAWGSpeisespannung.Text" xml:space="preserve">
     <value>Napięcie zasilające dla czujnika(ów)</value>
   </data>
+  <data name="lblAWGmaxAnzahlTeilungswerte.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 18</value>
+  </data>
+  <data name="lblAWGmaxAnzahlTeilungswerte.Text" xml:space="preserve">
+    <value>Największa dopuszczalna ilość wartości podziałki</value>
+  </data>
+  <data name="lblWaageKlasse2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 18</value>
+  </data>
+  <data name="lblWaageKlasse2.Text" xml:space="preserve">
+    <value>Klasa</value>
+  </data>
+  <data name="lblKabelquerschnitt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 18</value>
+  </data>
+  <data name="lblKabelquerschnitt.Text" xml:space="preserve">
+    <value>Przekrój kabla</value>
+  </data>
+  <data name="lblKabellaenge.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 18</value>
+  </data>
+  <data name="lblKabellaenge.Text" xml:space="preserve">
+    <value>Długość kabla</value>
+  </data>
+  <data name="lblGrenzenTemp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 18</value>
+  </data>
+  <data name="lblGrenzenTemp.Text" xml:space="preserve">
+    <value>Granice zakresu temperatury</value>
+  </data>
+  <data name="lbladditiveTarahoechstlast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 18</value>
+  </data>
+  <data name="lbladditiveTarahoechstlast.Text" xml:space="preserve">
+    <value>Maksymalne dodatnie obciążenie tary</value>
+  </data>
+  <data name="lbltotlast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 18</value>
+  </data>
   <data name="lbltotlast.Text" xml:space="preserve">
     <value>Ciężar własny</value>
   </data>
+  <data name="lblEcklastzuschalg.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 18</value>
+  </data>
+  <data name="lblEcklastzuschalg.Text" xml:space="preserve">
+    <value>Dodatek do obciążenia rogowego.</value>
+  </data>
+  <data name="lblEinschaltnullbereich.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 18</value>
+  </data>
+  <data name="lblEinschaltnullbereich.Text" xml:space="preserve">
+    <value>Zakres zerowania włączeniowego</value>
+  </data>
+  <data name="lblAnzWaeegezellen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 18</value>
+  </data>
+  <data name="lblAnzWaeegezellen.Text" xml:space="preserve">
+    <value>Numer czujnika tensometrycznego</value>
+  </data>
+  <data name="lblUebersetzung.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 18</value>
+  </data>
   <data name="lblUebersetzung.Text" xml:space="preserve">
     <value>Przełożenie</value>
+  </data>
+  <data name="lblEichwert.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 18</value>
+  </data>
+  <data name="lblEichwert.Text" xml:space="preserve">
+    <value>Wartość legalizacyjna</value>
+  </data>
+  <data name="lblWIMaxCap.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 18</value>
+  </data>
+  <data name="lblWIMaxCap.Text" xml:space="preserve">
+    <value>Obciążenie maksymalne</value>
+  </data>
+  <data name="lblWIKlasse.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 18</value>
+  </data>
+  <data name="lblWIKlasse.Text" xml:space="preserve">
+    <value>Klasa dokładności		
+</value>
   </data>
   <data name="RadGroupBoxWaage.HeaderText" xml:space="preserve">
     <value>Waga (nieautomatyczna)</value>

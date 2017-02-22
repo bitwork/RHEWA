@@ -36,7 +36,9 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.lblPflichtfeld1 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel1 = New Telerik.WinControls.UI.RadLabel()
         Me.lblWiederholungen = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox83 = New System.Windows.Forms.PictureBox()
         Me.RadLabel29 = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox84 = New System.Windows.Forms.PictureBox()
         Me.RadLabel30 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel31 = New Telerik.WinControls.UI.RadLabel()
         Me.lblMengeStandardgewichte2 = New Telerik.WinControls.UI.RadLabel()
@@ -44,6 +46,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.lblMengeStandardgewichte1 = New Telerik.WinControls.UI.RadLabel()
         Me.RadCheckBoxVEL1 = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadTextBoxControlBetragNormallast = New Telerik.WinControls.UI.RadTextBox()
+        Me.PictureBox82 = New System.Windows.Forms.PictureBox()
         Me.lblEFGSpeziallBerechnung = New Telerik.WinControls.UI.RadMaskedEditBox()
         Me.Panel1 = New Telerik.WinControls.UI.RadPanel()
         Me.RadTextBoxControlWeight1 = New Telerik.WinControls.UI.RadTextBox()
@@ -59,11 +62,19 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.lblGewicht = New Telerik.WinControls.UI.RadLabel()
         Me.lblAnzeigeGewicht = New Telerik.WinControls.UI.RadLabel()
         Me.RadGroupBoxPruefungAussermittigeBelastung = New Telerik.WinControls.UI.RadGroupBox()
+        Me.PictureBox10LC = New System.Windows.Forms.PictureBox()
+        Me.PictureBox12LC = New System.Windows.Forms.PictureBox()
         Me.RadButtonShowEFG2 = New Telerik.WinControls.UI.RadButton()
+        Me.PictureBox8LC = New System.Windows.Forms.PictureBox()
+        Me.PictureBox6LC = New System.Windows.Forms.PictureBox()
+        Me.PictureBox4LC = New System.Windows.Forms.PictureBox()
         Me.RadGroupBoxBereich3 = New Telerik.WinControls.UI.RadGroupBox()
+        Me.PictureBox81 = New System.Windows.Forms.PictureBox()
         Me.lblBereich3EFGSpeziallBerechnung = New Telerik.WinControls.UI.RadMaskedEditBox()
         Me.PanelBereich3WZ1 = New Telerik.WinControls.UI.RadPanel()
         Me.Label30 = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox77 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox78 = New System.Windows.Forms.PictureBox()
         Me.RadLabel46 = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlBereich3Weight1 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich3DisplayWeight1 = New Telerik.WinControls.UI.RadTextBox()
@@ -71,6 +82,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadCheckBoxBereich3VEL1 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich3WZ2 = New Telerik.WinControls.UI.RadPanel()
         Me.Label31 = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox75 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox76 = New System.Windows.Forms.PictureBox()
         Me.RadLabel45 = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlBereich3Weight2 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich3DisplayWeight2 = New Telerik.WinControls.UI.RadTextBox()
@@ -80,6 +93,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.lblBereich3FehlerGrenzen = New Telerik.WinControls.UI.RadLabel()
         Me.PanelBereich3WZ3 = New Telerik.WinControls.UI.RadPanel()
         Me.Label32 = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox73 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox74 = New System.Windows.Forms.PictureBox()
         Me.RadLabel44 = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlBereich3Weight3 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich3DisplayWeight3 = New Telerik.WinControls.UI.RadTextBox()
@@ -88,6 +103,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.lblBereich3EFGSpezial = New Telerik.WinControls.UI.RadLabel()
         Me.PanelBereich3WZ4 = New Telerik.WinControls.UI.RadPanel()
         Me.Label33 = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox71 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox72 = New System.Windows.Forms.PictureBox()
         Me.RadLabel43 = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlBereich3Weight4 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich3DisplayWeight4 = New Telerik.WinControls.UI.RadTextBox()
@@ -97,6 +114,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.lblBereich3AnzeigeGewicht = New Telerik.WinControls.UI.RadLabel()
         Me.PanelBereich3WZ5 = New Telerik.WinControls.UI.RadPanel()
         Me.Label34 = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox69 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox70 = New System.Windows.Forms.PictureBox()
         Me.RadLabel42 = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlBereich3Weight5 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich3DisplayWeight5 = New Telerik.WinControls.UI.RadTextBox()
@@ -104,6 +123,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadCheckBoxBereich3VEL5 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich3WZ12 = New Telerik.WinControls.UI.RadPanel()
         Me.Label41 = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox55 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox56 = New System.Windows.Forms.PictureBox()
         Me.RadLabel35 = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlBereich3Weight12 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich3DisplayWeight12 = New Telerik.WinControls.UI.RadTextBox()
@@ -111,6 +132,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadCheckBoxBereich3VEL12 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich3WZ11 = New Telerik.WinControls.UI.RadPanel()
         Me.Label40 = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox57 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox58 = New System.Windows.Forms.PictureBox()
         Me.RadLabel36 = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlBereich3Weight11 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich3DisplayWeight11 = New Telerik.WinControls.UI.RadTextBox()
@@ -118,6 +141,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadCheckBoxBereich3VEL11 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich3WZ6 = New Telerik.WinControls.UI.RadPanel()
         Me.Label35 = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox67 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox68 = New System.Windows.Forms.PictureBox()
         Me.RadLabel41 = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlBereich3Weight6 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich3DisplayWeight6 = New Telerik.WinControls.UI.RadTextBox()
@@ -125,6 +150,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadCheckBoxBereich3VEL6 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich3WZ10 = New Telerik.WinControls.UI.RadPanel()
         Me.Label39 = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox59 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox60 = New System.Windows.Forms.PictureBox()
         Me.RadLabel37 = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlBereich3Weight10 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich3DisplayWeight10 = New Telerik.WinControls.UI.RadTextBox()
@@ -132,6 +159,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadCheckBoxBereich3VEL10 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich3WZ7 = New Telerik.WinControls.UI.RadPanel()
         Me.Label36 = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox65 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox66 = New System.Windows.Forms.PictureBox()
         Me.RadLabel40 = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlBereich3Weight7 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich3DisplayWeight7 = New Telerik.WinControls.UI.RadTextBox()
@@ -139,6 +168,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadCheckBoxBereich3VEL7 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich3WZ9 = New Telerik.WinControls.UI.RadPanel()
         Me.Label38 = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox61 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox62 = New System.Windows.Forms.PictureBox()
         Me.RadLabel38 = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlBereich3Weight9 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich3DisplayWeight9 = New Telerik.WinControls.UI.RadTextBox()
@@ -146,15 +177,20 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadCheckBoxBereich3VEL9 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich3WZ8 = New Telerik.WinControls.UI.RadPanel()
         Me.Label37 = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox63 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox64 = New System.Windows.Forms.PictureBox()
         Me.RadLabel39 = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlBereich3Weight8 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich3DisplayWeight8 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich3ErrorLimit8 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich3VEL8 = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadGroupBoxBereich2 = New Telerik.WinControls.UI.RadGroupBox()
+        Me.PictureBox80 = New System.Windows.Forms.PictureBox()
         Me.lblBereich2EFGSpeziallBerechnung = New Telerik.WinControls.UI.RadMaskedEditBox()
         Me.PanelBereich2WZ1 = New Telerik.WinControls.UI.RadPanel()
         Me.Label17 = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox29 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox30 = New System.Windows.Forms.PictureBox()
         Me.RadLabel27 = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlBereich2Weight1 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich2DisplayWeight1 = New Telerik.WinControls.UI.RadTextBox()
@@ -164,6 +200,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.lblBereich2FehlerGrenzen = New Telerik.WinControls.UI.RadLabel()
         Me.PanelBereich2WZ2 = New Telerik.WinControls.UI.RadPanel()
         Me.Label18 = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox31 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox32 = New System.Windows.Forms.PictureBox()
         Me.RadLabel26 = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlBereich2Weight2 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich2DisplayWeight2 = New Telerik.WinControls.UI.RadTextBox()
@@ -172,6 +210,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.lblBereich2EFGSpezial = New Telerik.WinControls.UI.RadLabel()
         Me.PanelBereich2WZ3 = New Telerik.WinControls.UI.RadPanel()
         Me.Label19 = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox33 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox34 = New System.Windows.Forms.PictureBox()
         Me.RadLabel25 = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlBereich2Weight3 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich2DisplayWeight3 = New Telerik.WinControls.UI.RadTextBox()
@@ -181,6 +221,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.lblBereich2AnzeigeGewicht = New Telerik.WinControls.UI.RadLabel()
         Me.PanelBereich2WZ4 = New Telerik.WinControls.UI.RadPanel()
         Me.Label20 = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox35 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox36 = New System.Windows.Forms.PictureBox()
         Me.RadLabel24 = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlBereich2Weight4 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich2DisplayWeight4 = New Telerik.WinControls.UI.RadTextBox()
@@ -188,6 +230,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadCheckBoxBereich2VEL4 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich2WZ11 = New Telerik.WinControls.UI.RadPanel()
         Me.Label27 = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox49 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox50 = New System.Windows.Forms.PictureBox()
         Me.RadLabel17 = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlBereich2Weight11 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich2DisplayWeight11 = New Telerik.WinControls.UI.RadTextBox()
@@ -195,6 +239,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadCheckBoxBereich2VEL11 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich2WZ10 = New Telerik.WinControls.UI.RadPanel()
         Me.Label26 = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox47 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox48 = New System.Windows.Forms.PictureBox()
         Me.RadLabel18 = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlBereich2Weight10 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich2DisplayWeight10 = New Telerik.WinControls.UI.RadTextBox()
@@ -202,6 +248,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadCheckBoxBereich2VEL10 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich2WZ5 = New Telerik.WinControls.UI.RadPanel()
         Me.Label21 = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox37 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox38 = New System.Windows.Forms.PictureBox()
         Me.RadLabel23 = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlBereich2Weight5 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich2DisplayWeight5 = New Telerik.WinControls.UI.RadTextBox()
@@ -209,6 +257,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadCheckBoxBereich2VEL5 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich2WZ12 = New Telerik.WinControls.UI.RadPanel()
         Me.Label28 = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox51 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox52 = New System.Windows.Forms.PictureBox()
         Me.RadLabel16 = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlBereich2Weight12 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich2DisplayWeight12 = New Telerik.WinControls.UI.RadTextBox()
@@ -216,6 +266,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadCheckBoxBereich2VEL12 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich2WZ9 = New Telerik.WinControls.UI.RadPanel()
         Me.Label25 = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox45 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox46 = New System.Windows.Forms.PictureBox()
         Me.RadLabel19 = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlBereich2Weight9 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich2DisplayWeight9 = New Telerik.WinControls.UI.RadTextBox()
@@ -223,6 +275,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadCheckBoxBereich2VEL9 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich2WZ6 = New Telerik.WinControls.UI.RadPanel()
         Me.Label22 = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox39 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox40 = New System.Windows.Forms.PictureBox()
         Me.RadLabel22 = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlBereich2Weight6 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich2DisplayWeight6 = New Telerik.WinControls.UI.RadTextBox()
@@ -230,6 +284,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadCheckBoxBereich2VEL6 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich2WZ8 = New Telerik.WinControls.UI.RadPanel()
         Me.Label24 = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox43 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox44 = New System.Windows.Forms.PictureBox()
         Me.RadLabel20 = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlBereich2Weight8 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich2DisplayWeight8 = New Telerik.WinControls.UI.RadTextBox()
@@ -237,15 +293,20 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadCheckBoxBereich2VEL8 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich2WZ7 = New Telerik.WinControls.UI.RadPanel()
         Me.Label23 = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox41 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox42 = New System.Windows.Forms.PictureBox()
         Me.RadLabel21 = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlBereich2Weight7 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich2DisplayWeight7 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich2ErrorLimit7 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich2VEL7 = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadGroupBoxBereich1 = New Telerik.WinControls.UI.RadGroupBox()
+        Me.PictureBox79 = New System.Windows.Forms.PictureBox()
         Me.lblBereich1EFGSpeziallBerechnung = New Telerik.WinControls.UI.RadMaskedEditBox()
         Me.PanelBereich1WZ1 = New Telerik.WinControls.UI.RadPanel()
         Me.Label4 = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.RadLabel13 = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlBereich1Weight1 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich1DisplayWeight1 = New Telerik.WinControls.UI.RadTextBox()
@@ -253,7 +314,9 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadCheckBoxBereich1VEL1 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich1WZ2 = New Telerik.WinControls.UI.RadPanel()
         Me.Label5 = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.RadLabel2 = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich1Weight2 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich1DisplayWeight2 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich1ErrorLimit2 = New Telerik.WinControls.UI.RadTextBox()
@@ -262,7 +325,9 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.lblBereich1FehlerGrenzen = New Telerik.WinControls.UI.RadLabel()
         Me.PanelBereich1WZ3 = New Telerik.WinControls.UI.RadPanel()
         Me.Label6 = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.RadLabel4 = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich1Weight3 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich1DisplayWeight3 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich1ErrorLimit3 = New Telerik.WinControls.UI.RadTextBox()
@@ -270,7 +335,9 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.lblBereich1EFGSpezial = New Telerik.WinControls.UI.RadLabel()
         Me.PanelBereich1WZ4 = New Telerik.WinControls.UI.RadPanel()
         Me.Label7 = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.RadLabel5 = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich1Weight4 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich1DisplayWeight4 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich1ErrorLimit4 = New Telerik.WinControls.UI.RadTextBox()
@@ -279,6 +346,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.lblBereich1AnzeigeGewicht = New Telerik.WinControls.UI.RadLabel()
         Me.PanelBereich1WZ5 = New Telerik.WinControls.UI.RadPanel()
         Me.Label8 = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox10 = New System.Windows.Forms.PictureBox()
         Me.RadLabel6 = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlBereich1Weight5 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich1DisplayWeight5 = New Telerik.WinControls.UI.RadTextBox()
@@ -286,6 +355,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadCheckBoxBereich1VEL5 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich1WZ12 = New Telerik.WinControls.UI.RadPanel()
         Me.Label15 = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox23 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox24 = New System.Windows.Forms.PictureBox()
         Me.RadLabel14 = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlBereich1Weight12 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich1DisplayWeight12 = New Telerik.WinControls.UI.RadTextBox()
@@ -293,6 +364,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadCheckBoxBereich1VEL12 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich1WZ11 = New Telerik.WinControls.UI.RadPanel()
         Me.Label14 = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox21 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox22 = New System.Windows.Forms.PictureBox()
         Me.RadLabel12 = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlBereich1Weight11 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich1DisplayWeight11 = New Telerik.WinControls.UI.RadTextBox()
@@ -300,6 +373,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadCheckBoxBereich1VEL11 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich1WZ6 = New Telerik.WinControls.UI.RadPanel()
         Me.Label9 = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox11 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox12 = New System.Windows.Forms.PictureBox()
         Me.RadLabel7 = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlBereich1Weight6 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich1DisplayWeight6 = New Telerik.WinControls.UI.RadTextBox()
@@ -307,6 +382,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadCheckBoxBereich1VEL6 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich1WZMitte = New Telerik.WinControls.UI.RadPanel()
         Me.Label16 = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox25 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox26 = New System.Windows.Forms.PictureBox()
         Me.lblBereich1Mitte = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlBereich1WeightMitte = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich1DisplayWeightMitte = New Telerik.WinControls.UI.RadTextBox()
@@ -314,6 +391,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadCheckBoxBereich1VELMitte = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich1WZ10 = New Telerik.WinControls.UI.RadPanel()
         Me.Label13 = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox19 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox20 = New System.Windows.Forms.PictureBox()
         Me.RadLabel11 = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlBereich1Weight10 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich1DisplayWeight10 = New Telerik.WinControls.UI.RadTextBox()
@@ -321,6 +400,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadCheckBoxBereich1VEL10 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich1WZ7 = New Telerik.WinControls.UI.RadPanel()
         Me.Label10 = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox13 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox14 = New System.Windows.Forms.PictureBox()
         Me.RadLabel8 = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlBereich1Weight7 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich1DisplayWeight7 = New Telerik.WinControls.UI.RadTextBox()
@@ -328,6 +409,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadCheckBoxBereich1VEL7 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich1WZ9 = New Telerik.WinControls.UI.RadPanel()
         Me.Label12 = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox17 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox18 = New System.Windows.Forms.PictureBox()
         Me.RadLabel10 = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlBereich1Weight9 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich1DisplayWeight9 = New Telerik.WinControls.UI.RadTextBox()
@@ -335,96 +418,13 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadCheckBoxBereich1VEL9 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich1WZ8 = New Telerik.WinControls.UI.RadPanel()
         Me.Label11 = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox15 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox16 = New System.Windows.Forms.PictureBox()
         Me.RadLabel9 = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlBereich1Weight8 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich1DisplayWeight8 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich1ErrorLimit8 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich1VEL8 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.PictureBox83 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox84 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox82 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox10LC = New System.Windows.Forms.PictureBox()
-        Me.PictureBox12LC = New System.Windows.Forms.PictureBox()
-        Me.PictureBox8LC = New System.Windows.Forms.PictureBox()
-        Me.PictureBox6LC = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4LC = New System.Windows.Forms.PictureBox()
-        Me.PictureBox81 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox77 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox78 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox75 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox76 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox73 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox74 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox71 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox72 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox69 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox70 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox55 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox56 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox57 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox58 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox67 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox68 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox59 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox60 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox65 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox66 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox61 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox62 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox63 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox64 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox80 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox29 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox30 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox31 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox32 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox33 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox34 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox35 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox36 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox49 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox50 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox47 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox48 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox37 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox38 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox51 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox52 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox45 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox46 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox39 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox40 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox43 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox44 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox41 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox42 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox79 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox10 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox23 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox24 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox21 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox22 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox11 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox12 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox25 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox26 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox19 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox20 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox13 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox14 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox17 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox18 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox15 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox16 = New System.Windows.Forms.PictureBox()
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadScrollablePanel1.PanelContainer.SuspendLayout()
         Me.RadScrollablePanel1.SuspendLayout()
@@ -441,7 +441,9 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         CType(Me.lblPflichtfeld1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblWiederholungen, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox83, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel29, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox84, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel30, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel31, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblMengeStandardgewichte2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -449,6 +451,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         CType(Me.lblMengeStandardgewichte1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadCheckBoxVEL1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBetragNormallast, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox82, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblEFGSpeziallBerechnung, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Panel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -468,13 +471,21 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         CType(Me.lblAnzeigeGewicht, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBoxPruefungAussermittigeBelastung, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxPruefungAussermittigeBelastung.SuspendLayout()
+        CType(Me.PictureBox10LC, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox12LC, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonShowEFG2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox8LC, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox6LC, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox4LC, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBoxBereich3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxBereich3.SuspendLayout()
+        CType(Me.PictureBox81, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblBereich3EFGSpeziallBerechnung, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PanelBereich3WZ1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelBereich3WZ1.SuspendLayout()
         CType(Me.Label30, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox77, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox78, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel46, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich3Weight1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich3DisplayWeight1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -483,6 +494,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         CType(Me.PanelBereich3WZ2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelBereich3WZ2.SuspendLayout()
         CType(Me.Label31, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox75, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox76, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel45, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich3Weight2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich3DisplayWeight2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -493,6 +506,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         CType(Me.PanelBereich3WZ3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelBereich3WZ3.SuspendLayout()
         CType(Me.Label32, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox73, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox74, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel44, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich3Weight3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich3DisplayWeight3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -502,6 +517,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         CType(Me.PanelBereich3WZ4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelBereich3WZ4.SuspendLayout()
         CType(Me.Label33, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox71, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox72, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel43, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich3Weight4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich3DisplayWeight4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -512,6 +529,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         CType(Me.PanelBereich3WZ5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelBereich3WZ5.SuspendLayout()
         CType(Me.Label34, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox69, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox70, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel42, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich3Weight5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich3DisplayWeight5, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -520,6 +539,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         CType(Me.PanelBereich3WZ12, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelBereich3WZ12.SuspendLayout()
         CType(Me.Label41, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox55, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox56, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel35, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich3Weight12, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich3DisplayWeight12, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -528,6 +549,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         CType(Me.PanelBereich3WZ11, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelBereich3WZ11.SuspendLayout()
         CType(Me.Label40, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox57, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox58, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel36, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich3Weight11, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich3DisplayWeight11, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -536,6 +559,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         CType(Me.PanelBereich3WZ6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelBereich3WZ6.SuspendLayout()
         CType(Me.Label35, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox67, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox68, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel41, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich3Weight6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich3DisplayWeight6, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -544,6 +569,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         CType(Me.PanelBereich3WZ10, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelBereich3WZ10.SuspendLayout()
         CType(Me.Label39, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox59, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox60, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel37, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich3Weight10, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich3DisplayWeight10, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -552,6 +579,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         CType(Me.PanelBereich3WZ7, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelBereich3WZ7.SuspendLayout()
         CType(Me.Label36, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox65, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox66, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel40, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich3Weight7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich3DisplayWeight7, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -560,6 +589,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         CType(Me.PanelBereich3WZ9, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelBereich3WZ9.SuspendLayout()
         CType(Me.Label38, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox61, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox62, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel38, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich3Weight9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich3DisplayWeight9, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -568,6 +599,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         CType(Me.PanelBereich3WZ8, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelBereich3WZ8.SuspendLayout()
         CType(Me.Label37, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox63, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox64, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel39, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich3Weight8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich3DisplayWeight8, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -575,10 +608,13 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         CType(Me.RadCheckBoxBereich3VEL8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBoxBereich2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxBereich2.SuspendLayout()
+        CType(Me.PictureBox80, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblBereich2EFGSpeziallBerechnung, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PanelBereich2WZ1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelBereich2WZ1.SuspendLayout()
         CType(Me.Label17, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox29, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox30, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel27, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich2Weight1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich2DisplayWeight1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -589,6 +625,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         CType(Me.PanelBereich2WZ2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelBereich2WZ2.SuspendLayout()
         CType(Me.Label18, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox31, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox32, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel26, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich2Weight2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich2DisplayWeight2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -598,6 +636,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         CType(Me.PanelBereich2WZ3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelBereich2WZ3.SuspendLayout()
         CType(Me.Label19, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox33, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox34, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel25, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich2Weight3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich2DisplayWeight3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -608,6 +648,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         CType(Me.PanelBereich2WZ4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelBereich2WZ4.SuspendLayout()
         CType(Me.Label20, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox35, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox36, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel24, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich2Weight4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich2DisplayWeight4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -616,6 +658,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         CType(Me.PanelBereich2WZ11, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelBereich2WZ11.SuspendLayout()
         CType(Me.Label27, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox49, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox50, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel17, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich2Weight11, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich2DisplayWeight11, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -624,6 +668,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         CType(Me.PanelBereich2WZ10, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelBereich2WZ10.SuspendLayout()
         CType(Me.Label26, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox47, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox48, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel18, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich2Weight10, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich2DisplayWeight10, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -632,6 +678,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         CType(Me.PanelBereich2WZ5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelBereich2WZ5.SuspendLayout()
         CType(Me.Label21, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox37, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox38, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel23, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich2Weight5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich2DisplayWeight5, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -640,6 +688,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         CType(Me.PanelBereich2WZ12, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelBereich2WZ12.SuspendLayout()
         CType(Me.Label28, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox51, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox52, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel16, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich2Weight12, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich2DisplayWeight12, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -648,6 +698,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         CType(Me.PanelBereich2WZ9, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelBereich2WZ9.SuspendLayout()
         CType(Me.Label25, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox45, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox46, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel19, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich2Weight9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich2DisplayWeight9, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -656,6 +708,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         CType(Me.PanelBereich2WZ6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelBereich2WZ6.SuspendLayout()
         CType(Me.Label22, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox39, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox40, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel22, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich2Weight6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich2DisplayWeight6, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -664,6 +718,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         CType(Me.PanelBereich2WZ8, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelBereich2WZ8.SuspendLayout()
         CType(Me.Label24, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox43, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox44, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel20, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich2Weight8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich2DisplayWeight8, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -672,6 +728,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         CType(Me.PanelBereich2WZ7, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelBereich2WZ7.SuspendLayout()
         CType(Me.Label23, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox41, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox42, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel21, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich2Weight7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich2DisplayWeight7, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -679,10 +737,13 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         CType(Me.RadCheckBoxBereich2VEL7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBoxBereich1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxBereich1.SuspendLayout()
+        CType(Me.PictureBox79, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblBereich1EFGSpeziallBerechnung, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PanelBereich1WZ1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelBereich1WZ1.SuspendLayout()
         CType(Me.Label4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel13, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich1Weight1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich1DisplayWeight1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -691,7 +752,9 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         CType(Me.PanelBereich1WZ2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelBereich1WZ2.SuspendLayout()
         CType(Me.Label5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich1Weight2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich1DisplayWeight2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich1ErrorLimit2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -701,7 +764,9 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         CType(Me.PanelBereich1WZ3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelBereich1WZ3.SuspendLayout()
         CType(Me.Label6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich1Weight3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich1DisplayWeight3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich1ErrorLimit3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -710,7 +775,9 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         CType(Me.PanelBereich1WZ4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelBereich1WZ4.SuspendLayout()
         CType(Me.Label7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich1Weight4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich1DisplayWeight4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich1ErrorLimit4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -720,6 +787,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         CType(Me.PanelBereich1WZ5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelBereich1WZ5.SuspendLayout()
         CType(Me.Label8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich1Weight5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich1DisplayWeight5, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -728,6 +797,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         CType(Me.PanelBereich1WZ12, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelBereich1WZ12.SuspendLayout()
         CType(Me.Label15, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox24, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel14, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich1Weight12, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich1DisplayWeight12, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -736,6 +807,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         CType(Me.PanelBereich1WZ11, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelBereich1WZ11.SuspendLayout()
         CType(Me.Label14, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox22, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel12, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich1Weight11, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich1DisplayWeight11, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -744,6 +817,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         CType(Me.PanelBereich1WZ6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelBereich1WZ6.SuspendLayout()
         CType(Me.Label9, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich1Weight6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich1DisplayWeight6, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -752,6 +827,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         CType(Me.PanelBereich1WZMitte, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelBereich1WZMitte.SuspendLayout()
         CType(Me.Label16, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox25, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox26, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblBereich1Mitte, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich1WeightMitte, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich1DisplayWeightMitte, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -760,6 +837,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         CType(Me.PanelBereich1WZ10, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelBereich1WZ10.SuspendLayout()
         CType(Me.Label13, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel11, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich1Weight10, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich1DisplayWeight10, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -768,6 +847,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         CType(Me.PanelBereich1WZ7, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelBereich1WZ7.SuspendLayout()
         CType(Me.Label10, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich1Weight7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich1DisplayWeight7, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -776,6 +857,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         CType(Me.PanelBereich1WZ9, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelBereich1WZ9.SuspendLayout()
         CType(Me.Label12, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel10, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich1Weight9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich1DisplayWeight9, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -784,96 +867,13 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         CType(Me.PanelBereich1WZ8, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelBereich1WZ8.SuspendLayout()
         CType(Me.Label11, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich1Weight8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich1DisplayWeight8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich1ErrorLimit8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadCheckBoxBereich1VEL8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox83, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox84, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox82, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox10LC, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox12LC, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox8LC, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox6LC, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4LC, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox81, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox77, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox78, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox75, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox76, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox73, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox74, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox71, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox72, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox69, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox70, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox55, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox56, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox57, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox58, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox67, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox68, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox59, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox60, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox65, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox66, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox61, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox62, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox63, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox64, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox80, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox29, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox30, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox31, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox32, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox33, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox34, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox35, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox36, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox49, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox50, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox47, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox48, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox37, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox38, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox51, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox52, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox45, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox46, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox39, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox40, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox43, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox44, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox41, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox42, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox79, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox24, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox22, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox25, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox26, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'RadScrollablePanel1
@@ -883,32 +883,32 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         'RadScrollablePanel1.PanelContainer
         '
-        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.FlowLayoutPanel1)
         resources.ApplyResources(Me.RadScrollablePanel1.PanelContainer, "RadScrollablePanel1.PanelContainer")
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.FlowLayoutPanel1)
         '
         'FlowLayoutPanel1
         '
+        resources.ApplyResources(Me.FlowLayoutPanel1, "FlowLayoutPanel1")
         Me.FlowLayoutPanel1.Controls.Add(Me.RadGroupBoxPruefungGenaugikeit)
         Me.FlowLayoutPanel1.Controls.Add(Me.RadGroupBoxWiederholungen)
         Me.FlowLayoutPanel1.Controls.Add(Me.RadGroupBoxPruefungAussermittigeBelastung)
-        resources.ApplyResources(Me.FlowLayoutPanel1, "FlowLayoutPanel1")
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
         '
         'RadGroupBoxPruefungGenaugikeit
         '
+        resources.ApplyResources(Me.RadGroupBoxPruefungGenaugikeit, "RadGroupBoxPruefungGenaugikeit")
         Me.RadGroupBoxPruefungGenaugikeit.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBoxPruefungGenaugikeit.Controls.Add(Me.Label3)
         Me.RadGroupBoxPruefungGenaugikeit.Controls.Add(Me.RadCheckBoxNullstellungOK)
         Me.RadGroupBoxPruefungGenaugikeit.Controls.Add(Me.lblHinweisNullstellung)
         Me.RadGroupBoxPruefungGenaugikeit.Controls.Add(Me.RadButtonShowEFG)
         Me.RadGroupBoxPruefungGenaugikeit.Controls.Add(Me.lblNullstellungOK)
-        resources.ApplyResources(Me.RadGroupBoxPruefungGenaugikeit, "RadGroupBoxPruefungGenaugikeit")
         Me.RadGroupBoxPruefungGenaugikeit.Name = "RadGroupBoxPruefungGenaugikeit"
         '
         'Label3
         '
-        Me.Label3.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label3, "Label3")
+        Me.Label3.ForeColor = System.Drawing.Color.Red
         Me.Label3.Name = "Label3"
         '
         'RadCheckBoxNullstellungOK
@@ -933,6 +933,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         'RadGroupBoxWiederholungen
         '
+        resources.ApplyResources(Me.RadGroupBoxWiederholungen, "RadGroupBoxWiederholungen")
         Me.RadGroupBoxWiederholungen.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBoxWiederholungen.Controls.Add(Me.lblPflichtfeld1)
         Me.RadGroupBoxWiederholungen.Controls.Add(Me.RadLabel1)
@@ -956,13 +957,12 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadGroupBoxWiederholungen.Controls.Add(Me.lblEFGSpezial)
         Me.RadGroupBoxWiederholungen.Controls.Add(Me.lblGewicht)
         Me.RadGroupBoxWiederholungen.Controls.Add(Me.lblAnzeigeGewicht)
-        resources.ApplyResources(Me.RadGroupBoxWiederholungen, "RadGroupBoxWiederholungen")
         Me.RadGroupBoxWiederholungen.Name = "RadGroupBoxWiederholungen"
         '
         'lblPflichtfeld1
         '
-        Me.lblPflichtfeld1.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.lblPflichtfeld1, "lblPflichtfeld1")
+        Me.lblPflichtfeld1.ForeColor = System.Drawing.Color.Red
         Me.lblPflichtfeld1.Name = "lblPflichtfeld1"
         '
         'RadLabel1
@@ -975,10 +975,24 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.lblWiederholungen, "lblWiederholungen")
         Me.lblWiederholungen.Name = "lblWiederholungen"
         '
+        'PictureBox83
+        '
+        resources.ApplyResources(Me.PictureBox83, "PictureBox83")
+        Me.PictureBox83.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox83.Name = "PictureBox83"
+        Me.PictureBox83.TabStop = False
+        '
         'RadLabel29
         '
         resources.ApplyResources(Me.RadLabel29, "RadLabel29")
         Me.RadLabel29.Name = "RadLabel29"
+        '
+        'PictureBox84
+        '
+        resources.ApplyResources(Me.PictureBox84, "PictureBox84")
+        Me.PictureBox84.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox84.Name = "PictureBox84"
+        Me.PictureBox84.TabStop = False
         '
         'RadLabel30
         '
@@ -1022,6 +1036,13 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBetragNormallast.ReadOnly = True
         Me.RadTextBoxControlBetragNormallast.TabStop = False
         '
+        'PictureBox82
+        '
+        resources.ApplyResources(Me.PictureBox82, "PictureBox82")
+        Me.PictureBox82.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox82.Name = "PictureBox82"
+        Me.PictureBox82.TabStop = False
+        '
         'lblEFGSpeziallBerechnung
         '
         resources.ApplyResources(Me.lblEFGSpeziallBerechnung, "lblEFGSpeziallBerechnung")
@@ -1031,9 +1052,9 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         'Panel1
         '
+        resources.ApplyResources(Me.Panel1, "Panel1")
         Me.Panel1.Controls.Add(Me.RadTextBoxControlWeight1)
         Me.Panel1.Controls.Add(Me.RadTextBoxControlDisplayWeight1)
-        resources.ApplyResources(Me.Panel1, "Panel1")
         Me.Panel1.Name = "Panel1"
         '
         'RadTextBoxControlWeight1
@@ -1050,9 +1071,9 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         'Panel2
         '
+        resources.ApplyResources(Me.Panel2, "Panel2")
         Me.Panel2.Controls.Add(Me.RadTextBoxControlWeight2)
         Me.Panel2.Controls.Add(Me.RadTextBoxControlDisplayWeight2)
-        resources.ApplyResources(Me.Panel2, "Panel2")
         Me.Panel2.Name = "Panel2"
         '
         'RadTextBoxControlWeight2
@@ -1075,9 +1096,9 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         'Panel3
         '
+        resources.ApplyResources(Me.Panel3, "Panel3")
         Me.Panel3.Controls.Add(Me.RadTextBoxControlWeight3)
         Me.Panel3.Controls.Add(Me.RadTextBoxControlDisplayWeight3)
-        resources.ApplyResources(Me.Panel3, "Panel3")
         Me.Panel3.Name = "Panel3"
         '
         'RadTextBoxControlWeight3
@@ -1110,6 +1131,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         'RadGroupBoxPruefungAussermittigeBelastung
         '
+        resources.ApplyResources(Me.RadGroupBoxPruefungAussermittigeBelastung, "RadGroupBoxPruefungAussermittigeBelastung")
         Me.RadGroupBoxPruefungAussermittigeBelastung.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBoxPruefungAussermittigeBelastung.Controls.Add(Me.PictureBox10LC)
         Me.RadGroupBoxPruefungAussermittigeBelastung.Controls.Add(Me.PictureBox12LC)
@@ -1120,16 +1142,51 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadGroupBoxPruefungAussermittigeBelastung.Controls.Add(Me.RadGroupBoxBereich3)
         Me.RadGroupBoxPruefungAussermittigeBelastung.Controls.Add(Me.RadGroupBoxBereich2)
         Me.RadGroupBoxPruefungAussermittigeBelastung.Controls.Add(Me.RadGroupBoxBereich1)
-        resources.ApplyResources(Me.RadGroupBoxPruefungAussermittigeBelastung, "RadGroupBoxPruefungAussermittigeBelastung")
         Me.RadGroupBoxPruefungAussermittigeBelastung.Name = "RadGroupBoxPruefungAussermittigeBelastung"
+        '
+        'PictureBox10LC
+        '
+        resources.ApplyResources(Me.PictureBox10LC, "PictureBox10LC")
+        Me.PictureBox10LC.Image = Global.EichsoftwareClient.My.Resources.Resources.TenLCs
+        Me.PictureBox10LC.Name = "PictureBox10LC"
+        Me.PictureBox10LC.TabStop = False
+        '
+        'PictureBox12LC
+        '
+        resources.ApplyResources(Me.PictureBox12LC, "PictureBox12LC")
+        Me.PictureBox12LC.Image = Global.EichsoftwareClient.My.Resources.Resources.TwelveLCs
+        Me.PictureBox12LC.Name = "PictureBox12LC"
+        Me.PictureBox12LC.TabStop = False
         '
         'RadButtonShowEFG2
         '
         resources.ApplyResources(Me.RadButtonShowEFG2, "RadButtonShowEFG2")
         Me.RadButtonShowEFG2.Name = "RadButtonShowEFG2"
         '
+        'PictureBox8LC
+        '
+        resources.ApplyResources(Me.PictureBox8LC, "PictureBox8LC")
+        Me.PictureBox8LC.Image = Global.EichsoftwareClient.My.Resources.Resources.EightLCs
+        Me.PictureBox8LC.Name = "PictureBox8LC"
+        Me.PictureBox8LC.TabStop = False
+        '
+        'PictureBox6LC
+        '
+        resources.ApplyResources(Me.PictureBox6LC, "PictureBox6LC")
+        Me.PictureBox6LC.Image = Global.EichsoftwareClient.My.Resources.Resources.SixLCs
+        Me.PictureBox6LC.Name = "PictureBox6LC"
+        Me.PictureBox6LC.TabStop = False
+        '
+        'PictureBox4LC
+        '
+        resources.ApplyResources(Me.PictureBox4LC, "PictureBox4LC")
+        Me.PictureBox4LC.Image = Global.EichsoftwareClient.My.Resources.Resources.FourLCs
+        Me.PictureBox4LC.Name = "PictureBox4LC"
+        Me.PictureBox4LC.TabStop = False
+        '
         'RadGroupBoxBereich3
         '
+        resources.ApplyResources(Me.RadGroupBoxBereich3, "RadGroupBoxBereich3")
         Me.RadGroupBoxBereich3.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBoxBereich3.Controls.Add(Me.PictureBox81)
         Me.RadGroupBoxBereich3.Controls.Add(Me.lblBereich3EFGSpeziallBerechnung)
@@ -1150,8 +1207,14 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadGroupBoxBereich3.Controls.Add(Me.PanelBereich3WZ7)
         Me.RadGroupBoxBereich3.Controls.Add(Me.PanelBereich3WZ9)
         Me.RadGroupBoxBereich3.Controls.Add(Me.PanelBereich3WZ8)
-        resources.ApplyResources(Me.RadGroupBoxBereich3, "RadGroupBoxBereich3")
         Me.RadGroupBoxBereich3.Name = "RadGroupBoxBereich3"
+        '
+        'PictureBox81
+        '
+        resources.ApplyResources(Me.PictureBox81, "PictureBox81")
+        Me.PictureBox81.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox81.Name = "PictureBox81"
+        Me.PictureBox81.TabStop = False
         '
         'lblBereich3EFGSpeziallBerechnung
         '
@@ -1162,6 +1225,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         'PanelBereich3WZ1
         '
+        resources.ApplyResources(Me.PanelBereich3WZ1, "PanelBereich3WZ1")
         Me.PanelBereich3WZ1.Controls.Add(Me.Label30)
         Me.PanelBereich3WZ1.Controls.Add(Me.PictureBox77)
         Me.PanelBereich3WZ1.Controls.Add(Me.PictureBox78)
@@ -1170,14 +1234,27 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich3WZ1.Controls.Add(Me.RadTextBoxControlBereich3DisplayWeight1)
         Me.PanelBereich3WZ1.Controls.Add(Me.RadTextBoxControlBereich3ErrorLimit1)
         Me.PanelBereich3WZ1.Controls.Add(Me.RadCheckBoxBereich3VEL1)
-        resources.ApplyResources(Me.PanelBereich3WZ1, "PanelBereich3WZ1")
         Me.PanelBereich3WZ1.Name = "PanelBereich3WZ1"
         '
         'Label30
         '
-        Me.Label30.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label30, "Label30")
+        Me.Label30.ForeColor = System.Drawing.Color.Red
         Me.Label30.Name = "Label30"
+        '
+        'PictureBox77
+        '
+        resources.ApplyResources(Me.PictureBox77, "PictureBox77")
+        Me.PictureBox77.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox77.Name = "PictureBox77"
+        Me.PictureBox77.TabStop = False
+        '
+        'PictureBox78
+        '
+        resources.ApplyResources(Me.PictureBox78, "PictureBox78")
+        Me.PictureBox78.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox78.Name = "PictureBox78"
+        Me.PictureBox78.TabStop = False
         '
         'RadLabel46
         '
@@ -1212,6 +1289,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         'PanelBereich3WZ2
         '
+        resources.ApplyResources(Me.PanelBereich3WZ2, "PanelBereich3WZ2")
         Me.PanelBereich3WZ2.Controls.Add(Me.Label31)
         Me.PanelBereich3WZ2.Controls.Add(Me.PictureBox75)
         Me.PanelBereich3WZ2.Controls.Add(Me.PictureBox76)
@@ -1220,14 +1298,27 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich3WZ2.Controls.Add(Me.RadTextBoxControlBereich3DisplayWeight2)
         Me.PanelBereich3WZ2.Controls.Add(Me.RadTextBoxControlBereich3ErrorLimit2)
         Me.PanelBereich3WZ2.Controls.Add(Me.RadCheckBoxBereich3VEL2)
-        resources.ApplyResources(Me.PanelBereich3WZ2, "PanelBereich3WZ2")
         Me.PanelBereich3WZ2.Name = "PanelBereich3WZ2"
         '
         'Label31
         '
-        Me.Label31.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label31, "Label31")
+        Me.Label31.ForeColor = System.Drawing.Color.Red
         Me.Label31.Name = "Label31"
+        '
+        'PictureBox75
+        '
+        resources.ApplyResources(Me.PictureBox75, "PictureBox75")
+        Me.PictureBox75.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox75.Name = "PictureBox75"
+        Me.PictureBox75.TabStop = False
+        '
+        'PictureBox76
+        '
+        resources.ApplyResources(Me.PictureBox76, "PictureBox76")
+        Me.PictureBox76.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox76.Name = "PictureBox76"
+        Me.PictureBox76.TabStop = False
         '
         'RadLabel45
         '
@@ -1273,6 +1364,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         'PanelBereich3WZ3
         '
+        resources.ApplyResources(Me.PanelBereich3WZ3, "PanelBereich3WZ3")
         Me.PanelBereich3WZ3.Controls.Add(Me.Label32)
         Me.PanelBereich3WZ3.Controls.Add(Me.PictureBox73)
         Me.PanelBereich3WZ3.Controls.Add(Me.PictureBox74)
@@ -1281,14 +1373,27 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich3WZ3.Controls.Add(Me.RadTextBoxControlBereich3DisplayWeight3)
         Me.PanelBereich3WZ3.Controls.Add(Me.RadTextBoxControlBereich3ErrorLimit3)
         Me.PanelBereich3WZ3.Controls.Add(Me.RadCheckBoxBereich3VEL3)
-        resources.ApplyResources(Me.PanelBereich3WZ3, "PanelBereich3WZ3")
         Me.PanelBereich3WZ3.Name = "PanelBereich3WZ3"
         '
         'Label32
         '
-        Me.Label32.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label32, "Label32")
+        Me.Label32.ForeColor = System.Drawing.Color.Red
         Me.Label32.Name = "Label32"
+        '
+        'PictureBox73
+        '
+        resources.ApplyResources(Me.PictureBox73, "PictureBox73")
+        Me.PictureBox73.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox73.Name = "PictureBox73"
+        Me.PictureBox73.TabStop = False
+        '
+        'PictureBox74
+        '
+        resources.ApplyResources(Me.PictureBox74, "PictureBox74")
+        Me.PictureBox74.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox74.Name = "PictureBox74"
+        Me.PictureBox74.TabStop = False
         '
         'RadLabel44
         '
@@ -1329,6 +1434,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         'PanelBereich3WZ4
         '
+        resources.ApplyResources(Me.PanelBereich3WZ4, "PanelBereich3WZ4")
         Me.PanelBereich3WZ4.Controls.Add(Me.Label33)
         Me.PanelBereich3WZ4.Controls.Add(Me.PictureBox71)
         Me.PanelBereich3WZ4.Controls.Add(Me.PictureBox72)
@@ -1337,14 +1443,27 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich3WZ4.Controls.Add(Me.RadTextBoxControlBereich3DisplayWeight4)
         Me.PanelBereich3WZ4.Controls.Add(Me.RadTextBoxControlBereich3ErrorLimit4)
         Me.PanelBereich3WZ4.Controls.Add(Me.RadCheckBoxBereich3VEL4)
-        resources.ApplyResources(Me.PanelBereich3WZ4, "PanelBereich3WZ4")
         Me.PanelBereich3WZ4.Name = "PanelBereich3WZ4"
         '
         'Label33
         '
-        Me.Label33.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label33, "Label33")
+        Me.Label33.ForeColor = System.Drawing.Color.Red
         Me.Label33.Name = "Label33"
+        '
+        'PictureBox71
+        '
+        resources.ApplyResources(Me.PictureBox71, "PictureBox71")
+        Me.PictureBox71.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox71.Name = "PictureBox71"
+        Me.PictureBox71.TabStop = False
+        '
+        'PictureBox72
+        '
+        resources.ApplyResources(Me.PictureBox72, "PictureBox72")
+        Me.PictureBox72.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox72.Name = "PictureBox72"
+        Me.PictureBox72.TabStop = False
         '
         'RadLabel43
         '
@@ -1390,6 +1509,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         'PanelBereich3WZ5
         '
+        resources.ApplyResources(Me.PanelBereich3WZ5, "PanelBereich3WZ5")
         Me.PanelBereich3WZ5.Controls.Add(Me.Label34)
         Me.PanelBereich3WZ5.Controls.Add(Me.PictureBox69)
         Me.PanelBereich3WZ5.Controls.Add(Me.PictureBox70)
@@ -1398,14 +1518,27 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich3WZ5.Controls.Add(Me.RadTextBoxControlBereich3DisplayWeight5)
         Me.PanelBereich3WZ5.Controls.Add(Me.RadTextBoxControlBereich3ErrorLimit5)
         Me.PanelBereich3WZ5.Controls.Add(Me.RadCheckBoxBereich3VEL5)
-        resources.ApplyResources(Me.PanelBereich3WZ5, "PanelBereich3WZ5")
         Me.PanelBereich3WZ5.Name = "PanelBereich3WZ5"
         '
         'Label34
         '
-        Me.Label34.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label34, "Label34")
+        Me.Label34.ForeColor = System.Drawing.Color.Red
         Me.Label34.Name = "Label34"
+        '
+        'PictureBox69
+        '
+        resources.ApplyResources(Me.PictureBox69, "PictureBox69")
+        Me.PictureBox69.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox69.Name = "PictureBox69"
+        Me.PictureBox69.TabStop = False
+        '
+        'PictureBox70
+        '
+        resources.ApplyResources(Me.PictureBox70, "PictureBox70")
+        Me.PictureBox70.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox70.Name = "PictureBox70"
+        Me.PictureBox70.TabStop = False
         '
         'RadLabel42
         '
@@ -1441,6 +1574,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         'PanelBereich3WZ12
         '
+        resources.ApplyResources(Me.PanelBereich3WZ12, "PanelBereich3WZ12")
         Me.PanelBereich3WZ12.Controls.Add(Me.Label41)
         Me.PanelBereich3WZ12.Controls.Add(Me.PictureBox55)
         Me.PanelBereich3WZ12.Controls.Add(Me.PictureBox56)
@@ -1449,14 +1583,27 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich3WZ12.Controls.Add(Me.RadTextBoxControlBereich3DisplayWeight12)
         Me.PanelBereich3WZ12.Controls.Add(Me.RadTextBoxControlBereich3ErrorLimit12)
         Me.PanelBereich3WZ12.Controls.Add(Me.RadCheckBoxBereich3VEL12)
-        resources.ApplyResources(Me.PanelBereich3WZ12, "PanelBereich3WZ12")
         Me.PanelBereich3WZ12.Name = "PanelBereich3WZ12"
         '
         'Label41
         '
-        Me.Label41.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label41, "Label41")
+        Me.Label41.ForeColor = System.Drawing.Color.Red
         Me.Label41.Name = "Label41"
+        '
+        'PictureBox55
+        '
+        resources.ApplyResources(Me.PictureBox55, "PictureBox55")
+        Me.PictureBox55.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox55.Name = "PictureBox55"
+        Me.PictureBox55.TabStop = False
+        '
+        'PictureBox56
+        '
+        resources.ApplyResources(Me.PictureBox56, "PictureBox56")
+        Me.PictureBox56.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox56.Name = "PictureBox56"
+        Me.PictureBox56.TabStop = False
         '
         'RadLabel35
         '
@@ -1492,6 +1639,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         'PanelBereich3WZ11
         '
+        resources.ApplyResources(Me.PanelBereich3WZ11, "PanelBereich3WZ11")
         Me.PanelBereich3WZ11.Controls.Add(Me.Label40)
         Me.PanelBereich3WZ11.Controls.Add(Me.PictureBox57)
         Me.PanelBereich3WZ11.Controls.Add(Me.PictureBox58)
@@ -1500,14 +1648,27 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich3WZ11.Controls.Add(Me.RadTextBoxControlBereich3DisplayWeight11)
         Me.PanelBereich3WZ11.Controls.Add(Me.RadTextBoxControlBereich3ErrorLimit11)
         Me.PanelBereich3WZ11.Controls.Add(Me.RadCheckBoxBereich3VEL11)
-        resources.ApplyResources(Me.PanelBereich3WZ11, "PanelBereich3WZ11")
         Me.PanelBereich3WZ11.Name = "PanelBereich3WZ11"
         '
         'Label40
         '
-        Me.Label40.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label40, "Label40")
+        Me.Label40.ForeColor = System.Drawing.Color.Red
         Me.Label40.Name = "Label40"
+        '
+        'PictureBox57
+        '
+        resources.ApplyResources(Me.PictureBox57, "PictureBox57")
+        Me.PictureBox57.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox57.Name = "PictureBox57"
+        Me.PictureBox57.TabStop = False
+        '
+        'PictureBox58
+        '
+        resources.ApplyResources(Me.PictureBox58, "PictureBox58")
+        Me.PictureBox58.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox58.Name = "PictureBox58"
+        Me.PictureBox58.TabStop = False
         '
         'RadLabel36
         '
@@ -1543,6 +1704,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         'PanelBereich3WZ6
         '
+        resources.ApplyResources(Me.PanelBereich3WZ6, "PanelBereich3WZ6")
         Me.PanelBereich3WZ6.Controls.Add(Me.Label35)
         Me.PanelBereich3WZ6.Controls.Add(Me.PictureBox67)
         Me.PanelBereich3WZ6.Controls.Add(Me.PictureBox68)
@@ -1551,14 +1713,27 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich3WZ6.Controls.Add(Me.RadTextBoxControlBereich3DisplayWeight6)
         Me.PanelBereich3WZ6.Controls.Add(Me.RadTextBoxControlBereich3ErrorLimit6)
         Me.PanelBereich3WZ6.Controls.Add(Me.RadCheckBoxBereich3VEL6)
-        resources.ApplyResources(Me.PanelBereich3WZ6, "PanelBereich3WZ6")
         Me.PanelBereich3WZ6.Name = "PanelBereich3WZ6"
         '
         'Label35
         '
-        Me.Label35.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label35, "Label35")
+        Me.Label35.ForeColor = System.Drawing.Color.Red
         Me.Label35.Name = "Label35"
+        '
+        'PictureBox67
+        '
+        resources.ApplyResources(Me.PictureBox67, "PictureBox67")
+        Me.PictureBox67.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox67.Name = "PictureBox67"
+        Me.PictureBox67.TabStop = False
+        '
+        'PictureBox68
+        '
+        resources.ApplyResources(Me.PictureBox68, "PictureBox68")
+        Me.PictureBox68.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox68.Name = "PictureBox68"
+        Me.PictureBox68.TabStop = False
         '
         'RadLabel41
         '
@@ -1594,6 +1769,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         'PanelBereich3WZ10
         '
+        resources.ApplyResources(Me.PanelBereich3WZ10, "PanelBereich3WZ10")
         Me.PanelBereich3WZ10.Controls.Add(Me.Label39)
         Me.PanelBereich3WZ10.Controls.Add(Me.PictureBox59)
         Me.PanelBereich3WZ10.Controls.Add(Me.PictureBox60)
@@ -1602,14 +1778,27 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich3WZ10.Controls.Add(Me.RadTextBoxControlBereich3DisplayWeight10)
         Me.PanelBereich3WZ10.Controls.Add(Me.RadTextBoxControlBereich3ErrorLimit10)
         Me.PanelBereich3WZ10.Controls.Add(Me.RadCheckBoxBereich3VEL10)
-        resources.ApplyResources(Me.PanelBereich3WZ10, "PanelBereich3WZ10")
         Me.PanelBereich3WZ10.Name = "PanelBereich3WZ10"
         '
         'Label39
         '
-        Me.Label39.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label39, "Label39")
+        Me.Label39.ForeColor = System.Drawing.Color.Red
         Me.Label39.Name = "Label39"
+        '
+        'PictureBox59
+        '
+        resources.ApplyResources(Me.PictureBox59, "PictureBox59")
+        Me.PictureBox59.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox59.Name = "PictureBox59"
+        Me.PictureBox59.TabStop = False
+        '
+        'PictureBox60
+        '
+        resources.ApplyResources(Me.PictureBox60, "PictureBox60")
+        Me.PictureBox60.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox60.Name = "PictureBox60"
+        Me.PictureBox60.TabStop = False
         '
         'RadLabel37
         '
@@ -1645,6 +1834,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         'PanelBereich3WZ7
         '
+        resources.ApplyResources(Me.PanelBereich3WZ7, "PanelBereich3WZ7")
         Me.PanelBereich3WZ7.Controls.Add(Me.Label36)
         Me.PanelBereich3WZ7.Controls.Add(Me.PictureBox65)
         Me.PanelBereich3WZ7.Controls.Add(Me.PictureBox66)
@@ -1653,14 +1843,27 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich3WZ7.Controls.Add(Me.RadTextBoxControlBereich3DisplayWeight7)
         Me.PanelBereich3WZ7.Controls.Add(Me.RadTextBoxControlBereich3ErrorLimit7)
         Me.PanelBereich3WZ7.Controls.Add(Me.RadCheckBoxBereich3VEL7)
-        resources.ApplyResources(Me.PanelBereich3WZ7, "PanelBereich3WZ7")
         Me.PanelBereich3WZ7.Name = "PanelBereich3WZ7"
         '
         'Label36
         '
-        Me.Label36.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label36, "Label36")
+        Me.Label36.ForeColor = System.Drawing.Color.Red
         Me.Label36.Name = "Label36"
+        '
+        'PictureBox65
+        '
+        resources.ApplyResources(Me.PictureBox65, "PictureBox65")
+        Me.PictureBox65.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox65.Name = "PictureBox65"
+        Me.PictureBox65.TabStop = False
+        '
+        'PictureBox66
+        '
+        resources.ApplyResources(Me.PictureBox66, "PictureBox66")
+        Me.PictureBox66.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox66.Name = "PictureBox66"
+        Me.PictureBox66.TabStop = False
         '
         'RadLabel40
         '
@@ -1696,6 +1899,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         'PanelBereich3WZ9
         '
+        resources.ApplyResources(Me.PanelBereich3WZ9, "PanelBereich3WZ9")
         Me.PanelBereich3WZ9.Controls.Add(Me.Label38)
         Me.PanelBereich3WZ9.Controls.Add(Me.PictureBox61)
         Me.PanelBereich3WZ9.Controls.Add(Me.PictureBox62)
@@ -1704,14 +1908,27 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich3WZ9.Controls.Add(Me.RadTextBoxControlBereich3DisplayWeight9)
         Me.PanelBereich3WZ9.Controls.Add(Me.RadTextBoxControlBereich3ErrorLimit9)
         Me.PanelBereich3WZ9.Controls.Add(Me.RadCheckBoxBereich3VEL9)
-        resources.ApplyResources(Me.PanelBereich3WZ9, "PanelBereich3WZ9")
         Me.PanelBereich3WZ9.Name = "PanelBereich3WZ9"
         '
         'Label38
         '
-        Me.Label38.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label38, "Label38")
+        Me.Label38.ForeColor = System.Drawing.Color.Red
         Me.Label38.Name = "Label38"
+        '
+        'PictureBox61
+        '
+        resources.ApplyResources(Me.PictureBox61, "PictureBox61")
+        Me.PictureBox61.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox61.Name = "PictureBox61"
+        Me.PictureBox61.TabStop = False
+        '
+        'PictureBox62
+        '
+        resources.ApplyResources(Me.PictureBox62, "PictureBox62")
+        Me.PictureBox62.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox62.Name = "PictureBox62"
+        Me.PictureBox62.TabStop = False
         '
         'RadLabel38
         '
@@ -1747,6 +1964,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         'PanelBereich3WZ8
         '
+        resources.ApplyResources(Me.PanelBereich3WZ8, "PanelBereich3WZ8")
         Me.PanelBereich3WZ8.Controls.Add(Me.Label37)
         Me.PanelBereich3WZ8.Controls.Add(Me.PictureBox63)
         Me.PanelBereich3WZ8.Controls.Add(Me.PictureBox64)
@@ -1755,14 +1973,27 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich3WZ8.Controls.Add(Me.RadTextBoxControlBereich3DisplayWeight8)
         Me.PanelBereich3WZ8.Controls.Add(Me.RadTextBoxControlBereich3ErrorLimit8)
         Me.PanelBereich3WZ8.Controls.Add(Me.RadCheckBoxBereich3VEL8)
-        resources.ApplyResources(Me.PanelBereich3WZ8, "PanelBereich3WZ8")
         Me.PanelBereich3WZ8.Name = "PanelBereich3WZ8"
         '
         'Label37
         '
-        Me.Label37.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label37, "Label37")
+        Me.Label37.ForeColor = System.Drawing.Color.Red
         Me.Label37.Name = "Label37"
+        '
+        'PictureBox63
+        '
+        resources.ApplyResources(Me.PictureBox63, "PictureBox63")
+        Me.PictureBox63.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox63.Name = "PictureBox63"
+        Me.PictureBox63.TabStop = False
+        '
+        'PictureBox64
+        '
+        resources.ApplyResources(Me.PictureBox64, "PictureBox64")
+        Me.PictureBox64.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox64.Name = "PictureBox64"
+        Me.PictureBox64.TabStop = False
         '
         'RadLabel39
         '
@@ -1798,6 +2029,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         'RadGroupBoxBereich2
         '
+        resources.ApplyResources(Me.RadGroupBoxBereich2, "RadGroupBoxBereich2")
         Me.RadGroupBoxBereich2.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBoxBereich2.Controls.Add(Me.PictureBox80)
         Me.RadGroupBoxBereich2.Controls.Add(Me.lblBereich2EFGSpeziallBerechnung)
@@ -1818,8 +2050,14 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadGroupBoxBereich2.Controls.Add(Me.PanelBereich2WZ6)
         Me.RadGroupBoxBereich2.Controls.Add(Me.PanelBereich2WZ8)
         Me.RadGroupBoxBereich2.Controls.Add(Me.PanelBereich2WZ7)
-        resources.ApplyResources(Me.RadGroupBoxBereich2, "RadGroupBoxBereich2")
         Me.RadGroupBoxBereich2.Name = "RadGroupBoxBereich2"
+        '
+        'PictureBox80
+        '
+        resources.ApplyResources(Me.PictureBox80, "PictureBox80")
+        Me.PictureBox80.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox80.Name = "PictureBox80"
+        Me.PictureBox80.TabStop = False
         '
         'lblBereich2EFGSpeziallBerechnung
         '
@@ -1830,6 +2068,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         'PanelBereich2WZ1
         '
+        resources.ApplyResources(Me.PanelBereich2WZ1, "PanelBereich2WZ1")
         Me.PanelBereich2WZ1.Controls.Add(Me.Label17)
         Me.PanelBereich2WZ1.Controls.Add(Me.PictureBox29)
         Me.PanelBereich2WZ1.Controls.Add(Me.PictureBox30)
@@ -1838,14 +2077,27 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich2WZ1.Controls.Add(Me.RadTextBoxControlBereich2DisplayWeight1)
         Me.PanelBereich2WZ1.Controls.Add(Me.RadTextBoxControlBereich2ErrorLimit1)
         Me.PanelBereich2WZ1.Controls.Add(Me.RadCheckBoxBereich2VEL1)
-        resources.ApplyResources(Me.PanelBereich2WZ1, "PanelBereich2WZ1")
         Me.PanelBereich2WZ1.Name = "PanelBereich2WZ1"
         '
         'Label17
         '
-        Me.Label17.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label17, "Label17")
+        Me.Label17.ForeColor = System.Drawing.Color.Red
         Me.Label17.Name = "Label17"
+        '
+        'PictureBox29
+        '
+        resources.ApplyResources(Me.PictureBox29, "PictureBox29")
+        Me.PictureBox29.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox29.Name = "PictureBox29"
+        Me.PictureBox29.TabStop = False
+        '
+        'PictureBox30
+        '
+        resources.ApplyResources(Me.PictureBox30, "PictureBox30")
+        Me.PictureBox30.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox30.Name = "PictureBox30"
+        Me.PictureBox30.TabStop = False
         '
         'RadLabel27
         '
@@ -1890,6 +2142,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         'PanelBereich2WZ2
         '
+        resources.ApplyResources(Me.PanelBereich2WZ2, "PanelBereich2WZ2")
         Me.PanelBereich2WZ2.Controls.Add(Me.Label18)
         Me.PanelBereich2WZ2.Controls.Add(Me.PictureBox31)
         Me.PanelBereich2WZ2.Controls.Add(Me.PictureBox32)
@@ -1898,14 +2151,27 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich2WZ2.Controls.Add(Me.RadTextBoxControlBereich2DisplayWeight2)
         Me.PanelBereich2WZ2.Controls.Add(Me.RadTextBoxControlBereich2ErrorLimit2)
         Me.PanelBereich2WZ2.Controls.Add(Me.RadCheckBoxBereich2VEL2)
-        resources.ApplyResources(Me.PanelBereich2WZ2, "PanelBereich2WZ2")
         Me.PanelBereich2WZ2.Name = "PanelBereich2WZ2"
         '
         'Label18
         '
-        Me.Label18.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label18, "Label18")
+        Me.Label18.ForeColor = System.Drawing.Color.Red
         Me.Label18.Name = "Label18"
+        '
+        'PictureBox31
+        '
+        resources.ApplyResources(Me.PictureBox31, "PictureBox31")
+        Me.PictureBox31.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox31.Name = "PictureBox31"
+        Me.PictureBox31.TabStop = False
+        '
+        'PictureBox32
+        '
+        resources.ApplyResources(Me.PictureBox32, "PictureBox32")
+        Me.PictureBox32.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox32.Name = "PictureBox32"
+        Me.PictureBox32.TabStop = False
         '
         'RadLabel26
         '
@@ -1946,6 +2212,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         'PanelBereich2WZ3
         '
+        resources.ApplyResources(Me.PanelBereich2WZ3, "PanelBereich2WZ3")
         Me.PanelBereich2WZ3.Controls.Add(Me.Label19)
         Me.PanelBereich2WZ3.Controls.Add(Me.PictureBox33)
         Me.PanelBereich2WZ3.Controls.Add(Me.PictureBox34)
@@ -1954,14 +2221,27 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich2WZ3.Controls.Add(Me.RadTextBoxControlBereich2DisplayWeight3)
         Me.PanelBereich2WZ3.Controls.Add(Me.RadTextBoxControlBereich2ErrorLimit3)
         Me.PanelBereich2WZ3.Controls.Add(Me.RadCheckBoxBereich2VEL3)
-        resources.ApplyResources(Me.PanelBereich2WZ3, "PanelBereich2WZ3")
         Me.PanelBereich2WZ3.Name = "PanelBereich2WZ3"
         '
         'Label19
         '
-        Me.Label19.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label19, "Label19")
+        Me.Label19.ForeColor = System.Drawing.Color.Red
         Me.Label19.Name = "Label19"
+        '
+        'PictureBox33
+        '
+        resources.ApplyResources(Me.PictureBox33, "PictureBox33")
+        Me.PictureBox33.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox33.Name = "PictureBox33"
+        Me.PictureBox33.TabStop = False
+        '
+        'PictureBox34
+        '
+        resources.ApplyResources(Me.PictureBox34, "PictureBox34")
+        Me.PictureBox34.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox34.Name = "PictureBox34"
+        Me.PictureBox34.TabStop = False
         '
         'RadLabel25
         '
@@ -2007,6 +2287,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         'PanelBereich2WZ4
         '
+        resources.ApplyResources(Me.PanelBereich2WZ4, "PanelBereich2WZ4")
         Me.PanelBereich2WZ4.Controls.Add(Me.Label20)
         Me.PanelBereich2WZ4.Controls.Add(Me.PictureBox35)
         Me.PanelBereich2WZ4.Controls.Add(Me.PictureBox36)
@@ -2015,14 +2296,27 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich2WZ4.Controls.Add(Me.RadTextBoxControlBereich2DisplayWeight4)
         Me.PanelBereich2WZ4.Controls.Add(Me.RadTextBoxControlBereich2ErrorLimit4)
         Me.PanelBereich2WZ4.Controls.Add(Me.RadCheckBoxBereich2VEL4)
-        resources.ApplyResources(Me.PanelBereich2WZ4, "PanelBereich2WZ4")
         Me.PanelBereich2WZ4.Name = "PanelBereich2WZ4"
         '
         'Label20
         '
-        Me.Label20.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label20, "Label20")
+        Me.Label20.ForeColor = System.Drawing.Color.Red
         Me.Label20.Name = "Label20"
+        '
+        'PictureBox35
+        '
+        resources.ApplyResources(Me.PictureBox35, "PictureBox35")
+        Me.PictureBox35.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox35.Name = "PictureBox35"
+        Me.PictureBox35.TabStop = False
+        '
+        'PictureBox36
+        '
+        resources.ApplyResources(Me.PictureBox36, "PictureBox36")
+        Me.PictureBox36.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox36.Name = "PictureBox36"
+        Me.PictureBox36.TabStop = False
         '
         'RadLabel24
         '
@@ -2058,6 +2352,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         'PanelBereich2WZ11
         '
+        resources.ApplyResources(Me.PanelBereich2WZ11, "PanelBereich2WZ11")
         Me.PanelBereich2WZ11.Controls.Add(Me.Label27)
         Me.PanelBereich2WZ11.Controls.Add(Me.PictureBox49)
         Me.PanelBereich2WZ11.Controls.Add(Me.PictureBox50)
@@ -2066,14 +2361,27 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich2WZ11.Controls.Add(Me.RadTextBoxControlBereich2DisplayWeight11)
         Me.PanelBereich2WZ11.Controls.Add(Me.RadTextBoxControlBereich2ErrorLimit11)
         Me.PanelBereich2WZ11.Controls.Add(Me.RadCheckBoxBereich2VEL11)
-        resources.ApplyResources(Me.PanelBereich2WZ11, "PanelBereich2WZ11")
         Me.PanelBereich2WZ11.Name = "PanelBereich2WZ11"
         '
         'Label27
         '
-        Me.Label27.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label27, "Label27")
+        Me.Label27.ForeColor = System.Drawing.Color.Red
         Me.Label27.Name = "Label27"
+        '
+        'PictureBox49
+        '
+        resources.ApplyResources(Me.PictureBox49, "PictureBox49")
+        Me.PictureBox49.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox49.Name = "PictureBox49"
+        Me.PictureBox49.TabStop = False
+        '
+        'PictureBox50
+        '
+        resources.ApplyResources(Me.PictureBox50, "PictureBox50")
+        Me.PictureBox50.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox50.Name = "PictureBox50"
+        Me.PictureBox50.TabStop = False
         '
         'RadLabel17
         '
@@ -2109,6 +2417,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         'PanelBereich2WZ10
         '
+        resources.ApplyResources(Me.PanelBereich2WZ10, "PanelBereich2WZ10")
         Me.PanelBereich2WZ10.Controls.Add(Me.Label26)
         Me.PanelBereich2WZ10.Controls.Add(Me.PictureBox47)
         Me.PanelBereich2WZ10.Controls.Add(Me.PictureBox48)
@@ -2117,14 +2426,27 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich2WZ10.Controls.Add(Me.RadTextBoxControlBereich2DisplayWeight10)
         Me.PanelBereich2WZ10.Controls.Add(Me.RadTextBoxControlBereich2ErrorLimit10)
         Me.PanelBereich2WZ10.Controls.Add(Me.RadCheckBoxBereich2VEL10)
-        resources.ApplyResources(Me.PanelBereich2WZ10, "PanelBereich2WZ10")
         Me.PanelBereich2WZ10.Name = "PanelBereich2WZ10"
         '
         'Label26
         '
-        Me.Label26.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label26, "Label26")
+        Me.Label26.ForeColor = System.Drawing.Color.Red
         Me.Label26.Name = "Label26"
+        '
+        'PictureBox47
+        '
+        resources.ApplyResources(Me.PictureBox47, "PictureBox47")
+        Me.PictureBox47.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox47.Name = "PictureBox47"
+        Me.PictureBox47.TabStop = False
+        '
+        'PictureBox48
+        '
+        resources.ApplyResources(Me.PictureBox48, "PictureBox48")
+        Me.PictureBox48.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox48.Name = "PictureBox48"
+        Me.PictureBox48.TabStop = False
         '
         'RadLabel18
         '
@@ -2160,6 +2482,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         'PanelBereich2WZ5
         '
+        resources.ApplyResources(Me.PanelBereich2WZ5, "PanelBereich2WZ5")
         Me.PanelBereich2WZ5.Controls.Add(Me.Label21)
         Me.PanelBereich2WZ5.Controls.Add(Me.PictureBox37)
         Me.PanelBereich2WZ5.Controls.Add(Me.PictureBox38)
@@ -2168,14 +2491,27 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich2WZ5.Controls.Add(Me.RadTextBoxControlBereich2DisplayWeight5)
         Me.PanelBereich2WZ5.Controls.Add(Me.RadTextBoxControlBereich2ErrorLimit5)
         Me.PanelBereich2WZ5.Controls.Add(Me.RadCheckBoxBereich2VEL5)
-        resources.ApplyResources(Me.PanelBereich2WZ5, "PanelBereich2WZ5")
         Me.PanelBereich2WZ5.Name = "PanelBereich2WZ5"
         '
         'Label21
         '
-        Me.Label21.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label21, "Label21")
+        Me.Label21.ForeColor = System.Drawing.Color.Red
         Me.Label21.Name = "Label21"
+        '
+        'PictureBox37
+        '
+        resources.ApplyResources(Me.PictureBox37, "PictureBox37")
+        Me.PictureBox37.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox37.Name = "PictureBox37"
+        Me.PictureBox37.TabStop = False
+        '
+        'PictureBox38
+        '
+        resources.ApplyResources(Me.PictureBox38, "PictureBox38")
+        Me.PictureBox38.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox38.Name = "PictureBox38"
+        Me.PictureBox38.TabStop = False
         '
         'RadLabel23
         '
@@ -2211,6 +2547,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         'PanelBereich2WZ12
         '
+        resources.ApplyResources(Me.PanelBereich2WZ12, "PanelBereich2WZ12")
         Me.PanelBereich2WZ12.Controls.Add(Me.Label28)
         Me.PanelBereich2WZ12.Controls.Add(Me.PictureBox51)
         Me.PanelBereich2WZ12.Controls.Add(Me.PictureBox52)
@@ -2219,14 +2556,27 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich2WZ12.Controls.Add(Me.RadTextBoxControlBereich2DisplayWeight12)
         Me.PanelBereich2WZ12.Controls.Add(Me.RadTextBoxControlBereich2ErrorLimit12)
         Me.PanelBereich2WZ12.Controls.Add(Me.RadCheckBoxBereich2VEL12)
-        resources.ApplyResources(Me.PanelBereich2WZ12, "PanelBereich2WZ12")
         Me.PanelBereich2WZ12.Name = "PanelBereich2WZ12"
         '
         'Label28
         '
-        Me.Label28.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label28, "Label28")
+        Me.Label28.ForeColor = System.Drawing.Color.Red
         Me.Label28.Name = "Label28"
+        '
+        'PictureBox51
+        '
+        resources.ApplyResources(Me.PictureBox51, "PictureBox51")
+        Me.PictureBox51.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox51.Name = "PictureBox51"
+        Me.PictureBox51.TabStop = False
+        '
+        'PictureBox52
+        '
+        resources.ApplyResources(Me.PictureBox52, "PictureBox52")
+        Me.PictureBox52.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox52.Name = "PictureBox52"
+        Me.PictureBox52.TabStop = False
         '
         'RadLabel16
         '
@@ -2262,6 +2612,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         'PanelBereich2WZ9
         '
+        resources.ApplyResources(Me.PanelBereich2WZ9, "PanelBereich2WZ9")
         Me.PanelBereich2WZ9.Controls.Add(Me.Label25)
         Me.PanelBereich2WZ9.Controls.Add(Me.PictureBox45)
         Me.PanelBereich2WZ9.Controls.Add(Me.PictureBox46)
@@ -2270,14 +2621,27 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich2WZ9.Controls.Add(Me.RadTextBoxControlBereich2DisplayWeight9)
         Me.PanelBereich2WZ9.Controls.Add(Me.RadTextBoxControlBereich2ErrorLimit9)
         Me.PanelBereich2WZ9.Controls.Add(Me.RadCheckBoxBereich2VEL9)
-        resources.ApplyResources(Me.PanelBereich2WZ9, "PanelBereich2WZ9")
         Me.PanelBereich2WZ9.Name = "PanelBereich2WZ9"
         '
         'Label25
         '
-        Me.Label25.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label25, "Label25")
+        Me.Label25.ForeColor = System.Drawing.Color.Red
         Me.Label25.Name = "Label25"
+        '
+        'PictureBox45
+        '
+        resources.ApplyResources(Me.PictureBox45, "PictureBox45")
+        Me.PictureBox45.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox45.Name = "PictureBox45"
+        Me.PictureBox45.TabStop = False
+        '
+        'PictureBox46
+        '
+        resources.ApplyResources(Me.PictureBox46, "PictureBox46")
+        Me.PictureBox46.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox46.Name = "PictureBox46"
+        Me.PictureBox46.TabStop = False
         '
         'RadLabel19
         '
@@ -2313,6 +2677,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         'PanelBereich2WZ6
         '
+        resources.ApplyResources(Me.PanelBereich2WZ6, "PanelBereich2WZ6")
         Me.PanelBereich2WZ6.Controls.Add(Me.Label22)
         Me.PanelBereich2WZ6.Controls.Add(Me.PictureBox39)
         Me.PanelBereich2WZ6.Controls.Add(Me.PictureBox40)
@@ -2321,14 +2686,27 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich2WZ6.Controls.Add(Me.RadTextBoxControlBereich2DisplayWeight6)
         Me.PanelBereich2WZ6.Controls.Add(Me.RadTextBoxControlBereich2ErrorLimit6)
         Me.PanelBereich2WZ6.Controls.Add(Me.RadCheckBoxBereich2VEL6)
-        resources.ApplyResources(Me.PanelBereich2WZ6, "PanelBereich2WZ6")
         Me.PanelBereich2WZ6.Name = "PanelBereich2WZ6"
         '
         'Label22
         '
-        Me.Label22.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label22, "Label22")
+        Me.Label22.ForeColor = System.Drawing.Color.Red
         Me.Label22.Name = "Label22"
+        '
+        'PictureBox39
+        '
+        resources.ApplyResources(Me.PictureBox39, "PictureBox39")
+        Me.PictureBox39.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox39.Name = "PictureBox39"
+        Me.PictureBox39.TabStop = False
+        '
+        'PictureBox40
+        '
+        resources.ApplyResources(Me.PictureBox40, "PictureBox40")
+        Me.PictureBox40.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox40.Name = "PictureBox40"
+        Me.PictureBox40.TabStop = False
         '
         'RadLabel22
         '
@@ -2364,6 +2742,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         'PanelBereich2WZ8
         '
+        resources.ApplyResources(Me.PanelBereich2WZ8, "PanelBereich2WZ8")
         Me.PanelBereich2WZ8.Controls.Add(Me.Label24)
         Me.PanelBereich2WZ8.Controls.Add(Me.PictureBox43)
         Me.PanelBereich2WZ8.Controls.Add(Me.PictureBox44)
@@ -2372,14 +2751,27 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich2WZ8.Controls.Add(Me.RadTextBoxControlBereich2DisplayWeight8)
         Me.PanelBereich2WZ8.Controls.Add(Me.RadTextBoxControlBereich2ErrorLimit8)
         Me.PanelBereich2WZ8.Controls.Add(Me.RadCheckBoxBereich2VEL8)
-        resources.ApplyResources(Me.PanelBereich2WZ8, "PanelBereich2WZ8")
         Me.PanelBereich2WZ8.Name = "PanelBereich2WZ8"
         '
         'Label24
         '
-        Me.Label24.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label24, "Label24")
+        Me.Label24.ForeColor = System.Drawing.Color.Red
         Me.Label24.Name = "Label24"
+        '
+        'PictureBox43
+        '
+        resources.ApplyResources(Me.PictureBox43, "PictureBox43")
+        Me.PictureBox43.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox43.Name = "PictureBox43"
+        Me.PictureBox43.TabStop = False
+        '
+        'PictureBox44
+        '
+        resources.ApplyResources(Me.PictureBox44, "PictureBox44")
+        Me.PictureBox44.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox44.Name = "PictureBox44"
+        Me.PictureBox44.TabStop = False
         '
         'RadLabel20
         '
@@ -2415,6 +2807,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         'PanelBereich2WZ7
         '
+        resources.ApplyResources(Me.PanelBereich2WZ7, "PanelBereich2WZ7")
         Me.PanelBereich2WZ7.Controls.Add(Me.Label23)
         Me.PanelBereich2WZ7.Controls.Add(Me.PictureBox41)
         Me.PanelBereich2WZ7.Controls.Add(Me.PictureBox42)
@@ -2423,14 +2816,27 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich2WZ7.Controls.Add(Me.RadTextBoxControlBereich2DisplayWeight7)
         Me.PanelBereich2WZ7.Controls.Add(Me.RadTextBoxControlBereich2ErrorLimit7)
         Me.PanelBereich2WZ7.Controls.Add(Me.RadCheckBoxBereich2VEL7)
-        resources.ApplyResources(Me.PanelBereich2WZ7, "PanelBereich2WZ7")
         Me.PanelBereich2WZ7.Name = "PanelBereich2WZ7"
         '
         'Label23
         '
-        Me.Label23.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label23, "Label23")
+        Me.Label23.ForeColor = System.Drawing.Color.Red
         Me.Label23.Name = "Label23"
+        '
+        'PictureBox41
+        '
+        resources.ApplyResources(Me.PictureBox41, "PictureBox41")
+        Me.PictureBox41.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox41.Name = "PictureBox41"
+        Me.PictureBox41.TabStop = False
+        '
+        'PictureBox42
+        '
+        resources.ApplyResources(Me.PictureBox42, "PictureBox42")
+        Me.PictureBox42.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox42.Name = "PictureBox42"
+        Me.PictureBox42.TabStop = False
         '
         'RadLabel21
         '
@@ -2466,6 +2872,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         'RadGroupBoxBereich1
         '
+        resources.ApplyResources(Me.RadGroupBoxBereich1, "RadGroupBoxBereich1")
         Me.RadGroupBoxBereich1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBoxBereich1.Controls.Add(Me.PictureBox79)
         Me.RadGroupBoxBereich1.Controls.Add(Me.lblBereich1EFGSpeziallBerechnung)
@@ -2487,8 +2894,14 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadGroupBoxBereich1.Controls.Add(Me.PanelBereich1WZ7)
         Me.RadGroupBoxBereich1.Controls.Add(Me.PanelBereich1WZ9)
         Me.RadGroupBoxBereich1.Controls.Add(Me.PanelBereich1WZ8)
-        resources.ApplyResources(Me.RadGroupBoxBereich1, "RadGroupBoxBereich1")
         Me.RadGroupBoxBereich1.Name = "RadGroupBoxBereich1"
+        '
+        'PictureBox79
+        '
+        resources.ApplyResources(Me.PictureBox79, "PictureBox79")
+        Me.PictureBox79.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox79.Name = "PictureBox79"
+        Me.PictureBox79.TabStop = False
         '
         'lblBereich1EFGSpeziallBerechnung
         '
@@ -2499,6 +2912,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         'PanelBereich1WZ1
         '
+        resources.ApplyResources(Me.PanelBereich1WZ1, "PanelBereich1WZ1")
         Me.PanelBereich1WZ1.Controls.Add(Me.Label4)
         Me.PanelBereich1WZ1.Controls.Add(Me.PictureBox1)
         Me.PanelBereich1WZ1.Controls.Add(Me.PictureBox2)
@@ -2507,14 +2921,27 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich1WZ1.Controls.Add(Me.RadTextBoxControlBereich1DisplayWeight1)
         Me.PanelBereich1WZ1.Controls.Add(Me.RadTextBoxControlBereich1ErrorLimit1)
         Me.PanelBereich1WZ1.Controls.Add(Me.RadCheckBoxBereich1VEL1)
-        resources.ApplyResources(Me.PanelBereich1WZ1, "PanelBereich1WZ1")
         Me.PanelBereich1WZ1.Name = "PanelBereich1WZ1"
         '
         'Label4
         '
-        Me.Label4.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label4, "Label4")
+        Me.Label4.ForeColor = System.Drawing.Color.Red
         Me.Label4.Name = "Label4"
+        '
+        'PictureBox1
+        '
+        resources.ApplyResources(Me.PictureBox1, "PictureBox1")
+        Me.PictureBox1.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.TabStop = False
+        '
+        'PictureBox2
+        '
+        resources.ApplyResources(Me.PictureBox2, "PictureBox2")
+        Me.PictureBox2.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.TabStop = False
         '
         'RadLabel13
         '
@@ -2549,6 +2976,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         'PanelBereich1WZ2
         '
+        resources.ApplyResources(Me.PanelBereich1WZ2, "PanelBereich1WZ2")
         Me.PanelBereich1WZ2.Controls.Add(Me.Label5)
         Me.PanelBereich1WZ2.Controls.Add(Me.PictureBox3)
         Me.PanelBereich1WZ2.Controls.Add(Me.RadLabel2)
@@ -2557,19 +2985,32 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich1WZ2.Controls.Add(Me.RadTextBoxControlBereich1DisplayWeight2)
         Me.PanelBereich1WZ2.Controls.Add(Me.RadTextBoxControlBereich1ErrorLimit2)
         Me.PanelBereich1WZ2.Controls.Add(Me.RadCheckBoxBereich1VEL2)
-        resources.ApplyResources(Me.PanelBereich1WZ2, "PanelBereich1WZ2")
         Me.PanelBereich1WZ2.Name = "PanelBereich1WZ2"
         '
         'Label5
         '
-        Me.Label5.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label5, "Label5")
+        Me.Label5.ForeColor = System.Drawing.Color.Red
         Me.Label5.Name = "Label5"
+        '
+        'PictureBox3
+        '
+        resources.ApplyResources(Me.PictureBox3, "PictureBox3")
+        Me.PictureBox3.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.TabStop = False
         '
         'RadLabel2
         '
         resources.ApplyResources(Me.RadLabel2, "RadLabel2")
         Me.RadLabel2.Name = "RadLabel2"
+        '
+        'PictureBox4
+        '
+        resources.ApplyResources(Me.PictureBox4, "PictureBox4")
+        Me.PictureBox4.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.TabStop = False
         '
         'RadTextBoxControlBereich1Weight2
         '
@@ -2610,6 +3051,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         'PanelBereich1WZ3
         '
+        resources.ApplyResources(Me.PanelBereich1WZ3, "PanelBereich1WZ3")
         Me.PanelBereich1WZ3.Controls.Add(Me.Label6)
         Me.PanelBereich1WZ3.Controls.Add(Me.PictureBox5)
         Me.PanelBereich1WZ3.Controls.Add(Me.RadLabel4)
@@ -2618,19 +3060,32 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich1WZ3.Controls.Add(Me.RadTextBoxControlBereich1DisplayWeight3)
         Me.PanelBereich1WZ3.Controls.Add(Me.RadTextBoxControlBereich1ErrorLimit3)
         Me.PanelBereich1WZ3.Controls.Add(Me.RadCheckBoxBereich1VEL3)
-        resources.ApplyResources(Me.PanelBereich1WZ3, "PanelBereich1WZ3")
         Me.PanelBereich1WZ3.Name = "PanelBereich1WZ3"
         '
         'Label6
         '
-        Me.Label6.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label6, "Label6")
+        Me.Label6.ForeColor = System.Drawing.Color.Red
         Me.Label6.Name = "Label6"
+        '
+        'PictureBox5
+        '
+        resources.ApplyResources(Me.PictureBox5, "PictureBox5")
+        Me.PictureBox5.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.TabStop = False
         '
         'RadLabel4
         '
         resources.ApplyResources(Me.RadLabel4, "RadLabel4")
         Me.RadLabel4.Name = "RadLabel4"
+        '
+        'PictureBox6
+        '
+        resources.ApplyResources(Me.PictureBox6, "PictureBox6")
+        Me.PictureBox6.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.TabStop = False
         '
         'RadTextBoxControlBereich1Weight3
         '
@@ -2666,6 +3121,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         'PanelBereich1WZ4
         '
+        resources.ApplyResources(Me.PanelBereich1WZ4, "PanelBereich1WZ4")
         Me.PanelBereich1WZ4.Controls.Add(Me.Label7)
         Me.PanelBereich1WZ4.Controls.Add(Me.PictureBox7)
         Me.PanelBereich1WZ4.Controls.Add(Me.RadLabel5)
@@ -2674,19 +3130,32 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich1WZ4.Controls.Add(Me.RadTextBoxControlBereich1DisplayWeight4)
         Me.PanelBereich1WZ4.Controls.Add(Me.RadTextBoxControlBereich1ErrorLimit4)
         Me.PanelBereich1WZ4.Controls.Add(Me.RadCheckBoxBereich1VEL4)
-        resources.ApplyResources(Me.PanelBereich1WZ4, "PanelBereich1WZ4")
         Me.PanelBereich1WZ4.Name = "PanelBereich1WZ4"
         '
         'Label7
         '
-        Me.Label7.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label7, "Label7")
+        Me.Label7.ForeColor = System.Drawing.Color.Red
         Me.Label7.Name = "Label7"
+        '
+        'PictureBox7
+        '
+        resources.ApplyResources(Me.PictureBox7, "PictureBox7")
+        Me.PictureBox7.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox7.Name = "PictureBox7"
+        Me.PictureBox7.TabStop = False
         '
         'RadLabel5
         '
         resources.ApplyResources(Me.RadLabel5, "RadLabel5")
         Me.RadLabel5.Name = "RadLabel5"
+        '
+        'PictureBox8
+        '
+        resources.ApplyResources(Me.PictureBox8, "PictureBox8")
+        Me.PictureBox8.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox8.Name = "PictureBox8"
+        Me.PictureBox8.TabStop = False
         '
         'RadTextBoxControlBereich1Weight4
         '
@@ -2727,6 +3196,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         'PanelBereich1WZ5
         '
+        resources.ApplyResources(Me.PanelBereich1WZ5, "PanelBereich1WZ5")
         Me.PanelBereich1WZ5.Controls.Add(Me.Label8)
         Me.PanelBereich1WZ5.Controls.Add(Me.PictureBox9)
         Me.PanelBereich1WZ5.Controls.Add(Me.PictureBox10)
@@ -2735,14 +3205,27 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich1WZ5.Controls.Add(Me.RadTextBoxControlBereich1DisplayWeight5)
         Me.PanelBereich1WZ5.Controls.Add(Me.RadTextBoxControlBereich1ErrorLimit5)
         Me.PanelBereich1WZ5.Controls.Add(Me.RadCheckBoxBereich1VEL5)
-        resources.ApplyResources(Me.PanelBereich1WZ5, "PanelBereich1WZ5")
         Me.PanelBereich1WZ5.Name = "PanelBereich1WZ5"
         '
         'Label8
         '
-        Me.Label8.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label8, "Label8")
+        Me.Label8.ForeColor = System.Drawing.Color.Red
         Me.Label8.Name = "Label8"
+        '
+        'PictureBox9
+        '
+        resources.ApplyResources(Me.PictureBox9, "PictureBox9")
+        Me.PictureBox9.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox9.Name = "PictureBox9"
+        Me.PictureBox9.TabStop = False
+        '
+        'PictureBox10
+        '
+        resources.ApplyResources(Me.PictureBox10, "PictureBox10")
+        Me.PictureBox10.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox10.Name = "PictureBox10"
+        Me.PictureBox10.TabStop = False
         '
         'RadLabel6
         '
@@ -2778,6 +3261,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         'PanelBereich1WZ12
         '
+        resources.ApplyResources(Me.PanelBereich1WZ12, "PanelBereich1WZ12")
         Me.PanelBereich1WZ12.Controls.Add(Me.Label15)
         Me.PanelBereich1WZ12.Controls.Add(Me.PictureBox23)
         Me.PanelBereich1WZ12.Controls.Add(Me.PictureBox24)
@@ -2786,14 +3270,27 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich1WZ12.Controls.Add(Me.RadTextBoxControlBereich1DisplayWeight12)
         Me.PanelBereich1WZ12.Controls.Add(Me.RadTextBoxControlBereich1ErrorLimit12)
         Me.PanelBereich1WZ12.Controls.Add(Me.RadCheckBoxBereich1VEL12)
-        resources.ApplyResources(Me.PanelBereich1WZ12, "PanelBereich1WZ12")
         Me.PanelBereich1WZ12.Name = "PanelBereich1WZ12"
         '
         'Label15
         '
-        Me.Label15.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label15, "Label15")
+        Me.Label15.ForeColor = System.Drawing.Color.Red
         Me.Label15.Name = "Label15"
+        '
+        'PictureBox23
+        '
+        resources.ApplyResources(Me.PictureBox23, "PictureBox23")
+        Me.PictureBox23.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox23.Name = "PictureBox23"
+        Me.PictureBox23.TabStop = False
+        '
+        'PictureBox24
+        '
+        resources.ApplyResources(Me.PictureBox24, "PictureBox24")
+        Me.PictureBox24.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox24.Name = "PictureBox24"
+        Me.PictureBox24.TabStop = False
         '
         'RadLabel14
         '
@@ -2829,6 +3326,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         'PanelBereich1WZ11
         '
+        resources.ApplyResources(Me.PanelBereich1WZ11, "PanelBereich1WZ11")
         Me.PanelBereich1WZ11.Controls.Add(Me.Label14)
         Me.PanelBereich1WZ11.Controls.Add(Me.PictureBox21)
         Me.PanelBereich1WZ11.Controls.Add(Me.PictureBox22)
@@ -2837,14 +3335,27 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich1WZ11.Controls.Add(Me.RadTextBoxControlBereich1DisplayWeight11)
         Me.PanelBereich1WZ11.Controls.Add(Me.RadTextBoxControlBereich1ErrorLimit11)
         Me.PanelBereich1WZ11.Controls.Add(Me.RadCheckBoxBereich1VEL11)
-        resources.ApplyResources(Me.PanelBereich1WZ11, "PanelBereich1WZ11")
         Me.PanelBereich1WZ11.Name = "PanelBereich1WZ11"
         '
         'Label14
         '
-        Me.Label14.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label14, "Label14")
+        Me.Label14.ForeColor = System.Drawing.Color.Red
         Me.Label14.Name = "Label14"
+        '
+        'PictureBox21
+        '
+        resources.ApplyResources(Me.PictureBox21, "PictureBox21")
+        Me.PictureBox21.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox21.Name = "PictureBox21"
+        Me.PictureBox21.TabStop = False
+        '
+        'PictureBox22
+        '
+        resources.ApplyResources(Me.PictureBox22, "PictureBox22")
+        Me.PictureBox22.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox22.Name = "PictureBox22"
+        Me.PictureBox22.TabStop = False
         '
         'RadLabel12
         '
@@ -2880,6 +3391,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         'PanelBereich1WZ6
         '
+        resources.ApplyResources(Me.PanelBereich1WZ6, "PanelBereich1WZ6")
         Me.PanelBereich1WZ6.Controls.Add(Me.Label9)
         Me.PanelBereich1WZ6.Controls.Add(Me.PictureBox11)
         Me.PanelBereich1WZ6.Controls.Add(Me.PictureBox12)
@@ -2888,14 +3400,27 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich1WZ6.Controls.Add(Me.RadTextBoxControlBereich1DisplayWeight6)
         Me.PanelBereich1WZ6.Controls.Add(Me.RadTextBoxControlBereich1ErrorLimit6)
         Me.PanelBereich1WZ6.Controls.Add(Me.RadCheckBoxBereich1VEL6)
-        resources.ApplyResources(Me.PanelBereich1WZ6, "PanelBereich1WZ6")
         Me.PanelBereich1WZ6.Name = "PanelBereich1WZ6"
         '
         'Label9
         '
-        Me.Label9.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label9, "Label9")
+        Me.Label9.ForeColor = System.Drawing.Color.Red
         Me.Label9.Name = "Label9"
+        '
+        'PictureBox11
+        '
+        resources.ApplyResources(Me.PictureBox11, "PictureBox11")
+        Me.PictureBox11.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox11.Name = "PictureBox11"
+        Me.PictureBox11.TabStop = False
+        '
+        'PictureBox12
+        '
+        resources.ApplyResources(Me.PictureBox12, "PictureBox12")
+        Me.PictureBox12.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox12.Name = "PictureBox12"
+        Me.PictureBox12.TabStop = False
         '
         'RadLabel7
         '
@@ -2931,6 +3456,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         'PanelBereich1WZMitte
         '
+        resources.ApplyResources(Me.PanelBereich1WZMitte, "PanelBereich1WZMitte")
         Me.PanelBereich1WZMitte.Controls.Add(Me.Label16)
         Me.PanelBereich1WZMitte.Controls.Add(Me.PictureBox25)
         Me.PanelBereich1WZMitte.Controls.Add(Me.PictureBox26)
@@ -2939,14 +3465,27 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich1WZMitte.Controls.Add(Me.RadTextBoxControlBereich1DisplayWeightMitte)
         Me.PanelBereich1WZMitte.Controls.Add(Me.RadTextBoxControlBereich1ErrorLimitMitte)
         Me.PanelBereich1WZMitte.Controls.Add(Me.RadCheckBoxBereich1VELMitte)
-        resources.ApplyResources(Me.PanelBereich1WZMitte, "PanelBereich1WZMitte")
         Me.PanelBereich1WZMitte.Name = "PanelBereich1WZMitte"
         '
         'Label16
         '
-        Me.Label16.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label16, "Label16")
+        Me.Label16.ForeColor = System.Drawing.Color.Red
         Me.Label16.Name = "Label16"
+        '
+        'PictureBox25
+        '
+        resources.ApplyResources(Me.PictureBox25, "PictureBox25")
+        Me.PictureBox25.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox25.Name = "PictureBox25"
+        Me.PictureBox25.TabStop = False
+        '
+        'PictureBox26
+        '
+        resources.ApplyResources(Me.PictureBox26, "PictureBox26")
+        Me.PictureBox26.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox26.Name = "PictureBox26"
+        Me.PictureBox26.TabStop = False
         '
         'lblBereich1Mitte
         '
@@ -2982,6 +3521,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         'PanelBereich1WZ10
         '
+        resources.ApplyResources(Me.PanelBereich1WZ10, "PanelBereich1WZ10")
         Me.PanelBereich1WZ10.Controls.Add(Me.Label13)
         Me.PanelBereich1WZ10.Controls.Add(Me.PictureBox19)
         Me.PanelBereich1WZ10.Controls.Add(Me.PictureBox20)
@@ -2990,14 +3530,27 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich1WZ10.Controls.Add(Me.RadTextBoxControlBereich1DisplayWeight10)
         Me.PanelBereich1WZ10.Controls.Add(Me.RadTextBoxControlBereich1ErrorLimit10)
         Me.PanelBereich1WZ10.Controls.Add(Me.RadCheckBoxBereich1VEL10)
-        resources.ApplyResources(Me.PanelBereich1WZ10, "PanelBereich1WZ10")
         Me.PanelBereich1WZ10.Name = "PanelBereich1WZ10"
         '
         'Label13
         '
-        Me.Label13.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label13, "Label13")
+        Me.Label13.ForeColor = System.Drawing.Color.Red
         Me.Label13.Name = "Label13"
+        '
+        'PictureBox19
+        '
+        resources.ApplyResources(Me.PictureBox19, "PictureBox19")
+        Me.PictureBox19.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox19.Name = "PictureBox19"
+        Me.PictureBox19.TabStop = False
+        '
+        'PictureBox20
+        '
+        resources.ApplyResources(Me.PictureBox20, "PictureBox20")
+        Me.PictureBox20.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox20.Name = "PictureBox20"
+        Me.PictureBox20.TabStop = False
         '
         'RadLabel11
         '
@@ -3033,6 +3586,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         'PanelBereich1WZ7
         '
+        resources.ApplyResources(Me.PanelBereich1WZ7, "PanelBereich1WZ7")
         Me.PanelBereich1WZ7.Controls.Add(Me.Label10)
         Me.PanelBereich1WZ7.Controls.Add(Me.PictureBox13)
         Me.PanelBereich1WZ7.Controls.Add(Me.PictureBox14)
@@ -3041,14 +3595,27 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich1WZ7.Controls.Add(Me.RadTextBoxControlBereich1DisplayWeight7)
         Me.PanelBereich1WZ7.Controls.Add(Me.RadTextBoxControlBereich1ErrorLimit7)
         Me.PanelBereich1WZ7.Controls.Add(Me.RadCheckBoxBereich1VEL7)
-        resources.ApplyResources(Me.PanelBereich1WZ7, "PanelBereich1WZ7")
         Me.PanelBereich1WZ7.Name = "PanelBereich1WZ7"
         '
         'Label10
         '
-        Me.Label10.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label10, "Label10")
+        Me.Label10.ForeColor = System.Drawing.Color.Red
         Me.Label10.Name = "Label10"
+        '
+        'PictureBox13
+        '
+        resources.ApplyResources(Me.PictureBox13, "PictureBox13")
+        Me.PictureBox13.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox13.Name = "PictureBox13"
+        Me.PictureBox13.TabStop = False
+        '
+        'PictureBox14
+        '
+        resources.ApplyResources(Me.PictureBox14, "PictureBox14")
+        Me.PictureBox14.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox14.Name = "PictureBox14"
+        Me.PictureBox14.TabStop = False
         '
         'RadLabel8
         '
@@ -3084,6 +3651,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         'PanelBereich1WZ9
         '
+        resources.ApplyResources(Me.PanelBereich1WZ9, "PanelBereich1WZ9")
         Me.PanelBereich1WZ9.Controls.Add(Me.Label12)
         Me.PanelBereich1WZ9.Controls.Add(Me.PictureBox17)
         Me.PanelBereich1WZ9.Controls.Add(Me.PictureBox18)
@@ -3092,14 +3660,27 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich1WZ9.Controls.Add(Me.RadTextBoxControlBereich1DisplayWeight9)
         Me.PanelBereich1WZ9.Controls.Add(Me.RadTextBoxControlBereich1ErrorLimit9)
         Me.PanelBereich1WZ9.Controls.Add(Me.RadCheckBoxBereich1VEL9)
-        resources.ApplyResources(Me.PanelBereich1WZ9, "PanelBereich1WZ9")
         Me.PanelBereich1WZ9.Name = "PanelBereich1WZ9"
         '
         'Label12
         '
-        Me.Label12.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label12, "Label12")
+        Me.Label12.ForeColor = System.Drawing.Color.Red
         Me.Label12.Name = "Label12"
+        '
+        'PictureBox17
+        '
+        resources.ApplyResources(Me.PictureBox17, "PictureBox17")
+        Me.PictureBox17.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox17.Name = "PictureBox17"
+        Me.PictureBox17.TabStop = False
+        '
+        'PictureBox18
+        '
+        resources.ApplyResources(Me.PictureBox18, "PictureBox18")
+        Me.PictureBox18.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox18.Name = "PictureBox18"
+        Me.PictureBox18.TabStop = False
         '
         'RadLabel10
         '
@@ -3135,6 +3716,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         'PanelBereich1WZ8
         '
+        resources.ApplyResources(Me.PanelBereich1WZ8, "PanelBereich1WZ8")
         Me.PanelBereich1WZ8.Controls.Add(Me.Label11)
         Me.PanelBereich1WZ8.Controls.Add(Me.PictureBox15)
         Me.PanelBereich1WZ8.Controls.Add(Me.PictureBox16)
@@ -3143,14 +3725,27 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich1WZ8.Controls.Add(Me.RadTextBoxControlBereich1DisplayWeight8)
         Me.PanelBereich1WZ8.Controls.Add(Me.RadTextBoxControlBereich1ErrorLimit8)
         Me.PanelBereich1WZ8.Controls.Add(Me.RadCheckBoxBereich1VEL8)
-        resources.ApplyResources(Me.PanelBereich1WZ8, "PanelBereich1WZ8")
         Me.PanelBereich1WZ8.Name = "PanelBereich1WZ8"
         '
         'Label11
         '
-        Me.Label11.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label11, "Label11")
+        Me.Label11.ForeColor = System.Drawing.Color.Red
         Me.Label11.Name = "Label11"
+        '
+        'PictureBox15
+        '
+        resources.ApplyResources(Me.PictureBox15, "PictureBox15")
+        Me.PictureBox15.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox15.Name = "PictureBox15"
+        Me.PictureBox15.TabStop = False
+        '
+        'PictureBox16
+        '
+        resources.ApplyResources(Me.PictureBox16, "PictureBox16")
+        Me.PictureBox16.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox16.Name = "PictureBox16"
+        Me.PictureBox16.TabStop = False
         '
         'RadLabel9
         '
@@ -3184,601 +3779,6 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadCheckBoxBereich1VEL8.Name = "RadCheckBoxBereich1VEL8"
         Me.RadCheckBoxBereich1VEL8.TabStop = False
         '
-        'PictureBox83
-        '
-        Me.PictureBox83.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox83, "PictureBox83")
-        Me.PictureBox83.Name = "PictureBox83"
-        Me.PictureBox83.TabStop = False
-        '
-        'PictureBox84
-        '
-        Me.PictureBox84.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox84, "PictureBox84")
-        Me.PictureBox84.Name = "PictureBox84"
-        Me.PictureBox84.TabStop = False
-        '
-        'PictureBox82
-        '
-        Me.PictureBox82.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox82, "PictureBox82")
-        Me.PictureBox82.Name = "PictureBox82"
-        Me.PictureBox82.TabStop = False
-        '
-        'PictureBox10LC
-        '
-        Me.PictureBox10LC.Image = Global.EichsoftwareClient.My.Resources.Resources.TenLCs
-        resources.ApplyResources(Me.PictureBox10LC, "PictureBox10LC")
-        Me.PictureBox10LC.Name = "PictureBox10LC"
-        Me.PictureBox10LC.TabStop = False
-        '
-        'PictureBox12LC
-        '
-        Me.PictureBox12LC.Image = Global.EichsoftwareClient.My.Resources.Resources.TwelveLCs
-        resources.ApplyResources(Me.PictureBox12LC, "PictureBox12LC")
-        Me.PictureBox12LC.Name = "PictureBox12LC"
-        Me.PictureBox12LC.TabStop = False
-        '
-        'PictureBox8LC
-        '
-        Me.PictureBox8LC.Image = Global.EichsoftwareClient.My.Resources.Resources.EightLCs
-        resources.ApplyResources(Me.PictureBox8LC, "PictureBox8LC")
-        Me.PictureBox8LC.Name = "PictureBox8LC"
-        Me.PictureBox8LC.TabStop = False
-        '
-        'PictureBox6LC
-        '
-        Me.PictureBox6LC.Image = Global.EichsoftwareClient.My.Resources.Resources.SixLCs
-        resources.ApplyResources(Me.PictureBox6LC, "PictureBox6LC")
-        Me.PictureBox6LC.Name = "PictureBox6LC"
-        Me.PictureBox6LC.TabStop = False
-        '
-        'PictureBox4LC
-        '
-        Me.PictureBox4LC.Image = Global.EichsoftwareClient.My.Resources.Resources.FourLCs
-        resources.ApplyResources(Me.PictureBox4LC, "PictureBox4LC")
-        Me.PictureBox4LC.Name = "PictureBox4LC"
-        Me.PictureBox4LC.TabStop = False
-        '
-        'PictureBox81
-        '
-        Me.PictureBox81.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox81, "PictureBox81")
-        Me.PictureBox81.Name = "PictureBox81"
-        Me.PictureBox81.TabStop = False
-        '
-        'PictureBox77
-        '
-        Me.PictureBox77.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox77, "PictureBox77")
-        Me.PictureBox77.Name = "PictureBox77"
-        Me.PictureBox77.TabStop = False
-        '
-        'PictureBox78
-        '
-        Me.PictureBox78.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox78, "PictureBox78")
-        Me.PictureBox78.Name = "PictureBox78"
-        Me.PictureBox78.TabStop = False
-        '
-        'PictureBox75
-        '
-        Me.PictureBox75.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox75, "PictureBox75")
-        Me.PictureBox75.Name = "PictureBox75"
-        Me.PictureBox75.TabStop = False
-        '
-        'PictureBox76
-        '
-        Me.PictureBox76.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox76, "PictureBox76")
-        Me.PictureBox76.Name = "PictureBox76"
-        Me.PictureBox76.TabStop = False
-        '
-        'PictureBox73
-        '
-        Me.PictureBox73.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox73, "PictureBox73")
-        Me.PictureBox73.Name = "PictureBox73"
-        Me.PictureBox73.TabStop = False
-        '
-        'PictureBox74
-        '
-        Me.PictureBox74.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox74, "PictureBox74")
-        Me.PictureBox74.Name = "PictureBox74"
-        Me.PictureBox74.TabStop = False
-        '
-        'PictureBox71
-        '
-        Me.PictureBox71.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox71, "PictureBox71")
-        Me.PictureBox71.Name = "PictureBox71"
-        Me.PictureBox71.TabStop = False
-        '
-        'PictureBox72
-        '
-        Me.PictureBox72.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox72, "PictureBox72")
-        Me.PictureBox72.Name = "PictureBox72"
-        Me.PictureBox72.TabStop = False
-        '
-        'PictureBox69
-        '
-        Me.PictureBox69.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox69, "PictureBox69")
-        Me.PictureBox69.Name = "PictureBox69"
-        Me.PictureBox69.TabStop = False
-        '
-        'PictureBox70
-        '
-        Me.PictureBox70.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox70, "PictureBox70")
-        Me.PictureBox70.Name = "PictureBox70"
-        Me.PictureBox70.TabStop = False
-        '
-        'PictureBox55
-        '
-        Me.PictureBox55.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox55, "PictureBox55")
-        Me.PictureBox55.Name = "PictureBox55"
-        Me.PictureBox55.TabStop = False
-        '
-        'PictureBox56
-        '
-        Me.PictureBox56.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox56, "PictureBox56")
-        Me.PictureBox56.Name = "PictureBox56"
-        Me.PictureBox56.TabStop = False
-        '
-        'PictureBox57
-        '
-        Me.PictureBox57.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox57, "PictureBox57")
-        Me.PictureBox57.Name = "PictureBox57"
-        Me.PictureBox57.TabStop = False
-        '
-        'PictureBox58
-        '
-        Me.PictureBox58.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox58, "PictureBox58")
-        Me.PictureBox58.Name = "PictureBox58"
-        Me.PictureBox58.TabStop = False
-        '
-        'PictureBox67
-        '
-        Me.PictureBox67.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox67, "PictureBox67")
-        Me.PictureBox67.Name = "PictureBox67"
-        Me.PictureBox67.TabStop = False
-        '
-        'PictureBox68
-        '
-        Me.PictureBox68.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox68, "PictureBox68")
-        Me.PictureBox68.Name = "PictureBox68"
-        Me.PictureBox68.TabStop = False
-        '
-        'PictureBox59
-        '
-        Me.PictureBox59.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox59, "PictureBox59")
-        Me.PictureBox59.Name = "PictureBox59"
-        Me.PictureBox59.TabStop = False
-        '
-        'PictureBox60
-        '
-        Me.PictureBox60.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox60, "PictureBox60")
-        Me.PictureBox60.Name = "PictureBox60"
-        Me.PictureBox60.TabStop = False
-        '
-        'PictureBox65
-        '
-        Me.PictureBox65.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox65, "PictureBox65")
-        Me.PictureBox65.Name = "PictureBox65"
-        Me.PictureBox65.TabStop = False
-        '
-        'PictureBox66
-        '
-        Me.PictureBox66.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox66, "PictureBox66")
-        Me.PictureBox66.Name = "PictureBox66"
-        Me.PictureBox66.TabStop = False
-        '
-        'PictureBox61
-        '
-        Me.PictureBox61.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox61, "PictureBox61")
-        Me.PictureBox61.Name = "PictureBox61"
-        Me.PictureBox61.TabStop = False
-        '
-        'PictureBox62
-        '
-        Me.PictureBox62.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox62, "PictureBox62")
-        Me.PictureBox62.Name = "PictureBox62"
-        Me.PictureBox62.TabStop = False
-        '
-        'PictureBox63
-        '
-        Me.PictureBox63.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox63, "PictureBox63")
-        Me.PictureBox63.Name = "PictureBox63"
-        Me.PictureBox63.TabStop = False
-        '
-        'PictureBox64
-        '
-        Me.PictureBox64.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox64, "PictureBox64")
-        Me.PictureBox64.Name = "PictureBox64"
-        Me.PictureBox64.TabStop = False
-        '
-        'PictureBox80
-        '
-        Me.PictureBox80.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox80, "PictureBox80")
-        Me.PictureBox80.Name = "PictureBox80"
-        Me.PictureBox80.TabStop = False
-        '
-        'PictureBox29
-        '
-        Me.PictureBox29.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox29, "PictureBox29")
-        Me.PictureBox29.Name = "PictureBox29"
-        Me.PictureBox29.TabStop = False
-        '
-        'PictureBox30
-        '
-        Me.PictureBox30.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox30, "PictureBox30")
-        Me.PictureBox30.Name = "PictureBox30"
-        Me.PictureBox30.TabStop = False
-        '
-        'PictureBox31
-        '
-        Me.PictureBox31.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox31, "PictureBox31")
-        Me.PictureBox31.Name = "PictureBox31"
-        Me.PictureBox31.TabStop = False
-        '
-        'PictureBox32
-        '
-        Me.PictureBox32.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox32, "PictureBox32")
-        Me.PictureBox32.Name = "PictureBox32"
-        Me.PictureBox32.TabStop = False
-        '
-        'PictureBox33
-        '
-        Me.PictureBox33.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox33, "PictureBox33")
-        Me.PictureBox33.Name = "PictureBox33"
-        Me.PictureBox33.TabStop = False
-        '
-        'PictureBox34
-        '
-        Me.PictureBox34.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox34, "PictureBox34")
-        Me.PictureBox34.Name = "PictureBox34"
-        Me.PictureBox34.TabStop = False
-        '
-        'PictureBox35
-        '
-        Me.PictureBox35.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox35, "PictureBox35")
-        Me.PictureBox35.Name = "PictureBox35"
-        Me.PictureBox35.TabStop = False
-        '
-        'PictureBox36
-        '
-        Me.PictureBox36.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox36, "PictureBox36")
-        Me.PictureBox36.Name = "PictureBox36"
-        Me.PictureBox36.TabStop = False
-        '
-        'PictureBox49
-        '
-        Me.PictureBox49.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox49, "PictureBox49")
-        Me.PictureBox49.Name = "PictureBox49"
-        Me.PictureBox49.TabStop = False
-        '
-        'PictureBox50
-        '
-        Me.PictureBox50.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox50, "PictureBox50")
-        Me.PictureBox50.Name = "PictureBox50"
-        Me.PictureBox50.TabStop = False
-        '
-        'PictureBox47
-        '
-        Me.PictureBox47.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox47, "PictureBox47")
-        Me.PictureBox47.Name = "PictureBox47"
-        Me.PictureBox47.TabStop = False
-        '
-        'PictureBox48
-        '
-        Me.PictureBox48.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox48, "PictureBox48")
-        Me.PictureBox48.Name = "PictureBox48"
-        Me.PictureBox48.TabStop = False
-        '
-        'PictureBox37
-        '
-        Me.PictureBox37.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox37, "PictureBox37")
-        Me.PictureBox37.Name = "PictureBox37"
-        Me.PictureBox37.TabStop = False
-        '
-        'PictureBox38
-        '
-        Me.PictureBox38.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox38, "PictureBox38")
-        Me.PictureBox38.Name = "PictureBox38"
-        Me.PictureBox38.TabStop = False
-        '
-        'PictureBox51
-        '
-        Me.PictureBox51.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox51, "PictureBox51")
-        Me.PictureBox51.Name = "PictureBox51"
-        Me.PictureBox51.TabStop = False
-        '
-        'PictureBox52
-        '
-        Me.PictureBox52.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox52, "PictureBox52")
-        Me.PictureBox52.Name = "PictureBox52"
-        Me.PictureBox52.TabStop = False
-        '
-        'PictureBox45
-        '
-        Me.PictureBox45.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox45, "PictureBox45")
-        Me.PictureBox45.Name = "PictureBox45"
-        Me.PictureBox45.TabStop = False
-        '
-        'PictureBox46
-        '
-        Me.PictureBox46.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox46, "PictureBox46")
-        Me.PictureBox46.Name = "PictureBox46"
-        Me.PictureBox46.TabStop = False
-        '
-        'PictureBox39
-        '
-        Me.PictureBox39.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox39, "PictureBox39")
-        Me.PictureBox39.Name = "PictureBox39"
-        Me.PictureBox39.TabStop = False
-        '
-        'PictureBox40
-        '
-        Me.PictureBox40.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox40, "PictureBox40")
-        Me.PictureBox40.Name = "PictureBox40"
-        Me.PictureBox40.TabStop = False
-        '
-        'PictureBox43
-        '
-        Me.PictureBox43.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox43, "PictureBox43")
-        Me.PictureBox43.Name = "PictureBox43"
-        Me.PictureBox43.TabStop = False
-        '
-        'PictureBox44
-        '
-        Me.PictureBox44.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox44, "PictureBox44")
-        Me.PictureBox44.Name = "PictureBox44"
-        Me.PictureBox44.TabStop = False
-        '
-        'PictureBox41
-        '
-        Me.PictureBox41.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox41, "PictureBox41")
-        Me.PictureBox41.Name = "PictureBox41"
-        Me.PictureBox41.TabStop = False
-        '
-        'PictureBox42
-        '
-        Me.PictureBox42.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox42, "PictureBox42")
-        Me.PictureBox42.Name = "PictureBox42"
-        Me.PictureBox42.TabStop = False
-        '
-        'PictureBox79
-        '
-        Me.PictureBox79.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox79, "PictureBox79")
-        Me.PictureBox79.Name = "PictureBox79"
-        Me.PictureBox79.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox1, "PictureBox1")
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox2, "PictureBox2")
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.TabStop = False
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox3, "PictureBox3")
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.TabStop = False
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox4, "PictureBox4")
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.TabStop = False
-        '
-        'PictureBox5
-        '
-        Me.PictureBox5.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox5, "PictureBox5")
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.TabStop = False
-        '
-        'PictureBox6
-        '
-        Me.PictureBox6.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox6, "PictureBox6")
-        Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.TabStop = False
-        '
-        'PictureBox7
-        '
-        Me.PictureBox7.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox7, "PictureBox7")
-        Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.TabStop = False
-        '
-        'PictureBox8
-        '
-        Me.PictureBox8.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox8, "PictureBox8")
-        Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.TabStop = False
-        '
-        'PictureBox9
-        '
-        Me.PictureBox9.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox9, "PictureBox9")
-        Me.PictureBox9.Name = "PictureBox9"
-        Me.PictureBox9.TabStop = False
-        '
-        'PictureBox10
-        '
-        Me.PictureBox10.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox10, "PictureBox10")
-        Me.PictureBox10.Name = "PictureBox10"
-        Me.PictureBox10.TabStop = False
-        '
-        'PictureBox23
-        '
-        Me.PictureBox23.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox23, "PictureBox23")
-        Me.PictureBox23.Name = "PictureBox23"
-        Me.PictureBox23.TabStop = False
-        '
-        'PictureBox24
-        '
-        Me.PictureBox24.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox24, "PictureBox24")
-        Me.PictureBox24.Name = "PictureBox24"
-        Me.PictureBox24.TabStop = False
-        '
-        'PictureBox21
-        '
-        Me.PictureBox21.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox21, "PictureBox21")
-        Me.PictureBox21.Name = "PictureBox21"
-        Me.PictureBox21.TabStop = False
-        '
-        'PictureBox22
-        '
-        Me.PictureBox22.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox22, "PictureBox22")
-        Me.PictureBox22.Name = "PictureBox22"
-        Me.PictureBox22.TabStop = False
-        '
-        'PictureBox11
-        '
-        Me.PictureBox11.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox11, "PictureBox11")
-        Me.PictureBox11.Name = "PictureBox11"
-        Me.PictureBox11.TabStop = False
-        '
-        'PictureBox12
-        '
-        Me.PictureBox12.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox12, "PictureBox12")
-        Me.PictureBox12.Name = "PictureBox12"
-        Me.PictureBox12.TabStop = False
-        '
-        'PictureBox25
-        '
-        Me.PictureBox25.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox25, "PictureBox25")
-        Me.PictureBox25.Name = "PictureBox25"
-        Me.PictureBox25.TabStop = False
-        '
-        'PictureBox26
-        '
-        Me.PictureBox26.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox26, "PictureBox26")
-        Me.PictureBox26.Name = "PictureBox26"
-        Me.PictureBox26.TabStop = False
-        '
-        'PictureBox19
-        '
-        Me.PictureBox19.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox19, "PictureBox19")
-        Me.PictureBox19.Name = "PictureBox19"
-        Me.PictureBox19.TabStop = False
-        '
-        'PictureBox20
-        '
-        Me.PictureBox20.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox20, "PictureBox20")
-        Me.PictureBox20.Name = "PictureBox20"
-        Me.PictureBox20.TabStop = False
-        '
-        'PictureBox13
-        '
-        Me.PictureBox13.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox13, "PictureBox13")
-        Me.PictureBox13.Name = "PictureBox13"
-        Me.PictureBox13.TabStop = False
-        '
-        'PictureBox14
-        '
-        Me.PictureBox14.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox14, "PictureBox14")
-        Me.PictureBox14.Name = "PictureBox14"
-        Me.PictureBox14.TabStop = False
-        '
-        'PictureBox17
-        '
-        Me.PictureBox17.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox17, "PictureBox17")
-        Me.PictureBox17.Name = "PictureBox17"
-        Me.PictureBox17.TabStop = False
-        '
-        'PictureBox18
-        '
-        Me.PictureBox18.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox18, "PictureBox18")
-        Me.PictureBox18.Name = "PictureBox18"
-        Me.PictureBox18.TabStop = False
-        '
-        'PictureBox15
-        '
-        Me.PictureBox15.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox15, "PictureBox15")
-        Me.PictureBox15.Name = "PictureBox15"
-        Me.PictureBox15.TabStop = False
-        '
-        'PictureBox16
-        '
-        Me.PictureBox16.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox16, "PictureBox16")
-        Me.PictureBox16.Name = "PictureBox16"
-        Me.PictureBox16.TabStop = False
-        '
         'uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         resources.ApplyResources(Me, "$this")
@@ -3803,7 +3803,9 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         CType(Me.lblPflichtfeld1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblWiederholungen, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox83, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel29, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox84, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel30, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel31, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblMengeStandardgewichte2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3811,6 +3813,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         CType(Me.lblMengeStandardgewichte1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadCheckBoxVEL1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBetragNormallast, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox82, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblEFGSpeziallBerechnung, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Panel1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
@@ -3834,15 +3837,23 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         CType(Me.RadGroupBoxPruefungAussermittigeBelastung, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBoxPruefungAussermittigeBelastung.ResumeLayout(False)
         Me.RadGroupBoxPruefungAussermittigeBelastung.PerformLayout()
+        CType(Me.PictureBox10LC, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox12LC, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonShowEFG2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox8LC, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox6LC, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4LC, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBoxBereich3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBoxBereich3.ResumeLayout(False)
         Me.RadGroupBoxBereich3.PerformLayout()
+        CType(Me.PictureBox81, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblBereich3EFGSpeziallBerechnung, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PanelBereich3WZ1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelBereich3WZ1.ResumeLayout(False)
         Me.PanelBereich3WZ1.PerformLayout()
         CType(Me.Label30, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox77, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox78, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel46, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich3Weight1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich3DisplayWeight1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3852,6 +3863,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich3WZ2.ResumeLayout(False)
         Me.PanelBereich3WZ2.PerformLayout()
         CType(Me.Label31, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox75, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox76, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel45, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich3Weight2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich3DisplayWeight2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3863,6 +3876,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich3WZ3.ResumeLayout(False)
         Me.PanelBereich3WZ3.PerformLayout()
         CType(Me.Label32, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox73, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox74, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel44, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich3Weight3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich3DisplayWeight3, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3873,6 +3888,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich3WZ4.ResumeLayout(False)
         Me.PanelBereich3WZ4.PerformLayout()
         CType(Me.Label33, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox71, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox72, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel43, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich3Weight4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich3DisplayWeight4, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3884,6 +3901,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich3WZ5.ResumeLayout(False)
         Me.PanelBereich3WZ5.PerformLayout()
         CType(Me.Label34, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox69, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox70, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel42, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich3Weight5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich3DisplayWeight5, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3893,6 +3912,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich3WZ12.ResumeLayout(False)
         Me.PanelBereich3WZ12.PerformLayout()
         CType(Me.Label41, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox55, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox56, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel35, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich3Weight12, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich3DisplayWeight12, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3902,6 +3923,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich3WZ11.ResumeLayout(False)
         Me.PanelBereich3WZ11.PerformLayout()
         CType(Me.Label40, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox57, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox58, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel36, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich3Weight11, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich3DisplayWeight11, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3911,6 +3934,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich3WZ6.ResumeLayout(False)
         Me.PanelBereich3WZ6.PerformLayout()
         CType(Me.Label35, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox67, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox68, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel41, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich3Weight6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich3DisplayWeight6, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3920,6 +3945,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich3WZ10.ResumeLayout(False)
         Me.PanelBereich3WZ10.PerformLayout()
         CType(Me.Label39, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox59, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox60, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel37, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich3Weight10, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich3DisplayWeight10, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3929,6 +3956,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich3WZ7.ResumeLayout(False)
         Me.PanelBereich3WZ7.PerformLayout()
         CType(Me.Label36, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox65, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox66, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel40, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich3Weight7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich3DisplayWeight7, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3938,6 +3967,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich3WZ9.ResumeLayout(False)
         Me.PanelBereich3WZ9.PerformLayout()
         CType(Me.Label38, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox61, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox62, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel38, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich3Weight9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich3DisplayWeight9, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3947,6 +3978,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich3WZ8.ResumeLayout(False)
         Me.PanelBereich3WZ8.PerformLayout()
         CType(Me.Label37, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox63, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox64, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel39, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich3Weight8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich3DisplayWeight8, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3955,11 +3988,14 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         CType(Me.RadGroupBoxBereich2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBoxBereich2.ResumeLayout(False)
         Me.RadGroupBoxBereich2.PerformLayout()
+        CType(Me.PictureBox80, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblBereich2EFGSpeziallBerechnung, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PanelBereich2WZ1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelBereich2WZ1.ResumeLayout(False)
         Me.PanelBereich2WZ1.PerformLayout()
         CType(Me.Label17, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox29, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox30, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel27, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich2Weight1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich2DisplayWeight1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3971,6 +4007,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich2WZ2.ResumeLayout(False)
         Me.PanelBereich2WZ2.PerformLayout()
         CType(Me.Label18, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox31, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox32, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel26, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich2Weight2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich2DisplayWeight2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3981,6 +4019,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich2WZ3.ResumeLayout(False)
         Me.PanelBereich2WZ3.PerformLayout()
         CType(Me.Label19, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox33, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox34, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel25, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich2Weight3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich2DisplayWeight3, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3992,6 +4032,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich2WZ4.ResumeLayout(False)
         Me.PanelBereich2WZ4.PerformLayout()
         CType(Me.Label20, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox35, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox36, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel24, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich2Weight4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich2DisplayWeight4, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4001,6 +4043,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich2WZ11.ResumeLayout(False)
         Me.PanelBereich2WZ11.PerformLayout()
         CType(Me.Label27, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox49, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox50, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel17, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich2Weight11, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich2DisplayWeight11, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4010,6 +4054,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich2WZ10.ResumeLayout(False)
         Me.PanelBereich2WZ10.PerformLayout()
         CType(Me.Label26, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox47, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox48, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel18, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich2Weight10, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich2DisplayWeight10, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4019,6 +4065,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich2WZ5.ResumeLayout(False)
         Me.PanelBereich2WZ5.PerformLayout()
         CType(Me.Label21, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox37, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox38, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel23, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich2Weight5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich2DisplayWeight5, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4028,6 +4076,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich2WZ12.ResumeLayout(False)
         Me.PanelBereich2WZ12.PerformLayout()
         CType(Me.Label28, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox51, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox52, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel16, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich2Weight12, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich2DisplayWeight12, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4037,6 +4087,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich2WZ9.ResumeLayout(False)
         Me.PanelBereich2WZ9.PerformLayout()
         CType(Me.Label25, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox45, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox46, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel19, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich2Weight9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich2DisplayWeight9, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4046,6 +4098,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich2WZ6.ResumeLayout(False)
         Me.PanelBereich2WZ6.PerformLayout()
         CType(Me.Label22, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox39, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox40, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel22, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich2Weight6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich2DisplayWeight6, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4055,6 +4109,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich2WZ8.ResumeLayout(False)
         Me.PanelBereich2WZ8.PerformLayout()
         CType(Me.Label24, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox43, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox44, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel20, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich2Weight8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich2DisplayWeight8, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4064,6 +4120,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich2WZ7.ResumeLayout(False)
         Me.PanelBereich2WZ7.PerformLayout()
         CType(Me.Label23, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox41, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox42, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel21, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich2Weight7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich2DisplayWeight7, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4072,11 +4130,14 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         CType(Me.RadGroupBoxBereich1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBoxBereich1.ResumeLayout(False)
         Me.RadGroupBoxBereich1.PerformLayout()
+        CType(Me.PictureBox79, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblBereich1EFGSpeziallBerechnung, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PanelBereich1WZ1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelBereich1WZ1.ResumeLayout(False)
         Me.PanelBereich1WZ1.PerformLayout()
         CType(Me.Label4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel13, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich1Weight1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich1DisplayWeight1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4086,7 +4147,9 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich1WZ2.ResumeLayout(False)
         Me.PanelBereich1WZ2.PerformLayout()
         CType(Me.Label5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich1Weight2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich1DisplayWeight2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich1ErrorLimit2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4097,7 +4160,9 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich1WZ3.ResumeLayout(False)
         Me.PanelBereich1WZ3.PerformLayout()
         CType(Me.Label6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich1Weight3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich1DisplayWeight3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich1ErrorLimit3, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4107,7 +4172,9 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich1WZ4.ResumeLayout(False)
         Me.PanelBereich1WZ4.PerformLayout()
         CType(Me.Label7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich1Weight4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich1DisplayWeight4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich1ErrorLimit4, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4118,6 +4185,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich1WZ5.ResumeLayout(False)
         Me.PanelBereich1WZ5.PerformLayout()
         CType(Me.Label8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich1Weight5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich1DisplayWeight5, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4127,6 +4196,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich1WZ12.ResumeLayout(False)
         Me.PanelBereich1WZ12.PerformLayout()
         CType(Me.Label15, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox24, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel14, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich1Weight12, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich1DisplayWeight12, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4136,6 +4207,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich1WZ11.ResumeLayout(False)
         Me.PanelBereich1WZ11.PerformLayout()
         CType(Me.Label14, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox22, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel12, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich1Weight11, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich1DisplayWeight11, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4145,6 +4218,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich1WZ6.ResumeLayout(False)
         Me.PanelBereich1WZ6.PerformLayout()
         CType(Me.Label9, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich1Weight6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich1DisplayWeight6, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4154,6 +4229,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich1WZMitte.ResumeLayout(False)
         Me.PanelBereich1WZMitte.PerformLayout()
         CType(Me.Label16, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox25, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox26, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblBereich1Mitte, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich1WeightMitte, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich1DisplayWeightMitte, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4163,6 +4240,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich1WZ10.ResumeLayout(False)
         Me.PanelBereich1WZ10.PerformLayout()
         CType(Me.Label13, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel11, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich1Weight10, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich1DisplayWeight10, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4172,6 +4251,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich1WZ7.ResumeLayout(False)
         Me.PanelBereich1WZ7.PerformLayout()
         CType(Me.Label10, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich1Weight7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich1DisplayWeight7, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4181,6 +4262,8 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich1WZ9.ResumeLayout(False)
         Me.PanelBereich1WZ9.PerformLayout()
         CType(Me.Label12, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel10, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich1Weight9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich1DisplayWeight9, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4190,96 +4273,13 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PanelBereich1WZ8.ResumeLayout(False)
         Me.PanelBereich1WZ8.PerformLayout()
         CType(Me.Label11, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich1Weight8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich1DisplayWeight8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich1ErrorLimit8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadCheckBoxBereich1VEL8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox83, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox84, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox82, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox10LC, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox12LC, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox8LC, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox6LC, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4LC, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox81, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox77, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox78, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox75, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox76, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox73, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox74, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox71, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox72, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox69, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox70, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox55, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox56, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox57, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox58, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox67, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox68, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox59, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox60, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox65, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox66, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox61, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox62, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox63, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox64, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox80, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox29, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox30, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox31, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox32, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox33, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox34, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox35, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox36, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox49, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox50, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox47, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox48, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox37, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox38, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox51, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox52, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox45, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox46, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox39, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox40, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox43, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox44, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox41, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox42, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox79, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox24, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox22, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox25, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox26, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

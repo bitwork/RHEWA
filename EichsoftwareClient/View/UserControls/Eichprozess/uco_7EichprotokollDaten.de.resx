@@ -164,38 +164,6 @@
     <value>Verwendete Normalien			
 </value>
   </data>
-  <data name="RadCheckBoxAnzeigen.Text" xml:space="preserve">
-    <value>Anzeigen und Abdrucke entsprechen den Anforderungen!				
-</value>
-  </data>
-  <data name="RadCheckBoxKompatiblitaetsnachweisVorhanden.Text" xml:space="preserve">
-    <value>Kompatibilitätsnachweis vorhanden?				
-</value>
-  </data>
-  <data name="RadCheckBoxAufstellungsbedingungen.Text" xml:space="preserve">
-    <value>Aufstellungsbedingungen in Ordnung?				
-</value>
-  </data>
-  <data name="RadCheckBoxZulassungsunterlagen.Text" xml:space="preserve">
-    <value>Zulassungsunterlagen in lesbarer Fassung liegen vor?				
-</value>
-  </data>
-  <data name="RadCheckBoxMesstechnischeMerkmale.Text" xml:space="preserve">
-    <value>Messtechn. Merkmale (Klasse, Min, Max, e und d) in Ordnung?			
-</value>
-  </data>
-  <data name="RadCheckBoxAufschriften.Text" xml:space="preserve">
-    <value>Aufschriften und Kennzeichnungen in Ordnung?				
-</value>
-  </data>
-  <data name="RadGroupBoxBeschaffenheitspruefungEquipment.HeaderText" xml:space="preserve">
-    <value>Beschaffenheitsprüfung									
-</value>
-  </data>
-  <data name="RadGroupBoxBeschaffenheitspruefungEquipment.Text" xml:space="preserve">
-    <value>Beschaffenheitsprüfung									
-</value>
-  </data>
   <data name="RadGroupBoxBeschaffenheitspruefung.HeaderText" xml:space="preserve">
     <value>4. Beschaffenheitsprüfung									
 </value>

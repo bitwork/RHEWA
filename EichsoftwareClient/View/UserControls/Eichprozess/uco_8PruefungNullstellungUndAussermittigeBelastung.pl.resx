@@ -145,14 +145,14 @@
 </value>
   </data>
   <data name="lblMengeStandardgewichte2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 18</value>
+    <value>98, 18</value>
   </data>
   <data name="lblMengeStandardgewichte2.Text" xml:space="preserve">
     <value>kg jest potrzebne
 </value>
   </data>
   <data name="lblMengeStandardgewichte1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>193, 18</value>
+    <value>78, 18</value>
   </data>
   <data name="lblMengeStandardgewichte1.Text" xml:space="preserve">
     <value>Ilość wzorców:			</value>
@@ -197,6 +197,12 @@
   <data name="RadButtonShowEFG2.Text" xml:space="preserve">
     <value>GBL</value>
   </data>
+  <data name="lblMessOrtBereich3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 30</value>
+  </data>
+  <data name="lblMessOrtBereich3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 33</value>
+  </data>
   <data name="lblMessOrtBereich3.Text" xml:space="preserve">
     <value>Miejsca obciążeniowe</value>
   </data>
@@ -231,6 +237,18 @@
 
 </value>
   </data>
+  <data name="RadGroupBoxBereich3.HeaderText" xml:space="preserve">
+    <value>Zakres 3</value>
+  </data>
+  <data name="RadGroupBoxBereich3.Text" xml:space="preserve">
+    <value>Zakres 3</value>
+  </data>
+  <data name="lblMessOrtBereich2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 30</value>
+  </data>
+  <data name="lblMessOrtBereich2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 33</value>
+  </data>
   <data name="lblMessOrtBereich2.Text" xml:space="preserve">
     <value>Miejsca obciążeniowe</value>
   </data>
@@ -264,6 +282,18 @@
     <value>Wyświetlacz [kg]
 
 </value>
+  </data>
+  <data name="RadGroupBoxBereich2.HeaderText" xml:space="preserve">
+    <value>Zakres 2</value>
+  </data>
+  <data name="RadGroupBoxBereich2.Text" xml:space="preserve">
+    <value>Zakres 2</value>
+  </data>
+  <data name="lblMessOrtBereich1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 30</value>
+  </data>
+  <data name="lblMessOrtBereich1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 33</value>
   </data>
   <data name="lblMessOrtBereich1.Text" xml:space="preserve">
     <value>Miejsca obciążeniowe
@@ -300,37 +330,22 @@
 
 </value>
   </data>
+  <data name="lblBereich1Mitte.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 18</value>
+  </data>
+  <data name="lblBereich1Mitte.Text" xml:space="preserve">
+    <value>środek</value>
+  </data>
+  <data name="RadGroupBoxBereich1.HeaderText" xml:space="preserve">
+    <value>Zakres 1</value>
+  </data>
+  <data name="RadGroupBoxBereich1.Text" xml:space="preserve">
+    <value>Zakres 1</value>
+  </data>
   <data name="RadGroupBoxPruefungAussermittigeBelastung.HeaderText" xml:space="preserve">
     <value>Badanie przy mimośrodowym obciążeniu</value>
   </data>
   <data name="RadGroupBoxPruefungAussermittigeBelastung.Text" xml:space="preserve">
     <value>Badanie przy mimośrodowym obciążeniu</value>
-  </data>
-  <data name="RadGroupBoxBereich1.HeaderText" xml:space="preserve">
-    <value>Zakres 1 </value>
-  </data>
-  <data name="RadGroupBoxBereich1.Text" xml:space="preserve">
-    <value>Zakres 1</value>
-  </data>
-  <data name="RadGroupBoxBereich2.HeaderText" xml:space="preserve">
-    <value>Zakres 2</value>
-  </data>
-  <data name="RadGroupBoxBereich2.Text" xml:space="preserve">
-    <value>Zakres 2</value>
-  </data>
-  <data name="RadGroupBoxBereich3.HeaderText" xml:space="preserve">
-    <value>Zakres 3</value>
-  </data>
-  <data name="RadGroupBoxBereich3.Text" xml:space="preserve">
-    <value>Zakres 3</value>
-  </data>
-  <data name="lblBereich1Mitte.Text" xml:space="preserve">
-    <value>środek</value>
-  </data>
-  <data name="RadLabel15.Text" xml:space="preserve">
-    <value>środek</value>
-  </data>
-  <data name="RadLabel34.Text" xml:space="preserve">
-    <value>środek</value>
   </data>
 </root>
