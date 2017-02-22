@@ -80,7 +80,7 @@ Public Class uco_7EichprotokollDaten
                 _objEichprotokoll = objEichprozess.Eichprotokoll
 
                 Dim Coll As New AutoCompleteStringCollection
-                Coll.AddRange((From o In context.Eichprotokoll Select o.Verwendungszweck_Druckertyp).Distinct.ToArray)
+                Coll.AddRange((From o In context.Eichprotokoll Where Not o.Verwendungszweck_Druckertyp Is Nothing And o.Verwendungszweck_Druckertyp <> String.Empty Select o.Verwendungszweck_Druckertyp).Distinct.ToArray)
                 RadTextBoxControlDruckerTyp.AutoCompleteDataSource = Coll
                 RadTextBoxControlDruckerTyp.DataSource = Coll
             End Using
@@ -686,7 +686,8 @@ Public Class uco_7EichprotokollDaten
 
     Protected Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
         If Me.Name.Equals(UserControl.Name) = False Then Exit Sub
-
+        Dim oldsuspendEvents = _suspendEvents
+        _suspendEvents = True
         MyBase.LokalisierungNeeded(UserControl)
 
         'lokalisierung: Leider kann ich den automatismus von .NET nicht nutzen. Dieser funktioniert nur sauber, wenn ein Dialog erzeugt wird. Zur Laufzeit aber gibt es diverse Probleme mit dem Automatischen Ändern der Sprache,
@@ -762,7 +763,7 @@ Public Class uco_7EichprotokollDaten
             Catch ex As Exception
             End Try
         End If
-
+        _suspendEvents = oldsuspendEvents
     End Sub
 
     ''' <summary>

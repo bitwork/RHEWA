@@ -31,8 +31,10 @@ Public Class ucoContent
             Return _bolEichprozessIsDirty
         End Get
         Set(value As Boolean)
-            _bolEichprozessIsDirty = value
-            onpropertychanged(_bolEichprozessIsDirty)
+            If _bolEichprozessIsDirty <> value Then
+                _bolEichprozessIsDirty = value
+                onpropertychanged("AktuellerStatusDirty")
+            End If
         End Set
     End Property
 
