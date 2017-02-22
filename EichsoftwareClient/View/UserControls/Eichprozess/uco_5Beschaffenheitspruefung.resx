@@ -187,7 +187,7 @@
     <value>3, 809</value>
   </data>
   <data name="RadGroupBoxAufstellbedingungen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>12284, 59</value>
+    <value>14300, 59</value>
   </data>
   <data name="RadGroupBoxAufstellbedingungen.TabIndex" type="System.Int32, mscorlib">
     <value>39</value>
@@ -235,13 +235,13 @@
     <value>19, 905</value>
   </data>
   <data name="RadLabel19.Size" type="System.Drawing.Size, System.Drawing">
-    <value>844, 37</value>
+    <value>829, 37</value>
   </data>
   <data name="RadLabel19.TabIndex" type="System.Int32, mscorlib">
     <value>37</value>
   </data>
   <data name="RadLabel19.Text" xml:space="preserve">
-    <value>I have examined the above-mentioned criteria. All criteria aure fulfilled.</value>
+    <value>I have examined the above-mentioned criteria. All criteria are fulfilled.</value>
   </data>
   <data name="&gt;&gt;RadLabel19.Name" xml:space="preserve">
     <value>RadLabel19</value>
@@ -410,7 +410,7 @@
     <value>2, 634</value>
   </data>
   <data name="RadGroupBoxWaegebruecke.Size" type="System.Drawing.Size, System.Drawing">
-    <value>12284, 153</value>
+    <value>14300, 153</value>
   </data>
   <data name="RadGroupBoxWaegebruecke.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
@@ -662,7 +662,7 @@
     <value>3, 226</value>
   </data>
   <data name="RadGroupBoxWaegezellen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>12284, 193</value>
+    <value>14300, 193</value>
   </data>
   <data name="RadGroupBoxWaegezellen.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
@@ -865,7 +865,7 @@
     <value>2, 432</value>
   </data>
   <data name="RadGroupBoxVerbindungselemente.Size" type="System.Drawing.Size, System.Drawing">
-    <value>12284, 191</value>
+    <value>14300, 191</value>
   </data>
   <data name="RadGroupBoxVerbindungselemente.TabIndex" type="System.Int32, mscorlib">
     <value>32</value>
@@ -1114,7 +1114,7 @@
     <value>3, 8</value>
   </data>
   <data name="RadGroupBoxAuswerteGeraete.Size" type="System.Drawing.Size, System.Drawing">
-    <value>12284, 205</value>
+    <value>14300, 205</value>
   </data>
   <data name="RadGroupBoxAuswerteGeraete.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
@@ -1183,6 +1183,6 @@
     <value>uco_5Beschaffenheitspruefung</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.6262.23283, Culture=neutral, PublicKeyToken=null</value>
+    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.6262.25109, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

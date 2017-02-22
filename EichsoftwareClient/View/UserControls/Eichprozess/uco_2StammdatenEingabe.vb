@@ -819,7 +819,7 @@ Public Class uco_2StammdatenEingabe
         End If
     End Sub
 
-    Private Sub RadGroupBoxWaage_MouseEnter(sender As Object, e As EventArgs) Handles RadGroupBoxWaage.MouseEnter
+    Private Sub RadGroupBoxWaage_MouseEnter(sender As Object, e As EventArgs) Handles RadGroupBoxWZ.MouseEnter
         ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_StammdateBereichWZ)
     End Sub
     Private Sub Uco_MouseEnter(sender As Object, e As EventArgs) Handles Me.MouseEnter
