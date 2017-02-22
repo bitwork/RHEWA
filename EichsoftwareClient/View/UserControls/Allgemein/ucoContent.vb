@@ -590,7 +590,12 @@ Public Class ucoContent
             If ControlName.EndsWith("Mitte") Then
                 Ort = "Mitte"
             Else
+
                 Ort = ControlName.Last
+                'sonderfall 10, 11, 12
+                If ControlName.EndsWith("10") Then Ort = "10"
+                If ControlName.EndsWith("11") Then Ort = "11"
+                If ControlName.EndsWith("12") Then Ort = "12"
             End If
             Return Ort
         Catch ex As Exception
