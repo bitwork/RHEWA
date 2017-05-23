@@ -24,7 +24,7 @@ Public Class EichsoftwareWebservice
         'SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Prüfe Lizenz")
 
         Try
-            Using dbcontext As New EichenSQLDatabaseEntities1
+            Using dbcontext As New HerstellerersteichungEntities
                 Dim ObjLizenz = (From lic In dbcontext.ServerLizensierung Where lic.HEKennung = HEKennung And lic.Lizenzschluessel = Lizenzschluessel And lic.Aktiv = True).FirstOrDefault
                 If Not ObjLizenz Is Nothing Then
                     Return True
@@ -54,7 +54,7 @@ Public Class EichsoftwareWebservice
         Dim objLizenzdaten As New clsLizenzdaten
         SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Hole Lizenzdaten")
         Try
-            Using dbcontext As New EichenSQLDatabaseEntities1
+            Using dbcontext As New HerstellerersteichungEntities
                 'lizenz holen für Benutzer_FK
                 Dim objLic = (From lic In dbcontext.ServerLizensierung Where lic.HEKennung = HEKennung And lic.Lizenzschluessel = Lizenzschluessel And lic.Aktiv = True).FirstOrDefault
                 'Benutzer anhand von Benutzer_FK holen für Firma
@@ -91,7 +91,7 @@ Public Class EichsoftwareWebservice
 
         Dim thread As New Threading.Thread(Sub()
                                                Try
-                                                   Using dbcontext As New EichenSQLDatabaseEntities1
+                                                   Using dbcontext As New HerstellerersteichungEntities
 
                                                        Dim objProtokoll = New ServerVerbindungsprotokoll
                                                        objProtokoll.Lizenzschluessel_FK = Lizenzschluessel
@@ -123,7 +123,7 @@ Public Class EichsoftwareWebservice
     ''' <remarks></remarks>
     Public Function SetValidLizenz(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements IEichsoftwareWebservice.AktiviereLizenz
         Try
-            Using dbcontext As New EichenSQLDatabaseEntities1
+            Using dbcontext As New HerstellerersteichungEntities
                 SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Aktiviere Lizenz")
 
                 Dim ObjLizenz = (From lic In dbcontext.ServerLizensierung Where lic.HEKennung = HEKennung And lic.Lizenzschluessel = Lizenzschluessel And lic.Aktiv = True).FirstOrDefault
@@ -150,7 +150,7 @@ Public Class EichsoftwareWebservice
     ''' <remarks></remarks>
     Public Function GetValidRHEWALizenz(ByVal HEKennung As String, Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements IEichsoftwareWebservice.PruefeObRHEWALizenz
         Try
-            Using dbcontext As New EichenSQLDatabaseEntities1
+            Using dbcontext As New HerstellerersteichungEntities
                 SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Prüfe ob RHEWA Mitarbeiter")
 
                 Dim ObjLizenz = (From lic In dbcontext.ServerLizensierung Where lic.HEKennung = HEKennung And lic.Lizenzschluessel = Lizenzschluessel).FirstOrDefault
@@ -182,7 +182,7 @@ Public Class EichsoftwareWebservice
             If GetLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return False
             'neuen Context aufbauen
             'prüfen ob der eichprozess schoneinmal eingegangen ist anhand von Vorgangsnummer
-            Using DbContext As New EichenSQLDatabaseEntities1
+            Using DbContext As New HerstellerersteichungEntities
                 DbContext.Configuration.LazyLoadingEnabled = True
                 Dim Vorgangsnummer As String = NewServerObj.Vorgangsnummer
                 Dim CurrentServerobj = (From db In DbContext.ServerEichprozess.Include("ServerEichprotokoll").Include("ServerKompatiblitaetsnachweis") Select db Where db.Vorgangsnummer = Vorgangsnummer).FirstOrDefault
@@ -281,7 +281,7 @@ Public Class EichsoftwareWebservice
             'neuen Context aufbauen
             'prüfen ob der eichprozess schoneinmal eingegangen ist anhand von Vorgangsnummer
             If pObjWZ.Neu Then
-                Using DbContext As New EichenSQLDatabaseEntities1
+                Using DbContext As New HerstellerersteichungEntities
                     DbContext.Configuration.LazyLoadingEnabled = True
 
                     Dim Serverob = (From db In DbContext.ServerLookup_Waegezelle Select db Where db.Hersteller = pObjWZ.Hersteller And db.Typ = pObjWZ.Typ).FirstOrDefault
@@ -341,7 +341,7 @@ Public Class EichsoftwareWebservice
             SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Hole Konformitätsbewertungsprozess")
 
             'neuen Context aufbauen
-            Using DbContext As New EichenSQLDatabaseEntities1
+            Using DbContext As New HerstellerersteichungEntities
                 DbContext.Configuration.LazyLoadingEnabled = False
                 DbContext.Configuration.ProxyCreationEnabled = False
                 Try
@@ -500,7 +500,7 @@ Public Class EichsoftwareWebservice
             'neuen Context aufbauen
             SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Baue DB Verbindung auf ")
 
-            Using DbContext As New EichenSQLDatabaseEntities1
+            Using DbContext As New HerstellerersteichungEntities
                 SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DB Verbindung aufgebaut ")
 
                 DbContext.Configuration.LazyLoadingEnabled = False
@@ -654,7 +654,7 @@ Public Class EichsoftwareWebservice
             If GetLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
 
             'neuen Context aufbauen
-            Using DbContext As New EichenSQLDatabaseEntities1
+            Using DbContext As New HerstellerersteichungEntities
 
                 DbContext.Configuration.LazyLoadingEnabled = False
                 DbContext.Configuration.ProxyCreationEnabled = False
@@ -792,7 +792,7 @@ Public Class EichsoftwareWebservice
             SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Hole alle Eichprozesse")
 
             'neuen Context aufbauen
-            Using DbContext As New EichenSQLDatabaseEntities1
+            Using DbContext As New HerstellerersteichungEntities
                 Dim lokalerPfadFuerAnhaenge As String = "" 'variable die genutzt wird um den Client den Pfad an dem die Anhänge zu finden sind mitzuteilen
                 Try
                     lokalerPfadFuerAnhaenge = (From Config In DbContext.ServerKonfiguration Select Config.NetzwerkpfadFuerDateianhaenge).FirstOrDefault
@@ -985,7 +985,7 @@ Public Class EichsoftwareWebservice
             SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Hole alle Eichprozesse")
 
             'neuen Context aufbauen
-            Using DbContext As New EichenSQLDatabaseEntities1
+            Using DbContext As New HerstellerersteichungEntities
                 Dim lokalerPfadFuerAnhaenge As String = "" 'variable die genutzt wird um den Client den Pfad an dem die Anhänge zu finden sind mitzuteilen
                 Try
                     lokalerPfadFuerAnhaenge = (From Config In DbContext.ServerKonfiguration Select Config.NetzwerkpfadFuerDateianhaenge).FirstOrDefault
@@ -1199,7 +1199,7 @@ Public Class EichsoftwareWebservice
         If GetLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
         SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Hole WZ")
 
-        Using DBContext As New EichenSQLDatabaseEntities1
+        Using DBContext As New HerstellerersteichungEntities
             DBContext.Configuration.LazyLoadingEnabled = False
             DBContext.Configuration.ProxyCreationEnabled = False
             Try
@@ -1273,7 +1273,7 @@ Public Class EichsoftwareWebservice
         If GetLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
         SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Hole AWG")
 
-        Using DBContext As New EichenSQLDatabaseEntities1
+        Using DBContext As New HerstellerersteichungEntities
             DBContext.Configuration.LazyLoadingEnabled = False
             DBContext.Configuration.ProxyCreationEnabled = False
             Try
@@ -1347,7 +1347,7 @@ Public Class EichsoftwareWebservice
         SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Aktualisiere Eichmarkenverwaltung")
         'FK_Benutzer und HEKennung sind eigentlich doppelt. Es stört aber auch nicht.
         Try
-            Using DbContext As New EichenSQLDatabaseEntities1
+            Using DbContext As New HerstellerersteichungEntities
                 DbContext.Configuration.LazyLoadingEnabled = False
                 DbContext.Configuration.ProxyCreationEnabled = False
 
@@ -1418,7 +1418,7 @@ Public Class EichsoftwareWebservice
 
             'neuen Context aufbauen
             'prüfen ob der eichprozess schoneinmal eingegangen ist anhand von Vorgangsnummer
-            Using DbContext As New EichenSQLDatabaseEntities1
+            Using DbContext As New HerstellerersteichungEntities
                 Dim Serverob = (From db In DbContext.ServerEichprozess Select db Where db.Vorgangsnummer = Vorgangsnummer).FirstOrDefault
 
                 If Not Serverob Is Nothing Then
@@ -1472,7 +1472,7 @@ Public Class EichsoftwareWebservice
             SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Setze Konformitätsbewertungsprozess auf ungültig")
 
             'neuen Context aufbauen
-            Using DbContext As New EichenSQLDatabaseEntities1
+            Using DbContext As New HerstellerersteichungEntities
                 DbContext.Configuration.LazyLoadingEnabled = False
                 DbContext.Configuration.ProxyCreationEnabled = False
                 Try
@@ -1525,7 +1525,7 @@ Public Class EichsoftwareWebservice
             SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Setze Konformitätsbewertungsprozess auf gültig")
 
             'neuen Context aufbauen
-            Using DbContext As New EichenSQLDatabaseEntities1
+            Using DbContext As New HerstellerersteichungEntities
                 DbContext.Configuration.LazyLoadingEnabled = False
                 DbContext.Configuration.ProxyCreationEnabled = False
                 Try
@@ -1578,7 +1578,7 @@ Public Class EichsoftwareWebservice
             SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Prüfe Sperrung")
 
             'neuen Context aufbauen
-            Using DbContext As New EichenSQLDatabaseEntities1
+            Using DbContext As New HerstellerersteichungEntities
                 DbContext.Configuration.LazyLoadingEnabled = False
                 DbContext.Configuration.ProxyCreationEnabled = False
                 Try
@@ -1655,7 +1655,7 @@ Public Class EichsoftwareWebservice
             SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Setze Sperrung auf: " & bolSperren)
 
             'neuen Context aufbauen
-            Using DbContext As New EichenSQLDatabaseEntities1
+            Using DbContext As New HerstellerersteichungEntities
                 DbContext.Configuration.LazyLoadingEnabled = False
                 DbContext.Configuration.ProxyCreationEnabled = False
                 Try
@@ -1737,7 +1737,7 @@ Public Class EichsoftwareWebservice
     Function GetFTPCredentials(ByVal HEKennung As String, Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As clsServerFTPDaten Implements IEichsoftwareWebservice.GetFTPCredentials
         SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Hole FTP Zugangsdaten")
         Try
-            Using dbcontext As New EichenSQLDatabaseEntities1
+            Using dbcontext As New HerstellerersteichungEntities
                 Dim ObjLizenz = (From lic In dbcontext.ServerLizensierung Where lic.HEKennung = HEKennung And lic.Lizenzschluessel = Lizenzschluessel And lic.Aktiv = True).FirstOrDefault
                 Dim interal As Boolean = False
                 'debug
@@ -1788,7 +1788,7 @@ Public Class EichsoftwareWebservice
 
     Public Function GetGesperrtePrüfscheinnummern(HEKennung As String, Lizenzschluessel As String, Vorgangsnummer As String, WindowsUsername As String, Domainname As String, Computername As String) As List(Of StatusPrüfscheinnummer) Implements IEichsoftwareWebservice.GetGesperrtePrüfscheinnummern
 
-        Using dbcontext As New EichenSQLDatabaseEntities1
+        Using dbcontext As New HerstellerersteichungEntities
             Dim ObjLizenz = (From lic In dbcontext.ServerLizensierung Where lic.HEKennung = HEKennung And lic.Lizenzschluessel = Lizenzschluessel And lic.Aktiv = True).FirstOrDefault
             If Not ObjLizenz Is Nothing Then
 
@@ -1805,7 +1805,7 @@ Public Class EichsoftwareWebservice
         If GetLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
         SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Lege Eichprozess ab")
         Try
-            Using dbcontext As New EichenSQLDatabaseEntities1
+            Using dbcontext As New HerstellerersteichungEntities
                 Dim Ablage As New ServerAblageEichprozesse()
                 Ablage.HEKennung = HEKennung
                 Ablage.Lizenz = Lizenzschluessel
@@ -1828,7 +1828,7 @@ Public Class EichsoftwareWebservice
         If GetLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
         SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Rufe abgelegte Eichprozesse ab von Lizenz " + Lizenzschluessel)
         Try
-            Using dbcontext As New EichenSQLDatabaseEntities1
+            Using dbcontext As New HerstellerersteichungEntities
                 Dim ablagen = From Ablage In dbcontext.ServerAblageEichprozesse Where Ablage.HEKennung = HEKennung And Ablage.Lizenz = Lizenzschluessel
                 Dim returnlist As New List(Of String)
 
@@ -1850,7 +1850,7 @@ Public Class EichsoftwareWebservice
         If GetLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
         SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Lösche abgelegte Eichprozesse von Lizenz " + Lizenzschluessel)
         Try
-            Using dbcontext As New EichenSQLDatabaseEntities1
+            Using dbcontext As New HerstellerersteichungEntities
                 Dim ablagen = From Ablage In dbcontext.ServerAblageEichprozesse Where Ablage.HEKennung = HEKennung And Ablage.Lizenz = Lizenzschluessel
 
                 For Each ablage In ablagen

@@ -8,7 +8,7 @@ Public Class FrmPruefscheinnummersuche
     End Sub
 
     Private Sub Suchen(ByVal Suchtext As string)
-        Using Context As New EichenEntities
+        Using Context As New HerstellerersteichungEntities
 
             Context.Configuration.LazyLoadingEnabled = False
             Context.Configuration.ProxyCreationEnabled = False

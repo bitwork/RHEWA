@@ -88,8 +88,13 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <EmbedInteropTypes>True</EmbedInteropTypes>
@@ -97,7 +102,6 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
@@ -151,13 +155,58 @@
       <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
     </Compile>
     <Compile Include="clsTelerikHelper.vb" />
+    <Compile Include="EntityModelDatabaseAdminClient.Context.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityModelDatabaseAdminClient.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityModelDatabaseAdminClient.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityModelDatabaseAdminClient.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="EntityModelDatabaseAdminClient.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
+    </Compile>
     <Compile Include="Firmen.vb">
+      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServerAblageEichprozesse.vb">
+      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServerEichmarkenverwaltung.vb">
       <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
     </Compile>
     <Compile Include="ServerEichprotokoll.vb">
       <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
     </Compile>
     <Compile Include="ServerEichprozess.vb">
+      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServerFirmenZusatzdaten.vb">
+      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServerKompatiblitaetsnachweis.vb">
+      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServerKonfiguration.vb">
+      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServerLizensierung.vb">
+      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServerLookupVertragspartnerFirma.vb">
+      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServerLookup_Auswertegeraet.vb">
+      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServerLookup_Bearbeitungsstatus.vb">
+      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServerLookup_Konformitaetsbewertungsverfahren.vb">
       <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
     </Compile>
     <Compile Include="ServerLookup_Vorgangsstatus.vb">
@@ -167,6 +216,12 @@
       <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
     </Compile>
     <Compile Include="ServerLookup_Waagentyp.vb">
+      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServerLookup_Waegezelle.vb">
+      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServerMogelstatistik.vb">
       <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
     </Compile>
     <Compile Include="ServerPruefungAnsprechvermoegen.vb">
@@ -196,6 +251,9 @@
     <Compile Include="ServerPruefungWiederholbarkeit.vb">
       <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
     </Compile>
+    <Compile Include="ServerVerbindungsprotokoll.vb">
+      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
+    </Compile>
     <Compile Include="ServerVerbindungsprotokollArchiv.vb">
       <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
     </Compile>
@@ -213,21 +271,6 @@
     </Compile>
     <Compile Include="View\frmDBSync.vb">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ServerEichmarkenverwaltung.vb">
-      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ServerFirmenZusatzdaten.vb">
-      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ServerLookupVertragspartnerFirma.vb">
-      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ServerLookup_Auswertegeraet.vb">
-      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ServerLookup_Waegezelle.vb">
-      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
     </Compile>
     <Compile Include="View\frmAuswahllisteFirmenVertragspartnerZuordnung.Designer.vb">
       <DependentUpon>frmAuswahllisteFirmenVertragspartnerZuordnung.vb</DependentUpon>
@@ -252,21 +295,6 @@
     </Compile>
     <Compile Include="View\frmAuswahllisteWZ.vb">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EntityModelDatabaseAdminClient.Context.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EntityModelDatabaseAdminClient.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EntityModelDatabaseAdminClient.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EntityModelDatabaseAdminClient.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="EntityModelDatabaseAdminClient.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
     </Compile>
     <Compile Include="View\frmAuswahllisteAWG.Designer.vb">
       <DependentUpon>frmAuswahllisteAWG.vb</DependentUpon>
@@ -355,21 +383,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="ServerKompatiblitaetsnachweis.vb">
-      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ServerLizensierung.vb">
-      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ServerLookup_Bearbeitungsstatus.vb">
-      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ServerMogelstatistik.vb">
-      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ServerVerbindungsprotokoll.vb">
-      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="View\frmEingabeAuswertegeraet.de.resx">
       <DependentUpon>frmEingabeAuswertegeraet.vb</DependentUpon>
@@ -441,10 +454,6 @@
       <DependentUpon>frmAuswahllisteEichmarkenverwaltung.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EntityDeploy Include="EntityModelDatabaseAdminClient.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>EntityModelDatabaseAdminClient.Designer.vb</LastGenOutput>
-    </EntityDeploy>
     <None Include="App %28RHEWA%29.config">
       <SubType>Designer</SubType>
     </None>
@@ -455,20 +464,6 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="EichsoftwareAdministrationsClient_TemporaryKey.pfx" />
-    <None Include="EntityModelDatabaseAdminClient.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EntityModelDatabaseAdminClient.edmx</DependentUpon>
-      <LastGenOutput>EntityModelDatabaseAdminClient.Context.vb</LastGenOutput>
-    </None>
-    <None Include="EntityModelDatabaseAdminClient.edmx.diagram">
-      <DependentUpon>EntityModelDatabaseAdminClient.edmx</DependentUpon>
-    </None>
-    <None Include="EntityModelDatabaseAdminClient.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EntityModelDatabaseAdminClient.edmx</DependentUpon>
-      <LastGenOutput>EntityModelDatabaseAdminClient.vb</LastGenOutput>
-    </None>
-    <None Include="packages.config" />
     <EmbeddedResource Include="View\frmMain.resx">
       <DependentUpon>frmMain.vb</DependentUpon>
     </EmbeddedResource>
@@ -496,6 +491,13 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+    <EntityDeploy Include="EntityModelDatabaseAdminClient.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EntityModelDatabaseAdminClient.Designer.vb</LastGenOutput>
+    </EntityDeploy>
+    <None Include="EntityModelDatabaseAdminClient.edmx.diagram">
+      <DependentUpon>EntityModelDatabaseAdminClient.edmx</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -510,6 +512,16 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="EntityModelDatabaseAdminClient.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EntityModelDatabaseAdminClient.edmx</DependentUpon>
+      <LastGenOutput>EntityModelDatabaseAdminClient.Context.vb</LastGenOutput>
+    </Content>
+    <Content Include="EntityModelDatabaseAdminClient.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EntityModelDatabaseAdminClient.edmx</DependentUpon>
+      <LastGenOutput>EntityModelDatabaseAdminClient.vb</LastGenOutput>
+    </Content>
     <Content Include="Repository\Call_DTS RHEWA STRATO.bat">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -525,6 +537,7 @@
     <Content Include="Repository\Offline_Synchronization.bat">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="packages.config" />
     <None Include="Resources\RHEWA-Logo_35mm_600dpi.jpg" />
   </ItemGroup>
   <ItemGroup>

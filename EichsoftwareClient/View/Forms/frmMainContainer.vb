@@ -339,7 +339,7 @@ Public Class FrmMainContainer
     ''' <remarks></remarks>
     Private Sub FrmMainContainer_Load(sender As Object, e As System.EventArgs) Handles Me.Load
         Try
-
+            clsDBFunctions.UpdateClientDatenbank()
             Me.Visible = False
             'frmMain Container nutzt entweder die logiken zum Blättern eines eichprozesses (sofern me.currenteichprozess) nicht nothing ist oder aber zeigt die Auswahlliste an, in der die eigenen Eichprozesse aufgelistet werden.
             'prüfen ob ein Vorgang vorliegt oder nicht

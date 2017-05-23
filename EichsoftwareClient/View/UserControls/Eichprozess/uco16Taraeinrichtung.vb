@@ -66,7 +66,7 @@ Public Class uco16Taraeinrichtung
         _suspendEvents = True
         'Nur laden wenn es sich um eine Bearbeitung handelt (sonst würde das in Memory Objekt überschrieben werden)
         If Not DialogModus = enuDialogModus.lesend And Not DialogModus = enuDialogModus.korrigierend Then
-            Using context As New EichsoftwareClientdatabaseEntities1
+            Using context As New Entities
                 'neu laden des Objekts, diesmal mit den lookup Objekten
                 objEichprozess = (From a In context.Eichprozess.Include("Eichprotokoll") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
                 _objEichprotokoll = objEichprozess.Eichprotokoll
@@ -196,7 +196,7 @@ Public Class uco16Taraeinrichtung
             If ValidateControls() = True Then
 
                 'neuen Context aufbauen
-                Using Context As New EichsoftwareClientdatabaseEntities1
+                Using Context As New Entities
                     'prüfen ob CREATE oder UPDATE durchgeführt werden muss
                     If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
                         'prüfen ob das Objekt anhand der ID gefunden werden kann
@@ -254,7 +254,7 @@ Public Class uco16Taraeinrichtung
                 Exit Sub
             End If
             'neuen Context aufbauen
-            Using Context As New EichsoftwareClientdatabaseEntities1
+            Using Context As New Entities
                 'prüfen ob CREATE oder UPDATE durchgeführt werden muss
                 If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
                     'prüfen ob das Objekt anhand der ID gefunden werden kann
@@ -330,7 +330,7 @@ Public Class uco16Taraeinrichtung
         If Me.Equals(TargetUserControl) Then
             MyBase.VersendenNeeded(TargetUserControl)
 
-            Using dbcontext As New EichsoftwareClientdatabaseEntities1
+            Using dbcontext As New Entities
                 '     objEichprozess = (From a In dbcontext.Eichprozess.Include("Eichprotokoll").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
 
                 Dim objServerEichprozess As New EichsoftwareWebservice.ServerEichprozess

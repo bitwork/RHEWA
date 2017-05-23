@@ -54,7 +54,7 @@ Public Class frmFirmenZusatzdaten
         Try
             SuspendLayout()
             'Firmen Grid
-            Using Context As New EichenEntities
+            Using Context As New HerstellerersteichungEntities
                 'Daten aus eichmarkenverwaltungstabelle und Benutzertabelle zusammenführen. Fürs Databinding Casten in einen neuen Typen
                 Dim Data = From FirmenZusatzdaten In Context.ServerFirmenZusatzdaten
                            Join Firma In Context.Firmen On Firma.ID Equals FirmenZusatzdaten.Firmen_FK
@@ -99,7 +99,7 @@ Public Class frmFirmenZusatzdaten
         Try
             Dim SelectedId As String
 
-            Using context As New EichenEntities
+            Using context As New HerstellerersteichungEntities
                 For Each row In RadGridView1.Rows
                     SelectedId = row.Cells("ID").Value
                     Dim objZusatzdaten As ServerFirmenZusatzdaten = (From FirmenZusatzdaten In context.ServerFirmenZusatzdaten Where FirmenZusatzdaten.ID = SelectedId Select FirmenZusatzdaten).FirstOrDefault
@@ -138,7 +138,7 @@ Public Class frmFirmenZusatzdaten
     Private Sub EntsperreDS()
         Try
             Dim username As String = System.Environment.UserName
-            Using context As New EichenEntities
+            Using context As New HerstellerersteichungEntities
                 Dim CollectionEichmarken = (From Eichmarkenverwaltung In context.ServerEichmarkenverwaltung Where Eichmarkenverwaltung.ZurBearbeitungGesperrtDurch = username Select Eichmarkenverwaltung)
 
                 For Each Eichmarkenverwaltung In CollectionEichmarken

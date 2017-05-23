@@ -161,7 +161,7 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
 
             SuspendLayout()
             'Eichmarken Grid
-            Using Context As New EichenEntities
+            Using Context As New HerstellerersteichungEntities
                 'Daten aus eichmarkenverwaltungstabelle und Benutzertabelle zusammenführen. Fürs Databinding Casten in einen neuen Typen
                 Dim Data = From Eichmarken In Context.ServerEichmarkenverwaltung
                            Join Benutzer In Context.Benutzer On Eichmarken.FK_BenutzerID Equals Benutzer.ID
@@ -435,7 +435,7 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
     '            SelectedID = RadGridView1.SelectedRows(0).Cells("ID").Value
 
     '            'neue Datenbankverbindung
-    '            Using context As New EichenEntities
+    '            Using context As New HerstellerersteichungEntities
     '                'anzeigen des Dialogs zur Bearbeitung der Eichung
     '                Dim f As New FrmEichmarkenverwaltung(SelectedID)
     '                f.ShowDialog()
@@ -456,7 +456,7 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
         Try
             Dim SelectedId As String
 
-            Using context As New EichenEntities
+            Using context As New HerstellerersteichungEntities
                 For Each row In RadGridView1.Rows
                     If row.Cells("ZurBearbeitungGesperrtDurch").Value.Equals(System.Environment.UserName) Then
                         SelectedId = row.Cells("ID").Value
@@ -491,7 +491,7 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
     Private Sub EntsperreDS()
         Try
             Dim username As String = System.Environment.UserName
-            Using context As New EichenEntities
+            Using context As New HerstellerersteichungEntities
                 Dim CollectionEichmarken = (From Eichmarkenverwaltung In context.ServerEichmarkenverwaltung Where Eichmarkenverwaltung.ZurBearbeitungGesperrtDurch = username Select Eichmarkenverwaltung)
 
                 For Each Eichmarkenverwaltung In CollectionEichmarken
@@ -812,7 +812,7 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
         Dim SelectedId As String
         SelectedId = e.Row.Cells("ID").Value
         'auf Sperrung prüfen
-        Using Context As New EichenEntities
+        Using Context As New HerstellerersteichungEntities
 
             Dim objEichmarke As ServerEichmarkenverwaltung = (From Eichmarkenverwaltung In Context.ServerEichmarkenverwaltung Where Eichmarkenverwaltung.ID = SelectedId Select Eichmarkenverwaltung).FirstOrDefault
             If objEichmarke Is Nothing Then

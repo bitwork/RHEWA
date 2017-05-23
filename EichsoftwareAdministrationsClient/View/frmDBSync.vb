@@ -40,7 +40,7 @@ Public Class frmDBSync
         Dim conn As New SqlClient.SqlConnection
         If RadioButtonSyncStratoRHEWA.IsChecked Then
             'TODO DB PFad von RHEWA Eintragen
-            conn.ConnectionString = "Data Source=WIN7MOBDEV01;Initial Catalog=Herstellerersteichung;Persist Security Info=True;User ID=sa;Password=Test1234"
+            conn.ConnectionString = "Data Source=RHEWASBS2;Initial Catalog=Herstellerersteichung;Persist Security Info=True;User ID=Herstellerersteichung;Password=Eichen2013"
             PathScript = AppDomain.CurrentDomain.BaseDirectory & "Repository\Call_DTS STRATO RHEWA.bat"
 
         ElseIf RadioButtonSyncRHEWAStrato.IsChecked Then

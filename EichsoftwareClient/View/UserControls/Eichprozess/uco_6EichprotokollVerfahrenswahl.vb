@@ -82,7 +82,7 @@ Public Class uco_6EichprotokollVerfahrenswahl
     Protected Friend Overrides Sub LoadFromDatabase()
         objEichprozess = ParentFormular.CurrentEichprozess
         If Not DialogModus = enuDialogModus.lesend And Not DialogModus = enuDialogModus.korrigierend Then
-            Using context As New EichsoftwareClientdatabaseEntities1
+            Using context As New Entities
                 'neu laden des Objekts, diesmal mit den lookup Objekten
                 'Nur laden wenn es sich um eine Bearbeitung handelt (sonst würde das in Memory Objekt überschrieben werden)
                 objEichprozess = (From a In context.Eichprozess.Include("Eichprotokoll").Include("Kompatiblitaetsnachweis").Include("Lookup_Waagenart") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
@@ -229,7 +229,7 @@ Public Class uco_6EichprotokollVerfahrenswahl
             End If
             If ValidateControls() = True Then
 
-                Using Context As New EichsoftwareClientdatabaseEntities1
+                Using Context As New Entities
 
                     If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
 
@@ -287,7 +287,7 @@ Public Class uco_6EichprotokollVerfahrenswahl
                 Exit Sub
             End If
             'neuen Context aufbauen
-            Using Context As New EichsoftwareClientdatabaseEntities1
+            Using Context As New Entities
                 'prüfen ob CREATE oder UPDATE durchgeführt werden muss
                 If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
                     'prüfen ob das Objekt anhand der ID gefunden werden kann

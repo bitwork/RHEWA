@@ -21,7 +21,7 @@
     End Sub
 
     Private Sub Auswertegeraet_Load(sender As Object, e As EventArgs) Handles Me.Load
-        Using context As New EichenEntities()
+        Using context As New HerstellerersteichungEntities()
             'abrufen der Entität aus der Datenbank
             If _ID <> "-1" Then
                 _objAWG = (From AWG In context.ServerLookup_Auswertegeraet Where AWG.ID = _ID).FirstOrDefault
@@ -111,7 +111,7 @@
         If ValidateControls() = True Then
 
             'neuen Context aufbauen
-            Using Context As New EichenEntities
+            Using Context As New HerstellerersteichungEntities
                 'prüfen ob CREATE oder UPDATE durchgeführt werden muss
                 If _objAWG.ID <> "0" Then 'an dieser stelle muss eine ID existieren
                     'prüfen ob das Objekt anhand der ID gefunden werden kann

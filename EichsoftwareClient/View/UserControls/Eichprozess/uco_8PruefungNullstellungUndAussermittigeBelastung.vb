@@ -582,7 +582,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
 
         'Nur laden wenn es sich um eine Bearbeitung handelt (sonst würde das in Memory Objekt überschrieben werden)
         If Not DialogModus = enuDialogModus.lesend And Not DialogModus = enuDialogModus.korrigierend Then
-            Using context As New EichsoftwareClientdatabaseEntities1
+            Using context As New Entities
 
                 'neu laden des Objekts, diesmal mit den lookup Objekten
                 objEichprozess = (From a In context.Eichprozess.Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").
@@ -612,7 +612,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
                     _ListPruefungWiederholbarkeit.Add(obj)
                 Next
             Catch ex As System.ObjectDisposedException 'fehler im Clientseitigen Lesemodus (bei bereits abegschickter Eichung)
-                Using context As New EichsoftwareClientdatabaseEntities1
+                Using context As New Entities
                     Dim query = From a In context.PruefungAussermittigeBelastung Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
                     _ListPruefungAussermittigeBelastung = query.ToList
 
@@ -682,7 +682,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         End If
     End Sub
 
-    Private Sub SaveAussermittigeBelastung(ByRef Context As EichsoftwareClientdatabaseEntities1)
+    Private Sub SaveAussermittigeBelastung(ByRef Context As Entities)
         'anzahl Bereiche auslesen um damit die anzahl der benötigten Iterationen und Objekt Erzeugungen zu erfahren
         Dim intBereiche As Integer = 0
         If objEichprozess.Lookup_Waagenart.Art = "Einbereichswaage" Then
@@ -939,7 +939,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
 
     End Sub
 
-    Private Sub SaveWiederholungen(ByRef Context As EichsoftwareClientdatabaseEntities1)
+    Private Sub SaveWiederholungen(ByRef Context As Entities)
         If RadGroupBoxWiederholungen.Visible = True Then
 
             'wenn es defintiv noch keine pruefungen gibt, neue Anlegen
@@ -1596,7 +1596,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
             If ValidateControls() = True Then
 
                 'neuen Context aufbauen
-                Using Context As New EichsoftwareClientdatabaseEntities1
+                Using Context As New Entities
 
                     'prüfen ob CREATE oder UPDATE durchgeführt werden muss
                     If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
@@ -1659,7 +1659,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
                 Exit Sub
             End If
             'neuen Context aufbauen
-            Using Context As New EichsoftwareClientdatabaseEntities1
+            Using Context As New Entities
                 'prüfen ob CREATE oder UPDATE durchgeführt werden muss
                 If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
                     'prüfen ob das Objekt anhand der ID gefunden werden kann

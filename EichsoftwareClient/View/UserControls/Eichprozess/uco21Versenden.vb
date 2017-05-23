@@ -52,7 +52,7 @@ Public Class Uco21Versenden
         'events abbrechen
         'Nur laden wenn es sich um eine Bearbeitung handelt (sonst würde das in Memory Objekt überschrieben werden)
         If Not DialogModus = enuDialogModus.lesend And Not DialogModus = enuDialogModus.korrigierend Then
-            Using context As New EichsoftwareClientdatabaseEntities1
+            Using context As New Entities
                 context.Configuration.LazyLoadingEnabled = True
                 'neu laden des Objekts, diesmal mit den lookup Objekten
                 objEichprozess = (From a In context.Eichprozess.Include("Eichprotokoll").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
@@ -118,7 +118,7 @@ Public Class Uco21Versenden
         'auf versendet Status setzen
         If objEichprozess.FK_Bearbeitungsstatus = 4 Or objEichprozess.FK_Bearbeitungsstatus = 2 Then 'wenn neu oder fehlerhaft auf versendet zurücksetzen
             'neuen Context aufbauen
-            Using Context As New EichsoftwareClientdatabaseEntities1
+            Using Context As New Entities
                 'prüfen ob CREATE oder UPDATE durchgeführt werden muss
                 If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
                     'prüfen ob das Objekt anhand der ID gefunden werden kann
@@ -144,7 +144,7 @@ Public Class Uco21Versenden
             End Using
         End If
 
-        Using dbcontext As New EichsoftwareClientdatabaseEntities1
+        Using dbcontext As New Entities
             objEichprozess = (From a In dbcontext.Eichprozess.Include("Eichprotokoll").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
             objEichprozess.AusStandardwaageErzeugt = False 'Egal ob der Prozess versendet wird oder nicht, das Flag bei einer kopierten Leistung kann entfernt werden, da es sich jetzt um eine gültige Waage handelt
             objServerEichprozess = clsClientServerConversionFunctions.CopyServerObjectProperties(objServerEichprozess, objEichprozess, clsClientServerConversionFunctions.enuModus.ClientSendetAnRhewa)
@@ -230,7 +230,7 @@ Public Class Uco21Versenden
     End Sub
 
     Private Sub EichprozessStatusZurueckSetzen()
-        Using Context As New EichsoftwareClientdatabaseEntities1
+        Using Context As New Entities
             'prüfen ob CREATE oder UPDATE durchgeführt werden muss
             If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
                 'prüfen ob das Objekt anhand der ID gefunden werden kann
@@ -268,7 +268,7 @@ Public Class Uco21Versenden
         If Me.Equals(UserControl) Then
 
             'neuen Context aufbauen
-            Using Context As New EichsoftwareClientdatabaseEntities1
+            Using Context As New Entities
                 'prüfen ob CREATE oder UPDATE durchgeführt werden muss
                 If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
                     'prüfen ob das Objekt anhand der ID gefunden werden kann
@@ -307,7 +307,7 @@ Public Class Uco21Versenden
             End If
 
             'neuen Context aufbauen
-            Using Context As New EichsoftwareClientdatabaseEntities1
+            Using Context As New Entities
                 'prüfen ob CREATE oder UPDATE durchgeführt werden muss
                 If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
                     'prüfen ob das Objekt anhand der ID gefunden werden kann
@@ -418,7 +418,7 @@ Public Class Uco21Versenden
         If Me.Equals(TargetUserControl) Then
             MyBase.VersendenNeeded(TargetUserControl)
 
-            Using dbcontext As New EichsoftwareClientdatabaseEntities1
+            Using dbcontext As New Entities
                 '   objEichprozess = (From a In dbcontext.Eichprozess.Include("Eichprotokoll").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
 
                 Dim objServerEichprozess As New EichsoftwareWebservice.ServerEichprozess
@@ -504,7 +504,7 @@ Public Class Uco21Versenden
     End Sub
 
     Public Sub InitUploadFileToFTP()
-        Using dbcontext As New EichsoftwareClientdatabaseEntities1
+        Using dbcontext As New Entities
             Using Webcontext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
                 Try
                     Webcontext.Open()

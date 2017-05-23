@@ -12,7 +12,7 @@
     End Sub
 
     Private Sub LoadFromDatabase()
-        Using Context As New EichenEntities
+        Using Context As New HerstellerersteichungEntities
             Dim Data = From Lookup_Waegezelle In Context.ServerLookup_Waegezelle Select Lookup_Waegezelle
             RadGridViewAuswahlliste.DataSource = Data.ToList
 

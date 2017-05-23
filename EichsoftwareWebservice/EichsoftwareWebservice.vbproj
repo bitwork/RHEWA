@@ -66,15 +66,19 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.EnterpriseServices" />
@@ -119,6 +123,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="EichsoftwareWebservice.svc" />
+    <Content Include="EntityModelEichsoftwareServer.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EntityModelEichsoftwareServer.edmx</DependentUpon>
+      <LastGenOutput>EntityModelEichsoftwareServer.Context.vb</LastGenOutput>
+    </Content>
+    <Content Include="EntityModelEichsoftwareServer.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EntityModelEichsoftwareServer.edmx</DependentUpon>
+      <LastGenOutput>EntityModelEichsoftwareServer.vb</LastGenOutput>
+    </Content>
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -129,18 +143,6 @@
   <ItemGroup>
     <Compile Include="Benutzer.vb">
       <DependentUpon>EntityModelEichsoftwareServer.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Firmen.vb">
-      <DependentUpon>EntityModelEichsoftwareServer.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\ApplyCyclicDataContractSerializerOperationBehavior.vb" />
-    <Compile Include="Model\clsEichprozessFuerAuswahlliste.vb" />
-    <Compile Include="Model\clsLizenzdaten.vb" />
-    <Compile Include="Model\clsServerFTPDaten.vb" />
-    <Compile Include="Model\CyclicReferencesAwareAttribute.vb" />
-    <Compile Include="Model\CyclicReferencesAwareContractBehavior.vb" />
-    <Compile Include="EichsoftwareWebservice.svc.vb">
-      <DependentUpon>EichsoftwareWebservice.svc</DependentUpon>
     </Compile>
     <Compile Include="EntityModelEichsoftwareServer.Context.vb">
       <AutoGen>True</AutoGen>
@@ -156,6 +158,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>EntityModelEichsoftwareServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Firmen.vb">
+      <DependentUpon>EntityModelEichsoftwareServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ApplyCyclicDataContractSerializerOperationBehavior.vb" />
+    <Compile Include="Model\clsEichprozessFuerAuswahlliste.vb" />
+    <Compile Include="Model\clsLizenzdaten.vb" />
+    <Compile Include="Model\clsServerFTPDaten.vb" />
+    <Compile Include="Model\CyclicReferencesAwareAttribute.vb" />
+    <Compile Include="Model\CyclicReferencesAwareContractBehavior.vb" />
+    <Compile Include="EichsoftwareWebservice.svc.vb">
+      <DependentUpon>EichsoftwareWebservice.svc</DependentUpon>
     </Compile>
     <Compile Include="IEichsoftwareWebservice.vb" />
     <Compile Include="Model\clsServerHelper.vb" />
@@ -255,6 +269,9 @@
     <Compile Include="ServerVerbindungsprotokoll.vb">
       <DependentUpon>EntityModelEichsoftwareServer.tt</DependentUpon>
     </Compile>
+    <Compile Include="ServerVerbindungsprotokollArchiv.vb">
+      <DependentUpon>EntityModelEichsoftwareServer.tt</DependentUpon>
+    </Compile>
     <Compile Include="StatusPrüfscheinnummer.vb">
       <DependentUpon>EntityModelEichsoftwareServer.tt</DependentUpon>
     </Compile>
@@ -272,18 +289,8 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>EntityModelEichsoftwareServer.Designer.vb</LastGenOutput>
     </EntityDeploy>
-    <Content Include="EntityModelEichsoftwareServer.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EntityModelEichsoftwareServer.edmx</DependentUpon>
-      <LastGenOutput>EntityModelEichsoftwareServer.Context.vb</LastGenOutput>
-    </Content>
     <Content Include="EntityModelEichsoftwareServer.edmx.diagram">
       <DependentUpon>EntityModelEichsoftwareServer.edmx</DependentUpon>
-    </Content>
-    <Content Include="EntityModelEichsoftwareServer.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EntityModelEichsoftwareServer.edmx</DependentUpon>
-      <LastGenOutput>EntityModelEichsoftwareServer.vb</LastGenOutput>
     </Content>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -294,7 +301,6 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <Content Include="packages.config" />
     <Content Include="Web %28DEBUG%29.config">
       <SubType>Designer</SubType>
     </Content>
@@ -311,6 +317,7 @@
       <DependentUpon>Web%28DEBUG Liveumgebung%29.config</DependentUpon>
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="packages.config" />
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
       <SubType>Designer</SubType>

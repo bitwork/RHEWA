@@ -13,7 +13,7 @@
     End Sub
 
     Private Sub LadeDaten()
-        Using Context As New EichenEntities
+        Using Context As New HerstellerersteichungEntities
 
             Context.Configuration.LazyLoadingEnabled = False
             Context.Configuration.ProxyCreationEnabled = False
@@ -74,7 +74,7 @@ Eichprozess.ID,
                     Fragetext = "Möchten Sie den aktuellen Datensatz wirklich entfernen? Er kann nicht wiederhergestellt werden"
 
                     If MessageBox.Show(Fragetext, "Frage", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
-                        Using context As New EichenEntities
+                        Using context As New HerstellerersteichungEntities
                             Dim Prozess = (From prozesse In context.ServerEichprozess Where prozesse.ID = ID).FirstOrDefault
                             Dim EichprotokollID = Prozess.FK_Eichprotokoll
                             Dim Protokoll = (From Protokolle In context.ServerEichprotokoll Where Protokolle.ID = EichprotokollID).FirstOrDefault

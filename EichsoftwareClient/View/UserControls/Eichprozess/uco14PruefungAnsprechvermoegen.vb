@@ -58,7 +58,7 @@ Public Class uco14PruefungAnsprechvermoegen
 
         'Nur laden wenn es sich um eine Bearbeitung handelt (sonst würde das in Memory Objekt überschrieben werden)
         If Not DialogModus = enuDialogModus.lesend And Not DialogModus = enuDialogModus.korrigierend Then
-            Using context As New EichsoftwareClientdatabaseEntities1
+            Using context As New Entities
                 'neu laden des Objekts, diesmal mit den lookup Objekten
                 objEichprozess = (From a In context.Eichprozess.Include("Eichprotokoll").Include("Kompatiblitaetsnachweis").Include("Lookup_Waagenart") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
                 _objEichprotokoll = objEichprozess.Eichprotokoll
@@ -80,7 +80,7 @@ Public Class uco14PruefungAnsprechvermoegen
                     _ListPruefungAnsprechvermoegen.Add(obj)
                 Next
             Catch ex As System.ObjectDisposedException 'fehler im Clientseitigen Lesemodus (bei bereits abegschickter Eichung)
-                Using context As New EichsoftwareClientdatabaseEntities1
+                Using context As New Entities
                     'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
                     Dim query = From a In context.PruefungAnsprechvermoegen Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
                     _ListPruefungAnsprechvermoegen = query.ToList
@@ -181,7 +181,7 @@ Public Class uco14PruefungAnsprechvermoegen
     ''' <commentauthor></commentauthor>
     Private Sub UpdateObject()
         'neuen Context aufbauen
-        Using Context As New EichsoftwareClientdatabaseEntities1
+        Using Context As New Entities
             'jedes objekt initialisieren und aus context laden und updaten
             For Each obj In _ListPruefungAnsprechvermoegen
                 Dim objPruefung = Context.PruefungAnsprechvermoegen.FirstOrDefault(Function(value) value.ID = obj.ID)
@@ -332,7 +332,7 @@ RadTextBoxControlLast2.Text.Trim = "" Or
             If ValidateControls() = True Then
 
                 'neuen Context aufbauen
-                Using Context As New EichsoftwareClientdatabaseEntities1
+                Using Context As New Entities
                     'prüfen ob CREATE oder UPDATE durchgeführt werden muss
                     If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
                         'prüfen ob das Objekt anhand der ID gefunden werden kann
@@ -442,7 +442,7 @@ RadTextBoxControlLast2.Text.Trim = "" Or
                 Exit Sub
             End If
             'neuen Context aufbauen
-            Using Context As New EichsoftwareClientdatabaseEntities1
+            Using Context As New Entities
                 'prüfen ob CREATE oder UPDATE durchgeführt werden muss
                 If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
                     'prüfen ob das Objekt anhand der ID gefunden werden kann
@@ -658,7 +658,7 @@ RadTextBoxControlLast2.Text.Trim = "" Or
 
         If Me.Equals(TargetUserControl) Then
             MyBase.VersendenNeeded(TargetUserControl)
-            Using dbcontext As New EichsoftwareClientdatabaseEntities1
+            Using dbcontext As New Entities
                 '   objEichprozess = (From a In dbcontext.Eichprozess.Include("Eichprotokoll").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
 
                 Dim objServerEichprozess As New EichsoftwareWebservice.ServerEichprozess

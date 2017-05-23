@@ -67,7 +67,7 @@ Public Class uco_4KompatiblititaetsnachweisErgebnis
         objEichprozess = ParentFormular.CurrentEichprozess
         'Nur laden wenn es sich um eine Bearbeitung handelt (sonst würde das in Memory Objekt überschrieben werden)
         If Not DialogModus = enuDialogModus.lesend And Not DialogModus = enuDialogModus.korrigierend Then
-            Using context As New EichsoftwareClientdatabaseEntities1
+            Using context As New Entities
                 'neu laden des Objekts, diesmal mit den lookup Objekten
                 objEichprozess = (From a In context.Eichprozess.Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
             End Using
@@ -761,7 +761,7 @@ Public Class uco_4KompatiblititaetsnachweisErgebnis
         End If
 
         'je nach Art der waage Steuerlemente ein oder ausblenden
-        Using Context As New EichsoftwareClientdatabaseEntities1
+        Using Context As New Entities
             If Not DialogModus = enuDialogModus.lesend And Not DialogModus = enuDialogModus.korrigierend Then
                 objEichprozess = (From a In Context.Eichprozess.Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
             End If
@@ -948,7 +948,7 @@ Public Class uco_4KompatiblititaetsnachweisErgebnis
             If ValidateControls() Then
 
                 'neuen Context aufbauen
-                Using Context As New EichsoftwareClientdatabaseEntities1
+                Using Context As New Entities
                     'prüfen ob CREATE oder UPDATE durchgeführt werden muss
                     If objEichprozess.ID <> 0 Then 'Neue ID also CREATE Operation
                         'prüfen ob das Objekt anhand der ID gefunden werden kann
@@ -994,7 +994,7 @@ Public Class uco_4KompatiblititaetsnachweisErgebnis
         Lokalisierung(Me, resources)
 
 
-        Using Context As New EichsoftwareClientdatabaseEntities1
+        Using Context As New Entities
             If Not DialogModus = enuDialogModus.lesend And Not DialogModus = enuDialogModus.korrigierend Then
                 objEichprozess = (From a In Context.Eichprozess.Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
             End If

@@ -15,7 +15,7 @@ Public Class frmAuswahllisteFirmenVertragspartnerZuordnung
     End Sub
 
     Private Sub LoadFromDatabase()
-        Using Context As New EichenEntities
+        Using Context As New HerstellerersteichungEntities
 
             Try
                 'abrufen alle Lizenzdaten mit Join auf Benutzer und firmentabelle

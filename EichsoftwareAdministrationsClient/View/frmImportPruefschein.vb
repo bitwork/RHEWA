@@ -69,7 +69,7 @@
     End Function
 
     Private Sub DeleteData()
-        Using dbContext As New EichenEntities
+        Using dbContext As New HerstellerersteichungEntities
             Dim oldValues = dbContext.StatusPrüfscheinnummer
             For Each schein In oldValues
                 dbContext.StatusPrüfscheinnummer.Remove(schein)
@@ -80,7 +80,7 @@
     End Sub
 
     Private Sub addData(values As List(Of StatusPrüfscheinnummer))
-        Using dbContext As New EichenEntities
+        Using dbContext As New HerstellerersteichungEntities
             For Each o In values
                 dbContext.StatusPrüfscheinnummer.Add(o)
             Next
@@ -89,7 +89,7 @@
     End Sub
 
     Private Sub ReloadData()
-        Using dbContext As New EichenEntities
+        Using dbContext As New HerstellerersteichungEntities
             RadGridView1.DataSource = dbContext.StatusPrüfscheinnummer.ToList
         End Using
     End Sub

@@ -195,7 +195,7 @@ Public Class uco_9PruefungLinearitaet
 
         'Nur laden wenn es sich um eine Bearbeitung handelt (sonst würde das in Memory Objekt überschrieben werden)
         If Not DialogModus = enuDialogModus.lesend And Not DialogModus = enuDialogModus.korrigierend Then
-            Using context As New EichsoftwareClientdatabaseEntities1
+            Using context As New Entities
                 'neu laden des Objekts, diesmal mit den lookup Objekten
                 objEichprozess = (From a In context.Eichprozess.Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
 
@@ -223,7 +223,7 @@ Public Class uco_9PruefungLinearitaet
                     _ListPruefungPruefungLinearitaetFallend.Add(obj)
                 Next
             Catch ex As System.ObjectDisposedException 'fehler im Clientseitigen Lesemodus (bei bereits abegschickter Eichung)
-                Using context As New EichsoftwareClientdatabaseEntities1
+                Using context As New Entities
                     'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
                     Dim query = From a In context.PruefungLinearitaetSteigend Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
                     _ListPruefungPruefungLinearitaetSteigend = query.ToList
@@ -748,7 +748,7 @@ Public Class uco_9PruefungLinearitaet
     Private Sub UpdateObject()
         If DialogModus = enuDialogModus.normal Then objEichprozess.Bearbeitungsdatum = Date.Now
         'neuen Context aufbauen
-        Using Context As New EichsoftwareClientdatabaseEntities1
+        Using Context As New Entities
             'jedes objekt initialisieren und aus context laden und updaten
             For Each obj In _ListPruefungPruefungLinearitaetFallend
                 Dim objPruefung = Context.PruefungLinearitaetFallend.FirstOrDefault(Function(value) value.ID = obj.ID)
@@ -813,7 +813,7 @@ Public Class uco_9PruefungLinearitaet
             If ValidateControls() = True Then
 
                 'neuen Context aufbauen
-                Using Context As New EichsoftwareClientdatabaseEntities1
+                Using Context As New Entities
 
                     'prüfen ob CREATE oder UPDATE durchgeführt werden muss
                     If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
@@ -1013,7 +1013,7 @@ Public Class uco_9PruefungLinearitaet
         If Me.Equals(usercontrol) Then
 
             'neuen Context aufbauen
-            Using Context As New EichsoftwareClientdatabaseEntities1
+            Using Context As New Entities
                 If DialogModus = enuDialogModus.lesend Then
                     UpdateObject()
                     ParentFormular.CurrentEichprozess = objEichprozess

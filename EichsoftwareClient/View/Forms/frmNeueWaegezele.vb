@@ -40,7 +40,7 @@
     ''' <commentauthor></commentauthor>
     Private Function SavetoDatebase() As Boolean
         If validateControls() = True Then
-            Using context As New EichsoftwareClientdatabaseEntities1
+            Using context As New Entities
                 Dim objWZ As New Lookup_Waegezelle
 
                 objWZ.Bauartzulassung = RadTextBoxControlWZBauartzulassung.Text

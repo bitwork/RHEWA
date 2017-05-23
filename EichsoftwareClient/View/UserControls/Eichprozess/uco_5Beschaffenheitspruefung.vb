@@ -48,7 +48,7 @@ Public Class uco_5Beschaffenheitspruefung
 
     Protected Friend Overrides Sub LoadFromDatabase()
         'TH: Laden aus Datenbank
-        Using Context As New EichsoftwareClientdatabaseEntities1
+        Using Context As New Entities
             _suspendEvents = True
             objEichprozess = ParentFormular.CurrentEichprozess
             'Nur laden wenn es sich um eine Bearbeitung handelt (sonst würde das in Memory Objekt überschrieben werden)
@@ -188,7 +188,7 @@ Public Class uco_5Beschaffenheitspruefung
             If ValidateControls() Then
 
                 'neuen Context aufbauen
-                Using Context As New EichsoftwareClientdatabaseEntities1
+                Using Context As New Entities
                     If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
                         If _objEichprotokoll Is Nothing Then           'neues Eichprotokoll anlegen und verfahrens Art zuweisen
                             _objEichprotokoll = Context.Eichprotokoll.Create

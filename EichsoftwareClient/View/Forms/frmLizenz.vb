@@ -29,7 +29,7 @@ Public Class FrmLizenz
 
                     Exit Sub
                 End Try
-                Using DBContext As New EichsoftwareClientdatabaseEntities1
+                Using DBContext As New Entities
 
                     'prüfen ob die Lizenz gültig ist
                     Dim HEKennung As String = RadTextBoxControl1.Text

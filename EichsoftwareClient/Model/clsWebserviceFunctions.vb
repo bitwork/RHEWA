@@ -45,7 +45,7 @@ Public Class clsWebserviceFunctions
                 Catch ex As Exception
                     Return False
                 End Try
-                Using DBContext As New EichsoftwareClientdatabaseEntities1
+                Using DBContext As New Entities
                     'lizenzisierung holen
                     Dim objLic = (From db In DBContext.Lizensierung Where db.Lizenzschluessel = AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel And db.HEKennung = AktuellerBenutzer.Instance.Lizenz.HEKennung).FirstOrDefault
                     Dim objLizenzdaten As EichsoftwareWebservice.clsLizenzdaten = webContext.GetLizenzdaten(objLic.HEKennung, objLic.Lizenzschluessel, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
@@ -93,7 +93,7 @@ Public Class clsWebserviceFunctions
                 Catch ex As Exception
                     Exit Sub
                 End Try
-                Using DBContext As New EichsoftwareClientdatabaseEntities1
+                Using DBContext As New Entities
 
                     'Eingrenzen welche Daten synchronisiert werden müssen, je nach Einstllung des Benutzers
                     Dim StartDatum As Date = #1/1/2000#
@@ -214,7 +214,7 @@ Public Class clsWebserviceFunctions
                 Catch ex As Exception
                     Exit Sub
                 End Try
-                Using DBContext As New EichsoftwareClientdatabaseEntities1
+                Using DBContext As New Entities
                     'Eingrenzen welche Daten synchronisiert werden müssen, je nach Einstllung des Benutzers
                     Dim StartDatum As Date = #1/1/2000#
                     Dim EndDatum As Date = #12/31/2999#
@@ -335,7 +335,7 @@ Public Class clsWebserviceFunctions
                 Catch ex As Exception
                     Exit Sub
                 End Try
-                Using DBContext As New EichsoftwareClientdatabaseEntities1
+                Using DBContext As New Entities
 
                     'hole die prozesse mit dem status 1 = in bearbeitung bei rhewa
                     Dim query = From db In DBContext.Eichprozess.Include("Eichprotokoll").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select db Where db.FK_Bearbeitungsstatus = 1
@@ -410,7 +410,7 @@ Public Class clsWebserviceFunctions
                 Catch ex As Exception
                     Exit Sub
                 End Try
-                Using DBContext As New EichsoftwareClientdatabaseEntities1
+                Using DBContext As New Entities
                     'Eingrenzen welche Daten synchronisiert werden müssen, je nach Einstllung des Benutzers
                     Dim StartDatum As Date = #1/1/2000#
                     Dim EndDatum As Date = #12/31/2999#
@@ -599,7 +599,7 @@ Public Class clsWebserviceFunctions
                 MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Return Nothing
             End Try
-            Using dbcontext As New EichsoftwareClientdatabaseEntities1
+            Using dbcontext As New Entities
                 Try
                     objClientEichprozess = dbcontext.Eichprozess.Create
                     objServerEichprozess = webContext.GetEichProzess(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
@@ -685,7 +685,7 @@ Public Class clsWebserviceFunctions
     '            MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
     '            Return Nothing
     '        End Try
-    '        Using dbcontext As New EichsoftwareClientdatabaseEntities1
+    '        Using dbcontext As New Entities
     '            Try
     '                objClientEichprozess = dbcontext.Eichprozess.Create
     '                objServerEichprozess = webContext.GetEichProzess(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
@@ -780,7 +780,7 @@ Public Class clsWebserviceFunctions
         Dim jsonSerializerSettings = New JsonSerializerSettings()
         jsonSerializerSettings.PreserveReferencesHandling = PreserveReferencesHandling.Objects
         'Eichobjekt Serialisieren
-        Using DBContext As New EichsoftwareClientdatabaseEntities1
+        Using DBContext As New Entities
             DBContext.Configuration.ProxyCreationEnabled = False
             'Kopie der Eichung anlegen
             'Dim eichung = (DBContext.Eichprozess.Include("Eichprotokoll").Include("Lookup_Auswertegeraet").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik").Where(Function(C) C.Vorgangsnummer = Vorgangsnummer)).FirstOrDefault
@@ -861,7 +861,7 @@ Public Class clsWebserviceFunctions
             Dim result = webContext.getAblageEichprozesse(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
             jsonStrings.AddRange(result)
             Dim successful As Boolean = False
-            Using DBContext As New EichsoftwareClientdatabaseEntities1
+            Using DBContext As New Entities
                 For Each jsonString In jsonStrings
                     Dim neweichung As Eichprozess = JsonConvert.DeserializeObject(jsonString, GetType(Eichprozess), jsonSerializerSettings)
                     ' lokal hinzufügen
@@ -957,7 +957,7 @@ Public Class clsWebserviceFunctions
                 Return Nothing
             End Try
 
-            Using dbcontext As New EichsoftwareClientdatabaseEntities1
+            Using dbcontext As New Entities
 
                 objClientEichprozess = dbcontext.Eichprozess.Create
                 objServerEichprozess = webContext.GetEichProzess(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)

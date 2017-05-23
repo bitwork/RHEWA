@@ -27,7 +27,7 @@ Public Class frmEingabeFirmenVertragspartnerZuordnung
     End Sub
 
     Private Sub LadeObjekt()
-        Using context As New EichenEntities()
+        Using context As New HerstellerersteichungEntities()
             'abrufen der Entität aus der Datenbank
             If _ID <> "-1" Then
                 _objFirmenzuordnung = (From Firmen In context.ServerLookupVertragspartnerFirma Where Firmen.ID = _ID).FirstOrDefault
@@ -53,7 +53,7 @@ Public Class frmEingabeFirmenVertragspartnerZuordnung
 
     Private Sub LadeDropDownDatenquelle()
         Try
-            Using context As New EichenEntities
+            Using context As New HerstellerersteichungEntities
                 'abrufen der Entität aus der Datenbank
                 Dim query = From Firma In context.Firmen Order By Firma.Name
                 'ab hier sind alle Benutzer bekannt.
@@ -98,7 +98,7 @@ Public Class frmEingabeFirmenVertragspartnerZuordnung
     Friend Sub Save()
         If ValidateControls() = True Then
             'neuen Context aufbauen
-            Using Context As New EichenEntities
+            Using Context As New HerstellerersteichungEntities
                 'prüfen ob CREATE oder UPDATE durchgeführt werden muss
                 If _objFirmenzuordnung.ID <> "0" Then 'an dieser stelle muss eine ID existieren
                     'prüfen ob das Objekt anhand der ID gefunden werden kann
@@ -196,7 +196,7 @@ Public Class frmEingabeFirmenVertragspartnerZuordnung
 
         ' prüfen ob Nebenfirma die Hauptfirma zugeordnet wird, nicht bereits der nebenfirma zugeordnet ist (kreuzverweis)
         Try
-            Using context As New EichenEntities
+            Using context As New HerstellerersteichungEntities
                 Dim query = From FirmenZuordnung In context.ServerLookupVertragspartnerFirma Where FirmenZuordnung.Firma_FK = idUnterfirma And FirmenZuordnung.Vertragspartner_FK = idHauptfirma
 
                 If query.Count <> 0 Then
@@ -214,7 +214,7 @@ Public Class frmEingabeFirmenVertragspartnerZuordnung
         Try
             If _bolNew Then
 
-                Using context As New EichenEntities
+                Using context As New HerstellerersteichungEntities
                     Dim query = From FirmenZuordnung In context.ServerLookupVertragspartnerFirma Where FirmenZuordnung.Firma_FK = idHauptfirma And FirmenZuordnung.Vertragspartner_FK = idUnterfirma
 
                     If query.Count <> 0 Then
@@ -234,7 +234,7 @@ Public Class frmEingabeFirmenVertragspartnerZuordnung
         Try
             If _bolNew Then
 
-                Using context As New EichenEntities
+                Using context As New HerstellerersteichungEntities
                     Dim query = From FirmenZuordnung In context.ServerLookupVertragspartnerFirma Where FirmenZuordnung.Vertragspartner_FK = idUnterfirma And FirmenZuordnung.Firma_FK IsNot Nothing
 
                     If query.Count <> 0 Then
@@ -271,7 +271,7 @@ Public Class frmEingabeFirmenVertragspartnerZuordnung
     Private Sub LoescheZuordnung()
         If ValidateControls() = True Then
             'neuen Context aufbauen
-            Using Context As New EichenEntities
+            Using Context As New HerstellerersteichungEntities
                 'prüfen ob CREATE oder UPDATE durchgeführt werden muss
                 If _objFirmenzuordnung.ID <> "0" Then 'an dieser stelle muss eine ID existieren
                     'prüfen ob das Objekt anhand der ID gefunden werden kann

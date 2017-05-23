@@ -466,7 +466,7 @@ Public Class clsClientServerConversionFunctions
         Dim query = Nothing
 
         'prüfungen
-        Using dbcontext As New EichsoftwareClientdatabaseEntities1
+        Using dbcontext As New Entities
 
             Try
                 If pModus = enuModus.RHEWASendetAnClient Then
@@ -1076,7 +1076,7 @@ Public Class clsClientServerConversionFunctions
         If SourceObject Is Nothing OrElse TargetObject Is Nothing Then
             Return
         End If
-        Using dbcontext As New EichsoftwareClientdatabaseEntities1
+        Using dbcontext As New Entities
             Dim EichprotokollID As String = TargetObject.Eichprotokoll.ID
 
             'neu laden der instanz damit TRacking des Contextes aktiv ist
@@ -1334,7 +1334,7 @@ Public Class clsClientServerConversionFunctions
     ''' <param name="Targetobject"></param>
     ''' <remarks></remarks>
     Public Shared Sub GetLookupValuesServer(ByVal Targetobject As Eichprozess)
-        Using dbContext As New EichsoftwareClientdatabaseEntities1
+        Using dbContext As New Entities
             Targetobject.Lookup_Vorgangsstatus = (From f In dbContext.Lookup_Vorgangsstatus Where f.ID = Targetobject.FK_Vorgangsstatus Select f).FirstOrDefault
             Targetobject.Lookup_Waagenart = (From f In dbContext.Lookup_Waagenart Where f.ID = Targetobject.FK_WaagenArt Select f).FirstOrDefault
             Targetobject.Lookup_Waagentyp = (From f In dbContext.Lookup_Waagentyp Where f.ID = Targetobject.FK_WaagenTyp Select f).FirstOrDefault

@@ -178,7 +178,7 @@ Public Class AktuellerBenutzer
             Return Nothing
         End If
 
-        Using Context As New EichsoftwareClientdatabaseEntities1
+        Using Context As New Entities
             Context.Configuration.LazyLoadingEnabled = True
             Dim Konfig = (From Konfiguration In Context.Konfiguration Where Konfiguration.BenutzerLizenz = mobjSingletonObject.mvarObjLizenz.Lizenzschluessel).FirstOrDefault
             If Konfig Is Nothing Then
@@ -215,7 +215,7 @@ Public Class AktuellerBenutzer
     ''' <returns></returns>
     ''' <remarks></remarks>
     Public Shared Function SaveSettings()
-        Using Context As New EichsoftwareClientdatabaseEntities1
+        Using Context As New Entities
             Context.Configuration.LazyLoadingEnabled = True
 
             Try

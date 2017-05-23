@@ -13,7 +13,7 @@
     End Sub
 
     Private Sub LadeDaten()
-        Using Context As New EichenEntities
+        Using Context As New HerstellerersteichungEntities
 
             Context.Configuration.LazyLoadingEnabled = False
             Context.Configuration.ProxyCreationEnabled = False
@@ -77,7 +77,7 @@ Eichprozess.ID,
                         Fragetext = "Möchten Sie den aktuellen Datensatz als Standardwaagen deklarieren?"
                     End If
                     If MessageBox.Show(Fragetext, "Frage", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
-                        Using context As New EichenEntities
+                        Using context As New HerstellerersteichungEntities
                             Dim Prozess = (From prozesse In context.ServerEichprozess Where prozesse.ID = ID).FirstOrDefault
                             If Not Prozess Is Nothing Then
                                 If Not Prozess.Standardwaage Is Nothing Then

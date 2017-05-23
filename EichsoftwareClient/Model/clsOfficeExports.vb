@@ -1334,7 +1334,7 @@ Public Class clsOfficeExports
                 r.InsertAfter("Wiederholbarkeit Staffelverfahren MIN Normalien: " & pEichProzess.Eichprotokoll.Wiederholbarkeit_Staffelverfahren_MINNormalien & vbNewLine)
 
                 'prüfungen()
-                Using dbcontext As New EichsoftwareClientdatabaseEntities1
+                Using dbcontext As New Entities
                     Try
                         'hole mir aus der DB alle Pruefungen deren FK Eichprotokoll unserem aktuellem Eichprtookoll entsprechen
                         Dim query = From db In dbcontext.PruefungAnsprechvermoegen Where db.FK_Eichprotokoll = objEichProzess.Eichprotokoll.ID Select db

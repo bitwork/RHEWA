@@ -220,7 +220,7 @@ Public Class uco11PruefungWiederholbarkeitBelastung
 
         'Nur laden wenn es sich um eine Bearbeitung handelt (sonst würde das in Memory Objekt überschrieben werden)
         If Not DialogModus = enuDialogModus.lesend And Not DialogModus = enuDialogModus.korrigierend Then
-            Using context As New EichsoftwareClientdatabaseEntities1
+            Using context As New Entities
                 'neu laden des Objekts, diesmal mit den lookup Objekten
                 objEichprozess = (From a In context.Eichprozess.Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
 
@@ -252,7 +252,7 @@ Public Class uco11PruefungWiederholbarkeitBelastung
                             _ListPruefungWiederholbarkeit.Add(obj)
                         Next
                     Catch ex As System.ObjectDisposedException 'fehler im Clientseitigen Lesemodus (bei bereits abegschickter Eichung)
-                        Using context As New EichsoftwareClientdatabaseEntities1
+                        Using context As New Entities
                             'abrufen aller Prüfungs entitäten die sich auf dieses Messprotokoll beziehen
                             Dim query = From a In context.PruefungWiederholbarkeit Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
                             _ListPruefungWiederholbarkeit = query.ToList
@@ -270,7 +270,7 @@ Public Class uco11PruefungWiederholbarkeitBelastung
                             End If
                         Next
                     Catch ex As System.ObjectDisposedException 'fehler im Clientseitigen Lesemodus (bei bereits abegschickter Eichung)
-                        Using context As New EichsoftwareClientdatabaseEntities1
+                        Using context As New Entities
                             'abrufen aller Prüfungs entitäten die sich auf dieses Messprotokoll beziehen und "voll" sind. Halbe wurden an andere Stelle schon abgearbeitet
                             Dim query = From a In context.PruefungWiederholbarkeit Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID And a.Belastung = "voll"
                             _ListPruefungWiederholbarkeit = query.ToList
@@ -389,7 +389,7 @@ Public Class uco11PruefungWiederholbarkeitBelastung
     ''' <commentauthor></commentauthor>
     Private Sub UpdateObject()
         'neuen Context aufbauen
-        Using Context As New EichsoftwareClientdatabaseEntities1
+        Using Context As New Entities
             'jedes objekt initialisieren und aus context laden und updaten
             For Each obj In _ListPruefungWiederholbarkeit
                 Dim objPruefung = Context.PruefungWiederholbarkeit.FirstOrDefault(Function(value) value.ID = obj.ID)
@@ -562,7 +562,7 @@ Public Class uco11PruefungWiederholbarkeitBelastung
             If ValidateControls() = True Then
 
                 'neuen Context aufbauen
-                Using Context As New EichsoftwareClientdatabaseEntities1
+                Using Context As New Entities
 
                     'prüfen ob CREATE oder UPDATE durchgeführt werden muss
                     If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
@@ -660,7 +660,7 @@ Public Class uco11PruefungWiederholbarkeitBelastung
             End If
 
             'neuen Context aufbauen
-            Using Context As New EichsoftwareClientdatabaseEntities1
+            Using Context As New Entities
 
                 'prüfen ob CREATE oder UPDATE durchgeführt werden muss
                 If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren

@@ -45,7 +45,7 @@ Public Class FrmBenutzerauswahl
     ''' </summary>
     ''' <remarks></remarks>
     Private Sub LadeBenutzer()
-        Using context As New EichsoftwareClientdatabaseEntities1
+        Using context As New Entities
             Dim data = From Benutzer In context.Lizensierung Select New With
                                                  {
                                                      .Name = Benutzer.Vorname & " " & Benutzer.Name,

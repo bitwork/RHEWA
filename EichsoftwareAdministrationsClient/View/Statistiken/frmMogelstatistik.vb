@@ -9,7 +9,7 @@ Public Class frmMogelstatistik
     End Sub
 
     Private Sub LoadFromDatabase()
-        Using Context As New EichenEntities
+        Using Context As New HerstellerersteichungEntities
             Dim Data = From mogelstatistik In Context.ServerMogelstatistik Select mogelstatistik
 
             RadGridView1.DataSource = Data.ToArray

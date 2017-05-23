@@ -1,59 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
-  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="609fb02769424b229fc8f7cc58ee5e7f" Name="Diagram1" ZoomLevel="101">
-        <EntityTypeShape EntityType="EichenModel.ServerKompatiblitaetsnachweis" Width="1.5" PointX="5.75" PointY="0.75" />
-        <EntityTypeShape EntityType="EichenModel.ServerLizensierung" Width="1.5" PointX="7.75" PointY="0.75" />
-        <EntityTypeShape EntityType="EichenModel.ServerMogelstatistik" Width="1.5" PointX="3" PointY="1.125" />
-        <EntityTypeShape EntityType="EichenModel.ServerVerbindungsprotokoll" Width="1.5" PointX="7.75" PointY="3.75" />
-        <EntityTypeShape EntityType="EichenModel.Benutzer" Width="1.5" PointX="7.75" PointY="7.75" />
-        <EntityTypeShape EntityType="EichenModel.Firmen" Width="1.5" PointX="9.75" PointY="0.75" />
-        <EntityTypeShape EntityType="EichenModel.ServerFirmenZusatzdaten" Width="1.5" PointX="2.75" PointY="9.75" />
-        <EntityTypeShape EntityType="EichenModel.ServerLookupVertragspartnerFirma" Width="1.5" PointX="9.75" PointY="4.75" />
-        <EntityTypeShape EntityType="EichenModel.ServerLookup_Auswertegeraet" Width="1.5" PointX="0.75" PointY="2.25" />
-        <EntityTypeShape EntityType="EichenModel.ServerLookup_Waegezelle" Width="1.5" PointX="0.75" PointY="8" />
-        <AssociationConnector Association="EichenModel.FK_Mogelstatistik_Lookup_Auswertegeraet" />
-        <AssociationConnector Association="EichenModel.FK_Mogelstatistik_Lookup_Waegezelle" />
-        <EntityTypeShape EntityType="EichenModel.ServerEichmarkenverwaltung" Width="3.625" PointX="14.875" PointY="7.625" />
-        <AssociationConnector Association="EichenModel.FK_ServerFirmenZusatzdaten_Firmen" />
-        <AssociationConnector Association="EichenModel.FK_Benutzer_Firmen" />
-        <AssociationConnector Association="EichenModel.FK_ServerLizensierung_Benutzer" />
-        <EntityTypeShape EntityType="EichenModel.ServerEichprotokoll" Width="1.5" PointX="4.5416666942376951" PointY="28.509553222222976" />
-        <EntityTypeShape EntityType="EichenModel.ServerEichprozess" Width="1.5" PointX="3.7112638185318856" PointY="28.023158265288526" />
-        <AssociationConnector Association="EichenModel.FK_Eichprozess_Eichprotokoll" />
-        <AssociationConnector Association="EichenModel.FK_Eichprozess_Kompatiblitaetsnachweis" />
-        <AssociationConnector Association="EichenModel.FK_Eichprozess_Lookup_Auswertegeraet" />
-        <AssociationConnector Association="EichenModel.FK_Eichprozess_Lookup_Waegezelle" />
-        <AssociationConnector Association="EichenModel.FK_Mogelstatistik_Eichprozess" />
-        <EntityTypeShape EntityType="EichenModel.ServerLookup_Vorgangsstatus" Width="1.5" PointX="1.573692056151895" PointY="24.44695472365569" />
-        <AssociationConnector Association="EichenModel.FK_Eichprozess_Lookup_Vorgangsstatus" />
-        <EntityTypeShape EntityType="EichenModel.ServerLookup_Waagenart" Width="1.5" PointX="1.3536783127829797" PointY="15.884503029233079" />
-        <EntityTypeShape EntityType="EichenModel.ServerLookup_Waagentyp" Width="1.5" PointX="1.3885508577286037" PointY="7.77953566973076" />
-        <AssociationConnector Association="EichenModel.FK_Eichprozess_Lookup_Waagenart" />
-        <AssociationConnector Association="EichenModel.FK_Eichprozess_Lookup_Waagentyp" />
-        <EntityTypeShape EntityType="EichenModel.ServerPruefungAnsprechvermoegen" Width="1.5" PointX="6.75" PointY="45.25" />
-        <EntityTypeShape EntityType="EichenModel.ServerPruefungAussermittigeBelastung" Width="1.5" PointX="6.75" PointY="18.5" />
-        <EntityTypeShape EntityType="EichenModel.ServerPruefungLinearitaetFallend" Width="1.5" PointX="6.75" PointY="32.75" />
-        <EntityTypeShape EntityType="EichenModel.ServerPruefungLinearitaetSteigend" Width="1.5" PointX="6.75" PointY="48.5" />
-        <EntityTypeShape EntityType="EichenModel.ServerPruefungRollendeLasten" Width="1.5" PointX="6.75" PointY="29.125" />
-        <EntityTypeShape EntityType="EichenModel.ServerPruefungStabilitaetGleichgewichtslage" Width="1.5" PointX="6.75" PointY="52" />
-        <EntityTypeShape EntityType="EichenModel.ServerPruefungStaffelverfahrenErsatzlast" Width="1.5" PointX="6.75" PointY="36.25" />
-        <EntityTypeShape EntityType="EichenModel.ServerPruefungStaffelverfahrenNormallast" Width="1.5" PointX="6.75" PointY="22.125" />
-        <EntityTypeShape EntityType="EichenModel.ServerPruefungWiederholbarkeit" Width="1.5" PointX="6.75" PointY="41.5" />
-        <EntityTypeShape EntityType="EichenModel.ServerVerbindungsprotokollArchiv" Width="1.5" PointX="10.375" PointY="7.75" />
-        <AssociationConnector Association="EichenModel.FK_PruefungAussermittigeBelastung_Eichprotokoll" />
-        <AssociationConnector Association="EichenModel.FK_PruefungLinearitaetFallend_Eichprotokoll" />
-        <AssociationConnector Association="EichenModel.FK_PruefungLinearitaetSteigend_Eichprotokoll" />
-        <AssociationConnector Association="EichenModel.FK_PruefungLinearitaetSteigendAnsprechvermoegen_Eichprotokoll" />
-        <AssociationConnector Association="EichenModel.FK_PruefungRollendeLasten_Eichprotokoll" />
-        <AssociationConnector Association="EichenModel.FK_PruefungStabilitaetGleichgewichtslage_Eichprotokoll" />
-        <AssociationConnector Association="EichenModel.FK_PruefungStaffelverfahrenErsatzlast_Eichprotokoll" />
-        <AssociationConnector Association="EichenModel.FK_PruefungStaffelverfahrenNormallast_Eichprotokoll" />
-        <AssociationConnector Association="EichenModel.FK_PruefungWiederholbarkeit_Eichprotokoll" />
-        <EntityTypeShape EntityType="EichenModel.StatusPrüfscheinnummer" Width="1.5" PointX="5.375" PointY="11.75" />
+      <Diagram DiagramId="f2e676cd20d947a69c1e655fabe489d6" Name="Diagram1">
+        <EntityTypeShape EntityType="HerstellerersteichungModel.Benutzer" Width="1.5" PointX="12" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HerstellerersteichungModel.Firmen" Width="1.5" PointX="9.75" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HerstellerersteichungModel.ServerAblageEichprozesse" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HerstellerersteichungModel.ServerEichmarkenverwaltung" Width="1.5" PointX="14.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HerstellerersteichungModel.ServerEichprotokoll" Width="1.5" PointX="3" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HerstellerersteichungModel.ServerEichprozess" Width="1.5" PointX="7.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HerstellerersteichungModel.ServerFirmenZusatzdaten" Width="1.5" PointX="12" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HerstellerersteichungModel.ServerKompatiblitaetsnachweis" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HerstellerersteichungModel.ServerKonfiguration" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HerstellerersteichungModel.ServerLizensierung" Width="1.5" PointX="14.25" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HerstellerersteichungModel.ServerLookup_Auswertegeraet" Width="1.5" PointX="7.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HerstellerersteichungModel.ServerLookup_Bearbeitungsstatus" Width="1.5" PointX="12.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HerstellerersteichungModel.ServerLookup_Konformitaetsbewertungsverfahren" Width="1.5" PointX="0.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HerstellerersteichungModel.ServerLookup_Vorgangsstatus" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HerstellerersteichungModel.ServerLookup_Waagenart" Width="1.5" PointX="14.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HerstellerersteichungModel.ServerLookup_Waagentyp" Width="1.5" PointX="14.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HerstellerersteichungModel.ServerLookup_Waegezelle" Width="1.5" PointX="7.75" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HerstellerersteichungModel.ServerLookupVertragspartnerFirma" Width="1.5" PointX="16.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HerstellerersteichungModel.ServerMogelstatistik" Width="1.5" PointX="10" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HerstellerersteichungModel.ServerPruefungAnsprechvermoegen" Width="1.5" PointX="5.25" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HerstellerersteichungModel.ServerPruefungAussermittigeBelastung" Width="1.5" PointX="5.25" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="HerstellerersteichungModel.ServerPruefungLinearitaetFallend" Width="1.5" PointX="5.25" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HerstellerersteichungModel.ServerPruefungLinearitaetSteigend" Width="1.5" PointX="5.25" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HerstellerersteichungModel.ServerPruefungRollendeLasten" Width="1.5" PointX="5.25" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HerstellerersteichungModel.ServerPruefungStabilitaetGleichgewichtslage" Width="1.5" PointX="5.25" PointY="20.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HerstellerersteichungModel.ServerPruefungStaffelverfahrenErsatzlast" Width="1.5" PointX="5.25" PointY="23.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HerstellerersteichungModel.ServerPruefungStaffelverfahrenNormallast" Width="1.5" PointX="5.25" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HerstellerersteichungModel.ServerPruefungWiederholbarkeit" Width="1.5" PointX="5.25" PointY="29" IsExpanded="true" />
+        <EntityTypeShape EntityType="HerstellerersteichungModel.ServerVerbindungsprotokoll" Width="1.5" PointX="16.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HerstellerersteichungModel.ServerVerbindungsprotokollArchiv" Width="1.5" PointX="16.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HerstellerersteichungModel.StatusPrüfscheinnummer" Width="1.5" PointX="16.75" PointY="11.75" IsExpanded="true" />
+        <AssociationConnector Association="HerstellerersteichungModel.FK_Benutzer_Firmen" ManuallyRouted="false" />
+        <AssociationConnector Association="HerstellerersteichungModel.FK_ServerLizensierung_Benutzer" ManuallyRouted="false" />
+        <AssociationConnector Association="HerstellerersteichungModel.FK_ServerFirmenZusatzdaten_Firmen" ManuallyRouted="false" />
+        <AssociationConnector Association="HerstellerersteichungModel.FK_PruefungAussermittigeBelastung_Eichprotokoll" ManuallyRouted="false" />
+        <AssociationConnector Association="HerstellerersteichungModel.FK_PruefungLinearitaetFallend_Eichprotokoll" ManuallyRouted="false" />
+        <AssociationConnector Association="HerstellerersteichungModel.FK_PruefungLinearitaetSteigend_Eichprotokoll" ManuallyRouted="false" />
+        <AssociationConnector Association="HerstellerersteichungModel.FK_PruefungLinearitaetSteigendAnsprechvermoegen_Eichprotokoll" ManuallyRouted="false" />
+        <AssociationConnector Association="HerstellerersteichungModel.FK_PruefungRollendeLasten_Eichprotokoll" ManuallyRouted="false" />
+        <AssociationConnector Association="HerstellerersteichungModel.FK_PruefungStabilitaetGleichgewichtslage_Eichprotokoll" ManuallyRouted="false" />
+        <AssociationConnector Association="HerstellerersteichungModel.FK_PruefungStaffelverfahrenErsatzlast_Eichprotokoll" ManuallyRouted="false" />
+        <AssociationConnector Association="HerstellerersteichungModel.FK_PruefungStaffelverfahrenNormallast_Eichprotokoll" ManuallyRouted="false" />
+        <AssociationConnector Association="HerstellerersteichungModel.FK_PruefungWiederholbarkeit_Eichprotokoll" ManuallyRouted="false" />
+        <AssociationConnector Association="HerstellerersteichungModel.FK_ServerEichprotokoll_ServerLookup_Konformitaetsbewertungsverfahren" ManuallyRouted="false" />
+        <AssociationConnector Association="HerstellerersteichungModel.FK_Mogelstatistik_Eichprozess" ManuallyRouted="false" />
+        <AssociationConnector Association="HerstellerersteichungModel.FK_Mogelstatistik_Lookup_Auswertegeraet" ManuallyRouted="false" />
+        <AssociationConnector Association="HerstellerersteichungModel.FK_Mogelstatistik_Lookup_Waegezelle" ManuallyRouted="false" />
+        <AssociationConnector Association="HerstellerersteichungModel.FK_ServerEichprozess_ServerEichprotokoll" />
+        <AssociationConnector Association="HerstellerersteichungModel.FK_ServerEichprozess_ServerKompatiblitaetsnachweis" />
+        <AssociationConnector Association="HerstellerersteichungModel.FK_ServerEichprozess_ServerLookup_Auswertegeraet" />
+        <AssociationConnector Association="HerstellerersteichungModel.FK_ServerEichprozess_ServerLookup_Bearbeitungsstatus" />
+        <AssociationConnector Association="HerstellerersteichungModel.FK_ServerEichprozess_ServerLookup_Vorgangsstatus" />
+        <AssociationConnector Association="HerstellerersteichungModel.FK_ServerEichprozess_ServerLookup_Waagenart" />
+        <AssociationConnector Association="HerstellerersteichungModel.FK_ServerEichprozess_ServerLookup_Waagentyp" />
+        <AssociationConnector Association="HerstellerersteichungModel.FK_ServerEichprozess_ServerLookup_Waegezelle" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

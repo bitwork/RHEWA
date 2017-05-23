@@ -228,7 +228,7 @@ Public Class uco_2StammdatenEingabe
 
         'wenn eine neue angelegt wurde, dropdownliste aktualisieren und das neue element auswählen
         If f.ShowDialog = DialogResult.OK Then
-            Using Context As New EichsoftwareClientdatabaseEntities1
+            Using Context As New Entities
                 'weitere events unterbrechen
 
                 Dim objWZ As Lookup_Waegezelle = f.NeueWaegezelle
@@ -290,7 +290,7 @@ Public Class uco_2StammdatenEingabe
         'events abbrechen
         _suspendEvents = True
 
-        Using context As New EichsoftwareClientdatabaseEntities1
+        Using context As New Entities
 
             'laaden der Wagentyp dropdownliste
             Dim db = (From dbLookup In context.Lookup_Waagentyp Order By dbLookup.Typ Select dbLookup)
@@ -424,7 +424,7 @@ Public Class uco_2StammdatenEingabe
         Else
             'wenn bereits ein Objekt exisitert (z.b. zurück navigiert wurde) sollen die Werte aus der DB geladen werden
             If objEichprozess.ID <> 0 Then
-                Using context As New EichsoftwareClientdatabaseEntities1
+                Using context As New Entities
                     'neu laden des Objekts, diesmal mit den lookup Objekten
                     objEichprozess = (From a In context.Eichprozess.Include("Lookup_Auswertegeraet").Include("Lookup_Waegezelle").Include("Kompatiblitaetsnachweis").Include("Lookup_Waagenart").Include("Lookup_Waagentyp") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
                 End Using
@@ -648,7 +648,7 @@ Public Class uco_2StammdatenEingabe
             If ValidateControls() Then
 
                 'neuen Context aufbauen
-                Using Context As New EichsoftwareClientdatabaseEntities1
+                Using Context As New Entities
                     'prüfen ob CREATE oder UPDATE durchgeführt werden muss
                     If objEichprozess.ID = 0 Then 'Neue ID also CREATE Operation
                         If objEichprozess.Kompatiblitaetsnachweis Is Nothing Then

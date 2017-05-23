@@ -12,7 +12,7 @@
     End Sub
 
     Private Sub LoadFromDatabase()
-        Using Context As New EichenEntities
+        Using Context As New HerstellerersteichungEntities
 
             Try
                 'abrufen alle Lizenzdaten mit Join auf Benutzer und firmentabelle
@@ -55,7 +55,7 @@
         End Using
     End Sub
     'Private Sub LoadFromDatabase()
-    '    Using Context As New EichenEntities
+    '    Using Context As New HerstellerersteichungEntities
 
     '        Try
     '            Dim Data = From Lizenz In Context.ServerLizensierung Select Lizenz

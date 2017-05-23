@@ -9,7 +9,7 @@ Public Class FrmVerbindungsprotokoll
     End Sub
 
     Private Sub LoadFromDatabase()
-        Using Context As New EichenEntities
+        Using Context As New HerstellerersteichungEntities
             Dim Data = From Verbindungsprotokoll In Context.ServerVerbindungsprotokoll Select Verbindungsprotokoll
 
             RadGridView1.DataSource = Data.ToList

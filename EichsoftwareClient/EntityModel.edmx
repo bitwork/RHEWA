@@ -1,0 +1,2149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Model.Store" Provider="System.Data.SqlServerCe.4.0" ProviderManifestToken="4.0" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Eichprotokoll">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FK_Identifikationsdaten_Konformitaetsbewertungsverfahren" Type="tinyint" />
+          <Property Name="Identifikationsdaten_Aufstellungsort" Type="nvarchar" MaxLength="4000" />
+          <Property Name="Identifikationsdaten_Datum" Type="datetime" />
+          <Property Name="Identifikationsdaten_Min1" Type="nvarchar" MaxLength="50" />
+          <Property Name="Identifikationsdaten_Min2" Type="nvarchar" MaxLength="50" />
+          <Property Name="Identifikationsdaten_Min3" Type="nvarchar" MaxLength="50" />
+          <Property Name="Identifikationsdaten_NichtSelbsteinspielend" Type="nvarchar" MaxLength="50" />
+          <Property Name="Identifikationsdaten_HybridMechanisch" Type="nvarchar" MaxLength="50" />
+          <Property Name="Identifikationsdaten_Selbsteinspielend" Type="nvarchar" MaxLength="50" />
+          <Property Name="Identifikationsdaten_Pruefer" Type="nvarchar" MaxLength="4000" />
+          <Property Name="Identifikationsdaten_Baujahr" Type="nvarchar" MaxLength="20" />
+          <Property Name="Pruefverfahren_VolleNormallast" Type="bit" />
+          <Property Name="Pruefverfahren_VollstaendigesStaffelverfahren" Type="bit" />
+          <Property Name="Pruefverfahren_BetragNormallast" Type="nvarchar" MaxLength="50" />
+          <Property Name="Komponenten_Softwarestand" Type="nvarchar" MaxLength="50" />
+          <Property Name="Komponenten_Eichzaehlerstand" Type="nvarchar" MaxLength="50" />
+          <Property Name="Komponenten_WaegezellenFabriknummer" Type="nvarchar" MaxLength="50" />
+          <Property Name="Verwendungszweck_HalbAutomatisch" Type="bit" />
+          <Property Name="Verwendungszweck_Automatisch" Type="bit" />
+          <Property Name="Verwendungszweck_Nullnachfuehrung" Type="bit" />
+          <Property Name="Verwendungszweck_AutoTara" Type="bit" />
+          <Property Name="Verwendungszweck_HandTara" Type="bit" />
+          <Property Name="Verwendungszweck_ZubehoerVerschiedenes" Type="bit" />
+          <Property Name="Verwendungszweck_EichfaehigerDatenspeicher" Type="bit" />
+          <Property Name="Verwendungszweck_PC" Type="bit" />
+          <Property Name="Verwendungszweck_Drucker" Type="bit" />
+          <Property Name="Verwendungszweck_Druckertyp" Type="nvarchar" MaxLength="50" />
+          <Property Name="Verwendungszweck_Fahrzeugwaagen_MxM" Type="nvarchar" MaxLength="25" />
+          <Property Name="Verwendungszweck_Fahrzeugwaagen_Dimension" Type="nvarchar" MaxLength="25" />
+          <Property Name="GenauigkeitNullstellung_InOrdnung" Type="bit" />
+          <Property Name="Ueberlastanzeige_Max" Type="nvarchar" MaxLength="20" />
+          <Property Name="Ueberlastanzeige_Ueberlast" Type="bit" />
+          <Property Name="Taraeinrichtung_TaraausgleichseinrichtungOK" Type="nvarchar" MaxLength="50" />
+          <Property Name="Taraeinrichtung_GenauigkeitTarierungOK" Type="nvarchar" MaxLength="50" />
+          <Property Name="Taraeinrichtung_ErweiterteRichtigkeitspruefungOK" Type="nvarchar" MaxLength="50" />
+          <Property Name="Fallbeschleunigung_g" Type="nvarchar" MaxLength="10" />
+          <Property Name="Fallbeschleunigung_ms2" Type="bit" />
+          <Property Name="Sicherung_BenannteStelle" Type="bit" />
+          <Property Name="Sicherung_BenannteStelleAnzahl" Type="smallint" />
+          <Property Name="Sicherung_Eichsiegel13x13" Type="bit" />
+          <Property Name="Sicherung_Eichsiegel13x13Anzahl" Type="smallint" />
+          <Property Name="Sicherung_EichsiegelRund" Type="bit" />
+          <Property Name="Sicherung_EichsiegelRundAnzahl" Type="smallint" />
+          <Property Name="Sicherung_HinweismarkeGelocht" Type="bit" />
+          <Property Name="Sicherung_HinweismarkeGelochtAnzahl" Type="smallint" />
+          <Property Name="Sicherung_GruenesM" Type="bit" />
+          <Property Name="Sicherung_GruenesMAnzahl" Type="smallint" />
+          <Property Name="Sicherung_CE" Type="bit" />
+          <Property Name="Sicherung_CEAnzahl" Type="smallint" />
+          <Property Name="Sicherung_DatenAusgelesen" Type="bit" />
+          <Property Name="Sicherung_AlibispeicherEingerichtet" Type="bit" />
+          <Property Name="Sicherung_AlibispeicherAufbewahrungsdauerReduziert" Type="bit" />
+          <Property Name="Sicherung_AlibispeicherAufbewahrungsdauerReduziertBegruendung" Type="nvarchar" MaxLength="255" />
+          <Property Name="Sicherung_Bemerkungen" Type="ntext" />
+          <Property Name="Wiederholbarkeit_Staffelverfahren_MINNormalien" Type="nvarchar" MaxLength="10" />
+          <Property Name="EignungAchlastwaegungen_WaagenbrueckeEbene" Type="bit" />
+          <Property Name="EignungAchlastwaegungen_WaageNichtGeeignet" Type="bit" />
+          <Property Name="EignungAchlastwaegungen_Geprueft" Type="bit" />
+          <Property Name="Identifikationsdaten_Benutzer" Type="nvarchar" MaxLength="4000" />
+          <Property Name="Beschaffenheitspruefung_Genehmigt" Type="bit" />
+          <Property Name="Taraeinrichtung_Taraeingabe" Type="bit" />
+          <Property Name="Beschaffenheitspruefung_Genauigkeitsklasse" Type="nvarchar" MaxLength="50" />
+          <Property Name="Beschaffenheitspruefung_Pruefintervall" Type="nvarchar" MaxLength="50" />
+          <Property Name="Beschaffenheitspruefung_LetztePruefung" Type="nvarchar" MaxLength="50" />
+          <Property Name="Beschaffenheitspruefung_Pruefscheinnummer" Type="nvarchar" MaxLength="4000" />
+          <Property Name="Beschaffenheitspruefung_EichfahrzeugFirma" Type="nvarchar" MaxLength="50" />
+          <Property Name="Sicherung_CE2016" Type="bit" />
+          <Property Name="Sicherung_CE2016Anzahl" Type="int" />
+        </EntityType>
+        <EntityType Name="Eichprozess">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Vorgangsnummer" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="FK_Vorgangsstatus" Type="tinyint" Nullable="false" />
+          <Property Name="FK_Auswertegeraet" Type="nvarchar" MaxLength="50" />
+          <Property Name="FK_Waegezelle" Type="nvarchar" MaxLength="50" />
+          <Property Name="FK_Eichprotokoll" Type="int" />
+          <Property Name="FK_WaagenTyp" Type="tinyint" />
+          <Property Name="FK_WaagenArt" Type="tinyint" />
+          <Property Name="FK_Kompatibilitaetsnachweis" Type="int" />
+          <Property Name="Ausgeblendet" Type="bit" Nullable="false" />
+          <Property Name="UploadFilePath" Type="ntext" />
+          <Property Name="FK_Bearbeitungsstatus" Type="int" />
+          <Property Name="ErzeugerLizenz" Type="nvarchar" MaxLength="50" />
+          <Property Name="AusStandardwaageErzeugt" Type="bit" Nullable="false" />
+          <Property Name="Bearbeitungsdatum" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Kompatiblitaetsnachweis">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_Hoechstlast1" Type="nvarchar" MaxLength="50" />
+          <Property Name="Kompatiblitaet_Waage_Hoechstlast2" Type="nvarchar" MaxLength="50" />
+          <Property Name="Kompatiblitaet_Waage_Hoechstlast3" Type="nvarchar" MaxLength="50" />
+          <Property Name="Kompatiblitaet_Waage_Eichwert1" Type="nvarchar" MaxLength="50" />
+          <Property Name="Kompatiblitaet_Waage_Eichwert2" Type="nvarchar" MaxLength="50" />
+          <Property Name="Kompatiblitaet_Waage_Eichwert3" Type="nvarchar" MaxLength="50" />
+          <Property Name="Kompatiblitaet_Waage_FabrikNummer" Type="nvarchar" MaxLength="50" />
+          <Property Name="Kompatiblitaet_Waage_Bauartzulassung" Type="nvarchar" MaxLength="50" />
+          <Property Name="Kompatiblitaet_Waage_Revisionsnummer" Type="nvarchar" MaxLength="50" />
+          <Property Name="Kompatiblitaet_Waage_Zulassungsinhaber" Type="nvarchar" MaxLength="50" />
+          <Property Name="Kompatiblitaet_Waage_Genauigkeitsklasse" Type="nvarchar" MaxLength="3" />
+          <Property Name="Kompatiblitaet_Waage_AdditiveTarahoechstlast" Type="nvarchar" MaxLength="5" />
+          <Property Name="Kompatiblitaet_Waage_GrenzenTemperaturbereichMIN" Type="nvarchar" MaxLength="4" />
+          <Property Name="Kompatiblitaet_Waage_GrenzenTemperaturbereichMAX" Type="nvarchar" MaxLength="4" />
+          <Property Name="Kompatiblitaet_Waage_Uebersetzungsverhaeltnis" Type="nvarchar" MaxLength="10" />
+          <Property Name="Kompatiblitaet_Waage_AnzahlWaegezellen" Type="nvarchar" MaxLength="5" />
+          <Property Name="Kompatiblitaet_Waage_Einschaltnullstellbereich" Type="nvarchar" MaxLength="20" />
+          <Property Name="Kompatiblitaet_Waage_Ecklastzuschlag" Type="nvarchar" MaxLength="20" />
+          <Property Name="Kompatiblitaet_Waage_Totlast" Type="nvarchar" MaxLength="20" />
+          <Property Name="Kompatiblitaet_Waage_Kabellaenge" Type="nvarchar" MaxLength="5" />
+          <Property Name="Kompatiblitaet_Waage_Kabelquerschnitt" Type="nvarchar" MaxLength="10" />
+          <Property Name="Kompatiblitaet_Verbindungselemente_BruchteilEichfehlergrenze" Type="nvarchar" MaxLength="50" />
+          <Property Name="Kompatiblitaet_Hersteller" Type="ntext" />
+          <Property Name="Kompatiblitaet_Strasse" Type="ntext" />
+          <Property Name="Kompatiblitaet_Ort" Type="ntext" />
+          <Property Name="Kompatiblitaet_Postleitzahl" Type="ntext" />
+          <Property Name="Kompatiblitaet_AWG_Anschlussart" Type="nvarchar" MaxLength="50" />
+          <Property Name="Kompatiblitaet_WZ_Hoechstlast" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Konfiguration">
+          <Key>
+            <PropertyRef Name="BenutzerLizenz" />
+          </Key>
+          <Property Name="BenutzerLizenz" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LetztesUpdate" Type="datetime" Nullable="false" />
+          <Property Name="AktuelleSprache" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="Synchronisierungsmodus" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="SyncAb" Type="datetime" Nullable="false" />
+          <Property Name="SyncBis" Type="datetime" Nullable="false" />
+          <Property Name="HoleAlleeigenenEichungenVomServer" Type="bit" Nullable="false" />
+          <Property Name="GridSettings" Type="ntext" Nullable="false" />
+          <Property Name="GridSettingsRHEWA" Type="ntext" Nullable="false" />
+          <Property Name="DBVersion" Type="nvarchar" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="Lizensierung">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Lizenzschluessel" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LetzteAktivierung" Type="datetime" />
+          <Property Name="RHEWALizenz" Type="bit" Nullable="false" />
+          <Property Name="Aktiv" Type="bit" Nullable="false" />
+          <Property Name="FirmaOrt" Type="nvarchar" MaxLength="50" />
+          <Property Name="Firma" Type="nvarchar" MaxLength="100" />
+          <Property Name="Vorname" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="FirmaPLZ" Type="nvarchar" MaxLength="25" />
+          <Property Name="FirmaStrasse" Type="nvarchar" MaxLength="999" />
+          <Property Name="HEKennung" Type="nvarchar" MaxLength="50" />
+          <Property Name="FK_BenutzerID" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Lookup_Auswertegeraet">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Typ" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Hersteller" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Pruefbericht" Type="nvarchar" MaxLength="50" />
+          <Property Name="Bauartzulassung" Type="nvarchar" MaxLength="50" />
+          <Property Name="Genauigkeitsklasse" Type="nvarchar" MaxLength="3" Nullable="false" />
+          <Property Name="MAXAnzahlTeilungswerteEinbereichswaage" Type="nchar" MaxLength="10" />
+          <Property Name="MAXAnzahlTeilungswerteMehrbereichswaage" Type="nchar" MaxLength="10" />
+          <Property Name="Speisespannung" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mindesteingangsspannung" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Mindestmesssignal" Type="nvarchar" MaxLength="50" />
+          <Property Name="GrenzwertLastwiderstandMIN" Type="nvarchar" MaxLength="50" />
+          <Property Name="GrenzwertLastwiderstandMAX" Type="nvarchar" MaxLength="50" />
+          <Property Name="GrenzwertTemperaturbereichMIN" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="GrenzwertTemperaturbereichMAX" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="BruchteilEichfehlergrenze" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="KabellaengeQuerschnitt" Type="nvarchar" MaxLength="50" />
+          <Property Name="Deaktiviert" Type="bit" />
+          <Property Name="TaraeinrichtungTaraeingabe" Type="bit" />
+          <Property Name="TaraeinrichtungSelbsttaetig" Type="bit" />
+          <Property Name="TaraeinrichtungHalbSelbsttaetig" Type="bit" />
+          <Property Name="NullstellungNullnachfuehrung" Type="bit" />
+          <Property Name="NullstellungSelbsttaetig" Type="bit" />
+          <Property Name="NullstellungHalbSelbsttaetig" Type="bit" />
+        </EntityType>
+        <EntityType Name="Lookup_Bearbeitungsstatus">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="Status_EN" Type="nvarchar" MaxLength="50" />
+          <Property Name="Status_PL" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Lookup_Konformitaetsbewertungsverfahren">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="tinyint" Nullable="false" />
+          <Property Name="Verfahren" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Verfahren_EN" Type="nvarchar" MaxLength="50" />
+          <Property Name="Verfahren_PL" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Lookup_Vorgangsstatus">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="tinyint" Nullable="false" />
+          <Property Name="Status" Type="nvarchar" MaxLength="80" />
+          <Property Name="Status_EN" Type="nvarchar" MaxLength="80" />
+          <Property Name="Status_PL" Type="nvarchar" MaxLength="80" />
+        </EntityType>
+        <EntityType Name="Lookup_Waagenart">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="tinyint" Nullable="false" />
+          <Property Name="Art" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Art_EN" Type="nvarchar" MaxLength="50" />
+          <Property Name="Art_PL" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Lookup_Waagentyp">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="tinyint" Nullable="false" />
+          <Property Name="Typ" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Typ_EN" Type="nvarchar" MaxLength="50" />
+          <Property Name="Typ_PL" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Lookup_Waegezelle">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Hersteller" Type="nvarchar" MaxLength="50" />
+          <Property Name="Typ" Type="nvarchar" MaxLength="50" />
+          <Property Name="Pruefbericht" Type="nvarchar" MaxLength="50" />
+          <Property Name="Bauartzulassung" Type="nvarchar" MaxLength="50" />
+          <Property Name="Revisionsnummer" Type="nvarchar" MaxLength="50" />
+          <Property Name="Genauigkeitsklasse" Type="nvarchar" MaxLength="10" />
+          <Property Name="Mindestvorlast" Type="nvarchar" MaxLength="50" />
+          <Property Name="Waegezellenkennwert" Type="nvarchar" MaxLength="50" />
+          <Property Name="MaxAnzahlTeilungswerte" Type="nvarchar" MaxLength="50" />
+          <Property Name="MinTeilungswert" Type="nvarchar" MaxLength="50" />
+          <Property Name="Hoechsteteilungsfaktor" Type="nvarchar" MaxLength="50" />
+          <Property Name="Kriechteilungsfaktor" Type="nvarchar" MaxLength="50" />
+          <Property Name="RueckkehrVorlastsignal" Type="nvarchar" MaxLength="50" />
+          <Property Name="WiderstandWaegezelle" Type="nvarchar" MaxLength="50" />
+          <Property Name="GrenzwertTemperaturbereichMIN" Type="nvarchar" MaxLength="5" />
+          <Property Name="GrenzwertTemperaturbereichMAX" Type="nvarchar" MaxLength="5" />
+          <Property Name="BruchteilEichfehlergrenze" Type="nvarchar" MaxLength="5" />
+          <Property Name="Neu" Type="bit" Nullable="false" />
+          <Property Name="Deaktiviert" Type="bit" Nullable="false" />
+          <Property Name="MindestvorlastProzent" Type="nvarchar" MaxLength="4" />
+        </EntityType>
+        <EntityType Name="Mogelstatistik">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FK_Eichprozess" Type="int" />
+          <Property Name="FK_Auswertegeraet" Type="nvarchar" MaxLength="50" />
+          <Property Name="FK_Waegezelle" Type="nvarchar" MaxLength="50" />
+          <Property Name="Kompatiblitaet_Waage_FabrikNummer" Type="nvarchar" MaxLength="50" />
+          <Property Name="Kompatiblitaet_Waage_Bauartzulassung" Type="nvarchar" MaxLength="50" />
+          <Property Name="Kompatiblitaet_Waage_Revisionsnummer" Type="nvarchar" MaxLength="50" />
+          <Property Name="Kompatiblitaet_Waage_Zulassungsinhaber" Type="nvarchar" MaxLength="50" />
+          <Property Name="Kompatiblitaet_Waage_Genauigkeitsklasse" Type="nvarchar" MaxLength="3" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_AdditiveTarahoechstlast" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_GrenzenTemperaturbereichMIN" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_GrenzenTemperaturbereichMAX" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich1" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich1" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich2" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich2" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich3" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich3" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_Uebersetzungsverhaeltnis" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_AnzahlWaegezellen" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_Einschaltnullstellbereich" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_Ecklastzuschlag" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_Totlast" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_Kabellaenge" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_Kabelquerschnitt" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Kompatiblitaet_AnschriftWaagenbaufirma" Type="ntext" Nullable="false" />
+          <Property Name="Kompatiblitaet_Verbindungselemente_BruchteilEichfehlergrenze" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Kompatiblitaet_AWG_Anschlussart" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Kompatiblitaet_WZ_Hoechstlast" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="PruefungAnsprechvermoegen">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FK_Eichprotokoll" Type="int" Nullable="false" />
+          <Property Name="LastL" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Last" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Anzeige" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Last1d" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Ziffernsprung" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PruefungAussermittigeBelastung">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FK_Eichprotokoll" Type="int" Nullable="false" />
+          <Property Name="Bereich" Type="tinyint" Nullable="false" />
+          <Property Name="Belastungsort" Type="nvarchar" MaxLength="2" Nullable="false" />
+          <Property Name="Last" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Anzeige" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Fehler" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="EFG" Type="bit" Nullable="false" />
+          <Property Name="EFGExtra" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PruefungLinearitaetFallend">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FK_Eichprotokoll" Type="int" Nullable="false" />
+          <Property Name="Bereich" Type="tinyint" Nullable="false" />
+          <Property Name="Messpunkt" Type="nvarchar" MaxLength="2" Nullable="false" />
+          <Property Name="Last" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Anzeige" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Fehler" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="EFG" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PruefungLinearitaetSteigend">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FK_Eichprotokoll" Type="int" Nullable="false" />
+          <Property Name="Bereich" Type="tinyint" Nullable="false" />
+          <Property Name="Messpunkt" Type="nvarchar" MaxLength="2" Nullable="false" />
+          <Property Name="Last" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Anzeige" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Fehler" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="EFG" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PruefungRollendeLasten">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FK_Eichprotokoll" Type="int" Nullable="false" />
+          <Property Name="Belastungsstelle" Type="tinyint" Nullable="false" />
+          <Property Name="AuffahrtSeite" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Last" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Anzeige" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Fehler" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="EFG" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="EFGExtra" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PruefungStabilitaetGleichgewichtslage">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FK_Eichprotokoll" Type="int" Nullable="false" />
+          <Property Name="Durchlauf" Type="tinyint" Nullable="false" />
+          <Property Name="Last" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Anzeige" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="MIN" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="MAX" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="AbdruckOK" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PruefungStaffelverfahrenErsatzlast">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FK_Eichprotokoll" Type="int" Nullable="false" />
+          <Property Name="Staffel" Type="tinyint" Nullable="false" />
+          <Property Name="Bereich" Type="tinyint" Nullable="false" />
+          <Property Name="Ersatzlast_Soll" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Ersatzlast_Ist" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="ZusaetzlicheErsatzlast_Soll" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="ErsatzUndNormallast_Soll" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="ErsatzUndNormallast_Ist" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Ersatzlast2_Soll" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Ersatzlast2_Ist" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="DifferenzAnzeigewerte_Fehler" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="DifferenzAnzeigewerte_EFG" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="MessabweichungStaffel_Fehler" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="MessabweichungStaffel_EFG" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="MessabweichungWaage_Fehler" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="MessabweichungWaage_EFG" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PruefungStaffelverfahrenNormallast">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FK_Eichprotokoll" Type="int" Nullable="false" />
+          <Property Name="Staffel" Type="tinyint" Nullable="false" />
+          <Property Name="Bereich" Type="tinyint" Nullable="false" />
+          <Property Name="NormalLast_Last_1" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NormalLast_Last_2" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NormalLast_Last_3" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NormalLast_Last_4" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NormalLast_Anzeige_1" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NormalLast_Fehler_1" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NormalLast_EFG_1" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NormalLast_Anzeige_2" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NormalLast_Fehler_2" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NormalLast_EFG_2" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NormalLast_Anzeige_4" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NormalLast_Fehler_4" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NormalLast_EFG_4" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NormalLast_Anzeige_3" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NormalLast_Fehler_3" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NormalLast_EFG_3" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="DifferenzAnzeigewerte_Fehler" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="DifferenzAnzeigewerte_EFG" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="MessabweichungStaffel_Fehler" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="MessabweichungStaffel_EFG" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="MessabweichungWaage_Fehler" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="MessabweichungWaage_EFG" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PruefungWiederholbarkeit">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FK_Eichprotokoll" Type="int" Nullable="false" />
+          <Property Name="Wiederholung" Type="tinyint" Nullable="false" />
+          <Property Name="Belastung" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="Last" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Anzeige" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Fehler" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="EFG" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="EFG_Extra" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren">
+          <End Role="Lookup_Konformitaetsbewertungsverfahren" Type="Self.Lookup_Konformitaetsbewertungsverfahren" Multiplicity="0..1" />
+          <End Role="Eichprotokoll" Type="Self.Eichprotokoll" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lookup_Konformitaetsbewertungsverfahren">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Eichprotokoll">
+              <PropertyRef Name="FK_Identifikationsdaten_Konformitaetsbewertungsverfahren" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Eichprozess_Eichprotokoll">
+          <End Role="Eichprotokoll" Type="Self.Eichprotokoll" Multiplicity="0..1" />
+          <End Role="Eichprozess" Type="Self.Eichprozess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Eichprotokoll">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Eichprozess">
+              <PropertyRef Name="FK_Eichprotokoll" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Eichprozess_Kompatiblitaetsnachweis">
+          <End Role="Kompatiblitaetsnachweis" Type="Self.Kompatiblitaetsnachweis" Multiplicity="0..1" />
+          <End Role="Eichprozess" Type="Self.Eichprozess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kompatiblitaetsnachweis">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Eichprozess">
+              <PropertyRef Name="FK_Kompatibilitaetsnachweis" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Eichprozess_Lookup_Auswertegeraet">
+          <End Role="Lookup_Auswertegeraet" Type="Self.Lookup_Auswertegeraet" Multiplicity="0..1" />
+          <End Role="Eichprozess" Type="Self.Eichprozess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lookup_Auswertegeraet">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Eichprozess">
+              <PropertyRef Name="FK_Auswertegeraet" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Eichprozess_Lookup_Bearbeitungsstatus">
+          <End Role="Lookup_Bearbeitungsstatus" Type="Self.Lookup_Bearbeitungsstatus" Multiplicity="0..1" />
+          <End Role="Eichprozess" Type="Self.Eichprozess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lookup_Bearbeitungsstatus">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Eichprozess">
+              <PropertyRef Name="FK_Bearbeitungsstatus" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Eichprozess_Lookup_Vorgangsstatus">
+          <End Role="Lookup_Vorgangsstatus" Type="Self.Lookup_Vorgangsstatus" Multiplicity="1" />
+          <End Role="Eichprozess" Type="Self.Eichprozess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lookup_Vorgangsstatus">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Eichprozess">
+              <PropertyRef Name="FK_Vorgangsstatus" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Eichprozess_Lookup_Waagenart">
+          <End Role="Lookup_Waagenart" Type="Self.Lookup_Waagenart" Multiplicity="0..1" />
+          <End Role="Eichprozess" Type="Self.Eichprozess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lookup_Waagenart">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Eichprozess">
+              <PropertyRef Name="FK_WaagenArt" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Eichprozess_Lookup_Waagentyp">
+          <End Role="Lookup_Waagentyp" Type="Self.Lookup_Waagentyp" Multiplicity="0..1" />
+          <End Role="Eichprozess" Type="Self.Eichprozess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lookup_Waagentyp">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Eichprozess">
+              <PropertyRef Name="FK_WaagenTyp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Eichprozess_Lookup_Waegezelle">
+          <End Role="Lookup_Waegezelle" Type="Self.Lookup_Waegezelle" Multiplicity="0..1" />
+          <End Role="Eichprozess" Type="Self.Eichprozess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lookup_Waegezelle">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Eichprozess">
+              <PropertyRef Name="FK_Waegezelle" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Mogelstatistik_Eichprozess">
+          <End Role="Eichprozess" Type="Self.Eichprozess" Multiplicity="0..1" />
+          <End Role="Mogelstatistik" Type="Self.Mogelstatistik" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Eichprozess">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Mogelstatistik">
+              <PropertyRef Name="FK_Eichprozess" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Mogelstatistik_Lookup_Auswertegeraet">
+          <End Role="Lookup_Auswertegeraet" Type="Self.Lookup_Auswertegeraet" Multiplicity="0..1" />
+          <End Role="Mogelstatistik" Type="Self.Mogelstatistik" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lookup_Auswertegeraet">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Mogelstatistik">
+              <PropertyRef Name="FK_Auswertegeraet" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Mogelstatistik_Lookup_Waegezelle">
+          <End Role="Lookup_Waegezelle" Type="Self.Lookup_Waegezelle" Multiplicity="0..1" />
+          <End Role="Mogelstatistik" Type="Self.Mogelstatistik" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lookup_Waegezelle">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Mogelstatistik">
+              <PropertyRef Name="FK_Waegezelle" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PruefungAussermittigeBelastung_Eichprotokoll">
+          <End Role="Eichprotokoll" Type="Self.Eichprotokoll" Multiplicity="1" />
+          <End Role="PruefungAussermittigeBelastung" Type="Self.PruefungAussermittigeBelastung" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Eichprotokoll">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PruefungAussermittigeBelastung">
+              <PropertyRef Name="FK_Eichprotokoll" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PruefungLinearitaetFallend_Eichprotokoll">
+          <End Role="Eichprotokoll" Type="Self.Eichprotokoll" Multiplicity="1" />
+          <End Role="PruefungLinearitaetFallend" Type="Self.PruefungLinearitaetFallend" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Eichprotokoll">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PruefungLinearitaetFallend">
+              <PropertyRef Name="FK_Eichprotokoll" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PruefungLinearitaetSteigend_Eichprotokoll">
+          <End Role="Eichprotokoll" Type="Self.Eichprotokoll" Multiplicity="1" />
+          <End Role="PruefungLinearitaetSteigend" Type="Self.PruefungLinearitaetSteigend" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Eichprotokoll">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PruefungLinearitaetSteigend">
+              <PropertyRef Name="FK_Eichprotokoll" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PruefungLinearitaetSteigendAnsprechvermoegen_Eichprotokoll">
+          <End Role="Eichprotokoll" Type="Self.Eichprotokoll" Multiplicity="1" />
+          <End Role="PruefungAnsprechvermoegen" Type="Self.PruefungAnsprechvermoegen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Eichprotokoll">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PruefungAnsprechvermoegen">
+              <PropertyRef Name="FK_Eichprotokoll" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PruefungRollendeLasten_Eichprotokoll">
+          <End Role="Eichprotokoll" Type="Self.Eichprotokoll" Multiplicity="1" />
+          <End Role="PruefungRollendeLasten" Type="Self.PruefungRollendeLasten" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Eichprotokoll">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PruefungRollendeLasten">
+              <PropertyRef Name="FK_Eichprotokoll" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PruefungStabilitaetGleichgewichtslage_Eichprotokoll">
+          <End Role="Eichprotokoll" Type="Self.Eichprotokoll" Multiplicity="1" />
+          <End Role="PruefungStabilitaetGleichgewichtslage" Type="Self.PruefungStabilitaetGleichgewichtslage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Eichprotokoll">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PruefungStabilitaetGleichgewichtslage">
+              <PropertyRef Name="FK_Eichprotokoll" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PruefungStaffelverfahrenErsatzlast_Eichprotokoll">
+          <End Role="Eichprotokoll" Type="Self.Eichprotokoll" Multiplicity="1" />
+          <End Role="PruefungStaffelverfahrenErsatzlast" Type="Self.PruefungStaffelverfahrenErsatzlast" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Eichprotokoll">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PruefungStaffelverfahrenErsatzlast">
+              <PropertyRef Name="FK_Eichprotokoll" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PruefungStaffelverfahrenNormallast_Eichprotokoll">
+          <End Role="Eichprotokoll" Type="Self.Eichprotokoll" Multiplicity="1" />
+          <End Role="PruefungStaffelverfahrenNormallast" Type="Self.PruefungStaffelverfahrenNormallast" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Eichprotokoll">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PruefungStaffelverfahrenNormallast">
+              <PropertyRef Name="FK_Eichprotokoll" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PruefungWiederholbarkeit_Eichprotokoll">
+          <End Role="Eichprotokoll" Type="Self.Eichprotokoll" Multiplicity="1" />
+          <End Role="PruefungWiederholbarkeit" Type="Self.PruefungWiederholbarkeit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Eichprotokoll">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PruefungWiederholbarkeit">
+              <PropertyRef Name="FK_Eichprotokoll" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="Eichprotokoll" EntityType="Self.Eichprotokoll" store:Type="Tables" />
+          <EntitySet Name="Eichprozess" EntityType="Self.Eichprozess" store:Type="Tables" />
+          <EntitySet Name="Kompatiblitaetsnachweis" EntityType="Self.Kompatiblitaetsnachweis" store:Type="Tables" />
+          <EntitySet Name="Konfiguration" EntityType="Self.Konfiguration" store:Type="Tables" />
+          <EntitySet Name="Lizensierung" EntityType="Self.Lizensierung" store:Type="Tables" />
+          <EntitySet Name="Lookup_Auswertegeraet" EntityType="Self.Lookup_Auswertegeraet" store:Type="Tables" />
+          <EntitySet Name="Lookup_Bearbeitungsstatus" EntityType="Self.Lookup_Bearbeitungsstatus" store:Type="Tables" />
+          <EntitySet Name="Lookup_Konformitaetsbewertungsverfahren" EntityType="Self.Lookup_Konformitaetsbewertungsverfahren" store:Type="Tables" />
+          <EntitySet Name="Lookup_Vorgangsstatus" EntityType="Self.Lookup_Vorgangsstatus" store:Type="Tables" />
+          <EntitySet Name="Lookup_Waagenart" EntityType="Self.Lookup_Waagenart" store:Type="Tables" />
+          <EntitySet Name="Lookup_Waagentyp" EntityType="Self.Lookup_Waagentyp" store:Type="Tables" />
+          <EntitySet Name="Lookup_Waegezelle" EntityType="Self.Lookup_Waegezelle" store:Type="Tables" />
+          <EntitySet Name="Mogelstatistik" EntityType="Self.Mogelstatistik" store:Type="Tables" />
+          <EntitySet Name="PruefungAnsprechvermoegen" EntityType="Self.PruefungAnsprechvermoegen" store:Type="Tables" />
+          <EntitySet Name="PruefungAussermittigeBelastung" EntityType="Self.PruefungAussermittigeBelastung" store:Type="Tables" />
+          <EntitySet Name="PruefungLinearitaetFallend" EntityType="Self.PruefungLinearitaetFallend" store:Type="Tables" />
+          <EntitySet Name="PruefungLinearitaetSteigend" EntityType="Self.PruefungLinearitaetSteigend" store:Type="Tables" />
+          <EntitySet Name="PruefungRollendeLasten" EntityType="Self.PruefungRollendeLasten" store:Type="Tables" />
+          <EntitySet Name="PruefungStabilitaetGleichgewichtslage" EntityType="Self.PruefungStabilitaetGleichgewichtslage" store:Type="Tables" />
+          <EntitySet Name="PruefungStaffelverfahrenErsatzlast" EntityType="Self.PruefungStaffelverfahrenErsatzlast" store:Type="Tables" />
+          <EntitySet Name="PruefungStaffelverfahrenNormallast" EntityType="Self.PruefungStaffelverfahrenNormallast" store:Type="Tables" />
+          <EntitySet Name="PruefungWiederholbarkeit" EntityType="Self.PruefungWiederholbarkeit" store:Type="Tables" />
+          <AssociationSet Name="FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren" Association="Self.FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren">
+            <End Role="Lookup_Konformitaetsbewertungsverfahren" EntitySet="Lookup_Konformitaetsbewertungsverfahren" />
+            <End Role="Eichprotokoll" EntitySet="Eichprotokoll" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Eichprozess_Eichprotokoll" Association="Self.FK_Eichprozess_Eichprotokoll">
+            <End Role="Eichprotokoll" EntitySet="Eichprotokoll" />
+            <End Role="Eichprozess" EntitySet="Eichprozess" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Eichprozess_Kompatiblitaetsnachweis" Association="Self.FK_Eichprozess_Kompatiblitaetsnachweis">
+            <End Role="Kompatiblitaetsnachweis" EntitySet="Kompatiblitaetsnachweis" />
+            <End Role="Eichprozess" EntitySet="Eichprozess" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Eichprozess_Lookup_Auswertegeraet" Association="Self.FK_Eichprozess_Lookup_Auswertegeraet">
+            <End Role="Lookup_Auswertegeraet" EntitySet="Lookup_Auswertegeraet" />
+            <End Role="Eichprozess" EntitySet="Eichprozess" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Eichprozess_Lookup_Bearbeitungsstatus" Association="Self.FK_Eichprozess_Lookup_Bearbeitungsstatus">
+            <End Role="Lookup_Bearbeitungsstatus" EntitySet="Lookup_Bearbeitungsstatus" />
+            <End Role="Eichprozess" EntitySet="Eichprozess" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Eichprozess_Lookup_Vorgangsstatus" Association="Self.FK_Eichprozess_Lookup_Vorgangsstatus">
+            <End Role="Lookup_Vorgangsstatus" EntitySet="Lookup_Vorgangsstatus" />
+            <End Role="Eichprozess" EntitySet="Eichprozess" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Eichprozess_Lookup_Waagenart" Association="Self.FK_Eichprozess_Lookup_Waagenart">
+            <End Role="Lookup_Waagenart" EntitySet="Lookup_Waagenart" />
+            <End Role="Eichprozess" EntitySet="Eichprozess" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Eichprozess_Lookup_Waagentyp" Association="Self.FK_Eichprozess_Lookup_Waagentyp">
+            <End Role="Lookup_Waagentyp" EntitySet="Lookup_Waagentyp" />
+            <End Role="Eichprozess" EntitySet="Eichprozess" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Eichprozess_Lookup_Waegezelle" Association="Self.FK_Eichprozess_Lookup_Waegezelle">
+            <End Role="Lookup_Waegezelle" EntitySet="Lookup_Waegezelle" />
+            <End Role="Eichprozess" EntitySet="Eichprozess" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Mogelstatistik_Eichprozess" Association="Self.FK_Mogelstatistik_Eichprozess">
+            <End Role="Eichprozess" EntitySet="Eichprozess" />
+            <End Role="Mogelstatistik" EntitySet="Mogelstatistik" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Mogelstatistik_Lookup_Auswertegeraet" Association="Self.FK_Mogelstatistik_Lookup_Auswertegeraet">
+            <End Role="Lookup_Auswertegeraet" EntitySet="Lookup_Auswertegeraet" />
+            <End Role="Mogelstatistik" EntitySet="Mogelstatistik" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Mogelstatistik_Lookup_Waegezelle" Association="Self.FK_Mogelstatistik_Lookup_Waegezelle">
+            <End Role="Lookup_Waegezelle" EntitySet="Lookup_Waegezelle" />
+            <End Role="Mogelstatistik" EntitySet="Mogelstatistik" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PruefungAussermittigeBelastung_Eichprotokoll" Association="Self.FK_PruefungAussermittigeBelastung_Eichprotokoll">
+            <End Role="Eichprotokoll" EntitySet="Eichprotokoll" />
+            <End Role="PruefungAussermittigeBelastung" EntitySet="PruefungAussermittigeBelastung" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PruefungLinearitaetFallend_Eichprotokoll" Association="Self.FK_PruefungLinearitaetFallend_Eichprotokoll">
+            <End Role="Eichprotokoll" EntitySet="Eichprotokoll" />
+            <End Role="PruefungLinearitaetFallend" EntitySet="PruefungLinearitaetFallend" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PruefungLinearitaetSteigend_Eichprotokoll" Association="Self.FK_PruefungLinearitaetSteigend_Eichprotokoll">
+            <End Role="Eichprotokoll" EntitySet="Eichprotokoll" />
+            <End Role="PruefungLinearitaetSteigend" EntitySet="PruefungLinearitaetSteigend" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PruefungLinearitaetSteigendAnsprechvermoegen_Eichprotokoll" Association="Self.FK_PruefungLinearitaetSteigendAnsprechvermoegen_Eichprotokoll">
+            <End Role="Eichprotokoll" EntitySet="Eichprotokoll" />
+            <End Role="PruefungAnsprechvermoegen" EntitySet="PruefungAnsprechvermoegen" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PruefungRollendeLasten_Eichprotokoll" Association="Self.FK_PruefungRollendeLasten_Eichprotokoll">
+            <End Role="Eichprotokoll" EntitySet="Eichprotokoll" />
+            <End Role="PruefungRollendeLasten" EntitySet="PruefungRollendeLasten" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PruefungStabilitaetGleichgewichtslage_Eichprotokoll" Association="Self.FK_PruefungStabilitaetGleichgewichtslage_Eichprotokoll">
+            <End Role="Eichprotokoll" EntitySet="Eichprotokoll" />
+            <End Role="PruefungStabilitaetGleichgewichtslage" EntitySet="PruefungStabilitaetGleichgewichtslage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PruefungStaffelverfahrenErsatzlast_Eichprotokoll" Association="Self.FK_PruefungStaffelverfahrenErsatzlast_Eichprotokoll">
+            <End Role="Eichprotokoll" EntitySet="Eichprotokoll" />
+            <End Role="PruefungStaffelverfahrenErsatzlast" EntitySet="PruefungStaffelverfahrenErsatzlast" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PruefungStaffelverfahrenNormallast_Eichprotokoll" Association="Self.FK_PruefungStaffelverfahrenNormallast_Eichprotokoll">
+            <End Role="Eichprotokoll" EntitySet="Eichprotokoll" />
+            <End Role="PruefungStaffelverfahrenNormallast" EntitySet="PruefungStaffelverfahrenNormallast" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PruefungWiederholbarkeit_Eichprotokoll" Association="Self.FK_PruefungWiederholbarkeit_Eichprotokoll">
+            <End Role="Eichprotokoll" EntitySet="Eichprotokoll" />
+            <End Role="PruefungWiederholbarkeit" EntitySet="PruefungWiederholbarkeit" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Eichprotokoll">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FK_Identifikationsdaten_Konformitaetsbewertungsverfahren" Type="Byte" />
+          <Property Name="Identifikationsdaten_Aufstellungsort" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="Identifikationsdaten_Datum" Type="DateTime" Precision="3" />
+          <Property Name="Identifikationsdaten_Min1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Identifikationsdaten_Min2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Identifikationsdaten_Min3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Identifikationsdaten_NichtSelbsteinspielend" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Identifikationsdaten_HybridMechanisch" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Identifikationsdaten_Selbsteinspielend" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Identifikationsdaten_Pruefer" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="Identifikationsdaten_Baujahr" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Pruefverfahren_VolleNormallast" Type="Boolean" />
+          <Property Name="Pruefverfahren_VollstaendigesStaffelverfahren" Type="Boolean" />
+          <Property Name="Pruefverfahren_BetragNormallast" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Komponenten_Softwarestand" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Komponenten_Eichzaehlerstand" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Komponenten_WaegezellenFabriknummer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Verwendungszweck_HalbAutomatisch" Type="Boolean" />
+          <Property Name="Verwendungszweck_Automatisch" Type="Boolean" />
+          <Property Name="Verwendungszweck_Nullnachfuehrung" Type="Boolean" />
+          <Property Name="Verwendungszweck_AutoTara" Type="Boolean" />
+          <Property Name="Verwendungszweck_HandTara" Type="Boolean" />
+          <Property Name="Verwendungszweck_ZubehoerVerschiedenes" Type="Boolean" />
+          <Property Name="Verwendungszweck_EichfaehigerDatenspeicher" Type="Boolean" />
+          <Property Name="Verwendungszweck_PC" Type="Boolean" />
+          <Property Name="Verwendungszweck_Drucker" Type="Boolean" />
+          <Property Name="Verwendungszweck_Druckertyp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Verwendungszweck_Fahrzeugwaagen_MxM" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="Verwendungszweck_Fahrzeugwaagen_Dimension" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="GenauigkeitNullstellung_InOrdnung" Type="Boolean" />
+          <Property Name="Ueberlastanzeige_Max" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Ueberlastanzeige_Ueberlast" Type="Boolean" />
+          <Property Name="Taraeinrichtung_TaraausgleichseinrichtungOK" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Taraeinrichtung_GenauigkeitTarierungOK" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Taraeinrichtung_ErweiterteRichtigkeitspruefungOK" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Fallbeschleunigung_g" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Fallbeschleunigung_ms2" Type="Boolean" />
+          <Property Name="Sicherung_BenannteStelle" Type="Boolean" />
+          <Property Name="Sicherung_BenannteStelleAnzahl" Type="Int16" />
+          <Property Name="Sicherung_Eichsiegel13x13" Type="Boolean" />
+          <Property Name="Sicherung_Eichsiegel13x13Anzahl" Type="Int16" />
+          <Property Name="Sicherung_EichsiegelRund" Type="Boolean" />
+          <Property Name="Sicherung_EichsiegelRundAnzahl" Type="Int16" />
+          <Property Name="Sicherung_HinweismarkeGelocht" Type="Boolean" />
+          <Property Name="Sicherung_HinweismarkeGelochtAnzahl" Type="Int16" />
+          <Property Name="Sicherung_GruenesM" Type="Boolean" />
+          <Property Name="Sicherung_GruenesMAnzahl" Type="Int16" />
+          <Property Name="Sicherung_CE" Type="Boolean" />
+          <Property Name="Sicherung_CEAnzahl" Type="Int16" />
+          <Property Name="Sicherung_DatenAusgelesen" Type="Boolean" />
+          <Property Name="Sicherung_AlibispeicherEingerichtet" Type="Boolean" />
+          <Property Name="Sicherung_AlibispeicherAufbewahrungsdauerReduziert" Type="Boolean" />
+          <Property Name="Sicherung_AlibispeicherAufbewahrungsdauerReduziertBegruendung" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Sicherung_Bemerkungen" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Wiederholbarkeit_Staffelverfahren_MINNormalien" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="EignungAchlastwaegungen_WaagenbrueckeEbene" Type="Boolean" />
+          <Property Name="EignungAchlastwaegungen_WaageNichtGeeignet" Type="Boolean" />
+          <Property Name="EignungAchlastwaegungen_Geprueft" Type="Boolean" />
+          <Property Name="Identifikationsdaten_Benutzer" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="Beschaffenheitspruefung_Genehmigt" Type="Boolean" />
+          <Property Name="Taraeinrichtung_Taraeingabe" Type="Boolean" />
+          <Property Name="Beschaffenheitspruefung_Genauigkeitsklasse" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Beschaffenheitspruefung_Pruefintervall" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Beschaffenheitspruefung_LetztePruefung" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Beschaffenheitspruefung_Pruefscheinnummer" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="Beschaffenheitspruefung_EichfahrzeugFirma" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Sicherung_CE2016" Type="Boolean" />
+          <Property Name="Sicherung_CE2016Anzahl" Type="Int32" />
+          <NavigationProperty Name="Lookup_Konformitaetsbewertungsverfahren" Relationship="Self.FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren" FromRole="Eichprotokoll" ToRole="Lookup_Konformitaetsbewertungsverfahren" />
+          <NavigationProperty Name="Eichprozess" Relationship="Self.FK_Eichprozess_Eichprotokoll" FromRole="Eichprotokoll" ToRole="Eichprozess" />
+          <NavigationProperty Name="PruefungAussermittigeBelastung" Relationship="Self.FK_PruefungAussermittigeBelastung_Eichprotokoll" FromRole="Eichprotokoll" ToRole="PruefungAussermittigeBelastung" />
+          <NavigationProperty Name="PruefungLinearitaetFallend" Relationship="Self.FK_PruefungLinearitaetFallend_Eichprotokoll" FromRole="Eichprotokoll" ToRole="PruefungLinearitaetFallend" />
+          <NavigationProperty Name="PruefungLinearitaetSteigend" Relationship="Self.FK_PruefungLinearitaetSteigend_Eichprotokoll" FromRole="Eichprotokoll" ToRole="PruefungLinearitaetSteigend" />
+          <NavigationProperty Name="PruefungAnsprechvermoegen" Relationship="Self.FK_PruefungLinearitaetSteigendAnsprechvermoegen_Eichprotokoll" FromRole="Eichprotokoll" ToRole="PruefungAnsprechvermoegen" />
+          <NavigationProperty Name="PruefungRollendeLasten" Relationship="Self.FK_PruefungRollendeLasten_Eichprotokoll" FromRole="Eichprotokoll" ToRole="PruefungRollendeLasten" />
+          <NavigationProperty Name="PruefungStabilitaetGleichgewichtslage" Relationship="Self.FK_PruefungStabilitaetGleichgewichtslage_Eichprotokoll" FromRole="Eichprotokoll" ToRole="PruefungStabilitaetGleichgewichtslage" />
+          <NavigationProperty Name="PruefungStaffelverfahrenErsatzlast" Relationship="Self.FK_PruefungStaffelverfahrenErsatzlast_Eichprotokoll" FromRole="Eichprotokoll" ToRole="PruefungStaffelverfahrenErsatzlast" />
+          <NavigationProperty Name="PruefungStaffelverfahrenNormallast" Relationship="Self.FK_PruefungStaffelverfahrenNormallast_Eichprotokoll" FromRole="Eichprotokoll" ToRole="PruefungStaffelverfahrenNormallast" />
+          <NavigationProperty Name="PruefungWiederholbarkeit" Relationship="Self.FK_PruefungWiederholbarkeit_Eichprotokoll" FromRole="Eichprotokoll" ToRole="PruefungWiederholbarkeit" />
+        </EntityType>
+        <EntityType Name="Eichprozess">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Vorgangsnummer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FK_Vorgangsstatus" Type="Byte" Nullable="false" />
+          <Property Name="FK_Auswertegeraet" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FK_Waegezelle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FK_Eichprotokoll" Type="Int32" />
+          <Property Name="FK_WaagenTyp" Type="Byte" />
+          <Property Name="FK_WaagenArt" Type="Byte" />
+          <Property Name="FK_Kompatibilitaetsnachweis" Type="Int32" />
+          <Property Name="Ausgeblendet" Type="Boolean" Nullable="false" />
+          <Property Name="UploadFilePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FK_Bearbeitungsstatus" Type="Int32" />
+          <Property Name="ErzeugerLizenz" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AusStandardwaageErzeugt" Type="Boolean" Nullable="false" />
+          <Property Name="Bearbeitungsdatum" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Eichprotokoll" Relationship="Self.FK_Eichprozess_Eichprotokoll" FromRole="Eichprozess" ToRole="Eichprotokoll" />
+          <NavigationProperty Name="Kompatiblitaetsnachweis" Relationship="Self.FK_Eichprozess_Kompatiblitaetsnachweis" FromRole="Eichprozess" ToRole="Kompatiblitaetsnachweis" />
+          <NavigationProperty Name="Lookup_Auswertegeraet" Relationship="Self.FK_Eichprozess_Lookup_Auswertegeraet" FromRole="Eichprozess" ToRole="Lookup_Auswertegeraet" />
+          <NavigationProperty Name="Lookup_Bearbeitungsstatus" Relationship="Self.FK_Eichprozess_Lookup_Bearbeitungsstatus" FromRole="Eichprozess" ToRole="Lookup_Bearbeitungsstatus" />
+          <NavigationProperty Name="Lookup_Vorgangsstatus" Relationship="Self.FK_Eichprozess_Lookup_Vorgangsstatus" FromRole="Eichprozess" ToRole="Lookup_Vorgangsstatus" />
+          <NavigationProperty Name="Lookup_Waagenart" Relationship="Self.FK_Eichprozess_Lookup_Waagenart" FromRole="Eichprozess" ToRole="Lookup_Waagenart" />
+          <NavigationProperty Name="Lookup_Waagentyp" Relationship="Self.FK_Eichprozess_Lookup_Waagentyp" FromRole="Eichprozess" ToRole="Lookup_Waagentyp" />
+          <NavigationProperty Name="Lookup_Waegezelle" Relationship="Self.FK_Eichprozess_Lookup_Waegezelle" FromRole="Eichprozess" ToRole="Lookup_Waegezelle" />
+          <NavigationProperty Name="Mogelstatistik" Relationship="Self.FK_Mogelstatistik_Eichprozess" FromRole="Eichprozess" ToRole="Mogelstatistik" />
+        </EntityType>
+        <EntityType Name="Kompatiblitaetsnachweis">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Kompatiblitaet_Waage_Hoechstlast1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Kompatiblitaet_Waage_Hoechstlast2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Kompatiblitaet_Waage_Hoechstlast3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Kompatiblitaet_Waage_Eichwert1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Kompatiblitaet_Waage_Eichwert2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Kompatiblitaet_Waage_Eichwert3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Kompatiblitaet_Waage_FabrikNummer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Kompatiblitaet_Waage_Bauartzulassung" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Kompatiblitaet_Waage_Revisionsnummer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Kompatiblitaet_Waage_Zulassungsinhaber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Kompatiblitaet_Waage_Genauigkeitsklasse" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="Kompatiblitaet_Waage_AdditiveTarahoechstlast" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="Kompatiblitaet_Waage_GrenzenTemperaturbereichMIN" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="Kompatiblitaet_Waage_GrenzenTemperaturbereichMAX" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="Kompatiblitaet_Waage_Uebersetzungsverhaeltnis" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Kompatiblitaet_Waage_AnzahlWaegezellen" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="Kompatiblitaet_Waage_Einschaltnullstellbereich" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Kompatiblitaet_Waage_Ecklastzuschlag" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Kompatiblitaet_Waage_Totlast" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Kompatiblitaet_Waage_Kabellaenge" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="Kompatiblitaet_Waage_Kabelquerschnitt" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Kompatiblitaet_Verbindungselemente_BruchteilEichfehlergrenze" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Kompatiblitaet_Hersteller" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Kompatiblitaet_Strasse" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Kompatiblitaet_Ort" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Kompatiblitaet_Postleitzahl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Kompatiblitaet_AWG_Anschlussart" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Kompatiblitaet_WZ_Hoechstlast" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Eichprozess" Relationship="Self.FK_Eichprozess_Kompatiblitaetsnachweis" FromRole="Kompatiblitaetsnachweis" ToRole="Eichprozess" />
+        </EntityType>
+        <EntityType Name="Konfiguration">
+          <Key>
+            <PropertyRef Name="BenutzerLizenz" />
+          </Key>
+          <Property Name="BenutzerLizenz" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LetztesUpdate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="AktuelleSprache" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Synchronisierungsmodus" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SyncAb" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="SyncBis" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="HoleAlleeigenenEichungenVomServer" Type="Boolean" Nullable="false" />
+          <Property Name="GridSettings" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="GridSettingsRHEWA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DBVersion" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Lizensierung">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Lizenzschluessel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LetzteAktivierung" Type="DateTime" Precision="3" />
+          <Property Name="RHEWALizenz" Type="Boolean" Nullable="false" />
+          <Property Name="Aktiv" Type="Boolean" Nullable="false" />
+          <Property Name="FirmaOrt" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Firma" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Vorname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="FirmaPLZ" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="FirmaStrasse" Type="String" MaxLength="999" FixedLength="false" Unicode="true" />
+          <Property Name="HEKennung" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FK_BenutzerID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Lookup_Auswertegeraet">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Typ" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Hersteller" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Pruefbericht" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Bauartzulassung" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Genauigkeitsklasse" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MAXAnzahlTeilungswerteEinbereichswaage" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="MAXAnzahlTeilungswerteMehrbereichswaage" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Speisespannung" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Mindesteingangsspannung" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mindestmesssignal" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GrenzwertLastwiderstandMIN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GrenzwertLastwiderstandMAX" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GrenzwertTemperaturbereichMIN" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="GrenzwertTemperaturbereichMAX" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BruchteilEichfehlergrenze" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="KabellaengeQuerschnitt" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Deaktiviert" Type="Boolean" />
+          <Property Name="TaraeinrichtungTaraeingabe" Type="Boolean" />
+          <Property Name="TaraeinrichtungSelbsttaetig" Type="Boolean" />
+          <Property Name="TaraeinrichtungHalbSelbsttaetig" Type="Boolean" />
+          <Property Name="NullstellungNullnachfuehrung" Type="Boolean" />
+          <Property Name="NullstellungSelbsttaetig" Type="Boolean" />
+          <Property Name="NullstellungHalbSelbsttaetig" Type="Boolean" />
+          <NavigationProperty Name="Eichprozess" Relationship="Self.FK_Eichprozess_Lookup_Auswertegeraet" FromRole="Lookup_Auswertegeraet" ToRole="Eichprozess" />
+          <NavigationProperty Name="Mogelstatistik" Relationship="Self.FK_Mogelstatistik_Lookup_Auswertegeraet" FromRole="Lookup_Auswertegeraet" ToRole="Mogelstatistik" />
+        </EntityType>
+        <EntityType Name="Lookup_Bearbeitungsstatus">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Status_EN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Status_PL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Eichprozess" Relationship="Self.FK_Eichprozess_Lookup_Bearbeitungsstatus" FromRole="Lookup_Bearbeitungsstatus" ToRole="Eichprozess" />
+        </EntityType>
+        <EntityType Name="Lookup_Konformitaetsbewertungsverfahren">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Byte" Nullable="false" />
+          <Property Name="Verfahren" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Verfahren_EN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Verfahren_PL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Eichprotokoll" Relationship="Self.FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren" FromRole="Lookup_Konformitaetsbewertungsverfahren" ToRole="Eichprotokoll" />
+        </EntityType>
+        <EntityType Name="Lookup_Vorgangsstatus">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Byte" Nullable="false" />
+          <Property Name="Status" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="Status_EN" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="Status_PL" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Eichprozess" Relationship="Self.FK_Eichprozess_Lookup_Vorgangsstatus" FromRole="Lookup_Vorgangsstatus" ToRole="Eichprozess" />
+        </EntityType>
+        <EntityType Name="Lookup_Waagenart">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Byte" Nullable="false" />
+          <Property Name="Art" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Art_EN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Art_PL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Eichprozess" Relationship="Self.FK_Eichprozess_Lookup_Waagenart" FromRole="Lookup_Waagenart" ToRole="Eichprozess" />
+        </EntityType>
+        <EntityType Name="Lookup_Waagentyp">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Byte" Nullable="false" />
+          <Property Name="Typ" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Typ_EN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Typ_PL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Eichprozess" Relationship="Self.FK_Eichprozess_Lookup_Waagentyp" FromRole="Lookup_Waagentyp" ToRole="Eichprozess" />
+        </EntityType>
+        <EntityType Name="Lookup_Waegezelle">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Hersteller" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Typ" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pruefbericht" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Bauartzulassung" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Revisionsnummer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Genauigkeitsklasse" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Mindestvorlast" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Waegezellenkennwert" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MaxAnzahlTeilungswerte" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MinTeilungswert" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Hoechsteteilungsfaktor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Kriechteilungsfaktor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RueckkehrVorlastsignal" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WiderstandWaegezelle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GrenzwertTemperaturbereichMIN" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="GrenzwertTemperaturbereichMAX" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="BruchteilEichfehlergrenze" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="Neu" Type="Boolean" Nullable="false" />
+          <Property Name="Deaktiviert" Type="Boolean" Nullable="false" />
+          <Property Name="MindestvorlastProzent" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Eichprozess" Relationship="Self.FK_Eichprozess_Lookup_Waegezelle" FromRole="Lookup_Waegezelle" ToRole="Eichprozess" />
+          <NavigationProperty Name="Mogelstatistik" Relationship="Self.FK_Mogelstatistik_Lookup_Waegezelle" FromRole="Lookup_Waegezelle" ToRole="Mogelstatistik" />
+        </EntityType>
+        <EntityType Name="Mogelstatistik">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FK_Eichprozess" Type="Int32" />
+          <Property Name="FK_Auswertegeraet" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FK_Waegezelle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Kompatiblitaet_Waage_FabrikNummer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Kompatiblitaet_Waage_Bauartzulassung" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Kompatiblitaet_Waage_Revisionsnummer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Kompatiblitaet_Waage_Zulassungsinhaber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Kompatiblitaet_Waage_Genauigkeitsklasse" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_AdditiveTarahoechstlast" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_GrenzenTemperaturbereichMIN" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_GrenzenTemperaturbereichMAX" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich1" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich1" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich2" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich2" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich3" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich3" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_Uebersetzungsverhaeltnis" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_AnzahlWaegezellen" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_Einschaltnullstellbereich" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_Ecklastzuschlag" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_Totlast" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_Kabellaenge" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_Kabelquerschnitt" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Kompatiblitaet_AnschriftWaagenbaufirma" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Kompatiblitaet_Verbindungselemente_BruchteilEichfehlergrenze" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Kompatiblitaet_AWG_Anschlussart" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Kompatiblitaet_WZ_Hoechstlast" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Eichprozess" Relationship="Self.FK_Mogelstatistik_Eichprozess" FromRole="Mogelstatistik" ToRole="Eichprozess" />
+          <NavigationProperty Name="Lookup_Auswertegeraet" Relationship="Self.FK_Mogelstatistik_Lookup_Auswertegeraet" FromRole="Mogelstatistik" ToRole="Lookup_Auswertegeraet" />
+          <NavigationProperty Name="Lookup_Waegezelle" Relationship="Self.FK_Mogelstatistik_Lookup_Waegezelle" FromRole="Mogelstatistik" ToRole="Lookup_Waegezelle" />
+        </EntityType>
+        <EntityType Name="PruefungAnsprechvermoegen">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FK_Eichprotokoll" Type="Int32" Nullable="false" />
+          <Property Name="LastL" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Last" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Anzeige" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Last1d" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Ziffernsprung" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Eichprotokoll" Relationship="Self.FK_PruefungLinearitaetSteigendAnsprechvermoegen_Eichprotokoll" FromRole="PruefungAnsprechvermoegen" ToRole="Eichprotokoll" />
+        </EntityType>
+        <EntityType Name="PruefungAussermittigeBelastung">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FK_Eichprotokoll" Type="Int32" Nullable="false" />
+          <Property Name="Bereich" Type="Byte" Nullable="false" />
+          <Property Name="Belastungsort" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Last" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Anzeige" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Fehler" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EFG" Type="Boolean" Nullable="false" />
+          <Property Name="EFGExtra" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Eichprotokoll" Relationship="Self.FK_PruefungAussermittigeBelastung_Eichprotokoll" FromRole="PruefungAussermittigeBelastung" ToRole="Eichprotokoll" />
+        </EntityType>
+        <EntityType Name="PruefungLinearitaetFallend">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FK_Eichprotokoll" Type="Int32" Nullable="false" />
+          <Property Name="Bereich" Type="Byte" Nullable="false" />
+          <Property Name="Messpunkt" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Last" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Anzeige" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Fehler" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EFG" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Eichprotokoll" Relationship="Self.FK_PruefungLinearitaetFallend_Eichprotokoll" FromRole="PruefungLinearitaetFallend" ToRole="Eichprotokoll" />
+        </EntityType>
+        <EntityType Name="PruefungLinearitaetSteigend">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FK_Eichprotokoll" Type="Int32" Nullable="false" />
+          <Property Name="Bereich" Type="Byte" Nullable="false" />
+          <Property Name="Messpunkt" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Last" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Anzeige" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Fehler" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EFG" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Eichprotokoll" Relationship="Self.FK_PruefungLinearitaetSteigend_Eichprotokoll" FromRole="PruefungLinearitaetSteigend" ToRole="Eichprotokoll" />
+        </EntityType>
+        <EntityType Name="PruefungRollendeLasten">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FK_Eichprotokoll" Type="Int32" Nullable="false" />
+          <Property Name="Belastungsstelle" Type="Byte" Nullable="false" />
+          <Property Name="AuffahrtSeite" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Last" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Anzeige" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Fehler" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EFG" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EFGExtra" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Eichprotokoll" Relationship="Self.FK_PruefungRollendeLasten_Eichprotokoll" FromRole="PruefungRollendeLasten" ToRole="Eichprotokoll" />
+        </EntityType>
+        <EntityType Name="PruefungStabilitaetGleichgewichtslage">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FK_Eichprotokoll" Type="Int32" Nullable="false" />
+          <Property Name="Durchlauf" Type="Byte" Nullable="false" />
+          <Property Name="Last" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Anzeige" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MIN" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MAX" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AbdruckOK" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Eichprotokoll" Relationship="Self.FK_PruefungStabilitaetGleichgewichtslage_Eichprotokoll" FromRole="PruefungStabilitaetGleichgewichtslage" ToRole="Eichprotokoll" />
+        </EntityType>
+        <EntityType Name="PruefungStaffelverfahrenErsatzlast">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FK_Eichprotokoll" Type="Int32" Nullable="false" />
+          <Property Name="Staffel" Type="Byte" Nullable="false" />
+          <Property Name="Bereich" Type="Byte" Nullable="false" />
+          <Property Name="Ersatzlast_Soll" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Ersatzlast_Ist" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ZusaetzlicheErsatzlast_Soll" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ErsatzUndNormallast_Soll" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ErsatzUndNormallast_Ist" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Ersatzlast2_Soll" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Ersatzlast2_Ist" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DifferenzAnzeigewerte_Fehler" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DifferenzAnzeigewerte_EFG" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MessabweichungStaffel_Fehler" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MessabweichungStaffel_EFG" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MessabweichungWaage_Fehler" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MessabweichungWaage_EFG" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Eichprotokoll" Relationship="Self.FK_PruefungStaffelverfahrenErsatzlast_Eichprotokoll" FromRole="PruefungStaffelverfahrenErsatzlast" ToRole="Eichprotokoll" />
+        </EntityType>
+        <EntityType Name="PruefungStaffelverfahrenNormallast">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FK_Eichprotokoll" Type="Int32" Nullable="false" />
+          <Property Name="Staffel" Type="Byte" Nullable="false" />
+          <Property Name="Bereich" Type="Byte" Nullable="false" />
+          <Property Name="NormalLast_Last_1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NormalLast_Last_2" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NormalLast_Last_3" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NormalLast_Last_4" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NormalLast_Anzeige_1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NormalLast_Fehler_1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NormalLast_EFG_1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NormalLast_Anzeige_2" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NormalLast_Fehler_2" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NormalLast_EFG_2" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NormalLast_Anzeige_4" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NormalLast_Fehler_4" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NormalLast_EFG_4" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NormalLast_Anzeige_3" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NormalLast_Fehler_3" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NormalLast_EFG_3" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DifferenzAnzeigewerte_Fehler" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DifferenzAnzeigewerte_EFG" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MessabweichungStaffel_Fehler" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MessabweichungStaffel_EFG" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MessabweichungWaage_Fehler" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MessabweichungWaage_EFG" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Eichprotokoll" Relationship="Self.FK_PruefungStaffelverfahrenNormallast_Eichprotokoll" FromRole="PruefungStaffelverfahrenNormallast" ToRole="Eichprotokoll" />
+        </EntityType>
+        <EntityType Name="PruefungWiederholbarkeit">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FK_Eichprotokoll" Type="Int32" Nullable="false" />
+          <Property Name="Wiederholung" Type="Byte" Nullable="false" />
+          <Property Name="Belastung" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Last" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Anzeige" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Fehler" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EFG" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EFG_Extra" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Eichprotokoll" Relationship="Self.FK_PruefungWiederholbarkeit_Eichprotokoll" FromRole="PruefungWiederholbarkeit" ToRole="Eichprotokoll" />
+        </EntityType>
+        <Association Name="FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren">
+          <End Role="Lookup_Konformitaetsbewertungsverfahren" Type="Self.Lookup_Konformitaetsbewertungsverfahren" Multiplicity="0..1" />
+          <End Role="Eichprotokoll" Type="Self.Eichprotokoll" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lookup_Konformitaetsbewertungsverfahren">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Eichprotokoll">
+              <PropertyRef Name="FK_Identifikationsdaten_Konformitaetsbewertungsverfahren" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Eichprozess_Eichprotokoll">
+          <End Role="Eichprotokoll" Type="Self.Eichprotokoll" Multiplicity="0..1" />
+          <End Role="Eichprozess" Type="Self.Eichprozess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Eichprotokoll">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Eichprozess">
+              <PropertyRef Name="FK_Eichprotokoll" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PruefungAussermittigeBelastung_Eichprotokoll">
+          <End Role="Eichprotokoll" Type="Self.Eichprotokoll" Multiplicity="1" />
+          <End Role="PruefungAussermittigeBelastung" Type="Self.PruefungAussermittigeBelastung" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Eichprotokoll">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PruefungAussermittigeBelastung">
+              <PropertyRef Name="FK_Eichprotokoll" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PruefungLinearitaetFallend_Eichprotokoll">
+          <End Role="Eichprotokoll" Type="Self.Eichprotokoll" Multiplicity="1" />
+          <End Role="PruefungLinearitaetFallend" Type="Self.PruefungLinearitaetFallend" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Eichprotokoll">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PruefungLinearitaetFallend">
+              <PropertyRef Name="FK_Eichprotokoll" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PruefungLinearitaetSteigend_Eichprotokoll">
+          <End Role="Eichprotokoll" Type="Self.Eichprotokoll" Multiplicity="1" />
+          <End Role="PruefungLinearitaetSteigend" Type="Self.PruefungLinearitaetSteigend" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Eichprotokoll">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PruefungLinearitaetSteigend">
+              <PropertyRef Name="FK_Eichprotokoll" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PruefungLinearitaetSteigendAnsprechvermoegen_Eichprotokoll">
+          <End Role="Eichprotokoll" Type="Self.Eichprotokoll" Multiplicity="1" />
+          <End Role="PruefungAnsprechvermoegen" Type="Self.PruefungAnsprechvermoegen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Eichprotokoll">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PruefungAnsprechvermoegen">
+              <PropertyRef Name="FK_Eichprotokoll" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PruefungRollendeLasten_Eichprotokoll">
+          <End Role="Eichprotokoll" Type="Self.Eichprotokoll" Multiplicity="1" />
+          <End Role="PruefungRollendeLasten" Type="Self.PruefungRollendeLasten" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Eichprotokoll">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PruefungRollendeLasten">
+              <PropertyRef Name="FK_Eichprotokoll" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PruefungStabilitaetGleichgewichtslage_Eichprotokoll">
+          <End Role="Eichprotokoll" Type="Self.Eichprotokoll" Multiplicity="1" />
+          <End Role="PruefungStabilitaetGleichgewichtslage" Type="Self.PruefungStabilitaetGleichgewichtslage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Eichprotokoll">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PruefungStabilitaetGleichgewichtslage">
+              <PropertyRef Name="FK_Eichprotokoll" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PruefungStaffelverfahrenErsatzlast_Eichprotokoll">
+          <End Role="Eichprotokoll" Type="Self.Eichprotokoll" Multiplicity="1" />
+          <End Role="PruefungStaffelverfahrenErsatzlast" Type="Self.PruefungStaffelverfahrenErsatzlast" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Eichprotokoll">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PruefungStaffelverfahrenErsatzlast">
+              <PropertyRef Name="FK_Eichprotokoll" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PruefungStaffelverfahrenNormallast_Eichprotokoll">
+          <End Role="Eichprotokoll" Type="Self.Eichprotokoll" Multiplicity="1" />
+          <End Role="PruefungStaffelverfahrenNormallast" Type="Self.PruefungStaffelverfahrenNormallast" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Eichprotokoll">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PruefungStaffelverfahrenNormallast">
+              <PropertyRef Name="FK_Eichprotokoll" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PruefungWiederholbarkeit_Eichprotokoll">
+          <End Role="Eichprotokoll" Type="Self.Eichprotokoll" Multiplicity="1" />
+          <End Role="PruefungWiederholbarkeit" Type="Self.PruefungWiederholbarkeit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Eichprotokoll">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PruefungWiederholbarkeit">
+              <PropertyRef Name="FK_Eichprotokoll" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Eichprozess_Kompatiblitaetsnachweis">
+          <End Role="Kompatiblitaetsnachweis" Type="Self.Kompatiblitaetsnachweis" Multiplicity="0..1" />
+          <End Role="Eichprozess" Type="Self.Eichprozess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kompatiblitaetsnachweis">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Eichprozess">
+              <PropertyRef Name="FK_Kompatibilitaetsnachweis" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Eichprozess_Lookup_Auswertegeraet">
+          <End Role="Lookup_Auswertegeraet" Type="Self.Lookup_Auswertegeraet" Multiplicity="0..1" />
+          <End Role="Eichprozess" Type="Self.Eichprozess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lookup_Auswertegeraet">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Eichprozess">
+              <PropertyRef Name="FK_Auswertegeraet" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Eichprozess_Lookup_Bearbeitungsstatus">
+          <End Role="Lookup_Bearbeitungsstatus" Type="Self.Lookup_Bearbeitungsstatus" Multiplicity="0..1" />
+          <End Role="Eichprozess" Type="Self.Eichprozess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lookup_Bearbeitungsstatus">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Eichprozess">
+              <PropertyRef Name="FK_Bearbeitungsstatus" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Eichprozess_Lookup_Vorgangsstatus">
+          <End Role="Lookup_Vorgangsstatus" Type="Self.Lookup_Vorgangsstatus" Multiplicity="1" />
+          <End Role="Eichprozess" Type="Self.Eichprozess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lookup_Vorgangsstatus">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Eichprozess">
+              <PropertyRef Name="FK_Vorgangsstatus" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Eichprozess_Lookup_Waagenart">
+          <End Role="Lookup_Waagenart" Type="Self.Lookup_Waagenart" Multiplicity="0..1" />
+          <End Role="Eichprozess" Type="Self.Eichprozess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lookup_Waagenart">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Eichprozess">
+              <PropertyRef Name="FK_WaagenArt" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Eichprozess_Lookup_Waagentyp">
+          <End Role="Lookup_Waagentyp" Type="Self.Lookup_Waagentyp" Multiplicity="0..1" />
+          <End Role="Eichprozess" Type="Self.Eichprozess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lookup_Waagentyp">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Eichprozess">
+              <PropertyRef Name="FK_WaagenTyp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Eichprozess_Lookup_Waegezelle">
+          <End Role="Lookup_Waegezelle" Type="Self.Lookup_Waegezelle" Multiplicity="0..1" />
+          <End Role="Eichprozess" Type="Self.Eichprozess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lookup_Waegezelle">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Eichprozess">
+              <PropertyRef Name="FK_Waegezelle" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Mogelstatistik_Eichprozess">
+          <End Role="Eichprozess" Type="Self.Eichprozess" Multiplicity="0..1" />
+          <End Role="Mogelstatistik" Type="Self.Mogelstatistik" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Eichprozess">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Mogelstatistik">
+              <PropertyRef Name="FK_Eichprozess" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Mogelstatistik_Lookup_Auswertegeraet">
+          <End Role="Lookup_Auswertegeraet" Type="Self.Lookup_Auswertegeraet" Multiplicity="0..1" />
+          <End Role="Mogelstatistik" Type="Self.Mogelstatistik" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lookup_Auswertegeraet">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Mogelstatistik">
+              <PropertyRef Name="FK_Auswertegeraet" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Mogelstatistik_Lookup_Waegezelle">
+          <End Role="Lookup_Waegezelle" Type="Self.Lookup_Waegezelle" Multiplicity="0..1" />
+          <End Role="Mogelstatistik" Type="Self.Mogelstatistik" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lookup_Waegezelle">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Mogelstatistik">
+              <PropertyRef Name="FK_Waegezelle" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Eichprotokoll" EntityType="Self.Eichprotokoll" />
+          <EntitySet Name="Eichprozess" EntityType="Self.Eichprozess" />
+          <EntitySet Name="Kompatiblitaetsnachweis" EntityType="Self.Kompatiblitaetsnachweis" />
+          <EntitySet Name="Konfiguration" EntityType="Self.Konfiguration" />
+          <EntitySet Name="Lizensierung" EntityType="Self.Lizensierung" />
+          <EntitySet Name="Lookup_Auswertegeraet" EntityType="Self.Lookup_Auswertegeraet" />
+          <EntitySet Name="Lookup_Bearbeitungsstatus" EntityType="Self.Lookup_Bearbeitungsstatus" />
+          <EntitySet Name="Lookup_Konformitaetsbewertungsverfahren" EntityType="Self.Lookup_Konformitaetsbewertungsverfahren" />
+          <EntitySet Name="Lookup_Vorgangsstatus" EntityType="Self.Lookup_Vorgangsstatus" />
+          <EntitySet Name="Lookup_Waagenart" EntityType="Self.Lookup_Waagenart" />
+          <EntitySet Name="Lookup_Waagentyp" EntityType="Self.Lookup_Waagentyp" />
+          <EntitySet Name="Lookup_Waegezelle" EntityType="Self.Lookup_Waegezelle" />
+          <EntitySet Name="Mogelstatistik" EntityType="Self.Mogelstatistik" />
+          <EntitySet Name="PruefungAnsprechvermoegen" EntityType="Self.PruefungAnsprechvermoegen" />
+          <EntitySet Name="PruefungAussermittigeBelastung" EntityType="Self.PruefungAussermittigeBelastung" />
+          <EntitySet Name="PruefungLinearitaetFallend" EntityType="Self.PruefungLinearitaetFallend" />
+          <EntitySet Name="PruefungLinearitaetSteigend" EntityType="Self.PruefungLinearitaetSteigend" />
+          <EntitySet Name="PruefungRollendeLasten" EntityType="Self.PruefungRollendeLasten" />
+          <EntitySet Name="PruefungStabilitaetGleichgewichtslage" EntityType="Self.PruefungStabilitaetGleichgewichtslage" />
+          <EntitySet Name="PruefungStaffelverfahrenErsatzlast" EntityType="Self.PruefungStaffelverfahrenErsatzlast" />
+          <EntitySet Name="PruefungStaffelverfahrenNormallast" EntityType="Self.PruefungStaffelverfahrenNormallast" />
+          <EntitySet Name="PruefungWiederholbarkeit" EntityType="Self.PruefungWiederholbarkeit" />
+          <AssociationSet Name="FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren" Association="Self.FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren">
+            <End Role="Lookup_Konformitaetsbewertungsverfahren" EntitySet="Lookup_Konformitaetsbewertungsverfahren" />
+            <End Role="Eichprotokoll" EntitySet="Eichprotokoll" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Eichprozess_Eichprotokoll" Association="Self.FK_Eichprozess_Eichprotokoll">
+            <End Role="Eichprotokoll" EntitySet="Eichprotokoll" />
+            <End Role="Eichprozess" EntitySet="Eichprozess" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PruefungAussermittigeBelastung_Eichprotokoll" Association="Self.FK_PruefungAussermittigeBelastung_Eichprotokoll">
+            <End Role="Eichprotokoll" EntitySet="Eichprotokoll" />
+            <End Role="PruefungAussermittigeBelastung" EntitySet="PruefungAussermittigeBelastung" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PruefungLinearitaetFallend_Eichprotokoll" Association="Self.FK_PruefungLinearitaetFallend_Eichprotokoll">
+            <End Role="Eichprotokoll" EntitySet="Eichprotokoll" />
+            <End Role="PruefungLinearitaetFallend" EntitySet="PruefungLinearitaetFallend" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PruefungLinearitaetSteigend_Eichprotokoll" Association="Self.FK_PruefungLinearitaetSteigend_Eichprotokoll">
+            <End Role="Eichprotokoll" EntitySet="Eichprotokoll" />
+            <End Role="PruefungLinearitaetSteigend" EntitySet="PruefungLinearitaetSteigend" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PruefungLinearitaetSteigendAnsprechvermoegen_Eichprotokoll" Association="Self.FK_PruefungLinearitaetSteigendAnsprechvermoegen_Eichprotokoll">
+            <End Role="Eichprotokoll" EntitySet="Eichprotokoll" />
+            <End Role="PruefungAnsprechvermoegen" EntitySet="PruefungAnsprechvermoegen" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PruefungRollendeLasten_Eichprotokoll" Association="Self.FK_PruefungRollendeLasten_Eichprotokoll">
+            <End Role="Eichprotokoll" EntitySet="Eichprotokoll" />
+            <End Role="PruefungRollendeLasten" EntitySet="PruefungRollendeLasten" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PruefungStabilitaetGleichgewichtslage_Eichprotokoll" Association="Self.FK_PruefungStabilitaetGleichgewichtslage_Eichprotokoll">
+            <End Role="Eichprotokoll" EntitySet="Eichprotokoll" />
+            <End Role="PruefungStabilitaetGleichgewichtslage" EntitySet="PruefungStabilitaetGleichgewichtslage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PruefungStaffelverfahrenErsatzlast_Eichprotokoll" Association="Self.FK_PruefungStaffelverfahrenErsatzlast_Eichprotokoll">
+            <End Role="Eichprotokoll" EntitySet="Eichprotokoll" />
+            <End Role="PruefungStaffelverfahrenErsatzlast" EntitySet="PruefungStaffelverfahrenErsatzlast" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PruefungStaffelverfahrenNormallast_Eichprotokoll" Association="Self.FK_PruefungStaffelverfahrenNormallast_Eichprotokoll">
+            <End Role="Eichprotokoll" EntitySet="Eichprotokoll" />
+            <End Role="PruefungStaffelverfahrenNormallast" EntitySet="PruefungStaffelverfahrenNormallast" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PruefungWiederholbarkeit_Eichprotokoll" Association="Self.FK_PruefungWiederholbarkeit_Eichprotokoll">
+            <End Role="Eichprotokoll" EntitySet="Eichprotokoll" />
+            <End Role="PruefungWiederholbarkeit" EntitySet="PruefungWiederholbarkeit" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Eichprozess_Kompatiblitaetsnachweis" Association="Self.FK_Eichprozess_Kompatiblitaetsnachweis">
+            <End Role="Kompatiblitaetsnachweis" EntitySet="Kompatiblitaetsnachweis" />
+            <End Role="Eichprozess" EntitySet="Eichprozess" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Eichprozess_Lookup_Auswertegeraet" Association="Self.FK_Eichprozess_Lookup_Auswertegeraet">
+            <End Role="Lookup_Auswertegeraet" EntitySet="Lookup_Auswertegeraet" />
+            <End Role="Eichprozess" EntitySet="Eichprozess" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Eichprozess_Lookup_Bearbeitungsstatus" Association="Self.FK_Eichprozess_Lookup_Bearbeitungsstatus">
+            <End Role="Lookup_Bearbeitungsstatus" EntitySet="Lookup_Bearbeitungsstatus" />
+            <End Role="Eichprozess" EntitySet="Eichprozess" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Eichprozess_Lookup_Vorgangsstatus" Association="Self.FK_Eichprozess_Lookup_Vorgangsstatus">
+            <End Role="Lookup_Vorgangsstatus" EntitySet="Lookup_Vorgangsstatus" />
+            <End Role="Eichprozess" EntitySet="Eichprozess" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Eichprozess_Lookup_Waagenart" Association="Self.FK_Eichprozess_Lookup_Waagenart">
+            <End Role="Lookup_Waagenart" EntitySet="Lookup_Waagenart" />
+            <End Role="Eichprozess" EntitySet="Eichprozess" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Eichprozess_Lookup_Waagentyp" Association="Self.FK_Eichprozess_Lookup_Waagentyp">
+            <End Role="Lookup_Waagentyp" EntitySet="Lookup_Waagentyp" />
+            <End Role="Eichprozess" EntitySet="Eichprozess" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Eichprozess_Lookup_Waegezelle" Association="Self.FK_Eichprozess_Lookup_Waegezelle">
+            <End Role="Lookup_Waegezelle" EntitySet="Lookup_Waegezelle" />
+            <End Role="Eichprozess" EntitySet="Eichprozess" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Mogelstatistik_Eichprozess" Association="Self.FK_Mogelstatistik_Eichprozess">
+            <End Role="Eichprozess" EntitySet="Eichprozess" />
+            <End Role="Mogelstatistik" EntitySet="Mogelstatistik" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Mogelstatistik_Lookup_Auswertegeraet" Association="Self.FK_Mogelstatistik_Lookup_Auswertegeraet">
+            <End Role="Lookup_Auswertegeraet" EntitySet="Lookup_Auswertegeraet" />
+            <End Role="Mogelstatistik" EntitySet="Mogelstatistik" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Mogelstatistik_Lookup_Waegezelle" Association="Self.FK_Mogelstatistik_Lookup_Waegezelle">
+            <End Role="Lookup_Waegezelle" EntitySet="Lookup_Waegezelle" />
+            <End Role="Mogelstatistik" EntitySet="Mogelstatistik" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="Eichprotokoll">
+            <EntityTypeMapping TypeName="Model.Eichprotokoll">
+              <MappingFragment StoreEntitySet="Eichprotokoll">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FK_Identifikationsdaten_Konformitaetsbewertungsverfahren" ColumnName="FK_Identifikationsdaten_Konformitaetsbewertungsverfahren" />
+                <ScalarProperty Name="Identifikationsdaten_Aufstellungsort" ColumnName="Identifikationsdaten_Aufstellungsort" />
+                <ScalarProperty Name="Identifikationsdaten_Datum" ColumnName="Identifikationsdaten_Datum" />
+                <ScalarProperty Name="Identifikationsdaten_Min1" ColumnName="Identifikationsdaten_Min1" />
+                <ScalarProperty Name="Identifikationsdaten_Min2" ColumnName="Identifikationsdaten_Min2" />
+                <ScalarProperty Name="Identifikationsdaten_Min3" ColumnName="Identifikationsdaten_Min3" />
+                <ScalarProperty Name="Identifikationsdaten_NichtSelbsteinspielend" ColumnName="Identifikationsdaten_NichtSelbsteinspielend" />
+                <ScalarProperty Name="Identifikationsdaten_HybridMechanisch" ColumnName="Identifikationsdaten_HybridMechanisch" />
+                <ScalarProperty Name="Identifikationsdaten_Selbsteinspielend" ColumnName="Identifikationsdaten_Selbsteinspielend" />
+                <ScalarProperty Name="Identifikationsdaten_Pruefer" ColumnName="Identifikationsdaten_Pruefer" />
+                <ScalarProperty Name="Identifikationsdaten_Baujahr" ColumnName="Identifikationsdaten_Baujahr" />
+                <ScalarProperty Name="Pruefverfahren_VolleNormallast" ColumnName="Pruefverfahren_VolleNormallast" />
+                <ScalarProperty Name="Pruefverfahren_VollstaendigesStaffelverfahren" ColumnName="Pruefverfahren_VollstaendigesStaffelverfahren" />
+                <ScalarProperty Name="Pruefverfahren_BetragNormallast" ColumnName="Pruefverfahren_BetragNormallast" />
+                <ScalarProperty Name="Komponenten_Softwarestand" ColumnName="Komponenten_Softwarestand" />
+                <ScalarProperty Name="Komponenten_Eichzaehlerstand" ColumnName="Komponenten_Eichzaehlerstand" />
+                <ScalarProperty Name="Komponenten_WaegezellenFabriknummer" ColumnName="Komponenten_WaegezellenFabriknummer" />
+                <ScalarProperty Name="Verwendungszweck_HalbAutomatisch" ColumnName="Verwendungszweck_HalbAutomatisch" />
+                <ScalarProperty Name="Verwendungszweck_Automatisch" ColumnName="Verwendungszweck_Automatisch" />
+                <ScalarProperty Name="Verwendungszweck_Nullnachfuehrung" ColumnName="Verwendungszweck_Nullnachfuehrung" />
+                <ScalarProperty Name="Verwendungszweck_AutoTara" ColumnName="Verwendungszweck_AutoTara" />
+                <ScalarProperty Name="Verwendungszweck_HandTara" ColumnName="Verwendungszweck_HandTara" />
+                <ScalarProperty Name="Verwendungszweck_ZubehoerVerschiedenes" ColumnName="Verwendungszweck_ZubehoerVerschiedenes" />
+                <ScalarProperty Name="Verwendungszweck_EichfaehigerDatenspeicher" ColumnName="Verwendungszweck_EichfaehigerDatenspeicher" />
+                <ScalarProperty Name="Verwendungszweck_PC" ColumnName="Verwendungszweck_PC" />
+                <ScalarProperty Name="Verwendungszweck_Drucker" ColumnName="Verwendungszweck_Drucker" />
+                <ScalarProperty Name="Verwendungszweck_Druckertyp" ColumnName="Verwendungszweck_Druckertyp" />
+                <ScalarProperty Name="Verwendungszweck_Fahrzeugwaagen_MxM" ColumnName="Verwendungszweck_Fahrzeugwaagen_MxM" />
+                <ScalarProperty Name="Verwendungszweck_Fahrzeugwaagen_Dimension" ColumnName="Verwendungszweck_Fahrzeugwaagen_Dimension" />
+                <ScalarProperty Name="GenauigkeitNullstellung_InOrdnung" ColumnName="GenauigkeitNullstellung_InOrdnung" />
+                <ScalarProperty Name="Ueberlastanzeige_Max" ColumnName="Ueberlastanzeige_Max" />
+                <ScalarProperty Name="Ueberlastanzeige_Ueberlast" ColumnName="Ueberlastanzeige_Ueberlast" />
+                <ScalarProperty Name="Taraeinrichtung_TaraausgleichseinrichtungOK" ColumnName="Taraeinrichtung_TaraausgleichseinrichtungOK" />
+                <ScalarProperty Name="Taraeinrichtung_GenauigkeitTarierungOK" ColumnName="Taraeinrichtung_GenauigkeitTarierungOK" />
+                <ScalarProperty Name="Taraeinrichtung_ErweiterteRichtigkeitspruefungOK" ColumnName="Taraeinrichtung_ErweiterteRichtigkeitspruefungOK" />
+                <ScalarProperty Name="Fallbeschleunigung_g" ColumnName="Fallbeschleunigung_g" />
+                <ScalarProperty Name="Fallbeschleunigung_ms2" ColumnName="Fallbeschleunigung_ms2" />
+                <ScalarProperty Name="Sicherung_BenannteStelle" ColumnName="Sicherung_BenannteStelle" />
+                <ScalarProperty Name="Sicherung_BenannteStelleAnzahl" ColumnName="Sicherung_BenannteStelleAnzahl" />
+                <ScalarProperty Name="Sicherung_Eichsiegel13x13" ColumnName="Sicherung_Eichsiegel13x13" />
+                <ScalarProperty Name="Sicherung_Eichsiegel13x13Anzahl" ColumnName="Sicherung_Eichsiegel13x13Anzahl" />
+                <ScalarProperty Name="Sicherung_EichsiegelRund" ColumnName="Sicherung_EichsiegelRund" />
+                <ScalarProperty Name="Sicherung_EichsiegelRundAnzahl" ColumnName="Sicherung_EichsiegelRundAnzahl" />
+                <ScalarProperty Name="Sicherung_HinweismarkeGelocht" ColumnName="Sicherung_HinweismarkeGelocht" />
+                <ScalarProperty Name="Sicherung_HinweismarkeGelochtAnzahl" ColumnName="Sicherung_HinweismarkeGelochtAnzahl" />
+                <ScalarProperty Name="Sicherung_GruenesM" ColumnName="Sicherung_GruenesM" />
+                <ScalarProperty Name="Sicherung_GruenesMAnzahl" ColumnName="Sicherung_GruenesMAnzahl" />
+                <ScalarProperty Name="Sicherung_CE" ColumnName="Sicherung_CE" />
+                <ScalarProperty Name="Sicherung_CEAnzahl" ColumnName="Sicherung_CEAnzahl" />
+                <ScalarProperty Name="Sicherung_DatenAusgelesen" ColumnName="Sicherung_DatenAusgelesen" />
+                <ScalarProperty Name="Sicherung_AlibispeicherEingerichtet" ColumnName="Sicherung_AlibispeicherEingerichtet" />
+                <ScalarProperty Name="Sicherung_AlibispeicherAufbewahrungsdauerReduziert" ColumnName="Sicherung_AlibispeicherAufbewahrungsdauerReduziert" />
+                <ScalarProperty Name="Sicherung_AlibispeicherAufbewahrungsdauerReduziertBegruendung" ColumnName="Sicherung_AlibispeicherAufbewahrungsdauerReduziertBegruendung" />
+                <ScalarProperty Name="Sicherung_Bemerkungen" ColumnName="Sicherung_Bemerkungen" />
+                <ScalarProperty Name="Wiederholbarkeit_Staffelverfahren_MINNormalien" ColumnName="Wiederholbarkeit_Staffelverfahren_MINNormalien" />
+                <ScalarProperty Name="EignungAchlastwaegungen_WaagenbrueckeEbene" ColumnName="EignungAchlastwaegungen_WaagenbrueckeEbene" />
+                <ScalarProperty Name="EignungAchlastwaegungen_WaageNichtGeeignet" ColumnName="EignungAchlastwaegungen_WaageNichtGeeignet" />
+                <ScalarProperty Name="EignungAchlastwaegungen_Geprueft" ColumnName="EignungAchlastwaegungen_Geprueft" />
+                <ScalarProperty Name="Identifikationsdaten_Benutzer" ColumnName="Identifikationsdaten_Benutzer" />
+                <ScalarProperty Name="Beschaffenheitspruefung_Genehmigt" ColumnName="Beschaffenheitspruefung_Genehmigt" />
+                <ScalarProperty Name="Taraeinrichtung_Taraeingabe" ColumnName="Taraeinrichtung_Taraeingabe" />
+                <ScalarProperty Name="Beschaffenheitspruefung_Genauigkeitsklasse" ColumnName="Beschaffenheitspruefung_Genauigkeitsklasse" />
+                <ScalarProperty Name="Beschaffenheitspruefung_Pruefintervall" ColumnName="Beschaffenheitspruefung_Pruefintervall" />
+                <ScalarProperty Name="Beschaffenheitspruefung_LetztePruefung" ColumnName="Beschaffenheitspruefung_LetztePruefung" />
+                <ScalarProperty Name="Beschaffenheitspruefung_Pruefscheinnummer" ColumnName="Beschaffenheitspruefung_Pruefscheinnummer" />
+                <ScalarProperty Name="Beschaffenheitspruefung_EichfahrzeugFirma" ColumnName="Beschaffenheitspruefung_EichfahrzeugFirma" />
+                <ScalarProperty Name="Sicherung_CE2016" ColumnName="Sicherung_CE2016" />
+                <ScalarProperty Name="Sicherung_CE2016Anzahl" ColumnName="Sicherung_CE2016Anzahl" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Eichprozess">
+            <EntityTypeMapping TypeName="Model.Eichprozess">
+              <MappingFragment StoreEntitySet="Eichprozess">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Vorgangsnummer" ColumnName="Vorgangsnummer" />
+                <ScalarProperty Name="FK_Vorgangsstatus" ColumnName="FK_Vorgangsstatus" />
+                <ScalarProperty Name="FK_Auswertegeraet" ColumnName="FK_Auswertegeraet" />
+                <ScalarProperty Name="FK_Waegezelle" ColumnName="FK_Waegezelle" />
+                <ScalarProperty Name="FK_Eichprotokoll" ColumnName="FK_Eichprotokoll" />
+                <ScalarProperty Name="FK_WaagenTyp" ColumnName="FK_WaagenTyp" />
+                <ScalarProperty Name="FK_WaagenArt" ColumnName="FK_WaagenArt" />
+                <ScalarProperty Name="FK_Kompatibilitaetsnachweis" ColumnName="FK_Kompatibilitaetsnachweis" />
+                <ScalarProperty Name="Ausgeblendet" ColumnName="Ausgeblendet" />
+                <ScalarProperty Name="UploadFilePath" ColumnName="UploadFilePath" />
+                <ScalarProperty Name="FK_Bearbeitungsstatus" ColumnName="FK_Bearbeitungsstatus" />
+                <ScalarProperty Name="ErzeugerLizenz" ColumnName="ErzeugerLizenz" />
+                <ScalarProperty Name="AusStandardwaageErzeugt" ColumnName="AusStandardwaageErzeugt" />
+                <ScalarProperty Name="Bearbeitungsdatum" ColumnName="Bearbeitungsdatum" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Kompatiblitaetsnachweis">
+            <EntityTypeMapping TypeName="Model.Kompatiblitaetsnachweis">
+              <MappingFragment StoreEntitySet="Kompatiblitaetsnachweis">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Kompatiblitaet_Waage_Hoechstlast1" ColumnName="Kompatiblitaet_Waage_Hoechstlast1" />
+                <ScalarProperty Name="Kompatiblitaet_Waage_Hoechstlast2" ColumnName="Kompatiblitaet_Waage_Hoechstlast2" />
+                <ScalarProperty Name="Kompatiblitaet_Waage_Hoechstlast3" ColumnName="Kompatiblitaet_Waage_Hoechstlast3" />
+                <ScalarProperty Name="Kompatiblitaet_Waage_Eichwert1" ColumnName="Kompatiblitaet_Waage_Eichwert1" />
+                <ScalarProperty Name="Kompatiblitaet_Waage_Eichwert2" ColumnName="Kompatiblitaet_Waage_Eichwert2" />
+                <ScalarProperty Name="Kompatiblitaet_Waage_Eichwert3" ColumnName="Kompatiblitaet_Waage_Eichwert3" />
+                <ScalarProperty Name="Kompatiblitaet_Waage_FabrikNummer" ColumnName="Kompatiblitaet_Waage_FabrikNummer" />
+                <ScalarProperty Name="Kompatiblitaet_Waage_Bauartzulassung" ColumnName="Kompatiblitaet_Waage_Bauartzulassung" />
+                <ScalarProperty Name="Kompatiblitaet_Waage_Revisionsnummer" ColumnName="Kompatiblitaet_Waage_Revisionsnummer" />
+                <ScalarProperty Name="Kompatiblitaet_Waage_Zulassungsinhaber" ColumnName="Kompatiblitaet_Waage_Zulassungsinhaber" />
+                <ScalarProperty Name="Kompatiblitaet_Waage_Genauigkeitsklasse" ColumnName="Kompatiblitaet_Waage_Genauigkeitsklasse" />
+                <ScalarProperty Name="Kompatiblitaet_Waage_AdditiveTarahoechstlast" ColumnName="Kompatiblitaet_Waage_AdditiveTarahoechstlast" />
+                <ScalarProperty Name="Kompatiblitaet_Waage_GrenzenTemperaturbereichMIN" ColumnName="Kompatiblitaet_Waage_GrenzenTemperaturbereichMIN" />
+                <ScalarProperty Name="Kompatiblitaet_Waage_GrenzenTemperaturbereichMAX" ColumnName="Kompatiblitaet_Waage_GrenzenTemperaturbereichMAX" />
+                <ScalarProperty Name="Kompatiblitaet_Waage_Uebersetzungsverhaeltnis" ColumnName="Kompatiblitaet_Waage_Uebersetzungsverhaeltnis" />
+                <ScalarProperty Name="Kompatiblitaet_Waage_AnzahlWaegezellen" ColumnName="Kompatiblitaet_Waage_AnzahlWaegezellen" />
+                <ScalarProperty Name="Kompatiblitaet_Waage_Einschaltnullstellbereich" ColumnName="Kompatiblitaet_Waage_Einschaltnullstellbereich" />
+                <ScalarProperty Name="Kompatiblitaet_Waage_Ecklastzuschlag" ColumnName="Kompatiblitaet_Waage_Ecklastzuschlag" />
+                <ScalarProperty Name="Kompatiblitaet_Waage_Totlast" ColumnName="Kompatiblitaet_Waage_Totlast" />
+                <ScalarProperty Name="Kompatiblitaet_Waage_Kabellaenge" ColumnName="Kompatiblitaet_Waage_Kabellaenge" />
+                <ScalarProperty Name="Kompatiblitaet_Waage_Kabelquerschnitt" ColumnName="Kompatiblitaet_Waage_Kabelquerschnitt" />
+                <ScalarProperty Name="Kompatiblitaet_Verbindungselemente_BruchteilEichfehlergrenze" ColumnName="Kompatiblitaet_Verbindungselemente_BruchteilEichfehlergrenze" />
+                <ScalarProperty Name="Kompatiblitaet_Hersteller" ColumnName="Kompatiblitaet_Hersteller" />
+                <ScalarProperty Name="Kompatiblitaet_Strasse" ColumnName="Kompatiblitaet_Strasse" />
+                <ScalarProperty Name="Kompatiblitaet_Ort" ColumnName="Kompatiblitaet_Ort" />
+                <ScalarProperty Name="Kompatiblitaet_Postleitzahl" ColumnName="Kompatiblitaet_Postleitzahl" />
+                <ScalarProperty Name="Kompatiblitaet_AWG_Anschlussart" ColumnName="Kompatiblitaet_AWG_Anschlussart" />
+                <ScalarProperty Name="Kompatiblitaet_WZ_Hoechstlast" ColumnName="Kompatiblitaet_WZ_Hoechstlast" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Konfiguration">
+            <EntityTypeMapping TypeName="Model.Konfiguration">
+              <MappingFragment StoreEntitySet="Konfiguration">
+                <ScalarProperty Name="BenutzerLizenz" ColumnName="BenutzerLizenz" />
+                <ScalarProperty Name="LetztesUpdate" ColumnName="LetztesUpdate" />
+                <ScalarProperty Name="AktuelleSprache" ColumnName="AktuelleSprache" />
+                <ScalarProperty Name="Synchronisierungsmodus" ColumnName="Synchronisierungsmodus" />
+                <ScalarProperty Name="SyncAb" ColumnName="SyncAb" />
+                <ScalarProperty Name="SyncBis" ColumnName="SyncBis" />
+                <ScalarProperty Name="HoleAlleeigenenEichungenVomServer" ColumnName="HoleAlleeigenenEichungenVomServer" />
+                <ScalarProperty Name="GridSettings" ColumnName="GridSettings" />
+                <ScalarProperty Name="GridSettingsRHEWA" ColumnName="GridSettingsRHEWA" />
+                <ScalarProperty Name="DBVersion" ColumnName="DBVersion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Lizensierung">
+            <EntityTypeMapping TypeName="Model.Lizensierung">
+              <MappingFragment StoreEntitySet="Lizensierung">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Lizenzschluessel" ColumnName="Lizenzschluessel" />
+                <ScalarProperty Name="LetzteAktivierung" ColumnName="LetzteAktivierung" />
+                <ScalarProperty Name="RHEWALizenz" ColumnName="RHEWALizenz" />
+                <ScalarProperty Name="Aktiv" ColumnName="Aktiv" />
+                <ScalarProperty Name="FirmaOrt" ColumnName="FirmaOrt" />
+                <ScalarProperty Name="Firma" ColumnName="Firma" />
+                <ScalarProperty Name="Vorname" ColumnName="Vorname" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="FirmaPLZ" ColumnName="FirmaPLZ" />
+                <ScalarProperty Name="FirmaStrasse" ColumnName="FirmaStrasse" />
+                <ScalarProperty Name="HEKennung" ColumnName="HEKennung" />
+                <ScalarProperty Name="FK_BenutzerID" ColumnName="FK_BenutzerID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Lookup_Auswertegeraet">
+            <EntityTypeMapping TypeName="Model.Lookup_Auswertegeraet">
+              <MappingFragment StoreEntitySet="Lookup_Auswertegeraet">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Typ" ColumnName="Typ" />
+                <ScalarProperty Name="Hersteller" ColumnName="Hersteller" />
+                <ScalarProperty Name="Pruefbericht" ColumnName="Pruefbericht" />
+                <ScalarProperty Name="Bauartzulassung" ColumnName="Bauartzulassung" />
+                <ScalarProperty Name="Genauigkeitsklasse" ColumnName="Genauigkeitsklasse" />
+                <ScalarProperty Name="MAXAnzahlTeilungswerteEinbereichswaage" ColumnName="MAXAnzahlTeilungswerteEinbereichswaage" />
+                <ScalarProperty Name="MAXAnzahlTeilungswerteMehrbereichswaage" ColumnName="MAXAnzahlTeilungswerteMehrbereichswaage" />
+                <ScalarProperty Name="Speisespannung" ColumnName="Speisespannung" />
+                <ScalarProperty Name="Mindesteingangsspannung" ColumnName="Mindesteingangsspannung" />
+                <ScalarProperty Name="Mindestmesssignal" ColumnName="Mindestmesssignal" />
+                <ScalarProperty Name="GrenzwertLastwiderstandMIN" ColumnName="GrenzwertLastwiderstandMIN" />
+                <ScalarProperty Name="GrenzwertLastwiderstandMAX" ColumnName="GrenzwertLastwiderstandMAX" />
+                <ScalarProperty Name="GrenzwertTemperaturbereichMIN" ColumnName="GrenzwertTemperaturbereichMIN" />
+                <ScalarProperty Name="GrenzwertTemperaturbereichMAX" ColumnName="GrenzwertTemperaturbereichMAX" />
+                <ScalarProperty Name="BruchteilEichfehlergrenze" ColumnName="BruchteilEichfehlergrenze" />
+                <ScalarProperty Name="KabellaengeQuerschnitt" ColumnName="KabellaengeQuerschnitt" />
+                <ScalarProperty Name="Deaktiviert" ColumnName="Deaktiviert" />
+                <ScalarProperty Name="TaraeinrichtungTaraeingabe" ColumnName="TaraeinrichtungTaraeingabe" />
+                <ScalarProperty Name="TaraeinrichtungSelbsttaetig" ColumnName="TaraeinrichtungSelbsttaetig" />
+                <ScalarProperty Name="TaraeinrichtungHalbSelbsttaetig" ColumnName="TaraeinrichtungHalbSelbsttaetig" />
+                <ScalarProperty Name="NullstellungNullnachfuehrung" ColumnName="NullstellungNullnachfuehrung" />
+                <ScalarProperty Name="NullstellungSelbsttaetig" ColumnName="NullstellungSelbsttaetig" />
+                <ScalarProperty Name="NullstellungHalbSelbsttaetig" ColumnName="NullstellungHalbSelbsttaetig" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Lookup_Bearbeitungsstatus">
+            <EntityTypeMapping TypeName="Model.Lookup_Bearbeitungsstatus">
+              <MappingFragment StoreEntitySet="Lookup_Bearbeitungsstatus">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Status_EN" ColumnName="Status_EN" />
+                <ScalarProperty Name="Status_PL" ColumnName="Status_PL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Lookup_Konformitaetsbewertungsverfahren">
+            <EntityTypeMapping TypeName="Model.Lookup_Konformitaetsbewertungsverfahren">
+              <MappingFragment StoreEntitySet="Lookup_Konformitaetsbewertungsverfahren">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Verfahren" ColumnName="Verfahren" />
+                <ScalarProperty Name="Verfahren_EN" ColumnName="Verfahren_EN" />
+                <ScalarProperty Name="Verfahren_PL" ColumnName="Verfahren_PL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Lookup_Vorgangsstatus">
+            <EntityTypeMapping TypeName="Model.Lookup_Vorgangsstatus">
+              <MappingFragment StoreEntitySet="Lookup_Vorgangsstatus">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Status_EN" ColumnName="Status_EN" />
+                <ScalarProperty Name="Status_PL" ColumnName="Status_PL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Lookup_Waagenart">
+            <EntityTypeMapping TypeName="Model.Lookup_Waagenart">
+              <MappingFragment StoreEntitySet="Lookup_Waagenart">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Art" ColumnName="Art" />
+                <ScalarProperty Name="Art_EN" ColumnName="Art_EN" />
+                <ScalarProperty Name="Art_PL" ColumnName="Art_PL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Lookup_Waagentyp">
+            <EntityTypeMapping TypeName="Model.Lookup_Waagentyp">
+              <MappingFragment StoreEntitySet="Lookup_Waagentyp">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Typ" ColumnName="Typ" />
+                <ScalarProperty Name="Typ_EN" ColumnName="Typ_EN" />
+                <ScalarProperty Name="Typ_PL" ColumnName="Typ_PL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Lookup_Waegezelle">
+            <EntityTypeMapping TypeName="Model.Lookup_Waegezelle">
+              <MappingFragment StoreEntitySet="Lookup_Waegezelle">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Hersteller" ColumnName="Hersteller" />
+                <ScalarProperty Name="Typ" ColumnName="Typ" />
+                <ScalarProperty Name="Pruefbericht" ColumnName="Pruefbericht" />
+                <ScalarProperty Name="Bauartzulassung" ColumnName="Bauartzulassung" />
+                <ScalarProperty Name="Revisionsnummer" ColumnName="Revisionsnummer" />
+                <ScalarProperty Name="Genauigkeitsklasse" ColumnName="Genauigkeitsklasse" />
+                <ScalarProperty Name="Mindestvorlast" ColumnName="Mindestvorlast" />
+                <ScalarProperty Name="Waegezellenkennwert" ColumnName="Waegezellenkennwert" />
+                <ScalarProperty Name="MaxAnzahlTeilungswerte" ColumnName="MaxAnzahlTeilungswerte" />
+                <ScalarProperty Name="MinTeilungswert" ColumnName="MinTeilungswert" />
+                <ScalarProperty Name="Hoechsteteilungsfaktor" ColumnName="Hoechsteteilungsfaktor" />
+                <ScalarProperty Name="Kriechteilungsfaktor" ColumnName="Kriechteilungsfaktor" />
+                <ScalarProperty Name="RueckkehrVorlastsignal" ColumnName="RueckkehrVorlastsignal" />
+                <ScalarProperty Name="WiderstandWaegezelle" ColumnName="WiderstandWaegezelle" />
+                <ScalarProperty Name="GrenzwertTemperaturbereichMIN" ColumnName="GrenzwertTemperaturbereichMIN" />
+                <ScalarProperty Name="GrenzwertTemperaturbereichMAX" ColumnName="GrenzwertTemperaturbereichMAX" />
+                <ScalarProperty Name="BruchteilEichfehlergrenze" ColumnName="BruchteilEichfehlergrenze" />
+                <ScalarProperty Name="Neu" ColumnName="Neu" />
+                <ScalarProperty Name="Deaktiviert" ColumnName="Deaktiviert" />
+                <ScalarProperty Name="MindestvorlastProzent" ColumnName="MindestvorlastProzent" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Mogelstatistik">
+            <EntityTypeMapping TypeName="Model.Mogelstatistik">
+              <MappingFragment StoreEntitySet="Mogelstatistik">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FK_Eichprozess" ColumnName="FK_Eichprozess" />
+                <ScalarProperty Name="FK_Auswertegeraet" ColumnName="FK_Auswertegeraet" />
+                <ScalarProperty Name="FK_Waegezelle" ColumnName="FK_Waegezelle" />
+                <ScalarProperty Name="Kompatiblitaet_Waage_FabrikNummer" ColumnName="Kompatiblitaet_Waage_FabrikNummer" />
+                <ScalarProperty Name="Kompatiblitaet_Waage_Bauartzulassung" ColumnName="Kompatiblitaet_Waage_Bauartzulassung" />
+                <ScalarProperty Name="Kompatiblitaet_Waage_Revisionsnummer" ColumnName="Kompatiblitaet_Waage_Revisionsnummer" />
+                <ScalarProperty Name="Kompatiblitaet_Waage_Zulassungsinhaber" ColumnName="Kompatiblitaet_Waage_Zulassungsinhaber" />
+                <ScalarProperty Name="Kompatiblitaet_Waage_Genauigkeitsklasse" ColumnName="Kompatiblitaet_Waage_Genauigkeitsklasse" />
+                <ScalarProperty Name="Kompatiblitaet_Waage_AdditiveTarahoechstlast" ColumnName="Kompatiblitaet_Waage_AdditiveTarahoechstlast" />
+                <ScalarProperty Name="Kompatiblitaet_Waage_GrenzenTemperaturbereichMIN" ColumnName="Kompatiblitaet_Waage_GrenzenTemperaturbereichMIN" />
+                <ScalarProperty Name="Kompatiblitaet_Waage_GrenzenTemperaturbereichMAX" ColumnName="Kompatiblitaet_Waage_GrenzenTemperaturbereichMAX" />
+                <ScalarProperty Name="Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich1" ColumnName="Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich1" />
+                <ScalarProperty Name="Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich1" ColumnName="Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich1" />
+                <ScalarProperty Name="Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich2" ColumnName="Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich2" />
+                <ScalarProperty Name="Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich2" ColumnName="Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich2" />
+                <ScalarProperty Name="Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich3" ColumnName="Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich3" />
+                <ScalarProperty Name="Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich3" ColumnName="Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich3" />
+                <ScalarProperty Name="Kompatiblitaet_Waage_Uebersetzungsverhaeltnis" ColumnName="Kompatiblitaet_Waage_Uebersetzungsverhaeltnis" />
+                <ScalarProperty Name="Kompatiblitaet_Waage_AnzahlWaegezellen" ColumnName="Kompatiblitaet_Waage_AnzahlWaegezellen" />
+                <ScalarProperty Name="Kompatiblitaet_Waage_Einschaltnullstellbereich" ColumnName="Kompatiblitaet_Waage_Einschaltnullstellbereich" />
+                <ScalarProperty Name="Kompatiblitaet_Waage_Ecklastzuschlag" ColumnName="Kompatiblitaet_Waage_Ecklastzuschlag" />
+                <ScalarProperty Name="Kompatiblitaet_Waage_Totlast" ColumnName="Kompatiblitaet_Waage_Totlast" />
+                <ScalarProperty Name="Kompatiblitaet_Waage_Kabellaenge" ColumnName="Kompatiblitaet_Waage_Kabellaenge" />
+                <ScalarProperty Name="Kompatiblitaet_Waage_Kabelquerschnitt" ColumnName="Kompatiblitaet_Waage_Kabelquerschnitt" />
+                <ScalarProperty Name="Kompatiblitaet_AnschriftWaagenbaufirma" ColumnName="Kompatiblitaet_AnschriftWaagenbaufirma" />
+                <ScalarProperty Name="Kompatiblitaet_Verbindungselemente_BruchteilEichfehlergrenze" ColumnName="Kompatiblitaet_Verbindungselemente_BruchteilEichfehlergrenze" />
+                <ScalarProperty Name="Kompatiblitaet_AWG_Anschlussart" ColumnName="Kompatiblitaet_AWG_Anschlussart" />
+                <ScalarProperty Name="Kompatiblitaet_WZ_Hoechstlast" ColumnName="Kompatiblitaet_WZ_Hoechstlast" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PruefungAnsprechvermoegen">
+            <EntityTypeMapping TypeName="Model.PruefungAnsprechvermoegen">
+              <MappingFragment StoreEntitySet="PruefungAnsprechvermoegen">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FK_Eichprotokoll" ColumnName="FK_Eichprotokoll" />
+                <ScalarProperty Name="LastL" ColumnName="LastL" />
+                <ScalarProperty Name="Last" ColumnName="Last" />
+                <ScalarProperty Name="Anzeige" ColumnName="Anzeige" />
+                <ScalarProperty Name="Last1d" ColumnName="Last1d" />
+                <ScalarProperty Name="Ziffernsprung" ColumnName="Ziffernsprung" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PruefungAussermittigeBelastung">
+            <EntityTypeMapping TypeName="Model.PruefungAussermittigeBelastung">
+              <MappingFragment StoreEntitySet="PruefungAussermittigeBelastung">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FK_Eichprotokoll" ColumnName="FK_Eichprotokoll" />
+                <ScalarProperty Name="Bereich" ColumnName="Bereich" />
+                <ScalarProperty Name="Belastungsort" ColumnName="Belastungsort" />
+                <ScalarProperty Name="Last" ColumnName="Last" />
+                <ScalarProperty Name="Anzeige" ColumnName="Anzeige" />
+                <ScalarProperty Name="Fehler" ColumnName="Fehler" />
+                <ScalarProperty Name="EFG" ColumnName="EFG" />
+                <ScalarProperty Name="EFGExtra" ColumnName="EFGExtra" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PruefungLinearitaetFallend">
+            <EntityTypeMapping TypeName="Model.PruefungLinearitaetFallend">
+              <MappingFragment StoreEntitySet="PruefungLinearitaetFallend">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FK_Eichprotokoll" ColumnName="FK_Eichprotokoll" />
+                <ScalarProperty Name="Bereich" ColumnName="Bereich" />
+                <ScalarProperty Name="Messpunkt" ColumnName="Messpunkt" />
+                <ScalarProperty Name="Last" ColumnName="Last" />
+                <ScalarProperty Name="Anzeige" ColumnName="Anzeige" />
+                <ScalarProperty Name="Fehler" ColumnName="Fehler" />
+                <ScalarProperty Name="EFG" ColumnName="EFG" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PruefungLinearitaetSteigend">
+            <EntityTypeMapping TypeName="Model.PruefungLinearitaetSteigend">
+              <MappingFragment StoreEntitySet="PruefungLinearitaetSteigend">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FK_Eichprotokoll" ColumnName="FK_Eichprotokoll" />
+                <ScalarProperty Name="Bereich" ColumnName="Bereich" />
+                <ScalarProperty Name="Messpunkt" ColumnName="Messpunkt" />
+                <ScalarProperty Name="Last" ColumnName="Last" />
+                <ScalarProperty Name="Anzeige" ColumnName="Anzeige" />
+                <ScalarProperty Name="Fehler" ColumnName="Fehler" />
+                <ScalarProperty Name="EFG" ColumnName="EFG" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PruefungRollendeLasten">
+            <EntityTypeMapping TypeName="Model.PruefungRollendeLasten">
+              <MappingFragment StoreEntitySet="PruefungRollendeLasten">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FK_Eichprotokoll" ColumnName="FK_Eichprotokoll" />
+                <ScalarProperty Name="Belastungsstelle" ColumnName="Belastungsstelle" />
+                <ScalarProperty Name="AuffahrtSeite" ColumnName="AuffahrtSeite" />
+                <ScalarProperty Name="Last" ColumnName="Last" />
+                <ScalarProperty Name="Anzeige" ColumnName="Anzeige" />
+                <ScalarProperty Name="Fehler" ColumnName="Fehler" />
+                <ScalarProperty Name="EFG" ColumnName="EFG" />
+                <ScalarProperty Name="EFGExtra" ColumnName="EFGExtra" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PruefungStabilitaetGleichgewichtslage">
+            <EntityTypeMapping TypeName="Model.PruefungStabilitaetGleichgewichtslage">
+              <MappingFragment StoreEntitySet="PruefungStabilitaetGleichgewichtslage">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FK_Eichprotokoll" ColumnName="FK_Eichprotokoll" />
+                <ScalarProperty Name="Durchlauf" ColumnName="Durchlauf" />
+                <ScalarProperty Name="Last" ColumnName="Last" />
+                <ScalarProperty Name="Anzeige" ColumnName="Anzeige" />
+                <ScalarProperty Name="MIN" ColumnName="MIN" />
+                <ScalarProperty Name="MAX" ColumnName="MAX" />
+                <ScalarProperty Name="AbdruckOK" ColumnName="AbdruckOK" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PruefungStaffelverfahrenErsatzlast">
+            <EntityTypeMapping TypeName="Model.PruefungStaffelverfahrenErsatzlast">
+              <MappingFragment StoreEntitySet="PruefungStaffelverfahrenErsatzlast">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FK_Eichprotokoll" ColumnName="FK_Eichprotokoll" />
+                <ScalarProperty Name="Staffel" ColumnName="Staffel" />
+                <ScalarProperty Name="Bereich" ColumnName="Bereich" />
+                <ScalarProperty Name="Ersatzlast_Soll" ColumnName="Ersatzlast_Soll" />
+                <ScalarProperty Name="Ersatzlast_Ist" ColumnName="Ersatzlast_Ist" />
+                <ScalarProperty Name="ZusaetzlicheErsatzlast_Soll" ColumnName="ZusaetzlicheErsatzlast_Soll" />
+                <ScalarProperty Name="ErsatzUndNormallast_Soll" ColumnName="ErsatzUndNormallast_Soll" />
+                <ScalarProperty Name="ErsatzUndNormallast_Ist" ColumnName="ErsatzUndNormallast_Ist" />
+                <ScalarProperty Name="Ersatzlast2_Soll" ColumnName="Ersatzlast2_Soll" />
+                <ScalarProperty Name="Ersatzlast2_Ist" ColumnName="Ersatzlast2_Ist" />
+                <ScalarProperty Name="DifferenzAnzeigewerte_Fehler" ColumnName="DifferenzAnzeigewerte_Fehler" />
+                <ScalarProperty Name="DifferenzAnzeigewerte_EFG" ColumnName="DifferenzAnzeigewerte_EFG" />
+                <ScalarProperty Name="MessabweichungStaffel_Fehler" ColumnName="MessabweichungStaffel_Fehler" />
+                <ScalarProperty Name="MessabweichungStaffel_EFG" ColumnName="MessabweichungStaffel_EFG" />
+                <ScalarProperty Name="MessabweichungWaage_Fehler" ColumnName="MessabweichungWaage_Fehler" />
+                <ScalarProperty Name="MessabweichungWaage_EFG" ColumnName="MessabweichungWaage_EFG" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PruefungStaffelverfahrenNormallast">
+            <EntityTypeMapping TypeName="Model.PruefungStaffelverfahrenNormallast">
+              <MappingFragment StoreEntitySet="PruefungStaffelverfahrenNormallast">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FK_Eichprotokoll" ColumnName="FK_Eichprotokoll" />
+                <ScalarProperty Name="Staffel" ColumnName="Staffel" />
+                <ScalarProperty Name="Bereich" ColumnName="Bereich" />
+                <ScalarProperty Name="NormalLast_Last_1" ColumnName="NormalLast_Last_1" />
+                <ScalarProperty Name="NormalLast_Last_2" ColumnName="NormalLast_Last_2" />
+                <ScalarProperty Name="NormalLast_Last_3" ColumnName="NormalLast_Last_3" />
+                <ScalarProperty Name="NormalLast_Last_4" ColumnName="NormalLast_Last_4" />
+                <ScalarProperty Name="NormalLast_Anzeige_1" ColumnName="NormalLast_Anzeige_1" />
+                <ScalarProperty Name="NormalLast_Fehler_1" ColumnName="NormalLast_Fehler_1" />
+                <ScalarProperty Name="NormalLast_EFG_1" ColumnName="NormalLast_EFG_1" />
+                <ScalarProperty Name="NormalLast_Anzeige_2" ColumnName="NormalLast_Anzeige_2" />
+                <ScalarProperty Name="NormalLast_Fehler_2" ColumnName="NormalLast_Fehler_2" />
+                <ScalarProperty Name="NormalLast_EFG_2" ColumnName="NormalLast_EFG_2" />
+                <ScalarProperty Name="NormalLast_Anzeige_4" ColumnName="NormalLast_Anzeige_4" />
+                <ScalarProperty Name="NormalLast_Fehler_4" ColumnName="NormalLast_Fehler_4" />
+                <ScalarProperty Name="NormalLast_EFG_4" ColumnName="NormalLast_EFG_4" />
+                <ScalarProperty Name="NormalLast_Anzeige_3" ColumnName="NormalLast_Anzeige_3" />
+                <ScalarProperty Name="NormalLast_Fehler_3" ColumnName="NormalLast_Fehler_3" />
+                <ScalarProperty Name="NormalLast_EFG_3" ColumnName="NormalLast_EFG_3" />
+                <ScalarProperty Name="DifferenzAnzeigewerte_Fehler" ColumnName="DifferenzAnzeigewerte_Fehler" />
+                <ScalarProperty Name="DifferenzAnzeigewerte_EFG" ColumnName="DifferenzAnzeigewerte_EFG" />
+                <ScalarProperty Name="MessabweichungStaffel_Fehler" ColumnName="MessabweichungStaffel_Fehler" />
+                <ScalarProperty Name="MessabweichungStaffel_EFG" ColumnName="MessabweichungStaffel_EFG" />
+                <ScalarProperty Name="MessabweichungWaage_Fehler" ColumnName="MessabweichungWaage_Fehler" />
+                <ScalarProperty Name="MessabweichungWaage_EFG" ColumnName="MessabweichungWaage_EFG" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PruefungWiederholbarkeit">
+            <EntityTypeMapping TypeName="Model.PruefungWiederholbarkeit">
+              <MappingFragment StoreEntitySet="PruefungWiederholbarkeit">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FK_Eichprotokoll" ColumnName="FK_Eichprotokoll" />
+                <ScalarProperty Name="Wiederholung" ColumnName="Wiederholung" />
+                <ScalarProperty Name="Belastung" ColumnName="Belastung" />
+                <ScalarProperty Name="Last" ColumnName="Last" />
+                <ScalarProperty Name="Anzeige" ColumnName="Anzeige" />
+                <ScalarProperty Name="Fehler" ColumnName="Fehler" />
+                <ScalarProperty Name="EFG" ColumnName="EFG" />
+                <ScalarProperty Name="EFG_Extra" ColumnName="EFG_Extra" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

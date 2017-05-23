@@ -28,7 +28,7 @@ Public Class frmEingabeNeueLizenz
     End Sub
 
     Private Sub LadeObjekt()
-        Using context As New EichenEntities()
+        Using context As New HerstellerersteichungEntities()
             'abrufen der Entität aus der Datenbank
             If _ID <> "-1" Then
                 _objLizen = (From AWG In context.ServerLizensierung Where AWG.ID = _ID).FirstOrDefault
@@ -60,7 +60,7 @@ Public Class frmEingabeNeueLizenz
     Private Sub LadeDropDownDatenquelle()
         Try
 
-            Using context As New EichenEntities
+            Using context As New HerstellerersteichungEntities
                 Dim Benutzer As Entity.DbSet(Of Benutzer) = context.Benutzer
                 Dim Firmen As Entity.DbSet(Of Firmen) = context.Firmen
 
@@ -145,7 +145,7 @@ Public Class frmEingabeNeueLizenz
             Dim selecteditem = RadMultiColumnComboBoxBenutzer.SelectedItem
             Dim id As String = selecteditem.databounditem.id
             If Not id Is Nothing Then
-                Using context As New EichenEntities()
+                Using context As New HerstellerersteichungEntities()
                     Dim Benutzer = (From Benut In context.Benutzer Where Benut.ID = id).FirstOrDefault
                     RadTextBoxControl1.Text = Benutzer.HEKennung
                 End Using
@@ -180,7 +180,7 @@ Public Class frmEingabeNeueLizenz
         If ValidateControls() = True Then
 
             'neuen Context aufbauen
-            Using Context As New EichenEntities
+            Using Context As New HerstellerersteichungEntities
                 'prüfen ob CREATE oder UPDATE durchgeführt werden muss
                 If _objLizen.ID <> "0" Then 'an dieser stelle muss eine ID existieren
                     'prüfen ob das Objekt anhand der ID gefunden werden kann

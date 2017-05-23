@@ -11,7 +11,7 @@
     End Sub
 
     Private Sub LoadFromDatabase()
-        Using Context As New EichenEntities
+        Using Context As New HerstellerersteichungEntities
             Dim Data = From Lookup_Auswertegeraet In Context.ServerLookup_Auswertegeraet Select Lookup_Auswertegeraet
             RadGridViewAuswahlliste.DataSource = Data.ToList
             Try
