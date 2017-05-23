@@ -176,32 +176,9 @@ Public Class ucoEichfehlergrenzen
         If Me.Name.Equals(UserControl.Name) = False Then Exit Sub
 
         MyBase.LokalisierungNeeded(UserControl)
-
-        'lokalisierung: Leider kann ich den automatismus von .NET nicht nutzen. Dieser funktioniert nur sauber, wenn ein Dialog erzeugt wird. Zur Laufzeit aber gibt es diverse Probleme mit dem Automatischen Ändern der Sprache,
-        'da auch informationen wie Positionen und Größen "lokalisiert" gespeichert werden. Wenn nun zur Laufzeit, also das Fenster größer gemacht wurde, setzt er die Anchor etc. auf die Ursprungsgröße
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucoEichfehlergrenzen))
+        Lokalisierung(Me, resources)
 
-        Me.lblBis1.Text = resources.GetString("lblBis1.Text")
-        Me.lblBis2.Text = resources.GetString("lblBis1.Text")
-        Me.lblBis3.Text = resources.GetString("lblBis1.Text")
-        Me.lblBis4.Text = resources.GetString("lblBis1.Text")
-        Me.lblBis5.Text = resources.GetString("lblBis1.Text")
-        Me.lblBis6.Text = resources.GetString("lblBis1.Text")
-        Me.lblBis7.Text = resources.GetString("lblBis1.Text")
-        Me.lblBis8.Text = resources.GetString("lblBis1.Text")
-        Me.lblBis9.Text = resources.GetString("lblBis1.Text")
-
-        Me.lblEFG1.Text = resources.GetString("lblEFG1.Text")
-        Me.lblEFG2.Text = resources.GetString("lblEFG1.Text")
-        Me.lblEFG3.Text = resources.GetString("lblEFG1.Text")
-
-        Me.lblVFG1.Text = resources.GetString("lblVFG1.Text")
-        Me.lblVFG2.Text = resources.GetString("lblVFG1.Text")
-        Me.lblVFG3.Text = resources.GetString("lblVFG1.Text")
-
-        Me.RadGroupBox1.Text = resources.GetString("RadGroupBox1.text")
-        Me.RadGroupBox2.Text = resources.GetString("RadGroupBox2.text")
-        Me.RadGroupBox3.Text = resources.GetString("RadGroupBox3.text")
     End Sub
 
 #End Region

@@ -1690,46 +1690,8 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
 
         MyBase.LokalisierungNeeded(UserControl)
 
-        'lokalisierung: Leider kann ich den automatismus von .NET nicht nutzen. Dieser funktioniert nur sauber, wenn ein Dialog erzeugt wird. Zur Laufzeit aber gibt es diverse Probleme mit dem Automatischen Ändern der Sprache,
-        'da auch informationen wie Positionen und Größen "lokalisiert" gespeichert werden. Wenn nun zur Laufzeit, also das Fenster größer gemacht wurde, setzt er die Anchor etc. auf die Ursprungsgröße
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco_8PruefungNullstellungUndAussermittigeBelastung))
-
-        Me.RadGroupBoxBereich1.Text = resources.GetString("RadGroupBoxBereich1.Text")
-        Me.RadGroupBoxBereich2.Text = resources.GetString("RadGroupBoxBereich2.Text")
-        Me.RadGroupBoxBereich3.Text = resources.GetString("RadGroupBoxBereich3.Text")
-        Me.RadGroupBoxPruefungAussermittigeBelastung.Text = resources.GetString("RadGroupBoxPruefungAussermittigeBelastung.Text")
-        Me.RadGroupBoxPruefungGenaugikeit.Text = resources.GetString("RadGroupBoxPruefungGenaugikeit.Text")
-        Me.RadGroupBoxWiederholungen.Text = resources.GetString("RadGroupBoxWiederholungen.Text")
-        Me.lblAnzeigeGewicht.Text = resources.GetString("lblAnzeigeGewicht.Text")
-        Me.lblBereich1AnzeigeGewicht.Text = resources.GetString("lblBereich1AnzeigeGewicht.Text")
-        Me.lblBereich2AnzeigeGewicht.Text = resources.GetString("lblBereich2AnzeigeGewicht.Text")
-        Me.lblBereich3AnzeigeGewicht.Text = resources.GetString("lblBereich3AnzeigeGewicht.Text")
-        Me.lblBereich1EFGSpezial.Text = resources.GetString("lblBereich1EFGSpezial.Text")
-        Me.lblBereich1FehlerGrenzen.Text = resources.GetString("lblBereich1FehlerGrenzen.Text")
-        Me.lblBereich1Gewicht.Text = resources.GetString("lblBereich1Gewicht.Text")
-        Me.lblBereich1Mitte.Text = resources.GetString("lblBereich1Mitte.Text")
-        Me.lblBereich2EFGSpezial.Text = resources.GetString("lblBereich2EFGSpezial.Text")
-        Me.lblBereich2FehlerGrenzen.Text = resources.GetString("lblBereich2FehlerGrenzen.Text")
-        Me.lblBereich2Gewicht.Text = resources.GetString("lblBereich2Gewicht.Text")
-        Me.lblBereich3EFGSpezial.Text = resources.GetString("lblBereich3EFGSpezial.Text")
-        Me.lblBereich3FehlerGrenzen.Text = resources.GetString("lblBereich3FehlerGrenzen.Text")
-        Me.lblBereich3Gewicht.Text = resources.GetString("lblBereich3Gewicht.Text")
-        Me.lblMengeStandardgewichte1.Text = resources.GetString("lblMengeStandardgewichte1.Text")
-        Me.lblMengeStandardgewichte2.Text = resources.GetString("lblMengeStandardgewichte2.Text")
-        Me.lblMessOrtBereich1.Text = resources.GetString("lblMessOrtBereich1.Text")
-        Me.lblMessOrtBereich2.Text = resources.GetString("lblMessOrtBereich2.Text")
-        Me.lblMessOrtBereich3.Text = resources.GetString("lblMessOrtBereich3.Text")
-        Me.lblNullstellungOK.Text = resources.GetString("lblNullstellungOK.Text")
-        Me.lblWiederholungen.Text = resources.GetString("lblWiederholungen.Text")
-        Me.lblAnzeigeGewicht.Text = resources.GetString("lblAnzeigeGewicht.Text")
-        Me.lblEFGSpezial.Text = resources.GetString("lblEFGSpezial.Text")
-        Me.lblMengeStandardgewichte1.Text = resources.GetString("lblMengeStandardgewichte1.Text")
-        Me.lblMengeStandardgewichte2.Text = resources.GetString("lblMengeStandardgewichte2.Text")
-        Me.lblFehlerGrenzen.Text = resources.GetString("lblFehlerGrenzen.Text")
-        Me.lblGewicht.Text = resources.GetString("lblGewicht.Text")
-
-        Me.RadButtonShowEFG.Text = resources.GetString("RadButtonShowEFG.Text")
-        Me.RadButtonShowEFG2.Text = resources.GetString("RadButtonShowEFG2.Text")
+        Lokalisierung(Me, resources)
 
         If Not ParentFormular Is Nothing Then
             Try
@@ -1753,12 +1715,10 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
     Protected Overrides Sub UpdateNeeded(UserControl As UserControl)
         If Me.Equals(UserControl) Then
             MyBase.UpdateNeeded(UserControl)
-            'Hilfetext setzen
-            ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungAussermittigerBelastung)
-            'Überschrift setzen
-            ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungNullstellungundAussermittigeBelastung
-            '   FillControls()
-            LoadFromDatabase() 'war mal auskommentiert. ich weiß gerade nicht mehr wieso
+            Me.LokalisierungNeeded(UserControl)
+
+
+            LoadFromDatabase()
         End If
     End Sub
 

@@ -761,67 +761,8 @@ Public Class uco_3Kompatiblititaetsnachweis
 
         MyBase.LokalisierungNeeded(UserControl)
 
-        'lokalisierung: Leider kann ich den automatismus von .NET nicht nutzen. Dieser funktioniert nur sauber, wenn ein Dialog erzeugt wird. Zur Laufzeit aber gibt es diverse Probleme mit dem Automatischen Ändern der Sprache,
-        'da auch informationen wie Positionen und Größen "lokalisiert" gespeichert werden. Wenn nun zur Laufzeit, also das Fenster größer gemacht wurde, setzt er die Anchor etc. auf die Ursprungsgröße
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco_3Kompatiblititaetsnachweis))
-
-        Me.RadGroupBoxVerbindungselemente.Text = resources.GetString("RadGroupBoxVerbindungselemente.Text")
-        Me.RadGroupBoxWZ.Text = resources.GetString("RadGroupBoxWZ.Text")
-        Me.RadGroupBoxWaage.Text = resources.GetString("RadGroupBoxWaage.Text")
-        Me.RadGroupBoxAWG.Text = resources.GetString("RadGroupBoxAWG.Text")
-        Me.lblVerbindungEichfehlergrenze.Text = resources.GetString("lblVerbindungEichfehlergrenze.Text")
-        Me.lblWZEichfehlergrenze.Text = resources.GetString("lblWZEichfehlergrenze.Text")
-        Me.lblWZTemperatur.Text = resources.GetString("lblWZTemperatur.Text")
-        Me.lblWZKlasse.Text = resources.GetString("lblWZKlasse.Text")
-        Me.lblWZWiderstandWZ.Text = resources.GetString("lblWZWiderstandWZ.Text")
-        Me.lblWZRueckkehrVorlastsignal.Text = resources.GetString("lblWZRueckkehrVorlastsignal.Text")
-        Me.lblwzKriechteilungsfaktor.Text = resources.GetString("lblwzKriechteilungsfaktor.Text")
-        Me.lblWZHoechstteilungswert.Text = resources.GetString("lblWZHoechstteilungswert.Text")
-        Me.lblWZMinTeilungswert.Text = resources.GetString("lblWZMinTeilungswert.Text")
-        Me.lblWZTeilungswerte.Text = resources.GetString("lblWZTeilungswerte.Text")
-        Me.lblWZWaegezellenkennwert.Text = resources.GetString("lblWZWaegezellenkennwert.Text")
-        Me.lblWZMindestvorlast.Text = resources.GetString("lblWZMindestvorlast.Text")
-        Me.lblWZHoechstlast.Text = resources.GetString("lblWZHoechstlast.Text")
-        Me.lblAWGKlasse.Text = resources.GetString("lblAWGKlasse.Text")
-        Me.lblAWGKabellaenge.Text = resources.GetString("lblAWGKabellaenge.Text")
-        Me.lblAWGAnschlussart.Text = resources.GetString("lblAWGAnschlussart.Text")
-        Me.lblAWGEichfehlergrenze.Text = resources.GetString("lblAWGEichfehlergrenze.Text")
-        Me.lblAWGTemperatur.Text = resources.GetString("lblAWGTemperatur.Text")
-        Me.lblAWGWiderstand.Text = resources.GetString("lblAWGWiderstand.Text")
-        Me.lblAWGMinMessSignal.Text = resources.GetString("lblAWGMinMessSignal.Text")
-        Me.lblAWGMindesteingangsspannung.Text = resources.GetString("lblAWGMindesteingangsspannung.Text")
-        Me.lblAWGSpeisespannung.Text = resources.GetString("lblAWGSpeisespannung.Text")
-        Me.lblAWGmaxAnzahlTeilungswerte.Text = resources.GetString("lblAWGmaxAnzahlTeilungswerte.Text")
-        Me.lblEKG3.Text = resources.GetString("lblEKG3.Text")
-        Me.lblEKG2.Text = resources.GetString("lblEKG2.Text")
-        Me.lblEKG1.Text = resources.GetString("lblEKG1.Text")
-        Me.lblKGMax3.Text = resources.GetString("lblKGMax3.Text")
-        Me.lblKGMax2.Text = resources.GetString("lblKGMax2.Text")
-        Me.lblKGMax1.Text = resources.GetString("lblKGMax1.Text")
-        Me.lblKabelquerschnitt.Text = resources.GetString("lblKabelquerschnitt.Text")
-        Me.lblKabellaenge.Text = resources.GetString("lblKabellaenge.Text")
-        Me.lblGrenzenTemp.Text = resources.GetString("lblGrenzenTemp.Text")
-        Me.lbladditiveTarahoechstlast.Text = resources.GetString("lbladditiveTarahoechstlast.Text")
-        Me.lbltotlast.Text = resources.GetString("lbltotlast.Text")
-        Me.lblEcklastzuschalg.Text = resources.GetString("lblEcklastzuschalg.Text")
-        Me.lblEinschaltnullbereich.Text = resources.GetString("lblEinschaltnullbereich.Text")
-        Me.lblAnzWaeegezellen.Text = resources.GetString("lblAnzWaeegezellen.Text")
-        Me.lblUebersetzung.Text = resources.GetString("lblUebersetzung.Text")
-        Me.lblEichwert.Text = resources.GetString("lblEichwert.Text")
-        Me.lblWIMaxCap.Text = resources.GetString("lblWIMaxCap.Text")
-        Me.lblWIKlasse.Text = resources.GetString("lblWIKlasse.Text")
-        Me.lblAWGKlasse2.Text = resources.GetString("lblAWGKlasse2.Text")
-        Me.lblWZKlasse2.Text = resources.GetString("lblWZKlasse2.Text")
-        Me.lblWaageKlasse2.Text = resources.GetString("lblWaageKlasse2.Text")
-        Me.lblEichwert.Text = resources.GetString("lblEichwert.Text")
-        Me.lblKabel.Text = resources.GetString("lblKabel.Text")
-        'werden nicht übersetzt
-        'Me.lblE3.Text = resources.GetString("lblE3.Text")
-        'Me.lblMax3.Text = resources.GetString("lblMax3.Text")
-        'Me.lblE2.Text = resources.GetString("lblE2.Text")
-        'Me.lblMax2.Text = resources.GetString("lblMax2.Text")
-        'Me.lblE1.Text = resources.GetString("lblE1.Text")
-        'Me.lblMax1.Text = resources.GetString("lblMax1.Text")
+        Lokalisierung(Me, resources)
 
         If Not ParentFormular Is Nothing Then
             Try
@@ -843,12 +784,9 @@ Public Class uco_3Kompatiblititaetsnachweis
     Protected Overrides Sub UpdateNeeded(UserControl As UserControl)
         If Me.Equals(UserControl) Then
             MyBase.UpdateNeeded(UserControl)
-            'Hilfetext setzen
-            ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_KompatiblitaetsnachweisHilfe)
-            'Überschrift setzen
-            ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_Kompatiblitaetsnachweis
-            '   FillControls()
-            LoadFromDatabase() 'war mal auskommentiert. ich weiß gerade nicht mehr wieso. Ergänzung: war ausdokumentiert, weil damit die Werte der NSW und WZ übeschrieben werden wenn man auf zurück klickt. Wenn es allerdings ausdokumenterit ist, funktioniert das anlegen einer neuen WZ nicht
+            Me.LokalisierungNeeded(UserControl)
+
+            LoadFromDatabase()
         End If
     End Sub
 

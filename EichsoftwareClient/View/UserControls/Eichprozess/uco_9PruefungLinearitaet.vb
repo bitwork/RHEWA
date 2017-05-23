@@ -1201,46 +1201,9 @@ Public Class uco_9PruefungLinearitaet
 
         MyBase.LokalisierungNeeded(UserControl)
 
-        'lokalisierung: Leider kann ich den automatismus von .NET nicht nutzen. Dieser funktioniert nur sauber, wenn ein Dialog erzeugt wird. Zur Laufzeit aber gibt es diverse Probleme mit dem Automatischen Ändern der Sprache,
-        'da auch informationen wie Positionen und Größen "lokalisiert" gespeichert werden. Wenn nun zur Laufzeit, also das Fenster größer gemacht wurde, setzt er die Anchor etc. auf die Ursprungsgröße
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco_9PruefungLinearitaet))
+        Lokalisierung(Me, resources)
 
-        RadGroupBoxBereich1.Text = resources.GetString("RadGroupBoxBereich1.Text")
-        RadGroupBoxBereich2.Text = resources.GetString("RadGroupBoxBereich2.Text")
-        RadGroupBoxBereich3.Text = resources.GetString("RadGroupBoxBereich3.Text")
-        RadGroupBoxBereich1Fallend.Text = resources.GetString("RadGroupBoxBereich1Fallend.Text")
-        RadGroupBoxBereich2Fallend.Text = resources.GetString("RadGroupBoxBereich2Fallend.Text")
-        RadGroupBoxBereich3Fallend.Text = resources.GetString("RadGroupBoxBereich3Fallend.Text")
-
-        lblBereich1AnzeigeGewicht.Text = resources.GetString("lblBereich1AnzeigeGewicht.Text")
-        lblBereich2AnzeigeGewicht.Text = resources.GetString("lblBereich2AnzeigeGewicht.Text")
-        lblBereich3AnzeigeGewicht.Text = resources.GetString("lblBereich3AnzeigeGewicht.Text")
-        lblBereich1FallendAnzeigeGewicht.Text = resources.GetString("lblBereich1FallendAnzeigeGewicht.Text")
-        lblBereich2FallendAnzeigeGewicht.Text = resources.GetString("lblBereich2FallendAnzeigeGewicht.Text")
-        lblBereich3FallendAnzeigeGewicht.Text = resources.GetString("lblBereich3FallendAnzeigeGewicht.Text")
-
-        lblBereich1Gewicht.Text = resources.GetString("lblBereich1Gewicht.Text")
-        lblBereich2Gewicht.Text = resources.GetString("lblBereich2Gewicht.Text")
-        lblBereich3Gewicht.Text = resources.GetString("lblBereich3Gewicht.Text")
-        lblBereich1FallendGewicht.Text = resources.GetString("lblBereich1FallendGewicht.Text")
-        lblBereich2FallendGewicht.Text = resources.GetString("lblBereich2FallendGewicht.Text")
-        lblBereich3FallendGewicht.Text = resources.GetString("lblBereich3FallendGewicht.Text")
-
-        lblBereich1FehlerGrenzen.Text = resources.GetString("lblBereich1FehlerGrenzen.Text")
-        lblBereich2FehlerGrenzen.Text = resources.GetString("lblBereich2FehlerGrenzen.Text")
-        lblBereich3FehlerGrenzen.Text = resources.GetString("lblBereich3FehlerGrenzen.Text")
-        lblBereich1FallendFehlerGrenzen.Text = resources.GetString("lblBereich1FallendFehlerGrenzen.Text")
-        lblBereich2FallendFehlerGrenzen.Text = resources.GetString("lblBereich2FallendFehlerGrenzen.Text")
-        lblBereich3FallendFehlerGrenzen.Text = resources.GetString("lblBereich3FallendFehlerGrenzen.Text")
-
-        lblBereich1EFGSpezial.Text = resources.GetString("lblBereich1EFGSpezial.Text")
-        lblBereich2EFGSpezial.Text = resources.GetString("lblBereich2EFGSpezial.Text")
-        lblBereich3EFGSpezial.Text = resources.GetString("lblBereich3EFGSpezial.Text")
-        lblBereich1FallendEFGSpezial.Text = resources.GetString("lblBereich1FallendEFGSpezial.Text")
-        lblBereich2FallendEFGSpezial.Text = resources.GetString("lblBereich2FallendEFGSpezial.Text")
-        lblBereich3FallendEFGSpezial.Text = resources.GetString("lblBereich3FallendEFGSpezial.Text")
-
-        RadButtonShowEFGSteigend.Text = resources.GetString("RadButtonShowEFGSteigend.Text")
 
         If Not ParentFormular Is Nothing Then
             Try
@@ -1264,11 +1227,9 @@ Public Class uco_9PruefungLinearitaet
     Protected Overrides Sub UpdateNeeded(UserControl As UserControl)
         If Me.Equals(UserControl) Then
             MyBase.UpdateNeeded(UserControl)
-            'Hilfetext setzen
-            ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungDerRichtigkeitMitNormallast)
-            'Überschrift setzen
-            ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungDerRichtigkeitMitNormallast
-            '   FillControls()
+            Me.LokalisierungNeeded(UserControl)
+
+
             LoadFromDatabase()
         End If
     End Sub

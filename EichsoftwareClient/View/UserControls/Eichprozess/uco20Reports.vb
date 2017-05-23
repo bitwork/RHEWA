@@ -132,12 +132,10 @@ Public Class uco20Reports
     Protected Overrides Sub UpdateNeeded(UserControl As UserControl)
         If Me.Equals(UserControl) Then
             MyBase.UpdateNeeded(UserControl)
-            'Hilfetext setzen
-            ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_Exports)
-            'Überschrift setzen
-            ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_Exports
-            '   FillControls()
-            LoadFromDatabase() 'war mal auskommentiert. ich weiß gerade nicht mehr wieso
+            Me.LokalisierungNeeded(UserControl)
+
+
+            LoadFromDatabase()
         End If
     End Sub
 

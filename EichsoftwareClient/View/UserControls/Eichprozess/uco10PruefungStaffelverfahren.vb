@@ -1193,21 +1193,9 @@ Public Class uco10PruefungStaffelverfahren
 
         MyBase.LokalisierungNeeded(UserControl)
 
-        'lokalisierung: Leider kann ich den automatismus von .NET nicht nutzen. Dieser funktioniert nur sauber, wenn ein Dialog erzeugt wird. Zur Laufzeit aber gibt es diverse Probleme mit dem Automatischen Ändern der Sprache,
-        'da auch informationen wie Positionen und Größen "lokalisiert" gespeichert werden. Wenn nun zur Laufzeit, also das Fenster größer gemacht wurde, setzt er die Anchor etc. auf die Ursprungsgröße
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco10PruefungStaffelverfahren))
+        Lokalisierung(Me, resources)
 
-        For Each Control As Control In RadScrollablePanel1.PanelContainer.Controls
-            If TypeOf Control Is Telerik.WinControls.UI.RadGroupBox And Control.Visible Then
-                CType(Control, Telerik.WinControls.UI.RadGroupBox).Text = resources.GetString(String.Format("{0}.Text", CType(Control, Telerik.WinControls.UI.RadGroupBox).Name))
-                For Each control2 In CType(Control, Telerik.WinControls.UI.RadGroupBox).Controls
-
-                    If TypeOf control2 Is Telerik.WinControls.UI.RadLabel Then
-                        CType(control2, Telerik.WinControls.UI.RadLabel).Text = resources.GetString(String.Format("{0}.Text", CType(control2, Telerik.WinControls.UI.RadLabel).Name))
-                    End If
-                Next
-            End If
-        Next
 
         If Not ParentFormular Is Nothing Then
             Try
@@ -1554,12 +1542,10 @@ Public Class uco10PruefungStaffelverfahren
     Protected Overrides Sub UpdateNeeded(UserControl As UserControl)
         If Me.Equals(UserControl) Then
             MyBase.UpdateNeeded(UserControl)
-            'Hilfetext setzen
-            ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungStaffelverfahren)
-            'Überschrift setzen
-            ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungStaffelverfahren
-            '   FillControls()
-            LoadFromDatabase() 'war mal auskommentiert. ich weiß gerade nicht mehr wieso
+            Me.LokalisierungNeeded(UserControl)
+
+
+            LoadFromDatabase()
         End If
     End Sub
 

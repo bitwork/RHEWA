@@ -343,12 +343,10 @@ Public Class Uco21Versenden
     Protected Overrides Sub UpdateNeeded(UserControl As UserControl)
         If Me.Equals(UserControl) Then
             MyBase.UpdateNeeded(UserControl)
-            'Hilfetext setzen
-            ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_Versenden)
-            'Überschrift setzen
-            ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_Versenden
-            '   FillControls()
-            LoadFromDatabase() 'war mal auskommentiert. ich weiß gerade nicht mehr wieso
+            Me.LokalisierungNeeded(UserControl)
+
+
+            LoadFromDatabase()
         End If
     End Sub
 
@@ -459,27 +457,19 @@ Public Class Uco21Versenden
 
     Protected Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
         If Me.Name.Equals(UserControl.Name) = False Then Exit Sub
-
         MyBase.LokalisierungNeeded(UserControl)
 
-        'lokalisierung: Leider kann ich den automatismus von .NET nicht nutzen. Dieser funktioniert nur sauber, wenn ein Dialog erzeugt wird. Zur Laufzeit aber gibt es diverse Probleme mit dem Automatischen Ändern der Sprache,
-        'da auch informationen wie Positionen und Größen "lokalisiert" gespeichert werden. Wenn nun zur Laufzeit, also das Fenster größer gemacht wurde, setzt er die Anchor etc. auf die Ursprungsgröße
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Uco21Versenden))
-
-        Me.RadButtonUploadPath.Text = resources.GetString("RadButtonUploadPath.Text")
-        Me.RadButtonAnRhewaSenden.Text = resources.GetString("RadButtonAnRhewaSenden.Text")
+        Lokalisierung(Me, resources)
 
         If Not ParentFormular Is Nothing Then
             Try
                 'Hilfetext setzen
-
                 ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_Versenden)
                 'Überschrift setzen
-
                 ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_Versenden
             Catch ex As Exception
                 Debug.WriteLine(ex.ToString)
-
             End Try
         End If
 

@@ -441,12 +441,10 @@ Public Class uco19EichtechnischeSicherung
     Protected Overrides Sub UpdateNeeded(UserControl As UserControl)
         If Me.Equals(UserControl) Then
             MyBase.UpdateNeeded(UserControl)
-            'Hilfetext setzen
-            ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungEichtechnischeSicherung)
-            'Überschrift setzen
-            ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungEichtechnischeSicherung
-            '   FillControls()
-            LoadFromDatabase() 'war mal auskommentiert. ich weiß gerade nicht mehr wieso
+            Me.LokalisierungNeeded(UserControl)
+
+
+            LoadFromDatabase()
         End If
     End Sub
 
@@ -457,20 +455,9 @@ Public Class uco19EichtechnischeSicherung
 
         MyBase.LokalisierungNeeded(UserControl)
 
-        'lokalisierung: Leider kann ich den automatismus von .NET nicht nutzen. Dieser funktioniert nur sauber, wenn ein Dialog erzeugt wird. Zur Laufzeit aber gibt es diverse Probleme mit dem Automatischen Ändern der Sprache,
-        'da auch informationen wie Positionen und Größen "lokalisiert" gespeichert werden. Wenn nun zur Laufzeit, also das Fenster größer gemacht wurde, setzt er die Anchor etc. auf die Ursprungsgröße
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco19EichtechnischeSicherung))
+        Lokalisierung(Me, resources)
 
-        Me.lblAlibispeicher.Text = resources.GetString("lblAlibispeicher.Text")
-        Me.lblAnzahl.Text = resources.GetString("lblAnzahl.Text")
-        Me.lblAufbewahrungsdauer.Text = resources.GetString("lblAufbewahrungsdauer.Text")
-        Me.lblBemerkungen.Text = resources.GetString("lblBemerkungen.Text")
-
-        Me.lblDatenKonfiguration.Text = resources.GetString("lblDatenKonfiguration.Text")
-        Me.lblEichsiegel13x13.Text = resources.GetString("lblEichsiegel13x13.Text")
-        Me.lblEichsiegelRund.Text = resources.GetString("lblEichsiegelRund.Text")
-        Me.lblHinweismarke.Text = resources.GetString("lblHinweismarke.Text")
-        Me.lblSicherungshinweise.Text = resources.GetString("lblSicherungshinweise.Text")
 
         If Not ParentFormular Is Nothing Then
             Try

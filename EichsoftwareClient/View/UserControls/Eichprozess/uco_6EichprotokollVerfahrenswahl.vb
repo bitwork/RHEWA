@@ -52,7 +52,7 @@ Public Class uco_6EichprotokollVerfahrenswahl
             If result = DialogResult.Yes Or result = DialogResult.Ignore Then
                 Return True
             ElseIf result = DialogResult.Retry Then
-                Me.RadRadioButtonNormalien.IsChecked = true
+                Me.RadRadioButtonNormalien.IsChecked = True
                 Return True
             Else
                 Return False
@@ -202,12 +202,9 @@ Public Class uco_6EichprotokollVerfahrenswahl
     Protected Overrides Sub UpdateNeeded(UserControl As UserControl)
         If Me.Equals(UserControl) Then
             MyBase.UpdateNeeded(UserControl)
-            'Hilfetext setzen
-            ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_Eichprotokollverfahrensauswahl)
-            'Überschrift setzen
-            ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_Eichprotokollverfahrensauswahl
-            '   FillControls()
-            LoadFromDatabase() 'war mal auskommentiert. ich weiß gerade nicht mehr wieso. Ergänzung: war ausdokumentiert, weil damit die Werte der NSW und WZ übeschrieben werden wenn man auf zurück klickt. Wenn es allerdings ausdokumenterit ist, funktioniert das anlegen einer neuen WZ nicht
+            Me.LokalisierungNeeded(UserControl)
+
+            LoadFromDatabase()
         End If
     End Sub
 
@@ -318,13 +315,8 @@ Public Class uco_6EichprotokollVerfahrenswahl
 
         MyBase.LokalisierungNeeded(UserControl)
 
-        'lokalisierung: Leider kann ich den automatismus von .NET nicht nutzen. Dieser funktioniert nur sauber, wenn ein Dialog erzeugt wird. Zur Laufzeit aber gibt es diverse Probleme mit dem Automatischen Ändern der Sprache,
-        'da auch informationen wie Positionen und Größen "lokalisiert" gespeichert werden. Wenn nun zur Laufzeit, also das Fenster größer gemacht wurde, setzt er die Anchor etc. auf die Ursprungsgröße
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco_6EichprotokollVerfahrenswahl))
-
-        Me.RadRadioButtonFahrzeugwaagen.Text = resources.GetString("RadRadioButtonFahrzeugwaagen.Text")
-        Me.RadRadioButtonStaffelverfahren.Text = resources.GetString("RadRadioButtonStaffelverfahren.Text")
-        Me.RadRadioButtonNormalien.Text = resources.GetString("RadRadioButtonNormalien.Text")
+        Lokalisierung(Me, resources)
 
         If Not ParentFormular Is Nothing Then
             Try

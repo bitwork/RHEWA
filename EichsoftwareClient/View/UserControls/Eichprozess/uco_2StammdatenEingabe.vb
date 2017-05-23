@@ -187,38 +187,11 @@ Public Class uco_2StammdatenEingabe
     End Sub
 
     Protected Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
-        '  UpdateObject()
         If Me.Name.Equals(UserControl.Name) = False Then Exit Sub
-
         MyBase.LokalisierungNeeded(UserControl)
 
-        'lokalisierung: Leider kann ich den automatismus von .NET nicht nutzen. Dieser funktioniert nur sauber, wenn ein Dialog erzeugt wird. Zur Laufzeit aber gibt es diverse Probleme mit dem Automatischen Ändern der Sprache,
-        'da auch informationen wie Positionen und Größen "lokalisiert" gespeichert werden. Wenn nun zur Laufzeit, also das Fenster größer gemacht wurde, setzt er die Anchor etc. auf die Ursprungsgröße
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco_2StammdatenEingabe))
-        Me.RadGroupBoxStammdaten.Text = resources.GetString("RadGroupBoxStammdaten.Text")
-        Me.lblOrt.Text = resources.GetString("lblOrt.Text")
-        Me.lblPLZ.Text = resources.GetString("lblPLZ.Text")
-        Me.lblStrasse.Text = resources.GetString("lblStrasse.Text")
-        Me.lblWaagenbaufirma.Text = resources.GetString("lblWaagenbaufirma.Text")
-        Me.RadGroupBoxWZ.Text = resources.GetString("RadGroupBoxWZ.Text")
-
-        Me.lblAWZTyp.Text = resources.GetString("lblAWZTyp.Text")
-        Try
-            Me.lblAWZZulassung2.Text = resources.GetString("lblAWZZulassung2.Text")
-        Catch ex As Exception
-        End Try
-        Me.lblAWZZulassung.Text = resources.GetString("lblAWZZulassung.Text")
-        Me.lblAWZHersteller.Text = resources.GetString("lblAWZHersteller.Text")
-        Me.RadGroupBoxWaage.Text = resources.GetString("RadGroupBoxWaage.Text")
-        Me.RadLabel16.Text = resources.GetString("RadLabel16.Text")
-        Me.lblAWaagenTyp.Text = resources.GetString("lblAWaagenTyp.Text")
-        Me.lblAWaageSeriennummer.Text = resources.GetString("lblAWaageSeriennummer.Text")
-        Me.RadGroupBoxAWG.Text = resources.GetString("RadGroupBoxAWG.Text")
-        Me.lblAWGTyp.Text = resources.GetString("lblAWGTyp.Text")
-        Me.lblAWGBauart2.Text = resources.GetString("lblAWGBauart2.Text")
-        Me.lblAWGBauart.Text = resources.GetString("lblAWGBauart.Text")
-        Me.lblAWGHersteller.Text = resources.GetString("lblAWGHersteller.Text")
-        Me.lblWaagenart.Text = resources.GetString("lblWaagenart.Text")
+        Lokalisierung(Me, resources)
 
         'je nach sprache andere werte aus DB abrufen für Waagentyp
         Select Case AktuellerBenutzer.Instance.AktuelleSprache.ToLower
@@ -516,12 +489,9 @@ Public Class uco_2StammdatenEingabe
     Protected Overrides Sub UpdateNeeded(UserControl As UserControl)
         If Me.Equals(UserControl) Then
             MyBase.UpdateNeeded(UserControl)
-            'Hilfetext setzen
-            ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_Stammdaten)
-            'Überschrift setzen
-            ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_Stammdaten
-            '   FillControls()
-            LoadFromDatabase() 'war mal auskommentiert. ich weiß gerade nicht mehr wieso. Ergänzung: war ausdokumentiert, weil damit die Werte der NSW und WZ übeschrieben werden wenn man auf zurück klickt. Wenn es allerdings ausdokumenterit ist, funktioniert das anlegen einer neuen WZ nicht
+            Me.LokalisierungNeeded(UserControl)
+
+            LoadFromDatabase()
         End If
     End Sub
 

@@ -803,11 +803,9 @@ Public Class uco13PruefungRollendeLasten
     Protected Overrides Sub UpdateNeeded(UserControl As UserControl)
         If Me.Equals(UserControl) Then
             MyBase.UpdateNeeded(UserControl)
-            'Hilfetext setzen
-            ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungRollendeLasten)
-            'Überschrift setzen
-            ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungRollendelasten
-            '   FillControls()
+            Me.LokalisierungNeeded(UserControl)
+
+
             LoadFromDatabase()
         End If
     End Sub
@@ -819,28 +817,8 @@ Public Class uco13PruefungRollendeLasten
 
         MyBase.LokalisierungNeeded(UserControl)
 
-        'lokalisierung: Leider kann ich den automatismus von .NET nicht nutzen. Dieser funktioniert nur sauber, wenn ein Dialog erzeugt wird. Zur Laufzeit aber gibt es diverse Probleme mit dem Automatischen Ändern der Sprache,
-        'da auch informationen wie Positionen und Größen "lokalisiert" gespeichert werden. Wenn nun zur Laufzeit, also das Fenster größer gemacht wurde, setzt er die Anchor etc. auf die Ursprungsgröße
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco13PruefungRollendeLasten))
-
-        Me.lblAnzeigeLinks.Text = resources.GetString("RadLabelDisplay.Text")
-        Me.lblAnzeigeRechts.Text = resources.GetString("lblAnzeigeRechts.Text")
-        Me.lblAuffahrtLinks1.Text = resources.GetString("lblAuffahrtLinks1.Text")
-        Me.lblAuffahrtLinks2.Text = resources.GetString("lblAuffahrtLinks2.Text")
-        Me.lblAuffahrtLinks3.Text = resources.GetString("lblAuffahrtLinks3.Text")
-        Me.lblAuffahrtRechts1.Text = resources.GetString("lblAuffahrtRechts1.Text")
-        Me.lblAuffahrtRechts2.Text = resources.GetString("lblAuffahrtRechts2.Text")
-        Me.lblAuffahrtRechts3.Text = resources.GetString("lblAuffahrtRechts3.Text")
-        Me.lblBelastungsstelleLinks.Text = resources.GetString("lblBelastungsstelleLinks.Text")
-        Me.lblBelastungsstelleRechts.Text = resources.GetString("lblBelastungsstelleRechts.Text")
-        Me.lblEFGLinks.Text = resources.GetString("lblEFGLinks.Text")
-        Me.lblEFGRechts.Text = resources.GetString("lblEFGRechts.Text")
-        Me.lblEFGWertLinks.Text = resources.GetString("lblEFGWertLinks.Text")
-        Me.lblEFGWertRechts.Text = resources.GetString("lblEFGWertRechts.Text")
-        Me.lblFehlerLinks.Text = resources.GetString("lblFehlerLinks.Text")
-        Me.lblFehlerRechts.Text = resources.GetString("lblFehlerRechts.Text")
-        Me.lblLastLinks.Text = resources.GetString("lblLastLinks.Text")
-        Me.lblLastRechts.Text = resources.GetString("lblLastRechts.Text")
+        Lokalisierung(Me, resources)
 
         If Not ParentFormular Is Nothing Then
             Try

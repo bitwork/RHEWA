@@ -115,12 +115,9 @@ Public Class uco_5Beschaffenheitspruefung
     Protected Overrides Sub UpdateNeeded(UserControl As UserControl)
         If Me.Equals(UserControl) Then
             MyBase.UpdateNeeded(UserControl)
-            'Hilfetext setzen
-            ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_Beschaffenheitspruefung)
-            'Überschrift setzen
-            ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_Beschaffenheitspruefung
-            '   FillControls()
-            LoadFromDatabase() 'war mal auskommentiert. ich weiß gerade nicht mehr wieso. Ergänzung: war ausdokumentiert, weil damit die Werte der NSW und WZ übeschrieben werden wenn man auf zurück klickt. Wenn es allerdings ausdokumenterit ist, funktioniert das anlegen einer neuen WZ nicht
+            Me.LokalisierungNeeded(UserControl)
+
+            LoadFromDatabase()
         End If
     End Sub
 
@@ -154,37 +151,8 @@ Public Class uco_5Beschaffenheitspruefung
 
         MyBase.LokalisierungNeeded(UserControl)
 
-        'lokalisierung: Leider kann ich den automatismus von .NET nicht nutzen. Dieser funktioniert nur sauber, wenn ein Dialog erzeugt wird. Zur Laufzeit aber gibt es diverse Probleme mit dem Automatischen Ändern der Sprache,
-        'da auch informationen wie Positionen und Größen "lokalisiert" gespeichert werden. Wenn nun zur Laufzeit, also das Fenster größer gemacht wurde, setzt er die Anchor etc. auf die Ursprungsgröße
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco_5Beschaffenheitspruefung))
-
-        Me.RadGroupBoxWaegebruecke.Text = resources.GetString("RadGroupBoxWaegebruecke.Text")
-        Me.RadGroupBoxWaegezellen.Text = resources.GetString("RadGroupBoxWaegezellen.Text")
-        Me.RadGroupBoxAufstellbedingungen.Text = resources.GetString("RadGroupBoxAufstellbedingungen.Text")
-        Me.RadGroupBoxVerbindungselemente.Text = resources.GetString("RadGroupBoxVerbindungselemente.Text")
-        Me.RadGroupBoxAuswerteGeraete.Text = resources.GetString("RadGroupBoxAuswerteGeraete.Text")
-        Me.RadLabel1.Text = resources.GetString("RadLabel1.Text")
-        Me.RadLabel2.Text = resources.GetString("RadLabel2.Text")
-        Me.RadLabel3.Text = resources.GetString("RadLabel3.Text")
-        Me.RadLabel4.Text = resources.GetString("RadLabel4.Text")
-        Me.RadLabel5.Text = resources.GetString("RadLabel5.Text")
-        Me.RadLabel6.Text = resources.GetString("RadLabel6.Text")
-        Me.RadLabel7.Text = resources.GetString("RadLabel7.Text")
-        Me.RadLabel8.Text = resources.GetString("RadLabel8.Text")
-        Me.RadLabel9.Text = resources.GetString("RadLabel9.Text")
-        Me.RadLabel10.Text = resources.GetString("RadLabel10.Text")
-        Me.RadLabel11.Text = resources.GetString("RadLabel11.Text")
-        Me.RadLabel12.Text = resources.GetString("RadLabel12.Text")
-        Me.RadLabel13.Text = resources.GetString("RadLabel13.Text")
-        Me.RadLabel14.Text = resources.GetString("RadLabel14.Text")
-        Me.RadLabel15.Text = resources.GetString("RadLabel15.Text")
-        Me.RadLabel16.Text = resources.GetString("RadLabel16.Text")
-        Me.RadLabel17.Text = resources.GetString("RadLabel17.Text")
-        Me.RadLabel19.Text = resources.GetString("RadLabel19.Text")
-        Me.RadLabel20.Text = resources.GetString("RadLabel20.Text")
-
-
-        RadGroupBoxAufstellbedingungen.Text = resources.GetString("RadGroupBoxAufstellbedingungen.Text")
+        Lokalisierung(Me, resources)
 
         If Not ParentFormular Is Nothing Then
             Try

@@ -245,22 +245,34 @@ Public Class FrmMainContainer
     ''' <remarks></remarks>
     Friend Sub changeCulture(ByVal Code As String)
         Dim culture As CultureInfo = CultureInfo.GetCultureInfo(Code)
-
+        Threading.Thread.CurrentThread.CurrentCulture = culture
         Threading.Thread.CurrentThread.CurrentUICulture = culture
+        Application.CurrentCulture = culture
         AktuellerBenutzer.Instance.AktuelleSprache = Code
         AktuellerBenutzer.SaveSettings()
+
+        'übersetzung der Formular elemente von frmMainContainer
+
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMainContainer))
+        Lokalisierung(Me, resources)
 
         'speichern der aktuellen Eingaben ins Objekt
         RaiseEvent LokalisierungNeeded(_CurrentUco)
         If Not objUCOBenutzerwechsel Is Nothing Then
             objUCOBenutzerwechsel.TriggerLokalisierung()
         End If
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMainContainer))
-        'übersetzung der Formular elemente von frmMainContainer
 
-        Me.RadButtonNavigateBackwards.Text = resources.GetString("RadButtonNavigateBackwards.Text")
-        Me.RadButtonNavigateForwards.Text = resources.GetString("RadButtonNavigateForwards.Text")
+    End Sub
 
+    Protected Sub Lokalisierung(ByVal container As Control, ByVal ressourcemanager As System.ComponentModel.ComponentResourceManager)
+        ressourcemanager.ApplyResources(container, container.Name, New Globalization.CultureInfo(AktuellerBenutzer.Instance.AktuelleSprache))
+
+        For Each c As Control In container.Controls
+            For Each childControl In c.Controls
+                Lokalisierung(childControl, ressourcemanager)
+            Next
+            ressourcemanager.ApplyResources(c, c.Name, New Globalization.CultureInfo(AktuellerBenutzer.Instance.AktuelleSprache))
+        Next c
     End Sub
 
     ''' <summary>
@@ -272,15 +284,15 @@ Public Class FrmMainContainer
     Private Sub RadButtonChangeLanguage_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonChangeLanguageToGerman.Click, RadButtonChangeLanguageToEnglish.Click, RadButtonChangeLanguageToPolish.Click
         If sender.Equals(RadButtonChangeLanguageToEnglish) Then
             changeCulture("en")
-            changeCulture("en")
 
+            'changeCulture("en")
         ElseIf sender.Equals(RadButtonChangeLanguageToGerman) Then
             changeCulture("de")
-            changeCulture("de")
+            '  changeCulture("de")
 
         ElseIf sender.Equals(RadButtonChangeLanguageToPolish) Then
             changeCulture("pl")
-            changeCulture("pl")
+            'changeCulture("pl")
         End If
     End Sub
 

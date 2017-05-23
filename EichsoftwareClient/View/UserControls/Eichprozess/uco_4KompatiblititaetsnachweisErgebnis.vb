@@ -990,39 +990,9 @@ Public Class uco_4KompatiblititaetsnachweisErgebnis
         If Me.Name.Equals(UserControl.Name) = False Then Exit Sub
 
         MyBase.LokalisierungNeeded(UserControl)
-
-        'lokalisierung: Leider kann ich den automatismus von .NET nicht nutzen. Dieser funktioniert nur sauber, wenn ein Dialog erzeugt wird. Zur Laufzeit aber gibt es diverse Probleme mit dem Automatischen Ändern der Sprache,
-        'da auch informationen wie Positionen und Größen "lokalisiert" gespeichert werden. Wenn nun zur Laufzeit, also das Fenster größer gemacht wurde, setzt er die Anchor etc. auf die Ursprungsgröße
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco_4KompatiblititaetsnachweisErgebnis))
-        Me.lblFabriknummer.Text = resources.GetString("lblFabriknummer.Text")
-        Me.lblPunkt1AWG.Text = resources.GetString("lblPunkt1AWG.Text")
-        Me.lblPunkt1GleichBesser1.Text = resources.GetString("lblPunkt1GleichBesser1.Text")
-        Me.lblPunkt1Gleichbesser2.Text = resources.GetString("lblPunkt1Gleichbesser2.Text")
-        Me.lblPunkt1Waage.Text = resources.GetString("lblPunkt1Waage.Text")
-        Me.lblPunkt1WZ.Text = resources.GetString("lblPunkt1WZ.Text")
-        Me.lblPunkt2AWG.Text = resources.GetString("lblPunkt2AWG.Text")
-        Me.lblPunkt2Waage.Text = resources.GetString("lblPunkt2Waage.Text")
-        Me.lblPunkt2WZ.Text = resources.GetString("lblPunkt2WZ.Text")
-        Me.lblPunkt4WaagenArt.Text = resources.GetString("lblPunkt4WaagenArt.Text")
-        Me.lblPunkt5Faktor.Text = resources.GetString("lblPunkt5Faktor.Text")
-        Me.lblPunkt6aWaagenart.Text = resources.GetString("lblPunkt6aWaagenart.Text")
-        Me.lblPunkt8Eingangspannung.Text = resources.GetString("lblPunkt8Eingangspannung.Text")
-        Me.lblPunkt8MinVol.Text = resources.GetString("lblPunkt8MinVol.Text")
-        Me.lblPunkt8OhneLast.Text = resources.GetString("lblPunkt8OhneLast.Text")
+        Lokalisierung(Me, resources)
 
-        Me.RadGroupBoxPunkt1.Text = resources.GetString("RadGroupBoxPunkt1.Text")
-        Me.RadGroupBoxPunkt2TMin.Text = resources.GetString("RadGroupBoxPunkt2TMin.Text")
-        Me.RadGroupBoxPunkt3.Text = resources.GetString("RadGroupBoxPunkt3.Text")
-        Me.RadGroupBoxPunkt4.Text = resources.GetString("RadGroupBoxPunkt4.Text")
-        Me.RadGroupBoxPunkt5.Text = resources.GetString("RadGroupBoxPunkt5.Text")
-        Me.RadGroupBoxPunkt6a.Text = resources.GetString("RadGroupBoxPunkt6a.Text")
-        Me.RadGroupBoxPunkt6b.Text = resources.GetString("RadGroupBoxPunkt6b.Text")
-        Me.RadGroupBoxPunkt6c.Text = resources.GetString("RadGroupBoxPunkt6c.Text")
-        Me.RadGroupBoxPunkt6d.Text = resources.GetString("RadGroupBoxPunkt6d.Text")
-        Me.RadGroupBoxPunkt7.Text = resources.GetString("RadGroupBoxPunkt7.Text")
-        Me.RadGroupBoxPunkt8.Text = resources.GetString("RadGroupBoxPunkt8.Text")
-        Me.RadGroupBoxPunkt9.Text = resources.GetString("RadGroupBoxPunkt9.Text")
-        Me.RadGroupBoxPunkt10.Text = resources.GetString("RadGroupBoxPunkt10.Text")
 
         Using Context As New EichsoftwareClientdatabaseEntities1
             If Not DialogModus = enuDialogModus.lesend And Not DialogModus = enuDialogModus.korrigierend Then
@@ -1127,10 +1097,8 @@ Public Class uco_4KompatiblititaetsnachweisErgebnis
     Protected Overrides Sub UpdateNeeded(UserControl As UserControl)
         If Me.Equals(UserControl) Then
             MyBase.UpdateNeeded(UserControl)
-            'Hilfetext setzen
-            ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_KompatiblitaetsnachweisErgebnisHilfe)
-            'Überschrift setzen
-            ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_KompatiblitaetsnachweisErgebnis
+            Me.LokalisierungNeeded(UserControl)
+
             If Me.Equals(UserControl) Then
                 LoadFromDatabase()
             End If

@@ -47,7 +47,7 @@ Public Class ucoContent
     End Sub
 #End Region
 
-#Region "Enumartoren"
+#Region "Enumeratoren"
     Enum enuDialogModus
         normal = 0
         lesend = 1
@@ -264,6 +264,17 @@ Public Class ucoContent
     ''' <param name="UserControl"></param>
     ''' <remarks></remarks>
     Protected Overridable Sub LokalisierungNeeded(ByVal UserControl As UserControl) Handles _ParentForm.LokalisierungNeeded
+    End Sub
+
+    Protected Sub Lokalisierung(ByVal container As Control, ByVal ressourcemanager As System.ComponentModel.ComponentResourceManager)
+        ressourcemanager.ApplyResources(container, container.Name, New Globalization.CultureInfo(AktuellerBenutzer.Instance.AktuelleSprache))
+
+        For Each c As Control In container.Controls
+            For Each childControl In c.Controls
+                Lokalisierung(childControl, ressourcemanager)
+            Next
+            ressourcemanager.ApplyResources(c, c.Name, New Globalization.CultureInfo(AktuellerBenutzer.Instance.AktuelleSprache))
+        Next c
     End Sub
 
     ''' <summary>

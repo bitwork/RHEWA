@@ -104,12 +104,9 @@ Public Class uco15PruefungStabilitaet
     Protected Overrides Sub UpdateNeeded(UserControl As UserControl)
         If Me.Equals(UserControl) Then
             MyBase.UpdateNeeded(UserControl)
-            'Hilfetext setzen
-            ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungStabilitaet)
-            'Überschrift setzen
-            ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungStabilitaet
-            '   FillControls()
-            LoadFromDatabase() 'war mal auskommentiert. ich weiß gerade nicht mehr wieso. Ergänzung: war ausdokumentiert, weil damit die Werte der NSW und WZ übeschrieben werden wenn man auf zurück klickt. Wenn es allerdings ausdokumenterit ist, funktioniert das anlegen einer neuen WZ nicht
+            Me.LokalisierungNeeded(UserControl)
+
+            LoadFromDatabase() '
         End If
     End Sub
 
@@ -435,12 +432,12 @@ Public Class uco15PruefungStabilitaet
         'lokalisierung: Leider kann ich den automatismus von .NET nicht nutzen. Dieser funktioniert nur sauber, wenn ein Dialog erzeugt wird. Zur Laufzeit aber gibt es diverse Probleme mit dem Automatischen Ändern der Sprache,
         'da auch informationen wie Positionen und Größen "lokalisiert" gespeichert werden. Wenn nun zur Laufzeit, also das Fenster größer gemacht wurde, setzt er die Anchor etc. auf die Ursprungsgröße
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco15PruefungStabilitaet))
-
-        Me.lblAbdruck.Text = resources.GetString("lblAbdruck.Text")
-        Me.lblAnzeige.Text = resources.GetString("lblAnzeige.Text")
-        Me.lblBeschreibung.Text = resources.GetString("lblBeschreibung.Text")
-        Me.lblLast.Text = resources.GetString("lblLast.Text")
-        Me.lblPrintBeschreibung.Text = resources.GetString("lblPrintBeschreibung.Text")
+        Lokalisierung(Me, resources)
+        'Me.lblAbdruck.Text = resources.GetString("lblAbdruck.Text")
+        'Me.lblAnzeige.Text = resources.GetString("lblAnzeige.Text")
+        'Me.lblBeschreibung.Text = resources.GetString("lblBeschreibung.Text")
+        'Me.lblLast.Text = resources.GetString("lblLast.Text")
+        'Me.lblPrintBeschreibung.Text = resources.GetString("lblPrintBeschreibung.Text")
 
         If Not ParentFormular Is Nothing Then
             Try
