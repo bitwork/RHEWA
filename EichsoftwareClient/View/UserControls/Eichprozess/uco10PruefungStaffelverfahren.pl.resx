@@ -119,10 +119,13 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="PictureBox66.Location" type="System.Drawing.Point, System.Drawing">
-    <value>186, 135</value>
+    <value>186, 149</value>
+  </data>
+  <data name="PictureBox67.Location" type="System.Drawing.Point, System.Drawing">
+    <value>186, 111</value>
   </data>
   <data name="lblStaffel5Bereich3ErsatzLastUnten.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 134</value>
+    <value>6, 148</value>
   </data>
   <data name="lblStaffel5Bereich3ErsatzLastUnten.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 18</value>
@@ -130,17 +133,56 @@
   <data name="lblStaffel5Bereich3ErsatzLastUnten.Text" xml:space="preserve">
     <value>Obciążenie zastępcze</value>
   </data>
+  <data name="lblStaffel5Bereich3ErsatzLastOben.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 57</value>
+  </data>
   <data name="lblStaffel5Bereich3ErsatzLastOben.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 18</value>
   </data>
   <data name="lblStaffel5Bereich3ErsatzLastOben.Text" xml:space="preserve">
     <value>Obciążenie zastępcze</value>
   </data>
+  <data name="RadTextBoxControlStaffel5Bereich3Fehler7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 248</value>
+  </data>
+  <data name="RadTextBoxControlStaffel5Bereich3Fehler6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 212</value>
+  </data>
+  <data name="RadTextBoxControlStaffel5Bereich3Fehler5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 176</value>
+  </data>
   <data name="RadTextBoxControlStaffel5Bereich3Last4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>210, 135</value>
+    <value>210, 149</value>
   </data>
   <data name="RadTextBoxControlStaffel5Bereich3Anzeige4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>268, 135</value>
+    <value>268, 149</value>
+  </data>
+  <data name="RadTextBoxControlStaffel5Bereich3Anzeige3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>268, 112</value>
+  </data>
+  <data name="RadTextBoxControlStaffel5Bereich3Last3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 112</value>
+  </data>
+  <data name="RadTextBoxControlStaffel5Bereich3Last2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 86</value>
+  </data>
+  <data name="RadTextBoxControlStaffel5Bereich3Anzeige1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>268, 60</value>
+  </data>
+  <data name="RadTextBoxControlStaffel5Bereich3Last1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 60</value>
+  </data>
+  <data name="lblStaffel5Bereich3MessabweichungWaage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 248</value>
+  </data>
+  <data name="lblStaffel5Bereich3MessabweichungStaffel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 212</value>
+  </data>
+  <data name="lblStaffel5Bereich3Differenz.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 176</value>
+  </data>
+  <data name="lblStaffel5Bereich3ZusastzNormalLast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 84</value>
   </data>
   <data name="lblStaffel5Bereich3ZusastzNormalLast.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 17</value>
@@ -152,11 +194,32 @@
   <data name="lblStaffel5Bereich3NormalLast.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="lblStaffel5Bereich3NormalLast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 111</value>
+  </data>
   <data name="lblStaffel5Bereich3NormalLast.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 41</value>
   </data>
   <data name="lblStaffel5Bereich3NormalLast.Text" xml:space="preserve">
     <value>&lt;html&gt;Obciążenie zastępcze + &lt;span style="color: #8000ff"&gt;obciążenie wzorcowe&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="PictureBox85.Location" type="System.Drawing.Point, System.Drawing">
+    <value>376, 248</value>
+  </data>
+  <data name="PictureBox86.Location" type="System.Drawing.Point, System.Drawing">
+    <value>376, 211</value>
+  </data>
+  <data name="PictureBox87.Location" type="System.Drawing.Point, System.Drawing">
+    <value>376, 175</value>
+  </data>
+  <data name="lblStaffel5Bereich3EFGWert7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 247</value>
+  </data>
+  <data name="lblStaffel5Bereich3EFGWert6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 211</value>
+  </data>
+  <data name="lblStaffel5Bereich3EFGWert5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 175</value>
   </data>
   <data name="lblStaffel5Bereich3EFG.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 18</value>
@@ -183,17 +246,32 @@
   <data name="lblStaffel5Bereich3Last.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;strong&gt;[Wartość&lt;br /&gt;zadana]&lt;/strong&gt;&lt;/html&gt;</value>
   </data>
+  <data name="PictureBox124.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 248</value>
+  </data>
+  <data name="PictureBox125.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 211</value>
+  </data>
+  <data name="PictureBox126.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 175</value>
+  </data>
   <data name="RadGroupBoxStaffel5Bereich3.HeaderText" xml:space="preserve">
     <value>Zakres 3</value>
+  </data>
+  <data name="RadGroupBoxStaffel5Bereich3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>485, 276</value>
   </data>
   <data name="RadGroupBoxStaffel5Bereich3.Text" xml:space="preserve">
     <value>Zakres 3</value>
   </data>
   <data name="PictureBox68.Location" type="System.Drawing.Point, System.Drawing">
-    <value>186, 135</value>
+    <value>186, 149</value>
+  </data>
+  <data name="PictureBox69.Location" type="System.Drawing.Point, System.Drawing">
+    <value>186, 111</value>
   </data>
   <data name="lblStaffel5Bereich2ErsatzLastUnten.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 134</value>
+    <value>6, 148</value>
   </data>
   <data name="lblStaffel5Bereich2ErsatzLastUnten.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 18</value>
@@ -201,17 +279,56 @@
   <data name="lblStaffel5Bereich2ErsatzLastUnten.Text" xml:space="preserve">
     <value>Obciążenie zastępcze</value>
   </data>
+  <data name="lblStaffel5Bereich2ErsatzLastOben.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 57</value>
+  </data>
   <data name="lblStaffel5Bereich2ErsatzLastOben.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 18</value>
   </data>
   <data name="lblStaffel5Bereich2ErsatzLastOben.Text" xml:space="preserve">
     <value>Obciążenie zastępcze</value>
   </data>
+  <data name="RadTextBoxControlStaffel5Bereich2Fehler7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 248</value>
+  </data>
+  <data name="RadTextBoxControlStaffel5Bereich2Fehler6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 212</value>
+  </data>
+  <data name="RadTextBoxControlStaffel5Bereich2Fehler5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 176</value>
+  </data>
   <data name="RadTextBoxControlStaffel5Bereich2Last4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>210, 135</value>
+    <value>210, 149</value>
   </data>
   <data name="RadTextBoxControlStaffel5Bereich2Anzeige4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>268, 135</value>
+    <value>268, 149</value>
+  </data>
+  <data name="RadTextBoxControlStaffel5Bereich2Anzeige3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>268, 112</value>
+  </data>
+  <data name="RadTextBoxControlStaffel5Bereich2Last3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 112</value>
+  </data>
+  <data name="RadTextBoxControlStaffel5Bereich2Last2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 86</value>
+  </data>
+  <data name="RadTextBoxControlStaffel5Bereich2Anzeige1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>268, 60</value>
+  </data>
+  <data name="RadTextBoxControlStaffel5Bereich2Last1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 60</value>
+  </data>
+  <data name="lblStaffel5Bereich2MessabweichungWaage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 248</value>
+  </data>
+  <data name="lblStaffel5Bereich2MessabweichungStaffel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 212</value>
+  </data>
+  <data name="lblStaffel5Bereich2Differenz.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 176</value>
+  </data>
+  <data name="lblStaffel5Bereich2ZusastzNormalLast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 84</value>
   </data>
   <data name="lblStaffel5Bereich2ZusastzNormalLast.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 17</value>
@@ -222,11 +339,32 @@
   <data name="lblStaffel5Bereich2NormalLast.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="lblStaffel5Bereich2NormalLast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 111</value>
+  </data>
   <data name="lblStaffel5Bereich2NormalLast.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 41</value>
   </data>
   <data name="lblStaffel5Bereich2NormalLast.Text" xml:space="preserve">
     <value>&lt;html&gt;Obciążenie zastępcze + &lt;span style="color: #8000ff"&gt;obciążenie wzorcowe&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="PictureBox92.Location" type="System.Drawing.Point, System.Drawing">
+    <value>376, 248</value>
+  </data>
+  <data name="PictureBox93.Location" type="System.Drawing.Point, System.Drawing">
+    <value>376, 211</value>
+  </data>
+  <data name="PictureBox94.Location" type="System.Drawing.Point, System.Drawing">
+    <value>376, 175</value>
+  </data>
+  <data name="lblStaffel5Bereich2EFGWert7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 247</value>
+  </data>
+  <data name="lblStaffel5Bereich2EFGWert6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 211</value>
+  </data>
+  <data name="lblStaffel5Bereich2EFGWert5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 175</value>
   </data>
   <data name="lblStaffel5Bereich2EFG.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 18</value>
@@ -253,17 +391,32 @@
   <data name="lblStaffel5Bereich2Last.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;strong&gt;[Wartość&lt;br /&gt;zadana]&lt;/strong&gt;&lt;/html&gt;</value>
   </data>
+  <data name="PictureBox127.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 248</value>
+  </data>
+  <data name="PictureBox128.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 211</value>
+  </data>
+  <data name="PictureBox129.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 175</value>
+  </data>
   <data name="RadGroupBoxStaffel5Bereich2.HeaderText" xml:space="preserve">
     <value>Zakres 2</value>
+  </data>
+  <data name="RadGroupBoxStaffel5Bereich2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>485, 276</value>
   </data>
   <data name="RadGroupBoxStaffel5Bereich2.Text" xml:space="preserve">
     <value>Zakres 2</value>
   </data>
   <data name="PictureBox73.Location" type="System.Drawing.Point, System.Drawing">
-    <value>186, 135</value>
+    <value>186, 149</value>
+  </data>
+  <data name="PictureBox74.Location" type="System.Drawing.Point, System.Drawing">
+    <value>186, 111</value>
   </data>
   <data name="lblStaffel5Bereich1ErsatzLastUnten.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 133</value>
+    <value>6, 147</value>
   </data>
   <data name="lblStaffel5Bereich1ErsatzLastUnten.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 18</value>
@@ -271,17 +424,47 @@
   <data name="lblStaffel5Bereich1ErsatzLastUnten.Text" xml:space="preserve">
     <value>Obciążenie zastępcze</value>
   </data>
+  <data name="lblStaffel5Bereich1ErsatzLastOben.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 57</value>
+  </data>
   <data name="lblStaffel5Bereich1ErsatzLastOben.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 18</value>
   </data>
   <data name="lblStaffel5Bereich1ErsatzLastOben.Text" xml:space="preserve">
     <value>Obciążenie zastępcze</value>
   </data>
+  <data name="RadTextBoxControlStaffel5Bereich1Fehler7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 248</value>
+  </data>
+  <data name="RadTextBoxControlStaffel5Bereich1Fehler6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 212</value>
+  </data>
+  <data name="RadTextBoxControlStaffel5Bereich1Fehler5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 176</value>
+  </data>
   <data name="RadTextBoxControlStaffel5Bereich1Last4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>210, 135</value>
+    <value>210, 149</value>
   </data>
   <data name="RadTextBoxControlStaffel5Bereich1Anzeige4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>268, 135</value>
+    <value>268, 149</value>
+  </data>
+  <data name="RadTextBoxControlStaffel5Bereich1Anzeige3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>268, 112</value>
+  </data>
+  <data name="RadTextBoxControlStaffel5Bereich1Last3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 112</value>
+  </data>
+  <data name="RadTextBoxControlStaffel5Bereich1Last2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 86</value>
+  </data>
+  <data name="RadTextBoxControlStaffel5Bereich1Anzeige1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>268, 60</value>
+  </data>
+  <data name="RadTextBoxControlStaffel5Bereich1Last1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 60</value>
+  </data>
+  <data name="lblStaffel5Bereich1MessabweichungWaage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 248</value>
   </data>
   <data name="lblStaffel5Bereich1MessabweichungWaage.Size" type="System.Drawing.Size, System.Drawing">
     <value>169, 17</value>
@@ -289,17 +472,26 @@
   <data name="lblStaffel5Bereich1MessabweichungWaage.Text" xml:space="preserve">
     <value>&lt;html&gt;Odchyłka pomiarowa wagi &lt;span style="color: #8000ff"&gt;[&lt;span style="font-family: symbol"&gt;S&lt;/span&gt;Ewi]&lt;/span&gt;&lt;/html&gt;</value>
   </data>
+  <data name="lblStaffel5Bereich1MessabweichungStaffel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 212</value>
+  </data>
   <data name="lblStaffel5Bereich1MessabweichungStaffel.Size" type="System.Drawing.Size, System.Drawing">
     <value>231, 17</value>
   </data>
   <data name="lblStaffel5Bereich1MessabweichungStaffel.Text" xml:space="preserve">
     <value>&lt;html&gt;Odchyłka pomiarowa stopnia procedury  &lt;span style="color: #8000ff"&gt;[Ew5]&lt;/span&gt;&lt;/html&gt;</value>
   </data>
+  <data name="lblStaffel5Bereich1Differenz.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 176</value>
+  </data>
   <data name="lblStaffel5Bereich1Differenz.Size" type="System.Drawing.Size, System.Drawing">
     <value>288, 32</value>
   </data>
   <data name="lblStaffel5Bereich1Differenz.Text" xml:space="preserve">
     <value>&lt;html&gt;Różnica wartości wskazanych bez obciążenia wzorcowego&lt;span style="color: #8000ff"&gt; &lt;br /&gt;[&lt;span style="font-size: 16px; font-family: symbol"&gt;D&lt;/span&gt;P5]&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel5Bereich1ZusastzNormalLast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 84</value>
   </data>
   <data name="lblStaffel5Bereich1ZusastzNormalLast.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 17</value>
@@ -310,11 +502,32 @@
   <data name="lblStaffel5Bereich1NormalLast.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="lblStaffel5Bereich1NormalLast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 111</value>
+  </data>
   <data name="lblStaffel5Bereich1NormalLast.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 41</value>
   </data>
   <data name="lblStaffel5Bereich1NormalLast.Text" xml:space="preserve">
     <value>&lt;html&gt;Obciążenie zastępcze + &lt;span style="color: #8000ff"&gt;obciążenie wzorcowe&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="PictureBox99.Location" type="System.Drawing.Point, System.Drawing">
+    <value>376, 248</value>
+  </data>
+  <data name="PictureBox100.Location" type="System.Drawing.Point, System.Drawing">
+    <value>376, 211</value>
+  </data>
+  <data name="PictureBox101.Location" type="System.Drawing.Point, System.Drawing">
+    <value>376, 175</value>
+  </data>
+  <data name="lblStaffel5Bereich1EFGWert7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 247</value>
+  </data>
+  <data name="lblStaffel5Bereich1EFGWert6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 211</value>
+  </data>
+  <data name="lblStaffel5Bereich1EFGWert5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 175</value>
   </data>
   <data name="lblStaffel5Bereich1EFG.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 18</value>
@@ -341,17 +554,32 @@
   <data name="lblStaffel5Bereich1Last.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;strong&gt;[Wartość&lt;br /&gt;zadana]&lt;/strong&gt;&lt;/html&gt;</value>
   </data>
+  <data name="PictureBox130.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 248</value>
+  </data>
+  <data name="PictureBox131.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 211</value>
+  </data>
+  <data name="PictureBox132.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 175</value>
+  </data>
   <data name="RadGroupBoxStaffel5Bereich1.HeaderText" xml:space="preserve">
     <value>Zakres 1</value>
+  </data>
+  <data name="RadGroupBoxStaffel5Bereich1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>485, 276</value>
   </data>
   <data name="RadGroupBoxStaffel5Bereich1.Text" xml:space="preserve">
     <value>Zakres 1</value>
   </data>
   <data name="PictureBox61.Location" type="System.Drawing.Point, System.Drawing">
-    <value>186, 135</value>
+    <value>186, 149</value>
+  </data>
+  <data name="PictureBox62.Location" type="System.Drawing.Point, System.Drawing">
+    <value>186, 111</value>
   </data>
   <data name="lblStaffel4Bereich3ErsatzLastUnten.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 134</value>
+    <value>6, 148</value>
   </data>
   <data name="lblStaffel4Bereich3ErsatzLastUnten.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 18</value>
@@ -359,17 +587,56 @@
   <data name="lblStaffel4Bereich3ErsatzLastUnten.Text" xml:space="preserve">
     <value>Obciążenie zastępcze</value>
   </data>
+  <data name="lblStaffel4Bereich3ErsatzLastOben.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 57</value>
+  </data>
   <data name="lblStaffel4Bereich3ErsatzLastOben.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 18</value>
   </data>
   <data name="lblStaffel4Bereich3ErsatzLastOben.Text" xml:space="preserve">
     <value>Obciążenie zastępcze</value>
   </data>
+  <data name="RadTextBoxControlStaffel4Bereich3Fehler7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 248</value>
+  </data>
+  <data name="RadTextBoxControlStaffel4Bereich3Fehler6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 212</value>
+  </data>
+  <data name="RadTextBoxControlStaffel4Bereich3Fehler5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 176</value>
+  </data>
   <data name="RadTextBoxControlStaffel4Bereich3Last4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>210, 135</value>
+    <value>210, 149</value>
   </data>
   <data name="RadTextBoxControlStaffel4Bereich3Anzeige4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>268, 135</value>
+    <value>268, 149</value>
+  </data>
+  <data name="RadTextBoxControlStaffel4Bereich3Anzeige3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>268, 112</value>
+  </data>
+  <data name="RadTextBoxControlStaffel4Bereich3Last3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 112</value>
+  </data>
+  <data name="RadTextBoxControlStaffel4Bereich3Last2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 86</value>
+  </data>
+  <data name="RadTextBoxControlStaffel4Bereich3Anzeige1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>268, 60</value>
+  </data>
+  <data name="RadTextBoxControlStaffel4Bereich3Last1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 60</value>
+  </data>
+  <data name="lblStaffel4Bereich3MessabweichungWaage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 248</value>
+  </data>
+  <data name="lblStaffel4Bereich3MessabweichungStaffel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 212</value>
+  </data>
+  <data name="lblStaffel4Bereich3Differenz.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 176</value>
+  </data>
+  <data name="lblStaffel4Bereich3ZusastzNormalLast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 84</value>
   </data>
   <data name="lblStaffel4Bereich3ZusastzNormalLast.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 17</value>
@@ -380,11 +647,32 @@
   <data name="lblStaffel4Bereich3NormalLast.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="lblStaffel4Bereich3NormalLast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 111</value>
+  </data>
   <data name="lblStaffel4Bereich3NormalLast.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 41</value>
   </data>
   <data name="lblStaffel4Bereich3NormalLast.Text" xml:space="preserve">
     <value>&lt;html&gt;Obciążenie zastępcze  + &lt;span style="color: #ff8000"&gt;obciążenie wzorcowe&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="PictureBox63.Location" type="System.Drawing.Point, System.Drawing">
+    <value>376, 248</value>
+  </data>
+  <data name="PictureBox64.Location" type="System.Drawing.Point, System.Drawing">
+    <value>376, 211</value>
+  </data>
+  <data name="PictureBox65.Location" type="System.Drawing.Point, System.Drawing">
+    <value>376, 175</value>
+  </data>
+  <data name="lblStaffel4Bereich3EFGWert7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 247</value>
+  </data>
+  <data name="lblStaffel4Bereich3EFGWert6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 211</value>
+  </data>
+  <data name="lblStaffel4Bereich3EFGWert5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 175</value>
   </data>
   <data name="lblStaffel4Bereich3EFG.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 18</value>
@@ -411,17 +699,32 @@
   <data name="lblStaffel4Bereich3Last.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;strong&gt;[Wartość&lt;br /&gt;zadana]&lt;/strong&gt;&lt;/html&gt;</value>
   </data>
+  <data name="PictureBox121.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 248</value>
+  </data>
+  <data name="PictureBox122.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 211</value>
+  </data>
+  <data name="PictureBox123.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 175</value>
+  </data>
   <data name="RadGroupBoxStaffel4Bereich3.HeaderText" xml:space="preserve">
     <value>Zakres 3</value>
+  </data>
+  <data name="RadGroupBoxStaffel4Bereich3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>485, 276</value>
   </data>
   <data name="RadGroupBoxStaffel4Bereich3.Text" xml:space="preserve">
     <value>Zakres 3</value>
   </data>
   <data name="PictureBox59.Location" type="System.Drawing.Point, System.Drawing">
-    <value>186, 135</value>
+    <value>186, 149</value>
+  </data>
+  <data name="PictureBox60.Location" type="System.Drawing.Point, System.Drawing">
+    <value>186, 111</value>
   </data>
   <data name="lblStaffel4Bereich2ErsatzLastUnten.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 134</value>
+    <value>6, 148</value>
   </data>
   <data name="lblStaffel4Bereich2ErsatzLastUnten.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 18</value>
@@ -429,17 +732,56 @@
   <data name="lblStaffel4Bereich2ErsatzLastUnten.Text" xml:space="preserve">
     <value>Obciążenie zastępcze</value>
   </data>
+  <data name="lblStaffel4Bereich2ErsatzLastOben.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 57</value>
+  </data>
   <data name="lblStaffel4Bereich2ErsatzLastOben.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 18</value>
   </data>
   <data name="lblStaffel4Bereich2ErsatzLastOben.Text" xml:space="preserve">
     <value>Obciążenie zastępcze</value>
   </data>
+  <data name="RadTextBoxControlStaffel4Bereich2Fehler7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 248</value>
+  </data>
+  <data name="RadTextBoxControlStaffel4Bereich2Fehler6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 212</value>
+  </data>
+  <data name="RadTextBoxControlStaffel4Bereich2Fehler5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 176</value>
+  </data>
   <data name="RadTextBoxControlStaffel4Bereich2Last4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>210, 135</value>
+    <value>210, 149</value>
   </data>
   <data name="RadTextBoxControlStaffel4Bereich2Anzeige4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>268, 135</value>
+    <value>268, 149</value>
+  </data>
+  <data name="RadTextBoxControlStaffel4Bereich2Anzeige3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>268, 112</value>
+  </data>
+  <data name="RadTextBoxControlStaffel4Bereich2Last3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 112</value>
+  </data>
+  <data name="RadTextBoxControlStaffel4Bereich2Last2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 86</value>
+  </data>
+  <data name="RadTextBoxControlStaffel4Bereich2Anzeige1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>268, 60</value>
+  </data>
+  <data name="RadTextBoxControlStaffel4Bereich2Last1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 60</value>
+  </data>
+  <data name="lblStaffel4Bereich2MessabweichungWaage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 248</value>
+  </data>
+  <data name="lblStaffel4Bereich2MessabweichungStaffel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 212</value>
+  </data>
+  <data name="lblStaffel4Bereich2Differenz.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 176</value>
+  </data>
+  <data name="lblStaffel4Bereich2ZusastzNormalLast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 84</value>
   </data>
   <data name="lblStaffel4Bereich2ZusastzNormalLast.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 17</value>
@@ -450,11 +792,32 @@
   <data name="lblStaffel4Bereich2NormalLast.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="lblStaffel4Bereich2NormalLast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 111</value>
+  </data>
   <data name="lblStaffel4Bereich2NormalLast.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 41</value>
   </data>
   <data name="lblStaffel4Bereich2NormalLast.Text" xml:space="preserve">
     <value>&lt;html&gt;Obciążenie zastępcze  + &lt;span style="color: #ff8000"&gt;obciążenie wzorcowe&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="PictureBox70.Location" type="System.Drawing.Point, System.Drawing">
+    <value>376, 248</value>
+  </data>
+  <data name="PictureBox71.Location" type="System.Drawing.Point, System.Drawing">
+    <value>376, 211</value>
+  </data>
+  <data name="PictureBox72.Location" type="System.Drawing.Point, System.Drawing">
+    <value>376, 175</value>
+  </data>
+  <data name="lblStaffel4Bereich2EFGWert7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 247</value>
+  </data>
+  <data name="lblStaffel4Bereich2EFGWert6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 211</value>
+  </data>
+  <data name="lblStaffel4Bereich2EFGWert5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 175</value>
   </data>
   <data name="lblStaffel4Bereich2EFG.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 18</value>
@@ -481,17 +844,32 @@
   <data name="lblStaffel4Bereich2Last.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;strong&gt;[Wartość&lt;br /&gt;zadana]&lt;/strong&gt;&lt;/html&gt;</value>
   </data>
+  <data name="PictureBox118.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 248</value>
+  </data>
+  <data name="PictureBox119.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 211</value>
+  </data>
+  <data name="PictureBox120.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 175</value>
+  </data>
   <data name="RadGroupBoxStaffel4Bereich2.HeaderText" xml:space="preserve">
     <value>Zakres 2</value>
+  </data>
+  <data name="RadGroupBoxStaffel4Bereich2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>485, 276</value>
   </data>
   <data name="RadGroupBoxStaffel4Bereich2.Text" xml:space="preserve">
     <value>Zakres 2</value>
   </data>
   <data name="PictureBox54.Location" type="System.Drawing.Point, System.Drawing">
-    <value>186, 135</value>
+    <value>186, 149</value>
+  </data>
+  <data name="PictureBox55.Location" type="System.Drawing.Point, System.Drawing">
+    <value>186, 111</value>
   </data>
   <data name="lblStaffel4Bereich1ErsatzLastUnten.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 133</value>
+    <value>6, 147</value>
   </data>
   <data name="lblStaffel4Bereich1ErsatzLastUnten.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 18</value>
@@ -499,17 +877,47 @@
   <data name="lblStaffel4Bereich1ErsatzLastUnten.Text" xml:space="preserve">
     <value>Obciążenie zastępcze</value>
   </data>
+  <data name="lblStaffel4Bereich1ErsatzLastOben.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 57</value>
+  </data>
   <data name="lblStaffel4Bereich1ErsatzLastOben.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 18</value>
   </data>
   <data name="lblStaffel4Bereich1ErsatzLastOben.Text" xml:space="preserve">
     <value>Obciążenie zastępcze</value>
   </data>
+  <data name="RadTextBoxControlStaffel4Bereich1Fehler7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 248</value>
+  </data>
+  <data name="RadTextBoxControlStaffel4Bereich1Fehler6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 212</value>
+  </data>
+  <data name="RadTextBoxControlStaffel4Bereich1Fehler5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 176</value>
+  </data>
   <data name="RadTextBoxControlStaffel4Bereich1Last4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>210, 135</value>
+    <value>210, 149</value>
   </data>
   <data name="RadTextBoxControlStaffel4Bereich1Anzeige4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>268, 135</value>
+    <value>268, 149</value>
+  </data>
+  <data name="RadTextBoxControlStaffel4Bereich1Anzeige3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>268, 112</value>
+  </data>
+  <data name="RadTextBoxControlStaffel4Bereich1Last3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 112</value>
+  </data>
+  <data name="RadTextBoxControlStaffel4Bereich1Last2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 86</value>
+  </data>
+  <data name="RadTextBoxControlStaffel4Bereich1Anzeige1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>268, 60</value>
+  </data>
+  <data name="RadTextBoxControlStaffel4Bereich1Last1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 60</value>
+  </data>
+  <data name="lblStaffel4Bereich1MessabweichungWaage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 248</value>
   </data>
   <data name="lblStaffel4Bereich1MessabweichungWaage.Size" type="System.Drawing.Size, System.Drawing">
     <value>169, 17</value>
@@ -517,17 +925,26 @@
   <data name="lblStaffel4Bereich1MessabweichungWaage.Text" xml:space="preserve">
     <value>&lt;html&gt;Odchyłka pomiarowa wagi &lt;span style="color: #ff8000"&gt;[&lt;span style="font-family: symbol"&gt;S&lt;/span&gt;Ewi]&lt;/span&gt;&lt;/html&gt;</value>
   </data>
+  <data name="lblStaffel4Bereich1MessabweichungStaffel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 212</value>
+  </data>
   <data name="lblStaffel4Bereich1MessabweichungStaffel.Size" type="System.Drawing.Size, System.Drawing">
     <value>231, 17</value>
   </data>
   <data name="lblStaffel4Bereich1MessabweichungStaffel.Text" xml:space="preserve">
     <value>&lt;html&gt;Odchyłka pomiarowa stopnia procedury  &lt;span style="color: #ff8000"&gt;[Ew4]&lt;/span&gt;&lt;/html&gt;</value>
   </data>
+  <data name="lblStaffel4Bereich1Differenz.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 176</value>
+  </data>
   <data name="lblStaffel4Bereich1Differenz.Size" type="System.Drawing.Size, System.Drawing">
     <value>288, 32</value>
   </data>
   <data name="lblStaffel4Bereich1Differenz.Text" xml:space="preserve">
     <value>&lt;html&gt;Różnica wartości wskazanych bez obciążenia wzorcowego&lt;span style="color: #ff8000"&gt; &lt;br /&gt;[&lt;span style="font-size: 16px; font-family: symbol"&gt;D&lt;/span&gt;P4]&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel4Bereich1ZusastzNormalLast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 84</value>
   </data>
   <data name="lblStaffel4Bereich1ZusastzNormalLast.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 17</value>
@@ -538,11 +955,32 @@
   <data name="lblStaffel4Bereich1NormalLast.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="lblStaffel4Bereich1NormalLast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 111</value>
+  </data>
   <data name="lblStaffel4Bereich1NormalLast.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 41</value>
   </data>
   <data name="lblStaffel4Bereich1NormalLast.Text" xml:space="preserve">
     <value>&lt;html&gt;Obciążenie zastępcze  + &lt;span style="color: #ff8000"&gt;obciążenie wzorcowe&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="PictureBox77.Location" type="System.Drawing.Point, System.Drawing">
+    <value>376, 248</value>
+  </data>
+  <data name="PictureBox78.Location" type="System.Drawing.Point, System.Drawing">
+    <value>376, 211</value>
+  </data>
+  <data name="PictureBox80.Location" type="System.Drawing.Point, System.Drawing">
+    <value>376, 175</value>
+  </data>
+  <data name="lblStaffel4Bereich1EFGWert7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 247</value>
+  </data>
+  <data name="lblStaffel4Bereich1EFGWert6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 211</value>
+  </data>
+  <data name="lblStaffel4Bereich1EFGWert5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 175</value>
   </data>
   <data name="lblStaffel4Bereich1EFG.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 18</value>
@@ -569,17 +1007,32 @@
   <data name="lblStaffel4Bereich1Last.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;strong&gt;[Wartość&lt;br /&gt;zadana]&lt;/strong&gt;&lt;/html&gt;</value>
   </data>
+  <data name="PictureBox115.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 248</value>
+  </data>
+  <data name="PictureBox116.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 211</value>
+  </data>
+  <data name="PictureBox117.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 175</value>
+  </data>
   <data name="RadGroupBoxStaffel4Bereich1.HeaderText" xml:space="preserve">
     <value>Zakres 1</value>
+  </data>
+  <data name="RadGroupBoxStaffel4Bereich1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>485, 276</value>
   </data>
   <data name="RadGroupBoxStaffel4Bereich1.Text" xml:space="preserve">
     <value>Zakres 1</value>
   </data>
   <data name="PictureBox45.Location" type="System.Drawing.Point, System.Drawing">
-    <value>186, 130</value>
+    <value>186, 144</value>
+  </data>
+  <data name="PictureBox46.Location" type="System.Drawing.Point, System.Drawing">
+    <value>186, 111</value>
   </data>
   <data name="lblStaffel3Bereich3ErsatzLastUnten.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 129</value>
+    <value>6, 143</value>
   </data>
   <data name="lblStaffel3Bereich3ErsatzLastUnten.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 18</value>
@@ -587,17 +1040,56 @@
   <data name="lblStaffel3Bereich3ErsatzLastUnten.Text" xml:space="preserve">
     <value>Obciążenie zastępcze</value>
   </data>
+  <data name="lblStaffel3Bereich3ErsatzLastOben.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 57</value>
+  </data>
   <data name="lblStaffel3Bereich3ErsatzLastOben.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 18</value>
   </data>
   <data name="lblStaffel3Bereich3ErsatzLastOben.Text" xml:space="preserve">
     <value>Obciążenie zastępcze</value>
   </data>
+  <data name="RadTextBoxControlStaffel3Bereich3Fehler7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 248</value>
+  </data>
+  <data name="RadTextBoxControlStaffel3Bereich3Fehler6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 212</value>
+  </data>
+  <data name="RadTextBoxControlStaffel3Bereich3Fehler5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 176</value>
+  </data>
   <data name="RadTextBoxControlStaffel3Bereich3Last4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>210, 130</value>
+    <value>210, 144</value>
   </data>
   <data name="RadTextBoxControlStaffel3Bereich3Anzeige4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>268, 130</value>
+    <value>268, 144</value>
+  </data>
+  <data name="RadTextBoxControlStaffel3Bereich3Anzeige3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>268, 112</value>
+  </data>
+  <data name="RadTextBoxControlStaffel3Bereich3Last3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 112</value>
+  </data>
+  <data name="RadTextBoxControlStaffel3Bereich3Last2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 86</value>
+  </data>
+  <data name="RadTextBoxControlStaffel3Bereich3Anzeige1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>268, 60</value>
+  </data>
+  <data name="RadTextBoxControlStaffel3Bereich3Last1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 60</value>
+  </data>
+  <data name="lblStaffel3Bereich3MessabweichungWaage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 248</value>
+  </data>
+  <data name="lblStaffel3Bereich3MessabweichungStaffel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 212</value>
+  </data>
+  <data name="lblStaffel3Bereich3Differenz.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 176</value>
+  </data>
+  <data name="lblStaffel3Bereich3ZusastzNormalLast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 84</value>
   </data>
   <data name="lblStaffel3Bereich3ZusastzNormalLast.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 17</value>
@@ -608,11 +1100,32 @@
   <data name="lblStaffel3Bereich3NormalLast.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="lblStaffel3Bereich3NormalLast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 111</value>
+  </data>
   <data name="lblStaffel3Bereich3NormalLast.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 41</value>
   </data>
   <data name="lblStaffel3Bereich3NormalLast.Text" xml:space="preserve">
     <value>&lt;html&gt;Obciążenie zastępcze + &lt;span style="color: #ff0080"&gt;obciążenie wzorcowe&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="PictureBox42.Location" type="System.Drawing.Point, System.Drawing">
+    <value>376, 248</value>
+  </data>
+  <data name="PictureBox43.Location" type="System.Drawing.Point, System.Drawing">
+    <value>376, 211</value>
+  </data>
+  <data name="PictureBox44.Location" type="System.Drawing.Point, System.Drawing">
+    <value>376, 175</value>
+  </data>
+  <data name="lblStaffel3Bereich3EFGWert7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 247</value>
+  </data>
+  <data name="lblStaffel3Bereich3EFGWert6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 211</value>
+  </data>
+  <data name="lblStaffel3Bereich3EFGWert5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 175</value>
   </data>
   <data name="lblStaffel3Bereich3EFG.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 18</value>
@@ -639,17 +1152,32 @@
   <data name="lblStaffel3Bereich3Last.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;strong&gt;[Wartość&lt;br /&gt;zadana]&lt;/strong&gt;&lt;/html&gt;</value>
   </data>
+  <data name="PictureBox106.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 248</value>
+  </data>
+  <data name="PictureBox107.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 211</value>
+  </data>
+  <data name="PictureBox108.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 175</value>
+  </data>
   <data name="RadGroupBoxStaffel3Bereich3.HeaderText" xml:space="preserve">
     <value>Zakres 3</value>
+  </data>
+  <data name="RadGroupBoxStaffel3Bereich3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>485, 276</value>
   </data>
   <data name="RadGroupBoxStaffel3Bereich3.Text" xml:space="preserve">
     <value>Zakres 3</value>
   </data>
   <data name="PictureBox47.Location" type="System.Drawing.Point, System.Drawing">
-    <value>185, 134</value>
+    <value>185, 148</value>
+  </data>
+  <data name="PictureBox48.Location" type="System.Drawing.Point, System.Drawing">
+    <value>186, 111</value>
   </data>
   <data name="lblStaffel3Bereich2ErsatzLastUnten.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 133</value>
+    <value>5, 147</value>
   </data>
   <data name="lblStaffel3Bereich2ErsatzLastUnten.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 18</value>
@@ -657,17 +1185,56 @@
   <data name="lblStaffel3Bereich2ErsatzLastUnten.Text" xml:space="preserve">
     <value>Obciążenie zastępcze</value>
   </data>
+  <data name="lblStaffel3Bereich2ErsatzLastOben.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 57</value>
+  </data>
   <data name="lblStaffel3Bereich2ErsatzLastOben.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 18</value>
   </data>
   <data name="lblStaffel3Bereich2ErsatzLastOben.Text" xml:space="preserve">
     <value>Obciążenie zastępcze</value>
   </data>
+  <data name="RadTextBoxControlStaffel3Bereich2Fehler7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 248</value>
+  </data>
+  <data name="RadTextBoxControlStaffel3Bereich2Fehler6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 212</value>
+  </data>
+  <data name="RadTextBoxControlStaffel3Bereich2Fehler5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 176</value>
+  </data>
   <data name="RadTextBoxControlStaffel3Bereich2Last4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>209, 134</value>
+    <value>209, 148</value>
   </data>
   <data name="RadTextBoxControlStaffel3Bereich2Anzeige4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>267, 134</value>
+    <value>267, 148</value>
+  </data>
+  <data name="RadTextBoxControlStaffel3Bereich2Anzeige3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>268, 112</value>
+  </data>
+  <data name="RadTextBoxControlStaffel3Bereich2Last3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 112</value>
+  </data>
+  <data name="RadTextBoxControlStaffel3Bereich2Last2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 86</value>
+  </data>
+  <data name="RadTextBoxControlStaffel3Bereich2Anzeige1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>268, 60</value>
+  </data>
+  <data name="RadTextBoxControlStaffel3Bereich2Last1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 60</value>
+  </data>
+  <data name="lblStaffel3Bereich2MessabweichungWaage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 248</value>
+  </data>
+  <data name="lblStaffel3Bereich2MessabweichungStaffel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 212</value>
+  </data>
+  <data name="lblStaffel3Bereich2Differenz.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 176</value>
+  </data>
+  <data name="lblStaffel3Bereich2ZusastzNormalLast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 84</value>
   </data>
   <data name="lblStaffel3Bereich2ZusastzNormalLast.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 17</value>
@@ -678,11 +1245,32 @@
   <data name="lblStaffel3Bereich2NormalLast.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="lblStaffel3Bereich2NormalLast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 111</value>
+  </data>
   <data name="lblStaffel3Bereich2NormalLast.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 41</value>
   </data>
   <data name="lblStaffel3Bereich2NormalLast.Text" xml:space="preserve">
     <value>&lt;html&gt;Obciążenie zastępcze + &lt;span style="color: #ff0080"&gt;obciążenie wzorcowe&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="PictureBox49.Location" type="System.Drawing.Point, System.Drawing">
+    <value>376, 248</value>
+  </data>
+  <data name="PictureBox50.Location" type="System.Drawing.Point, System.Drawing">
+    <value>376, 211</value>
+  </data>
+  <data name="PictureBox51.Location" type="System.Drawing.Point, System.Drawing">
+    <value>376, 175</value>
+  </data>
+  <data name="lblStaffel3Bereich2EFGWert7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 247</value>
+  </data>
+  <data name="lblStaffel3Bereich2EFGWert6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 211</value>
+  </data>
+  <data name="lblStaffel3Bereich2EFGWert5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 175</value>
   </data>
   <data name="lblStaffel3Bereich2EFG.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 18</value>
@@ -709,17 +1297,32 @@
   <data name="lblStaffel3Bereich2Last.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;strong&gt;[Wartość&lt;br /&gt;zadana]&lt;/strong&gt;&lt;/html&gt;</value>
   </data>
+  <data name="PictureBox109.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 248</value>
+  </data>
+  <data name="PictureBox110.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 211</value>
+  </data>
+  <data name="PictureBox111.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 175</value>
+  </data>
   <data name="RadGroupBoxStaffel3Bereich2.HeaderText" xml:space="preserve">
     <value>Zakres 2</value>
+  </data>
+  <data name="RadGroupBoxStaffel3Bereich2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>485, 276</value>
   </data>
   <data name="RadGroupBoxStaffel3Bereich2.Text" xml:space="preserve">
     <value>Zakres 2</value>
   </data>
   <data name="PictureBox52.Location" type="System.Drawing.Point, System.Drawing">
-    <value>186, 134</value>
+    <value>186, 148</value>
+  </data>
+  <data name="PictureBox53.Location" type="System.Drawing.Point, System.Drawing">
+    <value>186, 111</value>
   </data>
   <data name="lblStaffel3Bereich1ErsatzLastUnten.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 132</value>
+    <value>6, 146</value>
   </data>
   <data name="lblStaffel3Bereich1ErsatzLastUnten.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 18</value>
@@ -727,17 +1330,47 @@
   <data name="lblStaffel3Bereich1ErsatzLastUnten.Text" xml:space="preserve">
     <value>Obciążenie zastępcze</value>
   </data>
+  <data name="lblStaffel3Bereich1ErsatzLastOben.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 57</value>
+  </data>
   <data name="lblStaffel3Bereich1ErsatzLastOben.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 18</value>
   </data>
   <data name="lblStaffel3Bereich1ErsatzLastOben.Text" xml:space="preserve">
     <value>Obciążenie zastępcze</value>
   </data>
+  <data name="RadTextBoxControlStaffel3Bereich1Fehler7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 248</value>
+  </data>
+  <data name="RadTextBoxControlStaffel3Bereich1Fehler6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 212</value>
+  </data>
+  <data name="RadTextBoxControlStaffel3Bereich1Fehler5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 176</value>
+  </data>
   <data name="RadTextBoxControlStaffel3Bereich1Last4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>210, 134</value>
+    <value>210, 148</value>
   </data>
   <data name="RadTextBoxControlStaffel3Bereich1Anzeige4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>268, 134</value>
+    <value>268, 148</value>
+  </data>
+  <data name="RadTextBoxControlStaffel3Bereich1Anzeige3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>268, 112</value>
+  </data>
+  <data name="RadTextBoxControlStaffel3Bereich1Last3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 112</value>
+  </data>
+  <data name="RadTextBoxControlStaffel3Bereich1Last2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 86</value>
+  </data>
+  <data name="RadTextBoxControlStaffel3Bereich1Anzeige1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>268, 60</value>
+  </data>
+  <data name="RadTextBoxControlStaffel3Bereich1Last1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 60</value>
+  </data>
+  <data name="lblStaffel3Bereich1MessabweichungWaage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 248</value>
   </data>
   <data name="lblStaffel3Bereich1MessabweichungWaage.Size" type="System.Drawing.Size, System.Drawing">
     <value>169, 17</value>
@@ -745,17 +1378,26 @@
   <data name="lblStaffel3Bereich1MessabweichungWaage.Text" xml:space="preserve">
     <value>&lt;html&gt;Odchyłka pomiarowa wagi &lt;span style="color: #ff0080"&gt;[&lt;span style="font-family: symbol"&gt;S&lt;/span&gt;Ewi]&lt;/span&gt;&lt;/html&gt;</value>
   </data>
+  <data name="lblStaffel3Bereich1MessabweichungStaffel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 212</value>
+  </data>
   <data name="lblStaffel3Bereich1MessabweichungStaffel.Size" type="System.Drawing.Size, System.Drawing">
     <value>231, 17</value>
   </data>
   <data name="lblStaffel3Bereich1MessabweichungStaffel.Text" xml:space="preserve">
     <value>&lt;html&gt;Odchyłka pomiarowa stopnia procedury  &lt;span style="color: #ff0080"&gt;[Ew3]&lt;/span&gt;&lt;/html&gt;</value>
   </data>
+  <data name="lblStaffel3Bereich1Differenz.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 176</value>
+  </data>
   <data name="lblStaffel3Bereich1Differenz.Size" type="System.Drawing.Size, System.Drawing">
     <value>288, 32</value>
   </data>
   <data name="lblStaffel3Bereich1Differenz.Text" xml:space="preserve">
     <value>&lt;html&gt;Różnica wartości wskazanych bez obciążenia wzorcowego&lt;span style="color: #ff0080"&gt; &lt;br /&gt;[&lt;span style="font-size: 16px; font-family: symbol"&gt;D&lt;/span&gt;P3]&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel3Bereich1ZusastzNormalLast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 84</value>
   </data>
   <data name="lblStaffel3Bereich1ZusastzNormalLast.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 17</value>
@@ -766,11 +1408,32 @@
   <data name="lblStaffel3Bereich1NormalLast.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="lblStaffel3Bereich1NormalLast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 111</value>
+  </data>
   <data name="lblStaffel3Bereich1NormalLast.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 41</value>
   </data>
   <data name="lblStaffel3Bereich1NormalLast.Text" xml:space="preserve">
     <value>&lt;html&gt;Obciążenie zastępcze + &lt;span style="color: #ff0080"&gt;obciążenie wzorcowe&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="PictureBox56.Location" type="System.Drawing.Point, System.Drawing">
+    <value>376, 248</value>
+  </data>
+  <data name="PictureBox57.Location" type="System.Drawing.Point, System.Drawing">
+    <value>376, 211</value>
+  </data>
+  <data name="PictureBox58.Location" type="System.Drawing.Point, System.Drawing">
+    <value>376, 175</value>
+  </data>
+  <data name="lblStaffel3Bereich1EFGWert7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 247</value>
+  </data>
+  <data name="lblStaffel3Bereich1EFGWert6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 211</value>
+  </data>
+  <data name="lblStaffel3Bereich1EFGWert5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 175</value>
   </data>
   <data name="lblStaffel3Bereich1EFG.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 18</value>
@@ -797,11 +1460,32 @@
   <data name="lblStaffel3Bereich1Last.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;strong&gt;[Wartość&lt;br /&gt;zadana]&lt;/strong&gt;&lt;/html&gt;</value>
   </data>
+  <data name="PictureBox112.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 248</value>
+  </data>
+  <data name="PictureBox113.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 211</value>
+  </data>
+  <data name="PictureBox114.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 175</value>
+  </data>
   <data name="RadGroupBoxStaffel3Bereich1.HeaderText" xml:space="preserve">
     <value>Zakres 1</value>
   </data>
+  <data name="RadGroupBoxStaffel3Bereich1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>485, 276</value>
+  </data>
   <data name="RadGroupBoxStaffel3Bereich1.Text" xml:space="preserve">
     <value>Zakres 1</value>
+  </data>
+  <data name="PictureBox40.Location" type="System.Drawing.Point, System.Drawing">
+    <value>186, 138</value>
+  </data>
+  <data name="PictureBox41.Location" type="System.Drawing.Point, System.Drawing">
+    <value>186, 111</value>
+  </data>
+  <data name="lblStaffel2Bereich3ErsatzLastUnten.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 137</value>
   </data>
   <data name="lblStaffel2Bereich3ErsatzLastUnten.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 18</value>
@@ -809,11 +1493,56 @@
   <data name="lblStaffel2Bereich3ErsatzLastUnten.Text" xml:space="preserve">
     <value>Obciążenie zastępcze</value>
   </data>
+  <data name="lblStaffel2Bereich3ErsatzLastOben.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 57</value>
+  </data>
   <data name="lblStaffel2Bereich3ErsatzLastOben.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 18</value>
   </data>
   <data name="lblStaffel2Bereich3ErsatzLastOben.Text" xml:space="preserve">
     <value>Obciążenie zastępcze</value>
+  </data>
+  <data name="RadTextBoxControlStaffel2Bereich3Fehler7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 248</value>
+  </data>
+  <data name="RadTextBoxControlStaffel2Bereich3Fehler6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 212</value>
+  </data>
+  <data name="RadTextBoxControlStaffel2Bereich3Fehler5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 176</value>
+  </data>
+  <data name="RadTextBoxControlStaffel2Bereich3Last4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 138</value>
+  </data>
+  <data name="RadTextBoxControlStaffel2Bereich3Anzeige4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>268, 138</value>
+  </data>
+  <data name="RadTextBoxControlStaffel2Bereich3Anzeige3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>268, 112</value>
+  </data>
+  <data name="RadTextBoxControlStaffel2Bereich3Last3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 112</value>
+  </data>
+  <data name="RadTextBoxControlStaffel2Bereich3Last2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 86</value>
+  </data>
+  <data name="RadTextBoxControlStaffel2Bereich3Anzeige1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>268, 60</value>
+  </data>
+  <data name="RadTextBoxControlStaffel2Bereich3Last1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 60</value>
+  </data>
+  <data name="lblStaffel2Bereich3MessabweichungWaage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 248</value>
+  </data>
+  <data name="lblStaffel2Bereich3MessabweichungStaffel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 212</value>
+  </data>
+  <data name="lblStaffel2Bereich3Differenz.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 176</value>
+  </data>
+  <data name="lblStaffel2Bereich3ZusastzNormalLast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 84</value>
   </data>
   <data name="lblStaffel2Bereich3ZusastzNormalLast.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 17</value>
@@ -821,11 +1550,32 @@
   <data name="lblStaffel2Bereich3ZusastzNormalLast.Text" xml:space="preserve">
     <value>&lt;html&gt;dodatkowe &lt;span style="color: #008000"&gt;obciążenie wzorcowe&lt;/span&gt;&lt;/html&gt;</value>
   </data>
+  <data name="lblStaffel2Bereich3NormalLast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 111</value>
+  </data>
   <data name="lblStaffel2Bereich3NormalLast.Size" type="System.Drawing.Size, System.Drawing">
     <value>172, 17</value>
   </data>
   <data name="lblStaffel2Bereich3NormalLast.Text" xml:space="preserve">
     <value>&lt;html&gt;Obciążenie zastępcze  + &lt;span style="color: #008000"&gt;wzorcowe&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="PictureBox21.Location" type="System.Drawing.Point, System.Drawing">
+    <value>376, 248</value>
+  </data>
+  <data name="PictureBox22.Location" type="System.Drawing.Point, System.Drawing">
+    <value>376, 211</value>
+  </data>
+  <data name="PictureBox23.Location" type="System.Drawing.Point, System.Drawing">
+    <value>376, 175</value>
+  </data>
+  <data name="lblStaffel2Bereich3EFGWert7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 247</value>
+  </data>
+  <data name="lblStaffel2Bereich3EFGWert6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 211</value>
+  </data>
+  <data name="lblStaffel2Bereich3EFGWert5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 175</value>
   </data>
   <data name="lblStaffel2Bereich3EFG.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 18</value>
@@ -852,11 +1602,32 @@
   <data name="lblStaffel2Bereich3Last.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;strong&gt;[Wartość&lt;br /&gt;zadana]&lt;/strong&gt;&lt;/html&gt;</value>
   </data>
+  <data name="PictureBox103.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 248</value>
+  </data>
+  <data name="PictureBox104.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 211</value>
+  </data>
+  <data name="PictureBox105.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 175</value>
+  </data>
   <data name="RadGroupBoxStaffel2Bereich3.HeaderText" xml:space="preserve">
     <value>Zakres 3</value>
   </data>
+  <data name="RadGroupBoxStaffel2Bereich3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>485, 276</value>
+  </data>
   <data name="RadGroupBoxStaffel2Bereich3.Text" xml:space="preserve">
     <value>Zakres 3</value>
+  </data>
+  <data name="PictureBox38.Location" type="System.Drawing.Point, System.Drawing">
+    <value>186, 138</value>
+  </data>
+  <data name="PictureBox39.Location" type="System.Drawing.Point, System.Drawing">
+    <value>186, 111</value>
+  </data>
+  <data name="lblStaffel2Bereich2ErsatzLastUnten.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 137</value>
   </data>
   <data name="lblStaffel2Bereich2ErsatzLastUnten.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 18</value>
@@ -864,11 +1635,56 @@
   <data name="lblStaffel2Bereich2ErsatzLastUnten.Text" xml:space="preserve">
     <value>Obciążenie zastępcze</value>
   </data>
+  <data name="lblStaffel2Bereich2ErsatzLastOben.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 57</value>
+  </data>
   <data name="lblStaffel2Bereich2ErsatzLastOben.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 18</value>
   </data>
   <data name="lblStaffel2Bereich2ErsatzLastOben.Text" xml:space="preserve">
     <value>Obciążenie zastępcze</value>
+  </data>
+  <data name="RadTextBoxControlStaffel2Bereich2Fehler7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 248</value>
+  </data>
+  <data name="RadTextBoxControlStaffel2Bereich2Fehler6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 212</value>
+  </data>
+  <data name="RadTextBoxControlStaffel2Bereich2Fehler5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 176</value>
+  </data>
+  <data name="RadTextBoxControlStaffel2Bereich2Last4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 138</value>
+  </data>
+  <data name="RadTextBoxControlStaffel2Bereich2Anzeige4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>268, 138</value>
+  </data>
+  <data name="RadTextBoxControlStaffel2Bereich2Anzeige3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>268, 112</value>
+  </data>
+  <data name="RadTextBoxControlStaffel2Bereich2Last3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 112</value>
+  </data>
+  <data name="RadTextBoxControlStaffel2Bereich2Last2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 86</value>
+  </data>
+  <data name="RadTextBoxControlStaffel2Bereich2Anzeige1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>268, 60</value>
+  </data>
+  <data name="RadTextBoxControlStaffel2Bereich2Last1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 60</value>
+  </data>
+  <data name="lblStaffel2Bereich2MessabweichungWaage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 248</value>
+  </data>
+  <data name="lblStaffel2Bereich2MessabweichungStaffel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 212</value>
+  </data>
+  <data name="lblStaffel2Bereich2Differenz.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 176</value>
+  </data>
+  <data name="lblStaffel2Bereich2ZusastzNormalLast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 84</value>
   </data>
   <data name="lblStaffel2Bereich2ZusastzNormalLast.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 17</value>
@@ -876,11 +1692,32 @@
   <data name="lblStaffel2Bereich2ZusastzNormalLast.Text" xml:space="preserve">
     <value>&lt;html&gt;dodatkowe &lt;span style="color: #008000"&gt;obciążenie wzorcowe&lt;/span&gt;&lt;/html&gt;</value>
   </data>
+  <data name="lblStaffel2Bereich2NormalLast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 111</value>
+  </data>
   <data name="lblStaffel2Bereich2NormalLast.Size" type="System.Drawing.Size, System.Drawing">
     <value>172, 17</value>
   </data>
   <data name="lblStaffel2Bereich2NormalLast.Text" xml:space="preserve">
     <value>&lt;html&gt;Obciążenie zastępcze  + &lt;span style="color: #008000"&gt;wzorcowe&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="PictureBox28.Location" type="System.Drawing.Point, System.Drawing">
+    <value>376, 248</value>
+  </data>
+  <data name="PictureBox29.Location" type="System.Drawing.Point, System.Drawing">
+    <value>376, 211</value>
+  </data>
+  <data name="PictureBox30.Location" type="System.Drawing.Point, System.Drawing">
+    <value>376, 175</value>
+  </data>
+  <data name="lblStaffel2Bereich2EFGWert7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 247</value>
+  </data>
+  <data name="lblStaffel2Bereich2EFGWert6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 211</value>
+  </data>
+  <data name="lblStaffel2Bereich2EFGWert5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 175</value>
   </data>
   <data name="lblStaffel2Bereich2EFG.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 18</value>
@@ -907,11 +1744,32 @@
   <data name="lblStaffel2Bereich2Last.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;strong&gt;[Wartość&lt;br /&gt;zadana]&lt;/strong&gt;&lt;/html&gt;</value>
   </data>
+  <data name="PictureBox97.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 248</value>
+  </data>
+  <data name="PictureBox98.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 211</value>
+  </data>
+  <data name="PictureBox102.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 175</value>
+  </data>
   <data name="RadGroupBoxStaffel2Bereich2.HeaderText" xml:space="preserve">
     <value>Zakres 2</value>
   </data>
+  <data name="RadGroupBoxStaffel2Bereich2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>485, 276</value>
+  </data>
   <data name="RadGroupBoxStaffel2Bereich2.Text" xml:space="preserve">
     <value>Zakres 2</value>
+  </data>
+  <data name="PictureBox33.Location" type="System.Drawing.Point, System.Drawing">
+    <value>186, 138</value>
+  </data>
+  <data name="PictureBox34.Location" type="System.Drawing.Point, System.Drawing">
+    <value>186, 111</value>
+  </data>
+  <data name="lblStaffel2Bereich1ErsatzLastUnten.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 136</value>
   </data>
   <data name="lblStaffel2Bereich1ErsatzLastUnten.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 18</value>
@@ -919,11 +1777,47 @@
   <data name="lblStaffel2Bereich1ErsatzLastUnten.Text" xml:space="preserve">
     <value>Obciążenie zastępcze</value>
   </data>
+  <data name="lblStaffel2Bereich1ErsatzLastOben.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 57</value>
+  </data>
   <data name="lblStaffel2Bereich1ErsatzLastOben.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 18</value>
   </data>
   <data name="lblStaffel2Bereich1ErsatzLastOben.Text" xml:space="preserve">
     <value>Obciążenie zastępcze</value>
+  </data>
+  <data name="RadTextBoxControlStaffel2Bereich1Fehler7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 248</value>
+  </data>
+  <data name="RadTextBoxControlStaffel2Bereich1Fehler6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 212</value>
+  </data>
+  <data name="RadTextBoxControlStaffel2Bereich1Fehler5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 176</value>
+  </data>
+  <data name="RadTextBoxControlStaffel2Bereich1Last4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 138</value>
+  </data>
+  <data name="RadTextBoxControlStaffel2Bereich1Anzeige4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>268, 138</value>
+  </data>
+  <data name="RadTextBoxControlStaffel2Bereich1Anzeige3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>268, 112</value>
+  </data>
+  <data name="RadTextBoxControlStaffel2Bereich1Last3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 112</value>
+  </data>
+  <data name="RadTextBoxControlStaffel2Bereich1Last2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 86</value>
+  </data>
+  <data name="RadTextBoxControlStaffel2Bereich1Anzeige1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>268, 60</value>
+  </data>
+  <data name="RadTextBoxControlStaffel2Bereich1Last1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 60</value>
+  </data>
+  <data name="lblStaffel2Bereich1MessabweichungWaage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 248</value>
   </data>
   <data name="lblStaffel2Bereich1MessabweichungWaage.Size" type="System.Drawing.Size, System.Drawing">
     <value>169, 17</value>
@@ -931,11 +1825,17 @@
   <data name="lblStaffel2Bereich1MessabweichungWaage.Text" xml:space="preserve">
     <value>&lt;html&gt;Odchyłka pomiarowa wagi &lt;span style="color: #008000"&gt;[&lt;span style="font-family: symbol"&gt;S&lt;/span&gt;Ewi]&lt;/span&gt;&lt;/html&gt;</value>
   </data>
+  <data name="lblStaffel2Bereich1MessabweichungStaffel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 212</value>
+  </data>
   <data name="lblStaffel2Bereich1MessabweichungStaffel.Size" type="System.Drawing.Size, System.Drawing">
     <value>231, 17</value>
   </data>
   <data name="lblStaffel2Bereich1MessabweichungStaffel.Text" xml:space="preserve">
     <value>&lt;html&gt;Odchyłka pomiarowa stopnia procedury  &lt;span style="color: #008000"&gt;[Ew2]&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel2Bereich1Differenz.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 176</value>
   </data>
   <data name="lblStaffel2Bereich1Differenz.Size" type="System.Drawing.Size, System.Drawing">
     <value>288, 32</value>
@@ -943,17 +1843,41 @@
   <data name="lblStaffel2Bereich1Differenz.Text" xml:space="preserve">
     <value>&lt;html&gt;Różnica wartości wskazanych bez obciążenia wzorcowego&lt;br /&gt;&lt;span style="color: #008000"&gt;[&lt;span style="font-size: 16px; font-family: symbol"&gt;D&lt;/span&gt;P2]&lt;/span&gt;&lt;/html&gt;</value>
   </data>
+  <data name="lblStaffel2Bereich1ZusastzNormalLast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 84</value>
+  </data>
   <data name="lblStaffel2Bereich1ZusastzNormalLast.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 17</value>
   </data>
   <data name="lblStaffel2Bereich1ZusastzNormalLast.Text" xml:space="preserve">
     <value>&lt;html&gt;dodatkowe &lt;span style="color: #008000"&gt;obciążenie wzorcowe&lt;/span&gt;&lt;/html&gt;</value>
   </data>
+  <data name="lblStaffel2Bereich1NormalLast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 111</value>
+  </data>
   <data name="lblStaffel2Bereich1NormalLast.Size" type="System.Drawing.Size, System.Drawing">
     <value>172, 17</value>
   </data>
   <data name="lblStaffel2Bereich1NormalLast.Text" xml:space="preserve">
     <value>&lt;html&gt;Obciążenie zastępcze  + &lt;span style="color: #008000"&gt;wzorcowe&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="PictureBox35.Location" type="System.Drawing.Point, System.Drawing">
+    <value>376, 248</value>
+  </data>
+  <data name="PictureBox36.Location" type="System.Drawing.Point, System.Drawing">
+    <value>376, 211</value>
+  </data>
+  <data name="PictureBox37.Location" type="System.Drawing.Point, System.Drawing">
+    <value>376, 175</value>
+  </data>
+  <data name="lblStaffel2Bereich1EFGWert7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 247</value>
+  </data>
+  <data name="lblStaffel2Bereich1EFGWert6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 211</value>
+  </data>
+  <data name="lblStaffel2Bereich1EFGWert5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 175</value>
   </data>
   <data name="lblStaffel2Bereich1EFG.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 18</value>
@@ -980,8 +1904,20 @@
   <data name="lblStaffel2Bereich1Last.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;strong&gt;[Wartość&lt;br /&gt;zadana]&lt;/strong&gt;&lt;/html&gt;</value>
   </data>
+  <data name="PictureBox91.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 248</value>
+  </data>
+  <data name="PictureBox95.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 211</value>
+  </data>
+  <data name="PictureBox96.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 175</value>
+  </data>
   <data name="RadGroupBoxStaffel2Bereich1.HeaderText" xml:space="preserve">
     <value>Zakres 1</value>
+  </data>
+  <data name="RadGroupBoxStaffel2Bereich1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>485, 276</value>
   </data>
   <data name="RadGroupBoxStaffel2Bereich1.Text" xml:space="preserve">
     <value>Zakres 1</value>
@@ -1115,11 +2051,17 @@
   <data name="RadGroupBoxStaffel2.HeaderText" xml:space="preserve">
     <value>2. Stopień procedury</value>
   </data>
+  <data name="RadGroupBoxStaffel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1484, 326</value>
+  </data>
   <data name="RadGroupBoxStaffel2.Text" xml:space="preserve">
     <value>2. Stopień procedury</value>
   </data>
   <data name="RadGroupBoxStaffel3.HeaderText" xml:space="preserve">
     <value>3. Stopień procedury</value>
+  </data>
+  <data name="RadGroupBoxStaffel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1484, 326</value>
   </data>
   <data name="RadGroupBoxStaffel3.Text" xml:space="preserve">
     <value>3. Stopień procedury</value>
@@ -1127,11 +2069,17 @@
   <data name="RadGroupBoxStaffel4.HeaderText" xml:space="preserve">
     <value>4. Stopień procedury</value>
   </data>
+  <data name="RadGroupBoxStaffel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1484, 326</value>
+  </data>
   <data name="RadGroupBoxStaffel4.Text" xml:space="preserve">
     <value>4. Stopień procedury</value>
   </data>
   <data name="RadGroupBoxStaffel5.HeaderText" xml:space="preserve">
     <value>5. Stopień procedury</value>
+  </data>
+  <data name="RadGroupBoxStaffel5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1484, 326</value>
   </data>
   <data name="RadGroupBoxStaffel5.Text" xml:space="preserve">
     <value>5. Stopień procedury</value>

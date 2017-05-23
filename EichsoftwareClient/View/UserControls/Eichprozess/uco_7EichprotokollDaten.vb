@@ -581,6 +581,12 @@ Public Class uco_7EichprotokollDaten
             End If
         End If
 
+        If IsNumeric(RadTextBoxControlBetragNormallast.Text) = False Then
+            RadTextBoxControlBetragNormallast.Focus()
+            AbortSaving = True
+            MarkControlRed(RadTextBoxControlBetragNormallast)
+        End If
+
         'fehlermeldung anzeigen bei falscher validierung
         Dim result = Me.ShowValidationErrorBox(True)
 

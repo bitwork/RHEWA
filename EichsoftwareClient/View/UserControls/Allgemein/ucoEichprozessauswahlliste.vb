@@ -71,11 +71,11 @@ Public Class ucoEichprozessauswahlliste
         'laden des eingestellten Moants für den nächsten Programmstart
         Try
             If My.Settings.RHEWAFilterMonatBis.Equals(New Date) Then
-                My.Settings.RHEWAFilterMonatBis = Date.Now
+                My.Settings.RHEWAFilterMonatBis = New Date(Now.Year, Now.Month, 1).AddMonths(1).AddDays(-1)
                 My.Settings.Save()
             End If
             If My.Settings.RHEWAFilterMonatVon.Equals(New Date) Then
-                My.Settings.RHEWAFilterMonatVon = Date.Now
+                My.Settings.RHEWAFilterMonatVon = New Date(Now.Year, Now.Month, 1)
                 My.Settings.Save()
 
             End If

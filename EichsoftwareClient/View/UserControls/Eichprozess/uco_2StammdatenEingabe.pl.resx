@@ -117,50 +117,30 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="RadGroupBoxAWG.HeaderText" xml:space="preserve">
-    <value>Miernik</value>
-  </data>
-  <data name="RadGroupBoxAWG.Text" xml:space="preserve">
-    <value>Miernik</value>
-  </data>
-  <data name="lblAWaageSeriennummer.Text" xml:space="preserve">
-    <value>Numer fabryczny</value>
-  </data>
-  <data name="lblWaagenart.Text" xml:space="preserve">
-    <value>Rodzaj wagi</value>
-  </data>
-  <data name="lblWaagenbaufirma.Text" xml:space="preserve">
-    <value>Firma budująca wagę</value>
-  </data>
-  <data name="lblAWaagenTyp.Text" xml:space="preserve">
-    <value>Typ wagi</value>
-  </data>
-  <data name="RadGroupBoxWZ.HeaderText" xml:space="preserve">
-    <value>Czujnik(i) tensometryczny (e )</value>
-  </data>
-  <data name="RadGroupBoxWZ.Text" xml:space="preserve">
-    <value>Czujnik(i) tensometryczny (e )</value>
-  </data>
-  <data name="RadLabel16.Text" xml:space="preserve">
-    <value>Właściciel zatwierdzenia</value>
-  </data>
-  <data name="lblAWGHersteller.Text" xml:space="preserve">
-    <value>Producent</value>
-  </data>
-  <data name="lblAWZHersteller.Text" xml:space="preserve">
-    <value>Producent</value>
-  </data>
-  <data name="lblOrt.Text" xml:space="preserve">
-    <value>Miejscowość</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblPLZ.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 18</value>
   </data>
   <data name="lblPLZ.Text" xml:space="preserve">
     <value>Kod pocztowy</value>
   </data>
-  <data name="lblAWGBauart.Text" xml:space="preserve">
-    <value>Świadectwo badania</value>
+  <data name="lblOrt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 18</value>
   </data>
-  <data name="lblAWZZulassung.Text" xml:space="preserve">
-    <value>Świadectwo badania</value>
+  <data name="lblOrt.Text" xml:space="preserve">
+    <value>Miejscowość</value>
+  </data>
+  <data name="lblStrasse.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 18</value>
+  </data>
+  <data name="lblStrasse.Text" xml:space="preserve">
+    <value>ulica</value>
+  </data>
+  <data name="lblWaagenbaufirma.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 18</value>
+  </data>
+  <data name="lblWaagenbaufirma.Text" xml:space="preserve">
+    <value>Firma budująca wagę</value>
   </data>
   <data name="RadGroupBoxStammdaten.HeaderText" xml:space="preserve">
     <value>Dane podstawowe</value>
@@ -168,25 +148,94 @@
   <data name="RadGroupBoxStammdaten.Text" xml:space="preserve">
     <value>Dane podstawowe</value>
   </data>
-  <data name="lblStrasse.Text" xml:space="preserve">
-    <value>ulica</value>
-  </data>
-  <data name="lblAWGTyp.Text" xml:space="preserve">
-    <value>Typ</value>
+  <data name="lblAWZTyp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 18</value>
   </data>
   <data name="lblAWZTyp.Text" xml:space="preserve">
     <value>Typ</value>
   </data>
-  <data name="lblAWGBauart2.Text" xml:space="preserve">
-    <value>i / lub dopuszczenie sposobu budowy</value>
+  <data name="lblAWZZulassung2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 18</value>
   </data>
   <data name="lblAWZZulassung2.Text" xml:space="preserve">
     <value>i / lub dopuszczenie sposobu budowy</value>
+  </data>
+  <data name="lblAWZZulassung.Size" type="System.Drawing.Size, System.Drawing">
+    <value>108, 18</value>
+  </data>
+  <data name="lblAWZZulassung.Text" xml:space="preserve">
+    <value>Świadectwo badania</value>
+  </data>
+  <data name="lblAWZHersteller.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 18</value>
+  </data>
+  <data name="lblAWZHersteller.Text" xml:space="preserve">
+    <value>Producent</value>
+  </data>
+  <data name="RadGroupBoxWZ.HeaderText" xml:space="preserve">
+    <value>Czujnik(i) tensometryczny (e )</value>
+  </data>
+  <data name="RadGroupBoxWZ.Text" xml:space="preserve">
+    <value>Czujnik(i) tensometryczny (e )</value>
+  </data>
+  <data name="lblWaagenart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 18</value>
+  </data>
+  <data name="lblWaagenart.Text" xml:space="preserve">
+    <value>Rodzaj wagi</value>
+  </data>
+  <data name="RadLabel16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 18</value>
+  </data>
+  <data name="RadLabel16.Text" xml:space="preserve">
+    <value>Właściciel zatwierdzenia</value>
+  </data>
+  <data name="lblAWaagenTyp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 18</value>
+  </data>
+  <data name="lblAWaagenTyp.Text" xml:space="preserve">
+    <value>Typ wagi</value>
+  </data>
+  <data name="lblAWaageSeriennummer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 18</value>
+  </data>
+  <data name="lblAWaageSeriennummer.Text" xml:space="preserve">
+    <value>Numer fabryczny</value>
   </data>
   <data name="RadGroupBoxWaage.HeaderText" xml:space="preserve">
     <value>Waga (nieautomatyczna)</value>
   </data>
   <data name="RadGroupBoxWaage.Text" xml:space="preserve">
     <value>Waga (nieautomatyczna)</value>
+  </data>
+  <data name="lblAWGTyp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 18</value>
+  </data>
+  <data name="lblAWGTyp.Text" xml:space="preserve">
+    <value>Typ</value>
+  </data>
+  <data name="lblAWGBauart2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 18</value>
+  </data>
+  <data name="lblAWGBauart2.Text" xml:space="preserve">
+    <value>i / lub dopuszczenie sposobu budowy</value>
+  </data>
+  <data name="lblAWGBauart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>108, 18</value>
+  </data>
+  <data name="lblAWGBauart.Text" xml:space="preserve">
+    <value>Świadectwo badania</value>
+  </data>
+  <data name="lblAWGHersteller.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 18</value>
+  </data>
+  <data name="lblAWGHersteller.Text" xml:space="preserve">
+    <value>Producent</value>
+  </data>
+  <data name="RadGroupBoxAWG.HeaderText" xml:space="preserve">
+    <value>Miernik</value>
+  </data>
+  <data name="RadGroupBoxAWG.Text" xml:space="preserve">
+    <value>Miernik</value>
   </data>
 </root>

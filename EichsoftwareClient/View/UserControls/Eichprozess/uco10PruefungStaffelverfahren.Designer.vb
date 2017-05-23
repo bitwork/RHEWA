@@ -26,9 +26,6 @@ Partial Class uco10PruefungStaffelverfahren
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco10PruefungStaffelverfahren))
         Me.RadScrollablePanel1 = New Telerik.WinControls.UI.RadScrollablePanel()
         Me.RadGroupBoxStaffel5Bereich3 = New Telerik.WinControls.UI.RadGroupBox()
-        Me.PictureBox124 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox125 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox126 = New System.Windows.Forms.PictureBox()
         Me.PictureBox66 = New System.Windows.Forms.PictureBox()
         Me.PictureBox67 = New System.Windows.Forms.PictureBox()
         Me.lblStaffel5Bereich3ErsatzLastUnten = New Telerik.WinControls.UI.RadLabel()
@@ -58,10 +55,10 @@ Partial Class uco10PruefungStaffelverfahren
         Me.lblStaffel5Bereich3Fehler = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel5Bereich3Anzeige = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel5Bereich3Last = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox124 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox125 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox126 = New System.Windows.Forms.PictureBox()
         Me.RadGroupBoxStaffel5Bereich2 = New Telerik.WinControls.UI.RadGroupBox()
-        Me.PictureBox127 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox128 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox129 = New System.Windows.Forms.PictureBox()
         Me.PictureBox68 = New System.Windows.Forms.PictureBox()
         Me.PictureBox69 = New System.Windows.Forms.PictureBox()
         Me.lblStaffel5Bereich2ErsatzLastUnten = New Telerik.WinControls.UI.RadLabel()
@@ -91,10 +88,10 @@ Partial Class uco10PruefungStaffelverfahren
         Me.lblStaffel5Bereich2Fehler = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel5Bereich2Anzeige = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel5Bereich2Last = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox127 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox128 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox129 = New System.Windows.Forms.PictureBox()
         Me.RadGroupBoxStaffel5Bereich1 = New Telerik.WinControls.UI.RadGroupBox()
-        Me.PictureBox130 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox131 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox132 = New System.Windows.Forms.PictureBox()
         Me.PictureBox73 = New System.Windows.Forms.PictureBox()
         Me.PictureBox74 = New System.Windows.Forms.PictureBox()
         Me.lblStaffel5Bereich1ErsatzLastUnten = New Telerik.WinControls.UI.RadLabel()
@@ -124,10 +121,10 @@ Partial Class uco10PruefungStaffelverfahren
         Me.lblStaffel5Bereich1Fehler = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel5Bereich1Anzeige = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel5Bereich1Last = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox130 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox131 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox132 = New System.Windows.Forms.PictureBox()
         Me.RadGroupBoxStaffel4Bereich3 = New Telerik.WinControls.UI.RadGroupBox()
-        Me.PictureBox121 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox122 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox123 = New System.Windows.Forms.PictureBox()
         Me.PictureBox61 = New System.Windows.Forms.PictureBox()
         Me.PictureBox62 = New System.Windows.Forms.PictureBox()
         Me.lblStaffel4Bereich3ErsatzLastUnten = New Telerik.WinControls.UI.RadLabel()
@@ -157,10 +154,10 @@ Partial Class uco10PruefungStaffelverfahren
         Me.lblStaffel4Bereich3Fehler = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel4Bereich3Anzeige = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel4Bereich3Last = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox121 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox122 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox123 = New System.Windows.Forms.PictureBox()
         Me.RadGroupBoxStaffel4Bereich2 = New Telerik.WinControls.UI.RadGroupBox()
-        Me.PictureBox118 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox119 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox120 = New System.Windows.Forms.PictureBox()
         Me.PictureBox59 = New System.Windows.Forms.PictureBox()
         Me.PictureBox60 = New System.Windows.Forms.PictureBox()
         Me.lblStaffel4Bereich2ErsatzLastUnten = New Telerik.WinControls.UI.RadLabel()
@@ -190,10 +187,10 @@ Partial Class uco10PruefungStaffelverfahren
         Me.lblStaffel4Bereich2Fehler = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel4Bereich2Anzeige = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel4Bereich2Last = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox118 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox119 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox120 = New System.Windows.Forms.PictureBox()
         Me.RadGroupBoxStaffel4Bereich1 = New Telerik.WinControls.UI.RadGroupBox()
-        Me.PictureBox115 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox116 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox117 = New System.Windows.Forms.PictureBox()
         Me.PictureBox54 = New System.Windows.Forms.PictureBox()
         Me.PictureBox55 = New System.Windows.Forms.PictureBox()
         Me.lblStaffel4Bereich1ErsatzLastUnten = New Telerik.WinControls.UI.RadLabel()
@@ -223,10 +220,10 @@ Partial Class uco10PruefungStaffelverfahren
         Me.lblStaffel4Bereich1Fehler = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel4Bereich1Anzeige = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel4Bereich1Last = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox115 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox116 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox117 = New System.Windows.Forms.PictureBox()
         Me.RadGroupBoxStaffel3Bereich3 = New Telerik.WinControls.UI.RadGroupBox()
-        Me.PictureBox106 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox107 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox108 = New System.Windows.Forms.PictureBox()
         Me.PictureBox45 = New System.Windows.Forms.PictureBox()
         Me.PictureBox46 = New System.Windows.Forms.PictureBox()
         Me.lblStaffel3Bereich3ErsatzLastUnten = New Telerik.WinControls.UI.RadLabel()
@@ -256,10 +253,10 @@ Partial Class uco10PruefungStaffelverfahren
         Me.lblStaffel3Bereich3Fehler = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel3Bereich3Anzeige = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel3Bereich3Last = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox106 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox107 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox108 = New System.Windows.Forms.PictureBox()
         Me.RadGroupBoxStaffel3Bereich2 = New Telerik.WinControls.UI.RadGroupBox()
-        Me.PictureBox109 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox110 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox111 = New System.Windows.Forms.PictureBox()
         Me.PictureBox47 = New System.Windows.Forms.PictureBox()
         Me.PictureBox48 = New System.Windows.Forms.PictureBox()
         Me.lblStaffel3Bereich2ErsatzLastUnten = New Telerik.WinControls.UI.RadLabel()
@@ -289,10 +286,10 @@ Partial Class uco10PruefungStaffelverfahren
         Me.lblStaffel3Bereich2Fehler = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel3Bereich2Anzeige = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel3Bereich2Last = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox109 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox110 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox111 = New System.Windows.Forms.PictureBox()
         Me.RadGroupBoxStaffel3Bereich1 = New Telerik.WinControls.UI.RadGroupBox()
-        Me.PictureBox112 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox113 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox114 = New System.Windows.Forms.PictureBox()
         Me.PictureBox52 = New System.Windows.Forms.PictureBox()
         Me.PictureBox53 = New System.Windows.Forms.PictureBox()
         Me.lblStaffel3Bereich1ErsatzLastUnten = New Telerik.WinControls.UI.RadLabel()
@@ -322,10 +319,10 @@ Partial Class uco10PruefungStaffelverfahren
         Me.lblStaffel3Bereich1Fehler = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel3Bereich1Anzeige = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel3Bereich1Last = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox112 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox113 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox114 = New System.Windows.Forms.PictureBox()
         Me.RadGroupBoxStaffel2Bereich3 = New Telerik.WinControls.UI.RadGroupBox()
-        Me.PictureBox103 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox104 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox105 = New System.Windows.Forms.PictureBox()
         Me.PictureBox40 = New System.Windows.Forms.PictureBox()
         Me.PictureBox41 = New System.Windows.Forms.PictureBox()
         Me.lblStaffel2Bereich3ErsatzLastUnten = New Telerik.WinControls.UI.RadLabel()
@@ -355,10 +352,10 @@ Partial Class uco10PruefungStaffelverfahren
         Me.lblStaffel2Bereich3Fehler = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel2Bereich3Anzeige = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel2Bereich3Last = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox103 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox104 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox105 = New System.Windows.Forms.PictureBox()
         Me.RadGroupBoxStaffel2Bereich2 = New Telerik.WinControls.UI.RadGroupBox()
-        Me.PictureBox97 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox98 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox102 = New System.Windows.Forms.PictureBox()
         Me.PictureBox38 = New System.Windows.Forms.PictureBox()
         Me.PictureBox39 = New System.Windows.Forms.PictureBox()
         Me.lblStaffel2Bereich2ErsatzLastUnten = New Telerik.WinControls.UI.RadLabel()
@@ -388,10 +385,10 @@ Partial Class uco10PruefungStaffelverfahren
         Me.lblStaffel2Bereich2Fehler = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel2Bereich2Anzeige = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel2Bereich2Last = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox97 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox98 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox102 = New System.Windows.Forms.PictureBox()
         Me.RadGroupBoxStaffel2Bereich1 = New Telerik.WinControls.UI.RadGroupBox()
-        Me.PictureBox91 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox95 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox96 = New System.Windows.Forms.PictureBox()
         Me.PictureBox33 = New System.Windows.Forms.PictureBox()
         Me.PictureBox34 = New System.Windows.Forms.PictureBox()
         Me.lblStaffel2Bereich1ErsatzLastUnten = New Telerik.WinControls.UI.RadLabel()
@@ -421,16 +418,13 @@ Partial Class uco10PruefungStaffelverfahren
         Me.lblStaffel2Bereich1Fehler = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel2Bereich1Anzeige = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel2Bereich1Last = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox91 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox95 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox96 = New System.Windows.Forms.PictureBox()
         Me.RadGroupBoxStaffel1Bereich3 = New Telerik.WinControls.UI.RadGroupBox()
         Me.PictureBox141 = New System.Windows.Forms.PictureBox()
         Me.RadLabel8 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel3 = New Telerik.WinControls.UI.RadLabel()
-        Me.PictureBox88 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox89 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox90 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox27 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox31 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox32 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlStaffel1Bereich3Fehler7 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlStaffel1Bereich3Fehler6 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlStaffel1Bereich3Fehler5 = New Telerik.WinControls.UI.RadTextBox()
@@ -447,32 +441,32 @@ Partial Class uco10PruefungStaffelverfahren
         Me.lblStaffel1Bereich3MessabweichungStaffel = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel1Bereich3Differenz = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel1Bereich3NormalLast = New Telerik.WinControls.UI.RadLabel()
-        Me.PictureBox15 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox16 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox17 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox18 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox19 = New System.Windows.Forms.PictureBox()
         Me.lblStaffel1Bereich3EFGWert7 = New Telerik.WinControls.UI.RadMaskedEditBox()
         Me.lblStaffel1Bereich3EFGWert6 = New Telerik.WinControls.UI.RadMaskedEditBox()
         Me.lblStaffel1Bereich3EFGWert5 = New Telerik.WinControls.UI.RadMaskedEditBox()
         Me.lblStaffel1Bereich3EFGWert4 = New Telerik.WinControls.UI.RadMaskedEditBox()
         Me.lblStaffel1Bereich3EFGWert3 = New Telerik.WinControls.UI.RadMaskedEditBox()
-        Me.PictureBox20 = New System.Windows.Forms.PictureBox()
         Me.lblStaffel1Bereich3EFGWert1 = New Telerik.WinControls.UI.RadMaskedEditBox()
         Me.lblStaffel1Bereich3EFG = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel1Bereich3Fehler = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel1Bereich3Anzeige = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel1Bereich3Last = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox88 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox89 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox90 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox27 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox31 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox32 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox15 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox16 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox17 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox18 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox19 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox20 = New System.Windows.Forms.PictureBox()
         Me.RadGroupBoxStaffel1Bereich2 = New Telerik.WinControls.UI.RadGroupBox()
         Me.PictureBox139 = New System.Windows.Forms.PictureBox()
         Me.RadLabel6 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel2 = New Telerik.WinControls.UI.RadLabel()
-        Me.PictureBox82 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox83 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox84 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox24 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox25 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox26 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlStaffel1Bereich2Fehler7 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlStaffel1Bereich2Fehler6 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlStaffel1Bereich2Fehler5 = New Telerik.WinControls.UI.RadTextBox()
@@ -489,39 +483,37 @@ Partial Class uco10PruefungStaffelverfahren
         Me.lblStaffel1Bereich2MessabweichungStaffel = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel1Bereich2Differenz = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel1Bereich2NormalLast = New Telerik.WinControls.UI.RadLabel()
-        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox10 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox11 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox12 = New System.Windows.Forms.PictureBox()
         Me.lblStaffel1Bereich2EFGWert7 = New Telerik.WinControls.UI.RadMaskedEditBox()
         Me.lblStaffel1Bereich2EFGWert6 = New Telerik.WinControls.UI.RadMaskedEditBox()
         Me.lblStaffel1Bereich2EFGWert5 = New Telerik.WinControls.UI.RadMaskedEditBox()
         Me.lblStaffel1Bereich2EFGWert4 = New Telerik.WinControls.UI.RadMaskedEditBox()
         Me.lblStaffel1Bereich2EFGWert3 = New Telerik.WinControls.UI.RadMaskedEditBox()
-        Me.PictureBox13 = New System.Windows.Forms.PictureBox()
         Me.lblStaffel1Bereich2EFGWert1 = New Telerik.WinControls.UI.RadMaskedEditBox()
         Me.lblStaffel1Bereich2EFG = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel1Bereich2Fehler = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel1Bereich2Anzeige = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel1Bereich2Last = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox82 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox83 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox84 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox24 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox25 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox26 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox10 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox11 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox12 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox13 = New System.Windows.Forms.PictureBox()
         Me.RadGroupBoxStaffel1Bereich1 = New Telerik.WinControls.UI.RadGroupBox()
         Me.PictureBox140 = New System.Windows.Forms.PictureBox()
         Me.RadLabel5 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel4 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel1 = New Telerik.WinControls.UI.RadLabel()
-        Me.PictureBox133 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlStaffel1Bereich1Last2 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlStaffel1Bereich1Anzeige2 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlStaffel1Bereich1Fehler2 = New Telerik.WinControls.UI.RadTextBox()
-        Me.PictureBox134 = New System.Windows.Forms.PictureBox()
         Me.lblStaffel1Bereich1EFGWert2 = New Telerik.WinControls.UI.RadMaskedEditBox()
-        Me.PictureBox75 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox76 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox81 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox14 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlStaffel1Bereich1Fehler7 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlStaffel1Bereich1Fehler6 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlStaffel1Bereich1Fehler5 = New Telerik.WinControls.UI.RadTextBox()
@@ -538,22 +530,30 @@ Partial Class uco10PruefungStaffelverfahren
         Me.lblStaffel1Bereich1MessabweichungStaffel = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel1Bereich1Differenz = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel1Bereich1NormalLast = New Telerik.WinControls.UI.RadLabel()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.lblStaffel1Bereich1EFGWert7 = New Telerik.WinControls.UI.RadMaskedEditBox()
         Me.lblStaffel1Bereich1EFGWert6 = New Telerik.WinControls.UI.RadMaskedEditBox()
         Me.lblStaffel1Bereich1EFGWert5 = New Telerik.WinControls.UI.RadMaskedEditBox()
         Me.lblStaffel1Bereich1EFGWert4 = New Telerik.WinControls.UI.RadMaskedEditBox()
         Me.lblStaffel1Bereich1EFGWert3 = New Telerik.WinControls.UI.RadMaskedEditBox()
-        Me.PictureBox79 = New System.Windows.Forms.PictureBox()
         Me.lblStaffel1Bereich1EFGWert1 = New Telerik.WinControls.UI.RadMaskedEditBox()
         Me.lblStaffel1Bereich1EFG = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel1Bereich1Fehler = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel1Bereich1Anzeige = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel1Bereich1Last = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox133 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox134 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox75 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox76 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox81 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox14 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox79 = New System.Windows.Forms.PictureBox()
         Me.RadGroupBoxStaffel1 = New Telerik.WinControls.UI.RadGroupBox()
         Me.RadGroupBoxStaffel2 = New Telerik.WinControls.UI.RadGroupBox()
         Me.RadGroupBoxStaffel3 = New Telerik.WinControls.UI.RadGroupBox()
@@ -564,9 +564,6 @@ Partial Class uco10PruefungStaffelverfahren
         Me.RadScrollablePanel1.SuspendLayout()
         CType(Me.RadGroupBoxStaffel5Bereich3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxStaffel5Bereich3.SuspendLayout()
-        CType(Me.PictureBox124, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox125, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox126, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox66, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox67, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel5Bereich3ErsatzLastUnten, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -596,11 +593,11 @@ Partial Class uco10PruefungStaffelverfahren
         CType(Me.lblStaffel5Bereich3Fehler, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel5Bereich3Anzeige, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel5Bereich3Last, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox124, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox125, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox126, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBoxStaffel5Bereich2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxStaffel5Bereich2.SuspendLayout()
-        CType(Me.PictureBox127, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox128, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox129, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox68, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox69, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel5Bereich2ErsatzLastUnten, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -630,11 +627,11 @@ Partial Class uco10PruefungStaffelverfahren
         CType(Me.lblStaffel5Bereich2Fehler, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel5Bereich2Anzeige, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel5Bereich2Last, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox127, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox128, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox129, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBoxStaffel5Bereich1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxStaffel5Bereich1.SuspendLayout()
-        CType(Me.PictureBox130, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox131, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox132, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox73, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox74, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel5Bereich1ErsatzLastUnten, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -664,11 +661,11 @@ Partial Class uco10PruefungStaffelverfahren
         CType(Me.lblStaffel5Bereich1Fehler, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel5Bereich1Anzeige, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel5Bereich1Last, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox130, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox131, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox132, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBoxStaffel4Bereich3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxStaffel4Bereich3.SuspendLayout()
-        CType(Me.PictureBox121, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox122, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox123, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox61, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox62, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel4Bereich3ErsatzLastUnten, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -698,11 +695,11 @@ Partial Class uco10PruefungStaffelverfahren
         CType(Me.lblStaffel4Bereich3Fehler, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel4Bereich3Anzeige, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel4Bereich3Last, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox121, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox122, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox123, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBoxStaffel4Bereich2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxStaffel4Bereich2.SuspendLayout()
-        CType(Me.PictureBox118, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox119, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox120, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox59, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox60, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel4Bereich2ErsatzLastUnten, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -732,11 +729,11 @@ Partial Class uco10PruefungStaffelverfahren
         CType(Me.lblStaffel4Bereich2Fehler, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel4Bereich2Anzeige, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel4Bereich2Last, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox118, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox119, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox120, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBoxStaffel4Bereich1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxStaffel4Bereich1.SuspendLayout()
-        CType(Me.PictureBox115, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox116, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox117, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox54, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox55, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel4Bereich1ErsatzLastUnten, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -766,11 +763,11 @@ Partial Class uco10PruefungStaffelverfahren
         CType(Me.lblStaffel4Bereich1Fehler, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel4Bereich1Anzeige, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel4Bereich1Last, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox115, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox116, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox117, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBoxStaffel3Bereich3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxStaffel3Bereich3.SuspendLayout()
-        CType(Me.PictureBox106, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox107, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox108, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox45, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox46, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel3Bereich3ErsatzLastUnten, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -800,11 +797,11 @@ Partial Class uco10PruefungStaffelverfahren
         CType(Me.lblStaffel3Bereich3Fehler, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel3Bereich3Anzeige, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel3Bereich3Last, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox106, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox107, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox108, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBoxStaffel3Bereich2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxStaffel3Bereich2.SuspendLayout()
-        CType(Me.PictureBox109, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox110, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox111, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox47, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox48, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel3Bereich2ErsatzLastUnten, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -834,11 +831,11 @@ Partial Class uco10PruefungStaffelverfahren
         CType(Me.lblStaffel3Bereich2Fehler, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel3Bereich2Anzeige, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel3Bereich2Last, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox109, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox110, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox111, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBoxStaffel3Bereich1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxStaffel3Bereich1.SuspendLayout()
-        CType(Me.PictureBox112, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox113, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox114, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox52, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox53, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel3Bereich1ErsatzLastUnten, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -868,11 +865,11 @@ Partial Class uco10PruefungStaffelverfahren
         CType(Me.lblStaffel3Bereich1Fehler, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel3Bereich1Anzeige, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel3Bereich1Last, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox112, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox113, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox114, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBoxStaffel2Bereich3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxStaffel2Bereich3.SuspendLayout()
-        CType(Me.PictureBox103, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox104, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox105, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox40, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox41, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel2Bereich3ErsatzLastUnten, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -902,11 +899,11 @@ Partial Class uco10PruefungStaffelverfahren
         CType(Me.lblStaffel2Bereich3Fehler, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel2Bereich3Anzeige, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel2Bereich3Last, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox103, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox104, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox105, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBoxStaffel2Bereich2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxStaffel2Bereich2.SuspendLayout()
-        CType(Me.PictureBox97, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox98, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox102, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox38, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox39, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel2Bereich2ErsatzLastUnten, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -936,11 +933,11 @@ Partial Class uco10PruefungStaffelverfahren
         CType(Me.lblStaffel2Bereich2Fehler, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel2Bereich2Anzeige, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel2Bereich2Last, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox97, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox98, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox102, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBoxStaffel2Bereich1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxStaffel2Bereich1.SuspendLayout()
-        CType(Me.PictureBox91, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox95, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox96, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox33, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox34, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel2Bereich1ErsatzLastUnten, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -970,17 +967,14 @@ Partial Class uco10PruefungStaffelverfahren
         CType(Me.lblStaffel2Bereich1Fehler, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel2Bereich1Anzeige, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel2Bereich1Last, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox91, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox95, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox96, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBoxStaffel1Bereich3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxStaffel1Bereich3.SuspendLayout()
         CType(Me.PictureBox141, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox88, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox89, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox90, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox27, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox31, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox32, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlStaffel1Bereich3Fehler7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlStaffel1Bereich3Fehler6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlStaffel1Bereich3Fehler5, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -997,33 +991,33 @@ Partial Class uco10PruefungStaffelverfahren
         CType(Me.lblStaffel1Bereich3MessabweichungStaffel, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel1Bereich3Differenz, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel1Bereich3NormalLast, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel1Bereich3EFGWert7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel1Bereich3EFGWert6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel1Bereich3EFGWert5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel1Bereich3EFGWert4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel1Bereich3EFGWert3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel1Bereich3EFGWert1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel1Bereich3EFG, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel1Bereich3Fehler, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel1Bereich3Anzeige, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel1Bereich3Last, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox88, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox89, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox90, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox27, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox31, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox32, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBoxStaffel1Bereich2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxStaffel1Bereich2.SuspendLayout()
         CType(Me.PictureBox139, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox82, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox83, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox84, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox24, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox25, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox26, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlStaffel1Bereich2Fehler7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlStaffel1Bereich2Fehler6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlStaffel1Bereich2Fehler5, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1040,40 +1034,38 @@ Partial Class uco10PruefungStaffelverfahren
         CType(Me.lblStaffel1Bereich2MessabweichungStaffel, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel1Bereich2Differenz, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel1Bereich2NormalLast, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel1Bereich2EFGWert7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel1Bereich2EFGWert6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel1Bereich2EFGWert5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel1Bereich2EFGWert4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel1Bereich2EFGWert3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel1Bereich2EFGWert1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel1Bereich2EFG, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel1Bereich2Fehler, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel1Bereich2Anzeige, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel1Bereich2Last, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox82, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox83, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox84, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox24, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox25, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox26, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBoxStaffel1Bereich1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxStaffel1Bereich1.SuspendLayout()
         CType(Me.PictureBox140, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox133, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlStaffel1Bereich1Last2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlStaffel1Bereich1Anzeige2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlStaffel1Bereich1Fehler2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox134, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel1Bereich1EFGWert2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox75, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox76, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox81, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlStaffel1Bereich1Fehler7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlStaffel1Bereich1Fehler6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlStaffel1Bereich1Fehler5, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1090,22 +1082,30 @@ Partial Class uco10PruefungStaffelverfahren
         CType(Me.lblStaffel1Bereich1MessabweichungStaffel, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel1Bereich1Differenz, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel1Bereich1NormalLast, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel1Bereich1EFGWert7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel1Bereich1EFGWert6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel1Bereich1EFGWert5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel1Bereich1EFGWert4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel1Bereich1EFGWert3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox79, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel1Bereich1EFGWert1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel1Bereich1EFG, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel1Bereich1Fehler, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel1Bereich1Anzeige, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStaffel1Bereich1Last, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox133, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox134, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox75, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox76, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox81, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox79, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBoxStaffel1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBoxStaffel2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBoxStaffel3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1146,9 +1146,6 @@ Partial Class uco10PruefungStaffelverfahren
         '
         resources.ApplyResources(Me.RadGroupBoxStaffel5Bereich3, "RadGroupBoxStaffel5Bereich3")
         Me.RadGroupBoxStaffel5Bereich3.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
-        Me.RadGroupBoxStaffel5Bereich3.Controls.Add(Me.PictureBox124)
-        Me.RadGroupBoxStaffel5Bereich3.Controls.Add(Me.PictureBox125)
-        Me.RadGroupBoxStaffel5Bereich3.Controls.Add(Me.PictureBox126)
         Me.RadGroupBoxStaffel5Bereich3.Controls.Add(Me.PictureBox66)
         Me.RadGroupBoxStaffel5Bereich3.Controls.Add(Me.PictureBox67)
         Me.RadGroupBoxStaffel5Bereich3.Controls.Add(Me.lblStaffel5Bereich3ErsatzLastUnten)
@@ -1178,28 +1175,10 @@ Partial Class uco10PruefungStaffelverfahren
         Me.RadGroupBoxStaffel5Bereich3.Controls.Add(Me.lblStaffel5Bereich3Fehler)
         Me.RadGroupBoxStaffel5Bereich3.Controls.Add(Me.lblStaffel5Bereich3Anzeige)
         Me.RadGroupBoxStaffel5Bereich3.Controls.Add(Me.lblStaffel5Bereich3Last)
+        Me.RadGroupBoxStaffel5Bereich3.Controls.Add(Me.PictureBox124)
+        Me.RadGroupBoxStaffel5Bereich3.Controls.Add(Me.PictureBox125)
+        Me.RadGroupBoxStaffel5Bereich3.Controls.Add(Me.PictureBox126)
         Me.RadGroupBoxStaffel5Bereich3.Name = "RadGroupBoxStaffel5Bereich3"
-        '
-        'PictureBox124
-        '
-        resources.ApplyResources(Me.PictureBox124, "PictureBox124")
-        Me.PictureBox124.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox124.Name = "PictureBox124"
-        Me.PictureBox124.TabStop = False
-        '
-        'PictureBox125
-        '
-        resources.ApplyResources(Me.PictureBox125, "PictureBox125")
-        Me.PictureBox125.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox125.Name = "PictureBox125"
-        Me.PictureBox125.TabStop = False
-        '
-        'PictureBox126
-        '
-        resources.ApplyResources(Me.PictureBox126, "PictureBox126")
-        Me.PictureBox126.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox126.Name = "PictureBox126"
-        Me.PictureBox126.TabStop = False
         '
         'PictureBox66
         '
@@ -1367,13 +1346,31 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel5Bereich3Last, "lblStaffel5Bereich3Last")
         Me.lblStaffel5Bereich3Last.Name = "lblStaffel5Bereich3Last"
         '
+        'PictureBox124
+        '
+        resources.ApplyResources(Me.PictureBox124, "PictureBox124")
+        Me.PictureBox124.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox124.Name = "PictureBox124"
+        Me.PictureBox124.TabStop = False
+        '
+        'PictureBox125
+        '
+        resources.ApplyResources(Me.PictureBox125, "PictureBox125")
+        Me.PictureBox125.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox125.Name = "PictureBox125"
+        Me.PictureBox125.TabStop = False
+        '
+        'PictureBox126
+        '
+        resources.ApplyResources(Me.PictureBox126, "PictureBox126")
+        Me.PictureBox126.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox126.Name = "PictureBox126"
+        Me.PictureBox126.TabStop = False
+        '
         'RadGroupBoxStaffel5Bereich2
         '
         resources.ApplyResources(Me.RadGroupBoxStaffel5Bereich2, "RadGroupBoxStaffel5Bereich2")
         Me.RadGroupBoxStaffel5Bereich2.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
-        Me.RadGroupBoxStaffel5Bereich2.Controls.Add(Me.PictureBox127)
-        Me.RadGroupBoxStaffel5Bereich2.Controls.Add(Me.PictureBox128)
-        Me.RadGroupBoxStaffel5Bereich2.Controls.Add(Me.PictureBox129)
         Me.RadGroupBoxStaffel5Bereich2.Controls.Add(Me.PictureBox68)
         Me.RadGroupBoxStaffel5Bereich2.Controls.Add(Me.PictureBox69)
         Me.RadGroupBoxStaffel5Bereich2.Controls.Add(Me.lblStaffel5Bereich2ErsatzLastUnten)
@@ -1403,28 +1400,10 @@ Partial Class uco10PruefungStaffelverfahren
         Me.RadGroupBoxStaffel5Bereich2.Controls.Add(Me.lblStaffel5Bereich2Fehler)
         Me.RadGroupBoxStaffel5Bereich2.Controls.Add(Me.lblStaffel5Bereich2Anzeige)
         Me.RadGroupBoxStaffel5Bereich2.Controls.Add(Me.lblStaffel5Bereich2Last)
+        Me.RadGroupBoxStaffel5Bereich2.Controls.Add(Me.PictureBox127)
+        Me.RadGroupBoxStaffel5Bereich2.Controls.Add(Me.PictureBox128)
+        Me.RadGroupBoxStaffel5Bereich2.Controls.Add(Me.PictureBox129)
         Me.RadGroupBoxStaffel5Bereich2.Name = "RadGroupBoxStaffel5Bereich2"
-        '
-        'PictureBox127
-        '
-        resources.ApplyResources(Me.PictureBox127, "PictureBox127")
-        Me.PictureBox127.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox127.Name = "PictureBox127"
-        Me.PictureBox127.TabStop = False
-        '
-        'PictureBox128
-        '
-        resources.ApplyResources(Me.PictureBox128, "PictureBox128")
-        Me.PictureBox128.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox128.Name = "PictureBox128"
-        Me.PictureBox128.TabStop = False
-        '
-        'PictureBox129
-        '
-        resources.ApplyResources(Me.PictureBox129, "PictureBox129")
-        Me.PictureBox129.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox129.Name = "PictureBox129"
-        Me.PictureBox129.TabStop = False
         '
         'PictureBox68
         '
@@ -1592,13 +1571,31 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel5Bereich2Last, "lblStaffel5Bereich2Last")
         Me.lblStaffel5Bereich2Last.Name = "lblStaffel5Bereich2Last"
         '
+        'PictureBox127
+        '
+        resources.ApplyResources(Me.PictureBox127, "PictureBox127")
+        Me.PictureBox127.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox127.Name = "PictureBox127"
+        Me.PictureBox127.TabStop = False
+        '
+        'PictureBox128
+        '
+        resources.ApplyResources(Me.PictureBox128, "PictureBox128")
+        Me.PictureBox128.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox128.Name = "PictureBox128"
+        Me.PictureBox128.TabStop = False
+        '
+        'PictureBox129
+        '
+        resources.ApplyResources(Me.PictureBox129, "PictureBox129")
+        Me.PictureBox129.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox129.Name = "PictureBox129"
+        Me.PictureBox129.TabStop = False
+        '
         'RadGroupBoxStaffel5Bereich1
         '
         resources.ApplyResources(Me.RadGroupBoxStaffel5Bereich1, "RadGroupBoxStaffel5Bereich1")
         Me.RadGroupBoxStaffel5Bereich1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
-        Me.RadGroupBoxStaffel5Bereich1.Controls.Add(Me.PictureBox130)
-        Me.RadGroupBoxStaffel5Bereich1.Controls.Add(Me.PictureBox131)
-        Me.RadGroupBoxStaffel5Bereich1.Controls.Add(Me.PictureBox132)
         Me.RadGroupBoxStaffel5Bereich1.Controls.Add(Me.PictureBox73)
         Me.RadGroupBoxStaffel5Bereich1.Controls.Add(Me.PictureBox74)
         Me.RadGroupBoxStaffel5Bereich1.Controls.Add(Me.lblStaffel5Bereich1ErsatzLastUnten)
@@ -1628,28 +1625,10 @@ Partial Class uco10PruefungStaffelverfahren
         Me.RadGroupBoxStaffel5Bereich1.Controls.Add(Me.lblStaffel5Bereich1Fehler)
         Me.RadGroupBoxStaffel5Bereich1.Controls.Add(Me.lblStaffel5Bereich1Anzeige)
         Me.RadGroupBoxStaffel5Bereich1.Controls.Add(Me.lblStaffel5Bereich1Last)
+        Me.RadGroupBoxStaffel5Bereich1.Controls.Add(Me.PictureBox130)
+        Me.RadGroupBoxStaffel5Bereich1.Controls.Add(Me.PictureBox131)
+        Me.RadGroupBoxStaffel5Bereich1.Controls.Add(Me.PictureBox132)
         Me.RadGroupBoxStaffel5Bereich1.Name = "RadGroupBoxStaffel5Bereich1"
-        '
-        'PictureBox130
-        '
-        resources.ApplyResources(Me.PictureBox130, "PictureBox130")
-        Me.PictureBox130.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox130.Name = "PictureBox130"
-        Me.PictureBox130.TabStop = False
-        '
-        'PictureBox131
-        '
-        resources.ApplyResources(Me.PictureBox131, "PictureBox131")
-        Me.PictureBox131.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox131.Name = "PictureBox131"
-        Me.PictureBox131.TabStop = False
-        '
-        'PictureBox132
-        '
-        resources.ApplyResources(Me.PictureBox132, "PictureBox132")
-        Me.PictureBox132.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox132.Name = "PictureBox132"
-        Me.PictureBox132.TabStop = False
         '
         'PictureBox73
         '
@@ -1817,13 +1796,31 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel5Bereich1Last, "lblStaffel5Bereich1Last")
         Me.lblStaffel5Bereich1Last.Name = "lblStaffel5Bereich1Last"
         '
+        'PictureBox130
+        '
+        resources.ApplyResources(Me.PictureBox130, "PictureBox130")
+        Me.PictureBox130.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox130.Name = "PictureBox130"
+        Me.PictureBox130.TabStop = False
+        '
+        'PictureBox131
+        '
+        resources.ApplyResources(Me.PictureBox131, "PictureBox131")
+        Me.PictureBox131.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox131.Name = "PictureBox131"
+        Me.PictureBox131.TabStop = False
+        '
+        'PictureBox132
+        '
+        resources.ApplyResources(Me.PictureBox132, "PictureBox132")
+        Me.PictureBox132.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox132.Name = "PictureBox132"
+        Me.PictureBox132.TabStop = False
+        '
         'RadGroupBoxStaffel4Bereich3
         '
         resources.ApplyResources(Me.RadGroupBoxStaffel4Bereich3, "RadGroupBoxStaffel4Bereich3")
         Me.RadGroupBoxStaffel4Bereich3.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
-        Me.RadGroupBoxStaffel4Bereich3.Controls.Add(Me.PictureBox121)
-        Me.RadGroupBoxStaffel4Bereich3.Controls.Add(Me.PictureBox122)
-        Me.RadGroupBoxStaffel4Bereich3.Controls.Add(Me.PictureBox123)
         Me.RadGroupBoxStaffel4Bereich3.Controls.Add(Me.PictureBox61)
         Me.RadGroupBoxStaffel4Bereich3.Controls.Add(Me.PictureBox62)
         Me.RadGroupBoxStaffel4Bereich3.Controls.Add(Me.lblStaffel4Bereich3ErsatzLastUnten)
@@ -1853,28 +1850,10 @@ Partial Class uco10PruefungStaffelverfahren
         Me.RadGroupBoxStaffel4Bereich3.Controls.Add(Me.lblStaffel4Bereich3Fehler)
         Me.RadGroupBoxStaffel4Bereich3.Controls.Add(Me.lblStaffel4Bereich3Anzeige)
         Me.RadGroupBoxStaffel4Bereich3.Controls.Add(Me.lblStaffel4Bereich3Last)
+        Me.RadGroupBoxStaffel4Bereich3.Controls.Add(Me.PictureBox121)
+        Me.RadGroupBoxStaffel4Bereich3.Controls.Add(Me.PictureBox122)
+        Me.RadGroupBoxStaffel4Bereich3.Controls.Add(Me.PictureBox123)
         Me.RadGroupBoxStaffel4Bereich3.Name = "RadGroupBoxStaffel4Bereich3"
-        '
-        'PictureBox121
-        '
-        resources.ApplyResources(Me.PictureBox121, "PictureBox121")
-        Me.PictureBox121.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox121.Name = "PictureBox121"
-        Me.PictureBox121.TabStop = False
-        '
-        'PictureBox122
-        '
-        resources.ApplyResources(Me.PictureBox122, "PictureBox122")
-        Me.PictureBox122.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox122.Name = "PictureBox122"
-        Me.PictureBox122.TabStop = False
-        '
-        'PictureBox123
-        '
-        resources.ApplyResources(Me.PictureBox123, "PictureBox123")
-        Me.PictureBox123.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox123.Name = "PictureBox123"
-        Me.PictureBox123.TabStop = False
         '
         'PictureBox61
         '
@@ -2042,13 +2021,31 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel4Bereich3Last, "lblStaffel4Bereich3Last")
         Me.lblStaffel4Bereich3Last.Name = "lblStaffel4Bereich3Last"
         '
+        'PictureBox121
+        '
+        resources.ApplyResources(Me.PictureBox121, "PictureBox121")
+        Me.PictureBox121.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox121.Name = "PictureBox121"
+        Me.PictureBox121.TabStop = False
+        '
+        'PictureBox122
+        '
+        resources.ApplyResources(Me.PictureBox122, "PictureBox122")
+        Me.PictureBox122.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox122.Name = "PictureBox122"
+        Me.PictureBox122.TabStop = False
+        '
+        'PictureBox123
+        '
+        resources.ApplyResources(Me.PictureBox123, "PictureBox123")
+        Me.PictureBox123.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox123.Name = "PictureBox123"
+        Me.PictureBox123.TabStop = False
+        '
         'RadGroupBoxStaffel4Bereich2
         '
         resources.ApplyResources(Me.RadGroupBoxStaffel4Bereich2, "RadGroupBoxStaffel4Bereich2")
         Me.RadGroupBoxStaffel4Bereich2.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
-        Me.RadGroupBoxStaffel4Bereich2.Controls.Add(Me.PictureBox118)
-        Me.RadGroupBoxStaffel4Bereich2.Controls.Add(Me.PictureBox119)
-        Me.RadGroupBoxStaffel4Bereich2.Controls.Add(Me.PictureBox120)
         Me.RadGroupBoxStaffel4Bereich2.Controls.Add(Me.PictureBox59)
         Me.RadGroupBoxStaffel4Bereich2.Controls.Add(Me.PictureBox60)
         Me.RadGroupBoxStaffel4Bereich2.Controls.Add(Me.lblStaffel4Bereich2ErsatzLastUnten)
@@ -2078,28 +2075,10 @@ Partial Class uco10PruefungStaffelverfahren
         Me.RadGroupBoxStaffel4Bereich2.Controls.Add(Me.lblStaffel4Bereich2Fehler)
         Me.RadGroupBoxStaffel4Bereich2.Controls.Add(Me.lblStaffel4Bereich2Anzeige)
         Me.RadGroupBoxStaffel4Bereich2.Controls.Add(Me.lblStaffel4Bereich2Last)
+        Me.RadGroupBoxStaffel4Bereich2.Controls.Add(Me.PictureBox118)
+        Me.RadGroupBoxStaffel4Bereich2.Controls.Add(Me.PictureBox119)
+        Me.RadGroupBoxStaffel4Bereich2.Controls.Add(Me.PictureBox120)
         Me.RadGroupBoxStaffel4Bereich2.Name = "RadGroupBoxStaffel4Bereich2"
-        '
-        'PictureBox118
-        '
-        resources.ApplyResources(Me.PictureBox118, "PictureBox118")
-        Me.PictureBox118.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox118.Name = "PictureBox118"
-        Me.PictureBox118.TabStop = False
-        '
-        'PictureBox119
-        '
-        resources.ApplyResources(Me.PictureBox119, "PictureBox119")
-        Me.PictureBox119.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox119.Name = "PictureBox119"
-        Me.PictureBox119.TabStop = False
-        '
-        'PictureBox120
-        '
-        resources.ApplyResources(Me.PictureBox120, "PictureBox120")
-        Me.PictureBox120.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox120.Name = "PictureBox120"
-        Me.PictureBox120.TabStop = False
         '
         'PictureBox59
         '
@@ -2267,13 +2246,31 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel4Bereich2Last, "lblStaffel4Bereich2Last")
         Me.lblStaffel4Bereich2Last.Name = "lblStaffel4Bereich2Last"
         '
+        'PictureBox118
+        '
+        resources.ApplyResources(Me.PictureBox118, "PictureBox118")
+        Me.PictureBox118.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox118.Name = "PictureBox118"
+        Me.PictureBox118.TabStop = False
+        '
+        'PictureBox119
+        '
+        resources.ApplyResources(Me.PictureBox119, "PictureBox119")
+        Me.PictureBox119.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox119.Name = "PictureBox119"
+        Me.PictureBox119.TabStop = False
+        '
+        'PictureBox120
+        '
+        resources.ApplyResources(Me.PictureBox120, "PictureBox120")
+        Me.PictureBox120.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox120.Name = "PictureBox120"
+        Me.PictureBox120.TabStop = False
+        '
         'RadGroupBoxStaffel4Bereich1
         '
         resources.ApplyResources(Me.RadGroupBoxStaffel4Bereich1, "RadGroupBoxStaffel4Bereich1")
         Me.RadGroupBoxStaffel4Bereich1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
-        Me.RadGroupBoxStaffel4Bereich1.Controls.Add(Me.PictureBox115)
-        Me.RadGroupBoxStaffel4Bereich1.Controls.Add(Me.PictureBox116)
-        Me.RadGroupBoxStaffel4Bereich1.Controls.Add(Me.PictureBox117)
         Me.RadGroupBoxStaffel4Bereich1.Controls.Add(Me.PictureBox54)
         Me.RadGroupBoxStaffel4Bereich1.Controls.Add(Me.PictureBox55)
         Me.RadGroupBoxStaffel4Bereich1.Controls.Add(Me.lblStaffel4Bereich1ErsatzLastUnten)
@@ -2303,28 +2300,10 @@ Partial Class uco10PruefungStaffelverfahren
         Me.RadGroupBoxStaffel4Bereich1.Controls.Add(Me.lblStaffel4Bereich1Fehler)
         Me.RadGroupBoxStaffel4Bereich1.Controls.Add(Me.lblStaffel4Bereich1Anzeige)
         Me.RadGroupBoxStaffel4Bereich1.Controls.Add(Me.lblStaffel4Bereich1Last)
+        Me.RadGroupBoxStaffel4Bereich1.Controls.Add(Me.PictureBox115)
+        Me.RadGroupBoxStaffel4Bereich1.Controls.Add(Me.PictureBox116)
+        Me.RadGroupBoxStaffel4Bereich1.Controls.Add(Me.PictureBox117)
         Me.RadGroupBoxStaffel4Bereich1.Name = "RadGroupBoxStaffel4Bereich1"
-        '
-        'PictureBox115
-        '
-        resources.ApplyResources(Me.PictureBox115, "PictureBox115")
-        Me.PictureBox115.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox115.Name = "PictureBox115"
-        Me.PictureBox115.TabStop = False
-        '
-        'PictureBox116
-        '
-        resources.ApplyResources(Me.PictureBox116, "PictureBox116")
-        Me.PictureBox116.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox116.Name = "PictureBox116"
-        Me.PictureBox116.TabStop = False
-        '
-        'PictureBox117
-        '
-        resources.ApplyResources(Me.PictureBox117, "PictureBox117")
-        Me.PictureBox117.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox117.Name = "PictureBox117"
-        Me.PictureBox117.TabStop = False
         '
         'PictureBox54
         '
@@ -2492,13 +2471,31 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel4Bereich1Last, "lblStaffel4Bereich1Last")
         Me.lblStaffel4Bereich1Last.Name = "lblStaffel4Bereich1Last"
         '
+        'PictureBox115
+        '
+        resources.ApplyResources(Me.PictureBox115, "PictureBox115")
+        Me.PictureBox115.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox115.Name = "PictureBox115"
+        Me.PictureBox115.TabStop = False
+        '
+        'PictureBox116
+        '
+        resources.ApplyResources(Me.PictureBox116, "PictureBox116")
+        Me.PictureBox116.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox116.Name = "PictureBox116"
+        Me.PictureBox116.TabStop = False
+        '
+        'PictureBox117
+        '
+        resources.ApplyResources(Me.PictureBox117, "PictureBox117")
+        Me.PictureBox117.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox117.Name = "PictureBox117"
+        Me.PictureBox117.TabStop = False
+        '
         'RadGroupBoxStaffel3Bereich3
         '
         resources.ApplyResources(Me.RadGroupBoxStaffel3Bereich3, "RadGroupBoxStaffel3Bereich3")
         Me.RadGroupBoxStaffel3Bereich3.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
-        Me.RadGroupBoxStaffel3Bereich3.Controls.Add(Me.PictureBox106)
-        Me.RadGroupBoxStaffel3Bereich3.Controls.Add(Me.PictureBox107)
-        Me.RadGroupBoxStaffel3Bereich3.Controls.Add(Me.PictureBox108)
         Me.RadGroupBoxStaffel3Bereich3.Controls.Add(Me.PictureBox45)
         Me.RadGroupBoxStaffel3Bereich3.Controls.Add(Me.PictureBox46)
         Me.RadGroupBoxStaffel3Bereich3.Controls.Add(Me.lblStaffel3Bereich3ErsatzLastUnten)
@@ -2528,28 +2525,10 @@ Partial Class uco10PruefungStaffelverfahren
         Me.RadGroupBoxStaffel3Bereich3.Controls.Add(Me.lblStaffel3Bereich3Fehler)
         Me.RadGroupBoxStaffel3Bereich3.Controls.Add(Me.lblStaffel3Bereich3Anzeige)
         Me.RadGroupBoxStaffel3Bereich3.Controls.Add(Me.lblStaffel3Bereich3Last)
+        Me.RadGroupBoxStaffel3Bereich3.Controls.Add(Me.PictureBox106)
+        Me.RadGroupBoxStaffel3Bereich3.Controls.Add(Me.PictureBox107)
+        Me.RadGroupBoxStaffel3Bereich3.Controls.Add(Me.PictureBox108)
         Me.RadGroupBoxStaffel3Bereich3.Name = "RadGroupBoxStaffel3Bereich3"
-        '
-        'PictureBox106
-        '
-        resources.ApplyResources(Me.PictureBox106, "PictureBox106")
-        Me.PictureBox106.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox106.Name = "PictureBox106"
-        Me.PictureBox106.TabStop = False
-        '
-        'PictureBox107
-        '
-        resources.ApplyResources(Me.PictureBox107, "PictureBox107")
-        Me.PictureBox107.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox107.Name = "PictureBox107"
-        Me.PictureBox107.TabStop = False
-        '
-        'PictureBox108
-        '
-        resources.ApplyResources(Me.PictureBox108, "PictureBox108")
-        Me.PictureBox108.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox108.Name = "PictureBox108"
-        Me.PictureBox108.TabStop = False
         '
         'PictureBox45
         '
@@ -2717,13 +2696,31 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel3Bereich3Last, "lblStaffel3Bereich3Last")
         Me.lblStaffel3Bereich3Last.Name = "lblStaffel3Bereich3Last"
         '
+        'PictureBox106
+        '
+        resources.ApplyResources(Me.PictureBox106, "PictureBox106")
+        Me.PictureBox106.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox106.Name = "PictureBox106"
+        Me.PictureBox106.TabStop = False
+        '
+        'PictureBox107
+        '
+        resources.ApplyResources(Me.PictureBox107, "PictureBox107")
+        Me.PictureBox107.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox107.Name = "PictureBox107"
+        Me.PictureBox107.TabStop = False
+        '
+        'PictureBox108
+        '
+        resources.ApplyResources(Me.PictureBox108, "PictureBox108")
+        Me.PictureBox108.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox108.Name = "PictureBox108"
+        Me.PictureBox108.TabStop = False
+        '
         'RadGroupBoxStaffel3Bereich2
         '
         resources.ApplyResources(Me.RadGroupBoxStaffel3Bereich2, "RadGroupBoxStaffel3Bereich2")
         Me.RadGroupBoxStaffel3Bereich2.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
-        Me.RadGroupBoxStaffel3Bereich2.Controls.Add(Me.PictureBox109)
-        Me.RadGroupBoxStaffel3Bereich2.Controls.Add(Me.PictureBox110)
-        Me.RadGroupBoxStaffel3Bereich2.Controls.Add(Me.PictureBox111)
         Me.RadGroupBoxStaffel3Bereich2.Controls.Add(Me.PictureBox47)
         Me.RadGroupBoxStaffel3Bereich2.Controls.Add(Me.PictureBox48)
         Me.RadGroupBoxStaffel3Bereich2.Controls.Add(Me.lblStaffel3Bereich2ErsatzLastUnten)
@@ -2753,28 +2750,10 @@ Partial Class uco10PruefungStaffelverfahren
         Me.RadGroupBoxStaffel3Bereich2.Controls.Add(Me.lblStaffel3Bereich2Fehler)
         Me.RadGroupBoxStaffel3Bereich2.Controls.Add(Me.lblStaffel3Bereich2Anzeige)
         Me.RadGroupBoxStaffel3Bereich2.Controls.Add(Me.lblStaffel3Bereich2Last)
+        Me.RadGroupBoxStaffel3Bereich2.Controls.Add(Me.PictureBox109)
+        Me.RadGroupBoxStaffel3Bereich2.Controls.Add(Me.PictureBox110)
+        Me.RadGroupBoxStaffel3Bereich2.Controls.Add(Me.PictureBox111)
         Me.RadGroupBoxStaffel3Bereich2.Name = "RadGroupBoxStaffel3Bereich2"
-        '
-        'PictureBox109
-        '
-        resources.ApplyResources(Me.PictureBox109, "PictureBox109")
-        Me.PictureBox109.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox109.Name = "PictureBox109"
-        Me.PictureBox109.TabStop = False
-        '
-        'PictureBox110
-        '
-        resources.ApplyResources(Me.PictureBox110, "PictureBox110")
-        Me.PictureBox110.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox110.Name = "PictureBox110"
-        Me.PictureBox110.TabStop = False
-        '
-        'PictureBox111
-        '
-        resources.ApplyResources(Me.PictureBox111, "PictureBox111")
-        Me.PictureBox111.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox111.Name = "PictureBox111"
-        Me.PictureBox111.TabStop = False
         '
         'PictureBox47
         '
@@ -2942,13 +2921,31 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel3Bereich2Last, "lblStaffel3Bereich2Last")
         Me.lblStaffel3Bereich2Last.Name = "lblStaffel3Bereich2Last"
         '
+        'PictureBox109
+        '
+        resources.ApplyResources(Me.PictureBox109, "PictureBox109")
+        Me.PictureBox109.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox109.Name = "PictureBox109"
+        Me.PictureBox109.TabStop = False
+        '
+        'PictureBox110
+        '
+        resources.ApplyResources(Me.PictureBox110, "PictureBox110")
+        Me.PictureBox110.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox110.Name = "PictureBox110"
+        Me.PictureBox110.TabStop = False
+        '
+        'PictureBox111
+        '
+        resources.ApplyResources(Me.PictureBox111, "PictureBox111")
+        Me.PictureBox111.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox111.Name = "PictureBox111"
+        Me.PictureBox111.TabStop = False
+        '
         'RadGroupBoxStaffel3Bereich1
         '
         resources.ApplyResources(Me.RadGroupBoxStaffel3Bereich1, "RadGroupBoxStaffel3Bereich1")
         Me.RadGroupBoxStaffel3Bereich1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
-        Me.RadGroupBoxStaffel3Bereich1.Controls.Add(Me.PictureBox112)
-        Me.RadGroupBoxStaffel3Bereich1.Controls.Add(Me.PictureBox113)
-        Me.RadGroupBoxStaffel3Bereich1.Controls.Add(Me.PictureBox114)
         Me.RadGroupBoxStaffel3Bereich1.Controls.Add(Me.PictureBox52)
         Me.RadGroupBoxStaffel3Bereich1.Controls.Add(Me.PictureBox53)
         Me.RadGroupBoxStaffel3Bereich1.Controls.Add(Me.lblStaffel3Bereich1ErsatzLastUnten)
@@ -2978,28 +2975,10 @@ Partial Class uco10PruefungStaffelverfahren
         Me.RadGroupBoxStaffel3Bereich1.Controls.Add(Me.lblStaffel3Bereich1Fehler)
         Me.RadGroupBoxStaffel3Bereich1.Controls.Add(Me.lblStaffel3Bereich1Anzeige)
         Me.RadGroupBoxStaffel3Bereich1.Controls.Add(Me.lblStaffel3Bereich1Last)
+        Me.RadGroupBoxStaffel3Bereich1.Controls.Add(Me.PictureBox112)
+        Me.RadGroupBoxStaffel3Bereich1.Controls.Add(Me.PictureBox113)
+        Me.RadGroupBoxStaffel3Bereich1.Controls.Add(Me.PictureBox114)
         Me.RadGroupBoxStaffel3Bereich1.Name = "RadGroupBoxStaffel3Bereich1"
-        '
-        'PictureBox112
-        '
-        resources.ApplyResources(Me.PictureBox112, "PictureBox112")
-        Me.PictureBox112.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox112.Name = "PictureBox112"
-        Me.PictureBox112.TabStop = False
-        '
-        'PictureBox113
-        '
-        resources.ApplyResources(Me.PictureBox113, "PictureBox113")
-        Me.PictureBox113.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox113.Name = "PictureBox113"
-        Me.PictureBox113.TabStop = False
-        '
-        'PictureBox114
-        '
-        resources.ApplyResources(Me.PictureBox114, "PictureBox114")
-        Me.PictureBox114.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox114.Name = "PictureBox114"
-        Me.PictureBox114.TabStop = False
         '
         'PictureBox52
         '
@@ -3167,13 +3146,31 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel3Bereich1Last, "lblStaffel3Bereich1Last")
         Me.lblStaffel3Bereich1Last.Name = "lblStaffel3Bereich1Last"
         '
+        'PictureBox112
+        '
+        resources.ApplyResources(Me.PictureBox112, "PictureBox112")
+        Me.PictureBox112.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox112.Name = "PictureBox112"
+        Me.PictureBox112.TabStop = False
+        '
+        'PictureBox113
+        '
+        resources.ApplyResources(Me.PictureBox113, "PictureBox113")
+        Me.PictureBox113.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox113.Name = "PictureBox113"
+        Me.PictureBox113.TabStop = False
+        '
+        'PictureBox114
+        '
+        resources.ApplyResources(Me.PictureBox114, "PictureBox114")
+        Me.PictureBox114.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox114.Name = "PictureBox114"
+        Me.PictureBox114.TabStop = False
+        '
         'RadGroupBoxStaffel2Bereich3
         '
         resources.ApplyResources(Me.RadGroupBoxStaffel2Bereich3, "RadGroupBoxStaffel2Bereich3")
         Me.RadGroupBoxStaffel2Bereich3.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
-        Me.RadGroupBoxStaffel2Bereich3.Controls.Add(Me.PictureBox103)
-        Me.RadGroupBoxStaffel2Bereich3.Controls.Add(Me.PictureBox104)
-        Me.RadGroupBoxStaffel2Bereich3.Controls.Add(Me.PictureBox105)
         Me.RadGroupBoxStaffel2Bereich3.Controls.Add(Me.PictureBox40)
         Me.RadGroupBoxStaffel2Bereich3.Controls.Add(Me.PictureBox41)
         Me.RadGroupBoxStaffel2Bereich3.Controls.Add(Me.lblStaffel2Bereich3ErsatzLastUnten)
@@ -3203,28 +3200,10 @@ Partial Class uco10PruefungStaffelverfahren
         Me.RadGroupBoxStaffel2Bereich3.Controls.Add(Me.lblStaffel2Bereich3Fehler)
         Me.RadGroupBoxStaffel2Bereich3.Controls.Add(Me.lblStaffel2Bereich3Anzeige)
         Me.RadGroupBoxStaffel2Bereich3.Controls.Add(Me.lblStaffel2Bereich3Last)
+        Me.RadGroupBoxStaffel2Bereich3.Controls.Add(Me.PictureBox103)
+        Me.RadGroupBoxStaffel2Bereich3.Controls.Add(Me.PictureBox104)
+        Me.RadGroupBoxStaffel2Bereich3.Controls.Add(Me.PictureBox105)
         Me.RadGroupBoxStaffel2Bereich3.Name = "RadGroupBoxStaffel2Bereich3"
-        '
-        'PictureBox103
-        '
-        resources.ApplyResources(Me.PictureBox103, "PictureBox103")
-        Me.PictureBox103.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox103.Name = "PictureBox103"
-        Me.PictureBox103.TabStop = False
-        '
-        'PictureBox104
-        '
-        resources.ApplyResources(Me.PictureBox104, "PictureBox104")
-        Me.PictureBox104.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox104.Name = "PictureBox104"
-        Me.PictureBox104.TabStop = False
-        '
-        'PictureBox105
-        '
-        resources.ApplyResources(Me.PictureBox105, "PictureBox105")
-        Me.PictureBox105.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox105.Name = "PictureBox105"
-        Me.PictureBox105.TabStop = False
         '
         'PictureBox40
         '
@@ -3392,13 +3371,31 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel2Bereich3Last, "lblStaffel2Bereich3Last")
         Me.lblStaffel2Bereich3Last.Name = "lblStaffel2Bereich3Last"
         '
+        'PictureBox103
+        '
+        resources.ApplyResources(Me.PictureBox103, "PictureBox103")
+        Me.PictureBox103.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox103.Name = "PictureBox103"
+        Me.PictureBox103.TabStop = False
+        '
+        'PictureBox104
+        '
+        resources.ApplyResources(Me.PictureBox104, "PictureBox104")
+        Me.PictureBox104.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox104.Name = "PictureBox104"
+        Me.PictureBox104.TabStop = False
+        '
+        'PictureBox105
+        '
+        resources.ApplyResources(Me.PictureBox105, "PictureBox105")
+        Me.PictureBox105.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox105.Name = "PictureBox105"
+        Me.PictureBox105.TabStop = False
+        '
         'RadGroupBoxStaffel2Bereich2
         '
         resources.ApplyResources(Me.RadGroupBoxStaffel2Bereich2, "RadGroupBoxStaffel2Bereich2")
         Me.RadGroupBoxStaffel2Bereich2.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
-        Me.RadGroupBoxStaffel2Bereich2.Controls.Add(Me.PictureBox97)
-        Me.RadGroupBoxStaffel2Bereich2.Controls.Add(Me.PictureBox98)
-        Me.RadGroupBoxStaffel2Bereich2.Controls.Add(Me.PictureBox102)
         Me.RadGroupBoxStaffel2Bereich2.Controls.Add(Me.PictureBox38)
         Me.RadGroupBoxStaffel2Bereich2.Controls.Add(Me.PictureBox39)
         Me.RadGroupBoxStaffel2Bereich2.Controls.Add(Me.lblStaffel2Bereich2ErsatzLastUnten)
@@ -3428,28 +3425,10 @@ Partial Class uco10PruefungStaffelverfahren
         Me.RadGroupBoxStaffel2Bereich2.Controls.Add(Me.lblStaffel2Bereich2Fehler)
         Me.RadGroupBoxStaffel2Bereich2.Controls.Add(Me.lblStaffel2Bereich2Anzeige)
         Me.RadGroupBoxStaffel2Bereich2.Controls.Add(Me.lblStaffel2Bereich2Last)
+        Me.RadGroupBoxStaffel2Bereich2.Controls.Add(Me.PictureBox97)
+        Me.RadGroupBoxStaffel2Bereich2.Controls.Add(Me.PictureBox98)
+        Me.RadGroupBoxStaffel2Bereich2.Controls.Add(Me.PictureBox102)
         Me.RadGroupBoxStaffel2Bereich2.Name = "RadGroupBoxStaffel2Bereich2"
-        '
-        'PictureBox97
-        '
-        resources.ApplyResources(Me.PictureBox97, "PictureBox97")
-        Me.PictureBox97.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox97.Name = "PictureBox97"
-        Me.PictureBox97.TabStop = False
-        '
-        'PictureBox98
-        '
-        resources.ApplyResources(Me.PictureBox98, "PictureBox98")
-        Me.PictureBox98.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox98.Name = "PictureBox98"
-        Me.PictureBox98.TabStop = False
-        '
-        'PictureBox102
-        '
-        resources.ApplyResources(Me.PictureBox102, "PictureBox102")
-        Me.PictureBox102.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox102.Name = "PictureBox102"
-        Me.PictureBox102.TabStop = False
         '
         'PictureBox38
         '
@@ -3617,13 +3596,31 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel2Bereich2Last, "lblStaffel2Bereich2Last")
         Me.lblStaffel2Bereich2Last.Name = "lblStaffel2Bereich2Last"
         '
+        'PictureBox97
+        '
+        resources.ApplyResources(Me.PictureBox97, "PictureBox97")
+        Me.PictureBox97.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox97.Name = "PictureBox97"
+        Me.PictureBox97.TabStop = False
+        '
+        'PictureBox98
+        '
+        resources.ApplyResources(Me.PictureBox98, "PictureBox98")
+        Me.PictureBox98.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox98.Name = "PictureBox98"
+        Me.PictureBox98.TabStop = False
+        '
+        'PictureBox102
+        '
+        resources.ApplyResources(Me.PictureBox102, "PictureBox102")
+        Me.PictureBox102.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox102.Name = "PictureBox102"
+        Me.PictureBox102.TabStop = False
+        '
         'RadGroupBoxStaffel2Bereich1
         '
         resources.ApplyResources(Me.RadGroupBoxStaffel2Bereich1, "RadGroupBoxStaffel2Bereich1")
         Me.RadGroupBoxStaffel2Bereich1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
-        Me.RadGroupBoxStaffel2Bereich1.Controls.Add(Me.PictureBox91)
-        Me.RadGroupBoxStaffel2Bereich1.Controls.Add(Me.PictureBox95)
-        Me.RadGroupBoxStaffel2Bereich1.Controls.Add(Me.PictureBox96)
         Me.RadGroupBoxStaffel2Bereich1.Controls.Add(Me.PictureBox33)
         Me.RadGroupBoxStaffel2Bereich1.Controls.Add(Me.PictureBox34)
         Me.RadGroupBoxStaffel2Bereich1.Controls.Add(Me.lblStaffel2Bereich1ErsatzLastUnten)
@@ -3653,28 +3650,10 @@ Partial Class uco10PruefungStaffelverfahren
         Me.RadGroupBoxStaffel2Bereich1.Controls.Add(Me.lblStaffel2Bereich1Fehler)
         Me.RadGroupBoxStaffel2Bereich1.Controls.Add(Me.lblStaffel2Bereich1Anzeige)
         Me.RadGroupBoxStaffel2Bereich1.Controls.Add(Me.lblStaffel2Bereich1Last)
+        Me.RadGroupBoxStaffel2Bereich1.Controls.Add(Me.PictureBox91)
+        Me.RadGroupBoxStaffel2Bereich1.Controls.Add(Me.PictureBox95)
+        Me.RadGroupBoxStaffel2Bereich1.Controls.Add(Me.PictureBox96)
         Me.RadGroupBoxStaffel2Bereich1.Name = "RadGroupBoxStaffel2Bereich1"
-        '
-        'PictureBox91
-        '
-        resources.ApplyResources(Me.PictureBox91, "PictureBox91")
-        Me.PictureBox91.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox91.Name = "PictureBox91"
-        Me.PictureBox91.TabStop = False
-        '
-        'PictureBox95
-        '
-        resources.ApplyResources(Me.PictureBox95, "PictureBox95")
-        Me.PictureBox95.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox95.Name = "PictureBox95"
-        Me.PictureBox95.TabStop = False
-        '
-        'PictureBox96
-        '
-        resources.ApplyResources(Me.PictureBox96, "PictureBox96")
-        Me.PictureBox96.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox96.Name = "PictureBox96"
-        Me.PictureBox96.TabStop = False
         '
         'PictureBox33
         '
@@ -3842,6 +3821,27 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel2Bereich1Last, "lblStaffel2Bereich1Last")
         Me.lblStaffel2Bereich1Last.Name = "lblStaffel2Bereich1Last"
         '
+        'PictureBox91
+        '
+        resources.ApplyResources(Me.PictureBox91, "PictureBox91")
+        Me.PictureBox91.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox91.Name = "PictureBox91"
+        Me.PictureBox91.TabStop = False
+        '
+        'PictureBox95
+        '
+        resources.ApplyResources(Me.PictureBox95, "PictureBox95")
+        Me.PictureBox95.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox95.Name = "PictureBox95"
+        Me.PictureBox95.TabStop = False
+        '
+        'PictureBox96
+        '
+        resources.ApplyResources(Me.PictureBox96, "PictureBox96")
+        Me.PictureBox96.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox96.Name = "PictureBox96"
+        Me.PictureBox96.TabStop = False
+        '
         'RadGroupBoxStaffel1Bereich3
         '
         resources.ApplyResources(Me.RadGroupBoxStaffel1Bereich3, "RadGroupBoxStaffel1Bereich3")
@@ -3849,12 +3849,6 @@ Partial Class uco10PruefungStaffelverfahren
         Me.RadGroupBoxStaffel1Bereich3.Controls.Add(Me.PictureBox141)
         Me.RadGroupBoxStaffel1Bereich3.Controls.Add(Me.RadLabel8)
         Me.RadGroupBoxStaffel1Bereich3.Controls.Add(Me.RadLabel3)
-        Me.RadGroupBoxStaffel1Bereich3.Controls.Add(Me.PictureBox88)
-        Me.RadGroupBoxStaffel1Bereich3.Controls.Add(Me.PictureBox89)
-        Me.RadGroupBoxStaffel1Bereich3.Controls.Add(Me.PictureBox90)
-        Me.RadGroupBoxStaffel1Bereich3.Controls.Add(Me.PictureBox27)
-        Me.RadGroupBoxStaffel1Bereich3.Controls.Add(Me.PictureBox31)
-        Me.RadGroupBoxStaffel1Bereich3.Controls.Add(Me.PictureBox32)
         Me.RadGroupBoxStaffel1Bereich3.Controls.Add(Me.RadTextBoxControlStaffel1Bereich3Fehler7)
         Me.RadGroupBoxStaffel1Bereich3.Controls.Add(Me.RadTextBoxControlStaffel1Bereich3Fehler6)
         Me.RadGroupBoxStaffel1Bereich3.Controls.Add(Me.RadTextBoxControlStaffel1Bereich3Fehler5)
@@ -3871,22 +3865,28 @@ Partial Class uco10PruefungStaffelverfahren
         Me.RadGroupBoxStaffel1Bereich3.Controls.Add(Me.lblStaffel1Bereich3MessabweichungStaffel)
         Me.RadGroupBoxStaffel1Bereich3.Controls.Add(Me.lblStaffel1Bereich3Differenz)
         Me.RadGroupBoxStaffel1Bereich3.Controls.Add(Me.lblStaffel1Bereich3NormalLast)
-        Me.RadGroupBoxStaffel1Bereich3.Controls.Add(Me.PictureBox15)
-        Me.RadGroupBoxStaffel1Bereich3.Controls.Add(Me.PictureBox16)
-        Me.RadGroupBoxStaffel1Bereich3.Controls.Add(Me.PictureBox17)
-        Me.RadGroupBoxStaffel1Bereich3.Controls.Add(Me.PictureBox18)
-        Me.RadGroupBoxStaffel1Bereich3.Controls.Add(Me.PictureBox19)
         Me.RadGroupBoxStaffel1Bereich3.Controls.Add(Me.lblStaffel1Bereich3EFGWert7)
         Me.RadGroupBoxStaffel1Bereich3.Controls.Add(Me.lblStaffel1Bereich3EFGWert6)
         Me.RadGroupBoxStaffel1Bereich3.Controls.Add(Me.lblStaffel1Bereich3EFGWert5)
         Me.RadGroupBoxStaffel1Bereich3.Controls.Add(Me.lblStaffel1Bereich3EFGWert4)
         Me.RadGroupBoxStaffel1Bereich3.Controls.Add(Me.lblStaffel1Bereich3EFGWert3)
-        Me.RadGroupBoxStaffel1Bereich3.Controls.Add(Me.PictureBox20)
         Me.RadGroupBoxStaffel1Bereich3.Controls.Add(Me.lblStaffel1Bereich3EFGWert1)
         Me.RadGroupBoxStaffel1Bereich3.Controls.Add(Me.lblStaffel1Bereich3EFG)
         Me.RadGroupBoxStaffel1Bereich3.Controls.Add(Me.lblStaffel1Bereich3Fehler)
         Me.RadGroupBoxStaffel1Bereich3.Controls.Add(Me.lblStaffel1Bereich3Anzeige)
         Me.RadGroupBoxStaffel1Bereich3.Controls.Add(Me.lblStaffel1Bereich3Last)
+        Me.RadGroupBoxStaffel1Bereich3.Controls.Add(Me.PictureBox88)
+        Me.RadGroupBoxStaffel1Bereich3.Controls.Add(Me.PictureBox89)
+        Me.RadGroupBoxStaffel1Bereich3.Controls.Add(Me.PictureBox90)
+        Me.RadGroupBoxStaffel1Bereich3.Controls.Add(Me.PictureBox27)
+        Me.RadGroupBoxStaffel1Bereich3.Controls.Add(Me.PictureBox31)
+        Me.RadGroupBoxStaffel1Bereich3.Controls.Add(Me.PictureBox32)
+        Me.RadGroupBoxStaffel1Bereich3.Controls.Add(Me.PictureBox15)
+        Me.RadGroupBoxStaffel1Bereich3.Controls.Add(Me.PictureBox16)
+        Me.RadGroupBoxStaffel1Bereich3.Controls.Add(Me.PictureBox17)
+        Me.RadGroupBoxStaffel1Bereich3.Controls.Add(Me.PictureBox18)
+        Me.RadGroupBoxStaffel1Bereich3.Controls.Add(Me.PictureBox19)
+        Me.RadGroupBoxStaffel1Bereich3.Controls.Add(Me.PictureBox20)
         Me.RadGroupBoxStaffel1Bereich3.Name = "RadGroupBoxStaffel1Bereich3"
         '
         'PictureBox141
@@ -3905,48 +3905,6 @@ Partial Class uco10PruefungStaffelverfahren
         '
         resources.ApplyResources(Me.RadLabel3, "RadLabel3")
         Me.RadLabel3.Name = "RadLabel3"
-        '
-        'PictureBox88
-        '
-        resources.ApplyResources(Me.PictureBox88, "PictureBox88")
-        Me.PictureBox88.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox88.Name = "PictureBox88"
-        Me.PictureBox88.TabStop = False
-        '
-        'PictureBox89
-        '
-        resources.ApplyResources(Me.PictureBox89, "PictureBox89")
-        Me.PictureBox89.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox89.Name = "PictureBox89"
-        Me.PictureBox89.TabStop = False
-        '
-        'PictureBox90
-        '
-        resources.ApplyResources(Me.PictureBox90, "PictureBox90")
-        Me.PictureBox90.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox90.Name = "PictureBox90"
-        Me.PictureBox90.TabStop = False
-        '
-        'PictureBox27
-        '
-        resources.ApplyResources(Me.PictureBox27, "PictureBox27")
-        Me.PictureBox27.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox27.Name = "PictureBox27"
-        Me.PictureBox27.TabStop = False
-        '
-        'PictureBox31
-        '
-        resources.ApplyResources(Me.PictureBox31, "PictureBox31")
-        Me.PictureBox31.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox31.Name = "PictureBox31"
-        Me.PictureBox31.TabStop = False
-        '
-        'PictureBox32
-        '
-        resources.ApplyResources(Me.PictureBox32, "PictureBox32")
-        Me.PictureBox32.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox32.Name = "PictureBox32"
-        Me.PictureBox32.TabStop = False
         '
         'RadTextBoxControlStaffel1Bereich3Fehler7
         '
@@ -4034,41 +3992,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel1Bereich3NormalLast, "lblStaffel1Bereich3NormalLast")
         Me.lblStaffel1Bereich3NormalLast.Name = "lblStaffel1Bereich3NormalLast"
         '
-        'PictureBox15
-        '
-        resources.ApplyResources(Me.PictureBox15, "PictureBox15")
-        Me.PictureBox15.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox15.Name = "PictureBox15"
-        Me.PictureBox15.TabStop = False
-        '
-        'PictureBox16
-        '
-        resources.ApplyResources(Me.PictureBox16, "PictureBox16")
-        Me.PictureBox16.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox16.Name = "PictureBox16"
-        Me.PictureBox16.TabStop = False
-        '
-        'PictureBox17
-        '
-        resources.ApplyResources(Me.PictureBox17, "PictureBox17")
-        Me.PictureBox17.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox17.Name = "PictureBox17"
-        Me.PictureBox17.TabStop = False
-        '
-        'PictureBox18
-        '
-        resources.ApplyResources(Me.PictureBox18, "PictureBox18")
-        Me.PictureBox18.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox18.Name = "PictureBox18"
-        Me.PictureBox18.TabStop = False
-        '
-        'PictureBox19
-        '
-        resources.ApplyResources(Me.PictureBox19, "PictureBox19")
-        Me.PictureBox19.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox19.Name = "PictureBox19"
-        Me.PictureBox19.TabStop = False
-        '
         'lblStaffel1Bereich3EFGWert7
         '
         resources.ApplyResources(Me.lblStaffel1Bereich3EFGWert7, "lblStaffel1Bereich3EFGWert7")
@@ -4104,13 +4027,6 @@ Partial Class uco10PruefungStaffelverfahren
         Me.lblStaffel1Bereich3EFGWert3.ReadOnly = True
         Me.lblStaffel1Bereich3EFGWert3.TabStop = False
         '
-        'PictureBox20
-        '
-        resources.ApplyResources(Me.PictureBox20, "PictureBox20")
-        Me.PictureBox20.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox20.Name = "PictureBox20"
-        Me.PictureBox20.TabStop = False
-        '
         'lblStaffel1Bereich3EFGWert1
         '
         resources.ApplyResources(Me.lblStaffel1Bereich3EFGWert1, "lblStaffel1Bereich3EFGWert1")
@@ -4138,6 +4054,90 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel1Bereich3Last, "lblStaffel1Bereich3Last")
         Me.lblStaffel1Bereich3Last.Name = "lblStaffel1Bereich3Last"
         '
+        'PictureBox88
+        '
+        resources.ApplyResources(Me.PictureBox88, "PictureBox88")
+        Me.PictureBox88.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox88.Name = "PictureBox88"
+        Me.PictureBox88.TabStop = False
+        '
+        'PictureBox89
+        '
+        resources.ApplyResources(Me.PictureBox89, "PictureBox89")
+        Me.PictureBox89.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox89.Name = "PictureBox89"
+        Me.PictureBox89.TabStop = False
+        '
+        'PictureBox90
+        '
+        resources.ApplyResources(Me.PictureBox90, "PictureBox90")
+        Me.PictureBox90.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox90.Name = "PictureBox90"
+        Me.PictureBox90.TabStop = False
+        '
+        'PictureBox27
+        '
+        resources.ApplyResources(Me.PictureBox27, "PictureBox27")
+        Me.PictureBox27.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox27.Name = "PictureBox27"
+        Me.PictureBox27.TabStop = False
+        '
+        'PictureBox31
+        '
+        resources.ApplyResources(Me.PictureBox31, "PictureBox31")
+        Me.PictureBox31.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox31.Name = "PictureBox31"
+        Me.PictureBox31.TabStop = False
+        '
+        'PictureBox32
+        '
+        resources.ApplyResources(Me.PictureBox32, "PictureBox32")
+        Me.PictureBox32.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox32.Name = "PictureBox32"
+        Me.PictureBox32.TabStop = False
+        '
+        'PictureBox15
+        '
+        resources.ApplyResources(Me.PictureBox15, "PictureBox15")
+        Me.PictureBox15.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox15.Name = "PictureBox15"
+        Me.PictureBox15.TabStop = False
+        '
+        'PictureBox16
+        '
+        resources.ApplyResources(Me.PictureBox16, "PictureBox16")
+        Me.PictureBox16.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox16.Name = "PictureBox16"
+        Me.PictureBox16.TabStop = False
+        '
+        'PictureBox17
+        '
+        resources.ApplyResources(Me.PictureBox17, "PictureBox17")
+        Me.PictureBox17.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox17.Name = "PictureBox17"
+        Me.PictureBox17.TabStop = False
+        '
+        'PictureBox18
+        '
+        resources.ApplyResources(Me.PictureBox18, "PictureBox18")
+        Me.PictureBox18.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox18.Name = "PictureBox18"
+        Me.PictureBox18.TabStop = False
+        '
+        'PictureBox19
+        '
+        resources.ApplyResources(Me.PictureBox19, "PictureBox19")
+        Me.PictureBox19.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox19.Name = "PictureBox19"
+        Me.PictureBox19.TabStop = False
+        '
+        'PictureBox20
+        '
+        resources.ApplyResources(Me.PictureBox20, "PictureBox20")
+        Me.PictureBox20.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox20.Name = "PictureBox20"
+        Me.PictureBox20.TabStop = False
+        '
         'RadGroupBoxStaffel1Bereich2
         '
         resources.ApplyResources(Me.RadGroupBoxStaffel1Bereich2, "RadGroupBoxStaffel1Bereich2")
@@ -4145,12 +4145,6 @@ Partial Class uco10PruefungStaffelverfahren
         Me.RadGroupBoxStaffel1Bereich2.Controls.Add(Me.PictureBox139)
         Me.RadGroupBoxStaffel1Bereich2.Controls.Add(Me.RadLabel6)
         Me.RadGroupBoxStaffel1Bereich2.Controls.Add(Me.RadLabel2)
-        Me.RadGroupBoxStaffel1Bereich2.Controls.Add(Me.PictureBox82)
-        Me.RadGroupBoxStaffel1Bereich2.Controls.Add(Me.PictureBox83)
-        Me.RadGroupBoxStaffel1Bereich2.Controls.Add(Me.PictureBox84)
-        Me.RadGroupBoxStaffel1Bereich2.Controls.Add(Me.PictureBox24)
-        Me.RadGroupBoxStaffel1Bereich2.Controls.Add(Me.PictureBox25)
-        Me.RadGroupBoxStaffel1Bereich2.Controls.Add(Me.PictureBox26)
         Me.RadGroupBoxStaffel1Bereich2.Controls.Add(Me.RadTextBoxControlStaffel1Bereich2Fehler7)
         Me.RadGroupBoxStaffel1Bereich2.Controls.Add(Me.RadTextBoxControlStaffel1Bereich2Fehler6)
         Me.RadGroupBoxStaffel1Bereich2.Controls.Add(Me.RadTextBoxControlStaffel1Bereich2Fehler5)
@@ -4167,22 +4161,28 @@ Partial Class uco10PruefungStaffelverfahren
         Me.RadGroupBoxStaffel1Bereich2.Controls.Add(Me.lblStaffel1Bereich2MessabweichungStaffel)
         Me.RadGroupBoxStaffel1Bereich2.Controls.Add(Me.lblStaffel1Bereich2Differenz)
         Me.RadGroupBoxStaffel1Bereich2.Controls.Add(Me.lblStaffel1Bereich2NormalLast)
-        Me.RadGroupBoxStaffel1Bereich2.Controls.Add(Me.PictureBox8)
-        Me.RadGroupBoxStaffel1Bereich2.Controls.Add(Me.PictureBox9)
-        Me.RadGroupBoxStaffel1Bereich2.Controls.Add(Me.PictureBox10)
-        Me.RadGroupBoxStaffel1Bereich2.Controls.Add(Me.PictureBox11)
-        Me.RadGroupBoxStaffel1Bereich2.Controls.Add(Me.PictureBox12)
         Me.RadGroupBoxStaffel1Bereich2.Controls.Add(Me.lblStaffel1Bereich2EFGWert7)
         Me.RadGroupBoxStaffel1Bereich2.Controls.Add(Me.lblStaffel1Bereich2EFGWert6)
         Me.RadGroupBoxStaffel1Bereich2.Controls.Add(Me.lblStaffel1Bereich2EFGWert5)
         Me.RadGroupBoxStaffel1Bereich2.Controls.Add(Me.lblStaffel1Bereich2EFGWert4)
         Me.RadGroupBoxStaffel1Bereich2.Controls.Add(Me.lblStaffel1Bereich2EFGWert3)
-        Me.RadGroupBoxStaffel1Bereich2.Controls.Add(Me.PictureBox13)
         Me.RadGroupBoxStaffel1Bereich2.Controls.Add(Me.lblStaffel1Bereich2EFGWert1)
         Me.RadGroupBoxStaffel1Bereich2.Controls.Add(Me.lblStaffel1Bereich2EFG)
         Me.RadGroupBoxStaffel1Bereich2.Controls.Add(Me.lblStaffel1Bereich2Fehler)
         Me.RadGroupBoxStaffel1Bereich2.Controls.Add(Me.lblStaffel1Bereich2Anzeige)
         Me.RadGroupBoxStaffel1Bereich2.Controls.Add(Me.lblStaffel1Bereich2Last)
+        Me.RadGroupBoxStaffel1Bereich2.Controls.Add(Me.PictureBox82)
+        Me.RadGroupBoxStaffel1Bereich2.Controls.Add(Me.PictureBox83)
+        Me.RadGroupBoxStaffel1Bereich2.Controls.Add(Me.PictureBox84)
+        Me.RadGroupBoxStaffel1Bereich2.Controls.Add(Me.PictureBox24)
+        Me.RadGroupBoxStaffel1Bereich2.Controls.Add(Me.PictureBox25)
+        Me.RadGroupBoxStaffel1Bereich2.Controls.Add(Me.PictureBox26)
+        Me.RadGroupBoxStaffel1Bereich2.Controls.Add(Me.PictureBox8)
+        Me.RadGroupBoxStaffel1Bereich2.Controls.Add(Me.PictureBox9)
+        Me.RadGroupBoxStaffel1Bereich2.Controls.Add(Me.PictureBox10)
+        Me.RadGroupBoxStaffel1Bereich2.Controls.Add(Me.PictureBox11)
+        Me.RadGroupBoxStaffel1Bereich2.Controls.Add(Me.PictureBox12)
+        Me.RadGroupBoxStaffel1Bereich2.Controls.Add(Me.PictureBox13)
         Me.RadGroupBoxStaffel1Bereich2.Name = "RadGroupBoxStaffel1Bereich2"
         '
         'PictureBox139
@@ -4201,48 +4201,6 @@ Partial Class uco10PruefungStaffelverfahren
         '
         resources.ApplyResources(Me.RadLabel2, "RadLabel2")
         Me.RadLabel2.Name = "RadLabel2"
-        '
-        'PictureBox82
-        '
-        resources.ApplyResources(Me.PictureBox82, "PictureBox82")
-        Me.PictureBox82.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox82.Name = "PictureBox82"
-        Me.PictureBox82.TabStop = False
-        '
-        'PictureBox83
-        '
-        resources.ApplyResources(Me.PictureBox83, "PictureBox83")
-        Me.PictureBox83.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox83.Name = "PictureBox83"
-        Me.PictureBox83.TabStop = False
-        '
-        'PictureBox84
-        '
-        resources.ApplyResources(Me.PictureBox84, "PictureBox84")
-        Me.PictureBox84.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox84.Name = "PictureBox84"
-        Me.PictureBox84.TabStop = False
-        '
-        'PictureBox24
-        '
-        resources.ApplyResources(Me.PictureBox24, "PictureBox24")
-        Me.PictureBox24.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox24.Name = "PictureBox24"
-        Me.PictureBox24.TabStop = False
-        '
-        'PictureBox25
-        '
-        resources.ApplyResources(Me.PictureBox25, "PictureBox25")
-        Me.PictureBox25.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox25.Name = "PictureBox25"
-        Me.PictureBox25.TabStop = False
-        '
-        'PictureBox26
-        '
-        resources.ApplyResources(Me.PictureBox26, "PictureBox26")
-        Me.PictureBox26.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox26.Name = "PictureBox26"
-        Me.PictureBox26.TabStop = False
         '
         'RadTextBoxControlStaffel1Bereich2Fehler7
         '
@@ -4330,41 +4288,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel1Bereich2NormalLast, "lblStaffel1Bereich2NormalLast")
         Me.lblStaffel1Bereich2NormalLast.Name = "lblStaffel1Bereich2NormalLast"
         '
-        'PictureBox8
-        '
-        resources.ApplyResources(Me.PictureBox8, "PictureBox8")
-        Me.PictureBox8.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.TabStop = False
-        '
-        'PictureBox9
-        '
-        resources.ApplyResources(Me.PictureBox9, "PictureBox9")
-        Me.PictureBox9.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox9.Name = "PictureBox9"
-        Me.PictureBox9.TabStop = False
-        '
-        'PictureBox10
-        '
-        resources.ApplyResources(Me.PictureBox10, "PictureBox10")
-        Me.PictureBox10.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox10.Name = "PictureBox10"
-        Me.PictureBox10.TabStop = False
-        '
-        'PictureBox11
-        '
-        resources.ApplyResources(Me.PictureBox11, "PictureBox11")
-        Me.PictureBox11.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox11.Name = "PictureBox11"
-        Me.PictureBox11.TabStop = False
-        '
-        'PictureBox12
-        '
-        resources.ApplyResources(Me.PictureBox12, "PictureBox12")
-        Me.PictureBox12.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox12.Name = "PictureBox12"
-        Me.PictureBox12.TabStop = False
-        '
         'lblStaffel1Bereich2EFGWert7
         '
         resources.ApplyResources(Me.lblStaffel1Bereich2EFGWert7, "lblStaffel1Bereich2EFGWert7")
@@ -4400,13 +4323,6 @@ Partial Class uco10PruefungStaffelverfahren
         Me.lblStaffel1Bereich2EFGWert3.ReadOnly = True
         Me.lblStaffel1Bereich2EFGWert3.TabStop = False
         '
-        'PictureBox13
-        '
-        resources.ApplyResources(Me.PictureBox13, "PictureBox13")
-        Me.PictureBox13.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox13.Name = "PictureBox13"
-        Me.PictureBox13.TabStop = False
-        '
         'lblStaffel1Bereich2EFGWert1
         '
         resources.ApplyResources(Me.lblStaffel1Bereich2EFGWert1, "lblStaffel1Bereich2EFGWert1")
@@ -4434,6 +4350,90 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel1Bereich2Last, "lblStaffel1Bereich2Last")
         Me.lblStaffel1Bereich2Last.Name = "lblStaffel1Bereich2Last"
         '
+        'PictureBox82
+        '
+        resources.ApplyResources(Me.PictureBox82, "PictureBox82")
+        Me.PictureBox82.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox82.Name = "PictureBox82"
+        Me.PictureBox82.TabStop = False
+        '
+        'PictureBox83
+        '
+        resources.ApplyResources(Me.PictureBox83, "PictureBox83")
+        Me.PictureBox83.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox83.Name = "PictureBox83"
+        Me.PictureBox83.TabStop = False
+        '
+        'PictureBox84
+        '
+        resources.ApplyResources(Me.PictureBox84, "PictureBox84")
+        Me.PictureBox84.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox84.Name = "PictureBox84"
+        Me.PictureBox84.TabStop = False
+        '
+        'PictureBox24
+        '
+        resources.ApplyResources(Me.PictureBox24, "PictureBox24")
+        Me.PictureBox24.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox24.Name = "PictureBox24"
+        Me.PictureBox24.TabStop = False
+        '
+        'PictureBox25
+        '
+        resources.ApplyResources(Me.PictureBox25, "PictureBox25")
+        Me.PictureBox25.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox25.Name = "PictureBox25"
+        Me.PictureBox25.TabStop = False
+        '
+        'PictureBox26
+        '
+        resources.ApplyResources(Me.PictureBox26, "PictureBox26")
+        Me.PictureBox26.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox26.Name = "PictureBox26"
+        Me.PictureBox26.TabStop = False
+        '
+        'PictureBox8
+        '
+        resources.ApplyResources(Me.PictureBox8, "PictureBox8")
+        Me.PictureBox8.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox8.Name = "PictureBox8"
+        Me.PictureBox8.TabStop = False
+        '
+        'PictureBox9
+        '
+        resources.ApplyResources(Me.PictureBox9, "PictureBox9")
+        Me.PictureBox9.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox9.Name = "PictureBox9"
+        Me.PictureBox9.TabStop = False
+        '
+        'PictureBox10
+        '
+        resources.ApplyResources(Me.PictureBox10, "PictureBox10")
+        Me.PictureBox10.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox10.Name = "PictureBox10"
+        Me.PictureBox10.TabStop = False
+        '
+        'PictureBox11
+        '
+        resources.ApplyResources(Me.PictureBox11, "PictureBox11")
+        Me.PictureBox11.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox11.Name = "PictureBox11"
+        Me.PictureBox11.TabStop = False
+        '
+        'PictureBox12
+        '
+        resources.ApplyResources(Me.PictureBox12, "PictureBox12")
+        Me.PictureBox12.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox12.Name = "PictureBox12"
+        Me.PictureBox12.TabStop = False
+        '
+        'PictureBox13
+        '
+        resources.ApplyResources(Me.PictureBox13, "PictureBox13")
+        Me.PictureBox13.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox13.Name = "PictureBox13"
+        Me.PictureBox13.TabStop = False
+        '
         'RadGroupBoxStaffel1Bereich1
         '
         resources.ApplyResources(Me.RadGroupBoxStaffel1Bereich1, "RadGroupBoxStaffel1Bereich1")
@@ -4442,18 +4442,10 @@ Partial Class uco10PruefungStaffelverfahren
         Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.RadLabel5)
         Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.RadLabel4)
         Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.RadLabel1)
-        Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.PictureBox133)
         Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.RadTextBoxControlStaffel1Bereich1Last2)
         Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.RadTextBoxControlStaffel1Bereich1Anzeige2)
         Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.RadTextBoxControlStaffel1Bereich1Fehler2)
-        Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.PictureBox134)
         Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.lblStaffel1Bereich1EFGWert2)
-        Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.PictureBox75)
-        Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.PictureBox76)
-        Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.PictureBox81)
-        Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.PictureBox6)
-        Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.PictureBox7)
-        Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.PictureBox14)
         Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.RadTextBoxControlStaffel1Bereich1Fehler7)
         Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.RadTextBoxControlStaffel1Bereich1Fehler6)
         Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.RadTextBoxControlStaffel1Bereich1Fehler5)
@@ -4470,22 +4462,30 @@ Partial Class uco10PruefungStaffelverfahren
         Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.lblStaffel1Bereich1MessabweichungStaffel)
         Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.lblStaffel1Bereich1Differenz)
         Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.lblStaffel1Bereich1NormalLast)
-        Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.PictureBox5)
-        Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.PictureBox4)
-        Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.PictureBox3)
-        Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.PictureBox2)
-        Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.PictureBox1)
         Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.lblStaffel1Bereich1EFGWert7)
         Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.lblStaffel1Bereich1EFGWert6)
         Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.lblStaffel1Bereich1EFGWert5)
         Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.lblStaffel1Bereich1EFGWert4)
         Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.lblStaffel1Bereich1EFGWert3)
-        Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.PictureBox79)
         Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.lblStaffel1Bereich1EFGWert1)
         Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.lblStaffel1Bereich1EFG)
         Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.lblStaffel1Bereich1Fehler)
         Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.lblStaffel1Bereich1Anzeige)
         Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.lblStaffel1Bereich1Last)
+        Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.PictureBox133)
+        Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.PictureBox134)
+        Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.PictureBox75)
+        Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.PictureBox76)
+        Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.PictureBox81)
+        Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.PictureBox6)
+        Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.PictureBox7)
+        Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.PictureBox14)
+        Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.PictureBox5)
+        Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.PictureBox4)
+        Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.PictureBox3)
+        Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.PictureBox2)
+        Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.PictureBox1)
+        Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.PictureBox79)
         Me.RadGroupBoxStaffel1Bereich1.Name = "RadGroupBoxStaffel1Bereich1"
         '
         'PictureBox140
@@ -4510,13 +4510,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.RadLabel1, "RadLabel1")
         Me.RadLabel1.Name = "RadLabel1"
         '
-        'PictureBox133
-        '
-        resources.ApplyResources(Me.PictureBox133, "PictureBox133")
-        Me.PictureBox133.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox133.Name = "PictureBox133"
-        Me.PictureBox133.TabStop = False
-        '
         'RadTextBoxControlStaffel1Bereich1Last2
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel1Bereich1Last2, "RadTextBoxControlStaffel1Bereich1Last2")
@@ -4533,61 +4526,12 @@ Partial Class uco10PruefungStaffelverfahren
         Me.RadTextBoxControlStaffel1Bereich1Fehler2.Name = "RadTextBoxControlStaffel1Bereich1Fehler2"
         Me.RadTextBoxControlStaffel1Bereich1Fehler2.TabStop = False
         '
-        'PictureBox134
-        '
-        resources.ApplyResources(Me.PictureBox134, "PictureBox134")
-        Me.PictureBox134.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox134.Name = "PictureBox134"
-        Me.PictureBox134.TabStop = False
-        '
         'lblStaffel1Bereich1EFGWert2
         '
         resources.ApplyResources(Me.lblStaffel1Bereich1EFGWert2, "lblStaffel1Bereich1EFGWert2")
         Me.lblStaffel1Bereich1EFGWert2.Name = "lblStaffel1Bereich1EFGWert2"
         Me.lblStaffel1Bereich1EFGWert2.ReadOnly = True
         Me.lblStaffel1Bereich1EFGWert2.TabStop = False
-        '
-        'PictureBox75
-        '
-        resources.ApplyResources(Me.PictureBox75, "PictureBox75")
-        Me.PictureBox75.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox75.Name = "PictureBox75"
-        Me.PictureBox75.TabStop = False
-        '
-        'PictureBox76
-        '
-        resources.ApplyResources(Me.PictureBox76, "PictureBox76")
-        Me.PictureBox76.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox76.Name = "PictureBox76"
-        Me.PictureBox76.TabStop = False
-        '
-        'PictureBox81
-        '
-        resources.ApplyResources(Me.PictureBox81, "PictureBox81")
-        Me.PictureBox81.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox81.Name = "PictureBox81"
-        Me.PictureBox81.TabStop = False
-        '
-        'PictureBox6
-        '
-        resources.ApplyResources(Me.PictureBox6, "PictureBox6")
-        Me.PictureBox6.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.TabStop = False
-        '
-        'PictureBox7
-        '
-        resources.ApplyResources(Me.PictureBox7, "PictureBox7")
-        Me.PictureBox7.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.TabStop = False
-        '
-        'PictureBox14
-        '
-        resources.ApplyResources(Me.PictureBox14, "PictureBox14")
-        Me.PictureBox14.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox14.Name = "PictureBox14"
-        Me.PictureBox14.TabStop = False
         '
         'RadTextBoxControlStaffel1Bereich1Fehler7
         '
@@ -4676,41 +4620,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel1Bereich1NormalLast, "lblStaffel1Bereich1NormalLast")
         Me.lblStaffel1Bereich1NormalLast.Name = "lblStaffel1Bereich1NormalLast"
         '
-        'PictureBox5
-        '
-        resources.ApplyResources(Me.PictureBox5, "PictureBox5")
-        Me.PictureBox5.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.TabStop = False
-        '
-        'PictureBox4
-        '
-        resources.ApplyResources(Me.PictureBox4, "PictureBox4")
-        Me.PictureBox4.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.TabStop = False
-        '
-        'PictureBox3
-        '
-        resources.ApplyResources(Me.PictureBox3, "PictureBox3")
-        Me.PictureBox3.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.TabStop = False
-        '
-        'PictureBox2
-        '
-        resources.ApplyResources(Me.PictureBox2, "PictureBox2")
-        Me.PictureBox2.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.TabStop = False
-        '
-        'PictureBox1
-        '
-        resources.ApplyResources(Me.PictureBox1, "PictureBox1")
-        Me.PictureBox1.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.TabStop = False
-        '
         'lblStaffel1Bereich1EFGWert7
         '
         resources.ApplyResources(Me.lblStaffel1Bereich1EFGWert7, "lblStaffel1Bereich1EFGWert7")
@@ -4746,13 +4655,6 @@ Partial Class uco10PruefungStaffelverfahren
         Me.lblStaffel1Bereich1EFGWert3.ReadOnly = True
         Me.lblStaffel1Bereich1EFGWert3.TabStop = False
         '
-        'PictureBox79
-        '
-        resources.ApplyResources(Me.PictureBox79, "PictureBox79")
-        Me.PictureBox79.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        Me.PictureBox79.Name = "PictureBox79"
-        Me.PictureBox79.TabStop = False
-        '
         'lblStaffel1Bereich1EFGWert1
         '
         resources.ApplyResources(Me.lblStaffel1Bereich1EFGWert1, "lblStaffel1Bereich1EFGWert1")
@@ -4779,6 +4681,104 @@ Partial Class uco10PruefungStaffelverfahren
         '
         resources.ApplyResources(Me.lblStaffel1Bereich1Last, "lblStaffel1Bereich1Last")
         Me.lblStaffel1Bereich1Last.Name = "lblStaffel1Bereich1Last"
+        '
+        'PictureBox133
+        '
+        resources.ApplyResources(Me.PictureBox133, "PictureBox133")
+        Me.PictureBox133.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox133.Name = "PictureBox133"
+        Me.PictureBox133.TabStop = False
+        '
+        'PictureBox134
+        '
+        resources.ApplyResources(Me.PictureBox134, "PictureBox134")
+        Me.PictureBox134.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox134.Name = "PictureBox134"
+        Me.PictureBox134.TabStop = False
+        '
+        'PictureBox75
+        '
+        resources.ApplyResources(Me.PictureBox75, "PictureBox75")
+        Me.PictureBox75.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox75.Name = "PictureBox75"
+        Me.PictureBox75.TabStop = False
+        '
+        'PictureBox76
+        '
+        resources.ApplyResources(Me.PictureBox76, "PictureBox76")
+        Me.PictureBox76.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox76.Name = "PictureBox76"
+        Me.PictureBox76.TabStop = False
+        '
+        'PictureBox81
+        '
+        resources.ApplyResources(Me.PictureBox81, "PictureBox81")
+        Me.PictureBox81.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox81.Name = "PictureBox81"
+        Me.PictureBox81.TabStop = False
+        '
+        'PictureBox6
+        '
+        resources.ApplyResources(Me.PictureBox6, "PictureBox6")
+        Me.PictureBox6.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.TabStop = False
+        '
+        'PictureBox7
+        '
+        resources.ApplyResources(Me.PictureBox7, "PictureBox7")
+        Me.PictureBox7.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox7.Name = "PictureBox7"
+        Me.PictureBox7.TabStop = False
+        '
+        'PictureBox14
+        '
+        resources.ApplyResources(Me.PictureBox14, "PictureBox14")
+        Me.PictureBox14.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox14.Name = "PictureBox14"
+        Me.PictureBox14.TabStop = False
+        '
+        'PictureBox5
+        '
+        resources.ApplyResources(Me.PictureBox5, "PictureBox5")
+        Me.PictureBox5.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.TabStop = False
+        '
+        'PictureBox4
+        '
+        resources.ApplyResources(Me.PictureBox4, "PictureBox4")
+        Me.PictureBox4.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.TabStop = False
+        '
+        'PictureBox3
+        '
+        resources.ApplyResources(Me.PictureBox3, "PictureBox3")
+        Me.PictureBox3.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox2
+        '
+        resources.ApplyResources(Me.PictureBox2, "PictureBox2")
+        Me.PictureBox2.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        resources.ApplyResources(Me.PictureBox1, "PictureBox1")
+        Me.PictureBox1.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.TabStop = False
+        '
+        'PictureBox79
+        '
+        resources.ApplyResources(Me.PictureBox79, "PictureBox79")
+        Me.PictureBox79.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBox79.Name = "PictureBox79"
+        Me.PictureBox79.TabStop = False
         '
         'RadGroupBoxStaffel1
         '
@@ -4827,9 +4827,6 @@ Partial Class uco10PruefungStaffelverfahren
         CType(Me.RadGroupBoxStaffel5Bereich3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBoxStaffel5Bereich3.ResumeLayout(False)
         Me.RadGroupBoxStaffel5Bereich3.PerformLayout()
-        CType(Me.PictureBox124, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox125, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox126, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox66, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox67, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel5Bereich3ErsatzLastUnten, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4859,12 +4856,12 @@ Partial Class uco10PruefungStaffelverfahren
         CType(Me.lblStaffel5Bereich3Fehler, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel5Bereich3Anzeige, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel5Bereich3Last, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox124, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox125, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox126, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBoxStaffel5Bereich2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBoxStaffel5Bereich2.ResumeLayout(False)
         Me.RadGroupBoxStaffel5Bereich2.PerformLayout()
-        CType(Me.PictureBox127, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox128, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox129, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox68, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox69, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel5Bereich2ErsatzLastUnten, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4894,12 +4891,12 @@ Partial Class uco10PruefungStaffelverfahren
         CType(Me.lblStaffel5Bereich2Fehler, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel5Bereich2Anzeige, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel5Bereich2Last, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox127, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox128, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox129, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBoxStaffel5Bereich1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBoxStaffel5Bereich1.ResumeLayout(False)
         Me.RadGroupBoxStaffel5Bereich1.PerformLayout()
-        CType(Me.PictureBox130, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox131, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox132, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox73, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox74, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel5Bereich1ErsatzLastUnten, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4929,12 +4926,12 @@ Partial Class uco10PruefungStaffelverfahren
         CType(Me.lblStaffel5Bereich1Fehler, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel5Bereich1Anzeige, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel5Bereich1Last, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox130, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox131, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox132, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBoxStaffel4Bereich3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBoxStaffel4Bereich3.ResumeLayout(False)
         Me.RadGroupBoxStaffel4Bereich3.PerformLayout()
-        CType(Me.PictureBox121, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox122, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox123, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox61, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox62, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel4Bereich3ErsatzLastUnten, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4964,12 +4961,12 @@ Partial Class uco10PruefungStaffelverfahren
         CType(Me.lblStaffel4Bereich3Fehler, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel4Bereich3Anzeige, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel4Bereich3Last, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox121, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox122, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox123, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBoxStaffel4Bereich2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBoxStaffel4Bereich2.ResumeLayout(False)
         Me.RadGroupBoxStaffel4Bereich2.PerformLayout()
-        CType(Me.PictureBox118, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox119, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox120, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox59, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox60, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel4Bereich2ErsatzLastUnten, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4999,12 +4996,12 @@ Partial Class uco10PruefungStaffelverfahren
         CType(Me.lblStaffel4Bereich2Fehler, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel4Bereich2Anzeige, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel4Bereich2Last, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox118, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox119, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox120, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBoxStaffel4Bereich1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBoxStaffel4Bereich1.ResumeLayout(False)
         Me.RadGroupBoxStaffel4Bereich1.PerformLayout()
-        CType(Me.PictureBox115, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox116, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox117, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox54, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox55, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel4Bereich1ErsatzLastUnten, System.ComponentModel.ISupportInitialize).EndInit()
@@ -5034,12 +5031,12 @@ Partial Class uco10PruefungStaffelverfahren
         CType(Me.lblStaffel4Bereich1Fehler, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel4Bereich1Anzeige, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel4Bereich1Last, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox115, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox116, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox117, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBoxStaffel3Bereich3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBoxStaffel3Bereich3.ResumeLayout(False)
         Me.RadGroupBoxStaffel3Bereich3.PerformLayout()
-        CType(Me.PictureBox106, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox107, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox108, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox45, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox46, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel3Bereich3ErsatzLastUnten, System.ComponentModel.ISupportInitialize).EndInit()
@@ -5069,12 +5066,12 @@ Partial Class uco10PruefungStaffelverfahren
         CType(Me.lblStaffel3Bereich3Fehler, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel3Bereich3Anzeige, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel3Bereich3Last, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox106, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox107, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox108, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBoxStaffel3Bereich2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBoxStaffel3Bereich2.ResumeLayout(False)
         Me.RadGroupBoxStaffel3Bereich2.PerformLayout()
-        CType(Me.PictureBox109, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox110, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox111, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox47, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox48, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel3Bereich2ErsatzLastUnten, System.ComponentModel.ISupportInitialize).EndInit()
@@ -5104,12 +5101,12 @@ Partial Class uco10PruefungStaffelverfahren
         CType(Me.lblStaffel3Bereich2Fehler, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel3Bereich2Anzeige, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel3Bereich2Last, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox109, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox110, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox111, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBoxStaffel3Bereich1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBoxStaffel3Bereich1.ResumeLayout(False)
         Me.RadGroupBoxStaffel3Bereich1.PerformLayout()
-        CType(Me.PictureBox112, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox113, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox114, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox52, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox53, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel3Bereich1ErsatzLastUnten, System.ComponentModel.ISupportInitialize).EndInit()
@@ -5139,12 +5136,12 @@ Partial Class uco10PruefungStaffelverfahren
         CType(Me.lblStaffel3Bereich1Fehler, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel3Bereich1Anzeige, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel3Bereich1Last, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox112, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox113, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox114, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBoxStaffel2Bereich3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBoxStaffel2Bereich3.ResumeLayout(False)
         Me.RadGroupBoxStaffel2Bereich3.PerformLayout()
-        CType(Me.PictureBox103, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox104, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox105, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox40, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox41, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel2Bereich3ErsatzLastUnten, System.ComponentModel.ISupportInitialize).EndInit()
@@ -5174,12 +5171,12 @@ Partial Class uco10PruefungStaffelverfahren
         CType(Me.lblStaffel2Bereich3Fehler, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel2Bereich3Anzeige, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel2Bereich3Last, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox103, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox104, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox105, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBoxStaffel2Bereich2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBoxStaffel2Bereich2.ResumeLayout(False)
         Me.RadGroupBoxStaffel2Bereich2.PerformLayout()
-        CType(Me.PictureBox97, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox98, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox102, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox38, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox39, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel2Bereich2ErsatzLastUnten, System.ComponentModel.ISupportInitialize).EndInit()
@@ -5209,12 +5206,12 @@ Partial Class uco10PruefungStaffelverfahren
         CType(Me.lblStaffel2Bereich2Fehler, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel2Bereich2Anzeige, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel2Bereich2Last, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox97, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox98, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox102, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBoxStaffel2Bereich1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBoxStaffel2Bereich1.ResumeLayout(False)
         Me.RadGroupBoxStaffel2Bereich1.PerformLayout()
-        CType(Me.PictureBox91, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox95, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox96, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox33, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox34, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel2Bereich1ErsatzLastUnten, System.ComponentModel.ISupportInitialize).EndInit()
@@ -5244,18 +5241,15 @@ Partial Class uco10PruefungStaffelverfahren
         CType(Me.lblStaffel2Bereich1Fehler, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel2Bereich1Anzeige, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel2Bereich1Last, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox91, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox95, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox96, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBoxStaffel1Bereich3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBoxStaffel1Bereich3.ResumeLayout(False)
         Me.RadGroupBoxStaffel1Bereich3.PerformLayout()
         CType(Me.PictureBox141, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox88, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox89, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox90, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox27, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox31, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox32, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlStaffel1Bereich3Fehler7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlStaffel1Bereich3Fehler6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlStaffel1Bereich3Fehler5, System.ComponentModel.ISupportInitialize).EndInit()
@@ -5272,34 +5266,34 @@ Partial Class uco10PruefungStaffelverfahren
         CType(Me.lblStaffel1Bereich3MessabweichungStaffel, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel1Bereich3Differenz, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel1Bereich3NormalLast, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel1Bereich3EFGWert7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel1Bereich3EFGWert6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel1Bereich3EFGWert5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel1Bereich3EFGWert4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel1Bereich3EFGWert3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel1Bereich3EFGWert1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel1Bereich3EFG, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel1Bereich3Fehler, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel1Bereich3Anzeige, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel1Bereich3Last, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox88, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox89, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox90, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox27, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox31, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox32, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBoxStaffel1Bereich2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBoxStaffel1Bereich2.ResumeLayout(False)
         Me.RadGroupBoxStaffel1Bereich2.PerformLayout()
         CType(Me.PictureBox139, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox82, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox83, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox84, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox24, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox25, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox26, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlStaffel1Bereich2Fehler7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlStaffel1Bereich2Fehler6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlStaffel1Bereich2Fehler5, System.ComponentModel.ISupportInitialize).EndInit()
@@ -5316,22 +5310,28 @@ Partial Class uco10PruefungStaffelverfahren
         CType(Me.lblStaffel1Bereich2MessabweichungStaffel, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel1Bereich2Differenz, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel1Bereich2NormalLast, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel1Bereich2EFGWert7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel1Bereich2EFGWert6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel1Bereich2EFGWert5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel1Bereich2EFGWert4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel1Bereich2EFGWert3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel1Bereich2EFGWert1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel1Bereich2EFG, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel1Bereich2Fehler, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel1Bereich2Anzeige, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel1Bereich2Last, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox82, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox83, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox84, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox24, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox25, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox26, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBoxStaffel1Bereich1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBoxStaffel1Bereich1.ResumeLayout(False)
         Me.RadGroupBoxStaffel1Bereich1.PerformLayout()
@@ -5339,18 +5339,10 @@ Partial Class uco10PruefungStaffelverfahren
         CType(Me.RadLabel5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox133, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlStaffel1Bereich1Last2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlStaffel1Bereich1Anzeige2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlStaffel1Bereich1Fehler2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox134, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel1Bereich1EFGWert2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox75, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox76, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox81, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlStaffel1Bereich1Fehler7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlStaffel1Bereich1Fehler6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlStaffel1Bereich1Fehler5, System.ComponentModel.ISupportInitialize).EndInit()
@@ -5367,22 +5359,30 @@ Partial Class uco10PruefungStaffelverfahren
         CType(Me.lblStaffel1Bereich1MessabweichungStaffel, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel1Bereich1Differenz, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel1Bereich1NormalLast, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel1Bereich1EFGWert7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel1Bereich1EFGWert6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel1Bereich1EFGWert5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel1Bereich1EFGWert4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel1Bereich1EFGWert3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox79, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel1Bereich1EFGWert1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel1Bereich1EFG, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel1Bereich1Fehler, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel1Bereich1Anzeige, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStaffel1Bereich1Last, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox133, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox134, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox75, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox76, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox81, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox79, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBoxStaffel1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBoxStaffel2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBoxStaffel3, System.ComponentModel.ISupportInitialize).EndInit()

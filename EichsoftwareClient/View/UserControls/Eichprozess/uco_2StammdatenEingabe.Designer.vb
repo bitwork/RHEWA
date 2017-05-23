@@ -147,14 +147,15 @@ Partial Class uco_2StammdatenEingabe
         '
         'RadScrollablePanel1.PanelContainer
         '
+        resources.ApplyResources(Me.RadScrollablePanel1.PanelContainer, "RadScrollablePanel1.PanelContainer")
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadGroupBoxStammdaten)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadGroupBoxWZ)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadGroupBoxWaage)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadGroupBoxAWG)
-        resources.ApplyResources(Me.RadScrollablePanel1.PanelContainer, "RadScrollablePanel1.PanelContainer")
         '
         'RadGroupBoxStammdaten
         '
+        resources.ApplyResources(Me.RadGroupBoxStammdaten, "RadGroupBoxStammdaten")
         Me.RadGroupBoxStammdaten.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBoxStammdaten.Controls.Add(Me.Label3)
         Me.RadGroupBoxStammdaten.Controls.Add(Me.Label2)
@@ -168,31 +169,30 @@ Partial Class uco_2StammdatenEingabe
         Me.RadGroupBoxStammdaten.Controls.Add(Me.lblStrasse)
         Me.RadGroupBoxStammdaten.Controls.Add(Me.RadTextBoxStammdatenWaagenbaufirma)
         Me.RadGroupBoxStammdaten.Controls.Add(Me.lblWaagenbaufirma)
-        resources.ApplyResources(Me.RadGroupBoxStammdaten, "RadGroupBoxStammdaten")
         Me.RadGroupBoxStammdaten.Name = "RadGroupBoxStammdaten"
         '
         'Label3
         '
-        Me.Label3.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label3, "Label3")
+        Me.Label3.ForeColor = System.Drawing.Color.Red
         Me.Label3.Name = "Label3"
         '
         'Label2
         '
-        Me.Label2.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label2, "Label2")
+        Me.Label2.ForeColor = System.Drawing.Color.Red
         Me.Label2.Name = "Label2"
         '
         'Label1
         '
-        Me.Label1.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label1, "Label1")
+        Me.Label1.ForeColor = System.Drawing.Color.Red
         Me.Label1.Name = "Label1"
         '
         'lblPflichtfeld
         '
-        Me.lblPflichtfeld.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.lblPflichtfeld, "lblPflichtfeld")
+        Me.lblPflichtfeld.ForeColor = System.Drawing.Color.Red
         Me.lblPflichtfeld.Name = "lblPflichtfeld"
         '
         'RadTextBoxStammdatenPLZ
@@ -241,6 +241,7 @@ Partial Class uco_2StammdatenEingabe
         '
         'RadGroupBoxWZ
         '
+        resources.ApplyResources(Me.RadGroupBoxWZ, "RadGroupBoxWZ")
         Me.RadGroupBoxWZ.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBoxWZ.Controls.Add(Me.Label9)
         Me.RadGroupBoxWZ.Controls.Add(Me.Label8)
@@ -255,53 +256,52 @@ Partial Class uco_2StammdatenEingabe
         Me.RadGroupBoxWZ.Controls.Add(Me.RadTextBoxWZPruefbericht)
         Me.RadGroupBoxWZ.Controls.Add(Me.lblAWZZulassung)
         Me.RadGroupBoxWZ.Controls.Add(Me.lblAWZHersteller)
-        resources.ApplyResources(Me.RadGroupBoxWZ, "RadGroupBoxWZ")
         Me.RadGroupBoxWZ.Name = "RadGroupBoxWZ"
         '
         'Label9
         '
-        Me.Label9.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label9, "Label9")
+        Me.Label9.ForeColor = System.Drawing.Color.Red
         Me.Label9.Name = "Label9"
         '
         'Label8
         '
-        Me.Label8.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label8, "Label8")
+        Me.Label8.ForeColor = System.Drawing.Color.Red
         Me.Label8.Name = "Label8"
         '
         'PictureBox6
         '
-        Me.PictureBox6.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox6, "PictureBox6")
+        Me.PictureBox6.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox6.Name = "PictureBox6"
         Me.PictureBox6.TabStop = False
         '
         'PictureBox5
         '
-        Me.PictureBox5.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox5, "PictureBox5")
+        Me.PictureBox5.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.TabStop = False
         '
         'RadButtonNeueWaegezelle
         '
-        Me.RadButtonNeueWaegezelle.Image = Global.EichsoftwareClient.My.Resources.Resources.add
         resources.ApplyResources(Me.RadButtonNeueWaegezelle, "RadButtonNeueWaegezelle")
+        Me.RadButtonNeueWaegezelle.Image = Global.EichsoftwareClient.My.Resources.Resources.add
         Me.RadButtonNeueWaegezelle.Name = "RadButtonNeueWaegezelle"
         '
         'RadDropdownlistlWZHersteller
         '
+        resources.ApplyResources(Me.RadDropdownlistlWZHersteller, "RadDropdownlistlWZHersteller")
         Me.RadDropdownlistlWZHersteller.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.RadDropdownlistlWZHersteller.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList
-        resources.ApplyResources(Me.RadDropdownlistlWZHersteller, "RadDropdownlistlWZHersteller")
         Me.RadDropdownlistlWZHersteller.Name = "RadDropdownlistlWZHersteller"
         '
         'RadDropdownlistlWZTyp
         '
+        resources.ApplyResources(Me.RadDropdownlistlWZTyp, "RadDropdownlistlWZTyp")
         Me.RadDropdownlistlWZTyp.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.RadDropdownlistlWZTyp.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList
-        resources.ApplyResources(Me.RadDropdownlistlWZTyp, "RadDropdownlistlWZTyp")
         Me.RadDropdownlistlWZTyp.Name = "RadDropdownlistlWZTyp"
         '
         'lblAWZTyp
@@ -342,6 +342,7 @@ Partial Class uco_2StammdatenEingabe
         '
         'RadGroupBoxWaage
         '
+        resources.ApplyResources(Me.RadGroupBoxWaage, "RadGroupBoxWaage")
         Me.RadGroupBoxWaage.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBoxWaage.Controls.Add(Me.Label6)
         Me.RadGroupBoxWaage.Controls.Add(Me.Label5)
@@ -355,25 +356,24 @@ Partial Class uco_2StammdatenEingabe
         Me.RadGroupBoxWaage.Controls.Add(Me.lblAWaagenTyp)
         Me.RadGroupBoxWaage.Controls.Add(Me.RadTextBoxWaageSeriennummer)
         Me.RadGroupBoxWaage.Controls.Add(Me.lblAWaageSeriennummer)
-        resources.ApplyResources(Me.RadGroupBoxWaage, "RadGroupBoxWaage")
         Me.RadGroupBoxWaage.Name = "RadGroupBoxWaage"
         '
         'Label6
         '
-        Me.Label6.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label6, "Label6")
+        Me.Label6.ForeColor = System.Drawing.Color.Red
         Me.Label6.Name = "Label6"
         '
         'Label5
         '
-        Me.Label5.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label5, "Label5")
+        Me.Label5.ForeColor = System.Drawing.Color.Red
         Me.Label5.Name = "Label5"
         '
         'Label4
         '
-        Me.Label4.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label4, "Label4")
+        Me.Label4.ForeColor = System.Drawing.Color.Red
         Me.Label4.Name = "Label4"
         '
         'lblWaagenart
@@ -383,16 +383,16 @@ Partial Class uco_2StammdatenEingabe
         '
         'PictureBox4
         '
-        Me.PictureBox4.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox4, "PictureBox4")
+        Me.PictureBox4.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.TabStop = False
         '
         'RadDropDownListWaagenArt
         '
+        resources.ApplyResources(Me.RadDropDownListWaagenArt, "RadDropDownListWaagenArt")
         Me.RadDropDownListWaagenArt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.RadDropDownListWaagenArt.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList
-        resources.ApplyResources(Me.RadDropDownListWaagenArt, "RadDropDownListWaagenArt")
         Me.RadDropDownListWaagenArt.Name = "RadDropDownListWaagenArt"
         '
         'RadLabel16
@@ -402,9 +402,9 @@ Partial Class uco_2StammdatenEingabe
         '
         'RadDropdownlistWaagenTyp
         '
+        resources.ApplyResources(Me.RadDropdownlistWaagenTyp, "RadDropdownlistWaagenTyp")
         Me.RadDropdownlistWaagenTyp.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.RadDropdownlistWaagenTyp.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList
-        resources.ApplyResources(Me.RadDropdownlistWaagenTyp, "RadDropdownlistWaagenTyp")
         Me.RadDropdownlistWaagenTyp.Name = "RadDropdownlistWaagenTyp"
         '
         'RadTextBoxWaageZulassungsinhaber
@@ -433,6 +433,7 @@ Partial Class uco_2StammdatenEingabe
         '
         'RadGroupBoxAWG
         '
+        resources.ApplyResources(Me.RadGroupBoxAWG, "RadGroupBoxAWG")
         Me.RadGroupBoxAWG.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBoxAWG.Controls.Add(Me.Label7)
         Me.RadGroupBoxAWG.Controls.Add(Me.PictureBox2)
@@ -446,41 +447,40 @@ Partial Class uco_2StammdatenEingabe
         Me.RadGroupBoxAWG.Controls.Add(Me.lblAWGBauart)
         Me.RadGroupBoxAWG.Controls.Add(Me.RadTextBoxAWGHersteller)
         Me.RadGroupBoxAWG.Controls.Add(Me.lblAWGHersteller)
-        resources.ApplyResources(Me.RadGroupBoxAWG, "RadGroupBoxAWG")
         Me.RadGroupBoxAWG.Name = "RadGroupBoxAWG"
         '
         'Label7
         '
-        Me.Label7.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.Label7, "Label7")
+        Me.Label7.ForeColor = System.Drawing.Color.Red
         Me.Label7.Name = "Label7"
         '
         'PictureBox2
         '
-        Me.PictureBox2.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox2, "PictureBox2")
+        Me.PictureBox2.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.TabStop = False
         '
         'PictureBox3
         '
-        Me.PictureBox3.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox3, "PictureBox3")
+        Me.PictureBox3.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.TabStop = False
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox1, "PictureBox1")
+        Me.PictureBox1.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.TabStop = False
         '
         'RadDropdownlistAWGTyp
         '
+        resources.ApplyResources(Me.RadDropdownlistAWGTyp, "RadDropdownlistAWGTyp")
         Me.RadDropdownlistAWGTyp.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.RadDropdownlistAWGTyp.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList
-        resources.ApplyResources(Me.RadDropdownlistAWGTyp, "RadDropdownlistAWGTyp")
         Me.RadDropdownlistAWGTyp.Name = "RadDropdownlistAWGTyp"
         '
         'lblAWGTyp

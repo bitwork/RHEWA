@@ -18,6 +18,11 @@ Public Class uco10PruefungStaffelverfahren
         MyBase.New()
         ' Dieser Aufruf ist für den Designer erforderlich.
         InitializeComponent()
+
+        Telerik.WinControls.ThemeResolutionService.LoadPackageResource("EichsoftwareClient.RHEWAGREEN.tssp") 'Pfad zur Themedatei
+        Telerik.WinControls.ThemeResolutionService.ApplicationThemeName = "RHEWAGREEN" 'standard Themename
+        Telerik.WinControls.ThemeResolutionService.ApplyThemeToControlTree(Me, "RHEWAGREEN")
+
     End Sub
 
     Sub New(ByRef pParentform As FrmMainContainer, ByRef pObjEichprozess As Eichprozess, Optional ByRef pPreviousUco As ucoContent = Nothing, Optional ByRef pNextUco As ucoContent = Nothing, Optional ByVal pEnuModus As enuDialogModus = enuDialogModus.normal)
@@ -1196,7 +1201,6 @@ Public Class uco10PruefungStaffelverfahren
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco10PruefungStaffelverfahren))
         Lokalisierung(Me, resources)
 
-
         If Not ParentFormular Is Nothing Then
             Try
                 'Hilfetext setzen
@@ -1543,7 +1547,6 @@ Public Class uco10PruefungStaffelverfahren
         If Me.Equals(UserControl) Then
             MyBase.UpdateNeeded(UserControl)
             Me.LokalisierungNeeded(UserControl)
-
 
             LoadFromDatabase()
         End If
