@@ -771,4 +771,10 @@ Eine Wägezelle mit der Markierung NH ist nur zulässig, wenn die Feuchtigkeitsp
 
  - Die Krafteinleitung muss konform sein mit einem der Beispiele, die im WELMEC Führer (WELMEC 2.4) gezeigt werden.</value>
   </data>
+  <data name="Bemerkung" xml:space="preserve">
+    <value>Bemerkung</value>
+  </data>
+  <data name="Bearbeitungsdatum" xml:space="preserve">
+    <value>Bearbeitungsdatum</value>
+  </data>
 </root>

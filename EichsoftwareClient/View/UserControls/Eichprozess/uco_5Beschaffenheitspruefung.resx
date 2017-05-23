@@ -117,1072 +117,1072 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="RadScrollablePanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="RadScrollablePanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="lblPflichtfeld1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblPflichtfeld1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>845, 909</value>
-  </data>
-  <data name="lblPflichtfeld1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>11, 18</value>
-  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lblPflichtfeld1.TabIndex" type="System.Int32, mscorlib">
-    <value>35</value>
-  </data>
-  <data name="lblPflichtfeld1.Text" xml:space="preserve">
-    <value>*</value>
-  </data>
-  <data name="&gt;&gt;lblPflichtfeld1.Name" xml:space="preserve">
-    <value>lblPflichtfeld1</value>
-  </data>
-  <data name="&gt;&gt;lblPflichtfeld1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;lblPflichtfeld1.Parent" xml:space="preserve">
-    <value>RadScrollablePanel1.PanelContainer</value>
-  </data>
-  <data name="&gt;&gt;lblPflichtfeld1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="RadGroupBoxAufstellbedingungen.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="RadLabel20.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 33</value>
-  </data>
-  <data name="RadLabel20.Size" type="System.Drawing.Size, System.Drawing">
-    <value>197, 18</value>
-  </data>
-  <data name="RadLabel20.TabIndex" type="System.Int32, mscorlib">
-    <value>38</value>
-  </data>
-  <data name="RadLabel20.Text" xml:space="preserve">
-    <value>The installation conditions are all right</value>
-  </data>
-  <data name="&gt;&gt;RadLabel20.Name" xml:space="preserve">
-    <value>RadLabel20</value>
-  </data>
-  <data name="&gt;&gt;RadLabel20.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadLabel20.Parent" xml:space="preserve">
-    <value>RadGroupBoxAufstellbedingungen</value>
-  </data>
-  <data name="&gt;&gt;RadLabel20.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="RadGroupBoxAufstellbedingungen.HeaderText" xml:space="preserve">
-    <value>Criteria for the installation site:</value>
-  </data>
-  <data name="RadGroupBoxAufstellbedingungen.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 809</value>
-  </data>
-  <data name="RadGroupBoxAufstellbedingungen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>14300, 59</value>
-  </data>
-  <data name="RadGroupBoxAufstellbedingungen.TabIndex" type="System.Int32, mscorlib">
-    <value>39</value>
-  </data>
-  <data name="RadGroupBoxAufstellbedingungen.Text" xml:space="preserve">
-    <value>Criteria for the installation site:</value>
-  </data>
-  <data name="&gt;&gt;RadGroupBoxAufstellbedingungen.Name" xml:space="preserve">
-    <value>RadGroupBoxAufstellbedingungen</value>
-  </data>
-  <data name="&gt;&gt;RadGroupBoxAufstellbedingungen.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadGroupBoxAufstellbedingungen.Parent" xml:space="preserve">
-    <value>RadScrollablePanel1.PanelContainer</value>
-  </data>
-  <data name="&gt;&gt;RadGroupBoxAufstellbedingungen.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="RadCheckBoxApprove.Location" type="System.Drawing.Point, System.Drawing">
-    <value>883, 918</value>
-  </data>
-  <data name="RadCheckBoxApprove.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 15</value>
-  </data>
-  <data name="RadCheckBoxApprove.TabIndex" type="System.Int32, mscorlib">
-    <value>38</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxApprove.Name" xml:space="preserve">
-    <value>RadCheckBoxApprove</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxApprove.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxApprove.Parent" xml:space="preserve">
-    <value>RadScrollablePanel1.PanelContainer</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxApprove.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="RadLabel19.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 18pt, style=Bold</value>
-  </data>
-  <data name="RadLabel19.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 905</value>
-  </data>
-  <data name="RadLabel19.Size" type="System.Drawing.Size, System.Drawing">
-    <value>829, 37</value>
-  </data>
-  <data name="RadLabel19.TabIndex" type="System.Int32, mscorlib">
-    <value>37</value>
-  </data>
-  <data name="RadLabel19.Text" xml:space="preserve">
-    <value>I have examined the above-mentioned criteria. All criteria are fulfilled.</value>
-  </data>
-  <data name="&gt;&gt;RadLabel19.Name" xml:space="preserve">
-    <value>RadLabel19</value>
-  </data>
-  <data name="&gt;&gt;RadLabel19.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadLabel19.Parent" xml:space="preserve">
-    <value>RadScrollablePanel1.PanelContainer</value>
-  </data>
-  <data name="&gt;&gt;RadLabel19.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="RadGroupBoxWaegebruecke.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="RadSeparator14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 134</value>
-  </data>
-  <data name="RadSeparator14.Size" type="System.Drawing.Size, System.Drawing">
-    <value>751, 10</value>
-  </data>
-  <data name="RadSeparator14.TabIndex" type="System.Int32, mscorlib">
-    <value>38</value>
-  </data>
-  <data name="RadSeparator14.Text" xml:space="preserve">
-    <value>RadSeparator14</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator14.Name" xml:space="preserve">
-    <value>RadSeparator14</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator14.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator14.Parent" xml:space="preserve">
-    <value>RadGroupBoxWaegebruecke</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator14.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="RadSeparator11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 94</value>
-  </data>
-  <data name="RadSeparator11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>751, 10</value>
-  </data>
-  <data name="RadSeparator11.TabIndex" type="System.Int32, mscorlib">
-    <value>36</value>
-  </data>
-  <data name="RadSeparator11.Text" xml:space="preserve">
-    <value>RadSeparator11</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator11.Name" xml:space="preserve">
-    <value>RadSeparator11</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator11.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator11.Parent" xml:space="preserve">
-    <value>RadGroupBoxWaegebruecke</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator11.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="RadSeparator10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 56</value>
-  </data>
-  <data name="RadSeparator10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>751, 10</value>
-  </data>
   <data name="RadSeparator10.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
   </data>
-  <data name="RadSeparator10.Text" xml:space="preserve">
-    <value>RadSeparator10</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator10.Name" xml:space="preserve">
-    <value>RadSeparator10</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator10.Type" xml:space="preserve">
+  <data name="&gt;&gt;RadSeparator13.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;RadSeparator10.Parent" xml:space="preserve">
-    <value>RadGroupBoxWaegebruecke</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator10.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="RadLabel15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 34</value>
-  </data>
-  <data name="RadLabel15.Size" type="System.Drawing.Size, System.Drawing">
-    <value>299, 18</value>
-  </data>
-  <data name="RadLabel15.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
-  </data>
-  <data name="RadLabel15.Text" xml:space="preserve">
-    <value>The weighbridge design appropriate for the weighing task.</value>
-  </data>
-  <data name="&gt;&gt;RadLabel15.Name" xml:space="preserve">
-    <value>RadLabel15</value>
-  </data>
-  <data name="&gt;&gt;RadLabel15.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadLabel15.Parent" xml:space="preserve">
-    <value>RadGroupBoxWaegebruecke</value>
-  </data>
-  <data name="&gt;&gt;RadLabel15.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="RadLabel11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 72</value>
-  </data>
-  <data name="RadLabel11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>528, 18</value>
-  </data>
-  <data name="RadLabel11.TabIndex" type="System.Int32, mscorlib">
-    <value>28</value>
-  </data>
-  <data name="RadLabel11.Text" xml:space="preserve">
-    <value>It is free of corrosion. On concrete road weighbridges, no chipping or steel reinforcement may be visible.</value>
-  </data>
-  <data name="&gt;&gt;RadLabel11.Name" xml:space="preserve">
-    <value>RadLabel11</value>
-  </data>
-  <data name="&gt;&gt;RadLabel11.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadLabel11.Parent" xml:space="preserve">
-    <value>RadGroupBoxWaegebruecke</value>
-  </data>
-  <data name="&gt;&gt;RadLabel11.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="RadLabel13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 110</value>
-  </data>
-  <data name="RadLabel13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>406, 18</value>
-  </data>
-  <data name="RadLabel13.TabIndex" type="System.Int32, mscorlib">
-    <value>29</value>
-  </data>
-  <data name="RadLabel13.Text" xml:space="preserve">
-    <value>The load cell holders are in horizontal level with each other. (Reference position)</value>
-  </data>
-  <data name="&gt;&gt;RadLabel13.Name" xml:space="preserve">
-    <value>RadLabel13</value>
-  </data>
-  <data name="&gt;&gt;RadLabel13.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadLabel13.Parent" xml:space="preserve">
-    <value>RadGroupBoxWaegebruecke</value>
-  </data>
-  <data name="&gt;&gt;RadLabel13.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="RadGroupBoxWaegebruecke.HeaderText" xml:space="preserve">
-    <value>Criteria for weighbridges:										
-</value>
-  </data>
-  <data name="RadGroupBoxWaegebruecke.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 634</value>
-  </data>
-  <data name="RadGroupBoxWaegebruecke.Size" type="System.Drawing.Size, System.Drawing">
-    <value>14300, 153</value>
-  </data>
-  <data name="RadGroupBoxWaegebruecke.TabIndex" type="System.Int32, mscorlib">
-    <value>33</value>
-  </data>
-  <data name="RadGroupBoxWaegebruecke.Text" xml:space="preserve">
-    <value>Criteria for weighbridges:										
-</value>
-  </data>
-  <data name="&gt;&gt;RadGroupBoxWaegebruecke.Name" xml:space="preserve">
-    <value>RadGroupBoxWaegebruecke</value>
-  </data>
-  <data name="&gt;&gt;RadGroupBoxWaegebruecke.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadGroupBoxWaegebruecke.Parent" xml:space="preserve">
-    <value>RadScrollablePanel1.PanelContainer</value>
-  </data>
-  <data name="&gt;&gt;RadGroupBoxWaegebruecke.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="RadGroupBoxWaegezellen.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="RadSeparator6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 157</value>
-  </data>
-  <data name="RadSeparator6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>751, 10</value>
-  </data>
-  <data name="RadSeparator6.TabIndex" type="System.Int32, mscorlib">
-    <value>38</value>
-  </data>
-  <data name="RadSeparator6.Text" xml:space="preserve">
-    <value>RadSeparator6</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator6.Name" xml:space="preserve">
-    <value>RadSeparator6</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator6.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator6.Parent" xml:space="preserve">
-    <value>RadGroupBoxWaegezellen</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator6.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="RadSeparator5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 119</value>
-  </data>
-  <data name="RadSeparator5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>751, 10</value>
-  </data>
-  <data name="RadSeparator5.TabIndex" type="System.Int32, mscorlib">
-    <value>37</value>
-  </data>
-  <data name="RadSeparator5.Text" xml:space="preserve">
-    <value>RadSeparator5</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator5.Name" xml:space="preserve">
-    <value>RadSeparator5</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator5.Parent" xml:space="preserve">
-    <value>RadGroupBoxWaegezellen</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator5.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="RadSeparator4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 81</value>
-  </data>
-  <data name="RadSeparator4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>751, 10</value>
-  </data>
-  <data name="RadSeparator4.TabIndex" type="System.Int32, mscorlib">
-    <value>36</value>
-  </data>
-  <data name="RadSeparator4.Text" xml:space="preserve">
-    <value>RadSeparator4</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator4.Name" xml:space="preserve">
-    <value>RadSeparator4</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator4.Parent" xml:space="preserve">
-    <value>RadGroupBoxWaegezellen</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator4.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="RadSeparator3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 43</value>
-  </data>
-  <data name="RadSeparator3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>751, 10</value>
-  </data>
-  <data name="RadSeparator3.TabIndex" type="System.Int32, mscorlib">
-    <value>35</value>
-  </data>
-  <data name="RadSeparator3.Text" xml:space="preserve">
-    <value>RadSeparator3</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator3.Name" xml:space="preserve">
-    <value>RadSeparator3</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator3.Parent" xml:space="preserve">
-    <value>RadGroupBoxWaegezellen</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator3.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="RadLabel7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 173</value>
-  </data>
-  <data name="RadLabel7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>310, 18</value>
-  </data>
-  <data name="RadLabel7.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="RadLabel7.Text" xml:space="preserve">
-    <value>The coating on resin-coated load cells must be undamaged.
-</value>
-  </data>
-  <data name="&gt;&gt;RadLabel7.Name" xml:space="preserve">
-    <value>RadLabel7</value>
-  </data>
-  <data name="&gt;&gt;RadLabel7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadLabel7.Parent" xml:space="preserve">
-    <value>RadGroupBoxWaegezellen</value>
-  </data>
-  <data name="&gt;&gt;RadLabel7.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="RadLabel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 135</value>
-  </data>
-  <data name="RadLabel5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>207, 18</value>
-  </data>
-  <data name="RadLabel5.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
-  </data>
-  <data name="RadLabel5.Text" xml:space="preserve">
-    <value>Screw-on plates must be flat and clean.
-</value>
+  <data name="&gt;&gt;RadLabel14.Name" xml:space="preserve">
+    <value>RadLabel14</value>
   </data>
   <data name="&gt;&gt;RadLabel5.Name" xml:space="preserve">
     <value>RadLabel5</value>
   </data>
-  <data name="&gt;&gt;RadLabel5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadLabel5.Parent" xml:space="preserve">
-    <value>RadGroupBoxWaegezellen</value>
-  </data>
-  <data name="&gt;&gt;RadLabel5.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="RadLabel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 23</value>
-  </data>
-  <data name="RadLabel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>223, 18</value>
-  </data>
-  <data name="RadLabel3.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
-  </data>
-  <data name="RadLabel3.Text" xml:space="preserve">
-    <value>Load cells must be approved to OIML R60.
-</value>
-  </data>
-  <data name="&gt;&gt;RadLabel3.Name" xml:space="preserve">
-    <value>RadLabel3</value>
-  </data>
-  <data name="&gt;&gt;RadLabel3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadLabel3.Parent" xml:space="preserve">
-    <value>RadGroupBoxWaegezellen</value>
-  </data>
-  <data name="&gt;&gt;RadLabel3.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="RadLabel6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 97</value>
-  </data>
-  <data name="RadLabel6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>217, 18</value>
-  </data>
-  <data name="RadLabel6.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="RadLabel6.Text" xml:space="preserve">
-    <value>Connection cables must be undamaged.									-																			
-</value>
-  </data>
-  <data name="&gt;&gt;RadLabel6.Name" xml:space="preserve">
-    <value>RadLabel6</value>
-  </data>
-  <data name="&gt;&gt;RadLabel6.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadLabel6.Parent" xml:space="preserve">
-    <value>RadGroupBoxWaegezellen</value>
-  </data>
-  <data name="&gt;&gt;RadLabel6.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="RadLabel8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 59</value>
-  </data>
-  <data name="RadLabel8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>520, 17</value>
-  </data>
-  <data name="RadLabel8.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
-  </data>
-  <data name="RadLabel8.Text" xml:space="preserve">
-    <value>&lt;html&gt;The load transmission must conform to one of the examples shown in the Welmec Guide (WELMEC 2.4)&lt;/html&gt;</value>
-  </data>
-  <data name="&gt;&gt;RadLabel8.Name" xml:space="preserve">
-    <value>RadLabel8</value>
-  </data>
-  <data name="&gt;&gt;RadLabel8.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadLabel8.Parent" xml:space="preserve">
-    <value>RadGroupBoxWaegezellen</value>
-  </data>
-  <data name="&gt;&gt;RadLabel8.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="RadGroupBoxWaegezellen.HeaderText" xml:space="preserve">
-    <value>Criteria for load cells:										
-</value>
-  </data>
-  <data name="RadGroupBoxWaegezellen.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 226</value>
-  </data>
-  <data name="RadGroupBoxWaegezellen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>14300, 193</value>
-  </data>
-  <data name="RadGroupBoxWaegezellen.TabIndex" type="System.Int32, mscorlib">
-    <value>31</value>
+  <data name="&gt;&gt;RadSeparator8.Parent" xml:space="preserve">
+    <value>RadGroupBoxVerbindungselemente</value>
   </data>
   <data name="RadGroupBoxWaegezellen.Text" xml:space="preserve">
     <value>Criteria for load cells:										
 </value>
   </data>
-  <data name="&gt;&gt;RadGroupBoxWaegezellen.Name" xml:space="preserve">
-    <value>RadGroupBoxWaegezellen</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="RadLabel5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 135</value>
   </data>
-  <data name="&gt;&gt;RadGroupBoxWaegezellen.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadGroupBoxWaegezellen.Parent" xml:space="preserve">
-    <value>RadScrollablePanel1.PanelContainer</value>
-  </data>
-  <data name="&gt;&gt;RadGroupBoxWaegezellen.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="RadGroupBoxVerbindungselemente.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="RadSeparator9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 134</value>
-  </data>
-  <data name="RadSeparator9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>751, 10</value>
-  </data>
-  <data name="RadSeparator9.TabIndex" type="System.Int32, mscorlib">
-    <value>37</value>
-  </data>
-  <data name="RadSeparator9.Text" xml:space="preserve">
-    <value>RadSeparator9</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator9.Name" xml:space="preserve">
-    <value>RadSeparator9</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator9.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator9.Parent" xml:space="preserve">
-    <value>RadGroupBoxVerbindungselemente</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator9.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="RadSeparator8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 96</value>
-  </data>
-  <data name="RadSeparator8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>751, 10</value>
-  </data>
-  <data name="RadSeparator8.TabIndex" type="System.Int32, mscorlib">
-    <value>36</value>
-  </data>
-  <data name="RadSeparator8.Text" xml:space="preserve">
-    <value>RadSeparator8</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator8.Name" xml:space="preserve">
-    <value>RadSeparator8</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator8.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator8.Parent" xml:space="preserve">
-    <value>RadGroupBoxVerbindungselemente</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator8.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="RadSeparator7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 56</value>
-  </data>
-  <data name="RadSeparator7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>751, 10</value>
-  </data>
-  <data name="RadSeparator7.TabIndex" type="System.Int32, mscorlib">
+  <data name="RadSeparator3.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
-  </data>
-  <data name="RadSeparator7.Text" xml:space="preserve">
-    <value>RadSeparator7</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator7.Name" xml:space="preserve">
-    <value>RadSeparator7</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator7.Parent" xml:space="preserve">
-    <value>RadGroupBoxVerbindungselemente</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator7.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="RadLabel16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 34</value>
-  </data>
-  <data name="RadLabel16.Size" type="System.Drawing.Size, System.Drawing">
-    <value>238, 18</value>
-  </data>
-  <data name="RadLabel16.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
-  </data>
-  <data name="RadLabel16.Text" xml:space="preserve">
-    <value>Tightness must be guaranteed (terminal box).
-</value>
-  </data>
-  <data name="&gt;&gt;RadLabel16.Name" xml:space="preserve">
-    <value>RadLabel16</value>
-  </data>
-  <data name="&gt;&gt;RadLabel16.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadLabel16.Parent" xml:space="preserve">
-    <value>RadGroupBoxVerbindungselemente</value>
   </data>
   <data name="&gt;&gt;RadLabel16.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="RadLabel14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 112</value>
+  <data name="&gt;&gt;RadSeparator9.Parent" xml:space="preserve">
+    <value>RadGroupBoxVerbindungselemente</value>
   </data>
-  <data name="RadLabel14.Size" type="System.Drawing.Size, System.Drawing">
-    <value>378, 18</value>
+  <data name="&gt;&gt;RadSeparator14.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="RadLabel14.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
+  <data name="RadLabel13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 110</value>
+  </data>
+  <data name="RadLabel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 93</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator10.Name" xml:space="preserve">
+    <value>RadSeparator10</value>
+  </data>
+  <data name="RadSeparator1.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="RadGroupBoxWaegezellen.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator5.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RadGroupBoxWaegebruecke.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15308, 153</value>
+  </data>
+  <data name="lblPflichtfeld1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;RadLabel8.Name" xml:space="preserve">
+    <value>RadLabel8</value>
+  </data>
+  <data name="&gt;&gt;RadLabel16.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadLabel19.Parent" xml:space="preserve">
+    <value>RadScrollablePanel1.PanelContainer</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator13.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="RadSeparator12.Text" xml:space="preserve">
+    <value>RadSeparator12</value>
+  </data>
+  <data name="&gt;&gt;RadLabel4.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="RadSeparator13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>751, 10</value>
+  </data>
+  <data name="RadLabel9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>353, 18</value>
+  </data>
+  <data name="RadGroupBoxAuswerteGeraete.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 8</value>
+  </data>
+  <data name="&gt;&gt;RadLabel20.Name" xml:space="preserve">
+    <value>RadLabel20</value>
+  </data>
+  <data name="&gt;&gt;RadLabel3.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadLabel5.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator6.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="RadSeparator6.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="RadGroupBoxAufstellbedingungen.HeaderText" xml:space="preserve">
+    <value>Criteria for the installation site:</value>
+  </data>
+  <data name="&gt;&gt;RadLabel13.Name" xml:space="preserve">
+    <value>RadLabel13</value>
+  </data>
+  <data name="&gt;&gt;RadLabel11.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator1.Parent" xml:space="preserve">
+    <value>RadGroupBoxAuswerteGeraete</value>
+  </data>
+  <data name="&gt;&gt;RadScrollablePanel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="RadLabel11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 72</value>
+  </data>
+  <data name="RadLabel10.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;RadLabel17.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="RadLabel15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 34</value>
+  </data>
+  <data name="RadSeparator10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 56</value>
+  </data>
+  <data name="&gt;&gt;RadLabel12.Name" xml:space="preserve">
+    <value>RadLabel12</value>
+  </data>
+  <data name="&gt;&gt;RadGroupBoxWaegebruecke.Name" xml:space="preserve">
+    <value>RadGroupBoxWaegebruecke</value>
+  </data>
+  <data name="&gt;&gt;RadLabel13.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="RadSeparator11.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="RadLabel8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>520, 17</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator7.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator11.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;RadScrollablePanel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="RadLabel2.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;RadLabel12.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator4.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator10.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;RadLabel11.Parent" xml:space="preserve">
+    <value>RadGroupBoxWaegebruecke</value>
   </data>
   <data name="RadLabel14.Text" xml:space="preserve">
     <value>Measuring cables may not be brittle or cracked --&gt; risk of capillary action
 </value>
   </data>
-  <data name="&gt;&gt;RadLabel14.Name" xml:space="preserve">
-    <value>RadLabel14</value>
-  </data>
-  <data name="&gt;&gt;RadLabel14.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadLabel14.Parent" xml:space="preserve">
-    <value>RadGroupBoxVerbindungselemente</value>
-  </data>
-  <data name="&gt;&gt;RadLabel14.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="RadLabel12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 72</value>
-  </data>
-  <data name="RadLabel12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 18</value>
-  </data>
-  <data name="RadLabel12.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
-  </data>
-  <data name="RadLabel12.Text" xml:space="preserve">
-    <value>Measuring cables must be undamaged.
-</value>
-  </data>
-  <data name="&gt;&gt;RadLabel12.Name" xml:space="preserve">
-    <value>RadLabel12</value>
-  </data>
-  <data name="&gt;&gt;RadLabel12.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadLabel12.Parent" xml:space="preserve">
-    <value>RadGroupBoxVerbindungselemente</value>
-  </data>
-  <data name="&gt;&gt;RadLabel12.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="RadLabel10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 149</value>
-  </data>
-  <data name="RadLabel10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>712, 17</value>
-  </data>
-  <data name="RadLabel10.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="RadLabel10.Text" xml:space="preserve">
-    <value>&lt;html&gt;Measuring cables must have as much temperature protection as possible and be routed sufficiently far away from current-carrying conductors.&lt;/html&gt;</value>
-  </data>
-  <data name="&gt;&gt;RadLabel10.Name" xml:space="preserve">
-    <value>RadLabel10</value>
-  </data>
-  <data name="&gt;&gt;RadLabel10.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadLabel10.Parent" xml:space="preserve">
-    <value>RadGroupBoxVerbindungselemente</value>
-  </data>
-  <data name="&gt;&gt;RadLabel10.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="RadGroupBoxVerbindungselemente.HeaderText" xml:space="preserve">
-    <value>Criteria for connecting components:										
-</value>
-  </data>
-  <data name="RadGroupBoxVerbindungselemente.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 432</value>
+  <data name="RadSeparator11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 94</value>
   </data>
   <data name="RadGroupBoxVerbindungselemente.Size" type="System.Drawing.Size, System.Drawing">
-    <value>14300, 191</value>
+    <value>15308, 191</value>
   </data>
-  <data name="RadGroupBoxVerbindungselemente.TabIndex" type="System.Int32, mscorlib">
-    <value>32</value>
-  </data>
-  <data name="RadGroupBoxVerbindungselemente.Text" xml:space="preserve">
-    <value>Criteria for connecting components:										
-</value>
-  </data>
-  <data name="&gt;&gt;RadGroupBoxVerbindungselemente.Name" xml:space="preserve">
-    <value>RadGroupBoxVerbindungselemente</value>
-  </data>
-  <data name="&gt;&gt;RadGroupBoxVerbindungselemente.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadGroupBoxVerbindungselemente.Parent" xml:space="preserve">
-    <value>RadScrollablePanel1.PanelContainer</value>
-  </data>
-  <data name="&gt;&gt;RadGroupBoxVerbindungselemente.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="RadGroupBoxAuswerteGeraete.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="RadSeparator13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 157</value>
-  </data>
-  <data name="RadSeparator13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>751, 10</value>
-  </data>
-  <data name="RadSeparator13.TabIndex" type="System.Int32, mscorlib">
-    <value>39</value>
-  </data>
-  <data name="RadSeparator13.Text" xml:space="preserve">
-    <value>RadSeparator13</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator13.Name" xml:space="preserve">
-    <value>RadSeparator13</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator13.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator13.Parent" xml:space="preserve">
-    <value>RadGroupBoxAuswerteGeraete</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator13.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="RadLabel17.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 173</value>
-  </data>
-  <data name="RadLabel17.Size" type="System.Drawing.Size, System.Drawing">
-    <value>237, 18</value>
-  </data>
-  <data name="RadLabel17.TabIndex" type="System.Int32, mscorlib">
-    <value>38</value>
-  </data>
-  <data name="RadLabel17.Text" xml:space="preserve">
-    <value>Displays and printouts meet the requirements.</value>
-  </data>
-  <data name="&gt;&gt;RadLabel17.Name" xml:space="preserve">
-    <value>RadLabel17</value>
-  </data>
-  <data name="&gt;&gt;RadLabel17.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadLabel17.Parent" xml:space="preserve">
-    <value>RadGroupBoxAuswerteGeraete</value>
-  </data>
-  <data name="&gt;&gt;RadLabel17.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="RadSeparator12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 117</value>
-  </data>
-  <data name="RadSeparator12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>751, 10</value>
-  </data>
-  <data name="RadSeparator12.TabIndex" type="System.Int32, mscorlib">
-    <value>37</value>
-  </data>
-  <data name="RadSeparator12.Text" xml:space="preserve">
-    <value>RadSeparator12</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator12.Name" xml:space="preserve">
-    <value>RadSeparator12</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator12.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator12.Parent" xml:space="preserve">
-    <value>RadGroupBoxAuswerteGeraete</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator12.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="RadLabel9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 133</value>
-  </data>
-  <data name="RadLabel9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>353, 18</value>
-  </data>
-  <data name="RadLabel9.TabIndex" type="System.Int32, mscorlib">
-    <value>36</value>
-  </data>
-  <data name="RadLabel9.Text" xml:space="preserve">
-    <value>The approval documents of the indicator are available in legible form.</value>
-  </data>
-  <data name="&gt;&gt;RadLabel9.Name" xml:space="preserve">
-    <value>RadLabel9</value>
-  </data>
-  <data name="&gt;&gt;RadLabel9.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadLabel9.Parent" xml:space="preserve">
-    <value>RadGroupBoxAuswerteGeraete</value>
-  </data>
-  <data name="&gt;&gt;RadLabel9.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="RadLabel13.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
   </data>
   <data name="RadSeparator2.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 77</value>
   </data>
-  <data name="RadSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RadSeparator4.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="&gt;&gt;RadLabel8.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="RadSeparator11.Text" xml:space="preserve">
+    <value>RadSeparator11</value>
+  </data>
+  <data name="&gt;&gt;RadGroupBoxWaegezellen.Parent" xml:space="preserve">
+    <value>RadScrollablePanel1.PanelContainer</value>
+  </data>
+  <data name="RadLabel11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>528, 18</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator11.Name" xml:space="preserve">
+    <value>RadSeparator11</value>
+  </data>
+  <data name="&gt;&gt;RadLabel13.Parent" xml:space="preserve">
+    <value>RadGroupBoxWaegebruecke</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator3.Parent" xml:space="preserve">
+    <value>RadGroupBoxWaegezellen</value>
+  </data>
+  <data name="RadLabel5.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="RadLabel12.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld1.Parent" xml:space="preserve">
+    <value>RadScrollablePanel1.PanelContainer</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator6.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="RadSeparator11.Size" type="System.Drawing.Size, System.Drawing">
     <value>751, 10</value>
   </data>
-  <data name="RadSeparator2.TabIndex" type="System.Int32, mscorlib">
-    <value>35</value>
+  <data name="RadLabel13.Text" xml:space="preserve">
+    <value>The load cell holders are in horizontal level with each other. (Reference position)</value>
   </data>
-  <data name="RadSeparator2.Text" xml:space="preserve">
-    <value>RadSeparator2</value>
+  <data name="RadSeparator13.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
   </data>
-  <data name="&gt;&gt;RadSeparator2.Name" xml:space="preserve">
-    <value>RadSeparator2</value>
+  <data name="&gt;&gt;RadLabel7.Name" xml:space="preserve">
+    <value>RadLabel7</value>
   </data>
-  <data name="&gt;&gt;RadSeparator2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator2.Parent" xml:space="preserve">
-    <value>RadGroupBoxAuswerteGeraete</value>
-  </data>
-  <data name="&gt;&gt;RadSeparator2.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;RadSeparator13.Name" xml:space="preserve">
+    <value>RadSeparator13</value>
   </data>
   <data name="RadSeparator1.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 47</value>
   </data>
-  <data name="RadSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>751, 10</value>
+  <data name="&gt;&gt;RadSeparator9.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="RadSeparator1.TabIndex" type="System.Int32, mscorlib">
-    <value>34</value>
+  <data name="RadScrollablePanel1.PanelContainer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1208, 1225</value>
   </data>
-  <data name="RadSeparator1.Text" xml:space="preserve">
-    <value>RadSeparator1</value>
+  <data name="RadLabel11.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
   </data>
-  <data name="&gt;&gt;RadSeparator1.Name" xml:space="preserve">
-    <value>RadSeparator1</value>
+  <data name="RadScrollablePanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
-  <data name="&gt;&gt;RadSeparator1.Type" xml:space="preserve">
+  <data name="&gt;&gt;RadSeparator7.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;RadSeparator1.Parent" xml:space="preserve">
-    <value>RadGroupBoxAuswerteGeraete</value>
+  <data name="RadLabel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 59</value>
   </data>
-  <data name="&gt;&gt;RadSeparator1.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="RadGroupBoxVerbindungselemente.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
-  <data name="RadLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 30</value>
-  </data>
-  <data name="RadLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>388, 18</value>
-  </data>
-  <data name="RadLabel1.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="RadLabel1.Text" xml:space="preserve">
-    <value>The indicator must be in assembly-line condition (Rhewa factory condition).
-</value>
-  </data>
-  <data name="&gt;&gt;RadLabel1.Name" xml:space="preserve">
-    <value>RadLabel1</value>
-  </data>
-  <data name="&gt;&gt;RadLabel1.Type" xml:space="preserve">
+  <data name="&gt;&gt;RadLabel13.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;RadLabel1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;RadLabel15.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="RadLabel17.Size" type="System.Drawing.Size, System.Drawing">
+    <value>237, 18</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator2.Parent" xml:space="preserve">
     <value>RadGroupBoxAuswerteGeraete</value>
   </data>
   <data name="&gt;&gt;RadLabel1.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="RadLabel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 93</value>
+  <data name="&gt;&gt;RadLabel14.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
-  <data name="RadLabel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>228, 18</value>
+  <data name="&gt;&gt;RadScrollablePanel1.PanelContainer.Parent" xml:space="preserve">
+    <value>RadScrollablePanel1</value>
   </data>
-  <data name="RadLabel4.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
+  <data name="RadLabel1.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
   </data>
-  <data name="RadLabel4.Text" xml:space="preserve">
-    <value>The connected cables must be undamaged.
-</value>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
   </data>
-  <data name="&gt;&gt;RadLabel4.Name" xml:space="preserve">
-    <value>RadLabel4</value>
+  <data name="RadLabel19.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 18pt, style=Bold</value>
   </data>
-  <data name="&gt;&gt;RadLabel4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="RadSeparator14.Text" xml:space="preserve">
+    <value>RadSeparator14</value>
   </data>
-  <data name="&gt;&gt;RadLabel4.Parent" xml:space="preserve">
+  <data name="RadSeparator8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 96</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator5.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="RadGroupBoxWaegebruecke.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="RadGroupBoxWaegezellen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15308, 193</value>
+  </data>
+  <data name="RadLabel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 18</value>
+  </data>
+  <data name="&gt;&gt;RadScrollablePanel1.Name" xml:space="preserve">
+    <value>RadScrollablePanel1</value>
+  </data>
+  <data name="&gt;&gt;RadLabel15.Parent" xml:space="preserve">
+    <value>RadGroupBoxWaegebruecke</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator8.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="RadGroupBoxWaegebruecke.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;RadLabel7.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="RadScrollablePanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <data name="&gt;&gt;RadLabel14.Parent" xml:space="preserve">
+    <value>RadGroupBoxVerbindungselemente</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.6352.21052, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;RadGroupBoxAufstellbedingungen.Parent" xml:space="preserve">
+    <value>RadScrollablePanel1.PanelContainer</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator12.Parent" xml:space="preserve">
     <value>RadGroupBoxAuswerteGeraete</value>
   </data>
-  <data name="&gt;&gt;RadLabel4.ZOrder" xml:space="preserve">
-    <value>7</value>
+  <data name="&gt;&gt;RadLabel9.Parent" xml:space="preserve">
+    <value>RadGroupBoxAuswerteGeraete</value>
   </data>
-  <data name="RadLabel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 59</value>
+  <data name="&gt;&gt;RadLabel3.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="RadSeparator10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>751, 10</value>
   </data>
   <data name="RadLabel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>597, 17</value>
   </data>
-  <data name="RadLabel2.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
+  <data name="&gt;&gt;RadScrollablePanel1.PanelContainer.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="RadLabel2.Text" xml:space="preserve">
-    <value>&lt;html&gt;The metrological information must be present. Max. / Min. / e= / Class / Approval mark / Manufacturer / WEEE symbol&lt;/html&gt;</value>
+  <data name="RadCheckBoxApprove.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="&gt;&gt;RadLabel20.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="RadLabel12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>208, 18</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="RadLabel19.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="&gt;&gt;RadLabel17.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RadLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>388, 18</value>
+  </data>
+  <data name="&gt;&gt;RadLabel6.Parent" xml:space="preserve">
+    <value>RadGroupBoxWaegezellen</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator4.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;RadScrollablePanel1.PanelContainer.Name" xml:space="preserve">
+    <value>RadScrollablePanel1.PanelContainer</value>
+  </data>
+  <data name="&gt;&gt;RadLabel4.Name" xml:space="preserve">
+    <value>RadLabel4</value>
+  </data>
+  <data name="&gt;&gt;RadLabel2.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;RadGroupBoxAuswerteGeraete.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="RadSeparator6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 157</value>
+  </data>
+  <data name="RadLabel14.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;RadLabel20.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator10.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="RadSeparator14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 134</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator12.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="RadGroupBoxWaegebruecke.HeaderText" xml:space="preserve">
+    <value>Criteria for weighbridges:										
+</value>
+  </data>
+  <data name="lblPflichtfeld1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>11, 18</value>
+  </data>
+  <data name="RadLabel15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>299, 18</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator7.Name" xml:space="preserve">
+    <value>RadSeparator7</value>
+  </data>
+  <data name="lblPflichtfeld1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="RadGroupBoxWaegezellen.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="&gt;&gt;RadGroupBoxVerbindungselemente.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="RadLabel16.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 34</value>
+  </data>
+  <data name="RadLabel17.Text" xml:space="preserve">
+    <value>Displays and printouts meet the requirements.</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator9.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadLabel10.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="RadLabel7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>310, 18</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator11.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="RadSeparator9.Text" xml:space="preserve">
+    <value>RadSeparator9</value>
+  </data>
+  <data name="RadSeparator8.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="&gt;&gt;RadGroupBoxAuswerteGeraete.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;RadGroupBoxVerbindungselemente.Name" xml:space="preserve">
+    <value>RadGroupBoxVerbindungselemente</value>
+  </data>
+  <data name="RadLabel20.Size" type="System.Drawing.Size, System.Drawing">
+    <value>197, 18</value>
+  </data>
+  <data name="RadSeparator9.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator5.Name" xml:space="preserve">
+    <value>RadSeparator5</value>
+  </data>
+  <data name="RadLabel6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>217, 18</value>
+  </data>
+  <data name="RadScrollablePanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1210, 1227</value>
   </data>
   <data name="&gt;&gt;RadLabel2.Name" xml:space="preserve">
     <value>RadLabel2</value>
   </data>
-  <data name="&gt;&gt;RadLabel2.Type" xml:space="preserve">
+  <data name="&gt;&gt;RadGroupBoxAufstellbedingungen.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RadSeparator14.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="RadGroupBoxAufstellbedingungen.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="RadLabel15.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="RadSeparator8.Text" xml:space="preserve">
+    <value>RadSeparator8</value>
+  </data>
+  <data name="RadSeparator3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 43</value>
+  </data>
+  <data name="RadGroupBoxVerbindungselemente.HeaderText" xml:space="preserve">
+    <value>Criteria for connecting components:										
+</value>
+  </data>
+  <data name="RadSeparator10.Text" xml:space="preserve">
+    <value>RadSeparator10</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator14.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="RadLabel10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>712, 17</value>
+  </data>
+  <data name="RadLabel5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 18</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator14.Name" xml:space="preserve">
+    <value>RadSeparator14</value>
+  </data>
+  <data name="RadCheckBoxApprove.Location" type="System.Drawing.Point, System.Drawing">
+    <value>883, 918</value>
+  </data>
+  <data name="&gt;&gt;RadGroupBoxWaegezellen.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="RadSeparator12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 117</value>
+  </data>
+  <data name="RadSeparator7.Text" xml:space="preserve">
+    <value>RadSeparator7</value>
+  </data>
+  <data name="RadLabel9.Text" xml:space="preserve">
+    <value>The approval documents of the indicator are available in legible form.</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator8.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RadLabel12.Text" xml:space="preserve">
+    <value>Measuring cables must be undamaged.
+</value>
+  </data>
+  <data name="RadGroupBoxAuswerteGeraete.HeaderText" xml:space="preserve">
+    <value>Criteria for Rhewa indicators:	</value>
+  </data>
+  <data name="RadLabel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>228, 18</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator14.Parent" xml:space="preserve">
+    <value>RadGroupBoxWaegebruecke</value>
+  </data>
+  <data name="&gt;&gt;RadLabel11.Name" xml:space="preserve">
+    <value>RadLabel11</value>
+  </data>
+  <data name="RadSeparator4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 81</value>
+  </data>
+  <data name="&gt;&gt;RadLabel4.Parent" xml:space="preserve">
+    <value>RadGroupBoxAuswerteGeraete</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator13.Parent" xml:space="preserve">
+    <value>RadGroupBoxAuswerteGeraete</value>
+  </data>
+  <data name="&gt;&gt;RadLabel5.Parent" xml:space="preserve">
+    <value>RadGroupBoxWaegezellen</value>
+  </data>
+  <data name="RadSeparator6.Text" xml:space="preserve">
+    <value>RadSeparator6</value>
+  </data>
+  <data name="&gt;&gt;RadGroupBoxWaegebruecke.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadLabel10.Name" xml:space="preserve">
+    <value>RadLabel10</value>
+  </data>
+  <data name="RadGroupBoxAuswerteGeraete.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="RadLabel16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>238, 18</value>
+  </data>
+  <data name="RadLabel12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 72</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxApprove.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;RadLabel10.Parent" xml:space="preserve">
+    <value>RadGroupBoxVerbindungselemente</value>
+  </data>
+  <data name="RadLabel8.Text" xml:space="preserve">
+    <value>&lt;html&gt;The load transmission must conform to one of the examples shown in the Welmec Guide (WELMEC 2.4)&lt;/html&gt;</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator1.Name" xml:space="preserve">
+    <value>RadSeparator1</value>
+  </data>
+  <data name="RadSeparator12.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="&gt;&gt;RadLabel6.Name" xml:space="preserve">
+    <value>RadLabel6</value>
+  </data>
+  <data name="&gt;&gt;RadLabel5.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="RadSeparator5.Text" xml:space="preserve">
+    <value>RadSeparator5</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator5.Parent" xml:space="preserve">
+    <value>RadGroupBoxWaegezellen</value>
+  </data>
+  <data name="RadScrollablePanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator1.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;RadGroupBoxAuswerteGeraete.Name" xml:space="preserve">
+    <value>RadGroupBoxAuswerteGeraete</value>
+  </data>
+  <data name="&gt;&gt;RadLabel17.Name" xml:space="preserve">
+    <value>RadLabel17</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator2.Name" xml:space="preserve">
+    <value>RadSeparator2</value>
+  </data>
+  <data name="RadGroupBoxAuswerteGeraete.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="&gt;&gt;RadGroupBoxVerbindungselemente.Parent" xml:space="preserve">
+    <value>RadScrollablePanel1.PanelContainer</value>
+  </data>
+  <data name="RadSeparator9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>751, 10</value>
+  </data>
+  <data name="RadLabel11.Text" xml:space="preserve">
+    <value>It is free of corrosion. On concrete road weighbridges, no chipping or steel reinforcement may be visible.</value>
+  </data>
+  <data name="RadSeparator4.Text" xml:space="preserve">
+    <value>RadSeparator4</value>
+  </data>
+  <data name="&gt;&gt;RadLabel16.Name" xml:space="preserve">
+    <value>RadLabel16</value>
+  </data>
+  <data name="&gt;&gt;RadLabel7.Parent" xml:space="preserve">
+    <value>RadGroupBoxWaegezellen</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator11.Parent" xml:space="preserve">
+    <value>RadGroupBoxWaegebruecke</value>
+  </data>
+  <data name="&gt;&gt;RadLabel8.Parent" xml:space="preserve">
+    <value>RadGroupBoxWaegezellen</value>
+  </data>
+  <data name="&gt;&gt;RadLabel7.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="RadLabel20.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 33</value>
+  </data>
+  <data name="&gt;&gt;RadLabel20.Parent" xml:space="preserve">
+    <value>RadGroupBoxAufstellbedingungen</value>
+  </data>
+  <data name="&gt;&gt;RadLabel8.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator10.Parent" xml:space="preserve">
+    <value>RadGroupBoxWaegebruecke</value>
+  </data>
+  <data name="RadLabel7.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="RadSeparator3.Text" xml:space="preserve">
+    <value>RadSeparator3</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator12.Name" xml:space="preserve">
+    <value>RadSeparator12</value>
+  </data>
+  <data name="RadSeparator7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 56</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator7.Parent" xml:space="preserve">
+    <value>RadGroupBoxVerbindungselemente</value>
+  </data>
+  <data name="RadSeparator8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>751, 10</value>
+  </data>
+  <data name="&gt;&gt;RadGroupBoxAuswerteGeraete.Parent" xml:space="preserve">
+    <value>RadScrollablePanel1.PanelContainer</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator3.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="RadSeparator2.Text" xml:space="preserve">
+    <value>RadSeparator2</value>
+  </data>
+  <data name="RadSeparator13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 157</value>
+  </data>
+  <data name="RadLabel10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 149</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator9.Name" xml:space="preserve">
+    <value>RadSeparator9</value>
+  </data>
+  <data name="RadSeparator7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>751, 10</value>
+  </data>
+  <data name="RadGroupBoxWaegebruecke.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 634</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>uco_5Beschaffenheitspruefung</value>
+  </data>
+  <data name="RadLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 30</value>
+  </data>
+  <data name="&gt;&gt;RadLabel1.Parent" xml:space="preserve">
+    <value>RadGroupBoxAuswerteGeraete</value>
+  </data>
+  <data name="RadLabel1.Text" xml:space="preserve">
+    <value>The indicator must be in assembly-line condition (Rhewa factory condition).
+</value>
+  </data>
+  <data name="RadScrollablePanel1.Text" xml:space="preserve">
+    <value>RadScrollablePanel1</value>
+  </data>
+  <data name="lblPflichtfeld1.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="&gt;&gt;RadGroupBoxVerbindungselemente.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="RadSeparator1.Text" xml:space="preserve">
+    <value>RadSeparator1</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxApprove.Name" xml:space="preserve">
+    <value>RadCheckBoxApprove</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator6.Parent" xml:space="preserve">
+    <value>RadGroupBoxWaegezellen</value>
+  </data>
+  <data name="&gt;&gt;RadLabel19.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="RadLabel3.Text" xml:space="preserve">
+    <value>Load cells must be approved to OIML R60.
+</value>
+  </data>
+  <data name="RadSeparator14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>751, 10</value>
+  </data>
+  <data name="RadGroupBoxWaegebruecke.Text" xml:space="preserve">
+    <value>Criteria for weighbridges:										
+</value>
+  </data>
+  <data name="RadSeparator6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>751, 10</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="RadLabel14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>378, 18</value>
+  </data>
+  <data name="lblPflichtfeld1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>845, 909</value>
+  </data>
+  <data name="&gt;&gt;RadLabel9.Name" xml:space="preserve">
+    <value>RadLabel9</value>
+  </data>
+  <data name="RadGroupBoxWaegezellen.HeaderText" xml:space="preserve">
+    <value>Criteria for load cells:										
+</value>
+  </data>
+  <data name="&gt;&gt;RadGroupBoxWaegebruecke.Parent" xml:space="preserve">
+    <value>RadScrollablePanel1.PanelContainer</value>
+  </data>
+  <data name="RadLabel16.Text" xml:space="preserve">
+    <value>Tightness must be guaranteed (terminal box).
+</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxApprove.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="RadSeparator9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 134</value>
+  </data>
+  <data name="RadLabel2.Text" xml:space="preserve">
+    <value>&lt;html&gt;The metrological information must be present. Max. / Min. / e= / Class / Approval mark / Manufacturer / WEEE symbol&lt;/html&gt;</value>
+  </data>
+  <data name="RadLabel8.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;RadLabel14.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="RadSeparator5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>751, 10</value>
+  </data>
+  <data name="&gt;&gt;RadLabel9.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadGroupBoxAufstellbedingungen.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadLabel3.Parent" xml:space="preserve">
+    <value>RadGroupBoxWaegezellen</value>
+  </data>
+  <data name="RadGroupBoxAuswerteGeraete.Text" xml:space="preserve">
+    <value>Criteria for Rhewa indicators:	</value>
+  </data>
+  <data name="RadLabel9.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="RadSeparator4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>751, 10</value>
+  </data>
+  <data name="&gt;&gt;RadLabel15.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="RadLabel7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 173</value>
+  </data>
+  <data name="RadLabel20.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="&gt;&gt;RadGroupBoxWaegezellen.Name" xml:space="preserve">
+    <value>RadGroupBoxWaegezellen</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator4.Name" xml:space="preserve">
+    <value>RadSeparator4</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadLabel6.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="RadSeparator3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>751, 10</value>
+  </data>
+  <data name="RadLabel9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 133</value>
+  </data>
+  <data name="RadSeparator13.Text" xml:space="preserve">
+    <value>RadSeparator13</value>
+  </data>
+  <data name="RadLabel19.Text" xml:space="preserve">
+    <value>I have examined the above-mentioned criteria. All criteria are fulfilled.</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator3.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="RadLabel20.Text" xml:space="preserve">
+    <value>The installation conditions are all right</value>
+  </data>
+  <data name="&gt;&gt;RadLabel1.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadLabel2.Parent" xml:space="preserve">
     <value>RadGroupBoxAuswerteGeraete</value>
   </data>
-  <data name="&gt;&gt;RadLabel2.ZOrder" xml:space="preserve">
-    <value>8</value>
+  <data name="RadSeparator2.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
   </data>
-  <data name="RadGroupBoxAuswerteGeraete.HeaderText" xml:space="preserve">
-    <value>Criteria for Rhewa indicators:	</value>
+  <data name="&gt;&gt;RadSeparator12.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
-  <data name="RadGroupBoxAuswerteGeraete.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 8</value>
+  <data name="&gt;&gt;RadSeparator3.Name" xml:space="preserve">
+    <value>RadSeparator3</value>
   </data>
-  <data name="RadGroupBoxAuswerteGeraete.Size" type="System.Drawing.Size, System.Drawing">
-    <value>14300, 205</value>
+  <data name="RadLabel15.Text" xml:space="preserve">
+    <value>The weighbridge design appropriate for the weighing task.</value>
   </data>
-  <data name="RadGroupBoxAuswerteGeraete.TabIndex" type="System.Int32, mscorlib">
-    <value>30</value>
+  <data name="RadSeparator7.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
   </data>
-  <data name="RadGroupBoxAuswerteGeraete.Text" xml:space="preserve">
-    <value>Criteria for Rhewa indicators:	</value>
+  <data name="&gt;&gt;RadLabel12.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;RadGroupBoxAuswerteGeraete.Name" xml:space="preserve">
-    <value>RadGroupBoxAuswerteGeraete</value>
+  <data name="RadGroupBoxAufstellbedingungen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 809</value>
   </data>
-  <data name="&gt;&gt;RadGroupBoxAuswerteGeraete.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="RadSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>751, 10</value>
   </data>
-  <data name="&gt;&gt;RadGroupBoxAuswerteGeraete.Parent" xml:space="preserve">
-    <value>RadScrollablePanel1.PanelContainer</value>
+  <data name="&gt;&gt;RadLabel10.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;RadGroupBoxAuswerteGeraete.ZOrder" xml:space="preserve">
-    <value>7</value>
+  <data name="&gt;&gt;RadLabel12.Parent" xml:space="preserve">
+    <value>RadGroupBoxVerbindungselemente</value>
   </data>
-  <data name="RadScrollablePanel1.PanelContainer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1208, 1225</value>
+  <data name="RadGroupBoxWaegezellen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 226</value>
   </data>
-  <data name="&gt;&gt;RadScrollablePanel1.PanelContainer.Name" xml:space="preserve">
-    <value>RadScrollablePanel1.PanelContainer</value>
+  <data name="RadCheckBoxApprove.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 15</value>
   </data>
-  <data name="&gt;&gt;RadScrollablePanel1.PanelContainer.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadScrollablePanelContainer, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadScrollablePanel1.PanelContainer.Parent" xml:space="preserve">
-    <value>RadScrollablePanel1</value>
-  </data>
-  <data name="&gt;&gt;RadScrollablePanel1.PanelContainer.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="RadScrollablePanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1210, 1227</value>
-  </data>
-  <data name="RadScrollablePanel1.TabIndex" type="System.Int32, mscorlib">
-    <value>34</value>
-  </data>
-  <data name="RadScrollablePanel1.Text" xml:space="preserve">
-    <value>RadScrollablePanel1</value>
-  </data>
-  <data name="&gt;&gt;RadScrollablePanel1.Name" xml:space="preserve">
-    <value>RadScrollablePanel1</value>
-  </data>
-  <data name="&gt;&gt;RadScrollablePanel1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadScrollablePanel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadScrollablePanel1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;RadScrollablePanel1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+  <data name="&gt;&gt;RadLabel4.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
     <value>1210, 1227</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>uco_5Beschaffenheitspruefung</value>
+  <data name="RadLabel7.Text" xml:space="preserve">
+    <value>The coating on resin-coated load cells must be undamaged.
+</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.6262.25109, Culture=neutral, PublicKeyToken=null</value>
+  <data name="RadLabel8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 59</value>
   </data>
+  <data name="&gt;&gt;RadLabel9.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="RadGroupBoxAuswerteGeraete.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15308, 205</value>
+  </data>
+  <data name="RadSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>751, 10</value>
+  </data>
+  <data name="RadLabel3.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator4.Parent" xml:space="preserve">
+    <value>RadGroupBoxWaegezellen</value>
+  </data>
+  <data name="&gt;&gt;RadLabel3.Name" xml:space="preserve">
+    <value>RadLabel3</value>
+  </data>
+  <data name="RadLabel6.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;RadScrollablePanel1.PanelContainer.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadScrollablePanelContainer, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadLabel11.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="RadLabel6.Text" xml:space="preserve">
+    <value>Connection cables must be undamaged.									-																			
+</value>
+  </data>
+  <data name="&gt;&gt;RadGroupBoxAufstellbedingungen.Name" xml:space="preserve">
+    <value>RadGroupBoxAufstellbedingungen</value>
+  </data>
+  <data name="RadSeparator12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>751, 10</value>
+  </data>
+  <data name="RadGroupBoxVerbindungselemente.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 432</value>
+  </data>
+  <data name="RadLabel17.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld1.Name" xml:space="preserve">
+    <value>lblPflichtfeld1</value>
+  </data>
+  <data name="RadLabel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 23</value>
+  </data>
+  <data name="&gt;&gt;RadLabel6.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="RadLabel17.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 173</value>
+  </data>
+  <data name="RadGroupBoxAufstellbedingungen.Text" xml:space="preserve">
+    <value>Criteria for the installation site:</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator2.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="RadGroupBoxVerbindungselemente.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="RadLabel16.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="RadLabel5.Text" xml:space="preserve">
+    <value>Screw-on plates must be flat and clean.
+</value>
+  </data>
+  <data name="RadGroupBoxAufstellbedingungen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15308, 59</value>
+  </data>
+  <data name="RadLabel10.Text" xml:space="preserve">
+    <value>&lt;html&gt;Measuring cables must have as much temperature protection as possible and be routed sufficiently far away from current-carrying conductors.&lt;/html&gt;</value>
+  </data>
+  <data name="RadSeparator5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 119</value>
+  </data>
+  <data name="&gt;&gt;RadLabel1.Name" xml:space="preserve">
+    <value>RadLabel1</value>
+  </data>
+  <data name="RadLabel14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 112</value>
+  </data>
+  <data name="RadSeparator5.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="&gt;&gt;RadGroupBoxWaegebruecke.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;RadLabel2.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="RadLabel4.Text" xml:space="preserve">
+    <value>The connected cables must be undamaged.
+</value>
+  </data>
+  <data name="RadLabel4.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;RadLabel17.Parent" xml:space="preserve">
+    <value>RadGroupBoxAuswerteGeraete</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxApprove.Parent" xml:space="preserve">
+    <value>RadScrollablePanel1.PanelContainer</value>
+  </data>
+  <data name="RadLabel19.Size" type="System.Drawing.Size, System.Drawing">
+    <value>829, 37</value>
+  </data>
+  <data name="RadGroupBoxVerbindungselemente.Text" xml:space="preserve">
+    <value>Criteria for connecting components:										
+</value>
+  </data>
+  <data name="&gt;&gt;RadLabel16.Parent" xml:space="preserve">
+    <value>RadGroupBoxVerbindungselemente</value>
+  </data>
+  <data name="RadLabel19.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 905</value>
+  </data>
+  <data name="&gt;&gt;RadLabel19.Name" xml:space="preserve">
+    <value>RadLabel19</value>
+  </data>
+  <data name="RadLabel6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 97</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator6.Name" xml:space="preserve">
+    <value>RadSeparator6</value>
+  </data>
+  <data name="&gt;&gt;RadGroupBoxWaegezellen.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="RadGroupBoxAufstellbedingungen.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
+  <data name="&gt;&gt;RadLabel15.Name" xml:space="preserve">
+    <value>RadLabel15</value>
+  </data>
+  <data name="RadLabel13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>406, 18</value>
+  </data>
+  <data name="&gt;&gt;RadSeparator8.Name" xml:space="preserve">
+    <value>RadSeparator8</value>
+  </data>
+  <data name="&gt;&gt;RadScrollablePanel1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadScrollablePanel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadLabel19.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

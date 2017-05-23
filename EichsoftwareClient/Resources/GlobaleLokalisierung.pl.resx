@@ -776,4 +776,10 @@ Czujnik tensometryczny z oznaczeniem NH jest tylko wtedy dozwolony, gdy dla tego
 
  - Wprowadzenie siły musi być zgodne z jednym z przykładów pokazanych w przewodniku WELMEC (WELMEC 2.4).</value>
   </data>
+  <data name="Bemerkung" xml:space="preserve">
+    <value>Wzmianka</value>
+  </data>
+  <data name="Bearbeitungsdatum" xml:space="preserve">
+    <value>Data opracowania</value>
+  </data>
 </root>

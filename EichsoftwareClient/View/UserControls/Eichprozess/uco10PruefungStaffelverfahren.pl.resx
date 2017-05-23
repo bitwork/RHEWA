@@ -481,14 +481,17 @@
   <data name="lblStaffel5Bereich1MessabweichungStaffel.Text" xml:space="preserve">
     <value>&lt;html&gt;Odchyłka pomiarowa stopnia procedury  &lt;span style="color: #8000ff"&gt;[Ew5]&lt;/span&gt;&lt;/html&gt;</value>
   </data>
+  <data name="lblStaffel5Bereich1Differenz.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel5Bereich1Differenz.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 176</value>
   </data>
   <data name="lblStaffel5Bereich1Differenz.Size" type="System.Drawing.Size, System.Drawing">
-    <value>288, 32</value>
+    <value>231, 40</value>
   </data>
   <data name="lblStaffel5Bereich1Differenz.Text" xml:space="preserve">
-    <value>&lt;html&gt;Różnica wartości wskazanych bez obciążenia wzorcowego&lt;span style="color: #8000ff"&gt; &lt;br /&gt;[&lt;span style="font-size: 16px; font-family: symbol"&gt;D&lt;/span&gt;P5]&lt;/span&gt;&lt;/html&gt;</value>
+    <value>&lt;html&gt;Różnica wartości wskazanych bez obciążenia wzorcowego &lt;span style="color: #8000ff"&gt;[&lt;span style="font-size: 16px; font-family: symbol"&gt;D&lt;/span&gt;P5]&lt;/span&gt;&lt;/html&gt;</value>
   </data>
   <data name="lblStaffel5Bereich1ZusastzNormalLast.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 84</value>
@@ -934,14 +937,17 @@
   <data name="lblStaffel4Bereich1MessabweichungStaffel.Text" xml:space="preserve">
     <value>&lt;html&gt;Odchyłka pomiarowa stopnia procedury  &lt;span style="color: #ff8000"&gt;[Ew4]&lt;/span&gt;&lt;/html&gt;</value>
   </data>
+  <data name="lblStaffel4Bereich1Differenz.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel4Bereich1Differenz.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 176</value>
   </data>
   <data name="lblStaffel4Bereich1Differenz.Size" type="System.Drawing.Size, System.Drawing">
-    <value>288, 32</value>
+    <value>231, 38</value>
   </data>
   <data name="lblStaffel4Bereich1Differenz.Text" xml:space="preserve">
-    <value>&lt;html&gt;Różnica wartości wskazanych bez obciążenia wzorcowego&lt;span style="color: #ff8000"&gt; &lt;br /&gt;[&lt;span style="font-size: 16px; font-family: symbol"&gt;D&lt;/span&gt;P4]&lt;/span&gt;&lt;/html&gt;</value>
+    <value>&lt;html&gt;Różnica wartości wskazanych bez obciążenia wzorcowego&lt;span style="color: #ff8000"&gt; [&lt;span style="font-size: 16px; font-family: symbol"&gt;D&lt;/span&gt;P4]&lt;/span&gt;&lt;/html&gt;</value>
   </data>
   <data name="lblStaffel4Bereich1ZusastzNormalLast.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 84</value>
@@ -1387,14 +1393,17 @@
   <data name="lblStaffel3Bereich1MessabweichungStaffel.Text" xml:space="preserve">
     <value>&lt;html&gt;Odchyłka pomiarowa stopnia procedury  &lt;span style="color: #ff0080"&gt;[Ew3]&lt;/span&gt;&lt;/html&gt;</value>
   </data>
+  <data name="lblStaffel3Bereich1Differenz.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel3Bereich1Differenz.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 176</value>
   </data>
   <data name="lblStaffel3Bereich1Differenz.Size" type="System.Drawing.Size, System.Drawing">
-    <value>288, 32</value>
+    <value>231, 32</value>
   </data>
   <data name="lblStaffel3Bereich1Differenz.Text" xml:space="preserve">
-    <value>&lt;html&gt;Różnica wartości wskazanych bez obciążenia wzorcowego&lt;span style="color: #ff0080"&gt; &lt;br /&gt;[&lt;span style="font-size: 16px; font-family: symbol"&gt;D&lt;/span&gt;P3]&lt;/span&gt;&lt;/html&gt;</value>
+    <value>&lt;html&gt;Różnica wartości wskazanych bez obciążenia wzorcowego&lt;span style="color: #ff0080"&gt; [&lt;span style="font-size: 16px; font-family: symbol"&gt;D&lt;/span&gt;P3]&lt;/span&gt;&lt;/html&gt;</value>
   </data>
   <data name="lblStaffel3Bereich1ZusastzNormalLast.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 84</value>
@@ -1834,14 +1843,20 @@
   <data name="lblStaffel2Bereich1MessabweichungStaffel.Text" xml:space="preserve">
     <value>&lt;html&gt;Odchyłka pomiarowa stopnia procedury  &lt;span style="color: #008000"&gt;[Ew2]&lt;/span&gt;&lt;/html&gt;</value>
   </data>
+  <data name="lblStaffel2Bereich1Differenz.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel2Bereich1Differenz.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 176</value>
   </data>
   <data name="lblStaffel2Bereich1Differenz.Size" type="System.Drawing.Size, System.Drawing">
-    <value>288, 32</value>
+    <value>231, 40</value>
   </data>
   <data name="lblStaffel2Bereich1Differenz.Text" xml:space="preserve">
-    <value>&lt;html&gt;Różnica wartości wskazanych bez obciążenia wzorcowego&lt;br /&gt;&lt;span style="color: #008000"&gt;[&lt;span style="font-size: 16px; font-family: symbol"&gt;D&lt;/span&gt;P2]&lt;/span&gt;&lt;/html&gt;</value>
+    <value>&lt;html&gt;Różnica wartości wskazanych bez obciążenia wzorcowego&lt;span style="color: #008000"&gt;[&lt;span style="font-size: 16px; font-family: symbol"&gt;D&lt;/span&gt;P2]&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel2Bereich1Differenz.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
   </data>
   <data name="lblStaffel2Bereich1ZusastzNormalLast.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 84</value>
@@ -2002,8 +2017,11 @@
   <data name="lblStaffel1Bereich1MessabweichungStaffel.Text" xml:space="preserve">
     <value>&lt;html&gt;Odchyłka pomiarowa stopnia procedury&lt;span style="color: #0000ff"&gt;[Ew1]&lt;/span&gt;&lt;/html&gt;</value>
   </data>
+  <data name="lblStaffel1Bereich1Differenz.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 41</value>
+  </data>
   <data name="lblStaffel1Bereich1Differenz.Text" xml:space="preserve">
-    <value>&lt;html&gt;&lt;span &gt;Różnica wartości wskazanych bez obciążenia wzorcowego&lt;br /&gt;&lt;span&gt;&lt;/span&gt;&lt;span style="color: #0000ff"&gt;[&lt;span style="font-size: 16px; font-family: symbol"&gt;D&lt;/span&gt;P1]&lt;/span&gt;&lt;/span&gt;&lt;/html&gt;</value>
+    <value>&lt;html&gt;&lt;span&gt;Różnica wartości wskazanych bez obciążenia wzorcowego&lt;span style="color: #0000ff"&gt;[&lt;span style="font-size: 16px; font-family: symbol"&gt;D&lt;/span&gt;P1]&lt;/span&gt;&lt;/span&gt;&lt;/html&gt;</value>
   </data>
   <data name="lblStaffel1Bereich1NormalLast.Size" type="System.Drawing.Size, System.Drawing">
     <value>125, 17</value>

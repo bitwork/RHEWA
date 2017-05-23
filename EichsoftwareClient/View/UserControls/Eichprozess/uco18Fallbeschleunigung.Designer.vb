@@ -36,6 +36,8 @@ Partial Class uco18Fallbeschleunigung
         CType(Me.RadLabel3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadCheckBoxSchwerkraft, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlG, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblPflichtfeld1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblPflichtfeld2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblBeschreibung
@@ -94,6 +96,8 @@ Partial Class uco18Fallbeschleunigung
         CType(Me.RadLabel3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadCheckBoxSchwerkraft, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlG, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblPflichtfeld1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblPflichtfeld2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

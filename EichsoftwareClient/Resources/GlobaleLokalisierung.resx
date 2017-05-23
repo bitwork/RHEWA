@@ -701,4 +701,10 @@ A load cell marked NH is allowed only if humidity testing to EN45501 has been co
 
  - The load transmission must conform to one of the examples shown in the WELMEC guide for load cells (WELMEC 2.4).</value>
   </data>
+  <data name="Bemerkung" xml:space="preserve">
+    <value>Remark</value>
+  </data>
+  <data name="Bearbeitungsdatum" xml:space="preserve">
+    <value>Edit date</value>
+  </data>
 </root>

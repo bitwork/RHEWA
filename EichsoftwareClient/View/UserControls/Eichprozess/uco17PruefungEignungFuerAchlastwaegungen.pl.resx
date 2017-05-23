@@ -118,28 +118,25 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lblRichtigkeitspruefung.Size" type="System.Drawing.Size, System.Drawing">
-    <value>386, 18</value>
+  <data name="lblZufahrtenInOrdnung.Size" type="System.Drawing.Size, System.Drawing">
+    <value>360, 32</value>
   </data>
-  <data name="lblRichtigkeitspruefung.Text" xml:space="preserve">
-    <value>Waga została poddana badaniu na zdatność do ważenia obciążeń osiowych.</value>
+  <data name="lblZufahrtenInOrdnung.Text" xml:space="preserve">
+    <value>&lt;html&gt;Dojazdy i zjazdy sä wykonane jako proste i poziome&lt;br /&gt;odcinki uspokajające i leżą z pomostem wagowym na jednym poziomie.&lt;/html&gt;</value>
   </data>
-  <data name="lblGenauigkeit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>524, 18</value>
-  </data>
-  <data name="lblGenauigkeit.Text" xml:space="preserve">
-    <value>Waga nie może być stosowana do ważenia obciążeń osiowych, tabliczka informacyjna według § 6 (4) EO</value>
-  </data>
-  <data name="lblTaraAusrichtung.Size" type="System.Drawing.Size, System.Drawing">
-    <value>361, 32</value>
-  </data>
-  <data name="lblTaraAusrichtung.Text" xml:space="preserve">
-    <value>&lt;html&gt;Drogi dojazdowe i odjazdowe są wykonane jako równe i &lt;br /&gt;poziome odcinki i leżą z pomostem wagowym na tym samym poziomie.&lt;/html&gt;</value>
+  <data name="lblWaageNichtGeeignet.Size" type="System.Drawing.Size, System.Drawing">
+    <value>545, 17</value>
   </data>
   <data name="lblWaageNichtGeeignet.Text" xml:space="preserve">
     <value>&lt;html&gt;Ta waga nie jest przystosowana do ważeń osi, tabliczka informacyjna zgodnie z § 6 (4) PL jest przymocowana&lt;/html&gt;</value>
   </data>
-  <data name="lblZufahrtenInOrdnung.Text" xml:space="preserve">
-    <value>&lt;html&gt;Dojazdy i zjazdy sä wykonane jako proste i poziome&lt;br /&gt;odcinki uspokajające i leżą z pomostem wagowym na jednym poziomie.&lt;/html&gt;</value>
+  <data name="lblWaagegeprueft.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 87</value>
+  </data>
+  <data name="lblWaagegeprueft.Size" type="System.Drawing.Size, System.Drawing">
+    <value>474, 18</value>
+  </data>
+  <data name="lblWaagegeprueft.Text" xml:space="preserve">
+    <value>Waga została poddana badaniu pod względem przydatności na ważenia obciążenia osiowego</value>
   </data>
 </root>

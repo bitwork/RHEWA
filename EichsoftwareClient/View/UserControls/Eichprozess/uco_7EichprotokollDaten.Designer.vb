@@ -99,6 +99,7 @@ Partial Class uco_7EichprotokollDaten
         Me.RadCheckBoxVollstaendigesStaffelverfahren = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadCheckBoxVolleNormallast = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadGroupBoxIdentifikationsdaten = New Telerik.WinControls.UI.RadGroupBox()
+        Me.RadTextBoxControlDatum = New Telerik.WinControls.UI.RadDateTimePicker()
         Me.Label3 = New Telerik.WinControls.UI.RadLabel()
         Me.Label2 = New Telerik.WinControls.UI.RadLabel()
         Me.Label1 = New Telerik.WinControls.UI.RadLabel()
@@ -164,7 +165,6 @@ Partial Class uco_7EichprotokollDaten
         Me.lblBenutzer = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlBenutzer = New Telerik.WinControls.UI.RadTextBox()
         Me.BackgroundWorkerPruefscheinnummern = New System.ComponentModel.BackgroundWorker()
-        Me.RadTextBoxControlDatum = New Telerik.WinControls.UI.RadDateTimePicker()
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadScrollablePanel1.PanelContainer.SuspendLayout()
         Me.RadScrollablePanel1.SuspendLayout()
@@ -252,6 +252,7 @@ Partial Class uco_7EichprotokollDaten
         CType(Me.RadCheckBoxVolleNormallast, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBoxIdentifikationsdaten, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxIdentifikationsdaten.SuspendLayout()
+        CType(Me.RadTextBoxControlDatum, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Label3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Label2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Label1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -323,7 +324,6 @@ Partial Class uco_7EichprotokollDaten
         CType(Me.RadTextBoxControlAufstellungsort, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblBenutzer, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBenutzer, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBoxControlDatum, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'RadScrollablePanel1
@@ -880,6 +880,13 @@ Partial Class uco_7EichprotokollDaten
         resources.ApplyResources(Me.RadGroupBoxIdentifikationsdaten, "RadGroupBoxIdentifikationsdaten")
         Me.RadGroupBoxIdentifikationsdaten.Name = "RadGroupBoxIdentifikationsdaten"
         '
+        'RadTextBoxControlDatum
+        '
+        resources.ApplyResources(Me.RadTextBoxControlDatum, "RadTextBoxControlDatum")
+        Me.RadTextBoxControlDatum.Name = "RadTextBoxControlDatum"
+        Me.RadTextBoxControlDatum.TabStop = False
+        Me.RadTextBoxControlDatum.Value = New Date(CType(0, Long))
+        '
         'Label3
         '
         Me.Label3.ForeColor = System.Drawing.Color.Red
@@ -1298,7 +1305,7 @@ Partial Class uco_7EichprotokollDaten
         'RadTextBoxControlAufstellungsort
         '
         resources.ApplyResources(Me.RadTextBoxControlAufstellungsort, "RadTextBoxControlAufstellungsort")
-        Me.RadTextBoxControlAufstellungsort.MaxLength = 50
+        Me.RadTextBoxControlAufstellungsort.MaxLength = 250
         Me.RadTextBoxControlAufstellungsort.Name = "RadTextBoxControlAufstellungsort"
         '
         'lblBenutzer
@@ -1309,18 +1316,11 @@ Partial Class uco_7EichprotokollDaten
         'RadTextBoxControlBenutzer
         '
         resources.ApplyResources(Me.RadTextBoxControlBenutzer, "RadTextBoxControlBenutzer")
-        Me.RadTextBoxControlBenutzer.MaxLength = 50
+        Me.RadTextBoxControlBenutzer.MaxLength = 250
         Me.RadTextBoxControlBenutzer.Name = "RadTextBoxControlBenutzer"
         '
         'BackgroundWorkerPruefscheinnummern
         '
-        '
-        'RadTextBoxControlDatum
-        '
-        resources.ApplyResources(Me.RadTextBoxControlDatum, "RadTextBoxControlDatum")
-        Me.RadTextBoxControlDatum.Name = "RadTextBoxControlDatum"
-        Me.RadTextBoxControlDatum.TabStop = False
-        Me.RadTextBoxControlDatum.Value = New Date(CType(0, Long))
         '
         'uco_7EichprotokollDaten
         '
@@ -1423,6 +1423,7 @@ Partial Class uco_7EichprotokollDaten
         CType(Me.RadGroupBoxIdentifikationsdaten, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBoxIdentifikationsdaten.ResumeLayout(False)
         Me.RadGroupBoxIdentifikationsdaten.PerformLayout()
+        CType(Me.RadTextBoxControlDatum, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Label3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Label2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Label1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1497,7 +1498,6 @@ Partial Class uco_7EichprotokollDaten
         CType(Me.RadTextBoxControlAufstellungsort, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblBenutzer, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBenutzer, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBoxControlDatum, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

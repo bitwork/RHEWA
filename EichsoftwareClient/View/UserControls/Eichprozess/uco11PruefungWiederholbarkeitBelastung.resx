@@ -132,7 +132,7 @@
     <value>Segoe UI, 8.25pt, style=Bold</value>
   </data>
   <data name="RadLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>288, 181</value>
+    <value>288, 186</value>
   </data>
   <data name="RadLabel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>57, 18</value>
@@ -160,7 +160,7 @@
     <value>NoControl</value>
   </data>
   <data name="PictureBox29.Location" type="System.Drawing.Point, System.Drawing">
-    <value>350, 181</value>
+    <value>350, 186</value>
   </data>
   <data name="PictureBox29.Size" type="System.Drawing.Size, System.Drawing">
     <value>18, 21</value>
@@ -223,10 +223,10 @@
     <value>1</value>
   </data>
   <data name="PanelBereich1WZ1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 79</value>
+    <value>10, 83</value>
   </data>
   <data name="PanelBereich1WZ1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>376, 25</value>
+    <value>376, 27</value>
   </data>
   <data name="PanelBereich1WZ1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -235,7 +235,7 @@
     <value>PanelBereich1WZ1</value>
   </data>
   <data name="&gt;&gt;PanelBereich1WZ1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>Telerik.WinControls.UI.RadPanel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;PanelBereich1WZ1.Parent" xml:space="preserve">
     <value>RadGroupBoxBereich1</value>
@@ -247,7 +247,7 @@
     <value>NoControl</value>
   </data>
   <data name="PictureBox30.Location" type="System.Drawing.Point, System.Drawing">
-    <value>180, 181</value>
+    <value>180, 186</value>
   </data>
   <data name="PictureBox30.Size" type="System.Drawing.Size, System.Drawing">
     <value>18, 21</value>
@@ -271,7 +271,7 @@
     <value>Segoe UI, 8.25pt, style=Bold</value>
   </data>
   <data name="lblBereich1FehlerGrenzen.Location" type="System.Drawing.Point, System.Drawing">
-    <value>81, 181</value>
+    <value>81, 186</value>
   </data>
   <data name="lblBereich1FehlerGrenzen.Size" type="System.Drawing.Size, System.Drawing">
     <value>88, 18</value>
@@ -337,10 +337,10 @@
     <value>1</value>
   </data>
   <data name="PanelBereich1WZ2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 110</value>
+    <value>10, 116</value>
   </data>
   <data name="PanelBereich1WZ2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>376, 25</value>
+    <value>376, 27</value>
   </data>
   <data name="PanelBereich1WZ2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -349,7 +349,7 @@
     <value>PanelBereich1WZ2</value>
   </data>
   <data name="&gt;&gt;PanelBereich1WZ2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>Telerik.WinControls.UI.RadPanel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;PanelBereich1WZ2.Parent" xml:space="preserve">
     <value>RadGroupBoxBereich1</value>
@@ -400,10 +400,10 @@
     <value>1</value>
   </data>
   <data name="PanelBereich1WZ3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 141</value>
+    <value>10, 149</value>
   </data>
   <data name="PanelBereich1WZ3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>376, 25</value>
+    <value>376, 27</value>
   </data>
   <data name="PanelBereich1WZ3.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -412,7 +412,7 @@
     <value>PanelBereich1WZ3</value>
   </data>
   <data name="&gt;&gt;PanelBereich1WZ3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>Telerik.WinControls.UI.RadPanel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;PanelBereich1WZ3.Parent" xml:space="preserve">
     <value>RadGroupBoxBereich1</value>
@@ -421,7 +421,7 @@
     <value>6</value>
   </data>
   <data name="RadTextBoxControlBereich1ErrorLimit1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>204, 181</value>
+    <value>204, 186</value>
   </data>
   <data name="RadTextBoxControlBereich1ErrorLimit1.Size" type="System.Drawing.Size, System.Drawing">
     <value>78, 20</value>
@@ -442,7 +442,7 @@
     <value>7</value>
   </data>
   <data name="RadCheckBoxBereich1VEL1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>371, 183</value>
+    <value>371, 188</value>
   </data>
   <data name="RadCheckBoxBereich1VEL1.Size" type="System.Drawing.Size, System.Drawing">
     <value>15, 15</value>
@@ -602,7 +602,7 @@
     <value>3, 3</value>
   </data>
   <data name="RadGroupBoxBereich1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>391, 214</value>
+    <value>391, 224</value>
   </data>
   <data name="RadGroupBoxBereich1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -627,7 +627,7 @@
     <value>Segoe UI, 8.25pt, style=Bold</value>
   </data>
   <data name="RadLabel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>284, 178</value>
+    <value>284, 183</value>
   </data>
   <data name="RadLabel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>57, 18</value>
@@ -654,7 +654,7 @@
     <value>NoControl</value>
   </data>
   <data name="PictureBox77.Location" type="System.Drawing.Point, System.Drawing">
-    <value>346, 178</value>
+    <value>346, 183</value>
   </data>
   <data name="PictureBox77.Size" type="System.Drawing.Size, System.Drawing">
     <value>18, 21</value>
@@ -702,7 +702,7 @@
     <value>NoControl</value>
   </data>
   <data name="PictureBox78.Location" type="System.Drawing.Point, System.Drawing">
-    <value>176, 178</value>
+    <value>176, 183</value>
   </data>
   <data name="PictureBox78.Size" type="System.Drawing.Size, System.Drawing">
     <value>18, 21</value>
@@ -792,10 +792,10 @@
     <value>1</value>
   </data>
   <data name="PanelBereich2WZ1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 79</value>
+    <value>5, 83</value>
   </data>
   <data name="PanelBereich2WZ1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>376, 25</value>
+    <value>376, 27</value>
   </data>
   <data name="PanelBereich2WZ1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -804,7 +804,7 @@
     <value>PanelBereich2WZ1</value>
   </data>
   <data name="&gt;&gt;PanelBereich2WZ1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>Telerik.WinControls.UI.RadPanel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;PanelBereich2WZ1.Parent" xml:space="preserve">
     <value>RadGroupBoxBereich2</value>
@@ -855,10 +855,10 @@
     <value>1</value>
   </data>
   <data name="PanelBereich2WZ2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 110</value>
+    <value>5, 116</value>
   </data>
   <data name="PanelBereich2WZ2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>376, 25</value>
+    <value>376, 27</value>
   </data>
   <data name="PanelBereich2WZ2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -867,7 +867,7 @@
     <value>PanelBereich2WZ2</value>
   </data>
   <data name="&gt;&gt;PanelBereich2WZ2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>Telerik.WinControls.UI.RadPanel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;PanelBereich2WZ2.Parent" xml:space="preserve">
     <value>RadGroupBoxBereich2</value>
@@ -876,7 +876,7 @@
     <value>6</value>
   </data>
   <data name="RadTextBoxControlBereich2ErrorLimit1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>200, 178</value>
+    <value>200, 183</value>
   </data>
   <data name="RadTextBoxControlBereich2ErrorLimit1.Size" type="System.Drawing.Size, System.Drawing">
     <value>78, 20</value>
@@ -900,7 +900,7 @@
     <value>Segoe UI, 8.25pt, style=Bold</value>
   </data>
   <data name="lblBereich2FehlerGrenzen.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 181</value>
+    <value>75, 186</value>
   </data>
   <data name="lblBereich2FehlerGrenzen.Size" type="System.Drawing.Size, System.Drawing">
     <value>88, 18</value>
@@ -924,7 +924,7 @@
     <value>8</value>
   </data>
   <data name="RadCheckBoxBereich2VEL1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>367, 180</value>
+    <value>367, 185</value>
   </data>
   <data name="RadCheckBoxBereich2VEL1.Size" type="System.Drawing.Size, System.Drawing">
     <value>15, 15</value>
@@ -987,10 +987,10 @@
     <value>1</value>
   </data>
   <data name="PanelBereich2WZ3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 141</value>
+    <value>5, 149</value>
   </data>
   <data name="PanelBereich2WZ3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>376, 25</value>
+    <value>376, 27</value>
   </data>
   <data name="PanelBereich2WZ3.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -999,7 +999,7 @@
     <value>PanelBereich2WZ3</value>
   </data>
   <data name="&gt;&gt;PanelBereich2WZ3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>Telerik.WinControls.UI.RadPanel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;PanelBereich2WZ3.Parent" xml:space="preserve">
     <value>RadGroupBoxBereich2</value>
@@ -1096,7 +1096,7 @@
     <value>400, 3</value>
   </data>
   <data name="RadGroupBoxBereich2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>391, 214</value>
+    <value>391, 224</value>
   </data>
   <data name="RadGroupBoxBereich2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1121,7 +1121,7 @@
     <value>Segoe UI, 12pt</value>
   </data>
   <data name="RadButtonShowEFG2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 223</value>
+    <value>3, 233</value>
   </data>
   <data name="RadButtonShowEFG2.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 55</value>
@@ -1148,7 +1148,7 @@
     <value>31, 34</value>
   </data>
   <data name="FlowLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>794, 281</value>
+    <value>794, 299</value>
   </data>
   <data name="FlowLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1172,7 +1172,7 @@
     <value>0, 0</value>
   </data>
   <data name="RadGroupBoxPruefungAussermittigeBelastung.Size" type="System.Drawing.Size, System.Drawing">
-    <value>816, 338</value>
+    <value>834, 338</value>
   </data>
   <data name="RadGroupBoxPruefungAussermittigeBelastung.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1241,6 +1241,6 @@
     <value>uco11PruefungWiederholbarkeitBelastung</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.6108.20583, Culture=neutral, PublicKeyToken=null</value>
+    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.6352.19533, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

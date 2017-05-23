@@ -119,15 +119,21 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lblUeberlast.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 18</value>
+    <value>70, 18</value>
   </data>
   <data name="lblUeberlast.Text" xml:space="preserve">
     <value>Przeciążenie:</value>
   </data>
   <data name="lblAnzeige.Size" type="System.Drawing.Size, System.Drawing">
-    <value>237, 18</value>
+    <value>420, 18</value>
   </data>
   <data name="lblAnzeige.Text" xml:space="preserve">
     <value>Wyświetlacz: pokazuje przeciążenie; przy podłączonej drukarce wydruk nie możliwy</value>
+  </data>
+  <data name="RadCheckBoxUeberlast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>847, 29</value>
+  </data>
+  <data name="lblPflichtfeld1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>838, 29</value>
   </data>
 </root>

@@ -403,10 +403,10 @@
 </value>
   </data>
   <data name="Label12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>281, 62</value>
+    <value>292, 62</value>
   </data>
   <data name="RadLabel6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>299, 62</value>
+    <value>310, 62</value>
   </data>
   <data name="lblNormalienGewichte.Size" type="System.Drawing.Size, System.Drawing">
     <value>165, 18</value>
@@ -416,10 +416,10 @@
 </value>
   </data>
   <data name="RadTextBoxControlBetragNormallast.Location" type="System.Drawing.Point, System.Drawing">
-    <value>194, 62</value>
+    <value>205, 62</value>
   </data>
   <data name="RadCheckBoxVollstaendigesStaffelverfahren.Size" type="System.Drawing.Size, System.Drawing">
-    <value>186, 16</value>
+    <value>209, 16</value>
   </data>
   <data name="RadCheckBoxVollstaendigesStaffelverfahren.Text" xml:space="preserve">
     <value>Całkowita procedura stopniowa

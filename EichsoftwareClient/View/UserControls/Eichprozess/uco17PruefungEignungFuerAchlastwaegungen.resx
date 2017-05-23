@@ -125,100 +125,13 @@
   <data name="RadScrollablePanel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lblPflichtfeld3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblPflichtfeld3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblPflichtfeld3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>628, 96</value>
-  </data>
-  <data name="lblPflichtfeld3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>12, 13</value>
-  </data>
-  <data name="lblPflichtfeld3.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="lblPflichtfeld3.Text" xml:space="preserve">
-    <value>*</value>
-  </data>
-  <data name="&gt;&gt;lblPflichtfeld3.Name" xml:space="preserve">
-    <value>lblPflichtfeld3</value>
-  </data>
-  <data name="&gt;&gt;lblPflichtfeld3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblPflichtfeld3.Parent" xml:space="preserve">
-    <value>RadScrollablePanel1.PanelContainer</value>
-  </data>
-  <data name="&gt;&gt;lblPflichtfeld3.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="lblPflichtfeld2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblPflichtfeld2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblPflichtfeld2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>628, 67</value>
-  </data>
-  <data name="lblPflichtfeld2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>12, 13</value>
-  </data>
-  <data name="lblPflichtfeld2.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="lblPflichtfeld2.Text" xml:space="preserve">
-    <value>*</value>
-  </data>
-  <data name="&gt;&gt;lblPflichtfeld2.Name" xml:space="preserve">
-    <value>lblPflichtfeld2</value>
-  </data>
-  <data name="&gt;&gt;lblPflichtfeld2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblPflichtfeld2.Parent" xml:space="preserve">
-    <value>RadScrollablePanel1.PanelContainer</value>
-  </data>
-  <data name="&gt;&gt;lblPflichtfeld2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lblPflichtfeld1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblPflichtfeld1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>628, 15</value>
-  </data>
-  <data name="lblPflichtfeld1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>12, 13</value>
-  </data>
-  <data name="lblPflichtfeld1.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="lblPflichtfeld1.Text" xml:space="preserve">
-    <value>*</value>
-  </data>
-  <data name="&gt;&gt;lblPflichtfeld1.Name" xml:space="preserve">
-    <value>lblPflichtfeld1</value>
-  </data>
-  <data name="&gt;&gt;lblPflichtfeld1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblPflichtfeld1.Parent" xml:space="preserve">
-    <value>RadScrollablePanel1.PanelContainer</value>
-  </data>
-  <data name="&gt;&gt;lblPflichtfeld1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="lblZufahrtenInOrdnung.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 12</value>
   </data>
   <data name="lblZufahrtenInOrdnung.Size" type="System.Drawing.Size, System.Drawing">
     <value>465, 46</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lblZufahrtenInOrdnung.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
@@ -235,7 +148,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;lblZufahrtenInOrdnung.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>0</value>
   </data>
   <data name="RadCheckBoxWaagegeprueft.Location" type="System.Drawing.Point, System.Drawing">
     <value>607, 96</value>
@@ -256,7 +169,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxWaagegeprueft.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>1</value>
   </data>
   <data name="lblWaageNichtGeeignet.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 64</value>
@@ -280,7 +193,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;lblWaageNichtGeeignet.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>2</value>
   </data>
   <data name="RadCheckBoxWaageNichtGeeignet.Location" type="System.Drawing.Point, System.Drawing">
     <value>607, 67</value>
@@ -301,7 +214,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxWaageNichtGeeignet.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>3</value>
   </data>
   <data name="lblWaagegeprueft.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 88</value>
@@ -325,7 +238,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;lblWaagegeprueft.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>4</value>
   </data>
   <data name="RadCheckBoxZufahrtenInOrdnung.Location" type="System.Drawing.Point, System.Drawing">
     <value>608, 15</value>
@@ -346,7 +259,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxZufahrtenInOrdnung.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>5</value>
   </data>
   <data name="RadScrollablePanel1.PanelContainer.Size" type="System.Drawing.Size, System.Drawing">
     <value>779, 148</value>
@@ -397,6 +310,6 @@
     <value>uco17PruefungEignungFuerAchlastwaegungen</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.6108.20583, Culture=neutral, PublicKeyToken=null</value>
+    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.6352.21052, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

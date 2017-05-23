@@ -25,9 +25,6 @@ Partial Class uco17PruefungEignungFuerAchlastwaegungen
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco17PruefungEignungFuerAchlastwaegungen))
         Me.RadScrollablePanel1 = New Telerik.WinControls.UI.RadScrollablePanel()
-        Me.lblPflichtfeld3 = New Telerik.WinControls.UI.RadLabel()
-        Me.lblPflichtfeld2 = New Telerik.WinControls.UI.RadLabel()
-        Me.lblPflichtfeld1 = New Telerik.WinControls.UI.RadLabel()
         Me.lblZufahrtenInOrdnung = New Telerik.WinControls.UI.RadLabel()
         Me.RadCheckBoxWaagegeprueft = New Telerik.WinControls.UI.RadCheckBox()
         Me.lblWaageNichtGeeignet = New Telerik.WinControls.UI.RadLabel()
@@ -52,9 +49,6 @@ Partial Class uco17PruefungEignungFuerAchlastwaegungen
         '
         'RadScrollablePanel1.PanelContainer
         '
-        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.lblPflichtfeld3)
-        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.lblPflichtfeld2)
-        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.lblPflichtfeld1)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.lblZufahrtenInOrdnung)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadCheckBoxWaagegeprueft)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.lblWaageNichtGeeignet)
@@ -62,24 +56,6 @@ Partial Class uco17PruefungEignungFuerAchlastwaegungen
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.lblWaagegeprueft)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadCheckBoxZufahrtenInOrdnung)
         resources.ApplyResources(Me.RadScrollablePanel1.PanelContainer, "RadScrollablePanel1.PanelContainer")
-        '
-        'lblPflichtfeld3
-        '
-        resources.ApplyResources(Me.lblPflichtfeld3, "lblPflichtfeld3")
-        Me.lblPflichtfeld3.ForeColor = System.Drawing.Color.Red
-        Me.lblPflichtfeld3.Name = "lblPflichtfeld3"
-        '
-        'lblPflichtfeld2
-        '
-        resources.ApplyResources(Me.lblPflichtfeld2, "lblPflichtfeld2")
-        Me.lblPflichtfeld2.ForeColor = System.Drawing.Color.Red
-        Me.lblPflichtfeld2.Name = "lblPflichtfeld2"
-        '
-        'lblPflichtfeld1
-        '
-        resources.ApplyResources(Me.lblPflichtfeld1, "lblPflichtfeld1")
-        Me.lblPflichtfeld1.ForeColor = System.Drawing.Color.Red
-        Me.lblPflichtfeld1.Name = "lblPflichtfeld1"
         '
         'lblZufahrtenInOrdnung
         '
@@ -137,8 +113,5 @@ Partial Class uco17PruefungEignungFuerAchlastwaegungen
     Friend WithEvents lblWaageNichtGeeignet As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblZufahrtenInOrdnung As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadScrollablePanel1 As Telerik.WinControls.UI.RadScrollablePanel
-    Friend WithEvents lblPflichtfeld3 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents lblPflichtfeld2 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents lblPflichtfeld1 As Telerik.WinControls.UI.RadLabel
 
 End Class

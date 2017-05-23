@@ -110,11 +110,29 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Edit date.
+        '''</summary>
+        Friend Shared ReadOnly Property Bearbeitungsdatum() As String
+            Get
+                Return ResourceManager.GetString("Bearbeitungsdatum", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Global Status.
         '''</summary>
         Friend Shared ReadOnly Property Bearbeitungsstatus() As String
             Get
                 Return ResourceManager.GetString("Bearbeitungsstatus", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Remark.
+        '''</summary>
+        Friend Shared ReadOnly Property Bemerkung() As String
+            Get
+                Return ResourceManager.GetString("Bemerkung", resourceCulture)
             End Get
         End Property
         

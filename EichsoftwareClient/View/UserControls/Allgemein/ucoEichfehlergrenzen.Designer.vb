@@ -286,41 +286,21 @@ Partial Class ucoEichfehlergrenzen
         Me.RadGroupBox1.Controls.Add(Me.RadLabel1)
         Me.RadGroupBox1.Name = "RadGroupBox1"
         '
-        '
-        '
-        Me.RadGroupBox1.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBox1.RootElement.AccessibleName = Nothing
-        '
         'lblVFG1
         '
         resources.ApplyResources(Me.lblVFG1, "lblVFG1")
         Me.lblVFG1.Name = "lblVFG1"
-        '
-        '
-        '
-        Me.lblVFG1.RootElement.AccessibleDescription = Nothing
-        Me.lblVFG1.RootElement.AccessibleName = Nothing
         '
         'lblEFG1
         '
         resources.ApplyResources(Me.lblEFG1, "lblEFG1")
         Me.lblEFG1.Name = "lblEFG1"
         '
-        '
-        '
-        Me.lblEFG1.RootElement.AccessibleDescription = Nothing
-        Me.lblEFG1.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich1VFG2000e
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1VFG2000e, "RadTextBoxControlBereich1VFG2000e")
         Me.RadTextBoxControlBereich1VFG2000e.Name = "RadTextBoxControlBereich1VFG2000e"
         Me.RadTextBoxControlBereich1VFG2000e.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich1VFG2000e.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1VFG2000e.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich1VFG2000e.TabStop = False
         '
         'RadTextBoxControlBereich1VFG500e
@@ -328,11 +308,6 @@ Partial Class ucoEichfehlergrenzen
         resources.ApplyResources(Me.RadTextBoxControlBereich1VFG500e, "RadTextBoxControlBereich1VFG500e")
         Me.RadTextBoxControlBereich1VFG500e.Name = "RadTextBoxControlBereich1VFG500e"
         Me.RadTextBoxControlBereich1VFG500e.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich1VFG500e.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1VFG500e.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich1VFG500e.TabStop = False
         '
         'RadTextBoxControlBereich1VFG20e
@@ -340,11 +315,6 @@ Partial Class ucoEichfehlergrenzen
         resources.ApplyResources(Me.RadTextBoxControlBereich1VFG20e, "RadTextBoxControlBereich1VFG20e")
         Me.RadTextBoxControlBereich1VFG20e.Name = "RadTextBoxControlBereich1VFG20e"
         Me.RadTextBoxControlBereich1VFG20e.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich1VFG20e.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1VFG20e.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich1VFG20e.TabStop = False
         '
         'RadTextBoxControlBereich1EFG2000e
@@ -352,11 +322,6 @@ Partial Class ucoEichfehlergrenzen
         resources.ApplyResources(Me.RadTextBoxControlBereich1EFG2000e, "RadTextBoxControlBereich1EFG2000e")
         Me.RadTextBoxControlBereich1EFG2000e.Name = "RadTextBoxControlBereich1EFG2000e"
         Me.RadTextBoxControlBereich1EFG2000e.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich1EFG2000e.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1EFG2000e.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich1EFG2000e.TabStop = False
         '
         'RadTextBoxControlBereich1EFG500e
@@ -364,11 +329,6 @@ Partial Class ucoEichfehlergrenzen
         resources.ApplyResources(Me.RadTextBoxControlBereich1EFG500e, "RadTextBoxControlBereich1EFG500e")
         Me.RadTextBoxControlBereich1EFG500e.Name = "RadTextBoxControlBereich1EFG500e"
         Me.RadTextBoxControlBereich1EFG500e.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich1EFG500e.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1EFG500e.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich1EFG500e.TabStop = False
         '
         'RadTextBoxControlBereich1EFG20e
@@ -376,11 +336,6 @@ Partial Class ucoEichfehlergrenzen
         resources.ApplyResources(Me.RadTextBoxControlBereich1EFG20e, "RadTextBoxControlBereich1EFG20e")
         Me.RadTextBoxControlBereich1EFG20e.Name = "RadTextBoxControlBereich1EFG20e"
         Me.RadTextBoxControlBereich1EFG20e.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich1EFG20e.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1EFG20e.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich1EFG20e.TabStop = False
         '
         'RadTextBoxControlBereich1e2000Bis
@@ -388,11 +343,6 @@ Partial Class ucoEichfehlergrenzen
         resources.ApplyResources(Me.RadTextBoxControlBereich1e2000Bis, "RadTextBoxControlBereich1e2000Bis")
         Me.RadTextBoxControlBereich1e2000Bis.Name = "RadTextBoxControlBereich1e2000Bis"
         Me.RadTextBoxControlBereich1e2000Bis.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich1e2000Bis.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1e2000Bis.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich1e2000Bis.TabStop = False
         '
         'RadTextBoxControlBereich1e500Bis
@@ -400,11 +350,6 @@ Partial Class ucoEichfehlergrenzen
         resources.ApplyResources(Me.RadTextBoxControlBereich1e500Bis, "RadTextBoxControlBereich1e500Bis")
         Me.RadTextBoxControlBereich1e500Bis.Name = "RadTextBoxControlBereich1e500Bis"
         Me.RadTextBoxControlBereich1e500Bis.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich1e500Bis.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1e500Bis.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich1e500Bis.TabStop = False
         '
         'RadTextBoxControlBereich1e20Bis
@@ -412,11 +357,6 @@ Partial Class ucoEichfehlergrenzen
         resources.ApplyResources(Me.RadTextBoxControlBereich1e20Bis, "RadTextBoxControlBereich1e20Bis")
         Me.RadTextBoxControlBereich1e20Bis.Name = "RadTextBoxControlBereich1e20Bis"
         Me.RadTextBoxControlBereich1e20Bis.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich1e20Bis.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1e20Bis.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich1e20Bis.TabStop = False
         '
         'RadTextBoxControlBereich1e2000
@@ -424,11 +364,6 @@ Partial Class ucoEichfehlergrenzen
         resources.ApplyResources(Me.RadTextBoxControlBereich1e2000, "RadTextBoxControlBereich1e2000")
         Me.RadTextBoxControlBereich1e2000.Name = "RadTextBoxControlBereich1e2000"
         Me.RadTextBoxControlBereich1e2000.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich1e2000.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1e2000.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich1e2000.TabStop = False
         '
         'RadTextBoxControlBereich1e500
@@ -436,11 +371,6 @@ Partial Class ucoEichfehlergrenzen
         resources.ApplyResources(Me.RadTextBoxControlBereich1e500, "RadTextBoxControlBereich1e500")
         Me.RadTextBoxControlBereich1e500.Name = "RadTextBoxControlBereich1e500"
         Me.RadTextBoxControlBereich1e500.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich1e500.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1e500.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich1e500.TabStop = False
         '
         'RadTextBoxControlBereich1e20
@@ -448,11 +378,6 @@ Partial Class ucoEichfehlergrenzen
         resources.ApplyResources(Me.RadTextBoxControlBereich1e20, "RadTextBoxControlBereich1e20")
         Me.RadTextBoxControlBereich1e20.Name = "RadTextBoxControlBereich1e20"
         Me.RadTextBoxControlBereich1e20.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich1e20.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1e20.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich1e20.TabStop = False
         '
         'RadLabel19
@@ -460,210 +385,105 @@ Partial Class ucoEichfehlergrenzen
         resources.ApplyResources(Me.RadLabel19, "RadLabel19")
         Me.RadLabel19.Name = "RadLabel19"
         '
-        '
-        '
-        Me.RadLabel19.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel19.RootElement.AccessibleName = Nothing
-        '
         'RadLabel20
         '
         resources.ApplyResources(Me.RadLabel20, "RadLabel20")
         Me.RadLabel20.Name = "RadLabel20"
-        '
-        '
-        '
-        Me.RadLabel20.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel20.RootElement.AccessibleName = Nothing
         '
         'RadLabel21
         '
         resources.ApplyResources(Me.RadLabel21, "RadLabel21")
         Me.RadLabel21.Name = "RadLabel21"
         '
-        '
-        '
-        Me.RadLabel21.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel21.RootElement.AccessibleName = Nothing
-        '
         'RadLabel16
         '
         resources.ApplyResources(Me.RadLabel16, "RadLabel16")
         Me.RadLabel16.Name = "RadLabel16"
-        '
-        '
-        '
-        Me.RadLabel16.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel16.RootElement.AccessibleName = Nothing
         '
         'RadLabel17
         '
         resources.ApplyResources(Me.RadLabel17, "RadLabel17")
         Me.RadLabel17.Name = "RadLabel17"
         '
-        '
-        '
-        Me.RadLabel17.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel17.RootElement.AccessibleName = Nothing
-        '
         'RadLabel18
         '
         resources.ApplyResources(Me.RadLabel18, "RadLabel18")
         Me.RadLabel18.Name = "RadLabel18"
-        '
-        '
-        '
-        Me.RadLabel18.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel18.RootElement.AccessibleName = Nothing
         '
         'RadLabel13
         '
         resources.ApplyResources(Me.RadLabel13, "RadLabel13")
         Me.RadLabel13.Name = "RadLabel13"
         '
-        '
-        '
-        Me.RadLabel13.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel13.RootElement.AccessibleName = Nothing
-        '
         'RadLabel14
         '
         resources.ApplyResources(Me.RadLabel14, "RadLabel14")
         Me.RadLabel14.Name = "RadLabel14"
-        '
-        '
-        '
-        Me.RadLabel14.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel14.RootElement.AccessibleName = Nothing
         '
         'RadLabel15
         '
         resources.ApplyResources(Me.RadLabel15, "RadLabel15")
         Me.RadLabel15.Name = "RadLabel15"
         '
-        '
-        '
-        Me.RadLabel15.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel15.RootElement.AccessibleName = Nothing
-        '
         'RadLabel10
         '
         resources.ApplyResources(Me.RadLabel10, "RadLabel10")
         Me.RadLabel10.Name = "RadLabel10"
-        '
-        '
-        '
-        Me.RadLabel10.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel10.RootElement.AccessibleName = Nothing
         '
         'RadLabel11
         '
         resources.ApplyResources(Me.RadLabel11, "RadLabel11")
         Me.RadLabel11.Name = "RadLabel11"
         '
-        '
-        '
-        Me.RadLabel11.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel11.RootElement.AccessibleName = Nothing
-        '
         'RadLabel12
         '
         resources.ApplyResources(Me.RadLabel12, "RadLabel12")
         Me.RadLabel12.Name = "RadLabel12"
-        '
-        '
-        '
-        Me.RadLabel12.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel12.RootElement.AccessibleName = Nothing
         '
         'RadLabel7
         '
         resources.ApplyResources(Me.RadLabel7, "RadLabel7")
         Me.RadLabel7.Name = "RadLabel7"
         '
-        '
-        '
-        Me.RadLabel7.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel7.RootElement.AccessibleName = Nothing
-        '
         'RadLabel8
         '
         resources.ApplyResources(Me.RadLabel8, "RadLabel8")
         Me.RadLabel8.Name = "RadLabel8"
-        '
-        '
-        '
-        Me.RadLabel8.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel8.RootElement.AccessibleName = Nothing
         '
         'RadLabel9
         '
         resources.ApplyResources(Me.RadLabel9, "RadLabel9")
         Me.RadLabel9.Name = "RadLabel9"
         '
-        '
-        '
-        Me.RadLabel9.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel9.RootElement.AccessibleName = Nothing
-        '
         'lblBis3
         '
         resources.ApplyResources(Me.lblBis3, "lblBis3")
         Me.lblBis3.Name = "lblBis3"
-        '
-        '
-        '
-        Me.lblBis3.RootElement.AccessibleDescription = Nothing
-        Me.lblBis3.RootElement.AccessibleName = Nothing
         '
         'lblBis2
         '
         resources.ApplyResources(Me.lblBis2, "lblBis2")
         Me.lblBis2.Name = "lblBis2"
         '
-        '
-        '
-        Me.lblBis2.RootElement.AccessibleDescription = Nothing
-        Me.lblBis2.RootElement.AccessibleName = Nothing
-        '
         'lblBis1
         '
         resources.ApplyResources(Me.lblBis1, "lblBis1")
         Me.lblBis1.Name = "lblBis1"
-        '
-        '
-        '
-        Me.lblBis1.RootElement.AccessibleDescription = Nothing
-        Me.lblBis1.RootElement.AccessibleName = Nothing
         '
         'RadLabel3
         '
         resources.ApplyResources(Me.RadLabel3, "RadLabel3")
         Me.RadLabel3.Name = "RadLabel3"
         '
-        '
-        '
-        Me.RadLabel3.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel3.RootElement.AccessibleName = Nothing
-        '
         'RadLabel2
         '
         resources.ApplyResources(Me.RadLabel2, "RadLabel2")
         Me.RadLabel2.Name = "RadLabel2"
         '
-        '
-        '
-        Me.RadLabel2.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel2.RootElement.AccessibleName = Nothing
-        '
         'RadLabel1
         '
         resources.ApplyResources(Me.RadLabel1, "RadLabel1")
         Me.RadLabel1.Name = "RadLabel1"
-        '
-        '
-        '
-        Me.RadLabel1.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel1.RootElement.AccessibleName = Nothing
         '
         'RadGroupBox2
         '
@@ -706,41 +526,21 @@ Partial Class ucoEichfehlergrenzen
         Me.RadGroupBox2.Controls.Add(Me.RadLabel41)
         Me.RadGroupBox2.Name = "RadGroupBox2"
         '
-        '
-        '
-        Me.RadGroupBox2.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBox2.RootElement.AccessibleName = Nothing
-        '
         'lblVFG2
         '
         resources.ApplyResources(Me.lblVFG2, "lblVFG2")
         Me.lblVFG2.Name = "lblVFG2"
-        '
-        '
-        '
-        Me.lblVFG2.RootElement.AccessibleDescription = Nothing
-        Me.lblVFG2.RootElement.AccessibleName = Nothing
         '
         'lblEFG2
         '
         resources.ApplyResources(Me.lblEFG2, "lblEFG2")
         Me.lblEFG2.Name = "lblEFG2"
         '
-        '
-        '
-        Me.lblEFG2.RootElement.AccessibleDescription = Nothing
-        Me.lblEFG2.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich2VFG2000e
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2VFG2000e, "RadTextBoxControlBereich2VFG2000e")
         Me.RadTextBoxControlBereich2VFG2000e.Name = "RadTextBoxControlBereich2VFG2000e"
         Me.RadTextBoxControlBereich2VFG2000e.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich2VFG2000e.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2VFG2000e.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich2VFG2000e.TabStop = False
         '
         'RadTextBoxControlBereich2VFG500e
@@ -748,11 +548,6 @@ Partial Class ucoEichfehlergrenzen
         resources.ApplyResources(Me.RadTextBoxControlBereich2VFG500e, "RadTextBoxControlBereich2VFG500e")
         Me.RadTextBoxControlBereich2VFG500e.Name = "RadTextBoxControlBereich2VFG500e"
         Me.RadTextBoxControlBereich2VFG500e.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich2VFG500e.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2VFG500e.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich2VFG500e.TabStop = False
         '
         'RadTextBoxControlBereich2VFG20e
@@ -760,11 +555,6 @@ Partial Class ucoEichfehlergrenzen
         resources.ApplyResources(Me.RadTextBoxControlBereich2VFG20e, "RadTextBoxControlBereich2VFG20e")
         Me.RadTextBoxControlBereich2VFG20e.Name = "RadTextBoxControlBereich2VFG20e"
         Me.RadTextBoxControlBereich2VFG20e.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich2VFG20e.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2VFG20e.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich2VFG20e.TabStop = False
         '
         'RadTextBoxControlBereich2EFG2000e
@@ -772,11 +562,6 @@ Partial Class ucoEichfehlergrenzen
         resources.ApplyResources(Me.RadTextBoxControlBereich2EFG2000e, "RadTextBoxControlBereich2EFG2000e")
         Me.RadTextBoxControlBereich2EFG2000e.Name = "RadTextBoxControlBereich2EFG2000e"
         Me.RadTextBoxControlBereich2EFG2000e.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich2EFG2000e.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2EFG2000e.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich2EFG2000e.TabStop = False
         '
         'RadTextBoxControlBereich2EFG500e
@@ -784,11 +569,6 @@ Partial Class ucoEichfehlergrenzen
         resources.ApplyResources(Me.RadTextBoxControlBereich2EFG500e, "RadTextBoxControlBereich2EFG500e")
         Me.RadTextBoxControlBereich2EFG500e.Name = "RadTextBoxControlBereich2EFG500e"
         Me.RadTextBoxControlBereich2EFG500e.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich2EFG500e.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2EFG500e.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich2EFG500e.TabStop = False
         '
         'RadTextBoxControlBereich2EFG20e
@@ -796,11 +576,6 @@ Partial Class ucoEichfehlergrenzen
         resources.ApplyResources(Me.RadTextBoxControlBereich2EFG20e, "RadTextBoxControlBereich2EFG20e")
         Me.RadTextBoxControlBereich2EFG20e.Name = "RadTextBoxControlBereich2EFG20e"
         Me.RadTextBoxControlBereich2EFG20e.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich2EFG20e.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2EFG20e.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich2EFG20e.TabStop = False
         '
         'RadTextBoxControlBereich2e2000Bis
@@ -808,11 +583,6 @@ Partial Class ucoEichfehlergrenzen
         resources.ApplyResources(Me.RadTextBoxControlBereich2e2000Bis, "RadTextBoxControlBereich2e2000Bis")
         Me.RadTextBoxControlBereich2e2000Bis.Name = "RadTextBoxControlBereich2e2000Bis"
         Me.RadTextBoxControlBereich2e2000Bis.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich2e2000Bis.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2e2000Bis.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich2e2000Bis.TabStop = False
         '
         'RadTextBoxControlBereich2e500Bis
@@ -820,11 +590,6 @@ Partial Class ucoEichfehlergrenzen
         resources.ApplyResources(Me.RadTextBoxControlBereich2e500Bis, "RadTextBoxControlBereich2e500Bis")
         Me.RadTextBoxControlBereich2e500Bis.Name = "RadTextBoxControlBereich2e500Bis"
         Me.RadTextBoxControlBereich2e500Bis.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich2e500Bis.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2e500Bis.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich2e500Bis.TabStop = False
         '
         'RadTextBoxControlBereich2e20Bis
@@ -832,11 +597,6 @@ Partial Class ucoEichfehlergrenzen
         resources.ApplyResources(Me.RadTextBoxControlBereich2e20Bis, "RadTextBoxControlBereich2e20Bis")
         Me.RadTextBoxControlBereich2e20Bis.Name = "RadTextBoxControlBereich2e20Bis"
         Me.RadTextBoxControlBereich2e20Bis.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich2e20Bis.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2e20Bis.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich2e20Bis.TabStop = False
         '
         'RadTextBoxControlBereich2e2000
@@ -844,11 +604,6 @@ Partial Class ucoEichfehlergrenzen
         resources.ApplyResources(Me.RadTextBoxControlBereich2e2000, "RadTextBoxControlBereich2e2000")
         Me.RadTextBoxControlBereich2e2000.Name = "RadTextBoxControlBereich2e2000"
         Me.RadTextBoxControlBereich2e2000.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich2e2000.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2e2000.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich2e2000.TabStop = False
         '
         'RadTextBoxControlBereich2e500
@@ -856,11 +611,6 @@ Partial Class ucoEichfehlergrenzen
         resources.ApplyResources(Me.RadTextBoxControlBereich2e500, "RadTextBoxControlBereich2e500")
         Me.RadTextBoxControlBereich2e500.Name = "RadTextBoxControlBereich2e500"
         Me.RadTextBoxControlBereich2e500.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich2e500.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2e500.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich2e500.TabStop = False
         '
         'RadTextBoxControlBereich2e20
@@ -868,11 +618,6 @@ Partial Class ucoEichfehlergrenzen
         resources.ApplyResources(Me.RadTextBoxControlBereich2e20, "RadTextBoxControlBereich2e20")
         Me.RadTextBoxControlBereich2e20.Name = "RadTextBoxControlBereich2e20"
         Me.RadTextBoxControlBereich2e20.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich2e20.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2e20.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich2e20.TabStop = False
         '
         'RadLabel6
@@ -880,210 +625,105 @@ Partial Class ucoEichfehlergrenzen
         resources.ApplyResources(Me.RadLabel6, "RadLabel6")
         Me.RadLabel6.Name = "RadLabel6"
         '
-        '
-        '
-        Me.RadLabel6.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel6.RootElement.AccessibleName = Nothing
-        '
         'RadLabel22
         '
         resources.ApplyResources(Me.RadLabel22, "RadLabel22")
         Me.RadLabel22.Name = "RadLabel22"
-        '
-        '
-        '
-        Me.RadLabel22.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel22.RootElement.AccessibleName = Nothing
         '
         'RadLabel23
         '
         resources.ApplyResources(Me.RadLabel23, "RadLabel23")
         Me.RadLabel23.Name = "RadLabel23"
         '
-        '
-        '
-        Me.RadLabel23.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel23.RootElement.AccessibleName = Nothing
-        '
         'RadLabel24
         '
         resources.ApplyResources(Me.RadLabel24, "RadLabel24")
         Me.RadLabel24.Name = "RadLabel24"
-        '
-        '
-        '
-        Me.RadLabel24.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel24.RootElement.AccessibleName = Nothing
         '
         'RadLabel25
         '
         resources.ApplyResources(Me.RadLabel25, "RadLabel25")
         Me.RadLabel25.Name = "RadLabel25"
         '
-        '
-        '
-        Me.RadLabel25.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel25.RootElement.AccessibleName = Nothing
-        '
         'RadLabel26
         '
         resources.ApplyResources(Me.RadLabel26, "RadLabel26")
         Me.RadLabel26.Name = "RadLabel26"
-        '
-        '
-        '
-        Me.RadLabel26.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel26.RootElement.AccessibleName = Nothing
         '
         'RadLabel27
         '
         resources.ApplyResources(Me.RadLabel27, "RadLabel27")
         Me.RadLabel27.Name = "RadLabel27"
         '
-        '
-        '
-        Me.RadLabel27.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel27.RootElement.AccessibleName = Nothing
-        '
         'RadLabel28
         '
         resources.ApplyResources(Me.RadLabel28, "RadLabel28")
         Me.RadLabel28.Name = "RadLabel28"
-        '
-        '
-        '
-        Me.RadLabel28.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel28.RootElement.AccessibleName = Nothing
         '
         'RadLabel29
         '
         resources.ApplyResources(Me.RadLabel29, "RadLabel29")
         Me.RadLabel29.Name = "RadLabel29"
         '
-        '
-        '
-        Me.RadLabel29.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel29.RootElement.AccessibleName = Nothing
-        '
         'RadLabel30
         '
         resources.ApplyResources(Me.RadLabel30, "RadLabel30")
         Me.RadLabel30.Name = "RadLabel30"
-        '
-        '
-        '
-        Me.RadLabel30.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel30.RootElement.AccessibleName = Nothing
         '
         'RadLabel31
         '
         resources.ApplyResources(Me.RadLabel31, "RadLabel31")
         Me.RadLabel31.Name = "RadLabel31"
         '
-        '
-        '
-        Me.RadLabel31.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel31.RootElement.AccessibleName = Nothing
-        '
         'RadLabel32
         '
         resources.ApplyResources(Me.RadLabel32, "RadLabel32")
         Me.RadLabel32.Name = "RadLabel32"
-        '
-        '
-        '
-        Me.RadLabel32.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel32.RootElement.AccessibleName = Nothing
         '
         'RadLabel33
         '
         resources.ApplyResources(Me.RadLabel33, "RadLabel33")
         Me.RadLabel33.Name = "RadLabel33"
         '
-        '
-        '
-        Me.RadLabel33.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel33.RootElement.AccessibleName = Nothing
-        '
         'RadLabel34
         '
         resources.ApplyResources(Me.RadLabel34, "RadLabel34")
         Me.RadLabel34.Name = "RadLabel34"
-        '
-        '
-        '
-        Me.RadLabel34.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel34.RootElement.AccessibleName = Nothing
         '
         'RadLabel35
         '
         resources.ApplyResources(Me.RadLabel35, "RadLabel35")
         Me.RadLabel35.Name = "RadLabel35"
         '
-        '
-        '
-        Me.RadLabel35.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel35.RootElement.AccessibleName = Nothing
-        '
         'lblBis6
         '
         resources.ApplyResources(Me.lblBis6, "lblBis6")
         Me.lblBis6.Name = "lblBis6"
-        '
-        '
-        '
-        Me.lblBis6.RootElement.AccessibleDescription = Nothing
-        Me.lblBis6.RootElement.AccessibleName = Nothing
         '
         'lblBis5
         '
         resources.ApplyResources(Me.lblBis5, "lblBis5")
         Me.lblBis5.Name = "lblBis5"
         '
-        '
-        '
-        Me.lblBis5.RootElement.AccessibleDescription = Nothing
-        Me.lblBis5.RootElement.AccessibleName = Nothing
-        '
         'lblBis4
         '
         resources.ApplyResources(Me.lblBis4, "lblBis4")
         Me.lblBis4.Name = "lblBis4"
-        '
-        '
-        '
-        Me.lblBis4.RootElement.AccessibleDescription = Nothing
-        Me.lblBis4.RootElement.AccessibleName = Nothing
         '
         'RadLabel39
         '
         resources.ApplyResources(Me.RadLabel39, "RadLabel39")
         Me.RadLabel39.Name = "RadLabel39"
         '
-        '
-        '
-        Me.RadLabel39.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel39.RootElement.AccessibleName = Nothing
-        '
         'RadLabel40
         '
         resources.ApplyResources(Me.RadLabel40, "RadLabel40")
         Me.RadLabel40.Name = "RadLabel40"
         '
-        '
-        '
-        Me.RadLabel40.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel40.RootElement.AccessibleName = Nothing
-        '
         'RadLabel41
         '
         resources.ApplyResources(Me.RadLabel41, "RadLabel41")
         Me.RadLabel41.Name = "RadLabel41"
-        '
-        '
-        '
-        Me.RadLabel41.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel41.RootElement.AccessibleName = Nothing
         '
         'RadGroupBox3
         '
@@ -1126,41 +766,21 @@ Partial Class ucoEichfehlergrenzen
         Me.RadGroupBox3.Controls.Add(Me.RadLabel64)
         Me.RadGroupBox3.Name = "RadGroupBox3"
         '
-        '
-        '
-        Me.RadGroupBox3.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBox3.RootElement.AccessibleName = Nothing
-        '
         'lblVFG3
         '
         resources.ApplyResources(Me.lblVFG3, "lblVFG3")
         Me.lblVFG3.Name = "lblVFG3"
-        '
-        '
-        '
-        Me.lblVFG3.RootElement.AccessibleDescription = Nothing
-        Me.lblVFG3.RootElement.AccessibleName = Nothing
         '
         'lblEFG3
         '
         resources.ApplyResources(Me.lblEFG3, "lblEFG3")
         Me.lblEFG3.Name = "lblEFG3"
         '
-        '
-        '
-        Me.lblEFG3.RootElement.AccessibleDescription = Nothing
-        Me.lblEFG3.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich3VFG2000e
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3VFG2000e, "RadTextBoxControlBereich3VFG2000e")
         Me.RadTextBoxControlBereich3VFG2000e.Name = "RadTextBoxControlBereich3VFG2000e"
         Me.RadTextBoxControlBereich3VFG2000e.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich3VFG2000e.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3VFG2000e.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich3VFG2000e.TabStop = False
         '
         'RadTextBoxControlBereich3VFG500e
@@ -1168,11 +788,6 @@ Partial Class ucoEichfehlergrenzen
         resources.ApplyResources(Me.RadTextBoxControlBereich3VFG500e, "RadTextBoxControlBereich3VFG500e")
         Me.RadTextBoxControlBereich3VFG500e.Name = "RadTextBoxControlBereich3VFG500e"
         Me.RadTextBoxControlBereich3VFG500e.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich3VFG500e.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3VFG500e.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich3VFG500e.TabStop = False
         '
         'RadTextBoxControlBereich3VFG20e
@@ -1180,11 +795,6 @@ Partial Class ucoEichfehlergrenzen
         resources.ApplyResources(Me.RadTextBoxControlBereich3VFG20e, "RadTextBoxControlBereich3VFG20e")
         Me.RadTextBoxControlBereich3VFG20e.Name = "RadTextBoxControlBereich3VFG20e"
         Me.RadTextBoxControlBereich3VFG20e.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich3VFG20e.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3VFG20e.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich3VFG20e.TabStop = False
         '
         'RadTextBoxControlBereich3EFG2000e
@@ -1192,11 +802,6 @@ Partial Class ucoEichfehlergrenzen
         resources.ApplyResources(Me.RadTextBoxControlBereich3EFG2000e, "RadTextBoxControlBereich3EFG2000e")
         Me.RadTextBoxControlBereich3EFG2000e.Name = "RadTextBoxControlBereich3EFG2000e"
         Me.RadTextBoxControlBereich3EFG2000e.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich3EFG2000e.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3EFG2000e.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich3EFG2000e.TabStop = False
         '
         'RadTextBoxControlBereich3EFG500e
@@ -1204,11 +809,6 @@ Partial Class ucoEichfehlergrenzen
         resources.ApplyResources(Me.RadTextBoxControlBereich3EFG500e, "RadTextBoxControlBereich3EFG500e")
         Me.RadTextBoxControlBereich3EFG500e.Name = "RadTextBoxControlBereich3EFG500e"
         Me.RadTextBoxControlBereich3EFG500e.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich3EFG500e.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3EFG500e.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich3EFG500e.TabStop = False
         '
         'RadTextBoxControlBereich3EFG20e
@@ -1216,11 +816,6 @@ Partial Class ucoEichfehlergrenzen
         resources.ApplyResources(Me.RadTextBoxControlBereich3EFG20e, "RadTextBoxControlBereich3EFG20e")
         Me.RadTextBoxControlBereich3EFG20e.Name = "RadTextBoxControlBereich3EFG20e"
         Me.RadTextBoxControlBereich3EFG20e.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich3EFG20e.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3EFG20e.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich3EFG20e.TabStop = False
         '
         'RadTextBoxControlBereich3e2000Bis
@@ -1228,11 +823,6 @@ Partial Class ucoEichfehlergrenzen
         resources.ApplyResources(Me.RadTextBoxControlBereich3e2000Bis, "RadTextBoxControlBereich3e2000Bis")
         Me.RadTextBoxControlBereich3e2000Bis.Name = "RadTextBoxControlBereich3e2000Bis"
         Me.RadTextBoxControlBereich3e2000Bis.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich3e2000Bis.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3e2000Bis.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich3e2000Bis.TabStop = False
         '
         'RadTextBoxControlBereich3e500Bis
@@ -1240,11 +830,6 @@ Partial Class ucoEichfehlergrenzen
         resources.ApplyResources(Me.RadTextBoxControlBereich3e500Bis, "RadTextBoxControlBereich3e500Bis")
         Me.RadTextBoxControlBereich3e500Bis.Name = "RadTextBoxControlBereich3e500Bis"
         Me.RadTextBoxControlBereich3e500Bis.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich3e500Bis.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3e500Bis.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich3e500Bis.TabStop = False
         '
         'RadTextBoxControlBereich3e20Bis
@@ -1252,11 +837,6 @@ Partial Class ucoEichfehlergrenzen
         resources.ApplyResources(Me.RadTextBoxControlBereich3e20Bis, "RadTextBoxControlBereich3e20Bis")
         Me.RadTextBoxControlBereich3e20Bis.Name = "RadTextBoxControlBereich3e20Bis"
         Me.RadTextBoxControlBereich3e20Bis.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich3e20Bis.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3e20Bis.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich3e20Bis.TabStop = False
         '
         'RadTextBoxControlBereich3e2000
@@ -1264,11 +844,6 @@ Partial Class ucoEichfehlergrenzen
         resources.ApplyResources(Me.RadTextBoxControlBereich3e2000, "RadTextBoxControlBereich3e2000")
         Me.RadTextBoxControlBereich3e2000.Name = "RadTextBoxControlBereich3e2000"
         Me.RadTextBoxControlBereich3e2000.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich3e2000.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3e2000.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich3e2000.TabStop = False
         '
         'RadTextBoxControlBereich3e500
@@ -1276,11 +851,6 @@ Partial Class ucoEichfehlergrenzen
         resources.ApplyResources(Me.RadTextBoxControlBereich3e500, "RadTextBoxControlBereich3e500")
         Me.RadTextBoxControlBereich3e500.Name = "RadTextBoxControlBereich3e500"
         Me.RadTextBoxControlBereich3e500.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich3e500.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3e500.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich3e500.TabStop = False
         '
         'RadTextBoxControlBereich3e20
@@ -1288,11 +858,6 @@ Partial Class ucoEichfehlergrenzen
         resources.ApplyResources(Me.RadTextBoxControlBereich3e20, "RadTextBoxControlBereich3e20")
         Me.RadTextBoxControlBereich3e20.Name = "RadTextBoxControlBereich3e20"
         Me.RadTextBoxControlBereich3e20.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich3e20.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3e20.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich3e20.TabStop = False
         '
         'RadLabel44
@@ -1300,210 +865,105 @@ Partial Class ucoEichfehlergrenzen
         resources.ApplyResources(Me.RadLabel44, "RadLabel44")
         Me.RadLabel44.Name = "RadLabel44"
         '
-        '
-        '
-        Me.RadLabel44.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel44.RootElement.AccessibleName = Nothing
-        '
         'RadLabel45
         '
         resources.ApplyResources(Me.RadLabel45, "RadLabel45")
         Me.RadLabel45.Name = "RadLabel45"
-        '
-        '
-        '
-        Me.RadLabel45.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel45.RootElement.AccessibleName = Nothing
         '
         'RadLabel46
         '
         resources.ApplyResources(Me.RadLabel46, "RadLabel46")
         Me.RadLabel46.Name = "RadLabel46"
         '
-        '
-        '
-        Me.RadLabel46.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel46.RootElement.AccessibleName = Nothing
-        '
         'RadLabel47
         '
         resources.ApplyResources(Me.RadLabel47, "RadLabel47")
         Me.RadLabel47.Name = "RadLabel47"
-        '
-        '
-        '
-        Me.RadLabel47.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel47.RootElement.AccessibleName = Nothing
         '
         'RadLabel48
         '
         resources.ApplyResources(Me.RadLabel48, "RadLabel48")
         Me.RadLabel48.Name = "RadLabel48"
         '
-        '
-        '
-        Me.RadLabel48.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel48.RootElement.AccessibleName = Nothing
-        '
         'RadLabel49
         '
         resources.ApplyResources(Me.RadLabel49, "RadLabel49")
         Me.RadLabel49.Name = "RadLabel49"
-        '
-        '
-        '
-        Me.RadLabel49.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel49.RootElement.AccessibleName = Nothing
         '
         'RadLabel50
         '
         resources.ApplyResources(Me.RadLabel50, "RadLabel50")
         Me.RadLabel50.Name = "RadLabel50"
         '
-        '
-        '
-        Me.RadLabel50.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel50.RootElement.AccessibleName = Nothing
-        '
         'RadLabel51
         '
         resources.ApplyResources(Me.RadLabel51, "RadLabel51")
         Me.RadLabel51.Name = "RadLabel51"
-        '
-        '
-        '
-        Me.RadLabel51.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel51.RootElement.AccessibleName = Nothing
         '
         'RadLabel52
         '
         resources.ApplyResources(Me.RadLabel52, "RadLabel52")
         Me.RadLabel52.Name = "RadLabel52"
         '
-        '
-        '
-        Me.RadLabel52.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel52.RootElement.AccessibleName = Nothing
-        '
         'RadLabel53
         '
         resources.ApplyResources(Me.RadLabel53, "RadLabel53")
         Me.RadLabel53.Name = "RadLabel53"
-        '
-        '
-        '
-        Me.RadLabel53.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel53.RootElement.AccessibleName = Nothing
         '
         'RadLabel54
         '
         resources.ApplyResources(Me.RadLabel54, "RadLabel54")
         Me.RadLabel54.Name = "RadLabel54"
         '
-        '
-        '
-        Me.RadLabel54.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel54.RootElement.AccessibleName = Nothing
-        '
         'RadLabel55
         '
         resources.ApplyResources(Me.RadLabel55, "RadLabel55")
         Me.RadLabel55.Name = "RadLabel55"
-        '
-        '
-        '
-        Me.RadLabel55.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel55.RootElement.AccessibleName = Nothing
         '
         'RadLabel56
         '
         resources.ApplyResources(Me.RadLabel56, "RadLabel56")
         Me.RadLabel56.Name = "RadLabel56"
         '
-        '
-        '
-        Me.RadLabel56.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel56.RootElement.AccessibleName = Nothing
-        '
         'RadLabel57
         '
         resources.ApplyResources(Me.RadLabel57, "RadLabel57")
         Me.RadLabel57.Name = "RadLabel57"
-        '
-        '
-        '
-        Me.RadLabel57.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel57.RootElement.AccessibleName = Nothing
         '
         'RadLabel58
         '
         resources.ApplyResources(Me.RadLabel58, "RadLabel58")
         Me.RadLabel58.Name = "RadLabel58"
         '
-        '
-        '
-        Me.RadLabel58.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel58.RootElement.AccessibleName = Nothing
-        '
         'lblBis9
         '
         resources.ApplyResources(Me.lblBis9, "lblBis9")
         Me.lblBis9.Name = "lblBis9"
-        '
-        '
-        '
-        Me.lblBis9.RootElement.AccessibleDescription = Nothing
-        Me.lblBis9.RootElement.AccessibleName = Nothing
         '
         'lblBis8
         '
         resources.ApplyResources(Me.lblBis8, "lblBis8")
         Me.lblBis8.Name = "lblBis8"
         '
-        '
-        '
-        Me.lblBis8.RootElement.AccessibleDescription = Nothing
-        Me.lblBis8.RootElement.AccessibleName = Nothing
-        '
         'lblBis7
         '
         resources.ApplyResources(Me.lblBis7, "lblBis7")
         Me.lblBis7.Name = "lblBis7"
-        '
-        '
-        '
-        Me.lblBis7.RootElement.AccessibleDescription = Nothing
-        Me.lblBis7.RootElement.AccessibleName = Nothing
         '
         'RadLabel62
         '
         resources.ApplyResources(Me.RadLabel62, "RadLabel62")
         Me.RadLabel62.Name = "RadLabel62"
         '
-        '
-        '
-        Me.RadLabel62.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel62.RootElement.AccessibleName = Nothing
-        '
         'RadLabel63
         '
         resources.ApplyResources(Me.RadLabel63, "RadLabel63")
         Me.RadLabel63.Name = "RadLabel63"
         '
-        '
-        '
-        Me.RadLabel63.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel63.RootElement.AccessibleName = Nothing
-        '
         'RadLabel64
         '
         resources.ApplyResources(Me.RadLabel64, "RadLabel64")
         Me.RadLabel64.Name = "RadLabel64"
-        '
-        '
-        '
-        Me.RadLabel64.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel64.RootElement.AccessibleName = Nothing
         '
         'ucoEichfehlergrenzen
         '

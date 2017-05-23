@@ -3,16 +3,20 @@ Public Class ucoEichfehlergrenzen
     Inherits ucoContent
 
 #Region "Member Variables"
+
     Private _suspendEvents As Boolean = False  'Variable zum temporären stoppen der Eventlogiken
     Private _parentForm As FrmMainContainer
+
 #End Region
 
 #Region "Constructors"
+
     Sub New()
         MyBase.New()
         ' Dieser Aufruf ist für den Designer erforderlich.
         InitializeComponent()
     End Sub
+
     Sub New(ByRef pParentform As FrmMainContainer, ByRef pObjEichprozess As Eichprozess, Optional ByRef pPreviousUco As ucoContent = Nothing, Optional ByRef pNextUco As ucoContent = Nothing, Optional ByVal pEnuModus As enuDialogModus = enuDialogModus.normal)
         MyBase.New(pParentform, pObjEichprozess, pPreviousUco, pNextUco, pEnuModus)
         _parentForm = pParentform
@@ -21,9 +25,11 @@ Public Class ucoEichfehlergrenzen
         _suspendEvents = False
 
     End Sub
+
 #End Region
 
 #Region "Events"
+
     ''' <summary>
     ''' Validations the needed.
     ''' </summary>
@@ -31,6 +37,7 @@ Public Class ucoEichfehlergrenzen
     Protected Friend Overrides Function ValidationNeeded() As Boolean
         Return True
     End Function
+
     Private Sub ucoEichfehlergrenzen_Load(sender As Object, e As EventArgs) Handles Me.Load
         Try
             'daten füllen
@@ -38,9 +45,11 @@ Public Class ucoEichfehlergrenzen
         Catch ex As Exception
         End Try
     End Sub
+
 #End Region
 
 #Region "Methods"
+
     Protected Friend Overrides Sub LoadFromDatabase()
 
         'events abbrechen
@@ -172,6 +181,7 @@ Public Class ucoEichfehlergrenzen
 #End Region
 
 #Region "Overrides"
+
     Protected Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
         If Me.Name.Equals(UserControl.Name) = False Then Exit Sub
 

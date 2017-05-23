@@ -123,6 +123,7 @@ Partial Class uco_5Beschaffenheitspruefung
         '
         'RadScrollablePanel1.PanelContainer
         '
+        resources.ApplyResources(Me.RadScrollablePanel1.PanelContainer, "RadScrollablePanel1.PanelContainer")
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.lblPflichtfeld1)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadGroupBoxAufstellbedingungen)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadCheckBoxApprove)
@@ -131,18 +132,17 @@ Partial Class uco_5Beschaffenheitspruefung
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadGroupBoxWaegezellen)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadGroupBoxVerbindungselemente)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadGroupBoxAuswerteGeraete)
-        resources.ApplyResources(Me.RadScrollablePanel1.PanelContainer, "RadScrollablePanel1.PanelContainer")
         '
         'lblPflichtfeld1
         '
-        Me.lblPflichtfeld1.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.lblPflichtfeld1, "lblPflichtfeld1")
+        Me.lblPflichtfeld1.ForeColor = System.Drawing.Color.Red
         Me.lblPflichtfeld1.Name = "lblPflichtfeld1"
         '
         'RadGroupBoxAufstellbedingungen
         '
-        Me.RadGroupBoxAufstellbedingungen.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         resources.ApplyResources(Me.RadGroupBoxAufstellbedingungen, "RadGroupBoxAufstellbedingungen")
+        Me.RadGroupBoxAufstellbedingungen.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBoxAufstellbedingungen.Controls.Add(Me.RadLabel20)
         Me.RadGroupBoxAufstellbedingungen.Name = "RadGroupBoxAufstellbedingungen"
         Me.RadGroupBoxAufstellbedingungen.ThemeName = "Telerik.WinControls.UI.RadGroupBox"
@@ -164,8 +164,8 @@ Partial Class uco_5Beschaffenheitspruefung
         '
         'RadGroupBoxWaegebruecke
         '
-        Me.RadGroupBoxWaegebruecke.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         resources.ApplyResources(Me.RadGroupBoxWaegebruecke, "RadGroupBoxWaegebruecke")
+        Me.RadGroupBoxWaegebruecke.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBoxWaegebruecke.Controls.Add(Me.RadSeparator14)
         Me.RadGroupBoxWaegebruecke.Controls.Add(Me.RadSeparator11)
         Me.RadGroupBoxWaegebruecke.Controls.Add(Me.RadSeparator10)
@@ -213,8 +213,8 @@ Partial Class uco_5Beschaffenheitspruefung
         '
         'RadGroupBoxWaegezellen
         '
-        Me.RadGroupBoxWaegezellen.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         resources.ApplyResources(Me.RadGroupBoxWaegezellen, "RadGroupBoxWaegezellen")
+        Me.RadGroupBoxWaegezellen.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBoxWaegezellen.Controls.Add(Me.RadSeparator6)
         Me.RadGroupBoxWaegezellen.Controls.Add(Me.RadSeparator5)
         Me.RadGroupBoxWaegezellen.Controls.Add(Me.RadSeparator4)
@@ -282,8 +282,8 @@ Partial Class uco_5Beschaffenheitspruefung
         '
         'RadGroupBoxVerbindungselemente
         '
-        Me.RadGroupBoxVerbindungselemente.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         resources.ApplyResources(Me.RadGroupBoxVerbindungselemente, "RadGroupBoxVerbindungselemente")
+        Me.RadGroupBoxVerbindungselemente.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBoxVerbindungselemente.Controls.Add(Me.RadSeparator9)
         Me.RadGroupBoxVerbindungselemente.Controls.Add(Me.RadSeparator8)
         Me.RadGroupBoxVerbindungselemente.Controls.Add(Me.RadSeparator7)
@@ -338,8 +338,8 @@ Partial Class uco_5Beschaffenheitspruefung
         '
         'RadGroupBoxAuswerteGeraete
         '
-        Me.RadGroupBoxAuswerteGeraete.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         resources.ApplyResources(Me.RadGroupBoxAuswerteGeraete, "RadGroupBoxAuswerteGeraete")
+        Me.RadGroupBoxAuswerteGeraete.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBoxAuswerteGeraete.Controls.Add(Me.RadSeparator13)
         Me.RadGroupBoxAuswerteGeraete.Controls.Add(Me.RadLabel17)
         Me.RadGroupBoxAuswerteGeraete.Controls.Add(Me.RadSeparator12)

@@ -117,196 +117,190 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblPflichtfeld2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld2.Name" xml:space="preserve">
+    <value>lblPflichtfeld2</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lblBeschreibung.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 16</value>
+  <data name="RadLabel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 18</value>
   </data>
-  <data name="lblBeschreibung.Size" type="System.Drawing.Size, System.Drawing">
-    <value>418, 18</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lblBeschreibung.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblBeschreibung.Text" xml:space="preserve">
-    <value>The verification is valid for the following place of installation/ location/ area of use:</value>
-  </data>
-  <data name="&gt;&gt;lblBeschreibung.Name" xml:space="preserve">
-    <value>lblBeschreibung</value>
-  </data>
-  <data name="&gt;&gt;lblBeschreibung.Type" xml:space="preserve">
+  <data name="&gt;&gt;lblPflichtfeld1.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;lblBeschreibung.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lblBeschreibung.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="&gt;&gt;lblPflichtfeld2.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="RadLabel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>20, 51</value>
   </data>
-  <data name="RadLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>21, 18</value>
-  </data>
-  <data name="RadLabel1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="RadLabel1.Text" xml:space="preserve">
-    <value>g=</value>
-  </data>
-  <data name="&gt;&gt;RadLabel1.Name" xml:space="preserve">
-    <value>RadLabel1</value>
+  <data name="&gt;&gt;RadTextBoxControlG.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadLabel1.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;RadLabel1.Parent" xml:space="preserve">
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblPflichtfeld1.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="RadTextBoxControlG.Location" type="System.Drawing.Point, System.Drawing">
+    <value>58, 51</value>
+  </data>
+  <data name="&gt;&gt;RadLabel1.Name" xml:space="preserve">
+    <value>RadLabel1</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlG.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblPflichtfeld2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>11, 18</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlG.Name" xml:space="preserve">
+    <value>RadTextBoxControlG</value>
+  </data>
+  <data name="lblPflichtfeld2.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="RadCheckBoxSchwerkraft.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 15</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld1.Name" xml:space="preserve">
+    <value>lblPflichtfeld1</value>
+  </data>
+  <data name="RadLabel1.Text" xml:space="preserve">
+    <value>g=</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.6352.18994, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="RadTextBoxControlG.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 20</value>
+  </data>
+  <data name="&gt;&gt;RadLabel3.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="RadCheckBoxSchwerkraft.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="RadLabel3.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lblPflichtfeld1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;RadLabel3.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;RadLabel3.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;RadLabel1.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="RadLabel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>139, 51</value>
+  <data name="RadTextBoxControlG.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
-  <data name="RadLabel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 18</value>
-  </data>
-  <data name="RadLabel3.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="RadLabel3.Text" xml:space="preserve">
-    <value>m/s²</value>
-  </data>
-  <data name="&gt;&gt;RadLabel3.Name" xml:space="preserve">
-    <value>RadLabel3</value>
-  </data>
-  <data name="&gt;&gt;RadLabel3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadLabel3.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;RadLabel3.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="RadCheckBoxSchwerkraft.Location" type="System.Drawing.Point, System.Drawing">
-    <value>196, 51</value>
-  </data>
-  <data name="RadCheckBoxSchwerkraft.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 15</value>
-  </data>
-  <data name="RadCheckBoxSchwerkraft.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxSchwerkraft.Name" xml:space="preserve">
-    <value>RadCheckBoxSchwerkraft</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxSchwerkraft.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxSchwerkraft.Parent" xml:space="preserve">
+  <data name="&gt;&gt;RadLabel1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxSchwerkraft.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="RadTextBoxControlG.Location" type="System.Drawing.Point, System.Drawing">
-    <value>58, 51</value>
-  </data>
-  <data name="RadTextBoxControlG.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 20</value>
-  </data>
-  <data name="RadTextBoxControlG.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlG.Name" xml:space="preserve">
-    <value>RadTextBoxControlG</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlG.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
   <data name="&gt;&gt;RadTextBoxControlG.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlG.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="lblPflichtfeld1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lblPflichtfeld1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblPflichtfeld1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>217, 51</value>
+  <data name="&gt;&gt;lblBeschreibung.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="lblPflichtfeld1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>11, 13</value>
-  </data>
-  <data name="lblPflichtfeld1.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="lblPflichtfeld1.Text" xml:space="preserve">
-    <value>*</value>
-  </data>
-  <data name="&gt;&gt;lblPflichtfeld1.Name" xml:space="preserve">
-    <value>lblPflichtfeld1</value>
-  </data>
-  <data name="&gt;&gt;lblPflichtfeld1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>11, 18</value>
   </data>
   <data name="&gt;&gt;lblPflichtfeld1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;lblPflichtfeld1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lblPflichtfeld2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblPflichtfeld2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblPflichtfeld2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>174, 51</value>
-  </data>
-  <data name="lblPflichtfeld2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>11, 13</value>
-  </data>
-  <data name="lblPflichtfeld2.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="lblPflichtfeld2.Text" xml:space="preserve">
-    <value>*</value>
-  </data>
-  <data name="&gt;&gt;lblPflichtfeld2.Name" xml:space="preserve">
-    <value>lblPflichtfeld2</value>
-  </data>
-  <data name="&gt;&gt;lblPflichtfeld2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblPflichtfeld2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lblPflichtfeld2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+  <data name="RadLabel3.Text" xml:space="preserve">
+    <value>m/s²</value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
     <value>830, 84</value>
   </data>
+  <data name="&gt;&gt;lblBeschreibung.Name" xml:space="preserve">
+    <value>lblBeschreibung</value>
+  </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>uco18Fallbeschleunigung</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.6108.20583, Culture=neutral, PublicKeyToken=null</value>
+  <data name="RadLabel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>139, 51</value>
   </data>
+  <data name="lblBeschreibung.Size" type="System.Drawing.Size, System.Drawing">
+    <value>418, 18</value>
+  </data>
+  <data name="lblPflichtfeld1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>217, 51</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld2.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="lblPflichtfeld2.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxSchwerkraft.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="RadLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>21, 18</value>
+  </data>
+  <data name="lblPflichtfeld1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;lblBeschreibung.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="RadLabel1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="RadCheckBoxSchwerkraft.Location" type="System.Drawing.Point, System.Drawing">
+    <value>196, 51</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxSchwerkraft.Name" xml:space="preserve">
+    <value>RadCheckBoxSchwerkraft</value>
+  </data>
+  <data name="lblPflichtfeld2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>174, 51</value>
+  </data>
+  <data name="lblBeschreibung.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="&gt;&gt;RadLabel3.Name" xml:space="preserve">
+    <value>RadLabel3</value>
+  </data>
+  <data name="&gt;&gt;lblBeschreibung.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxSchwerkraft.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="lblBeschreibung.Text" xml:space="preserve">
+    <value>The verification is valid for the following place of installation/ location/ area of use:</value>
+  </data>
+  <data name="lblBeschreibung.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 16</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

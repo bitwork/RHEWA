@@ -176,6 +176,9 @@ Public Class ucoEichprozessauswahlliste
         RadGridViewAuswahlliste.Columns("Lookup_Waagenart").HeaderText = My.Resources.GlobaleLokalisierung.Waagenart
         RadGridViewAuswahlliste.Columns("Fabriknummer").HeaderText = My.Resources.GlobaleLokalisierung.Fabriknummer
 
+        RadGridViewAuswahlliste.Columns("Bearbeitungsdatum").HeaderText = My.Resources.GlobaleLokalisierung.Bearbeitungsdatum
+        RadGridViewAuswahlliste.Columns("Bemerkung").HeaderText = My.Resources.GlobaleLokalisierung.Bemerkung
+
         RadGridViewAuswahlliste.ShowFilteringRow = True
 
         RadGridViewRHEWAAlle.ShowFilteringRow = True
@@ -192,22 +195,32 @@ Public Class ucoEichprozessauswahlliste
             Dim o = From i As Telerik.WinControls.UI.ConditionalFormattingObject In RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList
                     Where i.Name = "Fehlerhaft"
 
-            If o.Count = 0 Then
+            If o.Count = 0 Or RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Count = 4 Then 'wurde um 2 spalten ergänzt von 4 auf 6
+                RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Clear()
                 Dim objCondition As New Telerik.WinControls.UI.ConditionalFormattingObject("Fehlerhaft", Telerik.WinControls.UI.ConditionTypes.Equal, "Fehlerhaft", "", True)
                 Dim objCondition2 As New Telerik.WinControls.UI.ConditionalFormattingObject("invalid", Telerik.WinControls.UI.ConditionTypes.Equal, "Invalid", "", True)
+                Dim objCondition3 As New Telerik.WinControls.UI.ConditionalFormattingObject("invalidPl", Telerik.WinControls.UI.ConditionTypes.Equal, "Błędne", "", True)
+
                 objCondition.RowBackColor = Color.FromArgb(254, 120, 110)
                 objCondition2.RowBackColor = Color.FromArgb(254, 120, 110)
+                objCondition3.RowBackColor = Color.FromArgb(254, 120, 110)
 
-                Dim objCondition3 As New Telerik.WinControls.UI.ConditionalFormattingObject("Genehmigt", Telerik.WinControls.UI.ConditionTypes.Equal, "Genehmigt", "", True)
-                Dim objCondition4 As New Telerik.WinControls.UI.ConditionalFormattingObject("Valid", Telerik.WinControls.UI.ConditionTypes.Equal, "Valid", "", True)
+                Dim objCondition4 As New Telerik.WinControls.UI.ConditionalFormattingObject("Genehmigt", Telerik.WinControls.UI.ConditionTypes.Equal, "Genehmigt", "", True)
+                Dim objCondition5 As New Telerik.WinControls.UI.ConditionalFormattingObject("Valid", Telerik.WinControls.UI.ConditionTypes.Equal, "Valid", "", True)
+                Dim objCondition6 As New Telerik.WinControls.UI.ConditionalFormattingObject("Zatwierdzono", Telerik.WinControls.UI.ConditionTypes.Equal, "Zatwierdzono", "", True)
 
-                objCondition3.RowBackColor = Color.FromArgb(201, 255, 132)
                 objCondition4.RowBackColor = Color.FromArgb(201, 255, 132)
+                objCondition5.RowBackColor = Color.FromArgb(201, 255, 132)
+                objCondition6.RowBackColor = Color.FromArgb(201, 255, 132)
+
                 RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Add(objCondition)
                 RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Add(objCondition2)
-
                 RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Add(objCondition3)
+
                 RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Add(objCondition4)
+                RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Add(objCondition5)
+                RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Add(objCondition6)
+
                 Dim descriptor As New Telerik.WinControls.Data.GroupDescriptor()
                 descriptor.GroupNames.Add("Bearbeitungsstatus", System.ComponentModel.ListSortDirection.Ascending)
                 Me.RadGridViewAuswahlliste.GroupDescriptors.Add(descriptor)
@@ -293,10 +306,12 @@ Public Class ucoEichprozessauswahlliste
 
         ElseIf f.DialogResult = DialogResult.Retry Then
             RadGridViewAuswahlliste.DataSource = Nothing
+
             RadGridViewRHEWAAlle.DataSource = Nothing
             AktuellerBenutzer.LadeGridLayout(Me)
             'aktualisieren des Grids
             LoadFromDatabase()
+
         End If
     End Sub
 

@@ -41,6 +41,7 @@ Partial Class uco12PruefungUeberlastanzeige
         CType(Me.RadCheckBoxUeberlast, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblKg, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblPflichtfeld1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblUeberlast
@@ -81,8 +82,8 @@ Partial Class uco12PruefungUeberlastanzeige
         '
         'PictureBox2
         '
-        Me.PictureBox2.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox2, "PictureBox2")
+        Me.PictureBox2.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.TabStop = False
         '
@@ -96,7 +97,6 @@ Partial Class uco12PruefungUeberlastanzeige
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Controls.Add(Me.lblPflichtfeld1)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.lblKg)
         Me.Controls.Add(Me.RadCheckBoxUeberlast)
@@ -105,6 +105,7 @@ Partial Class uco12PruefungUeberlastanzeige
         Me.Controls.Add(Me.RadLabel2)
         Me.Controls.Add(Me.RadTextBoxControlMaxE)
         Me.Controls.Add(Me.lblUeberlast)
+        Me.Controls.Add(Me.lblPflichtfeld1)
         Me.Name = "uco12PruefungUeberlastanzeige"
         CType(Me.lblUeberlast, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlMaxE, System.ComponentModel.ISupportInitialize).EndInit()
@@ -114,6 +115,7 @@ Partial Class uco12PruefungUeberlastanzeige
         CType(Me.RadCheckBoxUeberlast, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblKg, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblPflichtfeld1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

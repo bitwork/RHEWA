@@ -331,6 +331,12 @@
   <data name="lblAWGmaxAnzahlTeilungswerte.Text" xml:space="preserve">
     <value>Największa dopuszczalna ilość wartości podziałki</value>
   </data>
+  <data name="RadGroupBoxAWG.HeaderText" xml:space="preserve">
+    <value> Miernik</value>
+  </data>
+  <data name="RadGroupBoxAWG.Text" xml:space="preserve">
+    <value> Miernik</value>
+  </data>
   <data name="lblWaageKlasse2.Size" type="System.Drawing.Size, System.Drawing">
     <value>32, 18</value>
   </data>

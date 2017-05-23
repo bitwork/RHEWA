@@ -25,6 +25,7 @@ Friend Class CustomVisualItem
 
         stackLayout = New StackLayoutPanel()
         stackLayout.Orientation = Orientation.Vertical
+        stackLayout.Margin = New Padding(10, 0, 0, 10)
 
         imageElement = New LightVisualElement()
         imageElement.DrawText = False
@@ -37,9 +38,10 @@ Friend Class CustomVisualItem
         stackLayout.Children.Add(imageElement)
 
         titleElement = New LightVisualElement()
-        titleElement.TextAlignment = ContentAlignment.TopLeft
+        titleElement.TextAlignment = ContentAlignment.TopCenter
         titleElement.TextWrap = True
         titleElement.TextImageRelation = Windows.Forms.TextImageRelation.Overlay
+
         titleElement.Margin = New Padding(0, 5, -10, 0)
         titleElement.Font = New Font("Segoe UI", 8, FontStyle.Regular, GraphicsUnit.Point)
         titleElement.AutoSize = True

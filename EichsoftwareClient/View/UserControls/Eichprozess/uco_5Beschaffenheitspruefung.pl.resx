@@ -132,7 +132,7 @@
 </value>
   </data>
   <data name="RadGroupBoxAufstellbedingungen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>12284, 59</value>
+    <value>13292, 59</value>
   </data>
   <data name="RadGroupBoxAufstellbedingungen.Text" xml:space="preserve">
     <value>Kryteria dla miejsca instalacji wagi:									
@@ -173,7 +173,7 @@
 </value>
   </data>
   <data name="RadGroupBoxWaegebruecke.Size" type="System.Drawing.Size, System.Drawing">
-    <value>12284, 153</value>
+    <value>13292, 153</value>
   </data>
   <data name="RadGroupBoxWaegebruecke.Text" xml:space="preserve">
     <value>Kryteria dla stosowanego pomostu wagowego:										
@@ -219,7 +219,7 @@
 </value>
   </data>
   <data name="RadGroupBoxWaegezellen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>12284, 193</value>
+    <value>13292, 193</value>
   </data>
   <data name="RadGroupBoxWaegezellen.Text" xml:space="preserve">
     <value>Kryteria dla stosowanego(ych) czujnika(ów) tensometrycznego(ych):										
@@ -259,7 +259,7 @@
 </value>
   </data>
   <data name="RadGroupBoxVerbindungselemente.Size" type="System.Drawing.Size, System.Drawing">
-    <value>12284, 191</value>
+    <value>13292, 191</value>
   </data>
   <data name="RadGroupBoxVerbindungselemente.Text" xml:space="preserve">
     <value>Kryteria dla używanych elementów łączących:										
@@ -302,7 +302,7 @@
     <value>Kryteria dla mierników RHEWA:										</value>
   </data>
   <data name="RadGroupBoxAuswerteGeraete.Size" type="System.Drawing.Size, System.Drawing">
-    <value>12284, 205</value>
+    <value>13292, 205</value>
   </data>
   <data name="RadGroupBoxAuswerteGeraete.Text" xml:space="preserve">
     <value>Kryteria dla mierników RHEWA:										</value>

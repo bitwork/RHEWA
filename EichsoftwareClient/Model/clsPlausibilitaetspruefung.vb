@@ -10,6 +10,7 @@ Public Class clsPlausibilitaetspruefung
     Dim _Waegebereich As Integer
 
 #Region "Vergleichswerte Konfiguration"
+
     Private Fabriknummer As String
     Private FirmwareVersion As String
     Private Model As String
@@ -41,7 +42,9 @@ Public Class clsPlausibilitaetspruefung
 #End Region
 
 #Region "Properties"
+
 #Region "Aus Config"
+
     Public ReadOnly Property FabriknummerConfig As String
         Get
             Return Fabriknummer
@@ -195,8 +198,11 @@ Public Class clsPlausibilitaetspruefung
             Return OriginalStatus
         End Get
     End Property
+
 #End Region
+
 #Region "AusSoftware"
+
     Public ReadOnly Property FabriknummerSoftware As String
         Get
             Return _objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer
@@ -306,6 +312,7 @@ Public Class clsPlausibilitaetspruefung
     End Property
 
 #End Region
+
 #End Region
 
     Public Function LadeWerte(waegebereich As Integer, filename As String, objEichprozess As Eichprozess) As Boolean
@@ -410,14 +417,24 @@ Public Class clsPlausibilitaetspruefung
         Next
 
         For Each row As DataRow In dtWBEinstellungen.Rows
-            Mehrbereich = row("Mehrbereich")
-            Gewichtseinheit = row("Gewichtseinheit")
-            Waegebereich1 = row("Max1")
-            Waegebereich2 = row("Max2")
-            Waegebereich3 = row("Max3")
-            Ziffernschritt1 = row("Teilung1")
-            Ziffernschritt2 = row("Teilung2")
-            Ziffernschritt3 = row("Teilung3")
+            If Not IsDBNull(row("Mehrbereich")) Then
+                Mehrbereich = row("Mehrbereich").ToString
+            Else
+                Mehrbereich = "N/A"
+            End If
+            If Not IsDBNull(row("Gewichtseinheit")) Then
+                Gewichtseinheit = row("Gewichtseinheit")
+            Else
+                MsgBox("Gewichtseinheit ist nicht definiert, es wird mit kg gerechnet")
+                Gewichtseinheit = 1
+            End If
+
+            Waegebereich1 = row("Max1").ToString
+            Waegebereich2 = row("Max2").ToString
+            Waegebereich3 = row("Max3").ToString
+            Ziffernschritt1 = row("Teilung1").ToString
+            Ziffernschritt2 = row("Teilung2").ToString
+            Ziffernschritt3 = row("Teilung3").ToString
             Try
                 EinschalltnullstellenMax = row("konObereToleranzE")
                 EinschalltnullstellenMin = row("konUntereToleranzE")
@@ -518,7 +535,6 @@ Public Class clsPlausibilitaetspruefung
                         GesuchterBereich = WerteBereich
                         Exit For
                     End If
-
                 Catch ex As Exception
 
                 End Try
@@ -583,7 +599,6 @@ Public Class clsPlausibilitaetspruefung
                         GesuchterBereich = WerteBereich
                         Exit For
                     End If
-
                 Catch ex As Exception
 
                 End Try
@@ -693,6 +708,7 @@ Public Class clsPlausibilitaetspruefung
 End Class
 
 Public Class PlausibilitaetDatasource
+
     Public Sub New(eigenschaft As String, wertAusConfig As String, wertAusSoftware As String)
         Me.Eigenschaft = eigenschaft
         Me.WertAusConfig = wertAusConfig

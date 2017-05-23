@@ -98,6 +98,12 @@ Partial Class uco13PruefungRollendeLasten
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadScrollablePanel1.PanelContainer.SuspendLayout()
         Me.RadScrollablePanel1.SuspendLayout()
+        CType(Me.lblPflichtfeld6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblPflichtfeld5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblPflichtfeld4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblPflichtfeld3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblPflichtfeld2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblPflichtfeld1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox79, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -171,6 +177,7 @@ Partial Class uco13PruefungRollendeLasten
         '
         'RadScrollablePanel1.PanelContainer
         '
+        resources.ApplyResources(Me.RadScrollablePanel1.PanelContainer, "RadScrollablePanel1.PanelContainer")
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.lblPflichtfeld6)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.lblPflichtfeld5)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.lblPflichtfeld4)
@@ -239,7 +246,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadTextBoxControlLastRechts3)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.lblEFGWertRechts)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadTextBoxControlLastRechts1)
-        resources.ApplyResources(Me.RadScrollablePanel1.PanelContainer, "RadScrollablePanel1.PanelContainer")
         '
         'lblPflichtfeld6
         '
@@ -284,29 +290,29 @@ Partial Class uco13PruefungRollendeLasten
         '
         'PictureBox18
         '
-        Me.PictureBox18.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox18, "PictureBox18")
+        Me.PictureBox18.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox18.Name = "PictureBox18"
         Me.PictureBox18.TabStop = False
         '
         'PictureBox79
         '
-        Me.PictureBox79.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox79, "PictureBox79")
+        Me.PictureBox79.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox79.Name = "PictureBox79"
         Me.PictureBox79.TabStop = False
         '
         'PictureBox2
         '
-        Me.PictureBox2.Image = Global.EichsoftwareClient.My.Resources.Resources.Verschiebeweg_GB
         resources.ApplyResources(Me.PictureBox2, "PictureBox2")
+        Me.PictureBox2.Image = Global.EichsoftwareClient.My.Resources.Resources.Verschiebeweg_GB
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.TabStop = False
         '
         'PictureBox15
         '
-        Me.PictureBox15.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox15, "PictureBox15")
+        Me.PictureBox15.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox15.Name = "PictureBox15"
         Me.PictureBox15.TabStop = False
         '
@@ -317,8 +323,8 @@ Partial Class uco13PruefungRollendeLasten
         '
         'PictureBox16
         '
-        Me.PictureBox16.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox16, "PictureBox16")
+        Me.PictureBox16.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox16.Name = "PictureBox16"
         Me.PictureBox16.TabStop = False
         '
@@ -329,8 +335,8 @@ Partial Class uco13PruefungRollendeLasten
         '
         'PictureBox17
         '
-        Me.PictureBox17.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox17, "PictureBox17")
+        Me.PictureBox17.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox17.Name = "PictureBox17"
         Me.PictureBox17.TabStop = False
         '
@@ -341,8 +347,8 @@ Partial Class uco13PruefungRollendeLasten
         '
         'PictureBox12
         '
-        Me.PictureBox12.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox12, "PictureBox12")
+        Me.PictureBox12.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox12.Name = "PictureBox12"
         Me.PictureBox12.TabStop = False
         '
@@ -353,8 +359,8 @@ Partial Class uco13PruefungRollendeLasten
         '
         'PictureBox13
         '
-        Me.PictureBox13.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox13, "PictureBox13")
+        Me.PictureBox13.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox13.Name = "PictureBox13"
         Me.PictureBox13.TabStop = False
         '
@@ -365,8 +371,8 @@ Partial Class uco13PruefungRollendeLasten
         '
         'PictureBox14
         '
-        Me.PictureBox14.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox14, "PictureBox14")
+        Me.PictureBox14.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox14.Name = "PictureBox14"
         Me.PictureBox14.TabStop = False
         '
@@ -377,8 +383,8 @@ Partial Class uco13PruefungRollendeLasten
         '
         'PictureBox9
         '
-        Me.PictureBox9.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox9, "PictureBox9")
+        Me.PictureBox9.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox9.Name = "PictureBox9"
         Me.PictureBox9.TabStop = False
         '
@@ -389,8 +395,8 @@ Partial Class uco13PruefungRollendeLasten
         '
         'PictureBox10
         '
-        Me.PictureBox10.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox10, "PictureBox10")
+        Me.PictureBox10.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox10.Name = "PictureBox10"
         Me.PictureBox10.TabStop = False
         '
@@ -401,8 +407,8 @@ Partial Class uco13PruefungRollendeLasten
         '
         'PictureBox11
         '
-        Me.PictureBox11.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox11, "PictureBox11")
+        Me.PictureBox11.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox11.Name = "PictureBox11"
         Me.PictureBox11.TabStop = False
         '
@@ -415,8 +421,8 @@ Partial Class uco13PruefungRollendeLasten
         '
         'PictureBox8
         '
-        Me.PictureBox8.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox8, "PictureBox8")
+        Me.PictureBox8.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox8.Name = "PictureBox8"
         Me.PictureBox8.TabStop = False
         '
@@ -428,8 +434,8 @@ Partial Class uco13PruefungRollendeLasten
         '
         'PictureBox7
         '
-        Me.PictureBox7.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox7, "PictureBox7")
+        Me.PictureBox7.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox7.Name = "PictureBox7"
         Me.PictureBox7.TabStop = False
         '
@@ -441,8 +447,8 @@ Partial Class uco13PruefungRollendeLasten
         '
         'PictureBox6
         '
-        Me.PictureBox6.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox6, "PictureBox6")
+        Me.PictureBox6.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox6.Name = "PictureBox6"
         Me.PictureBox6.TabStop = False
         '
@@ -471,8 +477,8 @@ Partial Class uco13PruefungRollendeLasten
         '
         'PictureBox5
         '
-        Me.PictureBox5.Image = Global.EichsoftwareClient.My.Resources.Resources.LKW_Gedreht
         resources.ApplyResources(Me.PictureBox5, "PictureBox5")
+        Me.PictureBox5.Image = Global.EichsoftwareClient.My.Resources.Resources.LKW_Gedreht
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.TabStop = False
         '
@@ -484,8 +490,8 @@ Partial Class uco13PruefungRollendeLasten
         '
         'PictureBox4
         '
-        Me.PictureBox4.Image = Global.EichsoftwareClient.My.Resources.Resources.LKW
         resources.ApplyResources(Me.PictureBox4, "PictureBox4")
+        Me.PictureBox4.Image = Global.EichsoftwareClient.My.Resources.Resources.LKW
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.TabStop = False
         '
@@ -499,8 +505,8 @@ Partial Class uco13PruefungRollendeLasten
         '
         'PictureBox3
         '
-        Me.PictureBox3.Image = Global.EichsoftwareClient.My.Resources.Resources.Fahrzeug_Wenden_GB
         resources.ApplyResources(Me.PictureBox3, "PictureBox3")
+        Me.PictureBox3.Image = Global.EichsoftwareClient.My.Resources.Resources.Fahrzeug_Wenden_GB
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.TabStop = False
         '
@@ -636,8 +642,8 @@ Partial Class uco13PruefungRollendeLasten
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox1, "PictureBox1")
+        Me.PictureBox1.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.TabStop = False
         '
@@ -685,6 +691,12 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadScrollablePanel1.PanelContainer.PerformLayout()
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadScrollablePanel1.ResumeLayout(False)
+        CType(Me.lblPflichtfeld6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblPflichtfeld5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblPflichtfeld4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblPflichtfeld3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblPflichtfeld2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblPflichtfeld1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox79, System.ComponentModel.ISupportInitialize).EndInit()

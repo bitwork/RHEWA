@@ -117,14 +117,36 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="RadLabel17.Text" xml:space="preserve">
-    <value>500e - 2000e</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblVFG1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 19</value>
   </data>
-  <data name="RadLabel25.Text" xml:space="preserve">
-    <value>500e - 2000e</value>
+  <data name="lblVFG1.Text" xml:space="preserve">
+    <value>Dopuszczalne granice w obiegu</value>
   </data>
-  <data name="RadLabel48.Text" xml:space="preserve">
-    <value>500e - 2000e</value>
+  <data name="lblEFG1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 19</value>
+  </data>
+  <data name="lblEFG1.Text" xml:space="preserve">
+    <value>Granice błędów legalizacyjnych</value>
+  </data>
+  <data name="lblBis3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>19, 18</value>
+  </data>
+  <data name="lblBis3.Text" xml:space="preserve">
+    <value>do</value>
+  </data>
+  <data name="lblBis2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>19, 18</value>
+  </data>
+  <data name="lblBis2.Text" xml:space="preserve">
+    <value>do</value>
+  </data>
+  <data name="lblBis1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>19, 18</value>
+  </data>
+  <data name="lblBis1.Text" xml:space="preserve">
+    <value>do</value>
   </data>
   <data name="RadGroupBox1.HeaderText" xml:space="preserve">
     <value>Zakres 1</value>
@@ -132,61 +154,76 @@
   <data name="RadGroupBox1.Text" xml:space="preserve">
     <value>Zakres 1</value>
   </data>
+  <data name="lblVFG2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 19</value>
+  </data>
+  <data name="lblVFG2.Text" xml:space="preserve">
+    <value>Dopuszczalne granice w obiegu</value>
+  </data>
+  <data name="lblEFG2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 19</value>
+  </data>
+  <data name="lblEFG2.Text" xml:space="preserve">
+    <value>Granice błędów legalizacyjnych</value>
+  </data>
+  <data name="lblBis6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>19, 18</value>
+  </data>
+  <data name="lblBis6.Text" xml:space="preserve">
+    <value>do</value>
+  </data>
+  <data name="lblBis5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>19, 18</value>
+  </data>
+  <data name="lblBis5.Text" xml:space="preserve">
+    <value>do</value>
+  </data>
+  <data name="lblBis4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>19, 18</value>
+  </data>
+  <data name="lblBis4.Text" xml:space="preserve">
+    <value>do</value>
+  </data>
   <data name="RadGroupBox2.HeaderText" xml:space="preserve">
     <value>Zakres 2</value>
   </data>
   <data name="RadGroupBox2.Text" xml:space="preserve">
     <value>Zakres 2</value>
   </data>
+  <data name="lblVFG3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 19</value>
+  </data>
+  <data name="lblVFG3.Text" xml:space="preserve">
+    <value>Dopuszczalne granice w obiegu</value>
+  </data>
+  <data name="lblEFG3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 19</value>
+  </data>
+  <data name="lblEFG3.Text" xml:space="preserve">
+    <value>Granice błędów legalizacyjnych</value>
+  </data>
+  <data name="lblBis9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>19, 18</value>
+  </data>
+  <data name="lblBis9.Text" xml:space="preserve">
+    <value>do</value>
+  </data>
+  <data name="lblBis8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>19, 18</value>
+  </data>
+  <data name="lblBis8.Text" xml:space="preserve">
+    <value>do</value>
+  </data>
+  <data name="lblBis7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>19, 18</value>
+  </data>
+  <data name="lblBis7.Text" xml:space="preserve">
+    <value>do</value>
+  </data>
   <data name="RadGroupBox3.HeaderText" xml:space="preserve">
     <value>Zakres 3</value>
   </data>
   <data name="RadGroupBox3.Text" xml:space="preserve">
     <value>Zakres 3</value>
-  </data>
-  <data name="lblBis1.Text" xml:space="preserve">
-    <value>do</value>
-  </data>
-  <data name="lblBis2.Text" xml:space="preserve">
-    <value>do</value>
-  </data>
-  <data name="lblBis3.Text" xml:space="preserve">
-    <value>do</value>
-  </data>
-  <data name="lblBis4.Text" xml:space="preserve">
-    <value>do</value>
-  </data>
-  <data name="lblBis5.Text" xml:space="preserve">
-    <value>do</value>
-  </data>
-  <data name="lblBis6.Text" xml:space="preserve">
-    <value>do</value>
-  </data>
-  <data name="lblBis7.Text" xml:space="preserve">
-    <value>do</value>
-  </data>
-  <data name="lblBis8.Text" xml:space="preserve">
-    <value>do</value>
-  </data>
-  <data name="lblBis9.Text" xml:space="preserve">
-    <value>do</value>
-  </data>
-  <data name="lblEFG1.Text" xml:space="preserve">
-    <value>Granice błędów legalizacyjnych</value>
-  </data>
-  <data name="lblEFG2.Text" xml:space="preserve">
-    <value>Granice błędów legalizacyjnych</value>
-  </data>
-  <data name="lblEFG3.Text" xml:space="preserve">
-    <value>Granice błędów legalizacyjnych</value>
-  </data>
-  <data name="lblVFG1.Text" xml:space="preserve">
-    <value>Dopuszczalne granice w obiegu</value>
-  </data>
-  <data name="lblVFG2.Text" xml:space="preserve">
-    <value>Dopuszczalne granice w obiegu</value>
-  </data>
-  <data name="lblVFG3.Text" xml:space="preserve">
-    <value>Dopuszczalne granice w obiegu</value>
   </data>
 </root>

@@ -118,32 +118,47 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblPflichtfeld3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>394, 232</value>
+  </data>
+  <data name="lblPflichtfeld2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>394, 208</value>
+  </data>
+  <data name="lblPflichtfeld1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>394, 181</value>
+  </data>
+  <data name="RadButton1.Text" xml:space="preserve">
+    <value>Pokaż granicę błędu legalizacyjnego</value>
+  </data>
+  <data name="PictureBox79.Location" type="System.Drawing.Point, System.Drawing">
+    <value>336, 156</value>
+  </data>
   <data name="lblBelastungsstelleLinks.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 18</value>
+    <value>91, 18</value>
   </data>
   <data name="lblBelastungsstelleLinks.Text" xml:space="preserve">
     <value>Punkt obciążenia</value>
   </data>
   <data name="lblAuffahrtLinks1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 18</value>
+    <value>92, 18</value>
   </data>
   <data name="lblAuffahrtLinks1.Text" xml:space="preserve">
     <value>Podjazd z lewej 1</value>
   </data>
   <data name="lblAuffahrtLinks2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 18</value>
+    <value>92, 18</value>
   </data>
   <data name="lblAuffahrtLinks2.Text" xml:space="preserve">
     <value>Podjazd z lewej 2</value>
   </data>
   <data name="lblAuffahrtLinks3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 18</value>
+    <value>92, 18</value>
   </data>
   <data name="lblAuffahrtLinks3.Text" xml:space="preserve">
     <value>Podjazd z lewej 3</value>
   </data>
   <data name="lblLastLinks.Location" type="System.Drawing.Point, System.Drawing">
-    <value>138, 141</value>
+    <value>138, 136</value>
   </data>
   <data name="lblLastLinks.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 33</value>
@@ -152,7 +167,7 @@
     <value>Obciążenie [kg]</value>
   </data>
   <data name="lblAnzeigeLinks.Location" type="System.Drawing.Point, System.Drawing">
-    <value>206, 141</value>
+    <value>206, 136</value>
   </data>
   <data name="lblAnzeigeLinks.Size" type="System.Drawing.Size, System.Drawing">
     <value>69, 33</value>
@@ -160,17 +175,20 @@
   <data name="lblAnzeigeLinks.Text" xml:space="preserve">
     <value>Wyświetlacz [kg]</value>
   </data>
+  <data name="PictureBox9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>358, 228</value>
+  </data>
   <data name="lblFehlerLinks.Location" type="System.Drawing.Point, System.Drawing">
-    <value>274, 141</value>
+    <value>290, 136</value>
   </data>
   <data name="lblFehlerLinks.Text" xml:space="preserve">
     <value>Błąd [kg]</value>
   </data>
-  <data name="lblEFGWertLinks.Location" type="System.Drawing.Point, System.Drawing">
-    <value>342, 158</value>
+  <data name="PictureBox10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>358, 204</value>
   </data>
   <data name="lblEFGLinks.Location" type="System.Drawing.Point, System.Drawing">
-    <value>342, 141</value>
+    <value>358, 136</value>
   </data>
   <data name="lblEFGLinks.Size" type="System.Drawing.Size, System.Drawing">
     <value>52, 18</value>
@@ -178,11 +196,26 @@
   <data name="lblEFGLinks.Text" xml:space="preserve">
     <value>GBL [kg]</value>
   </data>
+  <data name="PictureBox11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>358, 180</value>
+  </data>
+  <data name="lblEFGWertLinks.Location" type="System.Drawing.Point, System.Drawing">
+    <value>358, 156</value>
+  </data>
+  <data name="PictureBox8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>272, 228</value>
+  </data>
   <data name="RadTextBoxControlLastLinks1.Location" type="System.Drawing.Point, System.Drawing">
     <value>138, 180</value>
   </data>
+  <data name="PictureBox7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>272, 204</value>
+  </data>
   <data name="RadTextBoxControllastLinks3.Location" type="System.Drawing.Point, System.Drawing">
     <value>138, 230</value>
+  </data>
+  <data name="PictureBox6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>272, 178</value>
   </data>
   <data name="RadTextBoxControlLastLinks2.Location" type="System.Drawing.Point, System.Drawing">
     <value>138, 206</value>
@@ -190,62 +223,41 @@
   <data name="RadTextBoxControlAnzeigeLinks1.Location" type="System.Drawing.Point, System.Drawing">
     <value>206, 180</value>
   </data>
+  <data name="RadButtonShowEFG.Text" xml:space="preserve">
+    <value>Pokaż granicę błędu legalizacyjnego</value>
+  </data>
   <data name="RadTextBoxControlAnzeigeLinks2.Location" type="System.Drawing.Point, System.Drawing">
     <value>206, 206</value>
   </data>
   <data name="RadTextBoxControlAnzeigeLinks3.Location" type="System.Drawing.Point, System.Drawing">
     <value>206, 230</value>
   </data>
+  <data name="PictureBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>138, 256</value>
+  </data>
   <data name="RadTextBoxControlFehlerLinks1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>274, 180</value>
+    <value>292, 180</value>
   </data>
   <data name="RadTextBoxControlFehlerLinks2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>274, 206</value>
+    <value>292, 206</value>
   </data>
   <data name="RadTextBoxControlFehlerLinks3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>274, 230</value>
+    <value>292, 230</value>
   </data>
   <data name="RadCheckBoxAuffahrtLinks1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>359, 185</value>
+    <value>377, 185</value>
   </data>
   <data name="RadCheckBoxAuffahrtLinks2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>359, 211</value>
+    <value>377, 211</value>
   </data>
   <data name="RadCheckBoxAuffahrtLinks3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>359, 235</value>
+    <value>377, 235</value>
   </data>
-  <data name="lblEFGRechts.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 18</value>
+  <data name="lblBelastungsstelleRechts.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 18</value>
   </data>
-  <data name="lblEFGRechts.Text" xml:space="preserve">
-    <value>GBL [kg]</value>
-  </data>
-  <data name="lblFehlerRechts.Text" xml:space="preserve">
-    <value>Błąd [kg]</value>
-  </data>
-  <data name="lblAnzeigeRechts.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 33</value>
-  </data>
-  <data name="lblAnzeigeRechts.Text" xml:space="preserve">
-    <value>Wyświetlacz [kg]</value>
-  </data>
-  <data name="lblLastRechts.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 33</value>
-  </data>
-  <data name="lblLastRechts.Text" xml:space="preserve">
-    <value>Obciążenie [kg]</value>
-  </data>
-  <data name="lblAuffahrtRechts3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 18</value>
-  </data>
-  <data name="lblAuffahrtRechts3.Text" xml:space="preserve">
-    <value>Podjazd z prawej 3</value>
-  </data>
-  <data name="lblAuffahrtRechts2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 18</value>
-  </data>
-  <data name="lblAuffahrtRechts2.Text" xml:space="preserve">
-    <value>Podjazd z prawej 2</value>
+  <data name="lblBelastungsstelleRechts.Text" xml:space="preserve">
+    <value>Punkt obciążenia</value>
   </data>
   <data name="lblAuffahrtRechts1.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 18</value>
@@ -253,22 +265,37 @@
   <data name="lblAuffahrtRechts1.Text" xml:space="preserve">
     <value>Podjazd z prawej 1</value>
   </data>
-  <data name="lblEichfehlergrenze.Size" type="System.Drawing.Size, System.Drawing">
-    <value>488, 30</value>
+  <data name="lblAuffahrtRechts2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 18</value>
   </data>
-  <data name="lblEichfehlergrenze.Text" xml:space="preserve">
-    <value>Granice błędów legalizacyjnych zostaną dotrzymane</value>
+  <data name="lblAuffahrtRechts2.Text" xml:space="preserve">
+    <value>Podjazd z prawej 2</value>
   </data>
-  <data name="PictureBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>138, 256</value>
+  <data name="lblAuffahrtRechts3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 18</value>
   </data>
-  <data name="lblBelastungsstelleRechts.Text" xml:space="preserve">
-    <value>Punkt obciążenia</value>
+  <data name="lblAuffahrtRechts3.Text" xml:space="preserve">
+    <value>Podjazd z prawej 3</value>
   </data>
-  <data name="RadButton1.Text" xml:space="preserve">
-    <value>Pokaż granicę błędu legalizacyjnego</value>
+  <data name="lblLastRechts.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 33</value>
   </data>
-  <data name="RadButtonShowEFG.Text" xml:space="preserve">
-    <value>Pokaż granicę błędu legalizacyjnego</value>
+  <data name="lblLastRechts.Text" xml:space="preserve">
+    <value>Obciążenie [kg]</value>
+  </data>
+  <data name="lblAnzeigeRechts.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 33</value>
+  </data>
+  <data name="lblAnzeigeRechts.Text" xml:space="preserve">
+    <value>Wyświetlacz [kg]</value>
+  </data>
+  <data name="lblFehlerRechts.Text" xml:space="preserve">
+    <value>Błąd [kg]</value>
+  </data>
+  <data name="lblEFGRechts.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 18</value>
+  </data>
+  <data name="lblEFGRechts.Text" xml:space="preserve">
+    <value>GBL [kg]</value>
   </data>
 </root>
