@@ -10,7 +10,7 @@ Public Class clsDBFunctions
     ' ''' <remarks></remarks>
     'Public Shared Sub ForceActivation()
     '    Try
-    '        Using DBContext As New EichsoftwareClientdatabaseEntities1
+    '        Using DBContext As New Entities
     '            'prüfen ob die Lizenz gültig ist
     '            Dim HEKennung As String = "tim"
     '            Dim Schluessel As String = "Hill"
@@ -50,7 +50,7 @@ Public Class clsDBFunctions
 
     Public Shared Function LoescheLokaleBenutzer() As Boolean
         'alle Tabellen iterieren und löschen. Das commit wird erst am Ende ausgeführt, deswegen ist die löschreihenefolge egal
-        Using DBContext As New EichsoftwareClientdatabaseEntities1
+        Using DBContext As New Entities
             For Each o In DBContext.Lizensierung.ToList
                 DBContext.Lizensierung.Remove(o)
 
@@ -62,6 +62,51 @@ Public Class clsDBFunctions
         End Using
     End Function
 
+    Public Shared Function UpdateClientDatenbank()
+        Try
+
+
+            Using DBContext As New Entities
+                Dim config = DBContext.Konfiguration.First
+                If Not config.DBVersion = 2 Then
+
+                    Dim updateScript As String = ""
+                    updateScript = "Alter TABLE [Eichprotokoll] Alter Column  [Identifikationsdaten_Aufstellungsort] nvarchar(4000) NULL"
+                    DBContext.Database.ExecuteSqlCommand(updateScript)
+
+                    updateScript = "Alter TABLE [Eichprotokoll] Alter Column  [Identifikationsdaten_Pruefer] nvarchar(4000) NULL"
+                    DBContext.Database.ExecuteSqlCommand(updateScript)
+
+                    updateScript = "Alter TABLE [Eichprotokoll] Alter Column  [Identifikationsdaten_Benutzer] nvarchar(4000) NULL"
+                    DBContext.Database.ExecuteSqlCommand(updateScript)
+
+                    updateScript = "Alter TABLE [Eichprotokoll] Alter Column  [Beschaffenheitspruefung_Pruefscheinnummer] nvarchar(4000) NULL"
+
+                    DBContext.Database.ExecuteSqlCommand(updateScript)
+
+                    Dim Konfigs = DBContext.Konfiguration
+                    For Each Konfig In Konfigs
+                        Konfig.DBVersion = 2
+                    Next
+
+                    DBContext.SaveChanges()
+                End If
+            End Using
+
+        Catch ex As Entity.Core.EntityCommandExecutionException
+            Using DBContext As New Entities
+                'Spalte DB Version existiert noch nicht
+                Dim updateScript As String = ""
+                updateScript = "ALTER TABLE [Konfiguration] ADD [DBVersion] nvarchar(25) DEFAULT '1' NULL"
+                DBContext.Database.ExecuteSqlCommand(updateScript)
+                UpdateClientDatenbank()
+            End Using
+        End Try
+
+
+
+    End Function
+
     ''' <summary>
     '''  löscht lokale Datenbank, für resyncronisierung des aktuellen Benutzers
     ''' </summary>
@@ -70,7 +115,7 @@ Public Class clsDBFunctions
     Public Shared Function LoescheLokaleDatenbank() As Boolean
         Try
             'alle Tabellen iterieren und löschen. Das commit wird erst am Ende ausgeführt, deswegen ist die löschreihenefolge egal
-            Using DBContext As New EichsoftwareClientdatabaseEntities1
+            Using DBContext As New Entities
                 DBContext.Configuration.ProxyCreationEnabled = False
                 Dim Eichprozesse = (From eichprozess In DBContext.Eichprozess Where eichprozess.ErzeugerLizenz = AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel And eichprozess.FK_Bearbeitungsstatus <> GlobaleEnumeratoren.enuBearbeitungsstatus.noch_nicht_versendet).ToList
 
@@ -197,7 +242,7 @@ Public Class clsDBFunctions
     ''' <returns>True wenn noch Eichungen gefunden wurden</returns>
     ''' <remarks>Wird z.b. Genutzt um zu Warnen, bevor ein Benutzer seine lokale DB löscht um eine Teilsynchronisierung vorzunehmen</remarks>
     Public Shared Function PruefeAufUngesendeteEichungen() As Boolean
-        Using dbcontext As New EichsoftwareClientdatabaseEntities1
+        Using dbcontext As New Entities
             Dim query = From eichungen In dbcontext.Eichprozess Where eichungen.FK_Vorgangsstatus = GlobaleEnumeratoren.enuBearbeitungsstatus.noch_nicht_versendet
             If query.Count = 0 Then
                 Return False
@@ -215,7 +260,7 @@ Public Class clsDBFunctions
     ''' <remarks></remarks>
     Public Shared Function HoleLizenzObjekt(ByVal pLizenzschluessel As String) As Lizensierung
         Try
-            Using context As New EichsoftwareClientdatabaseEntities1
+            Using context As New Entities
                 Dim objLic = (From lizenz In context.Lizensierung Where lizenz.Lizenzschluessel = pLizenzschluessel)
                 Dim listLics As New List(Of Lizensierung)
                 listLics = objLic.ToList
@@ -238,7 +283,7 @@ Public Class clsDBFunctions
     ''' <remarks></remarks>
     Public Shared Function ErzeugeNeuenEichprozess() As Eichprozess
         Dim objEichprozess As Eichprozess = Nothing
-        Using context As New EichsoftwareClientdatabaseEntities1
+        Using context As New Entities
             objEichprozess = context.Eichprozess.Create
             'pflichtfelder füllen
             objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe
@@ -255,7 +300,7 @@ Public Class clsDBFunctions
     ''' <returns></returns>
     ''' <remarks></remarks>
     Public Shared Function HoleVorhandenenEichprozess(ByVal Vorgangsnummer As String) As Eichprozess
-        Using Context As New EichsoftwareClientdatabaseEntities1
+        Using Context As New Entities
             Dim objEichprozess = (From Obj In Context.Eichprozess Select Obj Where Obj.Vorgangsnummer = Vorgangsnummer).FirstOrDefault 'firstor default um erstes element zurückzugeben das übereintrifft(bei ID Spalten sollte es eh nur 1 sein)
             Return objEichprozess
         End Using
@@ -268,7 +313,7 @@ Public Class clsDBFunctions
     ''' <returns></returns>
     ''' <remarks></remarks>
     Public Shared Function HoleNachschlageListenFuerEichprozess(ByVal objEichprozess As Eichprozess) As Eichprozess
-        Using Context As New EichsoftwareClientdatabaseEntities1
+        Using Context As New Entities
             objEichprozess = (From Obj In Context.Eichprozess.AsNoTracking.Include("Eichprotokoll") _
                               .Include("Lookup_Auswertegeraet").AsNoTracking _
                               .Include("Kompatiblitaetsnachweis").AsNoTracking _
@@ -317,7 +362,7 @@ Public Class clsDBFunctions
     ''' <returns></returns>
     ''' <remarks></remarks>
     Public Shared Function BlendeEichprozessAus(ByVal Vorgangsnummer As String) As Boolean
-        Using context As New EichsoftwareClientdatabaseEntities1
+        Using context As New Entities
             Dim objEichprozess = (From Obj In context.Eichprozess Select Obj Where Obj.Vorgangsnummer = Vorgangsnummer).FirstOrDefault 'firstor default um erstes element zurückzugeben
             If Not objEichprozess Is Nothing Then
                 'umdrehen des ausgeblendet Statuses
@@ -337,7 +382,7 @@ Public Class clsDBFunctions
     ''' <remarks></remarks>
     Public Shared Function LadeLokaleEichprozessListe(ByVal bolAusgeblendeteElementeAnzeigen As Boolean) As Object
         'neuen Context aufbauen
-        Using Context As New EichsoftwareClientdatabaseEntities1
+        Using Context As New Entities
             Context.Configuration.LazyLoadingEnabled = True
 
             'je nach Sprache die Abfrage anpassen um die entsprechenden Übersetzungen der Lookupwerte aus der DB zu laden
@@ -521,7 +566,7 @@ Public Class clsDBFunctions
 
     'Friend Shared Function LoescheEichprozess(Vorgangsnummer As String) As Boolean
     '    Try
-    '        Using DBContext As New EichsoftwareClientdatabaseEntities1
+    '        Using DBContext As New Entities
 
     '            Dim eichung = (DBContext.Eichprozess.Include("Eichprotokoll").Include("Lookup_Auswertegeraet").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik").Where(Function(C) C.Vorgangsnummer = Vorgangsnummer)).FirstOrDefault
     '            'DBContext.PruefungAnsprechvermoegen.Remove(eichung.Eichprotokoll.PruefungAnsprechvermoegen)
@@ -551,7 +596,7 @@ Public Class clsDBFunctions
     Public Shared Function LoescheEichprozess(Vorgangsnummer As String) As Boolean
         Try
             'alle Tabellen iterieren und löschen. Das commit wird erst am Ende ausgeführt, deswegen ist die löschreihenefolge egal
-            Using DBContext As New EichsoftwareClientdatabaseEntities1
+            Using DBContext As New Entities
                 DBContext.Configuration.ProxyCreationEnabled = False
                 Dim Eichprozesse = (From eichprozess In DBContext.Eichprozess Where eichprozess.Vorgangsnummer = Vorgangsnummer).ToList
 
