@@ -144,7 +144,7 @@ Public Class uco_7EichprotokollDaten
         End If
 
         If objEichprozess.Eichprotokoll.Identifikationsdaten_Datum Is Nothing Then
-            RadTextBoxControlDatum.Text = Date.Now.Date
+            If AktuellerBenutzer.Instance.Lizenz.RHEWALizenz Then RadTextBoxControlDatum.Text = Date.Now.Date
         Else
             RadTextBoxControlDatum.Text = objEichprozess.Eichprotokoll.Identifikationsdaten_Datum
         End If
@@ -427,7 +427,10 @@ Public Class uco_7EichprotokollDaten
     Private Sub UpdateObject()
         If DialogModus = enuDialogModus.normal Then objEichprozess.Bearbeitungsdatum = Date.Now
         'Bereich Identifikationsdaten
-        objEichprozess.Eichprotokoll.Identifikationsdaten_Datum = RadTextBoxControlDatum.Text
+        If RadTextBoxControlDatum.Text.Equals("") = False Then
+            objEichprozess.Eichprotokoll.Identifikationsdaten_Datum = RadTextBoxControlDatum.Text
+        End If
+
         objEichprozess.Eichprotokoll.Identifikationsdaten_Pruefer = RadTextBoxControlPruefer.Text
         objEichprozess.Eichprotokoll.Identifikationsdaten_Benutzer = RadTextBoxControlBenutzer.Text
         objEichprozess.Eichprotokoll.Identifikationsdaten_Aufstellungsort = RadTextBoxControlAufstellungsort.Text
@@ -464,7 +467,11 @@ Public Class uco_7EichprotokollDaten
 
         objEichprozess.Eichprotokoll.Beschaffenheitspruefung_Genauigkeitsklasse = RadTextBoxControlNormalienGenauigkeitsklasse.Text
         objEichprozess.Eichprotokoll.Beschaffenheitspruefung_Pruefintervall = RadTextBoxControlNormalienPruefintervall.Text
-        objEichprozess.Eichprotokoll.Beschaffenheitspruefung_LetztePruefung = RadDateTimePickerNormalienLetztePruefung.Text
+        If RadDateTimePickerNormalienLetztePruefung.Text.Equals("") = False Then
+            objEichprozess.Eichprotokoll.Beschaffenheitspruefung_LetztePruefung = RadDateTimePickerNormalienLetztePruefung.Text
+
+        End If
+
         objEichprozess.Eichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer = RadTextBoxControlNormalienPruefscheinnummer.Text
         objEichprozess.Eichprotokoll.Beschaffenheitspruefung_EichfahrzeugFirma = RadTextBoxControlNormalienEichfahrzeugFirma.Text
 
@@ -690,69 +697,9 @@ Public Class uco_7EichprotokollDaten
         _suspendEvents = True
         MyBase.LokalisierungNeeded(UserControl)
 
-        'lokalisierung: Leider kann ich den automatismus von .NET nicht nutzen. Dieser funktioniert nur sauber, wenn ein Dialog erzeugt wird. Zur Laufzeit aber gibt es diverse Probleme mit dem Automatischen Ändern der Sprache,
-        'da auch informationen wie Positionen und Größen "lokalisiert" gespeichert werden. Wenn nun zur Laufzeit, also das Fenster größer gemacht wurde, setzt er die Anchor etc. auf die Ursprungsgröße
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco_7EichprotokollDaten))
+        Lokalisierung(Me, resources)
 
-        lblAnzahlWZ.Text = resources.GetString("lblAnzahlWZ.Text")
-        lblArtWaage.Text = resources.GetString("lblArtWaage.Text")
-        lblAWG.Text = resources.GetString("lblAWG.Text")
-        lblBenutzer.Text = resources.GetString("lblBenutzer.Text")
-        lblDatum.Text = resources.GetString("lblDatum.Text")
-        lblDimension.Text = resources.GetString("lblDimension.Text")
-        lblDruckerart.Text = resources.GetString("lblDruckerart.Text")
-        lblFabriknummer.Text = resources.GetString("lblFabriknummer.Text")
-        lblFabriknummernWZ.Text = resources.GetString("lblFabriknummernWZ.Text")
-        lblGenauigkeitsklasse.Text = resources.GetString("lblGenauigkeitsklasse.Text")
-        lblGenauigkeitsklasse2.Text = resources.GetString("lblGenauigkeitsklasse2.Text")
-        lblHerstellerWZ.Text = resources.GetString("lblHerstellerWZ.Text")
-        lblHerstellungsjahr.Text = resources.GetString("lblHerstellungsjahr.Text")
-        lblNormalienGewichte.Text = resources.GetString("lblNormalienGewichte.Text")
-        lblOrt.Text = resources.GetString("lblOrt.Text")
-        lblPruefer.Text = resources.GetString("lblPruefer.Text")
-        lblPruefzeitraum.Text = resources.GetString("lblPruefzeitraum.Text")
-        lblSoftwareversion.Text = resources.GetString("lblSoftwareversion.Text")
-        lblTestzeitraum.Text = resources.GetString("lblTestzeitraum.Text")
-        lblTruck.Text = resources.GetString("lblTruck.Text")
-        lblTyp.Text = resources.GetString("lblTyp.Text")
-        lblZeichen.Text = resources.GetString("lblZeichen.Text")
-        lblZertifikatnr.Text = resources.GetString("lblZertifikatnr.Text")
-        RadRadioButtonAutoTara.Text = resources.GetString("RadRadioButtonAutoTara.Text")
-        RadRadioButtonHandTara.Text = resources.GetString("RadRadioButtonHandTara.Text")
-        RadRadioButtonTaraeingabe.Text = resources.GetString("RadRadioButtonTaraeingabe.Text")
-
-        RadRadioButtonNustellungAutomatisch.Text = resources.GetString("RadRadioButtonNustellungAutomatisch.Text")
-        RadRadioButtonNustellungHalbAutomatisch.Text = resources.GetString("RadRadioButtonNustellungHalbAutomatisch.Text")
-        RadRadioButtonNustellungNullNachfuehrung.Text = resources.GetString("RadRadioButtonNustellungNullNachfuehrung.Text")
-        RadCheckBoxDrucker.Text = resources.GetString("RadCheckBoxDrucker.Text")
-        RadCheckBoxEichfaehigerSpeicher.Text = resources.GetString("RadCheckBoxEichfaehigerSpeicher.Text")
-        RadCheckBoxHalbSelbsteinspielend.Text = resources.GetString("RadCheckBoxHalbSelbsteinspielend.Text")
-        RadCheckBoxHybridMechWaage.Text = resources.GetString("RadCheckBoxHybridMechWaage.Text")
-        RadCheckBoxMehrbereichswaage.Text = resources.GetString("RadCheckBoxMehrbereichswaage.Text")
-        RadCheckBoxMehrteilungswaage.Text = resources.GetString("RadCheckBoxMehrteilungswaage.Text")
-        RadCheckBoxNichtselbsteinspielend.Text = resources.GetString("RadCheckBoxNichtselbsteinspielend.Text")
-        RadCheckBoxPC.Text = resources.GetString("RadCheckBoxPC.Text")
-        RadCheckBoxSonstiges.Text = resources.GetString("RadCheckBoxSonstiges.Text")
-        RadCheckBoxVolleNormallast.Text = resources.GetString("RadCheckBoxVolleNormallast.Text")
-        RadCheckBoxVollstaendigesStaffelverfahren.Text = resources.GetString("RadCheckBoxVollstaendigesStaffelverfahren.Text")
-        RadDateTimePickerNormalienLetztePruefung.Text = resources.GetString("RadDateTimePickerNormalienLetztePruefung.Text")
-
-        RadTextBoxControlNormalienGenauigkeitsklasse.Text = resources.GetString("RadTextBoxControlNormalienGenauigkeitsklasse.Text")
-        RadTextBoxControlNormalienPruefintervall.Text = resources.GetString("RadTextBoxControlNormalienPruefintervall.Text")
-
-        RadGroupBoxBeschaffenheitspruefung.Text = resources.GetString("RadGroupBoxBeschaffenheitspruefung.Text")
-        RadGroupBoxBeschaffenheitspruefungNormalien.Text = resources.GetString("RadGroupBoxBeschaffenheitspruefungNormalien.Text")
-        RadGroupBoxIdentifikationsdaten.Text = resources.GetString("RadGroupBoxIdentifikationsdaten.Text")
-        RadGroupBoxKomponenten.Text = resources.GetString("RadGroupBoxKomponenten.Text")
-        RadGroupBoxMax1.Text = resources.GetString("RadGroupBoxMax1.Text")
-        RadGroupBoxMax2.Text = resources.GetString("RadGroupBoxMax2.Text")
-        RadGroupBoxMax3.Text = resources.GetString("RadGroupBoxMax3.Text")
-        RadGroupBoxPruefverfahren.Text = resources.GetString("RadGroupRadGroupBoxPruefverfahren.Text")
-        RadGroupBoxVerwendungszweck.Text = resources.GetString("RadGroupBoxVerwendungszweck.Text")
-        RadGroupBoxVerwendungszweckArtderWaage.Text = resources.GetString("RadGroupBoxVerwendungszweckArtderWaage.Text")
-        RadGroupBoxVerwendungszweckEquipment.Text = resources.GetString("RadGroupBoxVerwendungszweckEquipment.Text")
-        RadGroupBoxVerwendungszweckNullstellung.Text = resources.GetString("RadGroupBoxVerwendungszweckNullstellung.Text")
-        RadGroupBoxVerwendungszweckTara.Text = resources.GetString("RadGroupBoxVerwendungszweckTara.Text")
 
         If Not ParentFormular Is Nothing Then
             Try
@@ -774,12 +721,10 @@ Public Class uco_7EichprotokollDaten
     Protected Overrides Sub UpdateNeeded(UserControl As UserControl)
         If Me.Equals(UserControl) Then
             MyBase.UpdateNeeded(UserControl)
-            'Hilfetext setzen
-            ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_EichprotokollStammdaten)
-            'Überschrift setzen
-            ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_EichprotokollStammdaten
-            '   FillControls()
-            LoadFromDatabase() 'war mal auskommentiert. ich weiß gerade nicht mehr wieso
+            Me.LokalisierungNeeded(UserControl)
+
+
+            LoadFromDatabase()
         End If
     End Sub
 
