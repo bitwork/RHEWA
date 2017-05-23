@@ -222,10 +222,6 @@ Public Class ucoEichprozessauswahlliste
         If Me.Equals(UserControl) Then
             MyBase.LokalisierungNeeded(UserControl)
             'übersetzen und formatierung der Tabelle
-
-            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucoEichprozessauswahlliste))
-            Lokalisierung(Me, resources)
-
             If AktuellerBenutzer.Instance.AktuelleSprache = "de" Then
                 Telerik.WinControls.UI.Localization.RadGridLocalizationProvider.CurrentProvider = New telerikgridlocalizerDE
             ElseIf AktuellerBenutzer.Instance.AktuelleSprache = "pl" Then
@@ -233,16 +229,15 @@ Public Class ucoEichprozessauswahlliste
             Else
                 Telerik.WinControls.UI.Localization.RadGridLocalizationProvider.CurrentProvider = New telerikgridlocalizerEN
             End If
+            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucoEichprozessauswahlliste))
+            Lokalisierung(Me, resources)
+
             'Hilfetext setzen
             ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_Auswahlliste)
             'Überschrift setzen
             ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_Hauptmenue
 
             LoadFromDatabase()
-            Me.Refresh()
-            RadGridViewAuswahlliste.Refresh()
-            RadGridViewAuswahlliste.MasterTemplate.Refresh()
-            RadGridViewAuswahlliste.MasterView.Refresh()
 
             'LoadFromDatabase()
 
@@ -511,7 +506,11 @@ Public Class ucoEichprozessauswahlliste
         End Try
         Me.Enabled = True
         Me.ResumeLayout()
+        Me.Refresh()
         RadGridViewAuswahlliste.Refresh()
+        RadGridViewAuswahlliste.MasterTemplate.Refresh()
+        RadGridViewAuswahlliste.MasterView.Refresh()
+
         Me.Visible = True
     End Sub
 #End Region
