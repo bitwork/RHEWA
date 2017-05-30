@@ -62,6 +62,25 @@ Public Class clsDBFunctions
         End Using
     End Function
 
+    Public Shared Function LoescheDevBenutzer() As Boolean
+        Try
+            'alle Tabellen iterieren und löschen. Das commit wird erst am Ende ausgeführt, deswegen ist die löschreihenefolge egal
+            Using DBContext As New Entities
+                For Each o In DBContext.Lizensierung.Where(Function(p) p.Lizenzschluessel = "hill").ToList
+                    DBContext.Lizensierung.Remove(o)
+
+                Next
+                For Each o In DBContext.Konfiguration.Where(Function(p) p.BenutzerLizenz = "hill").ToList
+                    DBContext.Konfiguration.Remove(o)
+                Next
+                DBContext.SaveChanges()
+            End Using
+        Catch ex As Exception
+            Return False
+        End Try
+        Return True
+    End Function
+
     Public Shared Function UpdateClientDatenbank()
         Try
 
@@ -101,9 +120,20 @@ Public Class clsDBFunctions
                 DBContext.Database.ExecuteSqlCommand(updateScript)
                 UpdateClientDatenbank()
             End Using
+
+        Catch ex As InvalidOperationException
+
         End Try
 
+        'If My.Settings.FirstRun Then
+        '    LoescheLokaleBenutzer()
+        '    My.Settings.FirstRun = False
+        '    My.Settings.Save()
+        'End If
 
+        If Debugger.IsAttached = False Then
+            LoescheDevBenutzer()
+        End If
 
     End Function
 

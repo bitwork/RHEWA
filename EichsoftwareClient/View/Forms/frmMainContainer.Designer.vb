@@ -291,6 +291,7 @@ Partial Class FrmMainContainer
         Me.lblHeadertext.Bounds = New System.Drawing.Rectangle(0, 0, 299, 74)
         Me.lblHeadertext.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblHeadertext.Name = "lblHeadertext"
+        resources.ApplyResources(Me.lblHeadertext, "lblHeadertext")
         '
         'radlabelContextHelp
         '
