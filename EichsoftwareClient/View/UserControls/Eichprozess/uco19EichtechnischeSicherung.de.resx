@@ -117,12 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="PictureBoxBenannteStelle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="PictureBoxBenannteStelle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 21</value>
+  </data>
   <data name="lblCE2016Kennzeichen.Size" type="System.Drawing.Size, System.Drawing">
     <value>199, 18</value>
   </data>
   <data name="lblCE2016Kennzeichen.Text" xml:space="preserve">
     <value>Marke CE, Mxx, "Benannte Stelle 0111"</value>
+  </data>
+  <data name="RadTextBoxControlBenannteStelle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 20</value>
+  </data>
+  <data name="RadTextBoxControlBenannteStelle.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="RadCheckBoxBenannteStelle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 15</value>
   </data>
   <data name="lblSicherungshinweise.Size" type="System.Drawing.Size, System.Drawing">
     <value>331, 18</value>
@@ -160,11 +176,23 @@
   <data name="lblAlibispeicher.Text" xml:space="preserve">
     <value>Alibispeicher für 90 Tage eingerichtet?</value>
   </data>
+  <data name="PictureBoxSicherungsmarkeGross.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="PictureBoxSicherungsmarkeGross.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 21</value>
+  </data>
   <data name="lblAufbewahrungsdauer.Size" type="System.Drawing.Size, System.Drawing">
     <value>258, 18</value>
   </data>
   <data name="lblAufbewahrungsdauer.Text" xml:space="preserve">
     <value>Aufbewahrungsdauer des Alibispeichers reduziert?</value>
+  </data>
+  <data name="PictureBoxSicherungsmarkeKlein.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="PictureBoxSicherungsmarkeKlein.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 21</value>
   </data>
   <data name="lblBemerkungen.Size" type="System.Drawing.Size, System.Drawing">
     <value>78, 18</value>
@@ -172,13 +200,28 @@
   <data name="lblBemerkungen.Text" xml:space="preserve">
     <value>Bemerkungen:</value>
   </data>
-  <data name="RadTextBoxControlBemerkungen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>477, 1537</value>
-  </data>
   <data name="lblAnzahl.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 18</value>
   </data>
   <data name="lblAnzahl.Text" xml:space="preserve">
     <value>Anzahl</value>
+  </data>
+  <data name="RadCheckBoxSicherungsmarkeKlein.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 15</value>
+  </data>
+  <data name="RadCheckBoxSicherungsmarkeGross.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 15</value>
+  </data>
+  <data name="RadTextBoxControlSicherungsmarkeGross.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 20</value>
+  </data>
+  <data name="RadTextBoxControlSicherungsmarkeGross.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="RadTextBoxControlSicherungsmarkeKlein.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 20</value>
+  </data>
+  <data name="RadTextBoxControlSicherungsmarkeKlein.Text" xml:space="preserve">
+    <value>0</value>
   </data>
 </root>

@@ -210,9 +210,9 @@ Public Class Uco21Versenden
                                     If CType(uco, uco19EichtechnischeSicherung).AktuellerStatusDirty Then
 
                                         Webcontext.AddEichmarkenverwaltung(objLiz.HEKennung, objLiz.Lizenzschluessel, objLiz.FK_BenutzerID,
-                                                        objEichprozess.Eichprotokoll.Sicherung_BenannteStelleAnzahl, objEichprozess.Eichprotokoll.Sicherung_Eichsiegel13x13Anzahl,
-                                                        objEichprozess.Eichprotokoll.Sicherung_EichsiegelRundAnzahl, objEichprozess.Eichprotokoll.Sicherung_HinweismarkeGelochtAnzahl,
-                                                        objEichprozess.Eichprotokoll.Sicherung_GruenesMAnzahl, objEichprozess.Eichprotokoll.Sicherung_CEAnzahl, objEichprozess.Eichprotokoll.Sicherung_CE2016Anzahl, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                                                        objEichprozess.Eichprotokoll.Sicherung_BenannteStelleAnzahl, objEichprozess.Eichprotokoll.Sicherung_SicherungsmarkeKleinAnzahl,
+                                                        objEichprozess.Eichprotokoll.Sicherung_SicherungsmarkeGrossAnzahl, objEichprozess.Eichprotokoll.Sicherung_HinweismarkeAnzahl,
+                                                       My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
                                     End If
                                     Exit For
                                 End If

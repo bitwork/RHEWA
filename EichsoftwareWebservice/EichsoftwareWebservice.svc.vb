@@ -1334,14 +1334,14 @@ Public Class EichsoftwareWebservice
     ''' </summary>
     ''' <param name="HEKennung"></param>
     ''' <param name="AnzahlBenannteStelle"></param>
-    ''' <param name="AnzahlEichsiegel13x13"></param>
-    ''' <param name="AnzahlEichsiegelRund"></param>
+    ''' <param name="AnzahlSicherungsmarkeKlein"></param>
+    ''' <param name="AnzahlSicherungsmarkeGross"></param>
     ''' <param name="AnzahlHinweismarke"></param>
     ''' <param name="AnzahlGruenesM"></param>
     ''' <param name="AnzahlCE"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Function AddEichmarkenverwaltung(ByVal HEKennung As String, Lizenzschluessel As String, ByVal BenutzerIDFK As String, ByVal AnzahlBenannteStelle As Integer, ByVal AnzahlEichsiegel13x13 As Integer, ByVal AnzahlEichsiegelRund As Integer, ByVal AnzahlHinweismarke As Integer, ByVal AnzahlGruenesM As Integer, ByVal AnzahlCE As Integer, ByVal AnzahlCE2016 As Integer, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements IEichsoftwareWebservice.AddEichmarkenverwaltung
+    Public Function AddEichmarkenverwaltung(ByVal HEKennung As String, Lizenzschluessel As String, ByVal BenutzerIDFK As String, ByVal AnzahlBenannteStelle As Integer, ByVal AnzahlSicherungsmarkeKlein As Integer, ByVal AnzahlSicherungsmarkeGross As Integer, ByVal AnzahlHinweismarke As Integer, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements IEichsoftwareWebservice.AddEichmarkenverwaltung
         ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
         If GetLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
         SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Aktualisiere Eichmarkenverwaltung")
@@ -1358,29 +1358,18 @@ Public Class EichsoftwareWebservice
                 Catch e As Exception
                 End Try
                 Try
-                    Element.Eichsiegel13x13Anzahl -= (AnzahlEichsiegel13x13 - Element.Eichsiegel13x13Anzahl)
+                    Element.SicherungsmarkeKleinAnzahl -= (AnzahlSicherungsmarkeKlein - Element.SicherungsmarkeKleinAnzahl)
                 Catch e As Exception
                 End Try
                 Try
-                    Element.EichsiegelRundAnzahl -= (AnzahlEichsiegelRund - Element.EichsiegelRundAnzahl)
+                    Element.SicherungsmarkeGrossAnzahl -= (AnzahlSicherungsmarkeGross - Element.SicherungsmarkeGrossAnzahl)
                 Catch e As Exception
                 End Try
                 Try
-                    Element.HinweismarkeGelochtAnzahl -= (AnzahlHinweismarke - Element.HinweismarkeGelochtAnzahl)
+                    Element.HinweismarkeAnzahl -= (AnzahlHinweismarke - Element.HinweismarkeAnzahl)
                 Catch e As Exception
                 End Try
-                Try
-                    Element.GruenesMAnzahl -= (AnzahlGruenesM - Element.GruenesMAnzahl)
-                Catch e As Exception
-                End Try
-                Try
-                    Element.CEAnzahl -= (AnzahlCE - Element.CEAnzahl)
-                Catch e As Exception
-                End Try
-                Try
-                    Element.CE2016Anzahl -= (AnzahlCE2016 - Element.CE2016Anzahl)
-                Catch e As Exception
-                End Try
+
 
                 Try
                     DbContext.SaveChanges()

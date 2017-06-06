@@ -5,49 +5,49 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="05b5f6127a89420bba6b175f454068c6" Name="Diagram1">
-        <EntityTypeShape EntityType="Model.Eichprotokoll" Width="1.5" PointX="3" PointY="18.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Eichprozess" Width="1.5" PointX="8.25" PointY="23.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Kompatiblitaetsnachweis" Width="1.5" PointX="6" PointY="7" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Konfiguration" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Lizensierung" Width="1.5" PointX="2.75" PointY="1.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Lookup_Auswertegeraet" Width="1.5" PointX="6" PointY="52.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Lookup_Bearbeitungsstatus" Width="1.5" PointX="6" PointY="3.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Lookup_Konformitaetsbewertungsverfahren" Width="1.5" PointX="0.75" PointY="25.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Lookup_Vorgangsstatus" Width="1.5" PointX="6" PointY="59" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Lookup_Waagenart" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Lookup_Waagentyp" Width="1.5" PointX="6" PointY="62.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Lookup_Waegezelle" Width="1.5" PointX="6" PointY="65.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Mogelstatistik" Width="1.5" PointX="10.5" PointY="22.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.PruefungAnsprechvermoegen" Width="1.5" PointX="5.25" PointY="14.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.PruefungAussermittigeBelastung" Width="1.5" PointX="5.25" PointY="17.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.PruefungLinearitaetFallend" Width="1.5" PointX="5.25" PointY="21.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.PruefungLinearitaetSteigend" Width="1.5" PointX="5.25" PointY="25" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.PruefungRollendeLasten" Width="1.5" PointX="5.25" PointY="28.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.PruefungStabilitaetGleichgewichtslage" Width="1.5" PointX="5.25" PointY="32.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.PruefungStaffelverfahrenErsatzlast" Width="1.5" PointX="5.25" PointY="35.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.PruefungStaffelverfahrenNormallast" Width="1.5" PointX="5.25" PointY="44.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.PruefungWiederholbarkeit" Width="1.5" PointX="5.25" PointY="41" IsExpanded="true" />
-        <AssociationConnector Association="Model.FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren" ManuallyRouted="false" />
-        <AssociationConnector Association="Model.FK_Eichprozess_Eichprotokoll" ManuallyRouted="false" />
-        <AssociationConnector Association="Model.FK_PruefungAussermittigeBelastung_Eichprotokoll" ManuallyRouted="false" />
-        <AssociationConnector Association="Model.FK_PruefungLinearitaetFallend_Eichprotokoll" ManuallyRouted="false" />
-        <AssociationConnector Association="Model.FK_PruefungLinearitaetSteigend_Eichprotokoll" ManuallyRouted="false" />
-        <AssociationConnector Association="Model.FK_PruefungLinearitaetSteigendAnsprechvermoegen_Eichprotokoll" ManuallyRouted="false" />
-        <AssociationConnector Association="Model.FK_PruefungRollendeLasten_Eichprotokoll" ManuallyRouted="false" />
-        <AssociationConnector Association="Model.FK_PruefungStabilitaetGleichgewichtslage_Eichprotokoll" ManuallyRouted="false" />
-        <AssociationConnector Association="Model.FK_PruefungStaffelverfahrenErsatzlast_Eichprotokoll" ManuallyRouted="false" />
-        <AssociationConnector Association="Model.FK_PruefungStaffelverfahrenNormallast_Eichprotokoll" ManuallyRouted="false" />
-        <AssociationConnector Association="Model.FK_PruefungWiederholbarkeit_Eichprotokoll" ManuallyRouted="false" />
-        <AssociationConnector Association="Model.FK_Eichprozess_Kompatiblitaetsnachweis" ManuallyRouted="false" />
-        <AssociationConnector Association="Model.FK_Eichprozess_Lookup_Auswertegeraet" ManuallyRouted="false" />
-        <AssociationConnector Association="Model.FK_Eichprozess_Lookup_Bearbeitungsstatus" ManuallyRouted="false" />
-        <AssociationConnector Association="Model.FK_Eichprozess_Lookup_Vorgangsstatus" ManuallyRouted="false" />
-        <AssociationConnector Association="Model.FK_Eichprozess_Lookup_Waagenart" ManuallyRouted="false" />
-        <AssociationConnector Association="Model.FK_Eichprozess_Lookup_Waagentyp" ManuallyRouted="false" />
-        <AssociationConnector Association="Model.FK_Eichprozess_Lookup_Waegezelle" ManuallyRouted="false" />
-        <AssociationConnector Association="Model.FK_Mogelstatistik_Eichprozess" ManuallyRouted="false" />
-        <AssociationConnector Association="Model.FK_Mogelstatistik_Lookup_Auswertegeraet" ManuallyRouted="false" />
-        <AssociationConnector Association="Model.FK_Mogelstatistik_Lookup_Waegezelle" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Model.Eichprotokoll" Width="1.5" PointX="3" PointY="19.5" />
+        <EntityTypeShape EntityType="Model.Eichprozess" Width="1.5" PointX="8.25" PointY="24.25" />
+        <EntityTypeShape EntityType="Model.Kompatiblitaetsnachweis" Width="1.5" PointX="6" PointY="0.75" />
+        <EntityTypeShape EntityType="Model.Konfiguration" Width="1.5" PointX="0.75" PointY="2.625" />
+        <EntityTypeShape EntityType="Model.Lizensierung" Width="1.5" PointX="2.75" PointY="2.625" />
+        <EntityTypeShape EntityType="Model.Lookup_Auswertegeraet" Width="1.5" PointX="6" PointY="68.375" />
+        <EntityTypeShape EntityType="Model.Lookup_Bearbeitungsstatus" Width="1.5" PointX="6" PointY="65.625" />
+        <EntityTypeShape EntityType="Model.Lookup_Konformitaetsbewertungsverfahren" Width="1.5" PointX="0.75" PointY="26.125" />
+        <EntityTypeShape EntityType="Model.Lookup_Vorgangsstatus" Width="1.5" PointX="6" PointY="63" />
+        <EntityTypeShape EntityType="Model.Lookup_Waagenart" Width="1.5" PointX="6" PointY="22.25" />
+        <EntityTypeShape EntityType="Model.Lookup_Waagentyp" Width="1.5" PointX="6" PointY="53" />
+        <EntityTypeShape EntityType="Model.Lookup_Waegezelle" Width="1.5" PointX="6" PointY="55.75" />
+        <EntityTypeShape EntityType="Model.Mogelstatistik" Width="1.5" PointX="10.5" PointY="23.5" />
+        <EntityTypeShape EntityType="Model.PruefungAnsprechvermoegen" Width="1.5" PointX="5.25" PointY="49.125" />
+        <EntityTypeShape EntityType="Model.PruefungAussermittigeBelastung" Width="1.5" PointX="5.25" PointY="31.25" />
+        <EntityTypeShape EntityType="Model.PruefungLinearitaetFallend" Width="1.5" PointX="5.25" PointY="12.625" />
+        <EntityTypeShape EntityType="Model.PruefungLinearitaetSteigend" Width="1.5" PointX="5.25" PointY="45.625" />
+        <EntityTypeShape EntityType="Model.PruefungRollendeLasten" Width="1.5" PointX="5.25" PointY="34.875" />
+        <EntityTypeShape EntityType="Model.PruefungStabilitaetGleichgewichtslage" Width="1.5" PointX="5.25" PointY="27.75" />
+        <EntityTypeShape EntityType="Model.PruefungStaffelverfahrenErsatzlast" Width="1.5" PointX="5.25" PointY="16.125" />
+        <EntityTypeShape EntityType="Model.PruefungStaffelverfahrenNormallast" Width="1.5" PointX="5.25" PointY="38.625" />
+        <EntityTypeShape EntityType="Model.PruefungWiederholbarkeit" Width="1.5" PointX="5.25" PointY="8.875" />
+        <AssociationConnector Association="Model.FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren" />
+        <AssociationConnector Association="Model.FK_Eichprozess_Eichprotokoll" />
+        <AssociationConnector Association="Model.FK_PruefungAussermittigeBelastung_Eichprotokoll" />
+        <AssociationConnector Association="Model.FK_PruefungLinearitaetFallend_Eichprotokoll" />
+        <AssociationConnector Association="Model.FK_PruefungLinearitaetSteigend_Eichprotokoll" />
+        <AssociationConnector Association="Model.FK_PruefungLinearitaetSteigendAnsprechvermoegen_Eichprotokoll" />
+        <AssociationConnector Association="Model.FK_PruefungRollendeLasten_Eichprotokoll" />
+        <AssociationConnector Association="Model.FK_PruefungStabilitaetGleichgewichtslage_Eichprotokoll" />
+        <AssociationConnector Association="Model.FK_PruefungStaffelverfahrenErsatzlast_Eichprotokoll" />
+        <AssociationConnector Association="Model.FK_PruefungStaffelverfahrenNormallast_Eichprotokoll" />
+        <AssociationConnector Association="Model.FK_PruefungWiederholbarkeit_Eichprotokoll" />
+        <AssociationConnector Association="Model.FK_Eichprozess_Kompatiblitaetsnachweis" />
+        <AssociationConnector Association="Model.FK_Eichprozess_Lookup_Auswertegeraet" />
+        <AssociationConnector Association="Model.FK_Eichprozess_Lookup_Bearbeitungsstatus" />
+        <AssociationConnector Association="Model.FK_Eichprozess_Lookup_Vorgangsstatus" />
+        <AssociationConnector Association="Model.FK_Eichprozess_Lookup_Waagenart" />
+        <AssociationConnector Association="Model.FK_Eichprozess_Lookup_Waagentyp" />
+        <AssociationConnector Association="Model.FK_Eichprozess_Lookup_Waegezelle" />
+        <AssociationConnector Association="Model.FK_Mogelstatistik_Eichprozess" />
+        <AssociationConnector Association="Model.FK_Mogelstatistik_Lookup_Auswertegeraet" />
+        <AssociationConnector Association="Model.FK_Mogelstatistik_Lookup_Waegezelle" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

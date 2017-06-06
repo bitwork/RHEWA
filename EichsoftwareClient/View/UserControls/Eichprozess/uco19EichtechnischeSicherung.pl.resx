@@ -118,6 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblCE2016Kennzeichen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>253, 18</value>
+  </data>
+  <data name="lblCE2016Kennzeichen.Text" xml:space="preserve">
+    <value>Naklejka CE, Mxx, "Jednostka notyfikowana 0111"</value>
+  </data>
   <data name="lblSicherungshinweise.Size" type="System.Drawing.Size, System.Drawing">
     <value>415, 18</value>
   </data>
@@ -125,13 +131,13 @@
     <value>Czy naniesiono wszystkie wymagane naklejki zabezpieczające oraz wskazówkowe?</value>
   </data>
   <data name="lblEichsiegel13x13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>175, 18</value>
+    <value>258, 18</value>
   </data>
   <data name="lblEichsiegel13x13.Text" xml:space="preserve">
     <value>Naklejka zabezpieczająca "Cecha legalizacji" 13x13</value>
   </data>
   <data name="lblEichsiegelRund.Size" type="System.Drawing.Size, System.Drawing">
-    <value>183, 18</value>
+    <value>266, 18</value>
   </data>
   <data name="lblEichsiegelRund.Text" xml:space="preserve">
     <value>Naklejka zabezpieczająca "Cecha legalizacji" okrągła</value>
@@ -167,24 +173,12 @@
     <value>Spostrzeżenia:</value>
   </data>
   <data name="RadTextBoxControlBemerkungen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>477, 1092</value>
+    <value>477, 1537</value>
   </data>
   <data name="lblAnzahl.Size" type="System.Drawing.Size, System.Drawing">
     <value>29, 18</value>
   </data>
   <data name="lblAnzahl.Text" xml:space="preserve">
     <value>Ilość</value>
-  </data>
-  <data name="lblBenannteStelle.Text" xml:space="preserve">
-    <value>Naklejka "Jednostka notyfikacyjna"</value>
-  </data>
-  <data name="lblCEKennzeichen.Text" xml:space="preserve">
-    <value>Oznaczenie CE</value>
-  </data>
-  <data name="lblGruenesM.Text" xml:space="preserve">
-    <value>Zielone "M"</value>
-  </data>
-  <data name="lblCE2016Kennzeichen.Text" xml:space="preserve">
-    <value>Naklejka CE, Mxx, "Jednostka notyfikowana 0111"</value>
   </data>
 </root>

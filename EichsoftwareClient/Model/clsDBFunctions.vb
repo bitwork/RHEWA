@@ -111,28 +111,14 @@ Public Class clsDBFunctions
 
             Using DBContext As New Entities
                 Dim config = DBContext.Konfiguration.First
-                If Not config.DBVersion = 2 Then
+                If config.DBVersion < 2 Then
+                    UpdateVersion2(DBContext)
+                End If
 
-                    Dim updateScript As String = ""
-                    updateScript = "Alter TABLE [Eichprotokoll] Alter Column  [Identifikationsdaten_Aufstellungsort] nvarchar(4000) NULL"
-                    DBContext.Database.ExecuteSqlCommand(updateScript)
+                If config.DBVersion < 3 Then
+                    UpdateVersion3(DBContext)
 
-                    updateScript = "Alter TABLE [Eichprotokoll] Alter Column  [Identifikationsdaten_Pruefer] nvarchar(4000) NULL"
-                    DBContext.Database.ExecuteSqlCommand(updateScript)
 
-                    updateScript = "Alter TABLE [Eichprotokoll] Alter Column  [Identifikationsdaten_Benutzer] nvarchar(4000) NULL"
-                    DBContext.Database.ExecuteSqlCommand(updateScript)
-
-                    updateScript = "Alter TABLE [Eichprotokoll] Alter Column  [Beschaffenheitspruefung_Pruefscheinnummer] nvarchar(4000) NULL"
-
-                    DBContext.Database.ExecuteSqlCommand(updateScript)
-
-                    Dim Konfigs = DBContext.Konfiguration
-                    For Each Konfig In Konfigs
-                        Konfig.DBVersion = 2
-                    Next
-
-                    DBContext.SaveChanges()
                 End If
             End Using
 
@@ -149,17 +135,104 @@ Public Class clsDBFunctions
 
         End Try
 
-        'If My.Settings.FirstRun Then
-        '    LoescheLokaleBenutzer()
-        '    My.Settings.FirstRun = False
-        '    My.Settings.Save()
-        'End If
 
         If Debugger.IsAttached = False Then
             LoescheDevBenutzer()
         End If
 
     End Function
+
+
+
+#Region "DB Updates"
+    Private Shared Sub UpdateVersion2(DBContext As Entities)
+
+        Dim updateScript As String = ""
+        updateScript = "Alter TABLE [Eichprotokoll] Alter Column  [Identifikationsdaten_Aufstellungsort] nvarchar(4000) NULL"
+        DBContext.Database.ExecuteSqlCommand(updateScript)
+
+        updateScript = "Alter TABLE [Eichprotokoll] Alter Column  [Identifikationsdaten_Pruefer] nvarchar(4000) NULL"
+        DBContext.Database.ExecuteSqlCommand(updateScript)
+
+        updateScript = "Alter TABLE [Eichprotokoll] Alter Column  [Identifikationsdaten_Benutzer] nvarchar(4000) NULL"
+        DBContext.Database.ExecuteSqlCommand(updateScript)
+
+        updateScript = "Alter TABLE [Eichprotokoll] Alter Column  [Beschaffenheitspruefung_Pruefscheinnummer] nvarchar(4000) NULL"
+
+        DBContext.Database.ExecuteSqlCommand(updateScript)
+
+        Dim Konfigs = DBContext.Konfiguration
+        For Each Konfig In Konfigs
+            Konfig.DBVersion = 2
+        Next
+
+        DBContext.SaveChanges()
+    End Sub
+
+    Private Shared Sub UpdateVersion3(DBContext As Entities)
+        Dim updateScript As String = ""
+
+
+        updateScript = "ALTER TABLE [Eichprotokoll] ADD [Sicherung_SicherungsmarkeKlein] bit DEFAULT ((0)) NULL "
+        DBContext.Database.ExecuteSqlCommand(updateScript)
+        updateScript = "UPDATE [Eichprotokoll] SET Sicherung_SicherungsmarkeKlein = Sicherung_Eichsiegel13x13"
+        DBContext.Database.ExecuteSqlCommand(updateScript)
+        updateScript = "ALTER TABLE [Eichprotokoll] DROP COLUMN [Sicherung_Eichsiegel13x13]"
+        DBContext.Database.ExecuteSqlCommand(updateScript)
+        updateScript = "ALTER TABLE [Eichprotokoll] ADD [Sicherung_SicherungsmarkeKleinAnzahl] smallint NULL "
+        DBContext.Database.ExecuteSqlCommand(updateScript)
+        updateScript = "UPDATE [Eichprotokoll] Set Sicherung_SicherungsmarkeKleinAnzahl = Sicherung_Eichsiegel13x13Anzahl"
+        DBContext.Database.ExecuteSqlCommand(updateScript)
+        updateScript = "ALTER TABLE [Eichprotokoll] DROP COLUMN [Sicherung_Eichsiegel13x13Anzahl]"
+        DBContext.Database.ExecuteSqlCommand(updateScript)
+        updateScript = "ALTER TABLE [Eichprotokoll] ADD [Sicherung_SicherungsmarkeGross] bit DEFAULT ((0)) NULL "
+        DBContext.Database.ExecuteSqlCommand(updateScript)
+        updateScript = "UPDATE [Eichprotokoll] SET Sicherung_SicherungsmarkeGross = Sicherung_EichsiegelRund"
+        DBContext.Database.ExecuteSqlCommand(updateScript)
+        updateScript = "ALTER TABLE [Eichprotokoll] DROP COLUMN [Sicherung_EichsiegelRund]"
+        DBContext.Database.ExecuteSqlCommand(updateScript)
+        updateScript = "ALTER TABLE [Eichprotokoll] ADD [Sicherung_SicherungsmarkeGrossAnzahl] smallint NULL "
+        DBContext.Database.ExecuteSqlCommand(updateScript)
+        updateScript = "UPDATE [Eichprotokoll] Set Sicherung_SicherungsmarkeGrossAnzahl = Sicherung_EichsiegelRundAnzahl"
+        DBContext.Database.ExecuteSqlCommand(updateScript)
+        updateScript = "ALTER TABLE [Eichprotokoll] DROP COLUMN [Sicherung_EichsiegelRundAnzahl]"
+        DBContext.Database.ExecuteSqlCommand(updateScript)
+        updateScript = "ALTER TABLE [Eichprotokoll] ADD [Sicherung_Hinweismarke] bit DEFAULT ((0)) NULL "
+        DBContext.Database.ExecuteSqlCommand(updateScript)
+        updateScript = "UPDATE [Eichprotokoll] SET Sicherung_Hinweismarke= Sicherung_HinweismarkeGelocht"
+        DBContext.Database.ExecuteSqlCommand(updateScript)
+        updateScript = "ALTER TABLE [Eichprotokoll] DROP COLUMN [Sicherung_HinweismarkeGelocht]"
+        DBContext.Database.ExecuteSqlCommand(updateScript)
+        updateScript = "ALTER TABLE [Eichprotokoll] ADD [Sicherung_HinweismarkeAnzahl] smallint NULL "
+        DBContext.Database.ExecuteSqlCommand(updateScript)
+        updateScript = "UPDATE [Eichprotokoll] Set Sicherung_HinweismarkeAnzahl = Sicherung_HinweismarkeGelochtAnzahl"
+        DBContext.Database.ExecuteSqlCommand(updateScript)
+        updateScript = "ALTER TABLE [Eichprotokoll] DROP COLUMN [Sicherung_HinweismarkeGelochtAnzahl]"
+        DBContext.Database.ExecuteSqlCommand(updateScript)
+        updateScript = "ALTER TABLE [Eichprotokoll] DROP COLUMN [Sicherung_GruenesM]"
+        DBContext.Database.ExecuteSqlCommand(updateScript)
+        updateScript = "ALTER TABLE [Eichprotokoll] DROP COLUMN [Sicherung_GruenesMAnzahl]"
+        DBContext.Database.ExecuteSqlCommand(updateScript)
+        updateScript = "ALTER TABLE [Eichprotokoll] DROP COLUMN [Sicherung_CE]"
+        DBContext.Database.ExecuteSqlCommand(updateScript)
+        updateScript = "ALTER TABLE [Eichprotokoll] DROP COLUMN [Sicherung_CEAnzahl]"
+        DBContext.Database.ExecuteSqlCommand(updateScript)
+        updateScript = "ALTER TABLE [Eichprotokoll] DROP COLUMN [Sicherung_CE2016]"
+        DBContext.Database.ExecuteSqlCommand(updateScript)
+        updateScript = "ALTER TABLE [Eichprotokoll] DROP COLUMN [Sicherung_CE2016Anzahl]"
+        DBContext.Database.ExecuteSqlCommand(updateScript)
+
+
+
+        Dim Konfigs = DBContext.Konfiguration
+        For Each Konfig In Konfigs
+            Konfig.DBVersion = 3
+        Next
+
+        DBContext.SaveChanges()
+    End Sub
+#End Region
+
 
     ''' <summary>
     '''  löscht lokale Datenbank, für resyncronisierung des aktuellen Benutzers

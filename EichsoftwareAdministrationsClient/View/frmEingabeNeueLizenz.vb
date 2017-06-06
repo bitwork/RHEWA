@@ -216,20 +216,20 @@ Public Class frmEingabeNeueLizenz
                     _objEichmarkenverwaltung.FK_BenutzerID = _objLizen.FK_BenutzerID
                     _objEichmarkenverwaltung.BenannteStelleAnzahl = 0
                     _objEichmarkenverwaltung.BenannteStelleAnzahlMeldestand = 0
-                    _objEichmarkenverwaltung.CEAnzahl = 0
-                    _objEichmarkenverwaltung.CEAnzahlMeldestand = 0
-                    _objEichmarkenverwaltung.Eichsiegel13x13Anzahl = 0
-                    _objEichmarkenverwaltung.Eichsiegel13x13AnzahlMeldestand = 0
-                    _objEichmarkenverwaltung.EichsiegelRundAnzahl = 0
-                    _objEichmarkenverwaltung.EichsiegelRundAnzahlMeldestand = 0
-                    _objEichmarkenverwaltung.FehlmengeHinweismarken = 0
-                    _objEichmarkenverwaltung.FehlmengeSicherungsmarkegross = 0
-                    _objEichmarkenverwaltung.FehlmengeSicherungsmarkeklein = 0
-                    _objEichmarkenverwaltung.GruenesMAnzahl = 0
-                    _objEichmarkenverwaltung.GruenesMAnzahlMeldestand = 0
-                    _objEichmarkenverwaltung.HinweismarkeGelochtAnzahl = 0
-                    _objEichmarkenverwaltung.HinweismarkeGelochtAnzahlMeldestand = 0
-                    _objEichmarkenverwaltung.zerstoerteMarke0103 = 0
+                    _objEichmarkenverwaltung.BenannteStelleFehlmenge = 0
+
+                    _objEichmarkenverwaltung.HinweismarkeAnzahl = 0
+                    _objEichmarkenverwaltung.HinweismarkeAnzahlMeldestand = 0
+                    _objEichmarkenverwaltung.HinweismarkeFehlmenge = 0
+
+                    _objEichmarkenverwaltung.SicherungsmarkeGrossAnzahl = 0
+                    _objEichmarkenverwaltung.SicherungsmarkeGrossAnzahlMeldestand = 0
+                    _objEichmarkenverwaltung.SicherungsmarkeGrossFehlmenge = 0
+
+                    _objEichmarkenverwaltung.SicherungsmarkeKleinAnzahl = 0
+                    _objEichmarkenverwaltung.SicherungsmarkeKleinAnzahlMeldestand = 0
+                    _objEichmarkenverwaltung.SicherungsmarkeKleinFehlmenge = 0
+
 
                     'Füllt das Objekt mit den Werten aus den Steuerlementen
                     UpdateObject()
@@ -276,20 +276,8 @@ Public Class frmEingabeNeueLizenz
                 AbortSaveing = True
             End Try
         End If
-        'If Debugger.IsAttached Then 'für debugzwecke
-        '    Return True
-        'End If
-        'prüfen ob alle Felder ausgefüllt sind
-        'For Each Control In Me.Controls
-        '    If TypeOf Control Is Telerik.WinControls.UI.RadTextBoxControl Then
-        '        If Control.Text.trim.Equals("") Then
-        '            AbortSaveing = True
 
-        '            CType(Control, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.Red
-        '            CType(Control, Telerik.WinControls.UI.RadTextBoxControl).Focus()
-        '        End If
-        '    End If
-        'Next
+
 
         If AbortSaveing Then
             MessageBox.Show("Bitte füllen Sie alle Felder aus", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)

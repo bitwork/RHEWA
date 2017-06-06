@@ -151,12 +151,9 @@
         <xs:element minOccurs="0" name="Lizenzschluessel" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="BenutzerFK" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="AnzahlBenannteStelle" type="xs:int" />
-        <xs:element minOccurs="0" name="AnzahlEichsiegel13x13" type="xs:int" />
-        <xs:element minOccurs="0" name="AnzahlEichsiegelRund" type="xs:int" />
+        <xs:element minOccurs="0" name="AnzahlSicherungsmarkeKlein" type="xs:int" />
+        <xs:element minOccurs="0" name="AnzahlSicherungsmarkeGross" type="xs:int" />
         <xs:element minOccurs="0" name="AnzahlHinweismarke" type="xs:int" />
-        <xs:element minOccurs="0" name="AnzahlGruenesM" type="xs:int" />
-        <xs:element minOccurs="0" name="AnzahlCE" type="xs:int" />
-        <xs:element minOccurs="0" name="AnzahlCE2016" type="xs:int" />
         <xs:element minOccurs="0" name="WindowsUsername" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="Domainname" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="Computername" nillable="true" type="xs:string" />

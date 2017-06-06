@@ -72,44 +72,22 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
             Catch e As Exception
             End Try
 
-            Try
-                'die Vorarbeit für das Jahr 2015. Dann können diese Spalten eingeblendet werden
-                If Date.Now.Year = 2014 Then
-                    RadGridView1.Columns("Archiv2014_Eichungen").IsVisible = False
-                    RadGridView1.Columns("Archiv2014_BenannteStelle0103").IsVisible = False
-                    RadGridView1.Columns("Archiv2014_BenannteStelle0111").IsVisible = False
-                    RadGridView1.Columns("Archiv2014_Hinweismarke").IsVisible = False
-                    RadGridView1.Columns("Archiv2014_SicherungsmarkeGross").IsVisible = False
-                    RadGridView1.Columns("Archiv2014_SicherungsmarkeKlein").IsVisible = False
 
-                    RadGridView1.Columns("Archiv2014_Eichungen").VisibleInColumnChooser = False
-                    RadGridView1.Columns("Archiv2014_BenannteStelle0103").VisibleInColumnChooser = False
-                    RadGridView1.Columns("Archiv2014_BenannteStelle0111").VisibleInColumnChooser = False
-                    RadGridView1.Columns("Archiv2014_Hinweismarke").VisibleInColumnChooser = False
-                    RadGridView1.Columns("Archiv2014_SicherungsmarkeGross").VisibleInColumnChooser = False
-                    RadGridView1.Columns("Archiv2014_SicherungsmarkeKlein").VisibleInColumnChooser = False
-                End If
-            Catch ex As Exception
-            End Try
 
             Try
                 'Eltern Spaltenüberschriften Formatieren
                 For Each col In RadGridView1.Columns
 
                     If col.HeaderText.Equals("HEKennung") Then
-                        col.HeaderText = "HE-Kennung"
-                    ElseIf col.HeaderText.Equals("CEAnzahl") Then
-                        col.HeaderText = "CE Anzahl"
-                    ElseIf col.HeaderText.Equals("CEAnzahlMeldestand") Then
-                        col.HeaderText = "CE Anzahl Meldestand"
-                    ElseIf col.HeaderText.Equals("CE2016Anzahl") Then
-                        col.HeaderText = "CE 2016 Anzahl"
-                    ElseIf col.HeaderText.Equals("CE2016AnzahlMeldestand") Then
-                        col.HeaderText = "CE 2016 Anzahl Meldestand"
-                    ElseIf col.HeaderText.Equals("Eichsiegel13x13Anzahl") Then
-                        col.HeaderText = "  Eichsiegel 13x13 Anzahl"
-                    ElseIf col.HeaderText.Equals("Eichsiegel13x13AnzahlMeldestand") Then
-                        col.HeaderText = "  Eichsiegel 13x13 Anzahl Meldestand"
+                        col.HeaderText = "Kennung"
+                    ElseIf col.HeaderText.Equals("SicherungsmarkeKleinAnzahl") Then
+                        col.HeaderText = "  Sicherungsmarke klein Anzahl"
+                    ElseIf col.HeaderText.Equals("SicherungsmarkeKleinAnzahlMeldestand") Then
+                        col.HeaderText = "  Sicherungsmarke klein Meldestand"
+                    ElseIf col.HeaderText.Equals("SicherungsmarkeGrossAnzahl") Then
+                        col.HeaderText = "  Sicherungsmarke groß Anzahl"
+                    ElseIf col.HeaderText.Equals("SicherungsmarkeGrossAnzahlMeldestand") Then
+                        col.HeaderText = "  Sicherungsmarke groß Meldestand"
                     Else
                         FormatColumnHeader(col)
                     End If
@@ -178,66 +156,16 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
                                Eichmarken.Bemerkung,
                                Eichmarken.BenannteStelleAnzahl,
                                Eichmarken.BenannteStelleAnzahlMeldestand,
-                               Eichmarken.CEAnzahl,
-                               Eichmarken.CEAnzahlMeldestand,
-                                 Eichmarken.CE2016Anzahl,
-                               Eichmarken.CE2016AnzahlMeldestand,
-                               Eichmarken.Eichsiegel13x13Anzahl,
-                               Eichmarken.Eichsiegel13x13AnzahlMeldestand,
-                               Eichmarken.EichsiegelRundAnzahl,
-                               Eichmarken.EichsiegelRundAnzahlMeldestand,
-                               Eichmarken.GruenesMAnzahl,
-                               Eichmarken.GruenesMAnzahlMeldestand,
-                               Eichmarken.HinweismarkeGelochtAnzahl,
-                               Eichmarken.HinweismarkeGelochtAnzahlMeldestand,
-                               Eichmarken.FehlmengeBenannteStelle0103,
-                               Eichmarken.FehlmengeBenannteStelle0111,
-                               Eichmarken.FehlmengeHinweismarken,
-                               Eichmarken.FehlmengeSicherungsmarkegross,
-                               Eichmarken.FehlmengeSicherungsmarkeklein,
-                               Eichmarken.zerstoerteMarke0103,
-                               Eichmarken.Archiv2007_BenannteStelle0298,
-                               Eichmarken.Archiv2007_Eichungen,
-                               Eichmarken.Archiv2007_Hinweismarke,
-                               Eichmarken.Archiv2007_SicherungsmarkeGross,
-                               Eichmarken.Archiv2007_SicherungsmarkeKlein,
-                               Eichmarken.Archiv2008_BenannteStelle0298,
-                               Eichmarken.Archiv2008_Eichungen,
-                               Eichmarken.Archiv2008_Hinweismarke,
-                               Eichmarken.Archiv2008_SicherungsmarkeGross,
-                               Eichmarken.Archiv2008_SicherungsmarkeKlein,
-                               Eichmarken.Archiv2009_BenannteStelle0298,
-                               Eichmarken.Archiv2009_Eichungen,
-                               Eichmarken.Archiv2009_Hinweismarke,
-                               Eichmarken.Archiv2009_SicherungsmarkeGross,
-                               Eichmarken.Archiv2009_SicherungsmarkeKlein,
-                               Eichmarken.Archiv2010_BenannteStelle0298,
-                               Eichmarken.Archiv2010_Eichungen,
-                               Eichmarken.Archiv2010_Hinweismarke,
-                               Eichmarken.Archiv2010_SicherungsmarkeGross,
-                               Eichmarken.Archiv2010_SicherungsmarkeKlein,
-                               Eichmarken.Archiv2011_BenannteStelle0298,
-                               Eichmarken.Archiv2011_BenannteStelle0103,
-                               Eichmarken.Archiv2011_Eichungen,
-                               Eichmarken.Archiv2011_Hinweismarke,
-                               Eichmarken.Archiv2011_SicherungsmarkeGross,
-                               Eichmarken.Archiv2011_SicherungsmarkeKlein,
-                               Eichmarken.Archiv2012_BenannteStelle0103,
-                               Eichmarken.Archiv2012_Eichungen,
-                               Eichmarken.Archiv2012_Hinweismarke,
-                               Eichmarken.Archiv2012_SicherungsmarkeGross,
-                               Eichmarken.Archiv2012_SicherungsmarkeKlein,
-                               Eichmarken.Archiv2013_BenannteStelle0103,
-                               Eichmarken.Archiv2013_Eichungen,
-                               Eichmarken.Archiv2013_Hinweismarke,
-                               Eichmarken.Archiv2013_SicherungsmarkeGross,
-                               Eichmarken.Archiv2013_SicherungsmarkeKlein,
-                               Eichmarken.Archiv2014_BenannteStelle0103,
-                               Eichmarken.Archiv2014_BenannteStelle0111,
-                               Eichmarken.Archiv2014_Eichungen,
-                               Eichmarken.Archiv2014_Hinweismarke,
-                               Eichmarken.Archiv2014_SicherungsmarkeGross,
-                               Eichmarken.Archiv2014_SicherungsmarkeKlein,
+                               Eichmarken.BenannteStelleFehlmenge,
+                             Eichmarken.SicherungsmarkeKleinAnzahl,
+                             Eichmarken.SicherungsmarkeKleinAnzahlMeldestand,
+                             Eichmarken.SicherungsmarkeKleinFehlmenge,
+                                   Eichmarken.SicherungsmarkeGrossAnzahl,
+                             Eichmarken.SicherungsmarkeGrossAnzahlMeldestand,
+                             Eichmarken.SicherungsmarkeGrossFehlmenge,
+                            Eichmarken.HinweismarkeAnzahl,
+                               Eichmarken.HinweismarkeAnzahlMeldestand,
+                               Eichmarken.HinweismarkeFehlmenge,
                                Eichmarken.FK_BenutzerID
                            }
 
@@ -427,26 +355,7 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
         End Try
     End Sub
 
-    'Private Sub EditEichmarkenverwaltung()
-    '    If RadGridView1.SelectedRows.Count > 0 Then
-    '        'prüfen ob das ausgewählte element eine REcord Row und kein Groupheader, Filter oder anderes ist
-    '        If TypeOf RadGridView1.SelectedRows(0) Is Telerik.WinControls.UI.GridViewDataRowInfo Then
-    '            Dim SelectedID As String = "" 'Variable zum Speichern der Vorgangsnummer des aktuellen Prozesses
-    '            SelectedID = RadGridView1.SelectedRows(0).Cells("ID").Value
 
-    '            'neue Datenbankverbindung
-    '            Using context As New HerstellerersteichungEntities
-    '                'anzeigen des Dialogs zur Bearbeitung der Eichung
-    '                Dim f As New FrmEichmarkenverwaltung(SelectedID)
-    '                f.ShowDialog()
-
-    '                'nach dem schließen des Dialogs aktualisieren
-    '                LoadFromDatabase()
-    '            End Using
-
-    '        End If
-    '    End If
-    'End Sub
 
     ''' <summary>
     ''' Iteritert das Grid und speichert alle Änderungen in die Datenbank. Setzt ausserdem den gesperrt Status zurück
@@ -519,96 +428,30 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
     Private Sub MergeEichmarkenItems(ByVal SourceObj As Object, ByVal TargetObj As ServerEichmarkenverwaltung)
         Try
             TargetObj.Bemerkung = SourceObj.Bemerkung
+
             TargetObj.BenannteStelleAnzahl = SourceObj.BenannteStelleAnzahl
             TargetObj.BenannteStelleAnzahlMeldestand = SourceObj.BenannteStelleAnzahlMeldestand
-            TargetObj.CEAnzahl = SourceObj.CEAnzahl
-            TargetObj.CEAnzahlMeldestand = SourceObj.CEAnzahlMeldestand
-            TargetObj.CE2016Anzahl = SourceObj.CE2016Anzahl
-            TargetObj.CE2016AnzahlMeldestand = SourceObj.CE2016AnzahlMeldestand
-            TargetObj.Eichsiegel13x13Anzahl = SourceObj.Eichsiegel13x13Anzahl
-            TargetObj.Eichsiegel13x13AnzahlMeldestand = SourceObj.Eichsiegel13x13AnzahlMeldestand
-            TargetObj.EichsiegelRundAnzahl = SourceObj.EichsiegelRundAnzahl
-            TargetObj.EichsiegelRundAnzahlMeldestand = SourceObj.EichsiegelRundAnzahlMeldestand
-            TargetObj.FehlmengeBenannteStelle0103 = SourceObj.FehlmengeBenannteStelle0103
-            TargetObj.FehlmengeBenannteStelle0111 = SourceObj.FehlmengeBenannteStelle0111
-            TargetObj.FehlmengeHinweismarken = SourceObj.FehlmengeHinweismarken
-            TargetObj.FehlmengeSicherungsmarkegross = SourceObj.FehlmengeSicherungsmarkegross
-            TargetObj.FehlmengeSicherungsmarkeklein = SourceObj.FehlmengeSicherungsmarkeklein
-            TargetObj.GruenesMAnzahl = SourceObj.GruenesMAnzahl
-            TargetObj.GruenesMAnzahlMeldestand = SourceObj.GruenesMAnzahlMeldestand
-            TargetObj.HinweismarkeGelochtAnzahl = SourceObj.HinweismarkeGelochtAnzahl
-            TargetObj.HinweismarkeGelochtAnzahlMeldestand = SourceObj.HinweismarkeGelochtAnzahlMeldestand
-            TargetObj.zerstoerteMarke0103 = SourceObj.zerstoerteMarke0103
+            TargetObj.BenannteStelleFehlmenge = SourceObj.BenannteStelleFehlmenge
+
+
+            TargetObj.SicherungsmarkeKleinAnzahl = SourceObj.SicherungsmarkeKleinAnzahl
+            TargetObj.SicherungsmarkeKleinAnzahlMeldestand = SourceObj.SicherungsmarkeKleinAnzahlMeldestand
+            TargetObj.SicherungsmarkeKleinFehlmenge = SourceObj.SicherungsmarkeKleinFehlmenge
+
+            TargetObj.SicherungsmarkeGrossAnzahl = SourceObj.SicherungsmarkeGrossAnzahl
+            TargetObj.SicherungsmarkeGrossAnzahlMeldestand = SourceObj.SicherungsmarkeGrossAnzahlMeldestand
+            TargetObj.SicherungsmarkeGrossFehlmenge = SourceObj.SicherungsmarkeGrossFehlmenge
+
+
+            TargetObj.HinweismarkeAnzahl = SourceObj.HinweismarkeAnzahl
+            TargetObj.HinweismarkeAnzahlMeldestand = SourceObj.HinweismarkeAnzahlMeldestand
+            TargetObj.HinweismarkeFehlmenge = SourceObj.HinweismarkeFehlmenge
+
         Catch ex As Exception
 
         End Try
 
-        Try
-            TargetObj.Archiv2007_BenannteStelle0298 = SourceObj.Archiv2007_BenannteStelle0298
-            TargetObj.Archiv2007_Eichungen = SourceObj.Archiv2007_Eichungen
-            TargetObj.Archiv2007_Hinweismarke = SourceObj.Archiv2007_Hinweismarke
-            TargetObj.Archiv2007_SicherungsmarkeGross = SourceObj.Archiv2007_SicherungsmarkeGross
-            TargetObj.Archiv2007_SicherungsmarkeKlein = SourceObj.Archiv2007_SicherungsmarkeKlein
-        Catch e As Exception
-        End Try
-        Try
-            TargetObj.Archiv2008_BenannteStelle0298 = SourceObj.Archiv2008_BenannteStelle0298
-            TargetObj.Archiv2008_Eichungen = SourceObj.Archiv2008_Eichungen
-            TargetObj.Archiv2008_Hinweismarke = SourceObj.Archiv2008_Hinweismarke
-            TargetObj.Archiv2008_SicherungsmarkeGross = SourceObj.Archiv2008_SicherungsmarkeGross
-            TargetObj.Archiv2008_SicherungsmarkeKlein = SourceObj.Archiv2008_SicherungsmarkeKlein
-        Catch e As Exception
-        End Try
-        Try
-            TargetObj.Archiv2009_BenannteStelle0298 = SourceObj.Archiv2009_BenannteStelle0298
-            TargetObj.Archiv2009_Eichungen = SourceObj.Archiv2009_Eichungen
-            TargetObj.Archiv2009_Hinweismarke = SourceObj.Archiv2009_Hinweismarke
-            TargetObj.Archiv2009_SicherungsmarkeGross = SourceObj.Archiv2009_SicherungsmarkeGross
-            TargetObj.Archiv2009_SicherungsmarkeKlein = SourceObj.Archiv2009_SicherungsmarkeKlein
-        Catch e As Exception
-        End Try
-        Try
-            TargetObj.Archiv2010_BenannteStelle0298 = SourceObj.Archiv2010_BenannteStelle0298
-            TargetObj.Archiv2010_Eichungen = SourceObj.Archiv2010_Eichungen
-            TargetObj.Archiv2010_Hinweismarke = SourceObj.Archiv2010_Hinweismarke
-            TargetObj.Archiv2010_SicherungsmarkeGross = SourceObj.Archiv2010_SicherungsmarkeGross
-            TargetObj.Archiv2010_SicherungsmarkeKlein = SourceObj.Archiv2010_SicherungsmarkeKlein
-        Catch e As Exception
-        End Try
-        Try
-            TargetObj.Archiv2011_BenannteStelle0298 = SourceObj.Archiv2011_BenannteStelle0298
-            TargetObj.Archiv2011_Eichungen = SourceObj.Archiv2011_Eichungen
-            TargetObj.Archiv2011_Hinweismarke = SourceObj.Archiv2011_Hinweismarke
-            TargetObj.Archiv2011_SicherungsmarkeGross = SourceObj.Archiv2011_SicherungsmarkeGross
-            TargetObj.Archiv2011_SicherungsmarkeKlein = SourceObj.Archiv2011_SicherungsmarkeKlein
-            TargetObj.Archiv2011_BenannteStelle0103 = SourceObj.Archiv2011_BenannteStelle0103
-        Catch e As Exception
-        End Try
-        Try
-            TargetObj.Archiv2012_BenannteStelle0103 = SourceObj.Archiv2012_BenannteStelle0103
-            TargetObj.Archiv2012_Eichungen = SourceObj.Archiv2012_Eichungen
-            TargetObj.Archiv2012_Hinweismarke = SourceObj.Archiv2012_Hinweismarke
-            TargetObj.Archiv2012_SicherungsmarkeGross = SourceObj.Archiv2012_SicherungsmarkeGross
-            TargetObj.Archiv2012_SicherungsmarkeKlein = SourceObj.Archiv2012_SicherungsmarkeKlein
-        Catch e As Exception
-        End Try
-        Try
-            TargetObj.Archiv2013_BenannteStelle0103 = SourceObj.Archiv2013_BenannteStelle0103
-            TargetObj.Archiv2013_Eichungen = SourceObj.Archiv2013_Eichungen
-            TargetObj.Archiv2013_Hinweismarke = SourceObj.Archiv2013_Hinweismarke
-            TargetObj.Archiv2013_SicherungsmarkeGross = SourceObj.Archiv2013_SicherungsmarkeGross
-            TargetObj.Archiv2013_SicherungsmarkeKlein = SourceObj.Archiv2013_SicherungsmarkeKlein
-        Catch e As Exception
-        End Try
-        Try
-            TargetObj.Archiv2014_BenannteStelle0103 = SourceObj.Archiv2014_BenannteStelle0103
-            TargetObj.Archiv2014_BenannteStelle0111 = SourceObj.Archiv2014_BenannteStelle0111
-            TargetObj.Archiv2014_Eichungen = SourceObj.Archiv2014_Eichungen
-            TargetObj.Archiv2014_Hinweismarke = SourceObj.Archiv2014_Hinweismarke
-            TargetObj.Archiv2014_SicherungsmarkeGross = SourceObj.Archiv2014_SicherungsmarkeGross
-            TargetObj.Archiv2014_SicherungsmarkeKlein = SourceObj.Archiv2014_SicherungsmarkeKlein
-        Catch e2 As Exception
-        End Try
+
     End Sub
 
     ''' <summary>
@@ -729,35 +572,19 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
                     e.CellElement.GradientStyle = Telerik.WinControls.GradientStyles.Solid
                     e.CellElement.BackColor = Color.FromArgb(255, 209, 140)
 
-                ElseIf (e.Column.Name = "Eichsiegel13x13Anzahl" And e.Row.Cells("Eichsiegel13x13Anzahl").Value <= e.Row.Cells("Eichsiegel13x13AnzahlMeldestand").Value) Then
+                ElseIf (e.Column.Name = "SicherungsmarkeKleinAnzahl" And e.Row.Cells("SicherungsmarkeKleinAnzahl").Value <= e.Row.Cells("SicherungsmarkeKleinAnzahlMeldestand").Value) Then
                     e.CellElement.DrawFill = True
                     e.CellElement.GradientStyle = Telerik.WinControls.GradientStyles.Solid
                     e.CellElement.BackColor = Color.FromArgb(255, 209, 140)
-                ElseIf (e.Column.Name = "EichsiegelRundAnzahl" And e.Row.Cells("EichsiegelRundAnzahl").Value <= e.Row.Cells("EichsiegelRundAnzahlMeldestand").Value) Then
+                ElseIf (e.Column.Name = "SicherungsmarkeGrossAnzahl" And e.Row.Cells("SicherungsmarkeGrossAnzahl").Value <= e.Row.Cells("SicherungsmarkeGrossAnzahlMeldestand").Value) Then
                     e.CellElement.DrawFill = True
                     e.CellElement.GradientStyle = Telerik.WinControls.GradientStyles.Solid
                     e.CellElement.BackColor = Color.FromArgb(255, 209, 140)
-                ElseIf (e.Column.Name = "HinweismarkeGelochtAnzahl" And e.Row.Cells("HinweismarkeGelochtAnzahl").Value <= e.Row.Cells("HinweismarkeGelochtAnzahlMeldestand").Value) Then
-                    e.CellElement.DrawFill = True
-                    e.CellElement.GradientStyle = Telerik.WinControls.GradientStyles.Solid
-                    e.CellElement.BackColor = Color.FromArgb(255, 209, 140)
-                ElseIf (e.Column.Name = "GruenesMAnzahl" And e.Row.Cells("GruenesMAnzahl").Value <= e.Row.Cells("GruenesMAnzahlMeldestand").Value) Then
-                    e.CellElement.DrawFill = True
-                    e.CellElement.GradientStyle = Telerik.WinControls.GradientStyles.Solid
-                    e.CellElement.BackColor = Color.FromArgb(255, 209, 140)
-                ElseIf (e.Column.Name = "CEAnzahl" And e.Row.Cells("CEAnzahl").Value <= e.Row.Cells("CEAnzahlMeldestand").Value) Then
-                    e.CellElement.DrawFill = True
-                    e.CellElement.GradientStyle = Telerik.WinControls.GradientStyles.Solid
-                    e.CellElement.BackColor = Color.FromArgb(255, 209, 140)
-                ElseIf (e.Column.Name = "CE2016Anzahl" And e.Row.Cells("CE2016Anzahl").Value <= e.Row.Cells("CE2016AnzahlMeldestand").Value) Then
+                ElseIf (e.Column.Name = "HinweismarkeAnzahl" And e.Row.Cells("HinweismarkeAnzahl").Value <= e.Row.Cells("HinweismarkeAnzahlMeldestand").Value) Then
                     e.CellElement.DrawFill = True
                     e.CellElement.GradientStyle = Telerik.WinControls.GradientStyles.Solid
                     e.CellElement.BackColor = Color.FromArgb(255, 209, 140)
 
-                ElseIf e.Column.Name.ToLower.Contains("archiv") Then
-                    e.CellElement.DrawFill = True
-                    e.CellElement.GradientStyle = Telerik.WinControls.GradientStyles.Solid
-                    e.CellElement.BackColor = Color.LightGray
 
                 Else
                     e.CellElement.DrawFill = False
@@ -852,43 +679,7 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
         End Using
     End Sub
 
-    'Private Sub RadGridView1_CellFormatting(sender As Object, e As CellFormattingEventArgs) Handles RadGridView1.CellFormatting
-    '    Try
-    '        Dim template As GridViewTemplate = e.Row.ViewTemplate
 
-    '        If (e.Column.Name = "Benannte_Stelle_Anzahl" And e.Row.Cells("Benannte_Stelle_Anzahl").Value <= e.Row.Cells("Benannte_Stelle_Anzahl_Meldestand").Value) Then
-    '            e.CellElement.DrawFill = True
-    '            e.CellElement.GradientStyle = Telerik.WinControls.GradientStyles.Solid
-    '            e.CellElement.BackColor = Color.FromArgb(255, 209, 140)
-    '        ElseIf (e.Column.Name = "Eichsiegel_13x13_Anzahl" And e.Row.Cells("Eichsiegel_13x13_Anzahl").Value <= e.Row.Cells("Eichsiegel_13x13_Anzahl_Meldestand").Value) Then
-    '            e.CellElement.DrawFill = True
-    '            e.CellElement.GradientStyle = Telerik.WinControls.GradientStyles.Solid
-    '            e.CellElement.BackColor = Color.FromArgb(255, 209, 140)
-    '        ElseIf (e.Column.Name = "Eichsiegel_Rund_Anzahl" And e.Row.Cells("Eichsiegel_Rund_Anzahl").Value <= e.Row.Cells("Eichsiegel_Rund_Anzahl_Meldestand").Value) Then
-    '            e.CellElement.DrawFill = True
-    '            e.CellElement.GradientStyle = Telerik.WinControls.GradientStyles.Solid
-    '            e.CellElement.BackColor = Color.FromArgb(255, 209, 140)
-    '        ElseIf (e.Column.Name = "Hinweismarke_Gelocht_Anzahl" And e.Row.Cells("Hinweismarke_Gelocht_Anzahl").Value <= e.Row.Cells("Hinweismarke_Gelocht_Anzahl_Meldestand").Value) Then
-    '            e.CellElement.DrawFill = True
-    '            e.CellElement.GradientStyle = Telerik.WinControls.GradientStyles.Solid
-    '            e.CellElement.BackColor = Color.FromArgb(255, 209, 140)
-    '        ElseIf (e.Column.Name = "Grünes_M_Anzahl" And e.Row.Cells("Grünes_M_Anzahl").Value <= e.Row.Cells("Grünes_M_Anzahl_Meldestand").Value) Then
-    '            e.CellElement.DrawFill = True
-    '            e.CellElement.GradientStyle = Telerik.WinControls.GradientStyles.Solid
-    '            e.CellElement.BackColor = Color.FromArgb(255, 209, 140)
-    '        ElseIf (e.Column.Name = "CE_Anzahl" And e.Row.Cells("CE_Anzahl").Value <= e.Row.Cells("CE_Anzahl_Meldestand").Value) Then
-    '            e.CellElement.DrawFill = True
-    '            e.CellElement.GradientStyle = Telerik.WinControls.GradientStyles.Solid
-    '            e.CellElement.BackColor = Color.FromArgb(255, 209, 140)
-    '        Else
-    '            e.CellElement.DrawFill = False
-    '            e.CellElement.GradientStyle = Telerik.WinControls.GradientStyles.Linear
-    '            e.CellElement.BackColor = Color.White
-
-    '        End If
-    '    Catch ex As Exception
-    '    End Try
-    'End Sub
 
 #End Region
 

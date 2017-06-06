@@ -51,16 +51,6 @@ Partial Public Class Eichprotokoll
     Public Property Fallbeschleunigung_ms2 As Nullable(Of Boolean)
     Public Property Sicherung_BenannteStelle As Nullable(Of Boolean)
     Public Property Sicherung_BenannteStelleAnzahl As Nullable(Of Short)
-    Public Property Sicherung_Eichsiegel13x13 As Nullable(Of Boolean)
-    Public Property Sicherung_Eichsiegel13x13Anzahl As Nullable(Of Short)
-    Public Property Sicherung_EichsiegelRund As Nullable(Of Boolean)
-    Public Property Sicherung_EichsiegelRundAnzahl As Nullable(Of Short)
-    Public Property Sicherung_HinweismarkeGelocht As Nullable(Of Boolean)
-    Public Property Sicherung_HinweismarkeGelochtAnzahl As Nullable(Of Short)
-    Public Property Sicherung_GruenesM As Nullable(Of Boolean)
-    Public Property Sicherung_GruenesMAnzahl As Nullable(Of Short)
-    Public Property Sicherung_CE As Nullable(Of Boolean)
-    Public Property Sicherung_CEAnzahl As Nullable(Of Short)
     Public Property Sicherung_DatenAusgelesen As Nullable(Of Boolean)
     Public Property Sicherung_AlibispeicherEingerichtet As Nullable(Of Boolean)
     Public Property Sicherung_AlibispeicherAufbewahrungsdauerReduziert As Nullable(Of Boolean)
@@ -78,8 +68,12 @@ Partial Public Class Eichprotokoll
     Public Property Beschaffenheitspruefung_LetztePruefung As String
     Public Property Beschaffenheitspruefung_Pruefscheinnummer As String
     Public Property Beschaffenheitspruefung_EichfahrzeugFirma As String
-    Public Property Sicherung_CE2016 As Nullable(Of Boolean)
-    Public Property Sicherung_CE2016Anzahl As Nullable(Of Integer)
+    Public Property Sicherung_SicherungsmarkeKlein As Nullable(Of Boolean)
+    Public Property Sicherung_SicherungsmarkeKleinAnzahl As Nullable(Of Short)
+    Public Property Sicherung_SicherungsmarkeGross As Nullable(Of Boolean)
+    Public Property Sicherung_SicherungsmarkeGrossAnzahl As Nullable(Of Short)
+    Public Property Sicherung_Hinweismarke As Nullable(Of Boolean)
+    Public Property Sicherung_HinweismarkeAnzahl As Nullable(Of Short)
 
     Public Overridable Property Lookup_Konformitaetsbewertungsverfahren As Lookup_Konformitaetsbewertungsverfahren
     Public Overridable Property Eichprozess As ICollection(Of Eichprozess) = New HashSet(Of Eichprozess)

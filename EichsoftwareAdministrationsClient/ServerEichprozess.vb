@@ -29,8 +29,8 @@ Partial Public Class ServerEichprozess
     Public Property ZurBearbeitungGesperrtDurch As String
     Public Property Standardwaage As Nullable(Of Boolean)
 
-    Public Overridable Property ServerMogelstatistik As ICollection(Of ServerMogelstatistik) = New HashSet(Of ServerMogelstatistik)
     Public Overridable Property ServerEichprotokoll As ServerEichprotokoll
+    Public Overridable Property ServerMogelstatistik As ICollection(Of ServerMogelstatistik) = New HashSet(Of ServerMogelstatistik)
     Public Overridable Property ServerKompatiblitaetsnachweis As ServerKompatiblitaetsnachweis
     Public Overridable Property ServerLookup_Auswertegeraet As ServerLookup_Auswertegeraet
     Public Overridable Property ServerLookup_Bearbeitungsstatus As ServerLookup_Bearbeitungsstatus

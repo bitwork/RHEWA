@@ -1669,43 +1669,25 @@ Namespace EichsoftwareWebservice
         Private Sicherung_BenannteStelleAnzahlField As System.Nullable(Of Short)
         
         <System.Runtime.Serialization.OptionalFieldAttribute()>  _
-        Private Sicherung_CEField As System.Nullable(Of Boolean)
-        
-        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
-        Private Sicherung_CE2016Field As System.Nullable(Of Boolean)
-        
-        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
-        Private Sicherung_CE2016AnzahlField As System.Nullable(Of Short)
-        
-        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
-        Private Sicherung_CEAnzahlField As System.Nullable(Of Short)
-        
-        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private Sicherung_DatenAusgelesenField As System.Nullable(Of Boolean)
         
         <System.Runtime.Serialization.OptionalFieldAttribute()>  _
-        Private Sicherung_Eichsiegel13x13Field As System.Nullable(Of Boolean)
+        Private Sicherung_HinweismarkeField As System.Nullable(Of Boolean)
         
         <System.Runtime.Serialization.OptionalFieldAttribute()>  _
-        Private Sicherung_Eichsiegel13x13AnzahlField As System.Nullable(Of Short)
+        Private Sicherung_HinweismarkeAnzahlField As System.Nullable(Of Short)
         
         <System.Runtime.Serialization.OptionalFieldAttribute()>  _
-        Private Sicherung_EichsiegelRundField As System.Nullable(Of Boolean)
+        Private Sicherung_SicherungsmarkeGrossField As System.Nullable(Of Boolean)
         
         <System.Runtime.Serialization.OptionalFieldAttribute()>  _
-        Private Sicherung_EichsiegelRundAnzahlField As System.Nullable(Of Short)
+        Private Sicherung_SicherungsmarkeGrossAnzahlField As System.Nullable(Of Short)
         
         <System.Runtime.Serialization.OptionalFieldAttribute()>  _
-        Private Sicherung_GruenesMField As System.Nullable(Of Boolean)
+        Private Sicherung_SicherungsmarkeKleinField As System.Nullable(Of Boolean)
         
         <System.Runtime.Serialization.OptionalFieldAttribute()>  _
-        Private Sicherung_GruenesMAnzahlField As System.Nullable(Of Short)
-        
-        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
-        Private Sicherung_HinweismarkeGelochtField As System.Nullable(Of Boolean)
-        
-        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
-        Private Sicherung_HinweismarkeGelochtAnzahlField As System.Nullable(Of Short)
+        Private Sicherung_SicherungsmarkeKleinAnzahlField As System.Nullable(Of Short)
         
         <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private Taraeinrichtung_ErweiterteRichtigkeitspruefungOKField As String
@@ -2399,58 +2381,6 @@ Namespace EichsoftwareWebservice
         End Property
         
         <System.Runtime.Serialization.DataMemberAttribute()>  _
-        Public Property Sicherung_CE() As System.Nullable(Of Boolean)
-            Get
-                Return Me.Sicherung_CEField
-            End Get
-            Set
-                If (Me.Sicherung_CEField.Equals(value) <> true) Then
-                    Me.Sicherung_CEField = value
-                    Me.RaisePropertyChanged("Sicherung_CE")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute()>  _
-        Public Property Sicherung_CE2016() As System.Nullable(Of Boolean)
-            Get
-                Return Me.Sicherung_CE2016Field
-            End Get
-            Set
-                If (Me.Sicherung_CE2016Field.Equals(value) <> true) Then
-                    Me.Sicherung_CE2016Field = value
-                    Me.RaisePropertyChanged("Sicherung_CE2016")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute()>  _
-        Public Property Sicherung_CE2016Anzahl() As System.Nullable(Of Short)
-            Get
-                Return Me.Sicherung_CE2016AnzahlField
-            End Get
-            Set
-                If (Me.Sicherung_CE2016AnzahlField.Equals(value) <> true) Then
-                    Me.Sicherung_CE2016AnzahlField = value
-                    Me.RaisePropertyChanged("Sicherung_CE2016Anzahl")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute()>  _
-        Public Property Sicherung_CEAnzahl() As System.Nullable(Of Short)
-            Get
-                Return Me.Sicherung_CEAnzahlField
-            End Get
-            Set
-                If (Me.Sicherung_CEAnzahlField.Equals(value) <> true) Then
-                    Me.Sicherung_CEAnzahlField = value
-                    Me.RaisePropertyChanged("Sicherung_CEAnzahl")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Sicherung_DatenAusgelesen() As System.Nullable(Of Boolean)
             Get
                 Return Me.Sicherung_DatenAusgelesenField
@@ -2464,105 +2394,79 @@ Namespace EichsoftwareWebservice
         End Property
         
         <System.Runtime.Serialization.DataMemberAttribute()>  _
-        Public Property Sicherung_Eichsiegel13x13() As System.Nullable(Of Boolean)
+        Public Property Sicherung_Hinweismarke() As System.Nullable(Of Boolean)
             Get
-                Return Me.Sicherung_Eichsiegel13x13Field
+                Return Me.Sicherung_HinweismarkeField
             End Get
             Set
-                If (Me.Sicherung_Eichsiegel13x13Field.Equals(value) <> true) Then
-                    Me.Sicherung_Eichsiegel13x13Field = value
-                    Me.RaisePropertyChanged("Sicherung_Eichsiegel13x13")
+                If (Me.Sicherung_HinweismarkeField.Equals(value) <> true) Then
+                    Me.Sicherung_HinweismarkeField = value
+                    Me.RaisePropertyChanged("Sicherung_Hinweismarke")
                 End If
             End Set
         End Property
         
         <System.Runtime.Serialization.DataMemberAttribute()>  _
-        Public Property Sicherung_Eichsiegel13x13Anzahl() As System.Nullable(Of Short)
+        Public Property Sicherung_HinweismarkeAnzahl() As System.Nullable(Of Short)
             Get
-                Return Me.Sicherung_Eichsiegel13x13AnzahlField
+                Return Me.Sicherung_HinweismarkeAnzahlField
             End Get
             Set
-                If (Me.Sicherung_Eichsiegel13x13AnzahlField.Equals(value) <> true) Then
-                    Me.Sicherung_Eichsiegel13x13AnzahlField = value
-                    Me.RaisePropertyChanged("Sicherung_Eichsiegel13x13Anzahl")
+                If (Me.Sicherung_HinweismarkeAnzahlField.Equals(value) <> true) Then
+                    Me.Sicherung_HinweismarkeAnzahlField = value
+                    Me.RaisePropertyChanged("Sicherung_HinweismarkeAnzahl")
                 End If
             End Set
         End Property
         
         <System.Runtime.Serialization.DataMemberAttribute()>  _
-        Public Property Sicherung_EichsiegelRund() As System.Nullable(Of Boolean)
+        Public Property Sicherung_SicherungsmarkeGross() As System.Nullable(Of Boolean)
             Get
-                Return Me.Sicherung_EichsiegelRundField
+                Return Me.Sicherung_SicherungsmarkeGrossField
             End Get
             Set
-                If (Me.Sicherung_EichsiegelRundField.Equals(value) <> true) Then
-                    Me.Sicherung_EichsiegelRundField = value
-                    Me.RaisePropertyChanged("Sicherung_EichsiegelRund")
+                If (Me.Sicherung_SicherungsmarkeGrossField.Equals(value) <> true) Then
+                    Me.Sicherung_SicherungsmarkeGrossField = value
+                    Me.RaisePropertyChanged("Sicherung_SicherungsmarkeGross")
                 End If
             End Set
         End Property
         
         <System.Runtime.Serialization.DataMemberAttribute()>  _
-        Public Property Sicherung_EichsiegelRundAnzahl() As System.Nullable(Of Short)
+        Public Property Sicherung_SicherungsmarkeGrossAnzahl() As System.Nullable(Of Short)
             Get
-                Return Me.Sicherung_EichsiegelRundAnzahlField
+                Return Me.Sicherung_SicherungsmarkeGrossAnzahlField
             End Get
             Set
-                If (Me.Sicherung_EichsiegelRundAnzahlField.Equals(value) <> true) Then
-                    Me.Sicherung_EichsiegelRundAnzahlField = value
-                    Me.RaisePropertyChanged("Sicherung_EichsiegelRundAnzahl")
+                If (Me.Sicherung_SicherungsmarkeGrossAnzahlField.Equals(value) <> true) Then
+                    Me.Sicherung_SicherungsmarkeGrossAnzahlField = value
+                    Me.RaisePropertyChanged("Sicherung_SicherungsmarkeGrossAnzahl")
                 End If
             End Set
         End Property
         
         <System.Runtime.Serialization.DataMemberAttribute()>  _
-        Public Property Sicherung_GruenesM() As System.Nullable(Of Boolean)
+        Public Property Sicherung_SicherungsmarkeKlein() As System.Nullable(Of Boolean)
             Get
-                Return Me.Sicherung_GruenesMField
+                Return Me.Sicherung_SicherungsmarkeKleinField
             End Get
             Set
-                If (Me.Sicherung_GruenesMField.Equals(value) <> true) Then
-                    Me.Sicherung_GruenesMField = value
-                    Me.RaisePropertyChanged("Sicherung_GruenesM")
+                If (Me.Sicherung_SicherungsmarkeKleinField.Equals(value) <> true) Then
+                    Me.Sicherung_SicherungsmarkeKleinField = value
+                    Me.RaisePropertyChanged("Sicherung_SicherungsmarkeKlein")
                 End If
             End Set
         End Property
         
         <System.Runtime.Serialization.DataMemberAttribute()>  _
-        Public Property Sicherung_GruenesMAnzahl() As System.Nullable(Of Short)
+        Public Property Sicherung_SicherungsmarkeKleinAnzahl() As System.Nullable(Of Short)
             Get
-                Return Me.Sicherung_GruenesMAnzahlField
+                Return Me.Sicherung_SicherungsmarkeKleinAnzahlField
             End Get
             Set
-                If (Me.Sicherung_GruenesMAnzahlField.Equals(value) <> true) Then
-                    Me.Sicherung_GruenesMAnzahlField = value
-                    Me.RaisePropertyChanged("Sicherung_GruenesMAnzahl")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute()>  _
-        Public Property Sicherung_HinweismarkeGelocht() As System.Nullable(Of Boolean)
-            Get
-                Return Me.Sicherung_HinweismarkeGelochtField
-            End Get
-            Set
-                If (Me.Sicherung_HinweismarkeGelochtField.Equals(value) <> true) Then
-                    Me.Sicherung_HinweismarkeGelochtField = value
-                    Me.RaisePropertyChanged("Sicherung_HinweismarkeGelocht")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute()>  _
-        Public Property Sicherung_HinweismarkeGelochtAnzahl() As System.Nullable(Of Short)
-            Get
-                Return Me.Sicherung_HinweismarkeGelochtAnzahlField
-            End Get
-            Set
-                If (Me.Sicherung_HinweismarkeGelochtAnzahlField.Equals(value) <> true) Then
-                    Me.Sicherung_HinweismarkeGelochtAnzahlField = value
-                    Me.RaisePropertyChanged("Sicherung_HinweismarkeGelochtAnzahl")
+                If (Me.Sicherung_SicherungsmarkeKleinAnzahlField.Equals(value) <> true) Then
+                    Me.Sicherung_SicherungsmarkeKleinAnzahlField = value
+                    Me.RaisePropertyChanged("Sicherung_SicherungsmarkeKleinAnzahl")
                 End If
             End Set
         End Property
@@ -6725,7 +6629,7 @@ Namespace EichsoftwareWebservice
         Function GetNeuesAWG(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal LetztesUpdate As Date, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, ByVal SyncAllesSeit As Date, ByVal SyncAllesBis As Date) As EichsoftwareWebservice.ServerLookup_Auswertegeraet()
         
         <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IEichsoftwareWebservice/AddEichmarkenverwaltung", ReplyAction:="http://tempuri.org/IEichsoftwareWebservice/AddEichmarkenverwaltungResponse")>  _
-        Function AddEichmarkenverwaltung(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal BenutzerFK As String, ByVal AnzahlBenannteStelle As Integer, ByVal AnzahlEichsiegel13x13 As Integer, ByVal AnzahlEichsiegelRund As Integer, ByVal AnzahlHinweismarke As Integer, ByVal AnzahlGruenesM As Integer, ByVal AnzahlCE As Integer, ByVal AnzahlCE2016 As Integer, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean
+        Function AddEichmarkenverwaltung(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal BenutzerFK As String, ByVal AnzahlBenannteStelle As Integer, ByVal AnzahlSicherungsmarkeKlein As Integer, ByVal AnzahlSicherungsmarkeGross As Integer, ByVal AnzahlHinweismarke As Integer, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean
         
         <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IEichsoftwareWebservice/AddEichprozess", ReplyAction:="http://tempuri.org/IEichsoftwareWebservice/AddEichprozessResponse")>  _
         Function AddEichprozess(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByRef pObjEichprozess As EichsoftwareWebservice.ServerEichprozess, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, ByVal Programmversionsnummer As String) As Boolean
@@ -6843,8 +6747,8 @@ Namespace EichsoftwareWebservice
             Return MyBase.Channel.GetNeuesAWG(HEKennung, Lizenzschluessel, LetztesUpdate, WindowsUsername, Domainname, Computername, SyncAllesSeit, SyncAllesBis)
         End Function
         
-        Public Function AddEichmarkenverwaltung(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal BenutzerFK As String, ByVal AnzahlBenannteStelle As Integer, ByVal AnzahlEichsiegel13x13 As Integer, ByVal AnzahlEichsiegelRund As Integer, ByVal AnzahlHinweismarke As Integer, ByVal AnzahlGruenesM As Integer, ByVal AnzahlCE As Integer, ByVal AnzahlCE2016 As Integer, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements EichsoftwareWebservice.IEichsoftwareWebservice.AddEichmarkenverwaltung
-            Return MyBase.Channel.AddEichmarkenverwaltung(HEKennung, Lizenzschluessel, BenutzerFK, AnzahlBenannteStelle, AnzahlEichsiegel13x13, AnzahlEichsiegelRund, AnzahlHinweismarke, AnzahlGruenesM, AnzahlCE, AnzahlCE2016, WindowsUsername, Domainname, Computername)
+        Public Function AddEichmarkenverwaltung(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal BenutzerFK As String, ByVal AnzahlBenannteStelle As Integer, ByVal AnzahlSicherungsmarkeKlein As Integer, ByVal AnzahlSicherungsmarkeGross As Integer, ByVal AnzahlHinweismarke As Integer, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements EichsoftwareWebservice.IEichsoftwareWebservice.AddEichmarkenverwaltung
+            Return MyBase.Channel.AddEichmarkenverwaltung(HEKennung, Lizenzschluessel, BenutzerFK, AnzahlBenannteStelle, AnzahlSicherungsmarkeKlein, AnzahlSicherungsmarkeGross, AnzahlHinweismarke, WindowsUsername, Domainname, Computername)
         End Function
         
         Public Function AddEichprozess(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByRef pObjEichprozess As EichsoftwareWebservice.ServerEichprozess, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, ByVal Programmversionsnummer As String) As Boolean Implements EichsoftwareWebservice.IEichsoftwareWebservice.AddEichprozess

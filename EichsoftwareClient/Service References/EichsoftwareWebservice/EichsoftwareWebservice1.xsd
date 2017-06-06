@@ -136,19 +136,13 @@
       <xs:element minOccurs="0" name="Sicherung_Bemerkungen" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Sicherung_BenannteStelle" nillable="true" type="xs:boolean" />
       <xs:element minOccurs="0" name="Sicherung_BenannteStelleAnzahl" nillable="true" type="xs:short" />
-      <xs:element minOccurs="0" name="Sicherung_CE" nillable="true" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Sicherung_CE2016" nillable="true" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Sicherung_CE2016Anzahl" nillable="true" type="xs:short" />
-      <xs:element minOccurs="0" name="Sicherung_CEAnzahl" nillable="true" type="xs:short" />
       <xs:element minOccurs="0" name="Sicherung_DatenAusgelesen" nillable="true" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Sicherung_Eichsiegel13x13" nillable="true" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Sicherung_Eichsiegel13x13Anzahl" nillable="true" type="xs:short" />
-      <xs:element minOccurs="0" name="Sicherung_EichsiegelRund" nillable="true" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Sicherung_EichsiegelRundAnzahl" nillable="true" type="xs:short" />
-      <xs:element minOccurs="0" name="Sicherung_GruenesM" nillable="true" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Sicherung_GruenesMAnzahl" nillable="true" type="xs:short" />
-      <xs:element minOccurs="0" name="Sicherung_HinweismarkeGelocht" nillable="true" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Sicherung_HinweismarkeGelochtAnzahl" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="Sicherung_Hinweismarke" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Sicherung_HinweismarkeAnzahl" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="Sicherung_SicherungsmarkeGross" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Sicherung_SicherungsmarkeGrossAnzahl" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="Sicherung_SicherungsmarkeKlein" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Sicherung_SicherungsmarkeKleinAnzahl" nillable="true" type="xs:short" />
       <xs:element minOccurs="0" name="Taraeinrichtung_ErweiterteRichtigkeitspruefungOK" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Taraeinrichtung_GenauigkeitTarierungOK" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Taraeinrichtung_TaraausgleichseinrichtungOK" nillable="true" type="xs:string" />
