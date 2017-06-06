@@ -1167,7 +1167,7 @@
     <None Include="DLLs\Telerik.WinControls.UI.dll" />
     <None Include="DLLs\TelerikCommon.dll" />
     <None Include="DLLs\TelerikData.dll" />
-    <Content Include="EichsoftwareClientdatabase.sdf">
+    <Content Include="Resources\EichsoftwareClientdatabase.sdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\user_edit1.png" />

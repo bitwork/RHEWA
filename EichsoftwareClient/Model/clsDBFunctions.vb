@@ -81,7 +81,31 @@ Public Class clsDBFunctions
         Return True
     End Function
 
+    Public Shared Function CheckLocalDatabaseExists() As Boolean
+        Using DBContext As New Entities
+            Try
+                DBContext.Database.Connection.Open()
+
+            Catch ex As SqlServerCe.SqlCeException
+                Return False
+            End Try
+            Return True
+        End Using
+    End Function
+
+    Public Shared Function CopyLocalDatabaseToApplicationFolder()
+        Dim currentpath = Reflection.Assembly.GetExecutingAssembly().Location.Replace(Reflection.Assembly.GetExecutingAssembly().ManifestModule.Name, "")
+        Dim databasename = "EichsoftwareClientdatabase.sdf"
+        If IO.File.Exists(currentpath & databasename) = False Then
+            IO.File.Copy(currentpath & "Resources\" & databasename, currentpath & databasename)
+        End If
+    End Function
+
     Public Shared Function UpdateClientDatenbank()
+        If CheckLocalDatabaseExists() = False Then
+            CopyLocalDatabaseToApplicationFolder()
+        End If
+
         Try
 
 
