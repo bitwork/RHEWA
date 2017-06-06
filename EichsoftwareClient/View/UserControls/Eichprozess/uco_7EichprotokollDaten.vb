@@ -841,8 +841,19 @@ Public Class uco_7EichprotokollDaten
         End Try
     End Sub
     Private Sub BackgroundWorkerPruefscheinnummern_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorkerPruefscheinnummern.DoWork
+        Try
+
+        Catch ex As Exception
+
+        End Try
         If ListPruefscheinnnummern Is Nothing Then
             ListPruefscheinnnummern = clsWebserviceFunctions.GetStatusPruefscheinnummern()
+
+            'abbruch
+            If ListPruefscheinnnummern Is Nothing Then
+                Return
+            End If
+
             ListPruefscheinnnummernGesperrt = (From o In ListPruefscheinnnummern Where o.Gesperrt = True Or o.GesperrtDurchDatum = True).ToList
             ListPruefscheinnnummern = (From o In ListPruefscheinnnummern Where o.Gesperrt = False And o.GesperrtDurchDatum = False).ToList
         End If
