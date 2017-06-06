@@ -510,7 +510,7 @@ Public Class uco_7EichprotokollDaten
     ''' <remarks></remarks>
     ''' <author></author>
     ''' <commentauthor></commentauthor>
-    Private Function ValidateControls() As Boolean
+    Protected Friend Overrides Function ValidateControls() As Boolean
         'prüfen ob alle Felder ausgefüllt sind
         Me.AbortSaving = False
         For Each GroupBox In RadScrollablePanel1.PanelContainer.Controls

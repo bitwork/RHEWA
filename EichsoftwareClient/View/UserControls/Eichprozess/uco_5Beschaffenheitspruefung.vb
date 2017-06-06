@@ -127,7 +127,7 @@ Public Class uco_5Beschaffenheitspruefung
     ''' <remarks></remarks>
     ''' <author></author>
     ''' <commentauthor></commentauthor>
-    Private Function ValidateControls() As Boolean
+    Protected Friend Overrides Function ValidateControls() As Boolean
         Me.AbortSaving = False
         'prüfen ob alle Felder ausgefüllt sind
 

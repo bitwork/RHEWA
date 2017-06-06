@@ -124,7 +124,7 @@ Public Class uco17PruefungEignungFuerAchlastwaegungen
     ''' <remarks></remarks>
     ''' <author></author>
     ''' <commentauthor></commentauthor>
-    Private Function ValidateControls() As Boolean
+    Protected Friend Overrides Function ValidateControls() As Boolean
         'prüfen ob alle Felder ausgefüllt sind
         Me.AbortSaving = False
 
@@ -148,20 +148,11 @@ Public Class uco17PruefungEignungFuerAchlastwaegungen
 
         'fehlermeldung anzeigen bei falscher validierung
         Dim result = Me.ShowValidationErrorBox(False)
+        Return ProcessResult(result)
 
-        If result = DialogResult.Yes Or result = DialogResult.Ignore Then
-            Return True
-        ElseIf result = DialogResult.Retry Then
-            ' Ist = soll
-            OverwriteIstSoll()
-            'rekursiver Aufruf
-            Return ValidateControls()
-        Else
-            Return False
-        End If
     End Function
 
-    Private Sub OverwriteIstSoll()
+    Protected Friend Overrides Sub OverwriteIstSoll()
         RadCheckBoxWaagegeprueft.Checked = True
         RadCheckBoxWaageNichtGeeignet.Checked = True
         RadCheckBoxZufahrtenInOrdnung.Checked = True

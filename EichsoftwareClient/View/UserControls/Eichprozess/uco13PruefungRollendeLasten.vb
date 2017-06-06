@@ -543,7 +543,7 @@ Public Class uco13PruefungRollendeLasten
     ''' <remarks></remarks>
     ''' <author></author>
     ''' <commentauthor></commentauthor>
-    Private Function ValidateControls() As Boolean
+    Protected Friend Overrides Function ValidateControls() As Boolean
         'prüfen ob alle Felder ausgefüllt sind
         Me.AbortSaving = False
 
@@ -569,20 +569,11 @@ Public Class uco13PruefungRollendeLasten
 
         'fehlermeldung anzeigen bei falscher validierung
         Dim result = Me.ShowValidationErrorBox(False)
+        Return ProcessResult(result)
 
-        If result = DialogResult.Yes Or result = DialogResult.Ignore Then
-            Return True
-        ElseIf result = DialogResult.Retry Then
-            ' Ist = soll
-            OverwriteIstSoll()
-            'rekursiver Aufruf
-            Return ValidateControls()
-        Else
-            Return False
-        End If
     End Function
 
-    Private Sub OverwriteIstSoll()
+    Protected Friend Overrides Sub OverwriteIstSoll()
         RadTextBoxControlAnzeigeLinks1.Text = RadTextBoxControlLastLinks1.Text
         RadTextBoxControlAnzeigeLinks2.Text = RadTextBoxControlLastLinks2.Text
         RadTextBoxControlAnzeigeLinks3.Text = RadTextBoxControllastLinks3.Text

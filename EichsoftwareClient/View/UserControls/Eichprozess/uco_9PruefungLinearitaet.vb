@@ -459,7 +459,7 @@ Public Class uco_9PruefungLinearitaet
     ''' <remarks></remarks>
     ''' <author></author>
     ''' <commentauthor></commentauthor>
-    Private Function ValidateControls() As Boolean
+    Protected Friend Overrides Function ValidateControls() As Boolean
         'prüfen ob alle Felder ausgefüllt sind
         AbortSaving = False
 
@@ -484,21 +484,12 @@ Public Class uco_9PruefungLinearitaet
 
         'fehlermeldung anzeigen bei falscher validierung
         Dim result = Me.ShowValidationErrorBox(False)
+        Return ProcessResult(result)
 
-        If result = DialogResult.Yes Or result = DialogResult.Ignore Then
-            Return True
-        ElseIf result = DialogResult.Retry Then
-            ' Ist = soll
-            OverwriteIstSoll()
-            'rekursiver Aufruf
-            Return ValidateControls()
-        Else
-            Return False
-        End If
 
     End Function
 
-    Private Sub OverwriteIstSoll()
+    Protected Friend Overrides Sub OverwriteIstSoll()
         RadTextBoxControlBereich1DisplayWeight1.Text = RadTextBoxControlBereich1Weight1.Text
         RadTextBoxControlBereich1DisplayWeight2.Text = RadTextBoxControlBereich1Weight2.Text
         RadTextBoxControlBereich1DisplayWeight3.Text = RadTextBoxControlBereich1Weight3.Text

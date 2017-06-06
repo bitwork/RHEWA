@@ -517,7 +517,7 @@ Public Class uco_3Kompatiblititaetsnachweis
     ''' <remarks></remarks>
     ''' <author></author>
     ''' <commentauthor></commentauthor>
-    Private Function ValidateControls() As Boolean
+    Protected Friend Overrides Function ValidateControls() As Boolean
 
         'If Debugger.IsAttached Then 'für debugzwecke
         '    Return True
@@ -625,21 +625,8 @@ Public Class uco_3Kompatiblititaetsnachweis
 
         If Me.AbortSaving = True Then
             If Debugger.IsAttached Then 'standardwerte füllen für schnelleres testen
-                If Me.ShowValidationErrorBox(True) = DialogResult.Retry Then
-                    RadTextBoxControlWaageHoechstlast1.Text = "1000"
-                    RadTextBoxControlWaageHoechstlast2.Text = "2000"
-                    RadTextBoxControlWaageEichwert1.Text = "5"
-                    RadTextBoxControlWaageEichwert2.Text = "25"
-                    RadTextBoxControlWaageAnzahlWaegezellen.Text = "4"
-                    RadTextBoxControlEinschaltnullstellbereich.Text = "1"
-                    RadTextBoxControlWaageEcklastzuschlag.Text = "1"
-                    RadTextBoxControlWaageTotlast.Text = "1"
-                    RadTextBoxControlWZHoechstlast.Text = "2500"
-                    Return True
-                Else
-                    MessageBox.Show(My.Resources.GlobaleLokalisierung.PflichtfelderAusfuellen, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-                    Return False
-                End If
+                Dim result = Me.ShowValidationErrorBox(True)
+                Return ProcessResult(result)
             Else
                 MessageBox.Show(My.Resources.GlobaleLokalisierung.PflichtfelderAusfuellen, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 Return False
@@ -652,6 +639,18 @@ Public Class uco_3Kompatiblititaetsnachweis
 
         'prüfen ob eine neue WZ angelegt wurde (über button und neuem Dialog vermutlich)
     End Function
+
+    Protected Friend Overrides Sub OverwriteIstSoll()
+        RadTextBoxControlWaageHoechstlast1.Text = "1000"
+        RadTextBoxControlWaageHoechstlast2.Text = "2000"
+        RadTextBoxControlWaageEichwert1.Text = "5"
+        RadTextBoxControlWaageEichwert2.Text = "25"
+        RadTextBoxControlWaageAnzahlWaegezellen.Text = "4"
+        RadTextBoxControlEinschaltnullstellbereich.Text = "1"
+        RadTextBoxControlWaageEcklastzuschlag.Text = "1"
+        RadTextBoxControlWaageTotlast.Text = "1"
+        RadTextBoxControlWZHoechstlast.Text = "2500"
+    End Sub
 
     'Speicherroutine
     Protected Overrides Sub SaveNeeded(ByVal UserControl As UserControl)

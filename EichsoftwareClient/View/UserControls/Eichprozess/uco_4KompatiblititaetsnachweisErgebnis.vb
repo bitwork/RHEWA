@@ -873,7 +873,7 @@ Public Class uco_4KompatiblititaetsnachweisErgebnis
     ''' <remarks></remarks>
     ''' <author></author>
     ''' <commentauthor></commentauthor>
-    Private Function ValidateControls() As Boolean
+    Protected Friend Overrides Function ValidateControls() As Boolean
         AbortSaving = False
         'prüfen ob alle Felder ausgefüllt sind
         For Each GroupBox In FlowLayoutPanel1.Controls
@@ -890,12 +890,8 @@ Public Class uco_4KompatiblititaetsnachweisErgebnis
         Next
         'fehlermeldung anzeigen bei falscher validierung
         Dim result = Me.ShowValidationErrorBox(True)
+        Return ProcessResult(result)
 
-        If result = DialogResult.Yes Or result = DialogResult.Retry Or result = DialogResult.Ignore Then
-            Return True
-        Else
-            Return False
-        End If
 
     End Function
 

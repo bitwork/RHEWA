@@ -8,7 +8,7 @@
     ''' <remarks></remarks>
     ''' <author></author>
     ''' <commentauthor></commentauthor>
-    Private Function validateControls() As Boolean
+    Private Function ValidateControls() As Boolean
 
         If RadTextBoxControlWZTyp.Text.Trim.Equals("") Then
             Return False

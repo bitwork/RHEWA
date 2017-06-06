@@ -1453,7 +1453,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
     ''' <remarks></remarks>
     ''' <author></author>
     ''' <commentauthor></commentauthor>
-    Private Function ValidateControls() As Boolean
+    Protected Friend Overrides Function ValidateControls() As Boolean
         'prüfen ob alle Felder ausgefüllt sind
         AbortSaving = False
 
@@ -1464,34 +1464,15 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
 
             'fehlermeldung anzeigen bei falscher validierung
             Dim result = Me.ShowValidationErrorBox(False)
+            Return ProcessResult(result)
 
-            If result = DialogResult.Yes Or result = DialogResult.Ignore Then
-                Return True
-            ElseIf result = DialogResult.Retry Then
-                ' Ist = soll
-                OverwriteIstSoll()
-                'rekursiver Aufruf
-                Return ValidateControls()
-            Else
-                Return False
-            End If
         Else
             ValidateControlsAussermittigeBelastung()
             ValidatecontrolsWiederholungen()
             'fehlermeldung anzeigen bei falscher validierung
             Dim result = Me.ShowValidationErrorBox(False, My.Resources.GlobaleLokalisierung.EichfehlergrenzenNichtEingehalten)
+            Return ProcessResult(result)
 
-            If result = DialogResult.Yes Or result = DialogResult.Ignore Then
-                Return True
-
-            ElseIf result = DialogResult.Retry Then
-                ' Ist = soll
-                OverwriteIstSoll()
-                'rekursiver Aufruf
-                Return ValidateControls()
-            Else
-                Return False
-            End If
         End If
 
         'Speichern soll nicht abgebrochen werden, da alles okay ist
@@ -1500,7 +1481,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
 
     End Function
 
-    Private Sub OverwriteIstSoll()
+     Protected Friend Overrides Sub OverwriteIstSoll()
         RadCheckBoxNullstellungOK.Checked = True
         RadTextBoxControlDisplayWeight1.Text = RadTextBoxControlWeight1.Text
         RadTextBoxControlDisplayWeight2.Text = RadTextBoxControlWeight2.Text

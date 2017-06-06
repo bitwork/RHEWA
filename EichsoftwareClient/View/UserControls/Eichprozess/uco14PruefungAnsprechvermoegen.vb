@@ -231,7 +231,7 @@ Public Class uco14PruefungAnsprechvermoegen
     ''' <remarks></remarks>
     ''' <author></author>
     ''' <commentauthor></commentauthor>
-    Private Function ValidateControls() As Boolean
+    Protected Friend Overrides Function ValidateControls() As Boolean
         'prüfen ob alle Felder ausgefüllt sind
         Me.AbortSaving = False
 
@@ -263,21 +263,11 @@ RadTextBoxControlLast2.Text.Trim = "" Or
 
         End If
         Dim result = Me.ShowValidationErrorBox(False)
-
-        If result = DialogResult.Yes Or result = DialogResult.Ignore Then
-            Return True
-        ElseIf result = DialogResult.Retry Then
-            ' Ist = soll
-            OverwriteIstSoll()
-            'rekursiver Aufruf
-            Return ValidateControls()
-        Else
-            Return False
-        End If
+        Return ProcessResult(result)
 
     End Function
 
-    Private Sub OverwriteIstSoll()
+    Protected Friend Overrides Sub OverwriteIstSoll()
         RadTextBoxControlAnzeige1.Text = RadTextBoxControlLast1.Text
         RadTextBoxControlAnzeige2.Text = RadTextBoxControlLast2.Text
         RadTextBoxControlAnzeige3.Text = RadTextBoxControlLast3.Text

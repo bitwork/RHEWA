@@ -532,7 +532,7 @@ Public Class uco_2StammdatenEingabe
     ''' <remarks></remarks>
     ''' <author></author>
     ''' <commentauthor></commentauthor>
-    Private Function ValidateControls() As Boolean
+    Protected Friend Overrides Function ValidateControls() As Boolean
         Me.AbortSaving = False
         'prüfen ob alle Felder ausgefüllt sind
         For Each GroupBox In RadScrollablePanel1.PanelContainer.Controls
@@ -597,23 +597,7 @@ Public Class uco_2StammdatenEingabe
         If Me.AbortSaving = True Then
             If Debugger.IsAttached Then 'standardwerte füllen für schnelleres testen
                 If Me.ShowValidationErrorBox(True) = DialogResult.Retry Then
-                    RadTextBoxAWGBauartzulassung.Text = "Bauartzulassung"
-                    RadTextBoxAWGHersteller.Text = "bitwork GmbH"
-                    RadTextBoxAWGPruefbericht.Text = "Prüfbereicht"
-                    RadTextBoxStammdatenOrt.Text = "Ort"
-                    RadTextBoxStammdatenPLZ.Text = "PLZ"
-                    RadTextBoxStammdatenStrasse.Text = "Strasse"
-                    RadTextBoxStammdatenWaagenbaufirma.Text = "Waagenbaufirma"
-                    RadTextBoxWaageSeriennummer.Text = "Seriennummer"
-                    RadTextBoxWaageZulassungsinhaber.Text = "Zulassungsinhaber"
-                    RadTextBoxWZBauartzulassung.Text = "Bauartzulassung"
-                    RadTextBoxWZPruefbericht.Text = "Pruefbereicht"
-                    RadDropdownlistAWGTyp.SelectedIndex = 1
-                    RadDropdownlistlWZHersteller.Text = "Hersteller"
-                    RadDropdownlistlWZTyp.SelectedIndex = 1
-                    RadDropDownListWaagenArt.SelectedIndex = 1
-                    RadDropdownlistWaagenTyp.SelectedIndex = 1
-
+                    OverwriteIstSoll()
                     Return True
                 Else
                     Return False
@@ -626,6 +610,25 @@ Public Class uco_2StammdatenEingabe
         End If
         Return True
     End Function
+
+    Protected Friend Overrides Sub OverwriteIstSoll()
+        RadTextBoxAWGBauartzulassung.Text = "Bauartzulassung"
+        RadTextBoxAWGHersteller.Text = "bitwork GmbH"
+        RadTextBoxAWGPruefbericht.Text = "Prüfbereicht"
+        RadTextBoxStammdatenOrt.Text = "Ort"
+        RadTextBoxStammdatenPLZ.Text = "PLZ"
+        RadTextBoxStammdatenStrasse.Text = "Strasse"
+        RadTextBoxStammdatenWaagenbaufirma.Text = "Waagenbaufirma"
+        RadTextBoxWaageSeriennummer.Text = "Seriennummer"
+        RadTextBoxWaageZulassungsinhaber.Text = "Zulassungsinhaber"
+        RadTextBoxWZBauartzulassung.Text = "Bauartzulassung"
+        RadTextBoxWZPruefbericht.Text = "Pruefbereicht"
+        RadDropdownlistAWGTyp.SelectedIndex = 1
+        RadDropdownlistlWZHersteller.Text = "Hersteller"
+        RadDropdownlistlWZTyp.SelectedIndex = 1
+        RadDropDownListWaagenArt.SelectedIndex = 1
+        RadDropdownlistWaagenTyp.SelectedIndex = 1
+    End Sub
 
     'Speicherroutine
     Protected Overrides Sub SaveNeeded(ByVal UserControl As UserControl)

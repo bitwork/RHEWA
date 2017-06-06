@@ -1337,8 +1337,6 @@ Public Class EichsoftwareWebservice
     ''' <param name="AnzahlSicherungsmarkeKlein"></param>
     ''' <param name="AnzahlSicherungsmarkeGross"></param>
     ''' <param name="AnzahlHinweismarke"></param>
-    ''' <param name="AnzahlGruenesM"></param>
-    ''' <param name="AnzahlCE"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
     Public Function AddEichmarkenverwaltung(ByVal HEKennung As String, Lizenzschluessel As String, ByVal BenutzerIDFK As String, ByVal AnzahlBenannteStelle As Integer, ByVal AnzahlSicherungsmarkeKlein As Integer, ByVal AnzahlSicherungsmarkeGross As Integer, ByVal AnzahlHinweismarke As Integer, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements IEichsoftwareWebservice.AddEichmarkenverwaltung

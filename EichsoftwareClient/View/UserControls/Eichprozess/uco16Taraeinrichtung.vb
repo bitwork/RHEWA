@@ -125,7 +125,7 @@ Public Class uco16Taraeinrichtung
     ''' <remarks></remarks>
     ''' <author></author>
     ''' <commentauthor></commentauthor>
-    Private Function ValidateControls() As Boolean
+    Protected Friend Overrides Function ValidateControls() As Boolean
         'prüfen ob alle Felder ausgefüllt sind
         Me.AbortSaving = False
 
@@ -139,29 +139,14 @@ Public Class uco16Taraeinrichtung
             RadCheckBoxTaraErweiterteRichtigkeitspruefung.Focus()
 
         End If
-        'TH Kein Pflichtfeld laut Herrn Strack
-        'If RadCheckBoxTaraGenauigkeitTarrierung.Checked = False Then
-        '    AbortSaveing = True
-        '    RadCheckBoxTaraGenauigkeitTarrierung.Focus()
 
-        'End If
 
         'fehlermeldung anzeigen bei falscher validierung
         Dim result = Me.ShowValidationErrorBox(False)
-
-        If result = DialogResult.Yes Or result = DialogResult.Ignore Then
-            Return True
-        ElseIf result = DialogResult.Retry Then
-            ' Ist = soll
-            OverwriteIstSoll()
-            'rekursiver Aufruf
-            Return ValidateControls()
-        Else
-            Return False
-        End If
+        Return ProcessResult(result)
     End Function
 
-    Private Sub OverwriteIstSoll()
+    Protected Friend Overrides Sub OverwriteIstSoll()
         RadCheckBoxTaraausgleicheinrichtungOK.Checked = True
         RadCheckBoxTaraErweiterteRichtigkeitspruefung.Checked = True
     End Sub

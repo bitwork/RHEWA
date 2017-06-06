@@ -186,6 +186,16 @@ Public Class ucoContent
     Protected Friend Overridable Sub LoadFromDatabase()
 
     End Sub
+
+    Protected Friend Overridable Sub OverwriteIstSoll()
+
+    End Sub
+    Protected Friend Overridable Function ValidateControls() As Boolean
+        Return True
+    End Function
+
+
+
 #End Region
 #Region "Overidables"
     ''' <summary>
@@ -723,6 +733,21 @@ Public Class ucoContent
         Catch ex As Exception
             Return Nothing
         End Try
+    End Function
+
+
+
+    Protected Function ProcessResult(result As DialogResult) As Boolean
+        If result = DialogResult.Yes Or result = DialogResult.Ignore Then
+            Return True
+        ElseIf result = DialogResult.Retry Then
+            ' Ist = soll
+            OverwriteIstSoll()
+            'rekursiver Aufruf
+            Return ValidateControls()
+        Else
+            Return False
+        End If
     End Function
 
     Protected Sub CloneAndSendServerObjekt()

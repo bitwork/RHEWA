@@ -39,7 +39,7 @@ Public Class uco_6EichprotokollVerfahrenswahl
     ''' <remarks></remarks>
     ''' <author></author>
     ''' <commentauthor></commentauthor>
-    Private Function ValidateControls() As Boolean
+    Protected Friend Overrides Function ValidateControls() As Boolean
         'prüfen ob alle Felder ausgefüllt sind
         Me.AbortSaving = False
         If RadRadioButtonFahrzeugwaagen.IsChecked Or RadRadioButtonNormalien.IsChecked Or RadRadioButtonStaffelverfahren.IsChecked Then

@@ -729,7 +729,7 @@ Public Class uco10PruefungStaffelverfahren
     ''' <remarks></remarks>
     ''' <author></author>
     ''' <commentauthor></commentauthor>
-    Private Function ValidateControls() As Boolean
+    Protected Friend Overrides Function ValidateControls() As Boolean
 
         'prüfen ob alle Felder ausgefüllt sind
         AbortSaving = False
@@ -760,17 +760,9 @@ Public Class uco10PruefungStaffelverfahren
         If AbortSaving Then
             'fehlermeldung anzeigen bei falscher validierung
             Dim result = Me.ShowValidationErrorBox(False)
+            Return ProcessResult(result)
 
-            If result = DialogResult.Yes Or result = DialogResult.Ignore Then
-                Return True
-            ElseIf result = DialogResult.Retry Then
-                ' Ist = soll
-                OverwriteIstSoll()
-                'rekursiver Aufruf
-                Return ValidateControls()
-            Else
-                Return False
-            End If
+
         End If
 
         'logik zum Valideren der Eichfehlergrenzen der einzelnen Staffeln. Abhängig davon wieviele Staffeln überhaupt ausgefüllt sind
@@ -811,26 +803,14 @@ Public Class uco10PruefungStaffelverfahren
         If AbortSaving Then
             'fehlermeldung anzeigen bei falscher validierung
             Dim result = Me.ShowValidationErrorBox(False, My.Resources.GlobaleLokalisierung.EichfehlergrenzenNichtEingehalten)
+            Return ProcessResult(result)
 
-            If result = DialogResult.Yes Or result = DialogResult.Ignore Then
-                Return True
-            ElseIf result = DialogResult.Retry Then
-                ' Ist = soll
-                OverwriteIstSoll()
-                'rekursiver Aufruf
-                Return ValidateControls()
-            Else
-                Return False
-            End If
         End If
 
         Return True
 
     End Function
 
-    Private Sub OverwriteIstSoll()
-        Throw New NotImplementedException()
-    End Sub
 
 #End Region
 
