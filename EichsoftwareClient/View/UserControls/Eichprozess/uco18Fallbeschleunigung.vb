@@ -146,7 +146,10 @@ Public Class uco18Fallbeschleunigung
 
     Private Sub OverwriteIstSoll()
         RadCheckBoxSchwerkraft.Checked = True
-        RadTextBoxControlG.Text = "9,81"
+
+        If RadTextBoxControlG.Text = "" Then
+            RadTextBoxControlG.Text = "9,81"
+        End If
     End Sub
 
 #End Region
