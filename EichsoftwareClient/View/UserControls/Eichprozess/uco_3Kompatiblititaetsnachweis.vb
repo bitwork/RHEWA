@@ -1025,35 +1025,9 @@ Public Class uco_3Kompatiblititaetsnachweis
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub RadTextBoxControlWaageHoechstlast1_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles RadTextBoxControlWZWiderstand.Validating, RadTextBoxControlWZWaegezellenkennwert.Validating, RadTextBoxControlWZTemperaturbereichMIN.Validating, RadTextBoxControlWZTemperaturbereichMAX.Validating, RadTextBoxControlWZRueckkehrVorlastsignal.Validating, RadTextBoxControlWZMinTeilungswert.Validating, RadTextBoxControlWZMindestvorlast.Validating, RadTextBoxControlWZMaxTeilungswerte.Validating, RadTextBoxControlWZKriechteilungsfaktor.Validating, RadTextBoxControlWZHoechstteilungsfaktor.Validating, RadTextBoxControlWZHoechstlast.Validating, RadTextBoxControlWZBruchteilEichfehlergrenze.Validating, RadTextBoxControlWaageUebersetzungsverhaeltnis.Validating, RadTextBoxControlWaageTotlast.Validating, RadTextBoxControlWaageKabelquerschnitt.Validating, RadTextBoxControlWaageKabellaenge.Validating, RadTextBoxControlWaageHoechstlast3.Validating, RadTextBoxControlWaageHoechstlast2.Validating, RadTextBoxControlWaageHoechstlast1.Validating, RadTextBoxControlWaageEichwert3.Validating, RadTextBoxControlWaageEichwert2.Validating, RadTextBoxControlWaageEichwert1.Validating, RadTextBoxControlWaageEcklastzuschlag.Validating, RadTextBoxControlWaageAnzahlWaegezellen.Validating, RadTextBoxControlEinschaltnullstellbereich.Validating, RadTextBoxControlAWGAnschlussart.Validating
-        Dim result As Decimal
-        If Not sender.readonly = True Then
 
-            'damit das Vorgehen nicht so aggresiv ist, wird es bei leerem Text ignoriert:
-            If CType(sender, Telerik.WinControls.UI.RadTextBox).Text.Equals("") Then
-                CType(sender, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.FromArgb(0, 255, 255, 255)
-                Exit Sub
-            End If
+        BasicTextboxNumberValidation(sender, e)
 
-            'versuchen ob der Text in eine Zahl konvertiert werden kann
-            If Not Decimal.TryParse(CType(sender, Telerik.WinControls.UI.RadTextBox).Text, result) Then
-                e.Cancel = True
-                CType(sender, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
-                System.Media.SystemSounds.Exclamation.Play()
-
-            Else 'rahmen zurücksetzen
-                'prüfen ob negative zahlen eingegeben wurden
-                If sender.text.ToString.Trim.StartsWith("-") Then
-                    e.Cancel = True
-                    CType(sender, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
-                    System.Media.SystemSounds.Exclamation.Play()
-
-                Else
-                    CType(sender, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.FromArgb(0, 255, 255, 255)
-
-                End If
-
-            End If
-        End If
 
     End Sub
 

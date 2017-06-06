@@ -63,27 +63,7 @@ Public Class uco13PruefungRollendeLasten
 #Region "Bereich Links"
 
     Private Sub RadTextBoxControlLastLinks1_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles RadTextBoxControlLastRechts3.Validating, RadTextBoxControlLastRechts2.Validating, RadTextBoxControlLastRechts1.Validating, RadTextBoxControllastLinks3.Validating, RadTextBoxControlLastLinks2.Validating, RadTextBoxControlLastLinks1.Validating, RadTextBoxControlAnzeigeRechts3.Validating, RadTextBoxControlAnzeigeRechts2.Validating, RadTextBoxControlAnzeigeRechts1.Validating, RadTextBoxControlAnzeigeLinks3.Validating, RadTextBoxControlAnzeigeLinks2.Validating, RadTextBoxControlAnzeigeLinks1.Validating
-
-        Dim result As Decimal
-        If Not sender.readonly = True Then
-
-            'damit das Vorgehen nicht so aggresiv ist, wird es bei leerem Text ignoriert:
-            If CType(sender, Telerik.WinControls.UI.RadTextBox).Text.Equals("") Then
-                CType(sender, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.FromArgb(0, 255, 255, 255)
-                Exit Sub
-            End If
-
-            'versuchen ob der Text in eine Zahl konvertiert werden kann
-            If Not Decimal.TryParse(CType(sender, Telerik.WinControls.UI.RadTextBox).Text, result) Then
-                e.Cancel = True
-                CType(sender, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
-                System.Media.SystemSounds.Exclamation.Play()
-
-            Else 'rahmen zurücksetzen
-                CType(sender, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.FromArgb(0, 255, 255, 255)
-            End If
-        End If
-
+        BasicTextboxValidation(sender, e)
     End Sub
 
     Private Sub BerechneFehlerundEFGLinks(Optional Sender As Telerik.WinControls.UI.RadTextBox = Nothing)

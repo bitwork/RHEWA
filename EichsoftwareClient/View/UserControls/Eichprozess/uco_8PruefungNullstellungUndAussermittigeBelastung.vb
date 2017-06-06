@@ -84,25 +84,7 @@ RadTextBoxControlBereich1Weight12.Validating, RadTextBoxControlBereich1Weight11.
 RadTextBoxControlBereich1DisplayWeight9.Validating, RadTextBoxControlBereich1DisplayWeight8.Validating, RadTextBoxControlBereich1DisplayWeight7.Validating, RadTextBoxControlBereich1DisplayWeight6.Validating,
 RadTextBoxControlBereich1DisplayWeight5.Validating, RadTextBoxControlBereich1DisplayWeight4.Validating, RadTextBoxControlBereich1DisplayWeight3.Validating, RadTextBoxControlBereich1DisplayWeight2.Validating,
 RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1DisplayWeight11.Validating, RadTextBoxControlBereich1DisplayWeight10.Validating, RadTextBoxControlBereich1DisplayWeight1.Validating
-        Dim result As Decimal
-        If Not sender.readonly = True Then
-
-            'damit das Vorgehen nicht so aggresiv ist, wird es bei leerem Text ignoriert:
-            If CType(sender, Telerik.WinControls.UI.RadTextBox).Text.Equals("") Then
-                CType(sender, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.FromArgb(0, 255, 255, 255)
-                Exit Sub
-            End If
-
-            'versuchen ob der Text in eine Zahl konvertiert werden kann
-            If Not Decimal.TryParse(CType(sender, Telerik.WinControls.UI.RadTextBox).Text, result) Then
-                e.Cancel = True
-                CType(sender, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
-                System.Media.SystemSounds.Exclamation.Play()
-
-            Else 'rahmen zurücksetzen
-                CType(sender, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.FromArgb(0, 255, 255, 255)
-            End If
-        End If
+        BasicTextboxValidation(sender, e)
     End Sub
 
     Private Sub RadCheckBoxBereich1VEL1_MouseClick(sender As Object, e As MouseEventArgs) Handles RadCheckBoxBereich3VEL9.MouseClick, RadCheckBoxBereich3VEL8.MouseClick, RadCheckBoxBereich3VEL7.MouseClick,

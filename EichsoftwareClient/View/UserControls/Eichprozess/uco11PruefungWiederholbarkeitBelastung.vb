@@ -129,25 +129,7 @@ Public Class uco11PruefungWiederholbarkeitBelastung
        RadTextBoxControlBereich2Weight1.Validating,
        RadTextBoxControlBereich2Weight2.Validating, RadTextBoxControlBereich2Weight3.Validating
 
-        Dim result As Decimal
-        If Not sender.readonly = True Then
-
-            'damit das Vorgehen nicht so aggresiv ist, wird es bei leerem Text ignoriert:
-            If CType(sender, Telerik.WinControls.UI.RadTextBox).Text.Equals("") Then
-                CType(sender, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.FromArgb(0, 255, 255, 255)
-                Exit Sub
-            End If
-
-            'versuchen ob der Text in eine Zahl konvertiert werden kann
-            If Not Decimal.TryParse(CType(sender, Telerik.WinControls.UI.RadTextBox).Text, result) Then
-                e.Cancel = True
-                CType(sender, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
-                System.Media.SystemSounds.Exclamation.Play()
-
-            Else 'rahmen zurücksetzen
-                CType(sender, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.FromArgb(0, 255, 255, 255)
-            End If
-        End If
+        BasicTextboxValidation(sender, e)
     End Sub
 
 #Region "Bereich 1/2 MAX"
