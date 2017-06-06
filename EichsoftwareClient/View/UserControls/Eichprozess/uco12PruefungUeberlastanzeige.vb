@@ -120,30 +120,23 @@ Public Class uco12PruefungUeberlastanzeige
     ''' <remarks></remarks>
     ''' <author></author>
     ''' <commentauthor></commentauthor>
-    Private Function ValidateControls() As Boolean
+    Protected Friend Overrides Function ValidateControls() As Boolean
         'prüfen ob alle Felder ausgefüllt sind
         Me.AbortSaving = False
 
         If RadCheckBoxUeberlast.Checked = False Then
             AbortSaving = True
+            Dim result = Me.ShowValidationErrorBox(False)
+            Return ProcessResult(result)
         End If
 
         'fehlermeldung anzeigen bei falscher validierung
-        Dim result = Me.ShowValidationErrorBox(False)
-
-        If result = DialogResult.Yes Or result = DialogResult.Ignore Then
-            Return True
-        ElseIf result = DialogResult.Retry Then
-            ' Ist = soll
-            OverwriteIstSoll()
-            'rekursiver Aufruf
-            Return ValidateControls()
-        Else
-            Return False
-        End If
+        Return True
     End Function
 
-    Private Sub OverwriteIstSoll()
+
+
+    Protected Friend Overrides sub OverwriteIstSoll()
         RadCheckBoxUeberlast.Checked = True
     End Sub
 
