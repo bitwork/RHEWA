@@ -673,6 +673,40 @@ Public Class ucoContent
             Return Nothing
         End Try
     End Function
+
+    Protected Sub CloneAndSendServerObjekt()
+        Using dbcontext As New Entities
+            'auf fehlerhaft Status setzen
+            objEichprozess.FK_Bearbeitungsstatus = 2
+            objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit Konformitätsbewertungsbevollmächtigter sich den DS von Anfang angucken muss
+
+
+            Dim objServerEichprozess As New EichsoftwareWebservice.ServerEichprozess
+            objServerEichprozess = clsClientServerConversionFunctions.CopyServerObjectProperties(objServerEichprozess, objEichprozess, clsClientServerConversionFunctions.enuModus.RHEWASendetAnClient)
+            Using Webcontext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
+                Try
+                    Webcontext.Open()
+                Catch ex As Exception
+                    MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    Exit Sub
+                End Try
+
+                Dim objLiz = (From db In dbcontext.Lizensierung Where db.Lizenzschluessel = AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel And db.HEKennung = AktuellerBenutzer.Instance.Lizenz.HEKennung).FirstOrDefault
+
+                Try
+                    'add prüft anhand der Vorgangsnummer automatisch ob ein neuer Prozess angelegt, oder ein vorhandener aktualisiert wird
+                    Webcontext.AddEichprozess(objLiz.HEKennung, objLiz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name, Version)
+
+                    'schließen des dialoges
+                    ParentFormular.Close()
+                Catch ex As Exception
+                    MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    ' Status zurück setzen
+                    Exit Sub
+                End Try
+            End Using
+        End Using
+    End Sub
 #End Region
 
 End Class

@@ -5,7 +5,6 @@ Imports System.IO
 Public Class Uco21Versenden
 
     Inherits ucoContent
-    'Private AktuellerStatusDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann
     Private WithEvents objFTP As New clsFTP
     Private FTPUploadPath As String = "" 'Wert der gesetzt wird, falls ein Dokument zum FTP hochgeladen wird. Dieser wert entspricht dann dem reelen Dateipfad auf dem FTP Server
     Sub New()
@@ -41,9 +40,7 @@ Public Class Uco21Versenden
 
         'falls der Konformitätsbewertungsvorgang nur lesend betrchtet werden soll, wird versucht alle Steuerlemente auf REadonly zu setzen. Wenn das nicht klappt,werden sie disabled
         If DialogModus = enuDialogModus.lesend Then
-            '  ParentFormular.BreadCrumb.FindeElementUndSelektiere(GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe)
             DisableControls(Me)
-
         End If
     End Sub
 
@@ -70,9 +67,9 @@ Public Class Uco21Versenden
 
     Private Sub FillControls()
         'wenn noch nicht gesendet wurde
-        If objEichprozess.FK_Bearbeitungsstatus = 4 Then
+        If objEichprozess.FK_Bearbeitungsstatus = GlobaleEnumeratoren.enuBearbeitungsstatus.noch_nicht_versendet Then
             RadButtonAnRhewaSenden.Enabled = True
-        ElseIf objEichprozess.FK_Bearbeitungsstatus = 2 Then 'wenn fehlerhaft
+        ElseIf objEichprozess.FK_Bearbeitungsstatus = GlobaleEnumeratoren.enuBearbeitungsstatus.Fehlerhaft Then 'wenn fehlerhaft
             RadButtonAnRhewaSenden.Enabled = True
         Else
             RadButtonAnRhewaSenden.Enabled = False
@@ -116,7 +113,7 @@ Public Class Uco21Versenden
         Dim objServerEichprozess As New EichsoftwareWebservice.ServerEichprozess
 
         'auf versendet Status setzen
-        If objEichprozess.FK_Bearbeitungsstatus = 4 Or objEichprozess.FK_Bearbeitungsstatus = 2 Then 'wenn neu oder fehlerhaft auf versendet zurücksetzen
+        If objEichprozess.FK_Bearbeitungsstatus = GlobaleEnumeratoren.enuBearbeitungsstatus.noch_nicht_versendet Or objEichprozess.FK_Bearbeitungsstatus = GlobaleEnumeratoren.enuBearbeitungsstatus.Fehlerhaft Then 'wenn neu oder fehlerhaft auf versendet zurücksetzen
             'neuen Context aufbauen
             Using Context As New Entities
                 'prüfen ob CREATE oder UPDATE durchgeführt werden muss
@@ -128,7 +125,7 @@ Public Class Uco21Versenden
                         objEichprozess = dobjEichprozess
                         'neuen Status zuweisen
                         UpdateObject()
-                        objEichprozess.FK_Bearbeitungsstatus = 1
+                        objEichprozess.FK_Bearbeitungsstatus = GlobaleEnumeratoren.enuBearbeitungsstatus.Wartet_auf_Bearbeitung
                         'objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit RHEWA sich den DS von Anfang angucken kann
 
                         Try
@@ -241,7 +238,7 @@ Public Class Uco21Versenden
                     'neuen Status zuweisen
 
                     ' Status zurück setzen
-                    objEichprozess.FK_Bearbeitungsstatus = 4
+                    objEichprozess.FK_Bearbeitungsstatus = GlobaleEnumeratoren.enuBearbeitungsstatus.noch_nicht_versendet
                     objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Versenden
 
                     'SaveWithoutValidationNeeded(Me)
@@ -390,11 +387,6 @@ Public Class Uco21Versenden
         ParentFormular.CurrentEichprozess = objEichprozess
         Me.ParentFormular.ValidiereRueckwaerts(validationErrorName, Me)
 
-        'For Each uco In Me.ParentFormular.BreadCrumb.
-        '    validationErrorName = uco.Name
-        '    AbortSaving = uco.ValidationNeeded()
-        '    If AbortSaving = True Then Exit For
-        'Next
         'alle Controls validieren bevor versendet wird
         If validationErrorName.Equals("") = False Then
             Me.AbortSaving = True 'todo entfernen
@@ -417,41 +409,9 @@ Public Class Uco21Versenden
     Protected Overrides Sub VersendenNeeded(TargetUserControl As UserControl)
         If Me.Equals(TargetUserControl) Then
             MyBase.VersendenNeeded(TargetUserControl)
-
-            Using dbcontext As New Entities
-                '   objEichprozess = (From a In dbcontext.Eichprozess.Include("Eichprotokoll").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
-
-                Dim objServerEichprozess As New EichsoftwareWebservice.ServerEichprozess
-                'auf fehlerhaft Status setzen
-                objEichprozess.FK_Bearbeitungsstatus = 2
-                '   objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit Konformitätsbewertungsbevollmächtigter sich den DS von Anfang angucken muss
-                UpdateObject()
-
-                'erzeuegn eines Server Objektes auf basis des aktuellen DS
-                objServerEichprozess = clsClientServerConversionFunctions.CopyServerObjectProperties(objServerEichprozess, objEichprozess, clsClientServerConversionFunctions.enuModus.RHEWASendetAnClient)
-                Using Webcontext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
-                    Try
-                        Webcontext.Open()
-                    Catch ex As Exception
-                        MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                        Exit Sub
-                    End Try
-
-                    Dim objLiz = (From db In dbcontext.Lizensierung Where db.Lizenzschluessel = AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel And db.HEKennung = AktuellerBenutzer.Instance.Lizenz.HEKennung).FirstOrDefault
-
-                    Try
-                        'add prüft anhand der Vorgangsnummer automatisch ob ein neuer Prozess angelegt, oder ein vorhandener aktualisiert wird
-                        Webcontext.AddEichprozess(objLiz.HEKennung, objLiz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name, Version)
-
-                        'schließen des dialoges
-                        ParentFormular.Close()
-                    Catch ex As Exception
-                        MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                        ' Status zurück setzen
-                        Exit Sub
-                    End Try
-                End Using
-            End Using
+            UpdateObject()
+            'Erzeugen eines Server Objektes auf basis des aktuellen DS. Setzt es auf es ausserdem auf Fehlerhaft
+            CloneAndSendServerObjekt()
         End If
     End Sub
 

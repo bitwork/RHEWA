@@ -358,35 +358,9 @@ Public Class uco_6EichprotokollVerfahrenswahl
         If Me.Equals(TargetUserControl) Then
             MyBase.VersendenNeeded(TargetUserControl)
 
-            Dim objServerEichprozess As New EichsoftwareWebservice.ServerEichprozess
-            'auf fehlerhaft Status setzen
-            objEichprozess.FK_Bearbeitungsstatus = 2
-            objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit Konformitätsbewertungsbevollmächtigter sich den DS von Anfang angucken muss
             UpdateObject()
-
-            'erzeuegn eines Server Objektes auf basis des aktuellen DS
-            objServerEichprozess = clsClientServerConversionFunctions.CopyServerObjectProperties(objServerEichprozess, objEichprozess, clsClientServerConversionFunctions.enuModus.RHEWASendetAnClient)
-            Using Webcontext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
-                Try
-                    Webcontext.Open()
-                Catch ex As Exception
-                    MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    Exit Sub
-                End Try
-
-                Try
-                    'add prüft anhand der Vorgangsnummer automatisch ob ein neuer Prozess angelegt, oder ein vorhandener aktualisiert wird
-                    Webcontext.AddEichprozess(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name, Version)
-
-                    'schließen des dialoges
-                    ParentFormular.Close()
-                Catch ex As Exception
-                    MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    ' Status zurück setzen
-                    Exit Sub
-                End Try
-
-            End Using
+            'Erzeugen eines Server Objektes auf basis des aktuellen DS. Setzt es auf es ausserdem auf Fehlerhaft
+            CloneAndSendServerObjekt()
         End If
     End Sub
 End Class
