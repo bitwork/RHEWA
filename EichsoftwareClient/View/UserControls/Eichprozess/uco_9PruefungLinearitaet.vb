@@ -814,198 +814,36 @@ Public Class uco_9PruefungLinearitaet
 
                 'neuen Context aufbauen
                 Using Context As New Entities
-
+                    SaveRoutine(Context)
                     'prüfen ob CREATE oder UPDATE durchgeführt werden muss
                     If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
                         'prüfen ob das Objekt anhand der ID gefunden werden kann
                         Dim dobjEichprozess As Eichprozess = Context.Eichprozess.FirstOrDefault(Function(value) value.Vorgangsnummer = objEichprozess.Vorgangsnummer)
-                        If Not dobjEichprozess Is Nothing Then
-                            'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
-                            objEichprozess = dobjEichprozess
 
-                            Dim intBereiche As Integer = 0
-                            If objEichprozess.Lookup_Waagenart.Art = "Einbereichswaage" Then
-                                intBereiche = 1
-                            ElseIf objEichprozess.Lookup_Waagenart.Art = "Zweibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Zweiteilungswaage" Then
-                                intBereiche = 2
-                            ElseIf objEichprozess.Lookup_Waagenart.Art = "Dreibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Dreiteilungswaage" Then
-                                intBereiche = 3
-                            End If
 
-                            'wenn es defintiv noch keine pruefungen gibt, neue Anlegen
-                            If _ListPruefungPruefungLinearitaetSteigend.Count = 0 Then
-                                'anzahl Bereiche auslesen um damit die anzahl der benötigten Iterationen und Objekt Erzeugungen zu erfahren
-
-                                For j = 1 To intBereiche
-                                    For intMesspunkt As Integer = 1 To _intAnzahlMesspunkte
-                                        Dim objPruefung = Context.PruefungLinearitaetSteigend.Create
-                                        objPruefung.Messpunkt = intMesspunkt
-                                        objPruefung.Bereich = j
-
-                                        UpdatePruefungsLinSteigendObject(objPruefung)
-                                        Context.SaveChanges()
-
-                                        objEichprozess.Eichprotokoll.PruefungLinearitaetSteigend.Add(objPruefung)
-                                        Context.SaveChanges()
-                                        _ListPruefungPruefungLinearitaetSteigend.Add(objPruefung)
-                                    Next
-                                Next
-                            Else ' es gibt bereits welche
-                                'jedes objekt initialisieren und aus context laden und updaten
-                                For Each objPruefung In _ListPruefungPruefungLinearitaetSteigend
-                                    objPruefung = Context.PruefungLinearitaetSteigend.FirstOrDefault(Function(value) value.ID = objPruefung.ID)
-                                    UpdatePruefungsLinSteigendObject(objPruefung)
-                                    Context.SaveChanges()
-                                Next
-
-                                'sonderfall es wurden neue messpunkte hinzugefügt
-
-                                'zählen der angezeigten messpunkte
-                                Dim neueAnzahlMesspunkte As Integer = 0
-                                If Not _ListPruefungPruefungLinearitaetSteigend.Count = 0 Then
-                                    'Zählen der eingetragenden Messpunkte anhand der sichtparen panel
-
-                                    For Each Control In RadGroupBoxBereich1.Controls
-                                        Try
-                                            If CType(Control, Panel).Visible = True Then
-                                                neueAnzahlMesspunkte += 1
-
-                                            End If
-                                        Catch ex As Exception
-                                        End Try
-                                    Next
-
-                                End If
-
-                                'hinzufügen
-                                If neueAnzahlMesspunkte > _intAnzahlUrpsMessPunkte Then
-                                    'differenz der messpunkte ermitteln
-                                    neueAnzahlMesspunkte = neueAnzahlMesspunkte - _intAnzahlUrpsMessPunkte
-                                    For j = 1 To intBereiche
-                                        For i As Integer = 1 To neueAnzahlMesspunkte
-                                            Dim objPruefung = Context.PruefungLinearitaetSteigend.Create
-                                            objPruefung.Messpunkt = _intAnzahlUrpsMessPunkte + i 'vorherige Messpunkte addiert mit schleifendurchlauf
-                                            objPruefung.Bereich = j
-
-                                            UpdatePruefungsLinSteigendObject(objPruefung)
-                                            Context.SaveChanges()
-
-                                            objEichprozess.Eichprotokoll.PruefungLinearitaetSteigend.Add(objPruefung)
-                                            Context.SaveChanges()
-                                            _ListPruefungPruefungLinearitaetSteigend.Add(objPruefung)
-                                        Next
-                                    Next
-                                    'löschen
-                                ElseIf neueAnzahlMesspunkte < _intAnzahlUrpsMessPunkte Then
-                                    Dim query = From o In Context.PruefungLinearitaetSteigend Where CInt(o.Messpunkt) > neueAnzahlMesspunkte 'die DS abrufen in denen der bereich hoeher ist als das neue Max an Bereichen
-                                    For Each Pruefung In query
-                                        Context.PruefungLinearitaetSteigend.Remove(Pruefung)
-                                    Next
-
-                                    Context.SaveChanges()
-                                End If
-
-                            End If
-
-                            'linearität Fallend
-                            'wenn es defintiv noch keine pruefungen gibt, neue Anlegen
-                            If _ListPruefungPruefungLinearitaetFallend.Count = 0 Then
-                                'anzahl Bereiche auslesen um damit die anzahl der benötigten Iterationen und Objekt Erzeugungen zu erfahren
-
-                                For j = 1 To intBereiche
-                                    For intMesspunkt As Integer = 1 To _intAnzahlMesspunkte
-                                        Dim objPruefung = Context.PruefungLinearitaetFallend.Create
-                                        objPruefung.Messpunkt = intMesspunkt
-                                        objPruefung.Bereich = j
-
-                                        UpdatePruefungsLinFallendObject(objPruefung)
-                                        Context.SaveChanges()
-
-                                        objEichprozess.Eichprotokoll.PruefungLinearitaetFallend.Add(objPruefung)
-                                        Context.SaveChanges()
-                                        _ListPruefungPruefungLinearitaetFallend.Add(objPruefung)
-                                    Next
-                                Next
-                            Else ' es gibt bereits welche
-                                'jedes objekt initialisieren und aus context laden und updaten
-                                For Each objPruefung In _ListPruefungPruefungLinearitaetFallend
-                                    objPruefung = Context.PruefungLinearitaetFallend.FirstOrDefault(Function(value) value.ID = objPruefung.ID)
-                                    UpdatePruefungsLinFallendObject(objPruefung)
-                                    Context.SaveChanges()
-                                Next
-
-                                'sonderfall es wurden neue messpunkte hinzugefügt
-
-                                'zählen der angezeigten messpunkte
-                                Dim neueAnzahlMesspunkte As Integer = 0
-                                If Not _ListPruefungPruefungLinearitaetFallend.Count = 0 Then
-                                    'Zählen der eingetragenden Messpunkte
-
-                                    For Each Control In RadGroupBoxBereich1.Controls
-                                        Try
-                                            If CType(Control, Panel).Visible = True Then
-                                                neueAnzahlMesspunkte += 1
-
-                                            End If
-                                        Catch ex As Exception
-                                        End Try
-                                    Next
-
-                                End If
-
-                                'hinzufügen
-                                If neueAnzahlMesspunkte > _intAnzahlUrpsMessPunkte Then
-                                    'differenz der messpunkte ermitteln
-                                    neueAnzahlMesspunkte = neueAnzahlMesspunkte - _intAnzahlUrpsMessPunkte
-                                    For j = 1 To intBereiche
-                                        For i As Integer = 1 To neueAnzahlMesspunkte
-                                            Dim objPruefung = Context.PruefungLinearitaetFallend.Create
-                                            objPruefung.Messpunkt = _intAnzahlUrpsMessPunkte + i 'vorherige Messpunkte addiert mit schleifendurchlauf
-                                            objPruefung.Bereich = j
-
-                                            UpdatePruefungsLinFallendObject(objPruefung)
-                                            Context.SaveChanges()
-
-                                            objEichprozess.Eichprotokoll.PruefungLinearitaetFallend.Add(objPruefung)
-                                            Context.SaveChanges()
-                                            _ListPruefungPruefungLinearitaetFallend.Add(objPruefung)
-                                        Next
-                                    Next
-                                    'löschen
-                                ElseIf neueAnzahlMesspunkte < _intAnzahlUrpsMessPunkte Then
-
-                                    Dim query = From o In Context.PruefungLinearitaetFallend Where CInt(o.Messpunkt) > neueAnzahlMesspunkte 'die DS abrufen in denen der bereich hoeher ist als das neue Max an Bereichen
-                                    For Each Pruefung In query
-                                        Context.PruefungLinearitaetFallend.Remove(Pruefung)
-                                    Next
-
-                                    Context.SaveChanges()
-                                End If
-                            End If
-
-                            'neuen Status zuweisen
-                            If AktuellerStatusDirty = False Then
-                                ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
-                                If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderWiederholbarkeit Then
-                                    objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderWiederholbarkeit
-                                End If
-                            ElseIf AktuellerStatusDirty = True Then
+                        'neuen Status zuweisen
+                        If AktuellerStatusDirty = False Then
+                            ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
+                            If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderWiederholbarkeit Then
                                 objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderWiederholbarkeit
-                                AktuellerStatusDirty = False
                             End If
-
-                            'Füllt das Objekt mit den Werten aus den Steuerlementen
-                            UpdateObject()
-                            'Speichern in Datenbank
-                            Context.SaveChanges()
+                        ElseIf AktuellerStatusDirty = True Then
+                            objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderWiederholbarkeit
+                            AktuellerStatusDirty = False
                         End If
-                    End If
-                End Using
 
-                ParentFormular.CurrentEichprozess = objEichprozess
+                        'Füllt das Objekt mit den Werten aus den Steuerlementen
+                        UpdateObject()
+                        'Speichern in Datenbank
+                        Context.SaveChanges()
+                    End If
+
+                End Using
             End If
 
+            ParentFormular.CurrentEichprozess = objEichprozess
         End If
+
     End Sub
 
     Protected Overrides Sub SaveWithoutValidationNeeded(usercontrol As UserControl)
@@ -1020,179 +858,183 @@ Public Class uco_9PruefungLinearitaet
                     Exit Sub
                 End If
 
-                'prüfen ob CREATE oder UPDATE durchgeführt werden muss
-                If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
-                    'prüfen ob das Objekt anhand der ID gefunden werden kann
-                    Dim dobjEichprozess As Eichprozess = Context.Eichprozess.FirstOrDefault(Function(value) value.Vorgangsnummer = objEichprozess.Vorgangsnummer)
-                    If Not dobjEichprozess Is Nothing Then
-                        'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
-                        objEichprozess = dobjEichprozess
-
-                        Dim intBereiche As Integer = 0
-                        If objEichprozess.Lookup_Waagenart.Art = "Einbereichswaage" Then
-                            intBereiche = 1
-                        ElseIf objEichprozess.Lookup_Waagenart.Art = "Zweibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Zweiteilungswaage" Then
-                            intBereiche = 2
-                        ElseIf objEichprozess.Lookup_Waagenart.Art = "Dreibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Dreiteilungswaage" Then
-                            intBereiche = 3
-                        End If
-
-                        'wenn es defintiv noch keine pruefungen gibt, neue Anlegen
-                        If _ListPruefungPruefungLinearitaetSteigend.Count = 0 Then
-                            'anzahl Bereiche auslesen um damit die anzahl der benötigten Iterationen und Objekt Erzeugungen zu erfahren
-
-                            For j = 1 To intBereiche
-                                For intMesspunkt As Integer = 1 To _intAnzahlMesspunkte
-                                    Dim objPruefung = Context.PruefungLinearitaetSteigend.Create
-                                    objPruefung.Messpunkt = intMesspunkt
-                                    objPruefung.Bereich = j
-
-                                    UpdatePruefungsLinSteigendObject(objPruefung)
-                                    Context.SaveChanges()
-
-                                    objEichprozess.Eichprotokoll.PruefungLinearitaetSteigend.Add(objPruefung)
-                                    Context.SaveChanges()
-                                    _ListPruefungPruefungLinearitaetSteigend.Add(objPruefung)
-                                Next
-                            Next
-                        Else ' es gibt bereits welche
-                            'jedes objekt initialisieren und aus context laden und updaten
-                            For Each objPruefung In _ListPruefungPruefungLinearitaetSteigend
-                                objPruefung = Context.PruefungLinearitaetSteigend.FirstOrDefault(Function(value) value.ID = objPruefung.ID)
-                                UpdatePruefungsLinSteigendObject(objPruefung)
-                                Context.SaveChanges()
-                            Next
-
-                            'sonderfall es wurden neue messpunkte hinzugefügt
-
-                            'zählen der angezeigten messpunkte
-                            Dim neueAnzahlMesspunkte As Integer = 0
-                            If Not _ListPruefungPruefungLinearitaetSteigend.Count = 0 Then
-                                'Zählen der eingetragenden Messpunkte anhand der sichtparen panel
-
-                                For Each Control In RadGroupBoxBereich1.Controls
-                                    Try
-                                        If CType(Control, Panel).Visible = True Then
-                                            neueAnzahlMesspunkte += 1
-
-                                        End If
-                                    Catch ex As Exception
-                                    End Try
-                                Next
-
-                            End If
-
-                            'hinzufügen
-                            If neueAnzahlMesspunkte > _intAnzahlUrpsMessPunkte Then
-                                'differenz der messpunkte ermitteln
-                                neueAnzahlMesspunkte = neueAnzahlMesspunkte - _intAnzahlUrpsMessPunkte
-                                For j = 1 To intBereiche
-                                    For i As Integer = 1 To neueAnzahlMesspunkte
-                                        Dim objPruefung = Context.PruefungLinearitaetSteigend.Create
-                                        objPruefung.Messpunkt = _intAnzahlUrpsMessPunkte + i 'vorherige Messpunkte addiert mit schleifendurchlauf
-                                        objPruefung.Bereich = j
-
-                                        UpdatePruefungsLinSteigendObject(objPruefung)
-                                        Context.SaveChanges()
-
-                                        objEichprozess.Eichprotokoll.PruefungLinearitaetSteigend.Add(objPruefung)
-                                        Context.SaveChanges()
-                                        _ListPruefungPruefungLinearitaetSteigend.Add(objPruefung)
-                                    Next
-                                Next
-                                'löschen
-                            ElseIf neueAnzahlMesspunkte < _intAnzahlUrpsMessPunkte Then
-                                Dim query = From o In Context.PruefungLinearitaetSteigend Where CInt(o.Messpunkt) > neueAnzahlMesspunkte 'die DS abrufen in denen der bereich hoeher ist als das neue Max an Bereichen
-                                For Each Pruefung In query
-                                    Context.PruefungLinearitaetSteigend.Remove(Pruefung)
-                                Next
-
-                                Context.SaveChanges()
-                            End If
-
-                        End If
-
-                        'linearität Fallend
-                        'wenn es defintiv noch keine pruefungen gibt, neue Anlegen
-                        If _ListPruefungPruefungLinearitaetFallend.Count = 0 Then
-                            'anzahl Bereiche auslesen um damit die anzahl der benötigten Iterationen und Objekt Erzeugungen zu erfahren
-
-                            For j = 1 To intBereiche
-                                For intMesspunkt As Integer = 1 To _intAnzahlMesspunkte
-                                    Dim objPruefung = Context.PruefungLinearitaetFallend.Create
-                                    objPruefung.Messpunkt = intMesspunkt
-                                    objPruefung.Bereich = j
-
-                                    UpdatePruefungsLinFallendObject(objPruefung)
-                                    Context.SaveChanges()
-
-                                    objEichprozess.Eichprotokoll.PruefungLinearitaetFallend.Add(objPruefung)
-                                    Context.SaveChanges()
-                                    _ListPruefungPruefungLinearitaetFallend.Add(objPruefung)
-                                Next
-                            Next
-                        Else ' es gibt bereits welche
-                            'jedes objekt initialisieren und aus context laden und updaten
-                            For Each objPruefung In _ListPruefungPruefungLinearitaetFallend
-                                objPruefung = Context.PruefungLinearitaetFallend.FirstOrDefault(Function(value) value.ID = objPruefung.ID)
-                                UpdatePruefungsLinFallendObject(objPruefung)
-                                Context.SaveChanges()
-                            Next
-
-                            'sonderfall es wurden neue messpunkte hinzugefügt
-
-                            'zählen der angezeigten messpunkte
-                            Dim neueAnzahlMesspunkte As Integer = 0
-                            If Not _ListPruefungPruefungLinearitaetFallend.Count = 0 Then
-                                'Zählen der eingetragenden Messpunkte
-
-                                For Each Control In RadGroupBoxBereich1.Controls
-                                    Try
-                                        If CType(Control, Panel).Visible = True Then
-                                            neueAnzahlMesspunkte += 1
-
-                                        End If
-                                    Catch ex As Exception
-                                    End Try
-                                Next
-
-                            End If
-
-                            'hinzufügen
-                            If neueAnzahlMesspunkte > _intAnzahlUrpsMessPunkte Then
-                                'differenz der messpunkte ermitteln
-                                neueAnzahlMesspunkte = neueAnzahlMesspunkte - _intAnzahlUrpsMessPunkte
-                                For j = 1 To intBereiche
-                                    For i As Integer = 1 To neueAnzahlMesspunkte
-                                        Dim objPruefung = Context.PruefungLinearitaetFallend.Create
-                                        objPruefung.Messpunkt = _intAnzahlUrpsMessPunkte + i 'vorherige Messpunkte addiert mit schleifendurchlauf
-                                        objPruefung.Bereich = j
-
-                                        UpdatePruefungsLinFallendObject(objPruefung)
-                                        Context.SaveChanges()
-
-                                        objEichprozess.Eichprotokoll.PruefungLinearitaetFallend.Add(objPruefung)
-                                        Context.SaveChanges()
-                                        _ListPruefungPruefungLinearitaetFallend.Add(objPruefung)
-                                    Next
-                                Next
-                                'löschen
-                            ElseIf neueAnzahlMesspunkte < _intAnzahlUrpsMessPunkte Then
-
-                                Dim query = From o In Context.PruefungLinearitaetFallend Where CInt(o.Messpunkt) > neueAnzahlMesspunkte 'die DS abrufen in denen der bereich hoeher ist als das neue Max an Bereichen
-                                For Each Pruefung In query
-                                    Context.PruefungLinearitaetFallend.Remove(Pruefung)
-                                Next
-
-                                Context.SaveChanges()
-                            End If
-                        End If
-                    End If
-                End If
+                SaveRoutine(Context)
             End Using
 
             ParentFormular.CurrentEichprozess = objEichprozess
 
+        End If
+    End Sub
+
+    Private Sub SaveRoutine(Context As Entities)
+        'prüfen ob CREATE oder UPDATE durchgeführt werden muss
+        If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
+            'prüfen ob das Objekt anhand der ID gefunden werden kann
+            Dim dobjEichprozess As Eichprozess = Context.Eichprozess.FirstOrDefault(Function(value) value.Vorgangsnummer = objEichprozess.Vorgangsnummer)
+            If Not dobjEichprozess Is Nothing Then
+                'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
+                objEichprozess = dobjEichprozess
+
+                Dim intBereiche As Integer = 0
+                If objEichprozess.Lookup_Waagenart.Art = "Einbereichswaage" Then
+                    intBereiche = 1
+                ElseIf objEichprozess.Lookup_Waagenart.Art = "Zweibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Zweiteilungswaage" Then
+                    intBereiche = 2
+                ElseIf objEichprozess.Lookup_Waagenart.Art = "Dreibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Dreiteilungswaage" Then
+                    intBereiche = 3
+                End If
+
+                'wenn es defintiv noch keine pruefungen gibt, neue Anlegen
+                If _ListPruefungPruefungLinearitaetSteigend.Count = 0 Then
+                    'anzahl Bereiche auslesen um damit die anzahl der benötigten Iterationen und Objekt Erzeugungen zu erfahren
+
+                    For j = 1 To intBereiche
+                        For intMesspunkt As Integer = 1 To _intAnzahlMesspunkte
+                            Dim objPruefung = Context.PruefungLinearitaetSteigend.Create
+                            objPruefung.Messpunkt = intMesspunkt
+                            objPruefung.Bereich = j
+
+                            UpdatePruefungsLinSteigendObject(objPruefung)
+                            Context.SaveChanges()
+
+                            objEichprozess.Eichprotokoll.PruefungLinearitaetSteigend.Add(objPruefung)
+                            Context.SaveChanges()
+                            _ListPruefungPruefungLinearitaetSteigend.Add(objPruefung)
+                        Next
+                    Next
+                Else ' es gibt bereits welche
+                    'jedes objekt initialisieren und aus context laden und updaten
+                    For Each objPruefung In _ListPruefungPruefungLinearitaetSteigend
+                        objPruefung = Context.PruefungLinearitaetSteigend.FirstOrDefault(Function(value) value.ID = objPruefung.ID)
+                        UpdatePruefungsLinSteigendObject(objPruefung)
+                        Context.SaveChanges()
+                    Next
+
+                    'sonderfall es wurden neue messpunkte hinzugefügt
+
+                    'zählen der angezeigten messpunkte
+                    Dim neueAnzahlMesspunkte As Integer = 0
+                    If Not _ListPruefungPruefungLinearitaetSteigend.Count = 0 Then
+                        'Zählen der eingetragenden Messpunkte anhand der sichtparen panel
+
+                        For Each Control In RadGroupBoxBereich1.Controls
+                            Try
+                                If CType(Control, Telerik.WinControls.UI.RadPanel).Visible = True Then
+                                    neueAnzahlMesspunkte += 1
+
+                                End If
+                            Catch ex As Exception
+                            End Try
+                        Next
+
+                    End If
+
+                    'hinzufügen
+                    If neueAnzahlMesspunkte > _intAnzahlUrpsMessPunkte Then
+                        'differenz der messpunkte ermitteln
+                        neueAnzahlMesspunkte = neueAnzahlMesspunkte - _intAnzahlUrpsMessPunkte
+                        For j = 1 To intBereiche
+                            For i As Integer = 1 To neueAnzahlMesspunkte
+                                Dim objPruefung = Context.PruefungLinearitaetSteigend.Create
+                                objPruefung.Messpunkt = _intAnzahlUrpsMessPunkte + i 'vorherige Messpunkte addiert mit schleifendurchlauf
+                                objPruefung.Bereich = j
+
+                                UpdatePruefungsLinSteigendObject(objPruefung)
+                                Context.SaveChanges()
+
+                                objEichprozess.Eichprotokoll.PruefungLinearitaetSteigend.Add(objPruefung)
+                                Context.SaveChanges()
+                                _ListPruefungPruefungLinearitaetSteigend.Add(objPruefung)
+                            Next
+                        Next
+                        'löschen
+                    ElseIf neueAnzahlMesspunkte < _intAnzahlUrpsMessPunkte Then
+                        Dim query = From o In Context.PruefungLinearitaetSteigend Where CInt(o.Messpunkt) > neueAnzahlMesspunkte 'die DS abrufen in denen der bereich hoeher ist als das neue Max an Bereichen
+                        For Each Pruefung In query
+                            Context.PruefungLinearitaetSteigend.Remove(Pruefung)
+                        Next
+
+                        Context.SaveChanges()
+                    End If
+
+                End If
+
+                'linearität Fallend
+                'wenn es defintiv noch keine pruefungen gibt, neue Anlegen
+                If _ListPruefungPruefungLinearitaetFallend.Count = 0 Then
+                    'anzahl Bereiche auslesen um damit die anzahl der benötigten Iterationen und Objekt Erzeugungen zu erfahren
+
+                    For j = 1 To intBereiche
+                        For intMesspunkt As Integer = 1 To _intAnzahlMesspunkte
+                            Dim objPruefung = Context.PruefungLinearitaetFallend.Create
+                            objPruefung.Messpunkt = intMesspunkt
+                            objPruefung.Bereich = j
+
+                            UpdatePruefungsLinFallendObject(objPruefung)
+                            Context.SaveChanges()
+
+                            objEichprozess.Eichprotokoll.PruefungLinearitaetFallend.Add(objPruefung)
+                            Context.SaveChanges()
+                            _ListPruefungPruefungLinearitaetFallend.Add(objPruefung)
+                        Next
+                    Next
+                Else ' es gibt bereits welche
+                    'jedes objekt initialisieren und aus context laden und updaten
+                    For Each objPruefung In _ListPruefungPruefungLinearitaetFallend
+                        objPruefung = Context.PruefungLinearitaetFallend.FirstOrDefault(Function(value) value.ID = objPruefung.ID)
+                        UpdatePruefungsLinFallendObject(objPruefung)
+                        Context.SaveChanges()
+                    Next
+
+                    'sonderfall es wurden neue messpunkte hinzugefügt
+
+                    'zählen der angezeigten messpunkte
+                    Dim neueAnzahlMesspunkte As Integer = 0
+                    If Not _ListPruefungPruefungLinearitaetFallend.Count = 0 Then
+                        'Zählen der eingetragenden Messpunkte
+
+                        For Each Control In RadGroupBoxBereich1.Controls
+                            Try
+                                If CType(Control, Telerik.WinControls.UI.RadPanel).Visible = True Then
+                                    neueAnzahlMesspunkte += 1
+
+                                End If
+                            Catch ex As Exception
+                            End Try
+                        Next
+
+                    End If
+
+                    'hinzufügen
+                    If neueAnzahlMesspunkte > _intAnzahlUrpsMessPunkte Then
+                        'differenz der messpunkte ermitteln
+                        neueAnzahlMesspunkte = neueAnzahlMesspunkte - _intAnzahlUrpsMessPunkte
+                        For j = 1 To intBereiche
+                            For i As Integer = 1 To neueAnzahlMesspunkte
+                                Dim objPruefung = Context.PruefungLinearitaetFallend.Create
+                                objPruefung.Messpunkt = _intAnzahlUrpsMessPunkte + i 'vorherige Messpunkte addiert mit schleifendurchlauf
+                                objPruefung.Bereich = j
+
+                                UpdatePruefungsLinFallendObject(objPruefung)
+                                Context.SaveChanges()
+
+                                objEichprozess.Eichprotokoll.PruefungLinearitaetFallend.Add(objPruefung)
+                                Context.SaveChanges()
+                                _ListPruefungPruefungLinearitaetFallend.Add(objPruefung)
+                            Next
+                        Next
+                        'löschen
+                    ElseIf neueAnzahlMesspunkte < _intAnzahlUrpsMessPunkte Then
+
+                        Dim query = From o In Context.PruefungLinearitaetFallend Where CInt(o.Messpunkt) > neueAnzahlMesspunkte 'die DS abrufen in denen der bereich hoeher ist als das neue Max an Bereichen
+                        For Each Pruefung In query
+                            Context.PruefungLinearitaetFallend.Remove(Pruefung)
+                        Next
+
+                        Context.SaveChanges()
+                    End If
+                End If
+            End If
         End If
     End Sub
 
