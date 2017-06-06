@@ -1077,6 +1077,7 @@ Public Class clsWebserviceFunctions
                     Dim data = WebContext.GetGesperrtePrüfscheinnummern(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, "", My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
                     Return data.ToList
                 Catch ex As Exception
+                    MessageBox.Show("Der Server ist gerade nicht erreichbar. Probieren Sie es später bitte erneut")
                     MessageBox.Show(ex.Message)
                     If Debugger.IsAttached Then
                         MessageBox.Show(ex.StackTrace)
