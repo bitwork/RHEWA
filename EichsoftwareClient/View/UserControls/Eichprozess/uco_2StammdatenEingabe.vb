@@ -469,11 +469,13 @@ Public Class uco_2StammdatenEingabe
                 RadTextBoxStammdatenWaagenbaufirma.Text = AktuellerBenutzer.Instance.Lizenz.Firma
 
                 'nulltext auswählen, so das keine vorauswahl getroffen wird
-                RadDropdownlistWaagenTyp.Text = RadDropdownlistWaagenTyp.NullText
-                RadDropDownListWaagenArt.Text = RadDropDownListWaagenArt.NullText
-                RadDropdownlistAWGTyp.Text = RadDropdownlistAWGTyp.NullText
-                RadDropdownlistlWZTyp.Text = RadDropdownlistlWZTyp.NullText
-                RadDropdownlistlWZHersteller.Text = RadDropdownlistlWZHersteller.NullText
+                RadDropdownlistWaagenTyp.SelectedIndex = -1
+                RadDropDownListWaagenArt.SelectedIndex = -1
+                RadDropdownlistAWGTyp.SelectedIndex = -1
+                RadDropdownlistlWZTyp.SelectedIndex = -1
+                RadDropdownlistlWZHersteller.SelectedIndex = -1
+
+
             End If
         End If
 
