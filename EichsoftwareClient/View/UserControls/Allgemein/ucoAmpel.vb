@@ -526,12 +526,14 @@ Public Class ucoAmpel
                 'neu laden des Objekts, diesmal mit den lookup Objekten
                 Using context As New Entities
                     Dim vorgangsnummer As String = objEichprozess.Vorgangsnummer
+                    objEichprozess = (From a In context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
                     SammelUngueltigeStati(objEichprozess, returnlist)
                 End Using
             Catch ex As ObjectDisposedException
                 'neu laden des Objekts, diesmal mit den lookup Objekten
                 Using context As New Entities
                     Dim vorgangsnummer As String = objEichprozess.Vorgangsnummer
+                    objEichprozess = (From a In context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
                     SammelUngueltigeStati(objEichprozess, returnlist)
                 End Using
             End Try

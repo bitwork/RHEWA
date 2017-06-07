@@ -56,6 +56,7 @@ Public Class ucoEichfehlergrenzen
         _suspendEvents = True
         Using context As New Entities
             'neu laden des Objekts, diesmal mit den lookup Objekten
+            objEichprozess = (From a In context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
             If objEichprozess Is Nothing Then _parentForm.Close()
 
         End Using
