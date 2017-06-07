@@ -160,11 +160,6 @@
   <data name="lblFehlerGrenzen.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 33</value>
   </data>
-  <data name="lblFehlerGrenzen.Text" xml:space="preserve">
-    <value>Błąd [kg]
-
-</value>
-  </data>
   <data name="lblEFGSpezial.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 18</value>
   </data>

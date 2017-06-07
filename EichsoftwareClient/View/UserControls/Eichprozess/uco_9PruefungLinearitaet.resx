@@ -8658,4 +8658,19 @@
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.6108.20583, Culture=neutral, PublicKeyToken=null</value>
   </data>
+  <data name="RadGroupBoxPruefungLinearitaetSteigend.HeaderText" xml:space="preserve">
+    <value>Rising linearity</value>
+  </data>
+  <data name="RadGroupBoxPruefungLinearitaetSteigend.Text" xml:space="preserve">
+    <value>Rising linearity</value>
+  </data>
+  <data name="RadGroupBoxPruefungLinearitaetFallend.HeaderText" xml:space="preserve">
+    <value>Rising linearity</value>
+  </data>
+  <data name="RadGroupBoxPruefungLinearitaetFallend.Text" xml:space="preserve">
+    <value>Rising linearity</value>
+  </data>
+  <data name="RadButtonShowEFGFallend.Text" xml:space="preserve">
+    <value>Show EFG</value>
+  </data>
 </root>

@@ -171,4 +171,7 @@ Dane nie zostaną skasowane. Po wybraniu "Synchronizuj wszystko", zostaną wszys
   <data name="$this.Text" xml:space="preserve">
     <value>Konfiguracja</value>
   </data>
+  <data name="cmdSendDiagnosticData.Text" xml:space="preserve">
+    <value>Send diagnostic data to RHEWA</value>
+  </data>
 </root>

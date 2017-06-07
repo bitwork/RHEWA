@@ -291,43 +291,4 @@
   <data name="&gt;&gt;RadTextBox4.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="Label1.Text" xml:space="preserve">
-    <value>Label Deutsch</value>
-  </data>
-  <data name="Label2.Text" xml:space="preserve">
-    <value>Label2</value>
-  </data>
-  <data name="Label3.Text" xml:space="preserve">
-    <value>Label3</value>
-  </data>
-  <data name="Label4.Text" xml:space="preserve">
-    <value>Label4</value>
-  </data>
-  <data name="Label5.Text" xml:space="preserve">
-    <value>Label5</value>
-  </data>
-  <data name="RadCheckBox1.Text" xml:space="preserve">
-    <value>RadCheckBox1</value>
-  </data>
-  <data name="RadRadioButton1.Text" xml:space="preserve">
-    <value>RadRadioButton1</value>
-  </data>
-  <data name="RadRadioButton2.Text" xml:space="preserve">
-    <value>RadRadioButton2</value>
-  </data>
-  <data name="RadScrollablePanel1.Text" xml:space="preserve">
-    <value>RadScrollablePanel1</value>
-  </data>
-  <data name="RadTextBox1.Text" xml:space="preserve">
-    <value>RadTextBox1</value>
-  </data>
-  <data name="RadTextBox2.Text" xml:space="preserve">
-    <value>RadTextBox2</value>
-  </data>
-  <data name="RadTextBox3.Text" xml:space="preserve">
-    <value>RadTextBox3</value>
-  </data>
-  <data name="RadTextBox4.Text" xml:space="preserve">
-    <value>RadTextBox4</value>
-  </data>
 </root>

@@ -142,4 +142,7 @@
   <data name="lblLizenzabkommen.Text" xml:space="preserve">
     <value>Lizenzabkommen:</value>
   </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Lizenz / License</value>
+  </data>
 </root>

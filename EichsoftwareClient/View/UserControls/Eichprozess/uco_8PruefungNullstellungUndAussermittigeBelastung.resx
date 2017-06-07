@@ -9642,4 +9642,10 @@
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="RadLabel15.Text" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="RadLabel34.Text" xml:space="preserve">
+    <value>Center</value>
+  </data>
 </root>

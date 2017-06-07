@@ -283,7 +283,7 @@
     <value>2</value>
   </data>
   <data name="lblRichtigkeitspruefung.Text" xml:space="preserve">
-    <value>-</value>
+    <value>English TODO</value>
   </data>
   <data name="&gt;&gt;lblRichtigkeitspruefung.Name" xml:space="preserve">
     <value>lblRichtigkeitspruefung</value>
@@ -368,5 +368,11 @@
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.6108.20583, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="lblHybridwaagen.Text" xml:space="preserve">
+    <value>English TODO</value>
+  </data>
+  <data name="lblEichanweisung.Text" xml:space="preserve">
+    <value>English TODO</value>
   </data>
 </root>

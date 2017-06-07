@@ -511,7 +511,7 @@
     <value>19</value>
   </data>
   <data name="Label3.Text" xml:space="preserve">
-    <value>bis</value>
+    <value>to</value>
   </data>
   <data name="&gt;&gt;Label3.Name" xml:space="preserve">
     <value>Label3</value>
@@ -565,7 +565,7 @@
     <value>17</value>
   </data>
   <data name="Label2.Text" xml:space="preserve">
-    <value>von</value>
+    <value>from</value>
   </data>
   <data name="&gt;&gt;Label2.Name" xml:space="preserve">
     <value>Label2</value>
@@ -616,7 +616,7 @@
     <value>16</value>
   </data>
   <data name="RadCheckBoxLadeAlleEichprozesse.Text" xml:space="preserve">
-    <value>Alle Laden (unabhängig vom Filter)</value>
+    <value>load everything (regardless filter)</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxLadeAlleEichprozesse.Name" xml:space="preserve">
     <value>RadCheckBoxLadeAlleEichprozesse</value>
@@ -640,7 +640,7 @@
     <value>15</value>
   </data>
   <data name="Label1.Text" xml:space="preserve">
-    <value>Filter nach Uploadmonat</value>
+    <value>Filter by upload month</value>
   </data>
   <data name="&gt;&gt;Label1.Name" xml:space="preserve">
     <value>Label1</value>
@@ -727,7 +727,7 @@
     <value>9</value>
   </data>
   <data name="RadButtonEichprozessAblehnenRHEWA.Text" xml:space="preserve">
-    <value>Ablehnen</value>
+    <value>Reject</value>
   </data>
   <data name="RadButtonEichprozessAblehnenRHEWA.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
     <value>ImageBeforeText</value>
@@ -862,7 +862,7 @@
     <value>948, 476</value>
   </data>
   <data name="RadPageViewPageAlle.Text" xml:space="preserve">
-    <value>Alle</value>
+    <value>all</value>
   </data>
   <data name="&gt;&gt;RadPageViewPageAlle.Name" xml:space="preserve">
     <value>RadPageViewPageAlle</value>

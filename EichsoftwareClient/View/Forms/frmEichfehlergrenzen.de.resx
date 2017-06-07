@@ -141,4 +141,7 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Eichfehlergrenzen</value>
   </data>
+  <data name="cmdOK.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
 </root>

@@ -181,4 +181,13 @@
   <data name="lblAnzahl.Text" xml:space="preserve">
     <value>Ilość</value>
   </data>
+  <data name="RadTextBoxControlBenannteStelle.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="RadTextBoxControlSicherungsmarkeGross.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="RadTextBoxControlSicherungsmarkeKlein.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
 </root>

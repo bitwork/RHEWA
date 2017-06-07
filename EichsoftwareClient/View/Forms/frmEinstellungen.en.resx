@@ -117,4 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Configuration</value>
+  </data>
+  <data name="cmdSendDiagnosticData.Text" xml:space="preserve">
+    <value>Send diagnostic data to RHEWA</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>These options can be used if you have trouble with too large database files or slow loading times.
+
+By default your client syncs every data from RHEWA.
+Additionally but you can limit it to a start date, for example synch everything since January Year 2013.
+Files from 2012 wont be synced.
+
+If you want to sync very specific data, you can chosse a start and end date.
+
+Keep in mind: No data will be deleted. If you click "sync everything" all data will be downloaded from RHEWA.
+</value>
+  </data>
 </root>

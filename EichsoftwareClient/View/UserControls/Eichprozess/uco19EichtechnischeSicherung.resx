@@ -1029,4 +1029,13 @@
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="RadTextBoxControlBenannteStelle.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="RadTextBoxControlSicherungsmarkeGross.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="RadTextBoxControlSicherungsmarkeKlein.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
 </root>

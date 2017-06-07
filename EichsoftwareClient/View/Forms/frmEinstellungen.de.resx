@@ -194,4 +194,7 @@ Es werden KEINE Daten gelöscht. Wenn Sie "Synchronisiere Alles" wählen, werden
   <data name="$this.Text" xml:space="preserve">
     <value>Konfiguration</value>
   </data>
+  <data name="cmdSendDiagnosticData.Text" xml:space="preserve">
+    <value>Diagnosedaten an RHEWA Senden</value>
+  </data>
 </root>

@@ -121,4 +121,7 @@
   <data name="RadTextBoxControlBemerkungen.Size" type="System.Drawing.Size, System.Drawing">
     <value>477, 1092</value>
   </data>
+  <data name="RadTextBoxControlSicherungsmarkeKlein.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
 </root>
