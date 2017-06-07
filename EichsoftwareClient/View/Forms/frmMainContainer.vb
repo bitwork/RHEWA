@@ -339,7 +339,6 @@ Public Class FrmMainContainer
     ''' <remarks></remarks>
     Private Sub FrmMainContainer_Load(sender As Object, e As System.EventArgs) Handles Me.Load
         Try
-            clsDBFunctions.UpdateClientDatenbank()
             Me.Visible = False
             'frmMain Container nutzt entweder die logiken zum Blättern eines eichprozesses (sofern me.currenteichprozess) nicht nothing ist oder aber zeigt die Auswahlliste an, in der die eigenen Eichprozesse aufgelistet werden.
             'prüfen ob ein Vorgang vorliegt oder nicht
@@ -348,6 +347,7 @@ Public Class FrmMainContainer
                 'auswahl des Benutzers, führt auch zur Lizenzeingabe, falls noch kein Benutzer angelegt wurde
                 Dim frmBenutzerauswahl As New FrmBenutzerauswahl
                 If frmBenutzerauswahl.ShowDialog = Windows.Forms.DialogResult.OK Then
+                    Dim resultDBUpdate = clsDBFunctions.UpdateClientDatenbank()
 
                     LadeAuswahlListe()
 

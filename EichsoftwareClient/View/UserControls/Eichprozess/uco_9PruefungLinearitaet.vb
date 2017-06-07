@@ -7,7 +7,6 @@ Public Class uco_9PruefungLinearitaet
 
 #Region "Member Variables"
     Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken
-    'Private AktuellerStatusDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann wird der Vorgang auf Komptabilitätsnachweis zurückgesetzt
     Private _ListPruefungPruefungLinearitaetSteigend As New List(Of PruefungLinearitaetSteigend)
     Private _ListPruefungPruefungLinearitaetFallend As New List(Of PruefungLinearitaetFallend)
     Private _currentObjPruefungLinearitaetSteigend As PruefungLinearitaetSteigend

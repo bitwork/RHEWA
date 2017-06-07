@@ -589,14 +589,21 @@ Public Class uco_7EichprotokollDaten
 
         'fehlermeldung anzeigen bei falscher validierung
         Dim result = Me.ShowValidationErrorBox(True)
+        Return ProcessResult(result)
 
-        If result = DialogResult.Yes Or result = DialogResult.Retry Or result = DialogResult.Ignore Then
-            Return True
-        Else
-            Return False
-        End If
 
     End Function
+
+    Protected Friend Overrides Sub OverwriteIstSoll()
+        RadTextBoxControlBenutzer.Text = "Hill"
+        RadTextBoxControlAufstellungsort.Text = "bitwork Halle 1"
+        RadTextBoxControlBaujahr.Text = "2010"
+        RadTextBoxControlSoftwarestand.Text = "1024"
+        RadTextBoxControlEichzaehlerstand.Text = "1024"
+        RadTextBoxControlWZFabriknummer.Text = "1024"
+        RadDateTimePickerNormalienLetztePruefung.Text = DateTime.Now
+        RadTextBoxControlNormalienPruefscheinnummer.Text = "1024"
+    End Sub
 
 #End Region
 
