@@ -235,43 +235,13 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
                     nrow.Item("PLZ") = Firma.PLZ
                     nrow.Item("Land") = Firma.Land
 
-                    Try
-                        nrow.Item("Abrechnungsmodell") = CDate(Firma.Abrechnungsmodell).Date.ToShortDateString
-                    Catch e As Exception
-                        Debug.WriteLine(e.Message)
-                        Debug.WriteLine(e.StackTrace)
-                    End Try
-                    Try
-                        nrow.Item("BeginnVertrag") = CDate(Firma.BeginnVertrag).Date.ToShortDateString
-                    Catch e As Exception
-                        Debug.WriteLine(e.Message)
-                        Debug.WriteLine(e.StackTrace)
-                    End Try
-                    Try
-                        nrow.Item("EndeVertrag") = CDate(Firma.EndeVertrag).Date.ToShortDateString
-                    Catch e As Exception
-                        Debug.WriteLine(e.Message)
-                        Debug.WriteLine(e.StackTrace)
-                    End Try
-                    Try
-                        nrow.Item("Erstschulung") = CDate(Firma.Erstschulung).Date.ToShortDateString
-                    Catch e As Exception
-                        Debug.WriteLine(e.Message)
-                        Debug.WriteLine(e.StackTrace)
-                    End Try
-                    Try
-                        nrow.Item("LetztesAudit") = CDate(Firma.LetztesAudit).Date.ToShortDateString
-                    Catch e As Exception
-                        Debug.WriteLine(e.Message)
-                        Debug.WriteLine(e.StackTrace)
-                    End Try
-                    Try
-                        nrow.Item("Nachschulung") = CDate(Firma.Nachschulung).Date.ToShortDateString
-                    Catch e As Exception
-                        Debug.WriteLine(e.Message)
-                        Debug.WriteLine(e.StackTrace)
-                    End Try
+                    nrow.Item("Abrechnungsmodell") = Firma.Abrechnungsmodell
 
+                    If Firma.BeginnVertrag.HasValue Then nrow.Item("BeginnVertrag") = Firma.BeginnVertrag.Value.ToShortDateString
+                    If Firma.EndeVertrag.HasValue Then nrow.Item("EndeVertrag") = Firma.EndeVertrag.Value.ToShortDateString
+                    If Firma.Erstschulung.HasValue Then nrow.Item("Erstschulung") = Firma.Erstschulung.Value.ToShortDateString
+                    If Firma.LetztesAudit.HasValue Then nrow.Item("LetztesAudit") = Firma.LetztesAudit.Value.ToShortDateString
+                    If Firma.Nachschulung.HasValue Then nrow.Item("Nachschulung") = Firma.Nachschulung.Value.ToShortDateString
                     nrow.Item("MonatJahrZertifikat") = Firma.MonatJahrZertifikat
                     nrow.Item("Qualifizierungspauschale") = Firma.Qualifizierungspauschale
 
