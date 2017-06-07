@@ -147,7 +147,7 @@
     <value>&lt;html&gt;Wieder-&lt;br /&gt;holungen&lt;/html&gt;</value>
   </data>
   <data name="lblMengeStandardgewichte2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>520, 198</value>
+    <value>506, 198</value>
   </data>
   <data name="lblMengeStandardgewichte2.Size" type="System.Drawing.Size, System.Drawing">
     <value>104, 18</value>
@@ -162,7 +162,7 @@
     <value>Menge an Normalien:</value>
   </data>
   <data name="RadTextBoxControlBetragNormallast.Location" type="System.Drawing.Point, System.Drawing">
-    <value>441, 198</value>
+    <value>427, 198</value>
   </data>
   <data name="lblEFGSpezial.Size" type="System.Drawing.Size, System.Drawing">
     <value>57, 18</value>
@@ -231,23 +231,11 @@
 
 </value>
   </data>
-  <data name="RadLabel34.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 18</value>
-  </data>
-  <data name="RadLabel34.Text" xml:space="preserve">
-    <value>Mitte</value>
-  </data>
   <data name="RadGroupBoxBereich3.HeaderText" xml:space="preserve">
     <value>Bereich 3</value>
   </data>
   <data name="RadGroupBoxBereich3.Text" xml:space="preserve">
     <value>Bereich 3</value>
-  </data>
-  <data name="RadLabel15.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 18</value>
-  </data>
-  <data name="RadLabel15.Text" xml:space="preserve">
-    <value>Mitte</value>
   </data>
   <data name="lblMessOrtBereich2.Text" xml:space="preserve">
     <value>Belastungsorte

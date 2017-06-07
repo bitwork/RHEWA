@@ -117,21 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="RadButtonNeu.Text" xml:space="preserve">
-    <value>Polnisch</value>
-  </data>
-  <data name="RadButtonBearbeiten.Text" xml:space="preserve">
-    <value>Polnisch</value>
-  </data>
-  <data name="RadButtonAusblenden.Text" xml:space="preserve">
-    <value>Polnisch</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="RadCheckBoxAusblendenGeloeschterDokumente.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 18</value>
-  </data>
-  <data name="RadCheckBoxAusblendenGeloeschterDokumente.Text" xml:space="preserve">
-    <value>Polnisch</value>
   </data>
   <data name="RadButtonEichprozessAblehnenRHEWA.Text" xml:space="preserve">
     <value>Odrzucić</value>
@@ -189,5 +177,8 @@
   </data>
   <data name="RadButtonClientUpdateDatabase.Text" xml:space="preserve">
     <value>Sprawdzić status wysłanych procesów</value>
+  </data>
+  <data name="RadButtonProtokollAblegen.Text" xml:space="preserve">
+    <value>Zapisz niekompletny proces w Cloud</value>
   </data>
 </root>

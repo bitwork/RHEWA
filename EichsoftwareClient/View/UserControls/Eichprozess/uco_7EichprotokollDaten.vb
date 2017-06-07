@@ -76,7 +76,7 @@ Public Class uco_7EichprotokollDaten
         If Not DialogModus = enuDialogModus.lesend And Not DialogModus = enuDialogModus.korrigierend Then
             Using context As New Entities
                 'neu laden des Objekts, diesmal mit den lookup Objekten
-                objEichprozess = (From a In context.Eichprozess.Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Eichprotokoll") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
+                objEichprozess = (From a In context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
                 _objEichprotokoll = objEichprozess.Eichprotokoll
 
                 Dim Coll As New AutoCompleteStringCollection
@@ -635,7 +635,7 @@ Public Class uco_7EichprotokollDaten
                     'prüfen ob CREATE oder UPDATE durchgeführt werden muss
                     If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
                         'prüfen ob das Objekt anhand der ID gefunden werden kann
-                        Dim dobjEichprozess As Eichprozess = Context.Eichprozess.FirstOrDefault(Function(value) value.Vorgangsnummer = objEichprozess.Vorgangsnummer)
+                        Dim dobjEichprozess As Eichprozess = (From a In Context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
                         If Not dobjEichprozess Is Nothing Then
                             'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
                             objEichprozess = dobjEichprozess
@@ -686,7 +686,7 @@ Public Class uco_7EichprotokollDaten
                 'prüfen ob CREATE oder UPDATE durchgeführt werden muss
                 If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
                     'prüfen ob das Objekt anhand der ID gefunden werden kann
-                    Dim dobjEichprozess As Eichprozess = Context.Eichprozess.FirstOrDefault(Function(value) value.Vorgangsnummer = objEichprozess.Vorgangsnummer)
+                    Dim dobjEichprozess As Eichprozess = (From a In Context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
                     If Not dobjEichprozess Is Nothing Then
                         'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
                         objEichprozess = dobjEichprozess
@@ -822,17 +822,15 @@ Public Class uco_7EichprotokollDaten
         End Try
     End Sub
     Private Sub BackgroundWorkerPruefscheinnummern_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorkerPruefscheinnummern.DoWork
-        Try
 
-        Catch ex As Exception
 
-        End Try
         If ListPruefscheinnnummern Is Nothing Then
             ListPruefscheinnnummern = clsWebserviceFunctions.GetStatusPruefscheinnummern()
 
             'abbruch
             If ListPruefscheinnnummern Is Nothing Then
-                Return
+                e.Result = "Keine Prüfscheinnummern gefunden. Eventuell ist der Server gerade nicht erreichbar"
+                Exit Sub
             End If
 
             ListPruefscheinnnummernGesperrt = (From o In ListPruefscheinnnummern Where o.Gesperrt = True Or o.GesperrtDurchDatum = True).ToList
@@ -862,7 +860,8 @@ Public Class uco_7EichprotokollDaten
                 returnString += String.Format("Das Gewicht mit der Nummer {0} wurde nicht gefunden.", result) & vbNewLine & vbNewLine
             Next
             e.Result = returnString
-            Return
+            Exit Sub
+
         Catch ex As Exception
 
         End Try

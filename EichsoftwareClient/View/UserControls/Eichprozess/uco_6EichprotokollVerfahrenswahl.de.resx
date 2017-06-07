@@ -117,12 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="RadRadioButtonNormalien.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadRadioButtonNormalien.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="RadRadioButtonNormalien.Size" type="System.Drawing.Size, System.Drawing">
     <value>347, 18</value>
@@ -130,23 +124,11 @@
   <data name="RadRadioButtonNormalien.Text" xml:space="preserve">
     <value>Konformitätsbewertungsverfahren. Prüfung erfolgt mit Normalien</value>
   </data>
-  <data name="RadRadioButtonStaffelverfahren.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadRadioButtonStaffelverfahren.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="RadRadioButtonStaffelverfahren.Size" type="System.Drawing.Size, System.Drawing">
-    <value>438, 17</value>
+    <value>453, 18</value>
   </data>
   <data name="RadRadioButtonStaffelverfahren.Text" xml:space="preserve">
-    <value>&lt;html&gt;Konformitätsbewertungsverfahren. Prüfung erfolgt im Staffelverfahren (Erst ab 1000kg)&lt;/html&gt;</value>
-  </data>
-  <data name="RadRadioButtonFahrzeugwaagen.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadRadioButtonFahrzeugwaagen.RootElement.ToolTipText" xml:space="preserve">
-    <value />
+    <value>Konformitätsbewertungsverfahren. Prüfung erfolgt im Staffelverfahren (Erst ab 1000kg)</value>
   </data>
   <data name="RadRadioButtonFahrzeugwaagen.Size" type="System.Drawing.Size, System.Drawing">
     <value>413, 18</value>

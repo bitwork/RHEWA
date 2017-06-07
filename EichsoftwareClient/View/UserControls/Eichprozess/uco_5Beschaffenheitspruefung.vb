@@ -53,7 +53,7 @@ Public Class uco_5Beschaffenheitspruefung
             objEichprozess = ParentFormular.CurrentEichprozess
             'Nur laden wenn es sich um eine Bearbeitung handelt (sonst würde das in Memory Objekt überschrieben werden)
             If Not DialogModus = enuDialogModus.lesend And Not DialogModus = enuDialogModus.korrigierend Then
-                objEichprozess = (From Eichprozess In Context.Eichprozess.Include("Kompatiblitaetsnachweis").Include("Eichprotokoll") Select Eichprozess Where Eichprozess.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
+                objEichprozess = (From a In Context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
             End If
         End Using
         _objEichprotokoll = objEichprozess.Eichprotokoll
@@ -206,7 +206,7 @@ Public Class uco_5Beschaffenheitspruefung
                         'zuweisen des eichprotokolls an den eichprozess
 
                         'prüfen ob das Objekt anhand der ID gefunden werden kann
-                        Dim dbobjEichprozess As Eichprozess = Context.Eichprozess.FirstOrDefault(Function(value) value.Vorgangsnummer = objEichprozess.Vorgangsnummer)
+                        Dim dbobjEichprozess As Eichprozess = (From a In Context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
                         If Not dbobjEichprozess Is Nothing Then
                             'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
                             objEichprozess = dbobjEichprozess

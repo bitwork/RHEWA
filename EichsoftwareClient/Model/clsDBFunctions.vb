@@ -103,9 +103,7 @@ Public Class clsDBFunctions
 
     Public Shared Function UpdateClientDatenbank()
 
-        If CheckLocalDatabaseExists() = False Then
-            CopyLocalDatabaseToApplicationFolder()
-        End If
+
 
         Try
             Using DBContext As New Entities
@@ -471,7 +469,7 @@ Public Class clsDBFunctions
     ''' <remarks></remarks>
     Public Shared Function HoleVorhandenenEichprozess(ByVal Vorgangsnummer As String) As Eichprozess
         Using Context As New Entities
-            Dim objEichprozess = (From Obj In Context.Eichprozess Select Obj Where Obj.Vorgangsnummer = Vorgangsnummer).FirstOrDefault 'firstor default um erstes element zurückzugeben das übereintrifft(bei ID Spalten sollte es eh nur 1 sein)
+            Dim objEichprozess = (From a In Context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = Vorgangsnummer).FirstOrDefault
             Return objEichprozess
         End Using
     End Function

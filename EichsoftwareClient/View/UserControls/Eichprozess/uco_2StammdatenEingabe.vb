@@ -426,7 +426,7 @@ Public Class uco_2StammdatenEingabe
             If objEichprozess.ID <> 0 Then
                 Using context As New Entities
                     'neu laden des Objekts, diesmal mit den lookup Objekten
-                    objEichprozess = (From a In context.Eichprozess.Include("Lookup_Auswertegeraet").Include("Lookup_Waegezelle").Include("Kompatiblitaetsnachweis").Include("Lookup_Waagenart").Include("Lookup_Waagentyp") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
+                    objEichprozess = (From a In context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
                 End Using
 
                 RadTextBoxAWGBauartzulassung.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Bauartzulassung
@@ -670,7 +670,7 @@ Public Class uco_2StammdatenEingabe
                     Else 'UPDATE
 
                         'prüfen ob das Objekt anhand der ID gefunden werden kann
-                        Dim dbobjEichprozess As Eichprozess = Context.Eichprozess.FirstOrDefault(Function(value) value.Vorgangsnummer = objEichprozess.Vorgangsnummer)
+                        Dim dbobjEichprozess As Eichprozess = (From a In Context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
                         If Not dbobjEichprozess Is Nothing Then
                             'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
                             objEichprozess = dbobjEichprozess

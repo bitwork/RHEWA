@@ -143,7 +143,7 @@ Public Class uco10PruefungStaffelverfahren
         If Not DialogModus = enuDialogModus.lesend And Not DialogModus = enuDialogModus.korrigierend Then
             Using context As New Entities
                 'neu laden des Objekts, diesmal mit den lookup Objekten
-                objEichprozess = (From a In context.Eichprozess.Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
+                objEichprozess = (From a In context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
 
                 'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
                 Dim query = From a In context.PruefungStaffelverfahrenNormallast Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
@@ -659,17 +659,20 @@ Public Class uco10PruefungStaffelverfahren
         If BereichGroupBox.Visible = True Then 'Nur wenn der Bereich auch sichtbar ist
             For Each Control In BereichGroupBox.Controls
                 Try
-                    If CType(Control, Telerik.WinControls.UI.RadTextBox).ReadOnly = False And CType(Control, Telerik.WinControls.UI.RadTextBox).Enabled = True Then
-                        If CType(Control, Telerik.WinControls.UI.RadTextBox).Text.Trim = "" Then
-                            returnvalue = False
-                            If einFeldGefuelltInStaffel = True Then
-                                CType(Control, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
+                    If TypeOf (Control) Is Telerik.WinControls.UI.RadTextBox Then
+                        If CType(Control, Telerik.WinControls.UI.RadTextBox).ReadOnly = False And CType(Control, Telerik.WinControls.UI.RadTextBox).Enabled = True Then
+                            If CType(Control, Telerik.WinControls.UI.RadTextBox).Text.Trim = "" Then
+                                returnvalue = False
+                                If einFeldGefuelltInStaffel = True Then
+                                    CType(Control, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
+                                End If
+                            Else
+                                CType(Control, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Transparent
+                                einFeldGefuelltInStaffel = True
                             End If
-                        Else
-                            CType(Control, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Transparent
-                            einFeldGefuelltInStaffel = True
                         End If
                     End If
+
                 Catch ex As Exception
                 End Try
             Next
@@ -1244,7 +1247,7 @@ Public Class uco10PruefungStaffelverfahren
                     'prüfen ob CREATE oder UPDATE durchgeführt werden muss
                     If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
                         'prüfen ob das Objekt anhand der ID gefunden werden kann
-                        Dim dobjEichprozess As Eichprozess = Context.Eichprozess.FirstOrDefault(Function(value) value.Vorgangsnummer = objEichprozess.Vorgangsnummer)
+                        Dim dobjEichprozess As Eichprozess = (From a In Context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
                         If Not dobjEichprozess Is Nothing Then
                             'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
                             objEichprozess = dobjEichprozess
@@ -1371,7 +1374,7 @@ Public Class uco10PruefungStaffelverfahren
                 'prüfen ob CREATE oder UPDATE durchgeführt werden muss
                 If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
                     'prüfen ob das Objekt anhand der ID gefunden werden kann
-                    Dim dobjEichprozess As Eichprozess = Context.Eichprozess.FirstOrDefault(Function(value) value.Vorgangsnummer = objEichprozess.Vorgangsnummer)
+                    Dim dobjEichprozess As Eichprozess = (From a In Context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
                     If Not dobjEichprozess Is Nothing Then
                         'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
                         objEichprozess = dobjEichprozess
