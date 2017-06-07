@@ -28,5 +28,9 @@ Partial Public Class ServerEichmarkenverwaltung
     Public Property HinweismarkeFehlmenge As Nullable(Of Integer)
     Public Property Bemerkung As String
     Public Property ZurBearbeitungGesperrtDurch As String
+    Public Property BenannteStelleAnzahlAusgeteilt As Nullable(Of Integer)
+    Public Property SicherungsmarkeKleinAnzahlAusgeteilt As Nullable(Of Integer)
+    Public Property SicherungsmarkeGrossAnzahlAusgeteilt As Nullable(Of Integer)
+    Public Property HinweismarkeAnzahlAusgeteilt As Nullable(Of Integer)
 
 End Class

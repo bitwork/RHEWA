@@ -80,14 +80,25 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
 
                     If col.HeaderText.Equals("HEKennung") Then
                         col.HeaderText = "Kennung"
+                    ElseIf col.HeaderText.Equals("BenannteStelleAnzahl") Then
+                        col.HeaderText = "  Benannte Stelle  Anzahl gemeldet durch Software"
+                    ElseIf col.HeaderText.Equals("BenannteStelleAnzahlMeldestand") Then
+                        col.HeaderText = "  Benannte Stelle Meldestand um Rot zu markieren"
+
                     ElseIf col.HeaderText.Equals("SicherungsmarkeKleinAnzahl") Then
-                        col.HeaderText = "  Sicherungsmarke klein Anzahl"
+                        col.HeaderText = "  Sicherungsmarke klein Anzahl gemeldet durch Software"
                     ElseIf col.HeaderText.Equals("SicherungsmarkeKleinAnzahlMeldestand") Then
-                        col.HeaderText = "  Sicherungsmarke klein Meldestand"
+                        col.HeaderText = "  Sicherungsmarke klein Meldestand um Rot zu markieren"
+
                     ElseIf col.HeaderText.Equals("SicherungsmarkeGrossAnzahl") Then
-                        col.HeaderText = "  Sicherungsmarke groß Anzahl"
+                        col.HeaderText = "  Sicherungsmarke groß Anzahl gemeldet durch Software"
                     ElseIf col.HeaderText.Equals("SicherungsmarkeGrossAnzahlMeldestand") Then
-                        col.HeaderText = "  Sicherungsmarke groß Meldestand"
+                        col.HeaderText = "  Sicherungsmarke groß Anzahl um Rot zu markieren"
+
+                    ElseIf col.HeaderText.Equals("HinweismarkeAnzahl") Then
+                        col.HeaderText = "  Hinweismarke  Anzahl gemeldet durch Software"
+                    ElseIf col.HeaderText.Equals("HinweismarkeAnzahlMeldestand") Then
+                        col.HeaderText = "  Hinweismarke  Anzahl um Rot zu markieren"
                     Else
                         FormatColumnHeader(col)
                     End If
@@ -154,18 +165,22 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
                                Firma.Land,
                                Eichmarken.HEKennung,
                                Eichmarken.Bemerkung,
+                               Eichmarken.BenannteStelleAnzahlAusgeteilt,
                                Eichmarken.BenannteStelleAnzahl,
-                               Eichmarken.BenannteStelleAnzahlMeldestand,
                                Eichmarken.BenannteStelleFehlmenge,
+                             Eichmarken.SicherungsmarkeKleinAnzahlAusgeteilt,
                              Eichmarken.SicherungsmarkeKleinAnzahl,
-                             Eichmarken.SicherungsmarkeKleinAnzahlMeldestand,
                              Eichmarken.SicherungsmarkeKleinFehlmenge,
+                                   Eichmarken.SicherungsmarkeGrossAnzahlAusgeteilt,
                                    Eichmarken.SicherungsmarkeGrossAnzahl,
-                             Eichmarken.SicherungsmarkeGrossAnzahlMeldestand,
                              Eichmarken.SicherungsmarkeGrossFehlmenge,
+                            Eichmarken.HinweismarkeAnzahlAusgeteilt,
                             Eichmarken.HinweismarkeAnzahl,
-                               Eichmarken.HinweismarkeAnzahlMeldestand,
                                Eichmarken.HinweismarkeFehlmenge,
+                               Eichmarken.BenannteStelleAnzahlMeldestand,
+                             Eichmarken.SicherungsmarkeKleinAnzahlMeldestand,
+                             Eichmarken.SicherungsmarkeGrossAnzahlMeldestand,
+                               Eichmarken.HinweismarkeAnzahlMeldestand,
                                Eichmarken.FK_BenutzerID
                            }
 
@@ -400,20 +415,22 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
             TargetObj.Bemerkung = SourceObj.Bemerkung
 
             TargetObj.BenannteStelleAnzahl = SourceObj.BenannteStelleAnzahl
+            TargetObj.BenannteStelleAnzahlAusgeteilt = SourceObj.BenannteStelleAnzahlAusgeteilt
             TargetObj.BenannteStelleAnzahlMeldestand = SourceObj.BenannteStelleAnzahlMeldestand
             TargetObj.BenannteStelleFehlmenge = SourceObj.BenannteStelleFehlmenge
 
-
             TargetObj.SicherungsmarkeKleinAnzahl = SourceObj.SicherungsmarkeKleinAnzahl
+            TargetObj.SicherungsmarkeKleinAnzahlAusgeteilt = SourceObj.SicherungsmarkeKleinAnzahlAusgeteilt
             TargetObj.SicherungsmarkeKleinAnzahlMeldestand = SourceObj.SicherungsmarkeKleinAnzahlMeldestand
             TargetObj.SicherungsmarkeKleinFehlmenge = SourceObj.SicherungsmarkeKleinFehlmenge
 
             TargetObj.SicherungsmarkeGrossAnzahl = SourceObj.SicherungsmarkeGrossAnzahl
+            TargetObj.SicherungsmarkeGrossAnzahlAusgeteilt = SourceObj.SicherungsmarkeGrossAnzahlAusgeteilt
             TargetObj.SicherungsmarkeGrossAnzahlMeldestand = SourceObj.SicherungsmarkeGrossAnzahlMeldestand
             TargetObj.SicherungsmarkeGrossFehlmenge = SourceObj.SicherungsmarkeGrossFehlmenge
 
-
             TargetObj.HinweismarkeAnzahl = SourceObj.HinweismarkeAnzahl
+            TargetObj.HinweismarkeAnzahlAusgeteilt = SourceObj.HinweismarkeAnzahlAusgeteilt
             TargetObj.HinweismarkeAnzahlMeldestand = SourceObj.HinweismarkeAnzahlMeldestand
             TargetObj.HinweismarkeFehlmenge = SourceObj.HinweismarkeFehlmenge
 
@@ -529,6 +546,25 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
 
 #End Region
 
+
+    Private Function GetNeedFill(e As Telerik.WinControls.UI.CellFormattingEventArgs, ByVal ColumnNameAnzahl As String, ByVal ColumnNameAusgeteilte As String, ByVal columnNameMeldestand As String, ByVal ColumnNameFehler As String) As Boolean
+        Try
+            'Ausgeteilte - (istAnzahl + Fehlanzahl) <= Meldestand      dann rot
+            Dim ValueAnzahl As Decimal = CDec(e.Row.Cells(ColumnNameAnzahl).Value)
+            Dim ValueAusgeteilt As Decimal = CDec(e.Row.Cells(ColumnNameAusgeteilte).Value)
+            Dim ValueMeldestand As Decimal = CDec(e.Row.Cells(columnNameMeldestand).Value)
+            Dim ValueFehler As Decimal = CDec(e.Row.Cells(ColumnNameFehler).Value)
+
+            If ValueAusgeteilt - (ValueAnzahl + ValueFehler) <= ValueMeldestand Then
+                Return True
+            End If
+        Catch ex As Exception
+            Return False
+        End Try
+        Return False
+
+    End Function
+
 #Region "Grid Events"
     Private Sub RadGridView1_CellFormatting(sender As Object, e As Telerik.WinControls.UI.CellFormattingEventArgs) Handles RadGridView1.CellFormatting
         Try
@@ -537,30 +573,29 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
             'Formatierung muss nur für Elterntabelle durchgeführt werden
             If template.Equals(RadGridView1.MasterTemplate) Then
 
-                If (e.Column.Name = "BenannteStelleAnzahl" And e.Row.Cells("BenannteStelleAnzahl").Value <= e.Row.Cells("BenannteStelleAnzahlMeldestand").Value) Then
-                    e.CellElement.DrawFill = True
-                    e.CellElement.GradientStyle = Telerik.WinControls.GradientStyles.Solid
-                    e.CellElement.BackColor = Color.FromArgb(255, 209, 140)
+                'Ausgeteilte - (istAnzahl + Fehlanzahl) <= Meldestand      dann rot
 
-                ElseIf (e.Column.Name = "SicherungsmarkeKleinAnzahl" And e.Row.Cells("SicherungsmarkeKleinAnzahl").Value <= e.Row.Cells("SicherungsmarkeKleinAnzahlMeldestand").Value) Then
-                    e.CellElement.DrawFill = True
-                    e.CellElement.GradientStyle = Telerik.WinControls.GradientStyles.Solid
-                    e.CellElement.BackColor = Color.FromArgb(255, 209, 140)
-                ElseIf (e.Column.Name = "SicherungsmarkeGrossAnzahl" And e.Row.Cells("SicherungsmarkeGrossAnzahl").Value <= e.Row.Cells("SicherungsmarkeGrossAnzahlMeldestand").Value) Then
-                    e.CellElement.DrawFill = True
-                    e.CellElement.GradientStyle = Telerik.WinControls.GradientStyles.Solid
-                    e.CellElement.BackColor = Color.FromArgb(255, 209, 140)
-                ElseIf (e.Column.Name = "HinweismarkeAnzahl" And e.Row.Cells("HinweismarkeAnzahl").Value <= e.Row.Cells("HinweismarkeAnzahlMeldestand").Value) Then
-                    e.CellElement.DrawFill = True
-                    e.CellElement.GradientStyle = Telerik.WinControls.GradientStyles.Solid
-                    e.CellElement.BackColor = Color.FromArgb(255, 209, 140)
+                If (e.Column.Name = "BenannteStelleAnzahl") Then
+                    If GetNeedFill(e, "BenannteStelleAnzahl", "BenannteStelleAnzahlAusgeteilt", "BenannteStelleAnzahlMeldestand", "BenannteStelleFehlmenge") Then 'e.Row.Cells("BenannteStelleAnzahl").Value <= e.Row.Cells("BenannteStelleAnzahlMeldestand").Value) Then
+                        e = fillRed(e)
+                    End If
+                ElseIf (e.Column.Name = "SicherungsmarkeKleinAnzahl") Then
+                    If GetNeedFill(e, "SicherungsmarkeKleinAnzahl", "SicherungsmarkeKleinAnzahlAusgeteilt", "SicherungsmarkeKleinAnzahlMeldestand", "SicherungsmarkeKleinFehlmenge") Then ' And e.Row.Cells("SicherungsmarkeKleinAnzahl").Value <= e.Row.Cells("SicherungsmarkeKleinAnzahlMeldestand").Value) Then
+                        e = fillRed(e)
+                    End If
 
+                ElseIf (e.Column.Name = "SicherungsmarkeGrossAnzahl") Then
+                    If GetNeedFill(e, "SicherungsmarkeGrossAnzahl", "SicherungsmarkeGrossAnzahlAusgeteilt", "SicherungsmarkeGrossAnzahlMeldestand", "SicherungsmarkeGrossFehlmenge") Then ' And e.Row.Cells("SicherungsmarkeGrossAnzahl").Value <= e.Row.Cells("SicherungsmarkeGrossAnzahlMeldestand").Value) Then
+                        e = fillRed(e)
+                    End If
+
+                ElseIf (e.Column.Name = "HinweismarkeAnzahl") Then
+                    If GetNeedFill(e, "HinweismarkeAnzahl", "HinweismarkeAnzahlAusgeteilt", "HinweismarkeAnzahlMeldestand", "HinweismarkeFehlmenge") Then 'And e.Row.Cells("HinweismarkeAnzahl").Value <= e.Row.Cells("HinweismarkeAnzahlMeldestand").Value) Then
+                        e = fillRed(e)
+                    End If
 
                 Else
-                    e.CellElement.DrawFill = False
-                    e.CellElement.GradientStyle = Telerik.WinControls.GradientStyles.Linear
-                    e.CellElement.BackColor = Color.White
-
+                    e = fillWhite(e)
                 End If
 
                 'Formatieren der Kind und Kindskind Tabelle
@@ -579,6 +614,21 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
             Debug.WriteLine(ex.StackTrace)
         End Try
     End Sub
+
+    Private Shared Function fillWhite(e As CellFormattingEventArgs) As CellFormattingEventArgs
+        e.CellElement.DrawFill = False
+        e.CellElement.GradientStyle = Telerik.WinControls.GradientStyles.Linear
+        e.CellElement.BackColor = Color.White
+        Return e
+    End Function
+
+    Private Shared Function fillRed(e As CellFormattingEventArgs) As CellFormattingEventArgs
+        e.CellElement.DrawFill = True
+        e.CellElement.GradientStyle = Telerik.WinControls.GradientStyles.Solid
+        e.CellElement.BackColor = Color.FromArgb(255, 209, 140)
+        Return e
+    End Function
+
     ''' <summary>
     ''' Durch dieses Event wird dafür gesorgt, das nur, sofern auch Kindelemente existieren, der EXPAND Button angezeigt wird. Standardmäßig ist dieser nämlich bei jedem DS. Es hat aber nicht jede Firma eine Hauptfirma
     ''' </summary>
@@ -647,6 +697,22 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
             End If
 
         End Using
+    End Sub
+
+    Private Sub RadButtonAddMarkenbestand_Click(sender As Object, e As EventArgs) Handles RadButtonAddMarkenbestand.Click
+        For Each row In RadGridView1.MasterTemplate.SelectedRows
+
+            If row.Cells("ZurBearbeitungGesperrtDurch").Value.Equals(System.Environment.UserName) Or row.Cells("ZurBearbeitungGesperrtDurch").Value = "" Then
+                Dim SelectedId = row.Cells("ID").Value
+
+                Dim f As New frmEingabeNeuerEichmarkenbestand(SelectedId)
+                f.ShowDialog()
+                LoadFromDatabase()
+
+                Exit For
+            End If
+        Next
+
     End Sub
 
 

@@ -37,7 +37,7 @@
     <UpdateUrl>\\ntserver\Server\HKB\Software\Aktuelle Eichsoftware\Admin\</UpdateUrl>
     <ProductName>RHEWA Konformitätsbewertungssoftware Administration</ProductName>
     <PublisherName>RHEWA</PublisherName>
-    <ApplicationRevision>38</ApplicationRevision>
+    <ApplicationRevision>39</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -260,6 +260,12 @@
     <Compile Include="StatusPrüfscheinnummer.vb">
       <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
     </Compile>
+    <Compile Include="View\frmEingabeNeuerEichmarkenbestand.Designer.vb">
+      <DependentUpon>frmEingabeNeuerEichmarkenbestand.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmEingabeNeuerEichmarkenbestand.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="View\frmFirmenZusatzdaten.Designer.vb">
       <DependentUpon>frmFirmenZusatzdaten.vb</DependentUpon>
     </Compile>
@@ -392,6 +398,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmEingabeAuswertegeraet.pl.resx">
       <DependentUpon>frmEingabeAuswertegeraet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmEingabeNeuerEichmarkenbestand.resx">
+      <DependentUpon>frmEingabeNeuerEichmarkenbestand.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmEingabeWaegezelle.de.resx">
       <DependentUpon>frmEingabeWaegezelle.vb</DependentUpon>
