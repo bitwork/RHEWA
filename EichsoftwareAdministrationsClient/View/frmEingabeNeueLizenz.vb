@@ -77,7 +77,8 @@ Public Class frmEingabeNeueLizenz
                                     Benutz.Nachname,
                                     Benutz.Vorname,
                                     .Firma = Firma.Name,
-                                    .Anzeigename = Benutz.Nachname + ", " + Benutz.Vorname
+                                    .Anzeigename = Benutz.Nachname + ", " + Benutz.Vorname,
+                                                              .APPlusLink = "http://rhewaapplus/APplusProd6/MasterData/adresseRec.aspx?adresse=" + Benutz.Telefon
                                 }
 
                     'ab hier sind alle Benutzer bekannt.
@@ -101,6 +102,8 @@ Public Class frmEingabeNeueLizenz
                     'databinding
                     RadMultiColumnComboBoxBenutzer.DataSource = ListFilteredBenutzer
                     RadMultiColumnComboBoxBenutzer.DisplayMember = "Anzeigename"
+                    clsTelerikHelper.CreateHyperlinkColumn(RadMultiColumnComboBoxBenutzer, "APPlusLink")
+
                 Else ' lade Benutzer ahnhand von ID
                     'abrufen der Entität aus der Datenbank
                     Dim query = From Benutz In Benutzer Join Firma In Firmen On Benutz.Firma_FK Equals Firma.ID Where Benutz.ID = _objLizen.FK_BenutzerID
@@ -111,14 +114,23 @@ Public Class frmEingabeNeueLizenz
                         Benutz.Nachname,
                         Benutz.Vorname,
                         .Firma = Firma.Name,
-                    .Anzeigename = Benutz.Nachname + ", " + Benutz.Vorname
+                    .Anzeigename = Benutz.Nachname + ", " + Benutz.Vorname,
+                                                        .APPlusLink = "http://rhewaapplus/APplusProd6/MasterData/adresseRec.aspx?adresse=" + Benutz.Telefon
                     }
 
                     'databinding
                     RadMultiColumnComboBoxBenutzer.DataSource = query.ToList
                     RadMultiColumnComboBoxBenutzer.DisplayMember = "Anzeigename"
+                    clsTelerikHelper.CreateHyperlinkColumn(RadMultiColumnComboBoxBenutzer, "APPlusLink")
+
+
                 End If
 
+                Try
+                    RadMultiColumnComboBoxBenutzer.Columns("ID").IsVisible = False
+                Catch ex As Exception
+
+                End Try
             End Using
         Catch ex As Exception
 

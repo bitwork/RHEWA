@@ -1,4 +1,6 @@
-﻿Public Class FrmAuswahllisteLizenzen
+﻿Imports Telerik.WinControls.UI
+
+Public Class FrmAuswahllisteLizenzen
 
     Private Sub RadButtonNeu_Click(sender As Object, e As EventArgs) Handles RadButtonNeu.Click
         CreateNewEichprozess()
@@ -28,11 +30,15 @@
                                       Lizenz.HEKennung,
                                       Benutz.Nachname,
                                       Benutz.Vorname,
+                                  .APPlusLink = "http://rhewaapplus/APplusProd6/MasterData/adresseRec.aspx?adresse=" + Benutz.Telefon,
                                   Lizenz.Lizenzschluessel,
                                      .Firma = Firma.Name
                            }
 
                 RadGridViewAuswahlliste.DataSource = Data.ToList
+
+                clsTelerikHelper.CreateHyperlinkColumn(RadGridViewAuswahlliste, "APPlusLink")
+
                 Try
                     RadGridViewAuswahlliste.Columns("ID").IsVisible = False
                 Catch ex As Exception
@@ -53,6 +59,11 @@
             End Try
 
         End Using
+    End Sub
+
+
+    Private Sub CreateHyperlinkColumn()
+
     End Sub
     'Private Sub LoadFromDatabase()
     '    Using Context As New HerstellerersteichungEntities
