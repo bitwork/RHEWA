@@ -201,9 +201,17 @@ Public Class EichsoftwareWebservice
                     End Try
 
                     clsServerHelper.DeleteForeignTables(CurrentServerobj)
-                    CurrentServerobj = (From db In DbContext.ServerEichprozess Select db Where db.Vorgangsnummer = Vorgangsnummer).FirstOrDefault
-                    DbContext.ServerEichprozess.Remove(CurrentServerobj)
-                    DbContext.SaveChanges()
+
+                    Try
+                        DbContext.SaveChanges()
+
+                        CurrentServerobj = (From db In DbContext.ServerEichprozess Select db Where db.Vorgangsnummer = Vorgangsnummer).FirstOrDefault
+                        DbContext.ServerEichprozess.Remove(CurrentServerobj)
+                        DbContext.SaveChanges()
+                    Catch ex As Exception
+
+                    End Try
+
 
                     NewServerObj.BearbeitungsDatum = Date.Now
                     Try

@@ -1053,7 +1053,9 @@ Public Class clsOfficeExports
 
         If FolderBrowserDialog.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
             WordSavePath = FolderBrowserDialog.SelectedPath
-            CompletePath = WordSavePath & "Ersteichung_DE.doc"
+            CompletePath = WordSavePath & "\Ersteichung_DE" & "_" & pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer & ".doc"
+
+
 
             'Hier wird das Dokument gespeichert.
             Try
@@ -1067,11 +1069,13 @@ Public Class clsOfficeExports
 
             With objWordDoc
                 .FormFields("Nummer").Result = ""
-                .FormFields("Typ").Result = pEichProzess.Lookup_Waagentyp.Typ
+                .FormFields("Typ").Result = pEichProzess.Lookup_Auswertegeraet.Typ & " - " & pEichProzess.Lookup_Waagentyp.Typ
                 .FormFields("FabrSerienNummer").Result = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer
-                .FormFields("Auftraggeber").Result = .FormFields("Auftraggeber").Result = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Hersteller & " " & pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Strasse & " " & pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Postleitzahl & ", " & pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Ort
+                .FormFields("Auftraggeber").Result = pEichProzess.Eichprotokoll.Identifikationsdaten_Benutzer
                 .FormFields("Ort").Result = pEichProzess.Eichprotokoll.Identifikationsdaten_Aufstellungsort.ToString
                 .FormFields("Fallbeschleunigung").Result = pEichProzess.Eichprotokoll.Fallbeschleunigung_g.ToString
+                .FormFields("ADatum").Result = pEichProzess.Eichprotokoll.Identifikationsdaten_Datum.Value.ToShortDateString
+
             End With
         End If
     End Sub
@@ -1092,8 +1096,7 @@ Public Class clsOfficeExports
 
         If FolderBrowserDialog.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
             WordSavePath = FolderBrowserDialog.SelectedPath
-            CompletePath = WordSavePath & "Ersteichung_EN.doc"
-
+            CompletePath = WordSavePath & "\Ersteichung_EN" & "_" & pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer & ".doc"
             'Hier wird das Dokument gespeichert.
             Try
                 System.IO.File.WriteAllBytes(CompletePath, b)
@@ -1106,11 +1109,12 @@ Public Class clsOfficeExports
 
             With objWordDoc
                 .FormFields("Nummer").Result = ""
-                .FormFields("Typ").Result = pEichProzess.Lookup_Waagentyp.Typ_EN
+                .FormFields("Typ").Result = pEichProzess.Lookup_Auswertegeraet.Typ & " - " & pEichProzess.Lookup_Waagentyp.Typ_EN
                 .FormFields("FabrSerienNummer").Result = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer
-                .FormFields("Auftraggeber").Result = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Hersteller & " " & pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Strasse & " " & pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Postleitzahl & ", " & pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Ort
+                .FormFields("Auftraggeber").Result = pEichProzess.Eichprotokoll.Identifikationsdaten_Benutzer
                 .FormFields("Ort").Result = pEichProzess.Eichprotokoll.Identifikationsdaten_Aufstellungsort.ToString
                 .FormFields("Fallbeschleunigung").Result = pEichProzess.Eichprotokoll.Fallbeschleunigung_g.ToString
+                .FormFields("ADatum").Result = pEichProzess.Eichprotokoll.Identifikationsdaten_Datum.Value.ToShortDateString
             End With
         End If
     End Sub
@@ -1131,7 +1135,7 @@ Public Class clsOfficeExports
 
         If FolderBrowserDialog.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
             WordSavePath = FolderBrowserDialog.SelectedPath
-            CompletePath = WordSavePath & "Ersteichung_PL.doc"
+            CompletePath = WordSavePath & "\Ersteichung_PL" & "_" & pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer & ".doc"
 
             'Hier wird das Dokument gespeichert.
             Try
@@ -1145,11 +1149,12 @@ Public Class clsOfficeExports
 
             With objWordDoc
                 .FormFields("Nummer").Result = ""
-                .FormFields("Typ").Result = pEichProzess.Lookup_Waagentyp.Typ_PL
+                .FormFields("Typ").Result = pEichProzess.Lookup_Auswertegeraet.Typ & " - " & pEichProzess.Lookup_Waagentyp.Typ_PL
                 .FormFields("FabrSerienNummer").Result = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer
-                .FormFields("Auftraggeber").Result = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Hersteller & " " & pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Strasse & " " & pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Postleitzahl & ", " & pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Ort
+                .FormFields("Auftraggeber").Result = pEichProzess.Eichprotokoll.Identifikationsdaten_Benutzer
                 .FormFields("Ort").Result = pEichProzess.Eichprotokoll.Identifikationsdaten_Aufstellungsort.ToString
                 .FormFields("Fallbeschleunigung").Result = pEichProzess.Eichprotokoll.Fallbeschleunigung_g.ToString
+                .FormFields("ADatum").Result = pEichProzess.Eichprotokoll.Identifikationsdaten_Datum.Value.ToShortDateString
             End With
         End If
     End Sub

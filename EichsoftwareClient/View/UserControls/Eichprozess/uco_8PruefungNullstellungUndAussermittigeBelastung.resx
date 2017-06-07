@@ -1087,7 +1087,7 @@
     <value>NoControl</value>
   </data>
   <data name="PictureBox6LC.Location" type="System.Drawing.Point, System.Drawing">
-    <value>290, 21</value>
+    <value>150, 26</value>
   </data>
   <data name="PictureBox6LC.Size" type="System.Drawing.Size, System.Drawing">
     <value>374, 118</value>
@@ -9640,6 +9640,6 @@
     <value>uco_8PruefungNullstellungUndAussermittigeBelastung</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.6367.25032, Culture=neutral, PublicKeyToken=null</value>
+    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.6367.30328, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>
