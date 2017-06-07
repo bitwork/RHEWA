@@ -1350,23 +1350,40 @@ Public Class EichsoftwareWebservice
                 DbContext.Configuration.ProxyCreationEnabled = False
 
                 Dim Element = (From d In DbContext.ServerEichmarkenverwaltung Where d.FK_BenutzerID = BenutzerIDFK Order By d.ID).FirstOrDefault
-                'Zieht den vom Ursprünglichen Wert ab. Besonderheit: Eichung Eingesendet 2 Marken. Korretur auf 3 Marken muss den COunter nur im 1 veringern
-                Try
-                    Element.BenannteStelleAnzahl -= (AnzahlBenannteStelle - Element.BenannteStelleAnzahl)
-                Catch e As Exception
-                End Try
-                Try
-                    Element.SicherungsmarkeKleinAnzahl -= (AnzahlSicherungsmarkeKlein - Element.SicherungsmarkeKleinAnzahl)
-                Catch e As Exception
-                End Try
-                Try
-                    Element.SicherungsmarkeGrossAnzahl -= (AnzahlSicherungsmarkeGross - Element.SicherungsmarkeGrossAnzahl)
-                Catch e As Exception
-                End Try
-                Try
-                    Element.HinweismarkeAnzahl -= (AnzahlHinweismarke - Element.HinweismarkeAnzahl)
-                Catch e As Exception
-                End Try
+
+                If Element Is Nothing Then
+                    Element = New ServerEichmarkenverwaltung
+                    Element.Bemerkung = ""
+                    Element.FK_BenutzerID = BenutzerIDFK
+                    Element.HEKennung = HEKennung
+
+                    Element.BenannteStelleAnzahl = AnzahlBenannteStelle
+                    Element.HinweismarkeAnzahl = AnzahlHinweismarke
+                    Element.SicherungsmarkeGrossAnzahl = AnzahlSicherungsmarkeGross
+                    Element.SicherungsmarkeKleinAnzahl = AnzahlSicherungsmarkeKlein
+
+                    DbContext.ServerEichmarkenverwaltung.Add(Element)
+
+                Else
+
+                    Try
+                        Element.BenannteStelleAnzahl += AnzahlBenannteStelle
+                    Catch e As Exception
+                    End Try
+                    Try
+                        Element.SicherungsmarkeKleinAnzahl += AnzahlSicherungsmarkeKlein
+                    Catch e As Exception
+                    End Try
+                    Try
+                        Element.SicherungsmarkeGrossAnzahl += AnzahlSicherungsmarkeGross
+                    Catch e As Exception
+                    End Try
+                    Try
+                        Element.HinweismarkeAnzahl += AnzahlHinweismarke
+                    Catch e As Exception
+                    End Try
+
+                End If
 
 
                 Try

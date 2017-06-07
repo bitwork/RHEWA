@@ -5,6 +5,8 @@ Public Class uco19EichtechnischeSicherung
     Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken
     'Private AktuellerStatusDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann wird der Vorgang auf Komptabilitätsnachweis zurückgesetzt
     Private _objEichprotokoll As Eichprotokoll
+
+    'Public objEichmarkenComparer As EichmarkenComparable
 #End Region
 
 #Region "Constructors"
@@ -148,6 +150,10 @@ Public Class uco19EichtechnischeSicherung
             PictureBox3.Image = PictureBox3.ErrorImage
         End Try
 
+
+
+
+
         'checkboxen
 
         If Not objEichprozess.Eichprotokoll.Sicherung_SicherungsmarkeKlein Is Nothing Then
@@ -161,6 +167,11 @@ Public Class uco19EichtechnischeSicherung
         If Not objEichprozess.Eichprotokoll.Sicherung_Hinweismarke Is Nothing Then
             RadCheckBoxHinweismarke.Checked = objEichprozess.Eichprotokoll.Sicherung_Hinweismarke
         End If
+
+        If Not objEichprozess.Eichprotokoll.Sicherung_BenannteStelle Is Nothing Then
+            RadCheckBoxBenannteStelle.Checked = objEichprozess.Eichprotokoll.Sicherung_BenannteStelle
+        End If
+
 
 
 
@@ -176,6 +187,10 @@ Public Class uco19EichtechnischeSicherung
 
         If Not objEichprozess.Eichprotokoll.Sicherung_HinweismarkeAnzahl Is Nothing Then
             RadTextBoxControlHinweismarke.Text = objEichprozess.Eichprotokoll.Sicherung_HinweismarkeAnzahl
+        End If
+
+        If Not objEichprozess.Eichprotokoll.Sicherung_BenannteStelleAnzahl Is Nothing Then
+            RadTextBoxControlBenannteStelle.Text = objEichprozess.Eichprotokoll.Sicherung_BenannteStelleAnzahl
         End If
 
 
@@ -199,6 +214,16 @@ Public Class uco19EichtechnischeSicherung
             RadTextBoxControlBemerkungen.Text = objEichprozess.Eichprotokoll.Sicherung_Bemerkungen
         End If
 
+
+        ''Vergleichsobjekt. Mit diesem wird später geprüft ob Änderungen an den ursprünglichen Werten vorgenommen wurden
+        'objEichmarkenComparer = New EichmarkenComparable
+        'objEichmarkenComparer.SicherungsmarkeKlein = RadCheckBoxSicherungsmarkeKlein.Checked
+        'objEichmarkenComparer.SicherungsmarkeGross = RadCheckBoxSicherungsmarkeGross.Checked
+        'objEichmarkenComparer.Hinweismarke = RadCheckBoxHinweismarke.Checked
+
+        'objEichmarkenComparer.SicherungsmarkeKleinAnzahl = RadTextBoxControlSicherungsmarkeKlein.Text
+        'objEichmarkenComparer.SicherungsmarkeGrossAnzahl = RadTextBoxControlSicherungsmarkeGross.Text
+        'objEichmarkenComparer.HinweismarkeAnzahl = RadTextBoxControlHinweismarke.Text
     End Sub
 
     ''' <summary>
@@ -209,7 +234,7 @@ Public Class uco19EichtechnischeSicherung
     ''' <commentauthor></commentauthor>
     Private Sub UpdateObject()
         'checkboxen
-        objEichprozess.Eichprotokoll.Sicherung_BenannteStelle = False 'TODO obsolete
+        objEichprozess.Eichprotokoll.Sicherung_BenannteStelle = RadCheckBoxBenannteStelle.Checked
         objEichprozess.Eichprotokoll.Sicherung_SicherungsmarkeKlein = RadCheckBoxSicherungsmarkeKlein.Checked
         objEichprozess.Eichprotokoll.Sicherung_SicherungsmarkeGross = RadCheckBoxSicherungsmarkeGross.Checked
         objEichprozess.Eichprotokoll.Sicherung_Hinweismarke = RadCheckBoxHinweismarke.Checked
@@ -480,7 +505,7 @@ Public Class uco19EichtechnischeSicherung
         End If
     End Sub
 
-    Private Sub RadCheckBoxCE2016_ToggleStateChanged(sender As Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RadCheckBoxBenannteStelle.ToggleStateChanged
+    Private Sub RadCheckBoxBenannteStelle_ToggleStateChanged(sender As Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RadCheckBoxBenannteStelle.ToggleStateChanged
         RadTextBoxControlBenannteStelle.ReadOnly = Not RadCheckBoxBenannteStelle.Checked
         PictureBoxBenannteStelle.Visible = Not RadCheckBoxBenannteStelle.Checked
 

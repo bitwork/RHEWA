@@ -45,7 +45,7 @@
     <PublisherName>RHEWA</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>151</ApplicationRevision>
+    <ApplicationRevision>154</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -191,6 +191,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Datenbankversion.vb">
+      <DependentUpon>EntityModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Eichprotokoll.vb">
       <DependentUpon>EntityModel.tt</DependentUpon>
     </Compile>
@@ -251,6 +254,7 @@
     <Compile Include="Model\clsOfficeExports.vb" />
     <Compile Include="Model\clsPlausibilitaetspruefung.vb" />
     <Compile Include="Model\clsWebserviceFunctions.vb" />
+    <Compile Include="Model\EichmarkenComparable.vb" />
     <Compile Include="Model\telerikgridlocalizer.vb" />
     <Compile Include="Mogelstatistik.vb">
       <DependentUpon>EntityModel.tt</DependentUpon>

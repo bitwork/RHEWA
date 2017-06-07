@@ -44,5 +44,6 @@ Partial Public Class Entities
     Public Overridable Property PruefungStaffelverfahrenErsatzlast() As DbSet(Of PruefungStaffelverfahrenErsatzlast)
     Public Overridable Property PruefungStaffelverfahrenNormallast() As DbSet(Of PruefungStaffelverfahrenNormallast)
     Public Overridable Property PruefungWiederholbarkeit() As DbSet(Of PruefungWiederholbarkeit)
+    Public Overridable Property Datenbankversion() As DbSet(Of Datenbankversion)
 
 End Class

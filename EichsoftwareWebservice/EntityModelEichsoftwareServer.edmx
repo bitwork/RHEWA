@@ -49,15 +49,19 @@
           <Property Name="BenannteStelleAnzahl" Type="int" />
           <Property Name="BenannteStelleAnzahlMeldestand" Type="int" />
           <Property Name="BenannteStelleFehlmenge" Type="int" />
+          <Property Name="BenannteStelleAnzahlAusgeteilt" Type="int" />
           <Property Name="SicherungsmarkeKleinAnzahl" Type="int" />
           <Property Name="SicherungsmarkeKleinAnzahlMeldestand" Type="int" />
           <Property Name="SicherungsmarkeKleinFehlmenge" Type="int" />
+          <Property Name="SicherungsmarkeKleinAnzahlAusgeteilt" Type="int" />
           <Property Name="SicherungsmarkeGrossAnzahl" Type="int" />
           <Property Name="SicherungsmarkeGrossAnzahlMeldestand" Type="int" />
           <Property Name="SicherungsmarkeGrossFehlmenge" Type="int" />
+          <Property Name="SicherungsmarkeGrossAnzahlAusgeteilt" Type="int" />
           <Property Name="HinweismarkeAnzahl" Type="int" />
           <Property Name="HinweismarkeAnzahlMeldestand" Type="int" />
           <Property Name="HinweismarkeFehlmenge" Type="int" />
+          <Property Name="HinweismarkeAnzahlAusgeteilt" Type="int" />
           <Property Name="Bemerkung" Type="nvarchar" MaxLength="999" />
           <Property Name="ZurBearbeitungGesperrtDurch" Type="nvarchar" MaxLength="50" />
         </EntityType>
@@ -1158,6 +1162,10 @@
           <Property Name="HinweismarkeFehlmenge" Type="Int32" />
           <Property Name="Bemerkung" Type="String" MaxLength="999" FixedLength="false" Unicode="true" />
           <Property Name="ZurBearbeitungGesperrtDurch" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BenannteStelleAnzahlAusgeteilt" Type="Int32" />
+          <Property Name="SicherungsmarkeKleinAnzahlAusgeteilt" Type="Int32" />
+          <Property Name="SicherungsmarkeGrossAnzahlAusgeteilt" Type="Int32" />
+          <Property Name="HinweismarkeAnzahlAusgeteilt" Type="Int32" />
         </EntityType>
         <EntityType Name="ServerEichprotokoll">
           <Key>
@@ -2025,6 +2033,10 @@
           <EntitySetMapping Name="ServerEichmarkenverwaltung">
             <EntityTypeMapping TypeName="HerstellerersteichungModel.ServerEichmarkenverwaltung">
               <MappingFragment StoreEntitySet="ServerEichmarkenverwaltung">
+                <ScalarProperty Name="HinweismarkeAnzahlAusgeteilt" ColumnName="HinweismarkeAnzahlAusgeteilt" />
+                <ScalarProperty Name="SicherungsmarkeGrossAnzahlAusgeteilt" ColumnName="SicherungsmarkeGrossAnzahlAusgeteilt" />
+                <ScalarProperty Name="SicherungsmarkeKleinAnzahlAusgeteilt" ColumnName="SicherungsmarkeKleinAnzahlAusgeteilt" />
+                <ScalarProperty Name="BenannteStelleAnzahlAusgeteilt" ColumnName="BenannteStelleAnzahlAusgeteilt" />
                 <ScalarProperty Name="ZurBearbeitungGesperrtDurch" ColumnName="ZurBearbeitungGesperrtDurch" />
                 <ScalarProperty Name="Bemerkung" ColumnName="Bemerkung" />
                 <ScalarProperty Name="HinweismarkeFehlmenge" ColumnName="HinweismarkeFehlmenge" />

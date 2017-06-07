@@ -5,6 +5,13 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="Model.Store" Provider="System.Data.SqlServerCe.4.0" ProviderManifestToken="4.0" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Datenbankversion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="Eichprotokoll">
           <Key>
             <PropertyRef Name="ID" />
@@ -693,6 +700,7 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="Datenbankversion" EntityType="Self.Datenbankversion" store:Type="Tables" />
           <EntitySet Name="Eichprotokoll" EntityType="Self.Eichprotokoll" store:Type="Tables" />
           <EntitySet Name="Eichprozess" EntityType="Self.Eichprozess" store:Type="Tables" />
           <EntitySet Name="Kompatiblitaetsnachweis" EntityType="Self.Kompatiblitaetsnachweis" store:Type="Tables" />
@@ -911,6 +919,7 @@
             <End Role="Lookup_Waegezelle" EntitySet="Lookup_Waegezelle" />
             <End Role="Mogelstatistik" EntitySet="Mogelstatistik" />
           </AssociationSet>
+          <EntitySet Name="Datenbankversion" EntityType="Model.Datenbankversion" />
         </EntityContainer>
         <EntityType Name="Eichprotokoll">
           <Key>
@@ -1641,6 +1650,13 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="Datenbankversion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" Nullable="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -2101,6 +2117,14 @@
                 <ScalarProperty Name="Wiederholung" ColumnName="Wiederholung" />
                 <ScalarProperty Name="FK_Eichprotokoll" ColumnName="FK_Eichprotokoll" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Datenbankversion">
+            <EntityTypeMapping TypeName="Model.Datenbankversion">
+              <MappingFragment StoreEntitySet="Datenbankversion">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

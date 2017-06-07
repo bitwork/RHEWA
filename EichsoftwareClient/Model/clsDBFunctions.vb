@@ -102,37 +102,56 @@ Public Class clsDBFunctions
     End Function
 
     Public Shared Function UpdateClientDatenbank()
+
         If CheckLocalDatabaseExists() = False Then
             CopyLocalDatabaseToApplicationFolder()
         End If
 
         Try
-
-
             Using DBContext As New Entities
-                Dim config = DBContext.Konfiguration.First
+
+                Dim config = DBContext.Konfiguration.FirstOrDefault
                 If config.DBVersion < 2 Then
+
                     UpdateVersion2(DBContext)
                 End If
 
                 If config.DBVersion < 3 Then
                     UpdateVersion3(DBContext)
 
+                End If
+            End Using
+        Catch ex As Entity.Core.EntityCommandExecutionException
+            Try
+                Using DBContext As New Entities
+                    'Spalte DB Version existiert noch nicht
+                    Dim updateScript As String = ""
+                    updateScript = "ALTER TABLE [Konfiguration] ADD [DBVersion] nvarchar(25) DEFAULT '1' NULL"
+                    DBContext.Database.ExecuteSqlCommand(updateScript)
+                    UpdateClientDatenbank()
+                End Using
+            Catch ex2 As Exception
+            End Try
+        Catch ex As InvalidOperationException ' keine Lizenz eingetragen
+            Return False
+        End Try
+        Try
+            Using DBContext As New Entities
+
+                'ab hier neue Tabelle mit Versionsinformationen damit keine Lizenz vorhanden sein muss um die änderungen einzutragen...
+
+                Dim objVersion = DBContext.Datenbankversion.FirstOrDefault
+                If objVersion Is Nothing Then
 
                 End If
             End Using
-
         Catch ex As Entity.Core.EntityCommandExecutionException
-            Using DBContext As New Entities
-                'Spalte DB Version existiert noch nicht
-                Dim updateScript As String = ""
-                updateScript = "ALTER TABLE [Konfiguration] ADD [DBVersion] nvarchar(25) DEFAULT '1' NULL"
-                DBContext.Database.ExecuteSqlCommand(updateScript)
-                UpdateClientDatenbank()
-            End Using
-
-        Catch ex As InvalidOperationException
-
+            Try
+                Using DBContext As New Entities
+                    updateVersion4(DBContext)
+                End Using
+            Catch ex2 As Exception
+            End Try
         End Try
 
 
@@ -140,6 +159,7 @@ Public Class clsDBFunctions
             LoescheDevBenutzer()
         End If
 
+        Return True
     End Function
 
 
@@ -230,6 +250,29 @@ Public Class clsDBFunctions
         Next
 
         DBContext.SaveChanges()
+    End Sub
+
+    Private Shared Sub updateVersion4(DBContext As Entities)
+        Try
+            Dim updateScript As String = ""
+            updateScript = "CREATE TABLE [Datenbankversion] (  [id] Int IDENTITY (1, 1) Not NULL, [version] int Not NULL)"
+            DBContext.Database.ExecuteSqlCommand(updateScript)
+            updateScript = "ALTER TABLE [Datenbankversion] ADD CONSTRAINT [PK_Datenbankversion] PRIMARY KEY ([id])"
+            DBContext.Database.ExecuteSqlCommand(updateScript)
+        Catch ex As Exception
+
+        End Try
+
+        Try
+            Dim objVersion = DBContext.Datenbankversion.FirstOrDefault
+            If objVersion Is Nothing Then
+                objVersion = New Datenbankversion
+                objVersion.version = 4
+                DBContext.Datenbankversion.Add(objVersion)
+                DBContext.SaveChanges()
+            End If
+        Catch ex As Exception
+        End Try
     End Sub
 #End Region
 

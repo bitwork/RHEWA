@@ -1,6 +1,8 @@
 Imports System.Net.FtpClient
 Imports System.Net
 Imports System.IO
+Imports EichsoftwareClient.EichsoftwareWebservice
+Imports EichsoftwareClient
 
 Public Class Uco21Versenden
 
@@ -111,7 +113,115 @@ Public Class Uco21Versenden
         End If
 
         Dim objServerEichprozess As New EichsoftwareWebservice.ServerEichprozess
+        Dim alterVersendetStatus = objEichprozess.FK_Bearbeitungsstatus
+        VersendetStatusSetzen(objServerEichprozess)
 
+        Using dbcontext As New Entities
+            objEichprozess = (From a In dbcontext.Eichprozess.Include("Eichprotokoll").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
+            objEichprozess.AusStandardwaageErzeugt = False 'Egal ob der Prozess versendet wird oder nicht, das Flag bei einer kopierten Leistung kann entfernt werden, da es sich jetzt um eine gültige Waage handelt
+            objServerEichprozess = clsClientServerConversionFunctions.CopyServerObjectProperties(objServerEichprozess, objEichprozess, clsClientServerConversionFunctions.enuModus.ClientSendetAnRhewa)
+
+            'verbindung öffnen
+            Using Webcontext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
+                If Not clsWebserviceFunctions.TesteVerbindung() Then
+                    MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung)
+                    Exit Sub
+                End If
+
+                Dim objLiz = (From db In dbcontext.Lizensierung Where db.Lizenzschluessel = AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel And db.HEKennung = AktuellerBenutzer.Instance.Lizenz.HEKennung).FirstOrDefault
+
+                'upload des Eichprotokolls
+                LadeDatensatzHoch(Webcontext, objLiz, objServerEichprozess)
+
+                'Eichmarken abziehen, wenn neu
+                If alterVersendetStatus = GlobaleEnumeratoren.enuBearbeitungsstatus.noch_nicht_versendet Then ErgaenzeEichmarken(Webcontext, objLiz)
+            End Using
+        End Using
+        ParentFormular.Close()
+    End Sub
+
+    Private Sub ErgaenzeEichmarken(Webcontext As EichsoftwareWebserviceClient, objLiz As Lizensierung)
+        Try
+            'nur versenden wenn der Eichprozess noch nicht versendet wurde.  Nach Absprache vom 07.06 soll nur einmalig abgezogen werden. Alle anderen korrekturen würden per Absprache geklärt.  Veraltet:Sonst würden zu oft Marken abgezogen. Ausserdem sonderfall: eichmarkenverwaltung wurde geändert (dirty)
+            Webcontext.AddEichmarkenverwaltung(objLiz.HEKennung, objLiz.Lizenzschluessel, objLiz.FK_BenutzerID,
+                                          objEichprozess.Eichprotokoll.Sicherung_BenannteStelleAnzahl, objEichprozess.Eichprotokoll.Sicherung_SicherungsmarkeKleinAnzahl,
+                              objEichprozess.Eichprotokoll.Sicherung_SicherungsmarkeGrossAnzahl, objEichprozess.Eichprotokoll.Sicherung_HinweismarkeAnzahl,
+                             My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+
+            'If Not ParentFormular Is Nothing Then
+            '    If Not ParentFormular.AllUcos Is Nothing Then
+            '        'prüfen ob es in der auflisting ein element vom typ ucoVersenden gibt.
+            '        For Each uco In ParentFormular.AllUcos
+
+
+            '            'wenn dirty
+            '            If TypeOf uco Is uco19EichtechnischeSicherung Then
+            '                If Not CType(uco, uco19EichtechnischeSicherung).objEichmarkenComparer Is Nothing Then
+            '                    If (CType(uco, uco19EichtechnischeSicherung).objEichmarkenComparer.IsDirty(objEichprozess.Eichprotokoll)) Then
+            '                        Webcontext.AddEichmarkenverwaltung(objLiz.HEKennung, objLiz.Lizenzschluessel, objLiz.FK_BenutzerID,
+            '                              objEichprozess.Eichprotokoll.Sicherung_BenannteStelleAnzahl, objEichprozess.Eichprotokoll.Sicherung_SicherungsmarkeKleinAnzahl,
+            '                              objEichprozess.Eichprotokoll.Sicherung_SicherungsmarkeGrossAnzahl, objEichprozess.Eichprotokoll.Sicherung_HinweismarkeAnzahl,
+            '                             My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+            '                    End If
+
+            '                End If
+            '                Exit For
+            '            End If
+
+            '        Next
+            '    End If
+            'End If
+
+
+        Catch e As Exception
+            MessageBox.Show(e.StackTrace, e.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub LadeDatensatzHoch(webcontext As EichsoftwareWebserviceClient, objLiz As Lizensierung, objServerEichprozess As ServerEichprozess)
+        Dim bolSuccess As Boolean = False
+        Try
+            'prüfen ob neue WZ hinzuzufügen ist
+            If Not objEichprozess Is Nothing Then
+                If Not objEichprozess.Lookup_Waegezelle Is Nothing Then
+                    If objEichprozess.Lookup_Waegezelle.Neu Then
+                        'umwandeln von Client WZ in Server WZ
+                        Dim objServerWZ As New EichsoftwareWebservice.ServerLookup_Waegezelle
+                        clsClientServerConversionFunctions.CopyServerObjectPropertieWZs(objServerWZ, objEichprozess.Lookup_Waegezelle)
+                        Dim neueWZID = webcontext.AddWaegezelle(objLiz.HEKennung, objLiz.Lizenzschluessel, objServerWZ, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                        If neueWZID = "" Then
+                            '//zurücksetzen des Status
+                            MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_SpeicherAnomalie)
+                            EichprozessStatusZurueckSetzen()
+                            Return
+                        End If
+                        ' überschreiben der WZ mit der Serverseitigen. für den Fall, das die WZ die neu war, bereits von einem anderem Benutzer angelegt wurde aber noch nicht freigegeben
+                        objServerEichprozess._FK_Waegezelle = neueWZID
+                        For Each item In objServerEichprozess._ServerMogelstatistik
+                            item._FK_Waegezelle = neueWZID
+                        Next
+                    End If
+                End If
+            End If
+
+            bolSuccess = webcontext.AddEichprozess(objLiz.HEKennung, objLiz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name, Version)
+            If bolSuccess = False Then
+                '//zurücksetzen des Status
+                MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_SpeicherAnomalie)
+                EichprozessStatusZurueckSetzen()
+                Return
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            '//zurücksetzen des Status
+            EichprozessStatusZurueckSetzen()
+            Return
+        End Try
+    End Sub
+
+
+
+    Private Sub VersendetStatusSetzen(objServerEichprozess As ServerEichprozess)
         'auf versendet Status setzen
         If objEichprozess.FK_Bearbeitungsstatus = GlobaleEnumeratoren.enuBearbeitungsstatus.noch_nicht_versendet Or objEichprozess.FK_Bearbeitungsstatus = GlobaleEnumeratoren.enuBearbeitungsstatus.Fehlerhaft Then 'wenn neu oder fehlerhaft auf versendet zurücksetzen
             'neuen Context aufbauen
@@ -126,7 +236,6 @@ Public Class Uco21Versenden
                         'neuen Status zuweisen
                         UpdateObject()
                         objEichprozess.FK_Bearbeitungsstatus = GlobaleEnumeratoren.enuBearbeitungsstatus.Wartet_auf_Bearbeitung
-                        'objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit RHEWA sich den DS von Anfang angucken kann
 
                         Try
                             Context.SaveChanges()
@@ -140,90 +249,6 @@ Public Class Uco21Versenden
                 End If
             End Using
         End If
-
-        Using dbcontext As New Entities
-            objEichprozess = (From a In dbcontext.Eichprozess.Include("Eichprotokoll").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
-            objEichprozess.AusStandardwaageErzeugt = False 'Egal ob der Prozess versendet wird oder nicht, das Flag bei einer kopierten Leistung kann entfernt werden, da es sich jetzt um eine gültige Waage handelt
-            objServerEichprozess = clsClientServerConversionFunctions.CopyServerObjectProperties(objServerEichprozess, objEichprozess, clsClientServerConversionFunctions.enuModus.ClientSendetAnRhewa)
-
-            'verbindung öffnen
-            Using Webcontext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
-                Try
-                    Webcontext.Open()
-
-                Catch ex As Exception
-                    MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
-
-                    Exit Sub
-                End Try
-
-                Dim objLiz = (From db In dbcontext.Lizensierung Where db.Lizenzschluessel = AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel And db.HEKennung = AktuellerBenutzer.Instance.Lizenz.HEKennung).FirstOrDefault
-                Dim bolSuccess As Boolean = False
-                Try
-                    'prüfen ob neue WZ hinzuzufügen ist
-                    If Not objEichprozess Is Nothing Then
-                        If Not objEichprozess.Lookup_Waegezelle Is Nothing Then
-                            If objEichprozess.Lookup_Waegezelle.Neu Then
-                                'umwandeln von Client WZ in Server WZ
-                                Dim objServerWZ As New EichsoftwareWebservice.ServerLookup_Waegezelle
-                                clsClientServerConversionFunctions.CopyServerObjectPropertieWZs(objServerWZ, objEichprozess.Lookup_Waegezelle)
-                                Dim neueWZID = Webcontext.AddWaegezelle(objLiz.HEKennung, objLiz.Lizenzschluessel, objServerWZ, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
-                                If neueWZID = "" Then
-                                    '//zurücksetzen des Status
-                                    MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_SpeicherAnomalie)
-                                    EichprozessStatusZurueckSetzen()
-                                    Return
-                                End If
-                                ' überschreiben der WZ mit der Serverseitigen. für den Fall, das die WZ die neu war, bereits von einem anderem Benutzer angelegt wurde aber noch nicht freigegeben
-                                objServerEichprozess._FK_Waegezelle = neueWZID
-                                For Each item In objServerEichprozess._ServerMogelstatistik
-                                    item._FK_Waegezelle = neueWZID
-                                Next
-                            End If
-                        End If
-                    End If
-
-                    bolSuccess = Webcontext.AddEichprozess(objLiz.HEKennung, objLiz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name, Version)
-                    If bolSuccess = False Then
-                        '//zurücksetzen des Status
-                        MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_SpeicherAnomalie)
-                        EichprozessStatusZurueckSetzen()
-                        Return
-                    End If
-                Catch ex As Exception
-                    MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    '//zurücksetzen des Status
-                    EichprozessStatusZurueckSetzen()
-                    Return
-                End Try
-                Try
-                    'nur versenden wenn der Eichprozess noch nicht versendet wurde. Sonst würden zu oft Marken abgezogen. Ausserdem sonderfall: eichmarkenverwaltung wurde geändert (dirty)
-                    If Not ParentFormular Is Nothing Then
-                        If Not ParentFormular.AllUcos Is Nothing Then
-                            'prüfen ob es in der auflisting ein element vom typ ucoVersenden gibt.
-                            For Each uco In ParentFormular.AllUcos
-                                'wenn dirty
-                                If TypeOf uco Is uco19EichtechnischeSicherung Then
-                                    If CType(uco, uco19EichtechnischeSicherung).AktuellerStatusDirty Then
-
-                                        Webcontext.AddEichmarkenverwaltung(objLiz.HEKennung, objLiz.Lizenzschluessel, objLiz.FK_BenutzerID,
-                                                        objEichprozess.Eichprotokoll.Sicherung_BenannteStelleAnzahl, objEichprozess.Eichprotokoll.Sicherung_SicherungsmarkeKleinAnzahl,
-                                                        objEichprozess.Eichprotokoll.Sicherung_SicherungsmarkeGrossAnzahl, objEichprozess.Eichprotokoll.Sicherung_HinweismarkeAnzahl,
-                                                       My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
-                                    End If
-                                    Exit For
-                                End If
-
-                            Next
-                        End If
-                    End If
-
-                    ParentFormular.Close()
-                Catch e As Exception
-                    MessageBox.Show(e.StackTrace, e.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                End Try
-            End Using
-        End Using
     End Sub
 
     Private Sub EichprozessStatusZurueckSetzen()
