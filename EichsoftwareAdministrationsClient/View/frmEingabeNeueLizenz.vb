@@ -47,8 +47,12 @@ Public Class frmEingabeNeueLizenz
 
     Private Sub FillControls()
         ''todo Dropdown Wert zuweisen aus Objekt
+        If RadMultiColumnComboBoxBenutzer.SelectedItem Is Nothing Then
+            RadTextBoxControl1.Text = _objLizen.HEKennung
 
-        RadTextBoxControl1.Text = _objLizen.HEKennung
+        Else
+            RadMultiColumnComboBoxBenutzer_SelectedIndexChanged(Nothing, Nothing)
+        End If
         RadTextBoxControl2.Text = _objLizen.Lizenzschluessel
         RadCheckBox1.Checked = _objLizen.RHEWALizenz
         RadCheckBox2.Checked = _objLizen.Aktiv
