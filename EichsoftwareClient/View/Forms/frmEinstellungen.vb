@@ -74,11 +74,11 @@
         If RadRadioButtonSyncAlles.IsChecked Then
             AktuellerBenutzer.Instance.Synchronisierungsmodus = "Alles"
             AktuellerBenutzer.Instance.SyncAb = "01.01.2000"
-            AktuellerBenutzer.Instance.SyncBis = "31.12.2999"
+            AktuellerBenutzer.Instance.SyncBis = New Date(2099,12,31)
         ElseIf RadRadioButtonSyncSeit.IsChecked Then
             AktuellerBenutzer.Instance.Synchronisierungsmodus = "Ab"
             AktuellerBenutzer.Instance.SyncAb = RadDateTimePickerSince.Value
-            AktuellerBenutzer.Instance.SyncBis = "31.12.2999"
+            AktuellerBenutzer.Instance.SyncBis = New Date(2099, 12, 31)
         ElseIf RadRadioButtonSyncZwischen.IsChecked Then
             AktuellerBenutzer.Instance.Synchronisierungsmodus = "Zwischen"
             AktuellerBenutzer.Instance.SyncAb = RadDateTimePickerStart.Value
