@@ -784,5 +784,41 @@ Public Class ucoContent
         End Using
     End Sub
 #End Region
+#Region "Timer"
 
+    Private _tmrDelaySearch As Timer
+    Private Const DelayedTextChangedTimeout As Integer = 200
+    Friend Event TimerStopped()
+
+    Private Sub _tmrDelaySearch_Tick(sender As Object, e As EventArgs)
+        If _tmrDelaySearch IsNot Nothing Then
+            _tmrDelaySearch.Stop()
+            RaiseEvent TimerStopped()
+        End If
+    End Sub
+
+
+
+    Friend Sub StartTimer()
+        If _tmrDelaySearch IsNot Nothing Then
+            _tmrDelaySearch.Stop()
+        End If
+
+        If _tmrDelaySearch Is Nothing Then
+            _tmrDelaySearch = New Timer()
+            AddHandler _tmrDelaySearch.Tick, AddressOf _tmrDelaySearch_Tick
+            _tmrDelaySearch.Interval = DelayedTextChangedTimeout
+        End If
+
+        _tmrDelaySearch.Start()
+    End Sub
+
+    Friend ReadOnly Property TimerRunning As Boolean
+        Get
+            If _tmrDelaySearch Is Nothing Then Return False
+            Return _tmrDelaySearch.Enabled
+        End Get
+    End Property
+
+#End Region
 End Class

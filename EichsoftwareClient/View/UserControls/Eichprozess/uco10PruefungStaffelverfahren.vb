@@ -737,6 +737,13 @@ Public Class uco10PruefungStaffelverfahren
         'prüfen ob alle Felder ausgefüllt sind
         AbortSaving = False
 
+        For staffel As Integer = 1 To 5
+            For bereich As Integer = 1 To 3
+                BerechneStaffelBereich(staffel, bereich)
+                BerechneMessabweichung(bereich)
+            Next
+        Next
+
         Dim intausgefuellteStaffeln As Integer = 0
         Dim einFeldGefuelltInStaffel As Boolean = False
         If ValidateStaffelAusgefuellt(RadGroupBoxStaffel1Bereich1, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel1Bereich2, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel1Bereich3, einFeldGefuelltInStaffel) Or einFeldGefuelltInStaffel Then
@@ -822,6 +829,9 @@ Public Class uco10PruefungStaffelverfahren
     Private Sub BerechneStaffelBereich(ByVal Staffel As String, ByVal Bereich As String)
         Try
             Dim Last1 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 1))
+            If Last1.Visible = False Then
+                Exit Sub
+            End If
             Dim Last2 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 2))
             Dim Last3Normallast As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 3))
             Dim Last4 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 4))
@@ -1053,7 +1063,9 @@ Public Class uco10PruefungStaffelverfahren
     RadTextBoxControlStaffel5Bereich3Anzeige4.TextChanged, RadTextBoxControlStaffel5Bereich3Anzeige3.TextChanged, RadTextBoxControlStaffel5Bereich2Anzeige4.TextChanged, RadTextBoxControlStaffel5Bereich2Anzeige3.TextChanged, RadTextBoxControlStaffel5Bereich1Anzeige4.TextChanged, RadTextBoxControlStaffel5Bereich1Anzeige3.TextChanged, RadTextBoxControlStaffel4Bereich3Anzeige4.TextChanged, RadTextBoxControlStaffel4Bereich3Anzeige3.TextChanged, RadTextBoxControlStaffel4Bereich2Anzeige4.TextChanged, RadTextBoxControlStaffel4Bereich2Anzeige3.TextChanged, RadTextBoxControlStaffel4Bereich1Anzeige4.TextChanged, RadTextBoxControlStaffel4Bereich1Anzeige3.TextChanged, RadTextBoxControlStaffel3Bereich3Anzeige4.TextChanged, RadTextBoxControlStaffel3Bereich3Anzeige3.TextChanged, RadTextBoxControlStaffel3Bereich2Anzeige4.TextChanged, RadTextBoxControlStaffel3Bereich2Anzeige3.TextChanged, RadTextBoxControlStaffel3Bereich1Anzeige4.TextChanged, RadTextBoxControlStaffel3Bereich1Anzeige3.TextChanged, RadTextBoxControlStaffel2Bereich3Anzeige4.TextChanged, RadTextBoxControlStaffel2Bereich3Anzeige3.TextChanged, RadTextBoxControlStaffel2Bereich2Anzeige4.TextChanged, RadTextBoxControlStaffel2Bereich2Anzeige3.TextChanged, RadTextBoxControlStaffel2Bereich1Anzeige4.TextChanged, RadTextBoxControlStaffel2Bereich1Anzeige3.TextChanged
 
         If _suspendEvents = True Then Exit Sub
+        If TimerRunning Then Exit Sub Else StartTimer()
         _suspendEvents = True
+
         AktuellerStatusDirty = True
 
         Dim staffel As String = GetStaffel(sender)
@@ -1077,6 +1089,9 @@ Public Class uco10PruefungStaffelverfahren
 
             'die Messabweichung durch alle Staffeln durchreichen
             Dim Fehler6Staffel1 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 1, CInt(Bereich), 6))
+            If Fehler6Staffel1.Visible = False Then
+                Exit Sub
+            End If
             Dim Fehler6Staffel2 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 2, CInt(Bereich), 6))
             Dim Fehler6Staffel3 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 3, CInt(Bereich), 6))
             Dim Fehler6Staffel4 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 4, CInt(Bereich), 6))
@@ -1491,6 +1506,15 @@ Public Class uco10PruefungStaffelverfahren
 
             LoadFromDatabase()
         End If
+    End Sub
+
+    Private Sub uco10PruefungStaffelverfahren_TimerStopped() Handles Me.TimerStopped
+        'For staffel As Integer = 1 To 5
+        '    For bereich As Integer = 1 To 3
+        '        BerechneStaffelBereich(staffel, bereich)
+        '        BerechneMessabweichung(bereich)
+        '    Next
+        'Next
     End Sub
 
 #End Region
