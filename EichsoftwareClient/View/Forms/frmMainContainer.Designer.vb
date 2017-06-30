@@ -82,6 +82,7 @@ Partial Class FrmMainContainer
         '
         'LayoutMaster
         '
+        Me.LayoutMaster.AllowCustomize = False
         Me.LayoutMaster.Controls.Add(Me.PictureBoxRHEWALogo)
         Me.LayoutMaster.Controls.Add(Me.RadButtonChangeLanguageToGerman)
         Me.LayoutMaster.Controls.Add(Me.RadButtonChangeLanguageToEnglish)
