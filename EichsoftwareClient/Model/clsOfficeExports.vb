@@ -28,6 +28,13 @@ Public Class clsOfficeExports
         Dim b() As Byte = My.Resources.Kompatibilitätsnachweis_DE
         Dim FolderBrowserDialog As New FolderBrowserDialog
 
+        Dim Hoechstlast As Decimal
+        If (pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast.Contains(";")) Then
+            Hoechstlast = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast.Split(";")(1)
+        Else
+            Hoechstlast = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast
+        End If
+
         'Template excel dokument kopieren an Ort den der Benutzer über FolderBrowserDialog angibt
         If FolderBrowserDialog.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
             ExcelSavePath = FolderBrowserDialog.SelectedPath
@@ -243,7 +250,8 @@ Public Class clsOfficeExports
             objExcelWorksheetDatenEingabe.Cells(23, 1).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Zulassungsinhaber
 
             'WZ_Hoechstlast befüllen in G37 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(37, 7).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast.Split(";")(0)
+
+            objExcelWorksheetDatenEingabe.Cells(37, 7).value = Hoechstlast
 
             '_________________________________________________________________________________________________________________________________
             'NSW ENDE
@@ -348,11 +356,10 @@ Public Class clsOfficeExports
 
             'Mindestvorlast WZ befüllen in G38 auf Daten-Eingabe
             If Not pEichProzess.Lookup_Waegezelle.MindestvorlastProzent Is Nothing Then
-                objExcelWorksheetDatenEingabe.Cells(38, 7).value = (pEichProzess.Lookup_Waegezelle.MindestvorlastProzent / 100) * pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast
+                objExcelWorksheetDatenEingabe.Cells(38, 7).value = (pEichProzess.Lookup_Waegezelle.MindestvorlastProzent / 100) * Hoechstlast
 
             Else
                 objExcelWorksheetDatenEingabe.Cells(38, 7).value = pEichProzess.Lookup_Waegezelle.Mindestvorlast
-
             End If
 
             'MinTeilungswert WZ befüllen in G41 auf Daten-Eingabe
@@ -426,6 +433,13 @@ Public Class clsOfficeExports
         Dim CompletePath As String
         Dim b() As Byte = My.Resources.Kompatibilitätsnachweis_EN
         Dim FolderBrowserDialog As New FolderBrowserDialog
+
+        Dim Hoechstlast As Decimal
+        If (pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast.Contains(";")) Then
+            Hoechstlast = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast.Split(";")(1)
+        Else
+            Hoechstlast = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast
+        End If
 
         'Template excel dokument kopieren an Ort den der Benutzer über FolderBrowserDialog angibt
         If FolderBrowserDialog.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
@@ -641,7 +655,7 @@ Public Class clsOfficeExports
             objExcelWorksheetDatenEingabe.Cells(23, 1).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Zulassungsinhaber
 
             'WZ_Hoechstlast befüllen in G37 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(37, 7).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast.Split(";")(0)
+            objExcelWorksheetDatenEingabe.Cells(37, 7).value = Hoechstlast
 
             '_________________________________________________________________________________________________________________________________
             'NSW ENDE
@@ -749,7 +763,7 @@ Public Class clsOfficeExports
             'Mindestvorlast WZ befüllen in G38 auf Daten-Eingabe
 
             If Not pEichProzess.Lookup_Waegezelle.MindestvorlastProzent Is Nothing Then
-                objExcelWorksheetDatenEingabe.Cells(38, 7).value = (pEichProzess.Lookup_Waegezelle.MindestvorlastProzent / 100) * pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast
+                objExcelWorksheetDatenEingabe.Cells(38, 7).value = (pEichProzess.Lookup_Waegezelle.MindestvorlastProzent / 100) * Hoechstlast
 
             Else
                 objExcelWorksheetDatenEingabe.Cells(38, 7).value = pEichProzess.Lookup_Waegezelle.Mindestvorlast
@@ -1171,6 +1185,13 @@ Public Class clsOfficeExports
         Dim objWordDoc As Microsoft.Office.Interop.Word.Document
         Dim FolderBrowserDialog As New FolderBrowserDialog
 
+        Dim Hoechstlast As Decimal
+        If (pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast.Contains(";")) Then
+            Hoechstlast = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast.Split(";")(1)
+        Else
+            Hoechstlast = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast
+        End If
+
         If FolderBrowserDialog.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
 
             'Hier wird das Dokument gespeichert.
@@ -1220,7 +1241,7 @@ Public Class clsOfficeExports
                 r.InsertAfter("Max Anzahl Teilungswerte: " & pEichProzess.Lookup_Waegezelle.MaxAnzahlTeilungswerte & vbNewLine)
                 r.InsertAfter("Mindestvorlast: " & pEichProzess.Lookup_Waegezelle.Mindestvorlast & vbNewLine)
                 If Not pEichProzess.Lookup_Waegezelle.MindestvorlastProzent Is Nothing Then
-                    r.InsertAfter("Mindestvorlast: " & (pEichProzess.Lookup_Waegezelle.MindestvorlastProzent / 100) * pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast)
+                    r.InsertAfter("Mindestvorlast: " & (pEichProzess.Lookup_Waegezelle.MindestvorlastProzent / 100) * Hoechstlast)
                 Else
                     r.InsertAfter("Mindestvorlast: " & pEichProzess.Lookup_Waegezelle.Mindestvorlast)
                 End If
@@ -1263,7 +1284,7 @@ Public Class clsOfficeExports
                 r.InsertAfter("Waage Totlast: " & pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Totlast & vbNewLine)
                 r.InsertAfter("Waage Übersetzungsverhaeltnis: " & pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Uebersetzungsverhaeltnis & vbNewLine)
                 r.InsertAfter("Waage Zulassungsinhaber: " & pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Zulassungsinhaber & vbNewLine)
-                r.InsertAfter("WZ Höchstlast: " & pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast.Split(";")(0) & vbNewLine)
+                r.InsertAfter("WZ Höchstlast: " & Hoechstlast & vbNewLine)
 
                 ''beschaffenheitsprüfung
                 para.Range.Style = "Überschrift 1"
