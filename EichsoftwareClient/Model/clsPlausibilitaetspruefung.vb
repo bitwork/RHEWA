@@ -241,7 +241,7 @@ Public Class clsPlausibilitaetspruefung
 
     Public ReadOnly Property MehrbereichSoftware As String
         Get
-            Return Mehrbereich
+            Return _objEichprozess.Lookup_Waagenart.Art
         End Get
     End Property
 
@@ -541,7 +541,7 @@ Public Class clsPlausibilitaetspruefung
             Next
 
             Dim Werte = GesuchterBereich.Split(";")
-            Mehrbereich = _objEichprozess.Lookup_Waagenart.Art
+            Mehrbereich = "TODO noch nicht in Konfig gefunden"
             Gewichtseinheit = Werte(0) ' 0 = tonnen ; = kg 2; g
             Waegebereich1 = Werte(3)
             Ziffernschritt1 = Werte(4)
