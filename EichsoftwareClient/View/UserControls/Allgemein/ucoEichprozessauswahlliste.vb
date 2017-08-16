@@ -419,8 +419,11 @@ Public Class ucoEichprozessauswahlliste
                     f.Show()
                     AddHandler f.FormClosed, AddressOf LoadFromDatabase
                 Else
-                    'es gibt ihn schon und er ist bereits abgeschickt. nur lesend öffnen
+                    'es gibt ihn schon und er ist bereits abgeschickt und genehmigt. nur lesend öffnen
+
+
                     objEichprozess = clsDBFunctions.HoleNachschlageListenFuerEichprozess(objEichprozess)
+                    objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Versenden 'grüne ampel auf versenden setzen, damit direkt alles betrachtet werden kann
                     Dim f As New FrmMainContainer(objEichprozess, FrmMainContainer.enuDialogModus.lesend)
                     f.Show()
                     AddHandler f.FormClosed, AddressOf LoadFromDatabase
