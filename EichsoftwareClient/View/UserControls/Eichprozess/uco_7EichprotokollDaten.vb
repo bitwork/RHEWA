@@ -115,75 +115,238 @@ Public Class uco_7EichprotokollDaten
     ''' <author></author>
     ''' <commentauthor></commentauthor>
     Private Sub FillControls()
-
-        If AktuellerBenutzer.Instance.Lizenz.RHEWALizenz Then
-            If objEichprozess.AusStandardwaageErzeugt = True Then
-                lblTruck.Visible = False
-                RadTextBoxControlNormalienEichfahrzeugFirma.Visible = False
-                RadDateTimePickerNormalienLetztePruefung.Visible = False
-                RadDateTimePickerNormalienLetztePruefung.Value = Now
-                lblTestzeitraum.Visible = False
-                Label10.Visible = False
-            End If
-        End If
-        Dim dMAXHoechlast As Decimal 'variable zum speichern der höchsten Hoechstlast (je nach Art der Waage Max1,2 oder 3)
+        Dim dMAXHoechlast As Decimal = GetHoechstlast()
 
         'Steuerlemente füllen
 
-        'Bereich Identifikationsdaten
-        If Not objEichprozess.Eichprotokoll.Identifikationsdaten_Benutzer Is Nothing Then
-            RadTextBoxControlBenutzer.Text = objEichprozess.Eichprotokoll.Identifikationsdaten_Benutzer
-        End If
+        SetControlsSonderfaelleRHEWALizenz()
+        FillControlsIdentifikationsdaten()
+        FillControlsGenauigkeitsklasse()
+        FillControlsWaagenInformationen()
+        FillControlsBerechnungHoechstwert()
+        FillControlsNormallast(dMAXHoechlast)
+        FillControlsSonderfaelleNachVerfahren(dMAXHoechlast)
+        FillControlsKomponenten()
+        FillControlsWagentyp()
 
-        If Not objEichprozess.Eichprotokoll.Identifikationsdaten_Aufstellungsort Is Nothing Then
-            RadTextBoxControlAufstellungsort.Text = objEichprozess.Eichprotokoll.Identifikationsdaten_Aufstellungsort
-        End If
 
-        If Not objEichprozess.Eichprotokoll.Identifikationsdaten_Baujahr Is Nothing Then
-            RadTextBoxControlBaujahr.Text = objEichprozess.Eichprotokoll.Identifikationsdaten_Baujahr
-        End If
 
-        If objEichprozess.Eichprotokoll.Identifikationsdaten_Datum Is Nothing Then
-            If AktuellerBenutzer.Instance.Lizenz.RHEWALizenz Then RadTextBoxControlDatum.Text = Date.Now.Date
-        Else
-            RadTextBoxControlDatum.Text = objEichprozess.Eichprotokoll.Identifikationsdaten_Datum
-        End If
+        'validieren ob die Werte bereits einmal geschrieben wurden. Wenn nicht, Standardwerte aus AWG laden.
+        FillControlsVerwendungszweckTara()
+        FillControlsBeschaffenheitspruefung()
 
-        'Stammdaten aus lokaler Lizenz laden
-        RadTextBoxControlPruefer.Text = AktuellerBenutzer.Instance.Lizenz.Name & ", " & AktuellerBenutzer.Instance.Lizenz.Vorname & " (" + AktuellerBenutzer.Instance.Lizenz.HEKennung & ")"
+        FillControlsDrucker()
 
-        RadTextBoxControlFabriknummer.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer
+        'fokus setzen auf erstes Steuerelement
+        RadTextBoxControlBenutzer.Focus()
 
-        If objEichprozess.Lookup_Waagenart.Art = "Zweibereichswaage" OrElse objEichprozess.Lookup_Waagenart.Art = "Dreibereichswaage" Then
-            RadCheckBoxMehrbereichswaage.Checked = True
-            RadCheckBoxMehrteilungswaage.Checked = False
-        ElseIf objEichprozess.Lookup_Waagenart.Art = "Zweiteilungswaage" OrElse objEichprozess.Lookup_Waagenart.Art = "Dreiteilungswaage" Then
-            RadCheckBoxMehrbereichswaage.Checked = False
-            RadCheckBoxMehrteilungswaage.Checked = True
-        Else
-            RadCheckBoxMehrbereichswaage.Checked = False
-            RadCheckBoxMehrteilungswaage.Checked = False
-        End If
+    End Sub
 
-        Select Case objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Genauigkeitsklasse.ToUpper
-            Case "I"
-                PictureBoxGenauigkeitsklasse.Image = My.Resources.Genauigkeitsklasse1
-            Case "II"
-                PictureBoxGenauigkeitsklasse.Image = My.Resources.Genauigkeitsklasse2
-            Case "III"
-                PictureBoxGenauigkeitsklasse.Image = My.Resources.Genauigkeitsklasse3
-            Case "IV"
-                PictureBoxGenauigkeitsklasse.Image = My.Resources.Genauigkeitsklasse4
-        End Select
-
-        'standardmäßig TRUE
-        RadCheckBoxHalbSelbsteinspielend.Checked = True
-        'standardmäßig False
-        RadCheckBoxNichtselbsteinspielend.Checked = False
+    Private Sub FillControlsDrucker()
         Try
-            RadCheckBoxHybridMechWaage.Checked = objEichprozess.Eichprotokoll.Identifikationsdaten_HybridMechanisch
+            RadCheckBoxDrucker.Checked = objEichprozess.Eichprotokoll.Verwendungszweck_Drucker
         Catch ex As Exception
         End Try
+        RadTextBoxControlDruckerTyp.Text = objEichprozess.Eichprotokoll.Verwendungszweck_Druckertyp
+
+        If RadCheckBoxDrucker.Checked Then
+            RadTextBoxControlDruckerTyp.Enabled = True
+        Else
+            RadTextBoxControlDruckerTyp.Text = ""
+            RadTextBoxControlDruckerTyp.Enabled = False
+        End If
+        Try
+            RadCheckBoxEichfaehigerSpeicher.Checked = objEichprozess.Eichprotokoll.Verwendungszweck_EichfaehigerDatenspeicher
+        Catch ex As Exception
+        End Try
+        Try
+            RadCheckBoxPC.Checked = objEichprozess.Eichprotokoll.Verwendungszweck_PC
+        Catch ex As Exception
+        End Try
+        Try
+            RadCheckBoxSonstiges.Checked = objEichprozess.Eichprotokoll.Verwendungszweck_ZubehoerVerschiedenes
+        Catch ex As Exception
+        End Try
+    End Sub
+
+    Private Sub FillControlsBeschaffenheitspruefung()
+        If Not objEichprozess.Eichprotokoll.Beschaffenheitspruefung_Genauigkeitsklasse Is Nothing Then RadTextBoxControlNormalienGenauigkeitsklasse.Text = objEichprozess.Eichprotokoll.Beschaffenheitspruefung_Genauigkeitsklasse
+        If Not objEichprozess.Eichprotokoll.Beschaffenheitspruefung_Pruefintervall Is Nothing Then RadTextBoxControlNormalienPruefintervall.Text = objEichprozess.Eichprotokoll.Beschaffenheitspruefung_Pruefintervall
+        If Not objEichprozess.Eichprotokoll.Beschaffenheitspruefung_LetztePruefung Is Nothing Then RadDateTimePickerNormalienLetztePruefung.Text = objEichprozess.Eichprotokoll.Beschaffenheitspruefung_LetztePruefung
+        If Not objEichprozess.Eichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer Is Nothing Then RadTextBoxControlNormalienPruefscheinnummer.Text = objEichprozess.Eichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer
+        If Not objEichprozess.Eichprotokoll.Beschaffenheitspruefung_EichfahrzeugFirma Is Nothing Then RadTextBoxControlNormalienEichfahrzeugFirma.Text = objEichprozess.Eichprotokoll.Beschaffenheitspruefung_EichfahrzeugFirma
+    End Sub
+
+    Private Sub FillControlsVerwendungszweckTara()
+        If objEichprozess.Eichprotokoll.Verwendungszweck_Automatisch Is Nothing Then
+            Try
+                RadRadioButtonNustellungHalbAutomatisch.IsChecked = objEichprozess.Lookup_Auswertegeraet.NullstellungHalbSelbsttaetig
+                RadRadioButtonNustellungAutomatisch.IsChecked = objEichprozess.Lookup_Auswertegeraet.NullstellungSelbsttaetig
+                RadRadioButtonNustellungNullNachfuehrung.IsChecked = objEichprozess.Lookup_Auswertegeraet.NullstellungNullnachfuehrung
+
+                RadRadioButtonHandTara.IsChecked = objEichprozess.Lookup_Auswertegeraet.TaraeinrichtungHalbSelbsttaetig
+                RadRadioButtonAutoTara.IsChecked = objEichprozess.Lookup_Auswertegeraet.TaraeinrichtungSelbsttaetig
+                RadRadioButtonTaraeingabe.IsChecked = objEichprozess.Lookup_Auswertegeraet.TaraeinrichtungTaraeingabe
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
+
+        Else 'werte aus DB Laden
+            If objEichprozess.Eichprotokoll.Verwendungszweck_Automatisch = True Then RadRadioButtonNustellungAutomatisch.IsChecked = True
+            If objEichprozess.Eichprotokoll.Verwendungszweck_Nullnachfuehrung = True Then RadRadioButtonNustellungNullNachfuehrung.IsChecked = True
+            If objEichprozess.Eichprotokoll.Verwendungszweck_HalbAutomatisch Then RadRadioButtonNustellungHalbAutomatisch.IsChecked = True
+            If objEichprozess.Eichprotokoll.Verwendungszweck_AutoTara Then RadRadioButtonAutoTara.IsChecked = True
+            If objEichprozess.Eichprotokoll.Verwendungszweck_HandTara Then RadRadioButtonHandTara.IsChecked = True
+            If objEichprozess.Eichprotokoll.Taraeinrichtung_Taraeingabe Then RadRadioButtonTaraeingabe.IsChecked = True
+        End If
+    End Sub
+
+    Private Sub FillControlsWagentyp()
+        If objEichprozess?.Lookup_Waagentyp IsNot Nothing Then
+            Select Case AktuellerBenutzer.Instance.AktuelleSprache
+                Case "de"
+                    RadTextBoxControlWaagentyp.Text = objEichprozess.Lookup_Waagentyp.Typ
+
+                Case "en"
+                    RadTextBoxControlWaagentyp.Text = objEichprozess.Lookup_Waagentyp.Typ_EN
+
+                Case "pl"
+                    RadTextBoxControlWaagentyp.Text = objEichprozess.Lookup_Waagentyp.Typ_PL
+            End Select
+        End If
+    End Sub
+
+    Private Sub FillControlsKomponenten()
+        'bereich Komponenten
+        RadTextBoxControlAWG.Text = objEichprozess.Lookup_Auswertegeraet.Typ
+        RadTextBoxControlSoftwarestand.Text = objEichprozess.Eichprotokoll.Komponenten_Softwarestand
+        RadTextBoxControlEichzaehlerstand.Text = objEichprozess.Eichprotokoll.Komponenten_Eichzaehlerstand
+
+        RadTextBoxControlWZHersteller.Text = objEichprozess.Lookup_Waegezelle.Hersteller
+        RadTextBoxControlWZTyp.Text = objEichprozess.Lookup_Waegezelle.Typ
+        RadTextBoxControlWZAnzahl.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen
+        RadTextBoxControlWZFabriknummer.Text = objEichprozess.Eichprotokoll.Komponenten_WaegezellenFabriknummer
+    End Sub
+
+    Private Sub FillControlsSonderfaelleNachVerfahren(dMAXHoechlast As Decimal)
+        Select Case objEichprozess.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren
+            Case Is = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgmitNormalien
+                'vollständiges Staffelverfahren NEIN
+                RadCheckBoxVolleNormallast.Checked = True
+                RadCheckBoxVolleNormallast.Enabled = True
+                RadCheckBoxVollstaendigesStaffelverfahren.Checked = False
+                RadCheckBoxVollstaendigesStaffelverfahren.Visible = False
+                PictureBox5.Visible = False
+
+            Case Is = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgimStaffelverfahren
+                'vollständiges Staffelverfahren Ja
+                RadCheckBoxVolleNormallast.Checked = False
+                RadCheckBoxVolleNormallast.Enabled = False
+                RadCheckBoxVollstaendigesStaffelverfahren.Checked = True
+                RadCheckBoxVollstaendigesStaffelverfahren.Visible = True
+                PictureBox5.Visible = True
+            Case Is = GlobaleEnumeratoren.enuVerfahrensauswahl.Fahrzeugwaagen
+                'vollständiges Staffelverfahren Ja
+                RadCheckBoxVolleNormallast.Checked = False
+                RadCheckBoxVolleNormallast.Enabled = False
+                RadCheckBoxVollstaendigesStaffelverfahren.Checked = True
+                RadCheckBoxVollstaendigesStaffelverfahren.Visible = True
+                PictureBox5.Visible = True
+
+        End Select
+
+        'Sonderfall durch Herrn Strack definiert:
+        If dMAXHoechlast < 1000 Then
+            RadCheckBoxVolleNormallast.Checked = True
+            RadCheckBoxVolleNormallast.Enabled = False
+            RadCheckBoxVolleNormallast.ReadOnly = True
+            RadTextBoxControlBetragNormallast.Enabled = False
+        Else
+            RadCheckBoxVolleNormallast.Enabled = True
+            RadTextBoxControlBetragNormallast.Enabled = True
+        End If
+
+
+        Select Case objEichprozess.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren
+            Case Is = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgmitNormalien, GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgimStaffelverfahren
+                RadTextBoxControlMxM.Visible = False
+                RadTextBoxControlDimension.Visible = False
+                RadLabel38.Visible = False
+                Label7.Visible = False
+                lblDimension.Visible = False
+                PictureBox13.Visible = False
+            Case Is = GlobaleEnumeratoren.enuVerfahrensauswahl.Fahrzeugwaagen
+                RadTextBoxControlMxM.Text = objEichprozess.Eichprotokoll.Verwendungszweck_Fahrzeugwaagen_MxM
+                RadTextBoxControlMxM.Visible = True
+                Label7.Visible = True
+                RadTextBoxControlMxM.ReadOnly = False
+                RadTextBoxControlDimension.Text = My.Resources.GlobaleLokalisierung.Eichprotokoll_Dimension
+                RadTextBoxControlDimension.ReadOnly = True
+                lblDimension.Visible = True
+                RadLabel38.Visible = True
+                PictureBox13.Visible = True
+        End Select
+    End Sub
+
+    Private Sub FillControlsNormallast(dMAXHoechlast As Decimal)
+        'volle normallast: wenn höchster MAX Wert unter 1000 dann "ja". darüber auswählbar
+        'betrag normallast: Höchster MAX Wert. Wenn über 1000 dann eingebbar
+        If objEichprozess.Eichprotokoll.Pruefverfahren_BetragNormallast Is Nothing Then 'prüfen ob bereits ein Wert eingegeben wurde
+            Label12.Visible = False
+            If dMAXHoechlast < 1000 Then
+                RadCheckBoxVolleNormallast.Checked = True
+                RadTextBoxControlBetragNormallast.Text = dMAXHoechlast
+            Else
+                If Not objEichprozess.Eichprotokoll.Pruefverfahren_VolleNormallast Is Nothing Then
+                    RadCheckBoxVolleNormallast.Checked = objEichprozess.Eichprotokoll.Pruefverfahren_VolleNormallast
+                End If
+                RadCheckBoxVolleNormallast.Enabled = True
+                RadTextBoxControlBetragNormallast.Text = dMAXHoechlast
+            End If
+
+            If objEichprozess.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgimStaffelverfahren Then
+                RadTextBoxControlBetragNormallast.Text = ""
+                Label12.Visible = True
+            End If
+        Else 'WErte übernehmen aus DB
+            If Not objEichprozess.Eichprotokoll.Pruefverfahren_VolleNormallast Is Nothing Then
+                RadCheckBoxVolleNormallast.Checked = objEichprozess.Eichprotokoll.Pruefverfahren_VolleNormallast
+            End If
+            RadTextBoxControlBetragNormallast.Text = objEichprozess.Eichprotokoll.Pruefverfahren_BetragNormallast
+            If objEichprozess.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgimStaffelverfahren Then
+                Label12.Visible = True
+            End If
+        End If
+    End Sub
+
+    Private Function GetHoechstlast() As Decimal
+        Dim dMAXHoechlast As Decimal 'variable zum speichern der höchsten Hoechstlast (je nach Art der Waage Max1,2 oder 3)
+
+        'volle normallast und Bertrag normallast herausfinden: wenn höchster MAX Wert unter 1000 dann "ja". darüber auswählbar
+        'höchstenMAX Wert auslesen
+        If objEichprozess.Lookup_Waagenart.Art = "Einbereichswaage" Then
+            dMAXHoechlast = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1
+
+            'hoechstwerte ausblenden
+            RadGroupBoxMax2.Visible = False
+            RadGroupBoxMax3.Visible = False
+        ElseIf objEichprozess.Lookup_Waagenart.Art = "Zweibereichswaage" OrElse objEichprozess.Lookup_Waagenart.Art = "Zweiteilungswaage" Then
+            dMAXHoechlast = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2
+            'hoechstwerte ausblenden
+            RadGroupBoxMax2.Visible = True
+            RadGroupBoxMax3.Visible = False
+        ElseIf objEichprozess.Lookup_Waagenart.Art = "Dreibereichswaage" OrElse objEichprozess.Lookup_Waagenart.Art = "Dreiteilungswaage" Then
+            dMAXHoechlast = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3
+            'hoechstwerte ausblenden
+            RadGroupBoxMax2.Visible = True
+            RadGroupBoxMax3.Visible = True
+
+        End If
+
+        Return dMAXHoechlast
+    End Function
+
+    Private Sub FillControlsBerechnungHoechstwert()
         Try
             RadTextBoxControl1Hoechstwert1.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1
 
@@ -223,210 +386,79 @@ Public Class uco_7EichprotokollDaten
             RadTextBoxControlEichwert3.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3
         Catch ex As Exception
         End Try
-        'bereich prüfverfahren
+    End Sub
 
-        'volle normallast und Bertrag normallast herausfinden: wenn höchster MAX Wert unter 1000 dann "ja". darüber auswählbar
-        'höchstenMAX Wert auslesen
-        If objEichprozess.Lookup_Waagenart.Art = "Einbereichswaage" Then
-            dMAXHoechlast = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1
-
-            'hoechstwerte ausblenden
-            RadGroupBoxMax2.Visible = False
-            RadGroupBoxMax3.Visible = False
-        ElseIf objEichprozess.Lookup_Waagenart.Art = "Zweibereichswaage" OrElse objEichprozess.Lookup_Waagenart.Art = "Zweiteilungswaage" Then
-            dMAXHoechlast = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2
-            'hoechstwerte ausblenden
-            RadGroupBoxMax2.Visible = True
-            RadGroupBoxMax3.Visible = False
-        ElseIf objEichprozess.Lookup_Waagenart.Art = "Dreibereichswaage" OrElse objEichprozess.Lookup_Waagenart.Art = "Dreiteilungswaage" Then
-            dMAXHoechlast = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3
-            'hoechstwerte ausblenden
-            RadGroupBoxMax2.Visible = True
-            RadGroupBoxMax3.Visible = True
-
-        End If
-
-        'volle normallast: wenn höchster MAX Wert unter 1000 dann "ja". darüber auswählbar
-        'betrag normallast: Höchster MAX Wert. Wenn über 1000 dann eingebbar
-        If objEichprozess.Eichprotokoll.Pruefverfahren_BetragNormallast Is Nothing Then 'prüfen ob bereits ein Wert eingegeben wurde
-            Label12.Visible = False
-            If dMAXHoechlast < 1000 Then
-                RadCheckBoxVolleNormallast.Checked = True
-                RadTextBoxControlBetragNormallast.Text = dMAXHoechlast
-            Else
-                If Not objEichprozess.Eichprotokoll.Pruefverfahren_VolleNormallast Is Nothing Then
-                    RadCheckBoxVolleNormallast.Checked = objEichprozess.Eichprotokoll.Pruefverfahren_VolleNormallast
-                End If
-                RadCheckBoxVolleNormallast.Enabled = True
-                RadTextBoxControlBetragNormallast.Text = dMAXHoechlast
-            End If
-
-            If objEichprozess.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgimStaffelverfahren Then
-                RadTextBoxControlBetragNormallast.Text = ""
-                Label12.Visible = True
-            End If
-        Else 'WErte übernehmen aus DB
-            If Not objEichprozess.Eichprotokoll.Pruefverfahren_VolleNormallast Is Nothing Then
-                RadCheckBoxVolleNormallast.Checked = objEichprozess.Eichprotokoll.Pruefverfahren_VolleNormallast
-            End If
-            RadTextBoxControlBetragNormallast.Text = objEichprozess.Eichprotokoll.Pruefverfahren_BetragNormallast
-            If objEichprozess.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgimStaffelverfahren Then
-                Label12.Visible = True
-            End If
-        End If
-
-        Select Case objEichprozess.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren
-            Case Is = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgmitNormalien
-                'vollständiges Staffelverfahren NEIN
-                RadCheckBoxVolleNormallast.Checked = True
-                RadCheckBoxVolleNormallast.Enabled = True
-                RadCheckBoxVollstaendigesStaffelverfahren.Checked = False
-                RadCheckBoxVollstaendigesStaffelverfahren.Visible = False
-                PictureBox5.Visible = False
-
-            Case Is = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgimStaffelverfahren
-                'vollständiges Staffelverfahren Ja
-                RadCheckBoxVolleNormallast.Checked = False
-                RadCheckBoxVolleNormallast.Enabled = False
-                RadCheckBoxVollstaendigesStaffelverfahren.Checked = True
-                RadCheckBoxVollstaendigesStaffelverfahren.Visible = True
-                PictureBox5.Visible = True
-            Case Is = GlobaleEnumeratoren.enuVerfahrensauswahl.Fahrzeugwaagen
-                'vollständiges Staffelverfahren Ja
-                RadCheckBoxVolleNormallast.Checked = False
-                RadCheckBoxVolleNormallast.Enabled = False
-                RadCheckBoxVollstaendigesStaffelverfahren.Checked = True
-                RadCheckBoxVollstaendigesStaffelverfahren.Visible = True
-                PictureBox5.Visible = True
-
-        End Select
-
-        'Sonderfall durch Herrn Strack definiert:
-        If dMAXHoechlast < 1000 Then
-            RadCheckBoxVolleNormallast.Checked = True
-            RadCheckBoxVolleNormallast.Enabled = False
-            RadCheckBoxVolleNormallast.ReadOnly = True
-            RadTextBoxControlBetragNormallast.Enabled = False
+    Private Sub FillControlsWaagenInformationen()
+        If objEichprozess.Lookup_Waagenart.Art = "Zweibereichswaage" OrElse objEichprozess.Lookup_Waagenart.Art = "Dreibereichswaage" Then
+            RadCheckBoxMehrbereichswaage.Checked = True
+            RadCheckBoxMehrteilungswaage.Checked = False
+        ElseIf objEichprozess.Lookup_Waagenart.Art = "Zweiteilungswaage" OrElse objEichprozess.Lookup_Waagenart.Art = "Dreiteilungswaage" Then
+            RadCheckBoxMehrbereichswaage.Checked = False
+            RadCheckBoxMehrteilungswaage.Checked = True
         Else
-            RadCheckBoxVolleNormallast.Enabled = True
-            RadTextBoxControlBetragNormallast.Enabled = True
+            RadCheckBoxMehrbereichswaage.Checked = False
+            RadCheckBoxMehrteilungswaage.Checked = False
         End If
 
-        'bereich Komponenten
-        RadTextBoxControlAWG.Text = objEichprozess.Lookup_Auswertegeraet.Typ
-        RadTextBoxControlSoftwarestand.Text = objEichprozess.Eichprotokoll.Komponenten_Softwarestand
-        RadTextBoxControlEichzaehlerstand.Text = objEichprozess.Eichprotokoll.Komponenten_Eichzaehlerstand
 
-        RadTextBoxControlWZHersteller.Text = objEichprozess.Lookup_Waegezelle.Hersteller
-        RadTextBoxControlWZTyp.Text = objEichprozess.Lookup_Waegezelle.typ
-        RadTextBoxControlWZAnzahl.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen
-        RadTextBoxControlWZFabriknummer.Text = objEichprozess.Eichprotokoll.Komponenten_WaegezellenFabriknummer
+        'standardmäßig TRUE
+        RadCheckBoxHalbSelbsteinspielend.Checked = True
+        'standardmäßig False
+        RadCheckBoxNichtselbsteinspielend.Checked = False
+        Try
+            RadCheckBoxHybridMechWaage.Checked = objEichprozess.Eichprotokoll.Identifikationsdaten_HybridMechanisch
+        Catch ex As Exception
+        End Try
+    End Sub
 
-        'bereich Verwendungszweck
-        If objEichprozess?.Lookup_Waagentyp IsNot Nothing Then
-            Select Case AktuellerBenutzer.Instance.AktuelleSprache
-                Case "de"
-                    RadTextBoxControlWaagentyp.Text = objEichprozess.Lookup_Waagentyp.Typ
-
-                Case "en"
-                    RadTextBoxControlWaagentyp.Text = objEichprozess.Lookup_Waagentyp.Typ_EN
-
-                Case "pl"
-                    RadTextBoxControlWaagentyp.Text = objEichprozess.Lookup_Waagentyp.Typ_PL
-            End Select
-        End If
-
-        Select Case objEichprozess.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren
-            Case Is = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgmitNormalien, GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgimStaffelverfahren
-                RadTextBoxControlMxM.Visible = False
-                RadTextBoxControlDimension.Visible = False
-                RadLabel38.Visible = False
-                Label7.Visible = False
-                lblDimension.Visible = False
-                PictureBox13.Visible = False
-            Case Is = GlobaleEnumeratoren.enuVerfahrensauswahl.Fahrzeugwaagen
-                RadTextBoxControlMxM.Text = objEichprozess.Eichprotokoll.Verwendungszweck_Fahrzeugwaagen_MxM
-                RadTextBoxControlMxM.Visible = True
-                Label7.Visible = True
-                RadTextBoxControlMxM.ReadOnly = False
-                RadTextBoxControlDimension.Text = My.Resources.GlobaleLokalisierung.Eichprotokoll_Dimension
-                RadTextBoxControlDimension.ReadOnly = True
-                lblDimension.Visible = True
-                RadLabel38.Visible = True
-                PictureBox13.Visible = True
+    Private Sub FillControlsGenauigkeitsklasse()
+        Select Case objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Genauigkeitsklasse.ToUpper
+            Case "I"
+                PictureBoxGenauigkeitsklasse.Image = My.Resources.Genauigkeitsklasse1
+            Case "II"
+                PictureBoxGenauigkeitsklasse.Image = My.Resources.Genauigkeitsklasse2
+            Case "III"
+                PictureBoxGenauigkeitsklasse.Image = My.Resources.Genauigkeitsklasse3
+            Case "IV"
+                PictureBoxGenauigkeitsklasse.Image = My.Resources.Genauigkeitsklasse4
         End Select
+    End Sub
 
-        'validieren ob die Werte bereits einmal geschrieben wurden. Wenn nicht, Standardwerte aus AWG laden.
-        If objEichprozess.Eichprotokoll.Verwendungszweck_Automatisch Is Nothing Then
-            Try
-                RadRadioButtonNustellungHalbAutomatisch.IsChecked = objEichprozess.Lookup_Auswertegeraet.NullstellungHalbSelbsttaetig
-                RadRadioButtonNustellungAutomatisch.IsChecked = objEichprozess.Lookup_Auswertegeraet.NullstellungSelbsttaetig
-                RadRadioButtonNustellungNullNachfuehrung.IsChecked = objEichprozess.Lookup_Auswertegeraet.NullstellungNullnachfuehrung
-
-                RadRadioButtonHandTara.IsChecked = objEichprozess.Lookup_Auswertegeraet.TaraeinrichtungHalbSelbsttaetig
-                RadRadioButtonAutoTara.IsChecked = objEichprozess.Lookup_Auswertegeraet.TaraeinrichtungSelbsttaetig
-                RadRadioButtonTaraeingabe.IsChecked = objEichprozess.Lookup_Auswertegeraet.TaraeinrichtungTaraeingabe
-            Catch ex As Exception
-                MessageBox.Show(ex.Message)
-            End Try
-
-        Else 'werte aus DB Laden
-            If objEichprozess.Eichprotokoll.Verwendungszweck_Automatisch = True Then
-                RadRadioButtonNustellungAutomatisch.IsChecked = True
-            End If
-            If objEichprozess.Eichprotokoll.Verwendungszweck_Nullnachfuehrung = True Then
-                RadRadioButtonNustellungNullNachfuehrung.IsChecked = True
-            End If
-            If objEichprozess.Eichprotokoll.Verwendungszweck_HalbAutomatisch Then
-                RadRadioButtonNustellungHalbAutomatisch.IsChecked = True
-            End If
-
-            If objEichprozess.Eichprotokoll.Verwendungszweck_AutoTara Then
-                RadRadioButtonAutoTara.IsChecked = True
-            End If
-            If objEichprozess.Eichprotokoll.Verwendungszweck_HandTara Then
-                RadRadioButtonHandTara.IsChecked = True
-            End If
-
-            If objEichprozess.Eichprotokoll.Taraeinrichtung_Taraeingabe Then
-                RadRadioButtonTaraeingabe.IsChecked = True
-            End If
+    Private Sub FillControlsIdentifikationsdaten()
+        If Not objEichprozess.Eichprotokoll.Identifikationsdaten_Benutzer Is Nothing Then
+            RadTextBoxControlBenutzer.Text = objEichprozess.Eichprotokoll.Identifikationsdaten_Benutzer
         End If
 
-        If Not objEichprozess.Eichprotokoll.Beschaffenheitspruefung_Genauigkeitsklasse Is Nothing Then RadTextBoxControlNormalienGenauigkeitsklasse.Text = objEichprozess.Eichprotokoll.Beschaffenheitspruefung_Genauigkeitsklasse
-        If Not objEichprozess.Eichprotokoll.Beschaffenheitspruefung_Pruefintervall Is Nothing Then RadTextBoxControlNormalienPruefintervall.Text = objEichprozess.Eichprotokoll.Beschaffenheitspruefung_Pruefintervall
-        If Not objEichprozess.Eichprotokoll.Beschaffenheitspruefung_LetztePruefung Is Nothing Then RadDateTimePickerNormalienLetztePruefung.Text = objEichprozess.Eichprotokoll.Beschaffenheitspruefung_LetztePruefung
-        If Not objEichprozess.Eichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer Is Nothing Then RadTextBoxControlNormalienPruefscheinnummer.Text = objEichprozess.Eichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer
-        If Not objEichprozess.Eichprotokoll.Beschaffenheitspruefung_EichfahrzeugFirma Is Nothing Then RadTextBoxControlNormalienEichfahrzeugFirma.Text = objEichprozess.Eichprotokoll.Beschaffenheitspruefung_EichfahrzeugFirma
+        If Not objEichprozess.Eichprotokoll.Identifikationsdaten_Aufstellungsort Is Nothing Then
+            RadTextBoxControlAufstellungsort.Text = objEichprozess.Eichprotokoll.Identifikationsdaten_Aufstellungsort
+        End If
 
-        Try
-            RadCheckBoxDrucker.Checked = objEichprozess.Eichprotokoll.Verwendungszweck_Drucker
-        Catch ex As Exception
-        End Try
-        RadTextBoxControlDruckerTyp.Text = objEichprozess.Eichprotokoll.Verwendungszweck_Druckertyp
+        If Not objEichprozess.Eichprotokoll.Identifikationsdaten_Baujahr Is Nothing Then
+            RadTextBoxControlBaujahr.Text = objEichprozess.Eichprotokoll.Identifikationsdaten_Baujahr
+        End If
 
-        If RadCheckBoxDrucker.Checked Then
-            RadTextBoxControlDruckerTyp.Enabled = True
+        If objEichprozess.Eichprotokoll.Identifikationsdaten_Datum Is Nothing Then
+            If AktuellerBenutzer.Instance.Lizenz.RHEWALizenz Then RadTextBoxControlDatum.Text = Date.Now.Date
         Else
-            RadTextBoxControlDruckerTyp.Text = ""
-            RadTextBoxControlDruckerTyp.Enabled = False
+            RadTextBoxControlDatum.Text = objEichprozess.Eichprotokoll.Identifikationsdaten_Datum
         End If
-        Try
-            RadCheckBoxEichfaehigerSpeicher.Checked = objEichprozess.Eichprotokoll.Verwendungszweck_EichfaehigerDatenspeicher
-        Catch ex As Exception
-        End Try
-        Try
-            RadCheckBoxPC.Checked = objEichprozess.Eichprotokoll.Verwendungszweck_PC
-        Catch ex As Exception
-        End Try
-        Try
-            RadCheckBoxSonstiges.Checked = objEichprozess.Eichprotokoll.Verwendungszweck_ZubehoerVerschiedenes
-        Catch ex As Exception
-        End Try
 
-        'fokus setzen auf erstes Steuerelement
-        RadTextBoxControlBenutzer.Focus()
+        'Stammdaten aus lokaler Lizenz laden
+        RadTextBoxControlPruefer.Text = AktuellerBenutzer.Instance.Lizenz.Name & ", " & AktuellerBenutzer.Instance.Lizenz.Vorname & " (" + AktuellerBenutzer.Instance.Lizenz.HEKennung & ")"
+        RadTextBoxControlFabriknummer.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer
+    End Sub
 
+    Private Sub SetControlsSonderfaelleRHEWALizenz()
+        If AktuellerBenutzer.Instance.Lizenz.RHEWALizenz Then
+            If objEichprozess.AusStandardwaageErzeugt = True Then
+                lblTruck.Visible = False
+                RadTextBoxControlNormalienEichfahrzeugFirma.Visible = False
+                RadDateTimePickerNormalienLetztePruefung.Visible = False
+                RadDateTimePickerNormalienLetztePruefung.Value = Now
+                lblTestzeitraum.Visible = False
+                Label10.Visible = False
+            End If
+        End If
     End Sub
 
     ''' <summary>
