@@ -122,7 +122,7 @@
     <value>302, 3</value>
   </data>
   <data name="RadScrollablePanelTrafficLightBreadcrumb.PanelContainer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>965, 66</value>
+    <value>965, 62</value>
   </data>
   <data name="&gt;&gt;RadScrollablePanelTrafficLightBreadcrumb.PanelContainer.Name" xml:space="preserve">
     <value>RadScrollablePanelTrafficLightBreadcrumb.PanelContainer</value>
@@ -137,7 +137,7 @@
     <value>0</value>
   </data>
   <data name="RadScrollablePanelTrafficLightBreadcrumb.Size" type="System.Drawing.Size, System.Drawing">
-    <value>967, 68</value>
+    <value>967, 64</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="RadScrollablePanelTrafficLightBreadcrumb.TabIndex" type="System.Int32, mscorlib">
@@ -578,7 +578,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAB6
-        EgAAAk1TRnQBSQFMAgEBAwEAAWwBBQFsAQUBIAEAASABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAGA
+        EgAAAk1TRnQBSQFMAgEBAwEAAXQBBQF0AQUBIAEAASABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAGA
         AwABIAMAAQEBAAEgBgABQP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wBPAAEBAwQBBgMLAQ8DEAEV
         AxABFgMQARYDEAEVAwsBDwMEAQYDAAEBWwABAQMEAQYDCwEPAxABFQMQARYDEAEWAxABFQMLAQ8DBAEG
         AwABAVsAAQEDBAEGAwsBDwMQARUDEAEWAxABFgMQARUDCwEPAwQBBgMAAQHUAAMCAQMDCgEOAxcBIAMj
@@ -905,6 +905,12 @@
   </data>
   <data name="&gt;&gt;LayoutControlLabelItem1.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.LayoutControlLabelItem, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;LayoutControlSplitterItem2.Name" xml:space="preserve">
+    <value>LayoutControlSplitterItem2</value>
+  </data>
+  <data name="&gt;&gt;LayoutControlSplitterItem2.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.LayoutControlSplitterItem, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FrmMainContainer</value>

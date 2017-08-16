@@ -54,6 +54,7 @@ Partial Class FrmMainContainer
         Me.ImageListTrafficLight = New System.Windows.Forms.ImageList(Me.components)
         Me.LayoutControlItem3 = New Telerik.WinControls.UI.LayoutControlItem()
         Me.LayoutControlLabelItem1 = New Telerik.WinControls.UI.LayoutControlLabelItem()
+        Me.LayoutControlSplitterItem2 = New Telerik.WinControls.UI.LayoutControlSplitterItem()
         CType(Me.RadScrollablePanelTrafficLightBreadcrumb, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadScrollablePanelTrafficLightBreadcrumb.SuspendLayout()
         CType(Me.LayoutMaster, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -95,7 +96,7 @@ Partial Class FrmMainContainer
         Me.LayoutMaster.Controls.Add(Me.RadScrollablePanelTrafficLightBreadcrumb)
         Me.LayoutMaster.Controls.Add(Me.RadPanel1)
         resources.ApplyResources(Me.LayoutMaster, "LayoutMaster")
-        Me.LayoutMaster.Items.AddRange(New Telerik.WinControls.RadItem() {Me.LayoutControlItem2, Me.LayoutControlItem5, Me.LayoutControlItem6, Me.LayoutControlItem7, Me.LayoutControlItem8, Me.LayoutControlItem9, Me.LayoutControlItem10, Me.LayoutControlItem11, Me.LayoutControlItem13, Me.LayoutControlItem14, Me.LayoutControlItem12, Me.lblHeadertext, Me.radlabelContextHelp, Me.LayoutControlSplitterItem1})
+        Me.LayoutMaster.Items.AddRange(New Telerik.WinControls.RadItem() {Me.LayoutControlItem2, Me.LayoutControlItem5, Me.LayoutControlItem6, Me.LayoutControlItem7, Me.LayoutControlItem8, Me.LayoutControlItem9, Me.LayoutControlItem10, Me.LayoutControlItem11, Me.LayoutControlItem13, Me.LayoutControlItem14, Me.LayoutControlItem12, Me.lblHeadertext, Me.radlabelContextHelp, Me.LayoutControlSplitterItem1, Me.LayoutControlSplitterItem2})
         Me.LayoutMaster.Name = "LayoutMaster"
         '
         'PictureBoxRHEWALogo
@@ -268,7 +269,7 @@ Partial Class FrmMainContainer
         'LayoutControlItem13
         '
         Me.LayoutControlItem13.AssociatedControl = Me.RadScrollablePanelTrafficLightBreadcrumb
-        Me.LayoutControlItem13.Bounds = New System.Drawing.Rectangle(299, 0, 973, 74)
+        Me.LayoutControlItem13.Bounds = New System.Drawing.Rectangle(299, 0, 973, 70)
         Me.LayoutControlItem13.Name = "LayoutControlItem13"
         resources.ApplyResources(Me.LayoutControlItem13, "LayoutControlItem13")
         '
@@ -335,6 +336,11 @@ Partial Class FrmMainContainer
         Me.LayoutControlLabelItem1.Name = "LayoutControlLabelItem1"
         Me.LayoutControlLabelItem1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
         '
+        'LayoutControlSplitterItem2
+        '
+        Me.LayoutControlSplitterItem2.Bounds = New System.Drawing.Rectangle(299, 70, 973, 4)
+        Me.LayoutControlSplitterItem2.Name = "LayoutControlSplitterItem2"
+        '
         'FrmMainContainer
         '
         resources.ApplyResources(Me, "$this")
@@ -396,5 +402,6 @@ Partial Class FrmMainContainer
     Friend WithEvents lblHeadertext As Telerik.WinControls.UI.LayoutControlLabelItem
     Friend WithEvents radlabelContextHelp As Telerik.WinControls.UI.LayoutControlLabelItem
     Friend WithEvents LayoutControlSplitterItem1 As Telerik.WinControls.UI.LayoutControlSplitterItem
+    Friend WithEvents LayoutControlSplitterItem2 As Telerik.WinControls.UI.LayoutControlSplitterItem
 End Class
 
