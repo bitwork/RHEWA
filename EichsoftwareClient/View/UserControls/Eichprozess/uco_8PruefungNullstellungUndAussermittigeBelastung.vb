@@ -158,65 +158,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
                 Catch ex As Exception
                 End Try
             End If
-            'Try
-            '    If (CDec(RadTextBoxControlDisplayWeight1.Text) - CDec(RadTextBoxControlWeight1.Text)) > (CDec(lblEFGSpeziallBerechnung.Text) * 0.33) Then
-            '        newLast = MAX50
-            '    ElseIf (CDec(RadTextBoxControlDisplayWeight1.Text) - CDec(RadTextBoxControlWeight1.Text)) < (CDec(lblEFGSpeziallBerechnung.Text) * 0.22) Then
-            '        newLast = MAX20
-            '    ElseIf (CDec(RadTextBoxControlDisplayWeight1.Text) - CDec(RadTextBoxControlWeight1.Text)) < (CDec(lblEFGSpeziallBerechnung.Text) * 0.33) Then
-            '        newLast = MAX35
-            '    Else
-            '        newLast = MAX20
-            '    End If
-            '    RadTextBoxControlBetragNormallast.Text = newLast
-            'Catch ex As Exception
-            'End Try
-            ''wiederholung 2
-            'Try
-            '    If (CDec(RadTextBoxControlDisplayWeight2.Text) - CDec(RadTextBoxControlWeight2.Text)) > (CDec(lblEFGSpeziallBerechnung.Text) * 0.33) Then
-            '        If newLast < MAX50 Then
-            '            newLast = MAX50
-            '        End If
-            '    ElseIf (CDec(RadTextBoxControlDisplayWeight2.Text) - CDec(RadTextBoxControlWeight2.Text)) < (CDec(lblEFGSpeziallBerechnung.Text) * 0.22) Then
-            '        If newLast < MAX20 Then
-            '            newLast = MAX20
-            '        End If
-            '    ElseIf (CDec(RadTextBoxControlDisplayWeight2.Text) - CDec(RadTextBoxControlWeight2.Text)) < (CDec(lblEFGSpeziallBerechnung.Text) * 0.33) Then
-            '        If newLast < MAX35 Then
-            '            newLast = MAX35
-            '        End If
-            '    Else
-            '        If newLast < MAX20 Then
-            '            newLast = MAX20
-            '        End If
-            '    End If
-            '    RadTextBoxControlBetragNormallast.Text = newLast
-            'Catch ex As Exception
-            'End Try
-
-            ''wiederholung 3
-            'Try
-            '    If (CDec(RadTextBoxControlDisplayWeight3.Text) - CDec(RadTextBoxControlWeight3.Text)) > (CDec(lblEFGSpeziallBerechnung.Text) * 0.33) Then
-            '        If newLast < max50 Then
-            '            newLast = max50
-            '        End If
-            '    ElseIf (CDec(RadTextBoxControlDisplayWeight3.Text) - CDec(RadTextBoxControlWeight3.Text)) < (CDec(lblEFGSpeziallBerechnung.Text) * 0.22) Then
-            '        If newLast < MAX20 Then
-            '            newLast = MAX20
-            '        End If
-            '    ElseIf (CDec(RadTextBoxControlDisplayWeight3.Text) - CDec(RadTextBoxControlWeight3.Text)) < (CDec(lblEFGSpeziallBerechnung.Text) * 0.33) Then
-            '        If newLast < MAx35 Then
-            '            newLast = MAx35
-            '        End If
-            '    Else
-            '        If newLast < MAX20 Then
-            '            newLast = MAX20
-            '        End If
-            '    End If
-            '    RadTextBoxControlBetragNormallast.Text = newLast
-            'Catch ex As Exception
-            'End Try
-
         Catch ex As Exception
         End Try
     End Sub

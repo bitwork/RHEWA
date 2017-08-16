@@ -87,6 +87,8 @@ Public Class uco_7EichprotokollDaten
         End If
         'steuerelemente mit werten aus DB füllen
         FillControls()
+        'fokus setzen auf erstes Steuerelement
+        RadTextBoxControlBenutzer.Focus()
 
         If DialogModus = enuDialogModus.lesend Then
             DisableControls(RadGroupBoxBeschaffenheitspruefung)
@@ -128,17 +130,10 @@ Public Class uco_7EichprotokollDaten
         FillControlsSonderfaelleNachVerfahren(dMAXHoechlast)
         FillControlsKomponenten()
         FillControlsWagentyp()
-
-
-
-        'validieren ob die Werte bereits einmal geschrieben wurden. Wenn nicht, Standardwerte aus AWG laden.
         FillControlsVerwendungszweckTara()
         FillControlsBeschaffenheitspruefung()
-
         FillControlsDrucker()
 
-        'fokus setzen auf erstes Steuerelement
-        RadTextBoxControlBenutzer.Focus()
 
     End Sub
 
