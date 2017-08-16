@@ -121,17 +121,11 @@
     <value>RadGroupBoxWaage</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lblWIKlasse.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 18</value>
-  </data>
   <data name="RadTextBoxControlWaageKabelquerschnitt.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 20</value>
   </data>
   <data name="RadGroupBoxVerbindungselemente.HeaderText" xml:space="preserve">
     <value>Connecting elements</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlWaageKlasse.ZOrder" xml:space="preserve">
-    <value>87</value>
   </data>
   <data name="&gt;&gt;RadLabel86.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
@@ -141,9 +135,6 @@
   </data>
   <data name="RadLabel106.Size" type="System.Drawing.Size, System.Drawing">
     <value>18, 18</value>
-  </data>
-  <data name="&gt;&gt;lblGrenzenTemp.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;PictureBox9.Name" xml:space="preserve">
     <value>PictureBox9</value>
@@ -156,9 +147,6 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlWaageUebersetzungsverhaeltnis.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadGroupBoxWaage.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="RadLabel86.TabIndex" type="System.Int32, mscorlib">
@@ -188,9 +176,6 @@
   <data name="&gt;&gt;lblEKG1.Name" xml:space="preserve">
     <value>lblEKG1</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlWaageEcklastzuschlag.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
   <data name="RadTextBoxControlAWGSpeisespannung.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 20</value>
   </data>
@@ -204,9 +189,6 @@
   <data name="&gt;&gt;lblKabellaenge.ZOrder" xml:space="preserve">
     <value>48</value>
   </data>
-  <data name="&gt;&gt;lblUebersetzung.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
   <data name="PictureBoxWZ3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -216,8 +198,14 @@
   <data name="PictureBoxWZ6.Location" type="System.Drawing.Point, System.Drawing">
     <value>371, 194</value>
   </data>
+  <data name="lblEKG3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 18</value>
+  </data>
   <data name="RadGroupBoxAWG.Text" xml:space="preserve">
     <value> Electronic indicator</value>
+  </data>
+  <data name="&gt;&gt;lblWZKlasse.Parent" xml:space="preserve">
+    <value>RadGroupBoxWZ</value>
   </data>
   <data name="RadSeparator10.Size" type="System.Drawing.Size, System.Drawing">
     <value>692, 10</value>
@@ -237,11 +225,12 @@
   <data name="&gt;&gt;RadTextBoxControlAWGKabellaenge.ZOrder" xml:space="preserve">
     <value>27</value>
   </data>
-  <data name="PictureBoxWZ6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>18, 21</value>
+  <data name="lblAnzWaeegezellen.Text" xml:space="preserve">
+    <value>number of load cells
+</value>
   </data>
-  <data name="&gt;&gt;lblAWGMinMessSignal.Name" xml:space="preserve">
-    <value>lblAWGMinMessSignal</value>
+  <data name="RadLabel1.TabIndex" type="System.Int32, mscorlib">
+    <value>135</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlWaageHoechstlast3.Name" xml:space="preserve">
     <value>RadTextBoxControlWaageHoechstlast3</value>
@@ -252,17 +241,17 @@
   <data name="Label9.TabIndex" type="System.Int32, mscorlib">
     <value>78</value>
   </data>
-  <data name="RadLabel13.Text" xml:space="preserve">
-    <value>DL</value>
+  <data name="&gt;&gt;RadTextBoxControlAWGTeilungswerte.ZOrder" xml:space="preserve">
+    <value>40</value>
   </data>
   <data name="&gt;&gt;Label4.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
-  <data name="lblUebersetzung.Text" xml:space="preserve">
-    <value>reduction ratio</value>
+  <data name="&gt;&gt;RadLabel14.Parent" xml:space="preserve">
+    <value>RadGroupBoxWaage</value>
   </data>
-  <data name="&gt;&gt;RadLabel35.Parent" xml:space="preserve">
-    <value>RadGroupBoxAWG</value>
+  <data name="&gt;&gt;RadSeparator10.Name" xml:space="preserve">
+    <value>RadSeparator10</value>
   </data>
   <data name="lblWZHoechstteilungswert.Location" type="System.Drawing.Point, System.Drawing">
     <value>33, 194</value>
@@ -276,8 +265,11 @@
   <data name="RadTextBoxControlWZBruchteilEichfehlergrenze.Text" xml:space="preserve">
     <value>0,7</value>
   </data>
-  <data name="RadLabel11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 18</value>
+  <data name="&gt;&gt;RadTextBoxControlWZGenauigkeitsklasse.Parent" xml:space="preserve">
+    <value>RadGroupBoxWZ</value>
+  </data>
+  <data name="&gt;&gt;PictureBoxWZ5.Name" xml:space="preserve">
+    <value>PictureBoxWZ5</value>
   </data>
   <data name="&gt;&gt;PictureBox12.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -300,20 +292,20 @@
   <data name="RadLabel14.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
   </data>
-  <data name="RadTextBoxControlEinschaltnullstellbereich.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 20</value>
-  </data>
   <data name="lblMax2.Size" type="System.Drawing.Size, System.Drawing">
     <value>33, 18</value>
   </data>
-  <data name="&gt;&gt;lblAWGKabellaenge.Parent" xml:space="preserve">
-    <value>RadGroupBoxAWG</value>
+  <data name="&gt;&gt;lblWZMindestvorlast.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="Label12.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
   <data name="RadSeparator6.Location" type="System.Drawing.Point, System.Drawing">
     <value>363, 61</value>
+  </data>
+  <data name="&gt;&gt;RadLabel108.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="lblPflichtfeld6.Location" type="System.Drawing.Point, System.Drawing">
     <value>814, 122</value>
@@ -327,11 +319,11 @@
   <data name="&gt;&gt;lblAWGmaxAnzahlTeilungswerte.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
+  <data name="lblWIMaxCap.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 18</value>
+  </data>
   <data name="RadLabel85.Location" type="System.Drawing.Point, System.Drawing">
     <value>453, 269</value>
-  </data>
-  <data name="RadLabel106.TabIndex" type="System.Int32, mscorlib">
-    <value>131</value>
   </data>
   <data name="&gt;&gt;lblAWGMindesteingangsspannung.Parent" xml:space="preserve">
     <value>RadGroupBoxAWG</value>
@@ -351,17 +343,14 @@
   <data name="RadLabel92.Text" xml:space="preserve">
     <value>mm²</value>
   </data>
-  <data name="RadLabel98.Text" xml:space="preserve">
-    <value>V</value>
+  <data name="&gt;&gt;lblE1.Name" xml:space="preserve">
+    <value>lblE1</value>
   </data>
   <data name="&gt;&gt;RadLabel96.ZOrder" xml:space="preserve">
     <value>16</value>
   </data>
   <data name="RadButton1.Size" type="System.Drawing.Size, System.Drawing">
     <value>28, 24</value>
-  </data>
-  <data name="lblKGMax2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>18, 18</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlAWGMindestmesssignal.ZOrder" xml:space="preserve">
     <value>37</value>
@@ -374,9 +363,6 @@
   </data>
   <data name="&gt;&gt;RadSeparator6.ZOrder" xml:space="preserve">
     <value>25</value>
-  </data>
-  <data name="&gt;&gt;Label13.Parent" xml:space="preserve">
-    <value>RadGroupBoxWaage</value>
   </data>
   <data name="&gt;&gt;RadLabel92.Name" xml:space="preserve">
     <value>RadLabel92</value>
@@ -393,8 +379,8 @@
   <data name="lblwzKriechteilungsfaktor.Size" type="System.Drawing.Size, System.Drawing">
     <value>152, 18</value>
   </data>
-  <data name="RadSeparator9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>692, 10</value>
+  <data name="lblEinschaltnullbereich.Size" type="System.Drawing.Size, System.Drawing">
+    <value>132, 18</value>
   </data>
   <data name="&gt;&gt;PictureBox2.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -414,9 +400,6 @@
   <data name="RadTextBoxControlWZWaegezellenkennwert.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 20</value>
   </data>
-  <data name="&gt;&gt;RadLabel18.Name" xml:space="preserve">
-    <value>RadLabel18</value>
-  </data>
   <data name="RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze.Location" type="System.Drawing.Point, System.Drawing">
     <value>390, 32</value>
   </data>
@@ -431,9 +414,6 @@
   </data>
   <data name="&gt;&gt;RadLabel26.Name" xml:space="preserve">
     <value>RadLabel26</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlAWGMindestmesssignal.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel102.Text" xml:space="preserve">
     <value>° C</value>
@@ -489,6 +469,9 @@
   <data name="&gt;&gt;RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.Parent" xml:space="preserve">
     <value>RadGroupBoxWZ</value>
   </data>
+  <data name="RadLabel98.TabIndex" type="System.Int32, mscorlib">
+    <value>85</value>
+  </data>
   <data name="lblEichwert.Size" type="System.Drawing.Size, System.Drawing">
     <value>129, 18</value>
   </data>
@@ -498,11 +481,14 @@
   <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>477, 191</value>
   </data>
+  <data name="&gt;&gt;RadTextBoxControlWaageKabellaenge.ZOrder" xml:space="preserve">
+    <value>44</value>
+  </data>
   <data name="&gt;&gt;RadLabel107.ZOrder" xml:space="preserve">
     <value>19</value>
   </data>
-  <data name="&gt;&gt;lblWZWaegezellenkennwert.Parent" xml:space="preserve">
-    <value>RadGroupBoxWZ</value>
+  <data name="RadLabel13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>19, 18</value>
   </data>
   <data name="RadTextBoxControlAWGGrenzwerteLastwiderstandMin.Location" type="System.Drawing.Point, System.Drawing">
     <value>390, 165</value>
@@ -522,6 +508,9 @@
   <data name="RadLabel74.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 18</value>
   </data>
+  <data name="Label14.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
   <data name="&gt;&gt;RadTextBoxControlAWGKabellaenge.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
@@ -529,14 +518,20 @@
     <value>Z
 </value>
   </data>
+  <data name="&gt;&gt;RadLabel96.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="RadButton1.TabIndex" type="System.Int32, mscorlib">
+    <value>148</value>
+  </data>
   <data name="&gt;&gt;lblKabel.ZOrder" xml:space="preserve">
     <value>29</value>
   </data>
   <data name="lblKGMax3.Location" type="System.Drawing.Point, System.Drawing">
     <value>453, 124</value>
   </data>
-  <data name="lblKabelquerschnitt.Location" type="System.Drawing.Point, System.Drawing">
-    <value>34, 371</value>
+  <data name="RadTextBoxControlWaageTotlast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 20</value>
   </data>
   <data name="&gt;&gt;lblGrenzenTemp.Name" xml:space="preserve">
     <value>lblGrenzenTemp</value>
@@ -575,6 +570,9 @@
     <value> cable connection (4- or 6 wire)
 </value>
   </data>
+  <data name="&gt;&gt;RadTextBoxControlWaageAnzahlWaegezellen.Name" xml:space="preserve">
+    <value>RadTextBoxControlWaageAnzahlWaegezellen</value>
+  </data>
   <data name="RadSeparator8.Text" xml:space="preserve">
     <value>RadSeparator8</value>
   </data>
@@ -591,20 +589,14 @@
   <data name="RadSeparator5.Size" type="System.Drawing.Size, System.Drawing">
     <value>12, 72</value>
   </data>
-  <data name="lblAWGSpeisespannung.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 87</value>
-  </data>
-  <data name="RadScrollablePanel1.Text" xml:space="preserve">
-    <value>RadScrollablePanel1</value>
-  </data>
   <data name="&gt;&gt;RadLabel78.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="Label7.TabIndex" type="System.Int32, mscorlib">
-    <value>75</value>
+  <data name="lblE1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 18</value>
   </data>
-  <data name="&gt;&gt;lblWZWiderstandWZ.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="&gt;&gt;lblMax1.Name" xml:space="preserve">
+    <value>lblMax1</value>
   </data>
   <data name="RadSeparator7.Text" xml:space="preserve">
     <value>RadSeparator7</value>
@@ -615,11 +607,11 @@
   <data name="&gt;&gt;RadLabel12.Name" xml:space="preserve">
     <value>RadLabel12</value>
   </data>
-  <data name="RadLabel107.Location" type="System.Drawing.Point, System.Drawing">
-    <value>452, 64</value>
-  </data>
   <data name="RadLabel40.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;span style="font-size: 12pt"&gt;U&lt;/span&gt;exc&lt;/html&gt;</value>
+  </data>
+  <data name="lblAWGWiderstand.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 165</value>
   </data>
   <data name="RadLabel107.TabIndex" type="System.Int32, mscorlib">
     <value>130</value>
@@ -633,11 +625,8 @@
   <data name="&gt;&gt;RadLabel102.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <data name="&gt;&gt;Label6.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="RadButton1.Text" xml:space="preserve">
-    <value>&gt;</value>
+  <data name="&gt;&gt;PictureBoxWZ9.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="&gt;&gt;lblEKG1.ZOrder" xml:space="preserve">
     <value>29</value>
@@ -651,23 +640,17 @@
   <data name="RadSeparator6.Text" xml:space="preserve">
     <value>RadSeparator6</value>
   </data>
-  <data name="RadTextBoxControlWaageKabellaenge.Location" type="System.Drawing.Point, System.Drawing">
-    <value>391, 347</value>
+  <data name="&gt;&gt;lblMax2.Name" xml:space="preserve">
+    <value>lblMax2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlAWGGrenzwerteLastwiderstandMax.ZOrder" xml:space="preserve">
     <value>32</value>
-  </data>
-  <data name="RadLabel13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>19, 18</value>
   </data>
   <data name="lblKabellaenge.TabIndex" type="System.Int32, mscorlib">
     <value>40</value>
   </data>
   <data name="RadSeparator3.Size" type="System.Drawing.Size, System.Drawing">
     <value>12, 224</value>
-  </data>
-  <data name="&gt;&gt;RadLabel106.ZOrder" xml:space="preserve">
-    <value>18</value>
   </data>
   <data name="&gt;&gt;Label13.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
@@ -677,6 +660,9 @@
   </data>
   <data name="RadTextBoxControlWZWiderstand.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
+  </data>
+  <data name="&gt;&gt;RadLabel98.Name" xml:space="preserve">
+    <value>RadLabel98</value>
   </data>
   <data name="&gt;&gt;lblEKG2.ZOrder" xml:space="preserve">
     <value>28</value>
@@ -690,11 +676,14 @@
   <data name="RadSeparator5.Text" xml:space="preserve">
     <value>RadSeparator5</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlWZGenauigkeitsklasse.Parent" xml:space="preserve">
-    <value>RadGroupBoxWZ</value>
+  <data name="&gt;&gt;lblE2.Parent" xml:space="preserve">
+    <value>RadGroupBoxWaage</value>
   </data>
   <data name="RadSeparator2.Size" type="System.Drawing.Size, System.Drawing">
     <value>12, 224</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlWZTemperaturbereichMIN.Parent" xml:space="preserve">
+    <value>RadGroupBoxWZ</value>
   </data>
   <data name="&gt;&gt;lblEcklastzuschalg.Name" xml:space="preserve">
     <value>lblEcklastzuschalg</value>
@@ -704,6 +693,9 @@
   </data>
   <data name="RadLabel52.TabIndex" type="System.Int32, mscorlib">
     <value>120</value>
+  </data>
+  <data name="&gt;&gt;lblVerbindungEichfehlergrenze.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadSeparator15.Name" xml:space="preserve">
     <value>RadSeparator15</value>
@@ -724,29 +716,29 @@
   <data name="&gt;&gt;lblEKG3.ZOrder" xml:space="preserve">
     <value>27</value>
   </data>
-  <data name="RadSeparator4.Text" xml:space="preserve">
-    <value>RadSeparator4</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlWaageAnzahlWaegezellen.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="lblAWGSpeisespannung.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 87</value>
   </data>
   <data name="RadLabel78.TabIndex" type="System.Int32, mscorlib">
     <value>125</value>
   </data>
-  <data name="RadSeparator2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>306, 165</value>
+  <data name="&gt;&gt;RadTextBoxControlEinschaltnullstellbereich.ZOrder" xml:space="preserve">
+    <value>62</value>
   </data>
-  <data name="&gt;&gt;PictureBoxWZ6.Parent" xml:space="preserve">
-    <value>RadGroupBoxWZ</value>
+  <data name="&gt;&gt;RadLabel106.Name" xml:space="preserve">
+    <value>RadLabel106</value>
+  </data>
+  <data name="&gt;&gt;lblKGMax2.ZOrder" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="lblWZTeilungswerte.TabIndex" type="System.Int32, mscorlib">
+    <value>88</value>
   </data>
   <data name="RadSeparator1.Size" type="System.Drawing.Size, System.Drawing">
     <value>692, 10</value>
   </data>
   <data name="RadTextBoxControlWaageHoechstlast2.Location" type="System.Drawing.Point, System.Drawing">
     <value>391, 96</value>
-  </data>
-  <data name="&gt;&gt;lblEichwert.Name" xml:space="preserve">
-    <value>lblEichwert</value>
   </data>
   <data name="RadGroupBoxWaage.Size" type="System.Drawing.Size, System.Drawing">
     <value>863, 404</value>
@@ -756,6 +748,9 @@
   </data>
   <data name="&gt;&gt;lblWZTemperatur.Name" xml:space="preserve">
     <value>lblWZTemperatur</value>
+  </data>
+  <data name="&gt;&gt;lblWZKlasse2.ZOrder" xml:space="preserve">
+    <value>32</value>
   </data>
   <data name="&gt;&gt;RadLabel105.ZOrder" xml:space="preserve">
     <value>17</value>
@@ -799,14 +794,14 @@
   <data name="&gt;&gt;RadTextBoxControlWZKriechteilungsfaktor.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="RadLabel61.TabIndex" type="System.Int32, mscorlib">
-    <value>97</value>
+  <data name="&gt;&gt;RadLabel106.ZOrder" xml:space="preserve">
+    <value>18</value>
   </data>
-  <data name="&gt;&gt;Label12.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="lblKabellaenge.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 18</value>
   </data>
-  <data name="&gt;&gt;RadLabel87.ZOrder" xml:space="preserve">
-    <value>26</value>
+  <data name="&gt;&gt;RadLabel94.Name" xml:space="preserve">
+    <value>RadLabel94</value>
   </data>
   <data name="&gt;&gt;Label3.ZOrder" xml:space="preserve">
     <value>14</value>
@@ -823,9 +818,8 @@
   <data name="&gt;&gt;RadLabel90.ZOrder" xml:space="preserve">
     <value>21</value>
   </data>
-  <data name="lblEinschaltnullbereich.Text" xml:space="preserve">
-    <value>initial zero setting range
-</value>
+  <data name="&gt;&gt;RadLabel51.Parent" xml:space="preserve">
+    <value>RadGroupBoxAWG</value>
   </data>
   <data name="PictureBox5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -845,20 +839,14 @@
   <data name="RadLabel106.Location" type="System.Drawing.Point, System.Drawing">
     <value>452, 90</value>
   </data>
-  <data name="RadLabel62.Text" xml:space="preserve">
-    <value>&lt;html&gt;&lt;span style="font-size: 10pt"&gt;v&lt;/span&gt;min&lt;/html&gt;</value>
-  </data>
-  <data name="lblWZWaegezellenkennwert.TabIndex" type="System.Int32, mscorlib">
-    <value>87</value>
+  <data name="RadSeparator1.Text" xml:space="preserve">
+    <value>RadSeparator1</value>
   </data>
   <data name="PictureBoxWZ9.Size" type="System.Drawing.Size, System.Drawing">
     <value>18, 21</value>
   </data>
   <data name="RadSeparator15.TabIndex" type="System.Int32, mscorlib">
     <value>128</value>
-  </data>
-  <data name="&gt;&gt;lblWIMaxCap.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel76.TabIndex" type="System.Int32, mscorlib">
     <value>126</value>
@@ -869,8 +857,8 @@
   <data name="RadGroupBoxWZ.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 740</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlWZMinTeilungswert.ZOrder" xml:space="preserve">
-    <value>43</value>
+  <data name="&gt;&gt;RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="Label8.TabIndex" type="System.Int32, mscorlib">
     <value>103</value>
@@ -878,20 +866,14 @@
   <data name="&gt;&gt;RadTextBoxControlAWGSpeisespannung.Name" xml:space="preserve">
     <value>RadTextBoxControlAWGSpeisespannung</value>
   </data>
-  <data name="RadTextBoxControlAWGMindestmesssignal.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 20</value>
-  </data>
-  <data name="&gt;&gt;lblWZTeilungswerte.ZOrder" xml:space="preserve">
-    <value>60</value>
-  </data>
-  <data name="&gt;&gt;lblPflichtfeld3.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;RadTextBoxControlWaageHoechstlast2.Name" xml:space="preserve">
+    <value>RadTextBoxControlWaageHoechstlast2</value>
   </data>
   <data name="RadLabel12.Location" type="System.Drawing.Point, System.Drawing">
     <value>324, 295</value>
   </data>
-  <data name="&gt;&gt;RadLabel98.Name" xml:space="preserve">
-    <value>RadLabel98</value>
+  <data name="&gt;&gt;RadLabel18.Name" xml:space="preserve">
+    <value>RadLabel18</value>
   </data>
   <data name="RadLabel52.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;span style="font-size: 9pt"&gt;T&lt;/span&gt;&lt;span style="font-size: 8pt"&gt;min&lt;/span&gt;&lt;/html&gt;</value>
@@ -902,9 +884,6 @@
   <data name="PictureBoxWZ5.TabIndex" type="System.Int32, mscorlib">
     <value>140</value>
   </data>
-  <data name="lblAWGKlasse2.TabIndex" type="System.Int32, mscorlib">
-    <value>80</value>
-  </data>
   <data name="lblAWGKlasse.Text" xml:space="preserve">
     <value>accuracy class</value>
   </data>
@@ -914,21 +893,17 @@
   <data name="PictureBoxWZ10.Location" type="System.Drawing.Point, System.Drawing">
     <value>371, 298</value>
   </data>
+  <data name="RadSeparator9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>692, 10</value>
+  </data>
   <data name="&gt;&gt;PictureBoxWZ3.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
   <data name="&gt;&gt;RadLabel76.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="RadSeparator8.TabIndex" type="System.Int32, mscorlib">
-    <value>76</value>
-  </data>
-  <data name="&gt;&gt;lblAWGMinMessSignal.Parent" xml:space="preserve">
-    <value>RadGroupBoxAWG</value>
-  </data>
-  <data name="lblAWGEichfehlergrenze.Text" xml:space="preserve">
-    <value> fraction of the maximum permissible error
-</value>
+  <data name="RadLabel108.TabIndex" type="System.Int32, mscorlib">
+    <value>137</value>
   </data>
   <data name="&gt;&gt;RadLabel39.Parent" xml:space="preserve">
     <value>RadGroupBoxAWG</value>
@@ -938,6 +913,9 @@
   </data>
   <data name="lblWZEichfehlergrenze.Size" type="System.Drawing.Size, System.Drawing">
     <value>222, 18</value>
+  </data>
+  <data name="RadLabel74.Text" xml:space="preserve">
+    <value>&lt;html&gt;p&lt;span style="font-size: 9pt"&gt;LC&lt;/span&gt;&lt;/html&gt;</value>
   </data>
   <data name="&gt;&gt;lblMax1.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
@@ -954,8 +932,8 @@
   <data name="&gt;&gt;lblEKG2.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlWaageEcklastzuschlag.ZOrder" xml:space="preserve">
-    <value>61</value>
+  <data name="&gt;&gt;RadLabel15.ZOrder" xml:space="preserve">
+    <value>69</value>
   </data>
   <data name="RadLabel78.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;span style="font-size: 9pt"&gt;T&lt;/span&gt;&lt;span style="font-size: 8pt"&gt;max&lt;/span&gt;&lt;/html&gt;</value>
@@ -968,6 +946,9 @@
   </data>
   <data name="RadTextBoxControlWaageKlasse.Location" type="System.Drawing.Point, System.Drawing">
     <value>391, 30</value>
+  </data>
+  <data name="RadLabel105.Location" type="System.Drawing.Point, System.Drawing">
+    <value>452, 116</value>
   </data>
   <data name="&gt;&gt;RadLabel37.ZOrder" xml:space="preserve">
     <value>43</value>
@@ -1002,14 +983,14 @@
   <data name="RadTextBoxControlAWGTemperaturbereichMin.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
+  <data name="&gt;&gt;Label12.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
   <data name="&gt;&gt;PictureBoxWZ9.Parent" xml:space="preserve">
     <value>RadGroupBoxWZ</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlWaageKlasse.Name" xml:space="preserve">
-    <value>RadTextBoxControlWaageKlasse</value>
-  </data>
-  <data name="RadTextBoxControlWaageUebersetzungsverhaeltnis.Location" type="System.Drawing.Point, System.Drawing">
-    <value>391, 165</value>
+  <data name="lblUebersetzung.Text" xml:space="preserve">
+    <value>reduction ratio</value>
   </data>
   <data name="RadLabel98.Location" type="System.Drawing.Point, System.Drawing">
     <value>452, 87</value>
@@ -1035,29 +1016,26 @@
   <data name="&gt;&gt;lblMax3.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
   </data>
-  <data name="&gt;&gt;PictureBox15.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;lblWZMindestvorlast.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadLabel101.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="lblAnzWaeegezellen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 18</value>
   </data>
   <data name="&gt;&gt;RadLabel17.Name" xml:space="preserve">
     <value>RadLabel17</value>
   </data>
-  <data name="RadGroupBoxVerbindungselemente.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
   <data name="&gt;&gt;RadLabel89.Name" xml:space="preserve">
     <value>RadLabel89</value>
+  </data>
+  <data name="RadLabel26.Location" type="System.Drawing.Point, System.Drawing">
+    <value>324, 345</value>
   </data>
   <data name="RadSeparator7.Location" type="System.Drawing.Point, System.Drawing">
     <value>114, 54</value>
   </data>
   <data name="&gt;&gt;lblWZHoechstlast.ZOrder" xml:space="preserve">
     <value>63</value>
+  </data>
+  <data name="lblAWGSpeisespannung.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 18</value>
   </data>
   <data name="RadTextBoxControlWZMaxTeilungswerte.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 20</value>
@@ -1070,6 +1048,9 @@
   </data>
   <data name="&gt;&gt;RadSeparator1.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlWZBruchteilEichfehlergrenze.Name" xml:space="preserve">
+    <value>RadTextBoxControlWZBruchteilEichfehlergrenze</value>
   </data>
   <data name="&gt;&gt;lblWZTeilungswerte.Parent" xml:space="preserve">
     <value>RadGroupBoxWZ</value>
@@ -1113,6 +1094,12 @@
   <data name="PictureBoxWZ1.Location" type="System.Drawing.Point, System.Drawing">
     <value>371, 24</value>
   </data>
+  <data name="&gt;&gt;PictureBox2.ZOrder" xml:space="preserve">
+    <value>33</value>
+  </data>
+  <data name="RadSeparator3.TabIndex" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
   <data name="lblWZRueckkehrVorlastsignal.TabIndex" type="System.Int32, mscorlib">
     <value>108</value>
   </data>
@@ -1122,14 +1109,17 @@
   <data name="RadTextBoxControlAWGGrenzwerteLastwiderstandMax.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
+  <data name="&gt;&gt;RadButton1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
   <data name="RadSeparator15.Location" type="System.Drawing.Point, System.Drawing">
     <value>362, 35</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxVerbindungselemente.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;RadLabel56.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="&gt;&gt;RadLabel25.ZOrder" xml:space="preserve">
+    <value>45</value>
   </data>
   <data name="lblKabelquerschnitt.Text" xml:space="preserve">
     <value>cross section of wire
@@ -1144,38 +1134,23 @@
   <data name="&gt;&gt;RadTextBoxControlWZWiderstand.ZOrder" xml:space="preserve">
     <value>37</value>
   </data>
-  <data name="RadTextBoxControlWZMinTeilungswert.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 20</value>
-  </data>
   <data name="&gt;&gt;RadTextBoxControlAWGTemperaturbereichMax.ZOrder" xml:space="preserve">
     <value>19</value>
+  </data>
+  <data name="lblKGMax1.Text" xml:space="preserve">
+    <value>kg</value>
   </data>
   <data name="&gt;&gt;RadSeparator15.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlWaageKabellaenge.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
   <data name="lblPflichtfeld4.Location" type="System.Drawing.Point, System.Drawing">
     <value>814, 96</value>
   </data>
-  <data name="RadLabel102.Size" type="System.Drawing.Size, System.Drawing">
-    <value>21, 18</value>
+  <data name="lblMax3.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
   </data>
-  <data name="RadTextBoxControlWaageEichwert2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 20</value>
-  </data>
-  <data name="&gt;&gt;RadLabel25.ZOrder" xml:space="preserve">
-    <value>45</value>
-  </data>
-  <data name="&gt;&gt;RadLabel64.Name" xml:space="preserve">
-    <value>RadLabel64</value>
-  </data>
-  <data name="RadTextBoxControlWaageHoechstlast3.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;RadLabel85.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="lblWZTemperatur.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 296</value>
   </data>
   <data name="&gt;&gt;RadLabel97.ZOrder" xml:space="preserve">
     <value>17</value>
@@ -1185,9 +1160,6 @@
   </data>
   <data name="RadLabel91.Size" type="System.Drawing.Size, System.Drawing">
     <value>16, 18</value>
-  </data>
-  <data name="RadSeparator1.Text" xml:space="preserve">
-    <value>RadSeparator1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlAWGKlasse.Name" xml:space="preserve">
     <value>RadTextBoxControlAWGKlasse</value>
@@ -1222,17 +1194,14 @@
   <data name="RadGroupBoxWaage.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="lblWZTemperatur.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 296</value>
-  </data>
   <data name="RadLabel16.Location" type="System.Drawing.Point, System.Drawing">
     <value>324, 191</value>
   </data>
   <data name="lblAWGKlasse2.Text" xml:space="preserve">
     <value>Class</value>
   </data>
-  <data name="&gt;&gt;RadGroupBoxWaage.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;RadScrollablePanel1.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;lblKGMax2.Name" xml:space="preserve">
     <value>lblKGMax2</value>
@@ -1251,6 +1220,9 @@
   </data>
   <data name="PictureBox15.TabIndex" type="System.Int32, mscorlib">
     <value>102</value>
+  </data>
+  <data name="&gt;&gt;RadLabel89.Parent" xml:space="preserve">
+    <value>RadGroupBoxWaage</value>
   </data>
   <data name="Label8.Text" xml:space="preserve">
     <value>*</value>
@@ -1273,20 +1245,11 @@
   <data name="&gt;&gt;RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="RadLabel64.TabIndex" type="System.Int32, mscorlib">
-    <value>94</value>
-  </data>
   <data name="lblPflichtfeld11.Size" type="System.Drawing.Size, System.Drawing">
     <value>2, 2</value>
   </data>
   <data name="&gt;&gt;PictureBox15.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblE1.Name" xml:space="preserve">
-    <value>lblE1</value>
-  </data>
-  <data name="RadLabel89.TabIndex" type="System.Int32, mscorlib">
-    <value>65</value>
   </data>
   <data name="RadLabel74.Location" type="System.Drawing.Point, System.Drawing">
     <value>323, 318</value>
@@ -1294,8 +1257,8 @@
   <data name="lblWZRueckkehrVorlastsignal.Size" type="System.Drawing.Size, System.Drawing">
     <value>186, 18</value>
   </data>
-  <data name="&gt;&gt;Label5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="&gt;&gt;lblWIKlasse.ZOrder" xml:space="preserve">
+    <value>88</value>
   </data>
   <data name="&gt;&gt;lblAWGTemperatur.ZOrder" xml:space="preserve">
     <value>49</value>
@@ -1318,11 +1281,14 @@
   <data name="lblEKG1.Text" xml:space="preserve">
     <value>kg</value>
   </data>
+  <data name="RadSeparator8.TabIndex" type="System.Int32, mscorlib">
+    <value>76</value>
+  </data>
   <data name="RadLabel99.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 18</value>
   </data>
-  <data name="RadLabel17.Text" xml:space="preserve">
-    <value>R</value>
+  <data name="&gt;&gt;RadSeparator16.Parent" xml:space="preserve">
+    <value>RadGroupBoxVerbindungselemente</value>
   </data>
   <data name="RadTextBoxControlWZTemperaturbereichMIN.Location" type="System.Drawing.Point, System.Drawing">
     <value>390, 298</value>
@@ -1330,38 +1296,26 @@
   <data name="&gt;&gt;lblKGMax2.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
   </data>
-  <data name="RadGroupBoxWZ.HeaderText" xml:space="preserve">
-    <value>Load cell(s)  (LC)</value>
-  </data>
   <data name="RadLabel86.Location" type="System.Drawing.Point, System.Drawing">
     <value>453, 243</value>
   </data>
   <data name="RadSeparator8.Size" type="System.Drawing.Size, System.Drawing">
     <value>12, 224</value>
   </data>
-  <data name="&gt;&gt;RadScrollablePanel1.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;lblE1.Parent" xml:space="preserve">
+    <value>RadGroupBoxWaage</value>
   </data>
-  <data name="PictureBox10.TabIndex" type="System.Int32, mscorlib">
-    <value>97</value>
-  </data>
-  <data name="&gt;&gt;PictureBox13.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="RadTextBoxControlWaageTemperaturbereichMin.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;RadLabel62.Name" xml:space="preserve">
-    <value>RadLabel62</value>
-  </data>
-  <data name="lblEKG2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>18, 18</value>
+  <data name="&gt;&gt;RadLabel85.ZOrder" xml:space="preserve">
+    <value>24</value>
   </data>
   <data name="&gt;&gt;PictureBoxWZ8.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="lblPflichtfeld3.Size" type="System.Drawing.Size, System.Drawing">
     <value>11, 18</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlWaageEichwert2.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlWZHoechstteilungsfaktor.Name" xml:space="preserve">
     <value>RadTextBoxControlWZHoechstteilungsfaktor</value>
@@ -1396,8 +1350,8 @@
   <data name="RadLabel92.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 18</value>
   </data>
-  <data name="RadTextBoxControlWaageTotlast.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+  <data name="&gt;&gt;Label4.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadLabel94.Parent" xml:space="preserve">
     <value>RadGroupBoxAWG</value>
@@ -1411,8 +1365,8 @@
   <data name="lblWZKlasse2.Location" type="System.Drawing.Point, System.Drawing">
     <value>323, 24</value>
   </data>
-  <data name="&gt;&gt;lblAWGWiderstand.Name" xml:space="preserve">
-    <value>lblAWGWiderstand</value>
+  <data name="RadLabel93.TabIndex" type="System.Int32, mscorlib">
+    <value>128</value>
   </data>
   <data name="RadGroupBoxAWG.HeaderText" xml:space="preserve">
     <value> Electronic indicator</value>
@@ -1426,8 +1380,8 @@
   <data name="PictureBoxWZ11.Size" type="System.Drawing.Size, System.Drawing">
     <value>18, 21</value>
   </data>
-  <data name="&gt;&gt;RadLabel11.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="lbltotlast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 18</value>
   </data>
   <data name="Label7.Text" xml:space="preserve">
     <value>*</value>
@@ -1437,9 +1391,6 @@
   </data>
   <data name="&gt;&gt;lblKGMax3.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="lblEichwert.Location" type="System.Drawing.Point, System.Drawing">
-    <value>530, 68</value>
   </data>
   <data name="&gt;&gt;RadSeparator12.ZOrder" xml:space="preserve">
     <value>36</value>
@@ -1465,6 +1416,9 @@
   <data name="PictureBox14.TabIndex" type="System.Int32, mscorlib">
     <value>101</value>
   </data>
+  <data name="&gt;&gt;PictureBox5.Parent" xml:space="preserve">
+    <value>RadGroupBoxAWG</value>
+  </data>
   <data name="lblMax1.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
   </data>
@@ -1483,17 +1437,11 @@
   <data name="&gt;&gt;RadTextBoxControlWZRueckkehrVorlastsignal.ZOrder" xml:space="preserve">
     <value>38</value>
   </data>
-  <data name="RadSeparator3.Text" xml:space="preserve">
-    <value>RadSeparator3</value>
+  <data name="&gt;&gt;lblWZWiderstandWZ.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadLabel87.Name" xml:space="preserve">
     <value>RadLabel87</value>
-  </data>
-  <data name="lblAnzWaeegezellen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 18</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlWZHoechstteilungsfaktor.Parent" xml:space="preserve">
-    <value>RadGroupBoxWZ</value>
   </data>
   <data name="&gt;&gt;lblKGMax1.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
@@ -1501,8 +1449,11 @@
   <data name="&gt;&gt;RadTextBoxControlWaageTemperaturbereichMin.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
   </data>
-  <data name="RadLabel40.TabIndex" type="System.Int32, mscorlib">
-    <value>56</value>
+  <data name="&gt;&gt;PictureBoxWZ4.Name" xml:space="preserve">
+    <value>PictureBoxWZ4</value>
+  </data>
+  <data name="RadSeparator15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>10, 13</value>
   </data>
   <data name="RadLabel26.TabIndex" type="System.Int32, mscorlib">
     <value>42</value>
@@ -1516,24 +1467,14 @@
   <data name="PictureBoxWZ10.Size" type="System.Drawing.Size, System.Drawing">
     <value>18, 21</value>
   </data>
-  <data name="lblWZEichfehlergrenze.Text" xml:space="preserve">
-    <value>fraction of the maximum permissible error
-</value>
-  </data>
-  <data name="&gt;&gt;PictureBoxWZ1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="RadLabel37.Location" type="System.Drawing.Point, System.Drawing">
-    <value>323, 165</value>
-  </data>
-  <data name="&gt;&gt;PictureBoxWZ5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblAnzWaeegezellen.ZOrder" xml:space="preserve">
-    <value>77</value>
+  <data name="RadLabel11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 18</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlWaageAnzahlWaegezellen.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
+  </data>
+  <data name="RadTextBoxControlAWGTeilungswerte.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 20</value>
   </data>
   <data name="RadLabel89.Size" type="System.Drawing.Size, System.Drawing">
     <value>21, 18</value>
@@ -1543,9 +1484,6 @@
   </data>
   <data name="&gt;&gt;lblPflichtfeld4.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="RadTextBoxControlWaageAdditiveTarahoechstlast.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 20</value>
   </data>
   <data name="RadLabel99.Location" type="System.Drawing.Point, System.Drawing">
     <value>591, 165</value>
@@ -1560,8 +1498,11 @@
     <value>ratio Z = E max / (2 DR)    or
 </value>
   </data>
-  <data name="RadSeparator5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>306, 68</value>
+  <data name="&gt;&gt;RadLabel106.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadLabel85.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadTextBoxControlWZMaxTeilungswerte.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -1569,8 +1510,8 @@
   <data name="&gt;&gt;RadLabel25.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
   </data>
-  <data name="RadLabel90.TabIndex" type="System.Int32, mscorlib">
-    <value>66</value>
+  <data name="PictureBoxWZ6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 21</value>
   </data>
   <data name="Label9.Text" xml:space="preserve">
     <value>*</value>
@@ -1578,8 +1519,8 @@
   <data name="RadTextBoxControlWZHoechstteilungsfaktor.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="RadSeparator16.Size" type="System.Drawing.Size, System.Drawing">
-    <value>10, 13</value>
+  <data name="PictureBoxWZ4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlAWGMindesteingangsspannung.ZOrder" xml:space="preserve">
     <value>38</value>
@@ -1592,6 +1533,12 @@
   </data>
   <data name="Label11.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
+  </data>
+  <data name="RadSeparator16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>10, 13</value>
+  </data>
+  <data name="&gt;&gt;lblAWGMindesteingangsspannung.Name" xml:space="preserve">
+    <value>lblAWGMindesteingangsspannung</value>
   </data>
   <data name="RadLabel101.Text" xml:space="preserve">
     <value>° C</value>
@@ -1620,11 +1567,17 @@
   <data name="&gt;&gt;lblEKG2.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
   </data>
-  <data name="RadLabel85.Text" xml:space="preserve">
-    <value>kg</value>
+  <data name="&gt;&gt;RadTextBoxControlWaageEichwert1.ZOrder" xml:space="preserve">
+    <value>83</value>
   </data>
-  <data name="&gt;&gt;RadGroupBoxAWG.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;RadGroupBoxAWG.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="RadLabel61.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 18</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlWZMinTeilungswert.ZOrder" xml:space="preserve">
+    <value>43</value>
   </data>
   <data name="RadLabel107.Text" xml:space="preserve">
     <value>kg</value>
@@ -1653,9 +1606,6 @@
   <data name="&gt;&gt;lblWZWaegezellenkennwert.Name" xml:space="preserve">
     <value>lblWZWaegezellenkennwert</value>
   </data>
-  <data name="&gt;&gt;lblE3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
   <data name="RadLabel51.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 18</value>
   </data>
@@ -1664,6 +1614,9 @@
   </data>
   <data name="&gt;&gt;PictureBoxWZ10.Name" xml:space="preserve">
     <value>PictureBoxWZ10</value>
+  </data>
+  <data name="RadTextBoxControlAWGMindesteingangsspannung.Location" type="System.Drawing.Point, System.Drawing">
+    <value>390, 113</value>
   </data>
   <data name="RadLabel101.Size" type="System.Drawing.Size, System.Drawing">
     <value>21, 18</value>
@@ -1677,14 +1630,23 @@
   <data name="lblE1.Location" type="System.Drawing.Point, System.Drawing">
     <value>683, 70</value>
   </data>
+  <data name="lblPflichtfeld1.TabIndex" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="&gt;&gt;lblAWGAnschlussart.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="RadLabel100.TabIndex" type="System.Int32, mscorlib">
+    <value>92</value>
+  </data>
   <data name="lblPflichtfeld1.Size" type="System.Drawing.Size, System.Drawing">
     <value>11, 18</value>
   </data>
-  <data name="RadLabel105.Location" type="System.Drawing.Point, System.Drawing">
-    <value>452, 116</value>
+  <data name="&gt;&gt;lblAWGKabellaenge.Parent" xml:space="preserve">
+    <value>RadGroupBoxAWG</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlWaageHoechstlast3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="&gt;&gt;RadLabel60.Name" xml:space="preserve">
+    <value>RadLabel60</value>
   </data>
   <data name="RadLabel41.Size" type="System.Drawing.Size, System.Drawing">
     <value>28, 24</value>
@@ -1692,20 +1654,14 @@
   <data name="PictureBoxWZ4.TabIndex" type="System.Int32, mscorlib">
     <value>142</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="&gt;&gt;RadLabel64.Name" xml:space="preserve">
+    <value>RadLabel64</value>
   </data>
-  <data name="PictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>372, 294</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlWaageKlasse.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="&gt;&gt;RadTextBoxControlWaageUebersetzungsverhaeltnis.Name" xml:space="preserve">
+    <value>RadTextBoxControlWaageUebersetzungsverhaeltnis</value>
   </data>
   <data name="&gt;&gt;RadSeparator8.Name" xml:space="preserve">
     <value>RadSeparator8</value>
-  </data>
-  <data name="PictureBoxWZ2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>18, 21</value>
   </data>
   <data name="PictureBox10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1728,17 +1684,14 @@
   <data name="lblPflichtfeld11.TabIndex" type="System.Int32, mscorlib">
     <value>81</value>
   </data>
-  <data name="lblKGMax3.Text" xml:space="preserve">
-    <value>kg</value>
-  </data>
   <data name="&gt;&gt;RadSeparator14.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel17.Location" type="System.Drawing.Point, System.Drawing">
     <value>324, 165</value>
   </data>
-  <data name="lblPflichtfeld3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="PictureBox10.TabIndex" type="System.Int32, mscorlib">
+    <value>97</value>
   </data>
   <data name="RadLabel97.Text" xml:space="preserve">
     <value>mV
@@ -1746,6 +1699,9 @@
   </data>
   <data name="RadLabel95.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 18</value>
+  </data>
+  <data name="PictureBoxWZ2.TabIndex" type="System.Int32, mscorlib">
+    <value>102</value>
   </data>
   <data name="RadSeparator11.Text" xml:space="preserve">
     <value>RadSeparator11</value>
@@ -1762,14 +1718,11 @@
   <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>11, 18</value>
   </data>
-  <data name="&gt;&gt;lblPflichtfeld1.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
   <data name="&gt;&gt;PictureBoxWZ11.Name" xml:space="preserve">
     <value>PictureBoxWZ11</value>
   </data>
-  <data name="RadLabel93.TabIndex" type="System.Int32, mscorlib">
-    <value>128</value>
+  <data name="lblWZWaegezellenkennwert.TabIndex" type="System.Int32, mscorlib">
+    <value>87</value>
   </data>
   <data name="RadLabel87.Text" xml:space="preserve">
     <value>kg</value>
@@ -1779,9 +1732,6 @@
   </data>
   <data name="&gt;&gt;RadLabel56.Parent" xml:space="preserve">
     <value>RadGroupBoxWZ</value>
-  </data>
-  <data name="RadTextBoxControlAWGTemperaturbereichMax.Text" xml:space="preserve">
-    <value>40</value>
   </data>
   <data name="&gt;&gt;lblE3.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
@@ -1796,8 +1746,8 @@
   <data name="lblWZRueckkehrVorlastsignal.Location" type="System.Drawing.Point, System.Drawing">
     <value>33, 244</value>
   </data>
-  <data name="PictureBox12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="RadLabel12.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
   </data>
   <data name="&gt;&gt;RadSeparator6.Name" xml:space="preserve">
     <value>RadSeparator6</value>
@@ -1805,11 +1755,8 @@
   <data name="&gt;&gt;RadLabel100.Parent" xml:space="preserve">
     <value>RadGroupBoxAWG</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlWaageHoechstlast1.Parent" xml:space="preserve">
-    <value>RadGroupBoxWaage</value>
-  </data>
-  <data name="&gt;&gt;RadLabel14.Name" xml:space="preserve">
-    <value>RadLabel14</value>
+  <data name="PictureBoxWZ7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="&gt;&gt;RadLabel65.ZOrder" xml:space="preserve">
     <value>55</value>
@@ -1817,17 +1764,11 @@
   <data name="&gt;&gt;RadTextBoxControlAWGTemperaturbereichMin.Parent" xml:space="preserve">
     <value>RadGroupBoxAWG</value>
   </data>
-  <data name="&gt;&gt;lblAnzWaeegezellen.Name" xml:space="preserve">
-    <value>lblAnzWaeegezellen</value>
-  </data>
   <data name="&gt;&gt;PictureBoxWZ7.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlAWGKlasse.Parent" xml:space="preserve">
     <value>RadGroupBoxAWG</value>
-  </data>
-  <data name="RadLabel35.TabIndex" type="System.Int32, mscorlib">
-    <value>55</value>
   </data>
   <data name="lblAWGWiderstand.Size" type="System.Drawing.Size, System.Drawing">
     <value>213, 18</value>
@@ -1841,8 +1782,8 @@
   <data name="RadLabel95.Text" xml:space="preserve">
     <value>Ohm</value>
   </data>
-  <data name="&gt;&gt;PictureBoxWZ3.Parent" xml:space="preserve">
-    <value>RadGroupBoxWZ</value>
+  <data name="RadTextBoxControlWaageTemperaturbereichMin.Text" xml:space="preserve">
+    <value>-10</value>
   </data>
   <data name="RadLabel35.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;span style="font-size: 10pt"&gt;p&lt;/span&gt;ind&lt;/html&gt;</value>
@@ -1855,9 +1796,6 @@
   </data>
   <data name="RadLabel87.Location" type="System.Drawing.Point, System.Drawing">
     <value>453, 217</value>
-  </data>
-  <data name="lblWZMinTeilungswert.TabIndex" type="System.Int32, mscorlib">
-    <value>89</value>
   </data>
   <data name="lblAWGmaxAnzahlTeilungswerte.TabIndex" type="System.Int32, mscorlib">
     <value>47</value>
@@ -1892,8 +1830,14 @@
   <data name="RadLabel11.Location" type="System.Drawing.Point, System.Drawing">
     <value>324, 321</value>
   </data>
+  <data name="&gt;&gt;RadTextBoxControlWaageKabelquerschnitt.Name" xml:space="preserve">
+    <value>RadTextBoxControlWaageKabelquerschnitt</value>
+  </data>
   <data name="RadLabel25.Text" xml:space="preserve">
     <value>A</value>
+  </data>
+  <data name="RadSeparator2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>306, 165</value>
   </data>
   <data name="&gt;&gt;lbladditiveTarahoechstlast.Name" xml:space="preserve">
     <value>lbladditiveTarahoechstlast</value>
@@ -1916,9 +1860,6 @@
   <data name="RadSeparator1.Location" type="System.Drawing.Point, System.Drawing">
     <value>119, 150</value>
   </data>
-  <data name="&gt;&gt;lblE1.Parent" xml:space="preserve">
-    <value>RadGroupBoxWaage</value>
-  </data>
   <data name="RadLabel11.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
@@ -1935,8 +1876,8 @@
   <data name="RadTextBoxControlAWGKabellaenge.Location" type="System.Drawing.Point, System.Drawing">
     <value>390, 269</value>
   </data>
-  <data name="&gt;&gt;RadLabel89.ZOrder" xml:space="preserve">
-    <value>22</value>
+  <data name="RadLabel15.Text" xml:space="preserve">
+    <value>IZSR</value>
   </data>
   <data name="PictureBox3.Size" type="System.Drawing.Size, System.Drawing">
     <value>18, 21</value>
@@ -1946,9 +1887,6 @@
   </data>
   <data name="&gt;&gt;RadLabel12.ZOrder" xml:space="preserve">
     <value>66</value>
-  </data>
-  <data name="RadTextBoxControlWaageHoechstlast1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>391, 70</value>
   </data>
   <data name="lblAWGMindesteingangsspannung.Location" type="System.Drawing.Point, System.Drawing">
     <value>33, 113</value>
@@ -1962,8 +1900,11 @@
   <data name="RadTextBoxControlWZWiderstand.Location" type="System.Drawing.Point, System.Drawing">
     <value>390, 272</value>
   </data>
-  <data name="RadScrollablePanel1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="&gt;&gt;RadScrollablePanel1.Name" xml:space="preserve">
+    <value>RadScrollablePanel1</value>
+  </data>
+  <data name="&gt;&gt;Label2.Name" xml:space="preserve">
+    <value>Label2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlAWGKlasse.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
@@ -1987,7 +1928,7 @@
     <value>RadGroupBoxAWG</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.6352.21052, Culture=neutral, PublicKeyToken=null</value>
+    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.6437.22219, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="Label8.Size" type="System.Drawing.Size, System.Drawing">
     <value>11, 18</value>
@@ -2016,9 +1957,6 @@
   <data name="RadTextBoxControlWZTemperaturbereichMAX.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
-  <data name="&gt;&gt;lblEichwert.ZOrder" xml:space="preserve">
-    <value>85</value>
-  </data>
   <data name="&gt;&gt;RadTextBoxControlAWGSpeisespannung.Parent" xml:space="preserve">
     <value>RadGroupBoxAWG</value>
   </data>
@@ -2027,6 +1965,9 @@
   </data>
   <data name="Label8.Location" type="System.Drawing.Point, System.Drawing">
     <value>470, 243</value>
+  </data>
+  <data name="RadLabel93.Text" xml:space="preserve">
+    <value>° C</value>
   </data>
   <data name="lblWZWaegezellenkennwert.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 18</value>
@@ -2043,8 +1984,8 @@
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlWaageEichwert2.ZOrder" xml:space="preserve">
-    <value>81</value>
+  <data name="&gt;&gt;RadLabel92.Parent" xml:space="preserve">
+    <value>RadGroupBoxWaage</value>
   </data>
   <data name="&gt;&gt;RadLabel106.Parent" xml:space="preserve">
     <value>RadGroupBoxWZ</value>
@@ -2061,23 +2002,23 @@
   <data name="&gt;&gt;Label10.Parent" xml:space="preserve">
     <value>RadGroupBoxWZ</value>
   </data>
-  <data name="RadTextBoxControlWZHoechstteilungsfaktor.Location" type="System.Drawing.Point, System.Drawing">
-    <value>390, 194</value>
+  <data name="&gt;&gt;RadLabel60.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="PictureBox11.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlWaageEichwert1.ZOrder" xml:space="preserve">
-    <value>83</value>
+  <data name="RadScrollablePanel1.Text" xml:space="preserve">
+    <value>RadScrollablePanel1</value>
   </data>
   <data name="&gt;&gt;Label5.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
   </data>
-  <data name="RadLabel55.Text" xml:space="preserve">
-    <value>&lt;html&gt;&lt;span style="font-size: 10pt"&gt;&lt;em&gt;R&lt;/em&gt;&lt;/span&gt;LC&lt;/html&gt;</value>
+  <data name="RadLabel17.Text" xml:space="preserve">
+    <value>R</value>
   </data>
-  <data name="lbltotlast.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 18</value>
+  <data name="&gt;&gt;lblWZMindestvorlast.Name" xml:space="preserve">
+    <value>lblWZMindestvorlast</value>
   </data>
   <data name="&gt;&gt;lblAWGKlasse2.Name" xml:space="preserve">
     <value>lblAWGKlasse2</value>
@@ -2088,11 +2029,21 @@
   <data name="RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.Location" type="System.Drawing.Point, System.Drawing">
     <value>570, 194</value>
   </data>
-  <data name="RadLabel98.TabIndex" type="System.Int32, mscorlib">
-    <value>85</value>
+  <data name="RadTextBoxControlWZRueckkehrVorlastsignal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>390, 246</value>
+  </data>
+  <data name="RadLabel89.Location" type="System.Drawing.Point, System.Drawing">
+    <value>453, 323</value>
+  </data>
+  <data name="RadLabel85.Text" xml:space="preserve">
+    <value>kg</value>
   </data>
   <data name="RadLabel18.Location" type="System.Drawing.Point, System.Drawing">
     <value>489, 323</value>
+  </data>
+  <data name="lblWZHoechstteilungswert.Text" xml:space="preserve">
+    <value>the ratio Y = E max / v min
+</value>
   </data>
   <data name="PictureBoxWZ8.Size" type="System.Drawing.Size, System.Drawing">
     <value>18, 21</value>
@@ -2106,20 +2057,23 @@
   <data name="&gt;&gt;RadGroupBoxVerbindungselemente.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
-  <data name="Label13.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="&gt;&gt;PictureBox4.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;RadGroupBoxWaage.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="&gt;&gt;RadLabel61.Parent" xml:space="preserve">
     <value>RadGroupBoxWZ</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlWaageHoechstlast2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="&gt;&gt;lblAWGKlasse2.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="lblWZMinTeilungswert.Size" type="System.Drawing.Size, System.Drawing">
     <value>204, 18</value>
   </data>
-  <data name="&gt;&gt;RadLabel95.Parent" xml:space="preserve">
-    <value>RadGroupBoxAWG</value>
+  <data name="RadLabel92.Location" type="System.Drawing.Point, System.Drawing">
+    <value>453, 369</value>
   </data>
   <data name="lblAWGAnschlussart.Size" type="System.Drawing.Size, System.Drawing">
     <value>167, 18</value>
@@ -2139,8 +2093,8 @@
   <data name="PictureBoxWZ9.TabIndex" type="System.Int32, mscorlib">
     <value>144</value>
   </data>
-  <data name="lblEinschaltnullbereich.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 18</value>
+  <data name="RadSeparator3.Text" xml:space="preserve">
+    <value>RadSeparator3</value>
   </data>
   <data name="RadLabel39.TabIndex" type="System.Int32, mscorlib">
     <value>57</value>
@@ -2160,17 +2114,8 @@
   <data name="RadLabel56.TabIndex" type="System.Int32, mscorlib">
     <value>110</value>
   </data>
-  <data name="&gt;&gt;lblEichwert.Parent" xml:space="preserve">
-    <value>RadGroupBoxWaage</value>
-  </data>
   <data name="&gt;&gt;RadSeparator10.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;lbltotlast.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="RadLabel101.Location" type="System.Drawing.Point, System.Drawing">
-    <value>452, 296</value>
   </data>
   <data name="RadTextBoxControlAWGTemperaturbereichMin.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 20</value>
@@ -2178,11 +2123,11 @@
   <data name="&gt;&gt;lblWZEichfehlergrenze.Parent" xml:space="preserve">
     <value>RadGroupBoxWZ</value>
   </data>
-  <data name="RadLabel17.Size" type="System.Drawing.Size, System.Drawing">
-    <value>13, 18</value>
-  </data>
   <data name="&gt;&gt;RadTextBoxControlWZMinTeilungswert.Name" xml:space="preserve">
     <value>RadTextBoxControlWZMinTeilungswert</value>
+  </data>
+  <data name="&gt;&gt;lblWZKlasse.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadTextBoxControlWaageTemperaturbereichMin.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 20</value>
@@ -2208,6 +2153,9 @@
   <data name="RadLabel111.Text" xml:space="preserve">
     <value>kg</value>
   </data>
+  <data name="Label10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>468, 63</value>
+  </data>
   <data name="lblWZEichfehlergrenze.TabIndex" type="System.Int32, mscorlib">
     <value>122</value>
   </data>
@@ -2222,12 +2170,6 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlWZHoechstteilungsfaktor.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;Label8.Parent" xml:space="preserve">
-    <value>RadGroupBoxAWG</value>
-  </data>
-  <data name="&gt;&gt;lblE2.Name" xml:space="preserve">
-    <value>lblE2</value>
   </data>
   <data name="&gt;&gt;Label2.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
@@ -2246,11 +2188,11 @@
     <value>mV/V
 </value>
   </data>
-  <data name="RadSeparator12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>10, 279</value>
+  <data name="&gt;&gt;RadTextBoxControlWaageKabellaenge.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;lblEKG3.Name" xml:space="preserve">
-    <value>lblEKG3</value>
+  <data name="&gt;&gt;RadTextBoxControlWaageEichwert2.ZOrder" xml:space="preserve">
+    <value>81</value>
   </data>
   <data name="lblWaageKlasse2.Location" type="System.Drawing.Point, System.Drawing">
     <value>324, 30</value>
@@ -2261,14 +2203,14 @@
   <data name="&gt;&gt;RadSeparator7.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
+  <data name="Label4.TabIndex" type="System.Int32, mscorlib">
+    <value>74</value>
+  </data>
   <data name="RadLabel25.TabIndex" type="System.Int32, mscorlib">
     <value>41</value>
   </data>
   <data name="RadLabel37.TabIndex" type="System.Int32, mscorlib">
     <value>59</value>
-  </data>
-  <data name="RadTextBoxControlWZRueckkehrVorlastsignal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>390, 246</value>
   </data>
   <data name="Label6.TabIndex" type="System.Int32, mscorlib">
     <value>80</value>
@@ -2282,14 +2224,8 @@
   <data name="RadScrollablePanel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>871, 1207</value>
   </data>
-  <data name="RadTextBoxControlWaageTemperaturbereichMin.Text" xml:space="preserve">
-    <value>-10</value>
-  </data>
   <data name="RadLabel51.TabIndex" type="System.Int32, mscorlib">
     <value>82</value>
-  </data>
-  <data name="&gt;&gt;RadLabel34.Parent" xml:space="preserve">
-    <value>RadGroupBoxAWG</value>
   </data>
   <data name="lblPflichtfeld2.TabIndex" type="System.Int32, mscorlib">
     <value>84</value>
@@ -2312,9 +2248,6 @@
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
     <value>871, 1207</value>
   </data>
-  <data name="&gt;&gt;lblEinschaltnullbereich.Name" xml:space="preserve">
-    <value>lblEinschaltnullbereich</value>
-  </data>
   <data name="&gt;&gt;RadTextBoxControlWZMindestvorlast.ZOrder" xml:space="preserve">
     <value>48</value>
   </data>
@@ -2327,14 +2260,14 @@
   <data name="&gt;&gt;RadLabel111.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;lblEinschaltnullbereich.ZOrder" xml:space="preserve">
-    <value>76</value>
-  </data>
   <data name="&gt;&gt;RadTextBoxControlAWGTeilungswerte.Name" xml:space="preserve">
     <value>RadTextBoxControlAWGTeilungswerte</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlWaageTotlast.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadLabel37.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;PictureBoxWZ11.ZOrder" xml:space="preserve">
     <value>12</value>
@@ -2352,14 +2285,17 @@
   <data name="&gt;&gt;Label10.Name" xml:space="preserve">
     <value>Label10</value>
   </data>
+  <data name="&gt;&gt;lblAWGMinMessSignal.Name" xml:space="preserve">
+    <value>lblAWGMinMessSignal</value>
+  </data>
   <data name="RadSeparator8.Location" type="System.Drawing.Point, System.Drawing">
     <value>305, 61</value>
   </data>
   <data name="&gt;&gt;lblAWGKabellaenge.Name" xml:space="preserve">
     <value>lblAWGKabellaenge</value>
   </data>
-  <data name="&gt;&gt;PictureBox15.Name" xml:space="preserve">
-    <value>PictureBox15</value>
+  <data name="&gt;&gt;RadTextBoxControlWaageEcklastzuschlag.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="lblWZWiderstandWZ.Size" type="System.Drawing.Size, System.Drawing">
     <value>180, 18</value>
@@ -2367,11 +2303,11 @@
   <data name="RadLabel90.Size" type="System.Drawing.Size, System.Drawing">
     <value>21, 18</value>
   </data>
-  <data name="RadLabel16.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
   <data name="lblEichwert.Text" xml:space="preserve">
     <value>verification scale interval</value>
+  </data>
+  <data name="&gt;&gt;PictureBox15.Name" xml:space="preserve">
+    <value>PictureBox15</value>
   </data>
   <data name="&gt;&gt;RadLabel38.ZOrder" xml:space="preserve">
     <value>44</value>
@@ -2385,8 +2321,11 @@
   <data name="lblWZKlasse.Location" type="System.Drawing.Point, System.Drawing">
     <value>33, 24</value>
   </data>
-  <data name="Label4.TabIndex" type="System.Int32, mscorlib">
-    <value>74</value>
+  <data name="RadTextBoxControlWaageKabellaenge.Location" type="System.Drawing.Point, System.Drawing">
+    <value>391, 347</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlWaageAnzahlWaegezellen.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadGroupBoxWaage.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -2403,8 +2342,14 @@
   <data name="lblAWGTemperatur.Size" type="System.Drawing.Size, System.Drawing">
     <value>151, 18</value>
   </data>
+  <data name="&gt;&gt;RadLabel91.Name" xml:space="preserve">
+    <value>RadLabel91</value>
+  </data>
   <data name="&gt;&gt;lblKGMax1.ZOrder" xml:space="preserve">
     <value>32</value>
+  </data>
+  <data name="RadLabel40.TabIndex" type="System.Int32, mscorlib">
+    <value>56</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlWaageKabellaenge.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
@@ -2415,14 +2360,14 @@
   <data name="&gt;&gt;RadSeparator11.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
+  <data name="lblKGMax2.TabIndex" type="System.Int32, mscorlib">
+    <value>56</value>
+  </data>
   <data name="RadLabel62.Location" type="System.Drawing.Point, System.Drawing">
     <value>323, 168</value>
   </data>
   <data name="&gt;&gt;RadSeparator9.ZOrder" xml:space="preserve">
     <value>21</value>
-  </data>
-  <data name="RadTextBoxControlWaageTotlast.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 20</value>
   </data>
   <data name="RadLabel1.Text" xml:space="preserve">
     <value>aufgedruckt:</value>
@@ -2432,9 +2377,6 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlWZWiderstand.Name" xml:space="preserve">
     <value>RadTextBoxControlWZWiderstand</value>
-  </data>
-  <data name="RadLabel63.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 20</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlWZBruchteilEichfehlergrenze.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
@@ -2450,6 +2392,9 @@
   </data>
   <data name="lblEKG2.TabIndex" type="System.Int32, mscorlib">
     <value>59</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlAWGGrenzwerteLastwiderstandMin.ZOrder" xml:space="preserve">
+    <value>34</value>
   </data>
   <data name="&gt;&gt;lblKabel.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
@@ -2481,11 +2426,8 @@
   <data name="RadLabel94.Location" type="System.Drawing.Point, System.Drawing">
     <value>452, 192</value>
   </data>
-  <data name="&gt;&gt;RadGroupBoxWaage.Name" xml:space="preserve">
+  <data name="&gt;&gt;RadLabel17.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
-  </data>
-  <data name="&gt;&gt;lblPflichtfeld1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadTextBoxControlWaageUebersetzungsverhaeltnis.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 20</value>
@@ -2511,11 +2453,11 @@
   <data name="lblWZTemperatur.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 18</value>
   </data>
-  <data name="RadGroupBoxVerbindungselemente.Size" type="System.Drawing.Size, System.Drawing">
-    <value>862, 86</value>
+  <data name="&gt;&gt;RadTextBoxControlWZWaegezellenkennwert.ZOrder" xml:space="preserve">
+    <value>47</value>
   </data>
-  <data name="&gt;&gt;RadSeparator3.ZOrder" xml:space="preserve">
-    <value>41</value>
+  <data name="&gt;&gt;RadTextBoxControlWaageEichwert2.Parent" xml:space="preserve">
+    <value>RadGroupBoxWaage</value>
   </data>
   <data name="RadTextBoxControlWZGenauigkeitsklasse.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 20</value>
@@ -2556,11 +2498,14 @@
   <data name="RadLabel30.TabIndex" type="System.Int32, mscorlib">
     <value>72</value>
   </data>
-  <data name="&gt;&gt;PictureBoxWZ5.Name" xml:space="preserve">
-    <value>PictureBoxWZ5</value>
+  <data name="RadGroupBoxWZ.HeaderText" xml:space="preserve">
+    <value>Load cell(s)  (LC)</value>
   </data>
   <data name="PictureBoxWZ1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="RadLabel103.TabIndex" type="System.Int32, mscorlib">
+    <value>129</value>
   </data>
   <data name="&gt;&gt;RadLabel85.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
@@ -2583,11 +2528,8 @@
   <data name="&gt;&gt;lblAWGEichfehlergrenze.Parent" xml:space="preserve">
     <value>RadGroupBoxAWG</value>
   </data>
-  <data name="&gt;&gt;RadLabel90.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="RadLabel35.Location" type="System.Drawing.Point, System.Drawing">
-    <value>323, 217</value>
+  <data name="Label11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
   <data name="&gt;&gt;RadSeparator16.Name" xml:space="preserve">
     <value>RadSeparator16</value>
@@ -2595,14 +2537,11 @@
   <data name="RadLabel55.TabIndex" type="System.Int32, mscorlib">
     <value>109</value>
   </data>
-  <data name="&gt;&gt;lblPflichtfeld6.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;lblAWGKlasse.ZOrder" xml:space="preserve">
+    <value>24</value>
   </data>
-  <data name="&gt;&gt;RadLabel91.Name" xml:space="preserve">
-    <value>RadLabel91</value>
-  </data>
-  <data name="RadLabel108.TabIndex" type="System.Int32, mscorlib">
-    <value>137</value>
+  <data name="&gt;&gt;RadTextBoxControlWaageEcklastzuschlag.ZOrder" xml:space="preserve">
+    <value>61</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlWZMaxTeilungswerte.Parent" xml:space="preserve">
     <value>RadGroupBoxWZ</value>
@@ -2634,6 +2573,9 @@
   <data name="&gt;&gt;RadSeparator9.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
+  <data name="&gt;&gt;lblWaageKlasse2.Parent" xml:space="preserve">
+    <value>RadGroupBoxWaage</value>
+  </data>
   <data name="&gt;&gt;RadButton1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
@@ -2645,6 +2587,9 @@
   </data>
   <data name="&gt;&gt;RadLabel34.Name" xml:space="preserve">
     <value>RadLabel34</value>
+  </data>
+  <data name="&gt;&gt;RadLabel35.Parent" xml:space="preserve">
+    <value>RadGroupBoxAWG</value>
   </data>
   <data name="&gt;&gt;lblAWGAnschlussart.ZOrder" xml:space="preserve">
     <value>31</value>
@@ -2664,12 +2609,11 @@
   <data name="RadTextBoxControlWaageHoechstlast1.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="lblAnzWaeegezellen.Text" xml:space="preserve">
-    <value>number of load cells
-</value>
-  </data>
   <data name="&gt;&gt;RadSeparator15.Parent" xml:space="preserve">
     <value>RadGroupBoxVerbindungselemente</value>
+  </data>
+  <data name="&gt;&gt;RadLabel55.Parent" xml:space="preserve">
+    <value>RadGroupBoxWZ</value>
   </data>
   <data name="&gt;&gt;Label5.Name" xml:space="preserve">
     <value>Label5</value>
@@ -2713,8 +2657,8 @@
   <data name="RadTextBoxControlWaageHoechstlast3.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 20</value>
   </data>
-  <data name="RadSeparator3.TabIndex" type="System.Int32, mscorlib">
-    <value>46</value>
+  <data name="&gt;&gt;lblwzKriechteilungsfaktor.Parent" xml:space="preserve">
+    <value>RadGroupBoxWZ</value>
   </data>
   <data name="PictureBox13.TabIndex" type="System.Int32, mscorlib">
     <value>100</value>
@@ -2722,14 +2666,11 @@
   <data name="RadTextBoxControlAWGGrenzwerteLastwiderstandMin.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="RadTextBoxControlWaageAdditiveTarahoechstlast.Text" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;RadLabel14.Name" xml:space="preserve">
+    <value>RadLabel14</value>
   </data>
   <data name="RadLabel98.Size" type="System.Drawing.Size, System.Drawing">
     <value>13, 18</value>
-  </data>
-  <data name="&gt;&gt;RadLabel94.Name" xml:space="preserve">
-    <value>RadLabel94</value>
   </data>
   <data name="&gt;&gt;RadSeparator4.Name" xml:space="preserve">
     <value>RadSeparator4</value>
@@ -2761,6 +2702,9 @@
   <data name="&gt;&gt;RadLabel91.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
+  <data name="RadSeparator5.TabIndex" type="System.Int32, mscorlib">
+    <value>47</value>
+  </data>
   <data name="RadLabel93.Location" type="System.Drawing.Point, System.Drawing">
     <value>591, 296</value>
   </data>
@@ -2773,7 +2717,7 @@
   <data name="&gt;&gt;Label6.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;lblWIKlasse.Parent" xml:space="preserve">
+  <data name="&gt;&gt;PictureBox9.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
   </data>
   <data name="&gt;&gt;PictureBoxWZ9.Name" xml:space="preserve">
@@ -2791,8 +2735,8 @@
   <data name="&gt;&gt;PictureBox10.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="&gt;&gt;lblWaageKlasse2.Parent" xml:space="preserve">
-    <value>RadGroupBoxWaage</value>
+  <data name="Label13.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="RadSeparator4.Location" type="System.Drawing.Point, System.Drawing">
     <value>361, 68</value>
@@ -2857,11 +2801,8 @@
   <data name="&gt;&gt;RadTextBoxControlAWGAnschlussart.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="lblPflichtfeld5.Text" xml:space="preserve">
-    <value>*</value>
-  </data>
-  <data name="RadLabel78.Location" type="System.Drawing.Point, System.Drawing">
-    <value>488, 298</value>
+  <data name="RadLabel17.Size" type="System.Drawing.Size, System.Drawing">
+    <value>13, 18</value>
   </data>
   <data name="&gt;&gt;RadSeparator13.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
@@ -2869,11 +2810,8 @@
   <data name="RadLabel87.Size" type="System.Drawing.Size, System.Drawing">
     <value>18, 18</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlEinschaltnullstellbereich.ZOrder" xml:space="preserve">
-    <value>62</value>
-  </data>
-  <data name="&gt;&gt;lblMax2.Name" xml:space="preserve">
-    <value>lblMax2</value>
+  <data name="&gt;&gt;lblPflichtfeld5.Parent" xml:space="preserve">
+    <value>RadGroupBoxWaage</value>
   </data>
   <data name="&gt;&gt;lblWZWiderstandWZ.Parent" xml:space="preserve">
     <value>RadGroupBoxWZ</value>
@@ -2887,8 +2825,8 @@
   <data name="RadLabel34.TabIndex" type="System.Int32, mscorlib">
     <value>68</value>
   </data>
-  <data name="lblWIMaxCap.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 18</value>
+  <data name="&gt;&gt;RadTextBoxControlWaageKlasse.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="PictureBoxWZ3.TabIndex" type="System.Int32, mscorlib">
     <value>103</value>
@@ -2908,14 +2846,17 @@
   <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>11, 18</value>
   </data>
-  <data name="RadTextBoxControlWZKriechteilungsfaktor.Location" type="System.Drawing.Point, System.Drawing">
-    <value>390, 220</value>
-  </data>
   <data name="&gt;&gt;RadTextBoxControlWaageUebersetzungsverhaeltnis.ZOrder" xml:space="preserve">
     <value>64</value>
   </data>
+  <data name="lblPflichtfeld3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="RadLabel60.Size" type="System.Drawing.Size, System.Drawing">
     <value>18, 18</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld2.Parent" xml:space="preserve">
+    <value>RadGroupBoxWaage</value>
   </data>
   <data name="lblWZWiderstandWZ.Text" xml:space="preserve">
     <value>input resistance of single load cell
@@ -2945,6 +2886,9 @@
   <data name="&gt;&gt;RadTextBoxControlWZMaxTeilungswerte.Name" xml:space="preserve">
     <value>RadTextBoxControlWZMaxTeilungswerte</value>
   </data>
+  <data name="RadLabel25.Size" type="System.Drawing.Size, System.Drawing">
+    <value>13, 18</value>
+  </data>
   <data name="RadLabel93.Size" type="System.Drawing.Size, System.Drawing">
     <value>21, 18</value>
   </data>
@@ -2960,14 +2904,11 @@
   <data name="&gt;&gt;PictureBox10.Name" xml:space="preserve">
     <value>PictureBox10</value>
   </data>
-  <data name="&gt;&gt;RadScrollablePanel1.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;RadLabel11.ZOrder" xml:space="preserve">
+    <value>65</value>
   </data>
   <data name="Label14.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlWaageUebersetzungsverhaeltnis.Parent" xml:space="preserve">
-    <value>RadGroupBoxWaage</value>
   </data>
   <data name="&gt;&gt;RadSeparator14.Name" xml:space="preserve">
     <value>RadSeparator14</value>
@@ -2993,11 +2934,8 @@
   <data name="&gt;&gt;lblAWGKlasse.Name" xml:space="preserve">
     <value>lblAWGKlasse</value>
   </data>
-  <data name="Label11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlWaageEichwert2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="&gt;&gt;RadScrollablePanel1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;RadSeparator1.Name" xml:space="preserve">
     <value>RadSeparator1</value>
@@ -3014,6 +2952,12 @@
   <data name="&gt;&gt;PictureBox3.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;RadTextBoxControlEinschaltnullstellbereich.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="lblEKG3.Text" xml:space="preserve">
+    <value>kg</value>
+  </data>
   <data name="RadTextBoxControlAWGBruchteilEichfehlergrenze.Text" xml:space="preserve">
     <value>0,5</value>
   </data>
@@ -3026,8 +2970,8 @@
   <data name="&gt;&gt;lblMax1.ZOrder" xml:space="preserve">
     <value>54</value>
   </data>
-  <data name="RadLabel38.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 22</value>
+  <data name="&gt;&gt;lblEinschaltnullbereich.ZOrder" xml:space="preserve">
+    <value>76</value>
   </data>
   <data name="&gt;&gt;RadLabel36.Parent" xml:space="preserve">
     <value>RadGroupBoxAWG</value>
@@ -3041,11 +2985,8 @@
   <data name="&gt;&gt;lblWZHoechstteilungswert.ZOrder" xml:space="preserve">
     <value>58</value>
   </data>
-  <data name="&gt;&gt;lbltotlast.Name" xml:space="preserve">
-    <value>lbltotlast</value>
-  </data>
-  <data name="&gt;&gt;RadLabel51.Parent" xml:space="preserve">
-    <value>RadGroupBoxAWG</value>
+  <data name="PictureBox11.TabIndex" type="System.Int32, mscorlib">
+    <value>98</value>
   </data>
   <data name="PictureBoxWZ10.TabIndex" type="System.Int32, mscorlib">
     <value>138</value>
@@ -3062,8 +3003,9 @@
   <data name="lblPflichtfeld6.Text" xml:space="preserve">
     <value>*</value>
   </data>
-  <data name="RadTextBoxControlAWGMindesteingangsspannung.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="RadLabel96.Text" xml:space="preserve">
+    <value>uV
+</value>
   </data>
   <data name="&gt;&gt;PictureBoxWZ8.ZOrder" xml:space="preserve">
     <value>7</value>
@@ -3077,14 +3019,14 @@
   <data name="RadLabel63.Location" type="System.Drawing.Point, System.Drawing">
     <value>323, 142</value>
   </data>
-  <data name="&gt;&gt;lblE2.Parent" xml:space="preserve">
-    <value>RadGroupBoxWaage</value>
-  </data>
-  <data name="lblEKG3.Text" xml:space="preserve">
-    <value>kg</value>
+  <data name="RadLabel16.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
   </data>
   <data name="&gt;&gt;lblMax2.ZOrder" xml:space="preserve">
     <value>52</value>
+  </data>
+  <data name="&gt;&gt;RadLabel40.Name" xml:space="preserve">
+    <value>RadLabel40</value>
   </data>
   <data name="PictureBox13.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -3097,10 +3039,6 @@
   </data>
   <data name="&gt;&gt;RadLabel111.Parent" xml:space="preserve">
     <value>RadGroupBoxWZ</value>
-  </data>
-  <data name="lbladditiveTarahoechstlast.Text" xml:space="preserve">
-    <value>additive tare
-</value>
   </data>
   <data name="lblPflichtfeld11.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -3121,11 +3059,11 @@
   <data name="&gt;&gt;RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;RadLabel91.ZOrder" xml:space="preserve">
-    <value>20</value>
+  <data name="RadGroupBoxVerbindungselemente.Size" type="System.Drawing.Size, System.Drawing">
+    <value>862, 86</value>
   </data>
-  <data name="&gt;&gt;RadLabel62.ZOrder" xml:space="preserve">
-    <value>52</value>
+  <data name="&gt;&gt;PictureBoxWZ3.Parent" xml:space="preserve">
+    <value>RadGroupBoxWZ</value>
   </data>
   <data name="&gt;&gt;PictureBox2.Name" xml:space="preserve">
     <value>PictureBox2</value>
@@ -3136,8 +3074,9 @@
   <data name="lblMax1.Size" type="System.Drawing.Size, System.Drawing">
     <value>33, 18</value>
   </data>
-  <data name="&gt;&gt;PictureBox14.Name" xml:space="preserve">
-    <value>PictureBox14</value>
+  <data name="lbltotlast.Text" xml:space="preserve">
+    <value>dead load of load receptor
+</value>
   </data>
   <data name="&gt;&gt;RadSeparator10.ZOrder" xml:space="preserve">
     <value>31</value>
@@ -3151,8 +3090,8 @@
   <data name="PictureBox2.Location" type="System.Drawing.Point, System.Drawing">
     <value>372, 321</value>
   </data>
-  <data name="RadLabel89.Location" type="System.Drawing.Point, System.Drawing">
-    <value>453, 323</value>
+  <data name="&gt;&gt;RadGroupBoxWaage.Name" xml:space="preserve">
+    <value>RadGroupBoxWaage</value>
   </data>
   <data name="&gt;&gt;RadLabel93.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
@@ -3160,20 +3099,14 @@
   <data name="RadTextBoxControlWZMindestvorlast.Location" type="System.Drawing.Point, System.Drawing">
     <value>390, 90</value>
   </data>
-  <data name="RadLabel15.Text" xml:space="preserve">
-    <value>IZSR</value>
-  </data>
   <data name="&gt;&gt;PictureBox8.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;PictureBox1.Name" xml:space="preserve">
     <value>PictureBox1</value>
   </data>
-  <data name="PictureBox15.Size" type="System.Drawing.Size, System.Drawing">
-    <value>18, 21</value>
-  </data>
-  <data name="lblAWGSpeisespannung.Size" type="System.Drawing.Size, System.Drawing">
-    <value>144, 18</value>
+  <data name="&gt;&gt;RadTextBoxControlWaageKlasse.ZOrder" xml:space="preserve">
+    <value>87</value>
   </data>
   <data name="lblWZMindestvorlast.Size" type="System.Drawing.Size, System.Drawing">
     <value>112, 18</value>
@@ -3190,8 +3123,8 @@
   <data name="&gt;&gt;RadTextBoxControlAWGKlasse.ZOrder" xml:space="preserve">
     <value>23</value>
   </data>
-  <data name="RadLabel66.Location" type="System.Drawing.Point, System.Drawing">
-    <value>323, 64</value>
+  <data name="&gt;&gt;lblGrenzenTemp.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadLabel94.ZOrder" xml:space="preserve">
     <value>14</value>
@@ -3216,6 +3149,9 @@
   </data>
   <data name="&gt;&gt;lblWIKlasse.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="RadLabel55.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;span style="font-size: 10pt"&gt;&lt;em&gt;R&lt;/em&gt;&lt;/span&gt;LC&lt;/html&gt;</value>
   </data>
   <data name="lblPflichtfeld2.Text" xml:space="preserve">
     <value>*</value>
@@ -3245,8 +3181,8 @@
   <data name="RadLabel88.TabIndex" type="System.Int32, mscorlib">
     <value>64</value>
   </data>
-  <data name="RadTextBoxControlAWGTeilungswerte.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 20</value>
+  <data name="RadLabel14.Text" xml:space="preserve">
+    <value>NUD</value>
   </data>
   <data name="RadTextBoxControlWaageUebersetzungsverhaeltnis.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -3257,17 +3193,17 @@
   <data name="Label12.Size" type="System.Drawing.Size, System.Drawing">
     <value>2, 2</value>
   </data>
+  <data name="RadLabel97.TabIndex" type="System.Int32, mscorlib">
+    <value>86</value>
+  </data>
   <data name="&gt;&gt;Label7.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
   </data>
   <data name="&gt;&gt;lblWZKlasse.Name" xml:space="preserve">
     <value>lblWZKlasse</value>
   </data>
-  <data name="&gt;&gt;lblWIKlasse.ZOrder" xml:space="preserve">
-    <value>88</value>
-  </data>
-  <data name="&gt;&gt;RadLabel89.Parent" xml:space="preserve">
-    <value>RadGroupBoxWaage</value>
+  <data name="RadTextBoxControlWaageAdditiveTarahoechstlast.Text" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlAWGKabellaenge.Name" xml:space="preserve">
     <value>RadTextBoxControlAWGKabellaenge</value>
@@ -3287,11 +3223,14 @@
   <data name="&gt;&gt;RadScrollablePanel1.PanelContainer.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadScrollablePanelContainer, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
+  <data name="PictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>372, 294</value>
+  </data>
   <data name="RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="RadTextBoxControlAWGSpeisespannung.Location" type="System.Drawing.Point, System.Drawing">
-    <value>390, 87</value>
+  <data name="RadLabel26.Text" xml:space="preserve">
+    <value>L</value>
   </data>
   <data name="lblMax3.Location" type="System.Drawing.Point, System.Drawing">
     <value>324, 124</value>
@@ -3302,23 +3241,14 @@
   <data name="&gt;&gt;RadLabel88.Name" xml:space="preserve">
     <value>RadLabel88</value>
   </data>
+  <data name="&gt;&gt;RadLabel107.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
   <data name="&gt;&gt;RadTextBoxControlWZHoechstlast.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlAWGAnschlussart.Name" xml:space="preserve">
-    <value>RadTextBoxControlAWGAnschlussart</value>
-  </data>
-  <data name="&gt;&gt;PictureBoxWZ9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;RadTextBoxControlWZTemperaturbereichMAX.ZOrder" xml:space="preserve">
     <value>23</value>
-  </data>
-  <data name="RadSeparator11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>10, 279</value>
-  </data>
-  <data name="&gt;&gt;RadLabel14.Parent" xml:space="preserve">
-    <value>RadGroupBoxWaage</value>
   </data>
   <data name="RadLabel74.TabIndex" type="System.Int32, mscorlib">
     <value>123</value>
@@ -3329,14 +3259,14 @@
   <data name="lblAWGKlasse2.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 18</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlWaageTemperaturbereichMax.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lblEichwert.ZOrder" xml:space="preserve">
+    <value>85</value>
+  </data>
+  <data name="&gt;&gt;lblEichwert.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
   </data>
-  <data name="&gt;&gt;RadLabel85.ZOrder" xml:space="preserve">
-    <value>24</value>
-  </data>
-  <data name="RadLabel26.Text" xml:space="preserve">
-    <value>L</value>
+  <data name="&gt;&gt;PictureBoxWZ6.Parent" xml:space="preserve">
+    <value>RadGroupBoxWZ</value>
   </data>
   <data name="&gt;&gt;lblE1.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
@@ -3381,12 +3311,11 @@
   <data name="lblAWGMinMessSignal.Location" type="System.Drawing.Point, System.Drawing">
     <value>33, 140</value>
   </data>
-  <data name="lblWZHoechstteilungswert.Text" xml:space="preserve">
-    <value>the ratio Y = E max / v min
-</value>
+  <data name="&gt;&gt;PictureBox15.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
-  <data name="&gt;&gt;PictureBox3.Name" xml:space="preserve">
-    <value>PictureBox3</value>
+  <data name="RadLabel102.Size" type="System.Drawing.Size, System.Drawing">
+    <value>21, 18</value>
   </data>
   <data name="RadLabel16.Text" xml:space="preserve">
     <value>N</value>
@@ -3406,8 +3335,8 @@
   <data name="RadTextBoxControlWZRueckkehrVorlastsignal.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 20</value>
   </data>
-  <data name="&gt;&gt;RadLabel30.Name" xml:space="preserve">
-    <value>RadLabel30</value>
+  <data name="&gt;&gt;RadTextBoxControlWaageTemperaturbereichMax.Parent" xml:space="preserve">
+    <value>RadGroupBoxWaage</value>
   </data>
   <data name="lbltotlast.Location" type="System.Drawing.Point, System.Drawing">
     <value>34, 269</value>
@@ -3458,8 +3387,8 @@
   <data name="PictureBox9.Size" type="System.Drawing.Size, System.Drawing">
     <value>18, 22</value>
   </data>
-  <data name="PictureBoxWZ4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="RadTextBoxControlAWGSpeisespannung.Location" type="System.Drawing.Point, System.Drawing">
+    <value>390, 87</value>
   </data>
   <data name="RadLabel76.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;span style="font-size: 10pt"&gt;p&lt;/span&gt;&lt;span style="font-size: 8pt"&gt;con&lt;/span&gt;&lt;/html&gt;</value>
@@ -3479,23 +3408,14 @@
   <data name="&gt;&gt;lblAWGWiderstand.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="RadTextBoxControlWZTemperaturbereichMAX.Location" type="System.Drawing.Point, System.Drawing">
-    <value>530, 296</value>
-  </data>
   <data name="&gt;&gt;RadTextBoxControlAWGMindesteingangsspannung.Name" xml:space="preserve">
     <value>RadTextBoxControlAWGMindesteingangsspannung</value>
   </data>
   <data name="&gt;&gt;Label3.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="lblMax3.TabIndex" type="System.Int32, mscorlib">
-    <value>37</value>
-  </data>
   <data name="lblPflichtfeld2.Size" type="System.Drawing.Size, System.Drawing">
     <value>11, 18</value>
-  </data>
-  <data name="RadTextBoxControlWaageEichwert3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>728, 122</value>
   </data>
   <data name="&gt;&gt;PictureBox8.Name" xml:space="preserve">
     <value>PictureBox8</value>
@@ -3509,11 +3429,20 @@
   <data name="RadLabel103.Text" xml:space="preserve">
     <value>Ohm</value>
   </data>
+  <data name="RadLabel52.Location" type="System.Drawing.Point, System.Drawing">
+    <value>323, 294</value>
+  </data>
+  <data name="&gt;&gt;RadLabel103.Name" xml:space="preserve">
+    <value>RadLabel103</value>
+  </data>
   <data name="lblWaageKlasse2.Text" xml:space="preserve">
     <value>Class</value>
   </data>
   <data name="PictureBoxWZ8.TabIndex" type="System.Int32, mscorlib">
     <value>143</value>
+  </data>
+  <data name="&gt;&gt;RadLabel74.Name" xml:space="preserve">
+    <value>RadLabel74</value>
   </data>
   <data name="lblWZWaegezellenkennwert.Location" type="System.Drawing.Point, System.Drawing">
     <value>33, 116</value>
@@ -3524,8 +3453,11 @@
   <data name="lblEKG2.Location" type="System.Drawing.Point, System.Drawing">
     <value>790, 96</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlWZHoechstlast.Name" xml:space="preserve">
-    <value>RadTextBoxControlWZHoechstlast</value>
+  <data name="&gt;&gt;RadTextBoxControlAWGSpeisespannung.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;Label8.Parent" xml:space="preserve">
+    <value>RadGroupBoxAWG</value>
   </data>
   <data name="lblEKG1.Size" type="System.Drawing.Size, System.Drawing">
     <value>18, 18</value>
@@ -3549,8 +3481,8 @@
   <data name="PictureBox2.TabIndex" type="System.Int32, mscorlib">
     <value>54</value>
   </data>
-  <data name="&gt;&gt;RadLabel101.Name" xml:space="preserve">
-    <value>RadLabel101</value>
+  <data name="RadLabel107.Location" type="System.Drawing.Point, System.Drawing">
+    <value>452, 64</value>
   </data>
   <data name="Label9.Size" type="System.Drawing.Size, System.Drawing">
     <value>11, 18</value>
@@ -3591,8 +3523,8 @@
   <data name="PictureBox8.TabIndex" type="System.Int32, mscorlib">
     <value>129</value>
   </data>
-  <data name="&gt;&gt;lblWZKlasse.Parent" xml:space="preserve">
-    <value>RadGroupBoxWZ</value>
+  <data name="&gt;&gt;Label6.ZOrder" xml:space="preserve">
+    <value>9</value>
   </data>
   <data name="lblPflichtfeld3.TabIndex" type="System.Int32, mscorlib">
     <value>82</value>
@@ -3615,8 +3547,8 @@
   <data name="&gt;&gt;RadSeparator13.ZOrder" xml:space="preserve">
     <value>35</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlWaageHoechstlast2.Name" xml:space="preserve">
-    <value>RadTextBoxControlWaageHoechstlast2</value>
+  <data name="&gt;&gt;PictureBox13.Name" xml:space="preserve">
+    <value>PictureBox13</value>
   </data>
   <data name="&gt;&gt;RadLabel41.Name" xml:space="preserve">
     <value>RadLabel41</value>
@@ -3630,20 +3562,17 @@
   <data name="RadLabel108.Location" type="System.Drawing.Point, System.Drawing">
     <value>452, 246</value>
   </data>
-  <data name="lblPflichtfeld6.TabIndex" type="System.Int32, mscorlib">
-    <value>86</value>
-  </data>
-  <data name="RadTextBoxControlWaageAnzahlWaegezellen.Location" type="System.Drawing.Point, System.Drawing">
-    <value>391, 191</value>
+  <data name="lblEKG2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 18</value>
   </data>
   <data name="&gt;&gt;PictureBoxWZ6.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="RadSeparator4.Text" xml:space="preserve">
+    <value>RadSeparator4</value>
+  </data>
   <data name="&gt;&gt;RadLabel16.ZOrder" xml:space="preserve">
     <value>70</value>
-  </data>
-  <data name="&gt;&gt;lblwzKriechteilungsfaktor.Parent" xml:space="preserve">
-    <value>RadGroupBoxWZ</value>
   </data>
   <data name="&gt;&gt;RadSeparator9.Name" xml:space="preserve">
     <value>RadSeparator9</value>
@@ -3660,8 +3589,8 @@
   <data name="&gt;&gt;RadTextBoxControlAWGMindesteingangsspannung.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="lbladditiveTarahoechstlast.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 18</value>
+  <data name="&gt;&gt;RadScrollablePanel1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadScrollablePanel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadTextBoxControlAWGKabellaenge.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 20</value>
@@ -3672,17 +3601,14 @@
   <data name="Label10.Size" type="System.Drawing.Size, System.Drawing">
     <value>11, 18</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlWaageUebersetzungsverhaeltnis.Name" xml:space="preserve">
-    <value>RadTextBoxControlWaageUebersetzungsverhaeltnis</value>
+  <data name="&gt;&gt;RadSeparator3.ZOrder" xml:space="preserve">
+    <value>41</value>
   </data>
   <data name="&gt;&gt;lblAWGWiderstand.ZOrder" xml:space="preserve">
     <value>50</value>
   </data>
-  <data name="&gt;&gt;RadScrollablePanel1.Name" xml:space="preserve">
-    <value>RadScrollablePanel1</value>
-  </data>
-  <data name="RadLabel52.Location" type="System.Drawing.Point, System.Drawing">
-    <value>323, 294</value>
+  <data name="&gt;&gt;Label13.Parent" xml:space="preserve">
+    <value>RadGroupBoxWaage</value>
   </data>
   <data name="lblWZHoechstlast.TabIndex" type="System.Int32, mscorlib">
     <value>84</value>
@@ -3702,9 +3628,6 @@
   <data name="lblWZMindestvorlast.Location" type="System.Drawing.Point, System.Drawing">
     <value>33, 90</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlWaageEichwert2.Parent" xml:space="preserve">
-    <value>RadGroupBoxWaage</value>
-  </data>
   <data name="&gt;&gt;lblAWGEichfehlergrenze.Name" xml:space="preserve">
     <value>lblAWGEichfehlergrenze</value>
   </data>
@@ -3714,11 +3637,11 @@
   <data name="lblGrenzenTemp.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
-  <data name="&gt;&gt;RadLabel17.ZOrder" xml:space="preserve">
-    <value>71</value>
-  </data>
   <data name="RadTextBoxControlWaageKabellaenge.Text" xml:space="preserve">
     <value>5</value>
+  </data>
+  <data name="&gt;&gt;PictureBox3.Name" xml:space="preserve">
+    <value>PictureBox3</value>
   </data>
   <data name="&gt;&gt;RadLabel98.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
@@ -3729,14 +3652,11 @@
   <data name="&gt;&gt;PictureBox11.Name" xml:space="preserve">
     <value>PictureBox11</value>
   </data>
-  <data name="&gt;&gt;lblAWGKlasse.ZOrder" xml:space="preserve">
-    <value>24</value>
+  <data name="RadTextBoxControlWaageHoechstlast1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>391, 70</value>
   </data>
   <data name="RadLabel103.Location" type="System.Drawing.Point, System.Drawing">
     <value>452, 270</value>
-  </data>
-  <data name="&gt;&gt;lblMax1.Name" xml:space="preserve">
-    <value>lblMax1</value>
   </data>
   <data name="&gt;&gt;PictureBoxWZ10.ZOrder" xml:space="preserve">
     <value>14</value>
@@ -3747,17 +3667,14 @@
   <data name="&gt;&gt;RadLabel15.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="PictureBox5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>371, 217</value>
+  <data name="RadTextBoxControlWZBruchteilEichfehlergrenze.Location" type="System.Drawing.Point, System.Drawing">
+    <value>390, 324</value>
   </data>
-  <data name="RadSeparator15.Size" type="System.Drawing.Size, System.Drawing">
-    <value>10, 13</value>
+  <data name="&gt;&gt;RadTextBoxControlWaageKlasse.Name" xml:space="preserve">
+    <value>RadTextBoxControlWaageKlasse</value>
   </data>
   <data name="&gt;&gt;Label4.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlWaageTotlast.Name" xml:space="preserve">
-    <value>RadTextBoxControlWaageTotlast</value>
   </data>
   <data name="PictureBox14.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -3774,8 +3691,8 @@
   <data name="RadTextBoxControlEinschaltnullstellbereich.Location" type="System.Drawing.Point, System.Drawing">
     <value>391, 217</value>
   </data>
-  <data name="&gt;&gt;RadGroupBoxAWG.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="PictureBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 21</value>
   </data>
   <data name="&gt;&gt;RadLabel37.Parent" xml:space="preserve">
     <value>RadGroupBoxAWG</value>
@@ -3798,14 +3715,14 @@
   <data name="&gt;&gt;RadTextBoxControlWaageEichwert3.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="lblKabellaenge.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 18</value>
-  </data>
   <data name="&gt;&gt;RadTextBoxControlWZTemperaturbereichMAX.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="lblE1.Text" xml:space="preserve">
     <value>e1</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlWaageHoechstlast2.ZOrder" xml:space="preserve">
+    <value>82</value>
   </data>
   <data name="lblAWGKlasse.Location" type="System.Drawing.Point, System.Drawing">
     <value>33, 25</value>
@@ -3819,9 +3736,6 @@
   <data name="&gt;&gt;Label13.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="RadLabel92.Location" type="System.Drawing.Point, System.Drawing">
-    <value>453, 369</value>
-  </data>
   <data name="lblWZMinTeilungswert.Location" type="System.Drawing.Point, System.Drawing">
     <value>33, 168</value>
   </data>
@@ -3833,6 +3747,9 @@
   </data>
   <data name="Label9.Location" type="System.Drawing.Point, System.Drawing">
     <value>477, 369</value>
+  </data>
+  <data name="RadLabel36.TabIndex" type="System.Int32, mscorlib">
+    <value>60</value>
   </data>
   <data name="RadGroupBoxAWG.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -3849,8 +3766,8 @@
   <data name="PictureBox11.Location" type="System.Drawing.Point, System.Drawing">
     <value>371, 85</value>
   </data>
-  <data name="&gt;&gt;RadGroupBoxVerbindungselemente.Name" xml:space="preserve">
-    <value>RadGroupBoxVerbindungselemente</value>
+  <data name="&gt;&gt;lblWIKlasse.Parent" xml:space="preserve">
+    <value>RadGroupBoxWaage</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlWZMaxTeilungswerte.ZOrder" xml:space="preserve">
     <value>46</value>
@@ -3859,8 +3776,8 @@
     <value>rated output
 </value>
   </data>
-  <data name="RadTextBoxControlWaageEichwert2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>728, 96</value>
+  <data name="RadLabel92.TabIndex" type="System.Int32, mscorlib">
+    <value>68</value>
   </data>
   <data name="&gt;&gt;RadSeparator3.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
@@ -3879,6 +3796,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlAWGGrenzwerteLastwiderstandMin.Name" xml:space="preserve">
     <value>RadTextBoxControlAWGGrenzwerteLastwiderstandMin</value>
+  </data>
+  <data name="RadSeparator3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>364, 165</value>
   </data>
   <data name="lblE3.Text" xml:space="preserve">
     <value>e3</value>
@@ -3927,20 +3847,17 @@
   <data name="&gt;&gt;lblKGMax1.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
   </data>
-  <data name="&gt;&gt;lblAWGTemperatur.Parent" xml:space="preserve">
-    <value>RadGroupBoxAWG</value>
+  <data name="&gt;&gt;RadLabel61.ZOrder" xml:space="preserve">
+    <value>51</value>
   </data>
   <data name="lblUebersetzung.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 18</value>
   </data>
-  <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>477, 165</value>
+  <data name="RadTextBoxControlWaageTemperaturbereichMin.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
   </data>
-  <data name="RadTextBoxControlWaageAdditiveTarahoechstlast.Location" type="System.Drawing.Point, System.Drawing">
-    <value>391, 295</value>
-  </data>
-  <data name="&gt;&gt;lblWZWaegezellenkennwert.ZOrder" xml:space="preserve">
-    <value>61</value>
+  <data name="PictureBox12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="RadScrollablePanel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -3957,8 +3874,8 @@
   <data name="&gt;&gt;RadTextBoxControlWaageTemperaturbereichMin.ZOrder" xml:space="preserve">
     <value>60</value>
   </data>
-  <data name="RadLabel1.TabIndex" type="System.Int32, mscorlib">
-    <value>135</value>
+  <data name="&gt;&gt;RadLabel62.ZOrder" xml:space="preserve">
+    <value>52</value>
   </data>
   <data name="lblPflichtfeld4.Size" type="System.Drawing.Size, System.Drawing">
     <value>11, 18</value>
@@ -3984,8 +3901,8 @@
   <data name="&gt;&gt;RadTextBoxControlWaageKabelquerschnitt.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="lblWZTeilungswerte.TabIndex" type="System.Int32, mscorlib">
-    <value>88</value>
+  <data name="&gt;&gt;RadLabel52.Name" xml:space="preserve">
+    <value>RadLabel52</value>
   </data>
   <data name="&gt;&gt;lblKabellaenge.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
@@ -4005,11 +3922,8 @@
   <data name="&gt;&gt;PictureBoxWZ4.Parent" xml:space="preserve">
     <value>RadGroupBoxWZ</value>
   </data>
-  <data name="RadScrollablePanel1.PanelContainer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>869, 1205</value>
-  </data>
-  <data name="&gt;&gt;lblWZRueckkehrVorlastsignal.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="&gt;&gt;RadTextBoxControlWaageHoechstlast2.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="Label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -4041,8 +3955,8 @@
   <data name="RadLabel99.TabIndex" type="System.Int32, mscorlib">
     <value>93</value>
   </data>
-  <data name="&gt;&gt;lblWaageKlasse2.ZOrder" xml:space="preserve">
-    <value>38</value>
+  <data name="&gt;&gt;lblWIMaxCap.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblPflichtfeld3.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
@@ -4057,9 +3971,6 @@
   <data name="&gt;&gt;lblPflichtfeld4.Name" xml:space="preserve">
     <value>lblPflichtfeld4</value>
   </data>
-  <data name="RadLabel61.Size" type="System.Drawing.Size, System.Drawing">
-    <value>18, 18</value>
-  </data>
   <data name="lblwzKriechteilungsfaktor.TabIndex" type="System.Int32, mscorlib">
     <value>85</value>
   </data>
@@ -4069,14 +3980,17 @@
   <data name="RadLabel96.Size" type="System.Drawing.Size, System.Drawing">
     <value>25, 18</value>
   </data>
+  <data name="RadLabel35.Location" type="System.Drawing.Point, System.Drawing">
+    <value>323, 217</value>
+  </data>
   <data name="&gt;&gt;RadLabel86.ZOrder" xml:space="preserve">
     <value>25</value>
   </data>
   <data name="lblAWGMindesteingangsspannung.TabIndex" type="System.Int32, mscorlib">
     <value>50</value>
   </data>
-  <data name="&gt;&gt;lblAWGAnschlussart.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="RadButton1.Text" xml:space="preserve">
+    <value>&gt;</value>
   </data>
   <data name="lblAWGKlasse.TabIndex" type="System.Int32, mscorlib">
     <value>78</value>
@@ -4111,8 +4025,14 @@
   <data name="&gt;&gt;lblVerbindungEichfehlergrenze.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="lblE1.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
   <data name="&gt;&gt;RadTextBoxControlAWGGrenzwerteLastwiderstandMax.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="lblVerbindungEichfehlergrenze.Size" type="System.Drawing.Size, System.Drawing">
+    <value>222, 18</value>
   </data>
   <data name="&gt;&gt;RadSeparator15.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -4126,9 +4046,6 @@
   <data name="RadLabel86.Size" type="System.Drawing.Size, System.Drawing">
     <value>18, 18</value>
   </data>
-  <data name="RadLabel14.Text" xml:space="preserve">
-    <value>NUD</value>
-  </data>
   <data name="lblWZWiderstandWZ.Location" type="System.Drawing.Point, System.Drawing">
     <value>33, 270</value>
   </data>
@@ -4137,9 +4054,6 @@
   </data>
   <data name="RadTextBoxControlAWGAnschlussart.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlAWGAnschlussart.Parent" xml:space="preserve">
-    <value>RadGroupBoxAWG</value>
   </data>
   <data name="&gt;&gt;RadLabel41.ZOrder" xml:space="preserve">
     <value>47</value>
@@ -4165,8 +4079,8 @@
   <data name="&gt;&gt;RadLabel60.ZOrder" xml:space="preserve">
     <value>50</value>
   </data>
-  <data name="&gt;&gt;RadLabel39.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="RadTextBoxControlAWGMindesteingangsspannung.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
   <data name="&gt;&gt;lblWZTemperatur.ZOrder" xml:space="preserve">
     <value>30</value>
@@ -4174,15 +4088,14 @@
   <data name="&gt;&gt;lblPflichtfeld5.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="lbltotlast.Text" xml:space="preserve">
-    <value>dead load of load receptor
-</value>
+  <data name="RadLabel87.TabIndex" type="System.Int32, mscorlib">
+    <value>61</value>
   </data>
-  <data name="RadLabel97.TabIndex" type="System.Int32, mscorlib">
-    <value>86</value>
+  <data name="RadSeparator11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>10, 279</value>
   </data>
-  <data name="&gt;&gt;RadLabel52.Name" xml:space="preserve">
-    <value>RadLabel52</value>
+  <data name="RadLabel37.Location" type="System.Drawing.Point, System.Drawing">
+    <value>323, 165</value>
   </data>
   <data name="&gt;&gt;lblPflichtfeld6.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
@@ -4202,11 +4115,8 @@
   <data name="PictureBox14.Location" type="System.Drawing.Point, System.Drawing">
     <value>371, 164</value>
   </data>
-  <data name="PictureBox11.TabIndex" type="System.Int32, mscorlib">
-    <value>98</value>
-  </data>
-  <data name="&gt;&gt;PictureBox5.Parent" xml:space="preserve">
-    <value>RadGroupBoxAWG</value>
+  <data name="&gt;&gt;lblPflichtfeld6.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="RadLabel103.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 18</value>
@@ -4217,11 +4127,8 @@
   <data name="lblPflichtfeld6.Size" type="System.Drawing.Size, System.Drawing">
     <value>11, 18</value>
   </data>
-  <data name="&gt;&gt;RadLabel96.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;lblAnzWaeegezellen.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="&gt;&gt;RadTextBoxControlAWGMindestmesssignal.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="lblWZRueckkehrVorlastsignal.Text" xml:space="preserve">
     <value>minimum dead load output return 
@@ -4254,18 +4161,17 @@
   <data name="RadSeparator15.Text" xml:space="preserve">
     <value>RadSeparator15</value>
   </data>
+  <data name="&gt;&gt;lblwzKriechteilungsfaktor.ZOrder" xml:space="preserve">
+    <value>57</value>
+  </data>
   <data name="&gt;&gt;RadLabel56.Name" xml:space="preserve">
     <value>RadLabel56</value>
-  </data>
-  <data name="RadLabel96.Text" xml:space="preserve">
-    <value>uV
-</value>
   </data>
   <data name="&gt;&gt;RadSeparator8.ZOrder" xml:space="preserve">
     <value>26</value>
   </data>
-  <data name="&gt;&gt;RadSeparator10.Name" xml:space="preserve">
-    <value>RadSeparator10</value>
+  <data name="&gt;&gt;lblE3.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblPflichtfeld11.Name" xml:space="preserve">
     <value>lblPflichtfeld11</value>
@@ -4285,15 +4191,22 @@
   <data name="lblPflichtfeld5.TabIndex" type="System.Int32, mscorlib">
     <value>83</value>
   </data>
-  <data name="PictureBoxWZ2.TabIndex" type="System.Int32, mscorlib">
-    <value>102</value>
+  <data name="&gt;&gt;lblWaageKlasse2.ZOrder" xml:space="preserve">
+    <value>38</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="lblAWGAnschlussart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 243</value>
   </data>
   <data name="lblAWGMinMessSignal.Text" xml:space="preserve">
     <value> min. input voltage per verification scale interval
 </value>
   </data>
-  <data name="lblKabel.Text" xml:space="preserve">
-    <value>wires</value>
+  <data name="lblWZEichfehlergrenze.Text" xml:space="preserve">
+    <value>fraction of the maximum permissible error
+</value>
   </data>
   <data name="&gt;&gt;RadLabel65.Parent" xml:space="preserve">
     <value>RadGroupBoxWZ</value>
@@ -4301,8 +4214,11 @@
   <data name="RadTextBoxControlWaageEichwert3.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
-  <data name="lblE1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>18, 18</value>
+  <data name="RadTextBoxControlWZMinTeilungswert.Location" type="System.Drawing.Point, System.Drawing">
+    <value>390, 168</value>
+  </data>
+  <data name="lblEichwert.Location" type="System.Drawing.Point, System.Drawing">
+    <value>530, 68</value>
   </data>
   <data name="lblPflichtfeld6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -4313,8 +4229,8 @@
   <data name="&gt;&gt;PictureBox2.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
   </data>
-  <data name="RadLabel93.Text" xml:space="preserve">
-    <value>° C</value>
+  <data name="&gt;&gt;lblPflichtfeld1.ZOrder" xml:space="preserve">
+    <value>17</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlWaageHoechstlast3.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
@@ -4322,8 +4238,8 @@
   <data name="RadLabel99.Text" xml:space="preserve">
     <value>Ohm</value>
   </data>
-  <data name="RadLabel103.TabIndex" type="System.Int32, mscorlib">
-    <value>129</value>
+  <data name="lbladditiveTarahoechstlast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 18</value>
   </data>
   <data name="&gt;&gt;PictureBox5.ZOrder" xml:space="preserve">
     <value>8</value>
@@ -4331,20 +4247,23 @@
   <data name="RadSeparator13.TabIndex" type="System.Int32, mscorlib">
     <value>52</value>
   </data>
-  <data name="RadLabel25.Size" type="System.Drawing.Size, System.Drawing">
-    <value>13, 18</value>
+  <data name="lblKabelquerschnitt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>34, 371</value>
   </data>
-  <data name="&gt;&gt;RadLabel92.Parent" xml:space="preserve">
-    <value>RadGroupBoxWaage</value>
+  <data name="Label7.TabIndex" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="RadTextBoxControlWaageAdditiveTarahoechstlast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>391, 295</value>
   </data>
   <data name="&gt;&gt;lblKGMax3.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
   </data>
-  <data name="&gt;&gt;lblPflichtfeld2.Name" xml:space="preserve">
-    <value>lblPflichtfeld2</value>
+  <data name="lblKGMax3.Text" xml:space="preserve">
+    <value>kg</value>
   </data>
-  <data name="lblWZHoechstlast.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 18</value>
+  <data name="RadTextBoxControlWaageEichwert2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>728, 96</value>
   </data>
   <data name="RadLabel89.Text" xml:space="preserve">
     <value>° C</value>
@@ -4364,20 +4283,26 @@
   <data name="lblAWGKlasse.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 18</value>
   </data>
-  <data name="&gt;&gt;PictureBox4.ZOrder" xml:space="preserve">
-    <value>9</value>
+  <data name="lblWZHoechstlast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 18</value>
   </data>
-  <data name="RadLabel35.Size" type="System.Drawing.Size, System.Drawing">
-    <value>28, 20</value>
+  <data name="&gt;&gt;Label5.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="lblPflichtfeld1.TabIndex" type="System.Int32, mscorlib">
-    <value>70</value>
+  <data name="RadLabel64.TabIndex" type="System.Int32, mscorlib">
+    <value>94</value>
   </data>
-  <data name="RadSeparator3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>364, 165</value>
+  <data name="lblPflichtfeld5.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;PictureBoxWZ9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblPflichtfeld2.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="lblAWGMinMessSignal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 18</value>
   </data>
   <data name="&gt;&gt;RadSeparator4.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
@@ -4385,17 +4310,17 @@
   <data name="lblKGMax2.Text" xml:space="preserve">
     <value>kg</value>
   </data>
-  <data name="RadTextBoxControlWZTemperaturbereichMIN.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
   <data name="&gt;&gt;RadLabel40.Parent" xml:space="preserve">
     <value>RadGroupBoxAWG</value>
   </data>
   <data name="RadLabel100.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 18</value>
   </data>
-  <data name="lblAWGWiderstand.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 165</value>
+  <data name="&gt;&gt;lblEKG3.Name" xml:space="preserve">
+    <value>lblEKG3</value>
+  </data>
+  <data name="lblWIKlasse.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 18</value>
   </data>
   <data name="lblE3.Size" type="System.Drawing.Size, System.Drawing">
     <value>18, 18</value>
@@ -4418,14 +4343,14 @@
   <data name="RadLabel26.Size" type="System.Drawing.Size, System.Drawing">
     <value>12, 18</value>
   </data>
-  <data name="&gt;&gt;PictureBox2.ZOrder" xml:space="preserve">
-    <value>33</value>
+  <data name="&gt;&gt;PictureBox13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="RadTextBoxControlAWGTeilungswerte.Location" type="System.Drawing.Point, System.Drawing">
     <value>390, 61</value>
   </data>
-  <data name="RadTextBoxControlWaageKabelquerschnitt.Text" xml:space="preserve">
-    <value>0,22</value>
+  <data name="RadLabel63.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 20</value>
   </data>
   <data name="&gt;&gt;RadLabel36.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
@@ -4433,8 +4358,8 @@
   <data name="PictureBox4.TabIndex" type="System.Int32, mscorlib">
     <value>95</value>
   </data>
-  <data name="lblAWGMinMessSignal.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 18</value>
+  <data name="RadSeparator12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>10, 279</value>
   </data>
   <data name="&gt;&gt;RadLabel56.ZOrder" xml:space="preserve">
     <value>40</value>
@@ -4448,11 +4373,11 @@
   <data name="&gt;&gt;RadLabel103.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="lblKGMax1.Text" xml:space="preserve">
-    <value>kg</value>
+  <data name="RadScrollablePanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlWaageHoechstlast2.ZOrder" xml:space="preserve">
-    <value>82</value>
+  <data name="RadLabel35.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 20</value>
   </data>
   <data name="lblMax3.Size" type="System.Drawing.Size, System.Drawing">
     <value>33, 18</value>
@@ -4469,37 +4394,37 @@
   <data name="RadTextBoxControlWZBruchteilEichfehlergrenze.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 20</value>
   </data>
-  <data name="&gt;&gt;PictureBox1.ZOrder" xml:space="preserve">
-    <value>34</value>
+  <data name="lbladditiveTarahoechstlast.Text" xml:space="preserve">
+    <value>additive tare
+</value>
   </data>
   <data name="RadLabel16.Size" type="System.Drawing.Size, System.Drawing">
     <value>15, 18</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlWZBruchteilEichfehlergrenze.Name" xml:space="preserve">
-    <value>RadTextBoxControlWZBruchteilEichfehlergrenze</value>
+  <data name="RadTextBoxControlWZTemperaturbereichMIN.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
   </data>
   <data name="&gt;&gt;lbltotlast.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
   </data>
-  <data name="&gt;&gt;RadLabel74.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="&gt;&gt;RadTextBoxControlWZHoechstlast.Name" xml:space="preserve">
+    <value>RadTextBoxControlWZHoechstlast</value>
   </data>
-  <data name="RadLabel61.Text" xml:space="preserve">
-    <value>Y
-</value>
+  <data name="RadLabel90.TabIndex" type="System.Int32, mscorlib">
+    <value>66</value>
   </data>
   <data name="lblGrenzenTemp.Text" xml:space="preserve">
     <value>limits of temperature range
 </value>
   </data>
-  <data name="&gt;&gt;RadLabel103.Name" xml:space="preserve">
-    <value>RadLabel103</value>
+  <data name="PictureBox5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>371, 217</value>
   </data>
   <data name="RadSeparator13.Text" xml:space="preserve">
     <value>RadSeparator13</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlAWGSpeisespannung.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="&gt;&gt;RadLabel17.ZOrder" xml:space="preserve">
+    <value>71</value>
   </data>
   <data name="&gt;&gt;PictureBoxWZ11.Parent" xml:space="preserve">
     <value>RadGroupBoxWZ</value>
@@ -4522,14 +4447,17 @@
   <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>11, 18</value>
   </data>
+  <data name="lblPflichtfeld6.TabIndex" type="System.Int32, mscorlib">
+    <value>86</value>
+  </data>
   <data name="&gt;&gt;lblWZRueckkehrVorlastsignal.Parent" xml:space="preserve">
     <value>RadGroupBoxWZ</value>
   </data>
-  <data name="lblAWGAnschlussart.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 243</value>
+  <data name="RadTextBoxControlWZHoechstteilungsfaktor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>390, 194</value>
   </data>
-  <data name="&gt;&gt;RadLabel40.Name" xml:space="preserve">
-    <value>RadLabel40</value>
+  <data name="RadTextBoxControlWaageAdditiveTarahoechstlast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 20</value>
   </data>
   <data name="RadLabel51.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;span style="font-size: 9pt"&gt;T&lt;/span&gt;&lt;span style="font-size: 8pt"&gt;max&lt;/span&gt;&lt;/html&gt;</value>
@@ -4537,8 +4465,8 @@
   <data name="RadTextBoxControlAWGTemperaturbereichMin.Text" xml:space="preserve">
     <value>-10</value>
   </data>
-  <data name="&gt;&gt;RadButton1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="&gt;&gt;lblEinschaltnullbereich.Name" xml:space="preserve">
+    <value>lblEinschaltnullbereich</value>
   </data>
   <data name="&gt;&gt;lblKGMax2.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
@@ -4558,20 +4486,20 @@
   <data name="lblE3.Location" type="System.Drawing.Point, System.Drawing">
     <value>683, 122</value>
   </data>
-  <data name="RadTextBoxControlWZBruchteilEichfehlergrenze.Location" type="System.Drawing.Point, System.Drawing">
-    <value>390, 324</value>
+  <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>477, 165</value>
   </data>
   <data name="RadTextBoxControlWZWiderstand.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 20</value>
   </data>
-  <data name="PictureBox12.TabIndex" type="System.Int32, mscorlib">
-    <value>99</value>
+  <data name="RadTextBoxControlAWGTemperaturbereichMax.Text" xml:space="preserve">
+    <value>40</value>
   </data>
-  <data name="&gt;&gt;RadLabel60.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="&gt;&gt;lblWZWaegezellenkennwert.ZOrder" xml:space="preserve">
+    <value>61</value>
   </data>
-  <data name="&gt;&gt;RadLabel74.Name" xml:space="preserve">
-    <value>RadLabel74</value>
+  <data name="&gt;&gt;lblAWGWiderstand.Name" xml:space="preserve">
+    <value>lblAWGWiderstand</value>
   </data>
   <data name="RadLabel55.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 20</value>
@@ -4589,14 +4517,17 @@
     <value>max. number verification scale intervals
 </value>
   </data>
+  <data name="&gt;&gt;RadLabel56.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
   <data name="lblWZTemperatur.TabIndex" type="System.Int32, mscorlib">
     <value>119</value>
   </data>
   <data name="RadLabel41.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;span style="font-size: 12pt"&gt;n&lt;/span&gt;&lt;span style="font-size: 8pt"&gt;ind&lt;/span&gt;&lt;/html&gt;</value>
   </data>
-  <data name="Label10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>468, 63</value>
+  <data name="RadLabel106.TabIndex" type="System.Int32, mscorlib">
+    <value>131</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlAWGMindesteingangsspannung.Parent" xml:space="preserve">
     <value>RadGroupBoxAWG</value>
@@ -4604,14 +4535,17 @@
   <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>11, 18</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlAWGTeilungswerte.ZOrder" xml:space="preserve">
-    <value>40</value>
+  <data name="&gt;&gt;lblUebersetzung.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlWaageTotlast.ZOrder" xml:space="preserve">
     <value>58</value>
   </data>
   <data name="&gt;&gt;lblWZHoechstteilungswert.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld2.Name" xml:space="preserve">
+    <value>lblPflichtfeld2</value>
   </data>
   <data name="RadLabel39.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;span style="font-size: 10pt"&gt;&lt;span style="font-size: 12pt"&gt;u&lt;/span&gt;&lt;/span&gt;&lt;span style="font-size: 8pt"&gt;min&lt;/span&gt;&lt;/html&gt;</value>
@@ -4622,11 +4556,11 @@
   <data name="RadLabel102.Location" type="System.Drawing.Point, System.Drawing">
     <value>591, 192</value>
   </data>
-  <data name="&gt;&gt;RadSeparator16.Parent" xml:space="preserve">
-    <value>RadGroupBoxVerbindungselemente</value>
+  <data name="&gt;&gt;RadGroupBoxWaage.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;Label4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="&gt;&gt;RadLabel91.ZOrder" xml:space="preserve">
+    <value>20</value>
   </data>
   <data name="&gt;&gt;PictureBox3.Parent" xml:space="preserve">
     <value>RadGroupBoxAWG</value>
@@ -4637,8 +4571,8 @@
   <data name="&gt;&gt;RadLabel78.Name" xml:space="preserve">
     <value>RadLabel78</value>
   </data>
-  <data name="&gt;&gt;RadLabel107.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="&gt;&gt;lblAnzWaeegezellen.ZOrder" xml:space="preserve">
+    <value>77</value>
   </data>
   <data name="lblAWGMinMessSignal.TabIndex" type="System.Int32, mscorlib">
     <value>51</value>
@@ -4667,6 +4601,10 @@
   <data name="&gt;&gt;RadLabel107.Name" xml:space="preserve">
     <value>RadLabel107</value>
   </data>
+  <data name="lblWZHoechstlast.Text" xml:space="preserve">
+    <value>maximum capacity
+</value>
+  </data>
   <data name="PictureBox10.Size" type="System.Drawing.Size, System.Drawing">
     <value>18, 22</value>
   </data>
@@ -4682,11 +4620,14 @@
   <data name="&gt;&gt;RadLabel100.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;lblWZKlasse2.ZOrder" xml:space="preserve">
-    <value>32</value>
+  <data name="lblKabel.Text" xml:space="preserve">
+    <value>wires</value>
   </data>
-  <data name="&gt;&gt;RadLabel37.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="&gt;&gt;RadGroupBoxVerbindungselemente.Name" xml:space="preserve">
+    <value>RadGroupBoxVerbindungselemente</value>
+  </data>
+  <data name="RadLabel13.Text" xml:space="preserve">
+    <value>DL</value>
   </data>
   <data name="RadLabel65.Size" type="System.Drawing.Size, System.Drawing">
     <value>29, 20</value>
@@ -4697,11 +4638,15 @@
   <data name="RadTextBoxControlAWGAnschlussart.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 20</value>
   </data>
+  <data name="&gt;&gt;RadLabel39.Name" xml:space="preserve">
+    <value>RadLabel39</value>
+  </data>
   <data name="&gt;&gt;RadTextBoxControlWZGenauigkeitsklasse.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlWaageKabelquerschnitt.Name" xml:space="preserve">
-    <value>RadTextBoxControlWaageKabelquerschnitt</value>
+  <data name="lblAWGEichfehlergrenze.Text" xml:space="preserve">
+    <value> fraction of the maximum permissible error
+</value>
   </data>
   <data name="RadLabel108.Size" type="System.Drawing.Size, System.Drawing">
     <value>18, 18</value>
@@ -4709,14 +4654,14 @@
   <data name="&gt;&gt;RadLabel100.Name" xml:space="preserve">
     <value>RadLabel100</value>
   </data>
-  <data name="&gt;&gt;RadLabel17.Parent" xml:space="preserve">
-    <value>RadGroupBoxWaage</value>
+  <data name="&gt;&gt;RadTextBoxControlWaageHoechstlast3.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel106.Text" xml:space="preserve">
     <value>kg</value>
   </data>
-  <data name="&gt;&gt;lblwzKriechteilungsfaktor.ZOrder" xml:space="preserve">
-    <value>57</value>
+  <data name="&gt;&gt;RadLabel101.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadLabel65.Name" xml:space="preserve">
     <value>RadLabel65</value>
@@ -4727,8 +4672,8 @@
   <data name="&gt;&gt;RadSeparator5.Name" xml:space="preserve">
     <value>RadSeparator5</value>
   </data>
-  <data name="&gt;&gt;PictureBox9.Parent" xml:space="preserve">
-    <value>RadGroupBoxWaage</value>
+  <data name="RadTextBoxControlWaageAnzahlWaegezellen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>391, 191</value>
   </data>
   <data name="Label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -4739,11 +4684,14 @@
   <data name="&gt;&gt;PictureBox3.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="RadTextBoxControlAWGMindesteingangsspannung.Location" type="System.Drawing.Point, System.Drawing">
-    <value>390, 113</value>
+  <data name="&gt;&gt;RadLabel34.Parent" xml:space="preserve">
+    <value>RadGroupBoxAWG</value>
   </data>
-  <data name="lblKGMax2.TabIndex" type="System.Int32, mscorlib">
-    <value>56</value>
+  <data name="&gt;&gt;RadLabel11.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;lblWZWaegezellenkennwert.Parent" xml:space="preserve">
+    <value>RadGroupBoxWZ</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlWZMindestvorlast.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
@@ -4757,8 +4705,8 @@
   <data name="lblWIMaxCap.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="RadLabel92.TabIndex" type="System.Int32, mscorlib">
-    <value>68</value>
+  <data name="RadTextBoxControlAWGMindestmesssignal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 20</value>
   </data>
   <data name="&gt;&gt;lblMax3.ZOrder" xml:space="preserve">
     <value>50</value>
@@ -4766,8 +4714,8 @@
   <data name="&gt;&gt;RadLabel17.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="RadLabel74.Text" xml:space="preserve">
-    <value>&lt;html&gt;p&lt;span style="font-size: 9pt"&gt;LC&lt;/span&gt;&lt;/html&gt;</value>
+  <data name="&gt;&gt;RadLabel101.Name" xml:space="preserve">
+    <value>RadLabel101</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlAWGGrenzwerteLastwiderstandMin.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
@@ -4802,23 +4750,17 @@
   <data name="RadSeparator9.TabIndex" type="System.Int32, mscorlib">
     <value>81</value>
   </data>
-  <data name="&gt;&gt;RadLabel102.Name" xml:space="preserve">
-    <value>RadLabel102</value>
+  <data name="lblWZMinTeilungswert.TabIndex" type="System.Int32, mscorlib">
+    <value>89</value>
   </data>
   <data name="&gt;&gt;lblPflichtfeld3.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
   </data>
-  <data name="&gt;&gt;RadLabel55.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="lblAWGKlasse2.TabIndex" type="System.Int32, mscorlib">
+    <value>80</value>
   </data>
-  <data name="&gt;&gt;RadLabel15.ZOrder" xml:space="preserve">
-    <value>69</value>
-  </data>
-  <data name="RadLabel36.TabIndex" type="System.Int32, mscorlib">
-    <value>60</value>
-  </data>
-  <data name="lblPflichtfeld1.Text" xml:space="preserve">
-    <value>*</value>
+  <data name="&gt;&gt;lbltotlast.Name" xml:space="preserve">
+    <value>lbltotlast</value>
   </data>
   <data name="&gt;&gt;lblWZHoechstteilungswert.Name" xml:space="preserve">
     <value>lblWZHoechstteilungswert</value>
@@ -4832,8 +4774,8 @@
   <data name="RadTextBoxControlWZMinTeilungswert.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="RadTextBoxControlWaageKabelquerschnitt.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
+  <data name="&gt;&gt;RadTextBoxControlAWGAnschlussart.Parent" xml:space="preserve">
+    <value>RadGroupBoxAWG</value>
   </data>
   <data name="RadLabel36.Size" type="System.Drawing.Size, System.Drawing">
     <value>29, 18</value>
@@ -4844,9 +4786,8 @@
   <data name="&gt;&gt;Label4.Name" xml:space="preserve">
     <value>Label4</value>
   </data>
-  <data name="lblWZHoechstlast.Text" xml:space="preserve">
-    <value>maximum capacity
-</value>
+  <data name="&gt;&gt;RadLabel89.ZOrder" xml:space="preserve">
+    <value>22</value>
   </data>
   <data name="&gt;&gt;RadLabel63.ZOrder" xml:space="preserve">
     <value>53</value>
@@ -4857,12 +4798,15 @@
   <data name="RadTextBoxControlWaageKabelquerschnitt.Location" type="System.Drawing.Point, System.Drawing">
     <value>391, 373</value>
   </data>
-  <data name="RadLabel12.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
+  <data name="&gt;&gt;lblPflichtfeld3.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="lblWZTemperatur.Text" xml:space="preserve">
     <value>limits of temperature range
 </value>
+  </data>
+  <data name="&gt;&gt;RadLabel102.Name" xml:space="preserve">
+    <value>RadLabel102</value>
   </data>
   <data name="lblPflichtfeld5.Location" type="System.Drawing.Point, System.Drawing">
     <value>477, 124</value>
@@ -4873,6 +4817,9 @@
   <data name="PictureBox4.Size" type="System.Drawing.Size, System.Drawing">
     <value>18, 21</value>
   </data>
+  <data name="&gt;&gt;RadLabel55.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
   <data name="lbladditiveTarahoechstlast.Location" type="System.Drawing.Point, System.Drawing">
     <value>34, 295</value>
   </data>
@@ -4882,8 +4829,8 @@
   <data name="RadSeparator14.TabIndex" type="System.Int32, mscorlib">
     <value>51</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlWaageKabellaenge.ZOrder" xml:space="preserve">
-    <value>44</value>
+  <data name="RadLabel35.TabIndex" type="System.Int32, mscorlib">
+    <value>55</value>
   </data>
   <data name="&gt;&gt;RadLabel38.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
@@ -4893,6 +4840,9 @@
   </data>
   <data name="&gt;&gt;PictureBox8.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="&gt;&gt;RadLabel74.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlWZTemperaturbereichMAX.Parent" xml:space="preserve">
     <value>RadGroupBoxWZ</value>
@@ -4915,14 +4865,11 @@
   <data name="RadLabel38.Location" type="System.Drawing.Point, System.Drawing">
     <value>323, 139</value>
   </data>
-  <data name="&gt;&gt;lblPflichtfeld5.Parent" xml:space="preserve">
-    <value>RadGroupBoxWaage</value>
+  <data name="&gt;&gt;RadTextBoxControlWZHoechstteilungsfaktor.Parent" xml:space="preserve">
+    <value>RadGroupBoxWZ</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze.Parent" xml:space="preserve">
     <value>RadGroupBoxVerbindungselemente</value>
-  </data>
-  <data name="&gt;&gt;RadScrollablePanel1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadScrollablePanel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblAWGKabellaenge.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
@@ -4939,8 +4886,8 @@
   <data name="&gt;&gt;RadTextBoxControlWaageKlasse.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
   </data>
-  <data name="&gt;&gt;lblUebersetzung.ZOrder" xml:space="preserve">
-    <value>78</value>
+  <data name="&gt;&gt;RadLabel95.Parent" xml:space="preserve">
+    <value>RadGroupBoxAWG</value>
   </data>
   <data name="&gt;&gt;lblPflichtfeld6.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
@@ -4957,20 +4904,20 @@
   <data name="&gt;&gt;RadLabel18.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="lblEKG3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>18, 18</value>
+  <data name="RadGroupBoxVerbindungselemente.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
-  <data name="&gt;&gt;lblKGMax2.ZOrder" xml:space="preserve">
-    <value>31</value>
+  <data name="&gt;&gt;RadLabel87.ZOrder" xml:space="preserve">
+    <value>26</value>
   </data>
-  <data name="&gt;&gt;RadLabel106.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="&gt;&gt;RadTextBoxControlWaageUebersetzungsverhaeltnis.Parent" xml:space="preserve">
+    <value>RadGroupBoxWaage</value>
   </data>
   <data name="&gt;&gt;lblGrenzenTemp.ZOrder" xml:space="preserve">
     <value>72</value>
   </data>
-  <data name="RadLabel100.TabIndex" type="System.Int32, mscorlib">
-    <value>92</value>
+  <data name="&gt;&gt;PictureBoxWZ1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="RadGroupBoxWZ.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -4981,14 +4928,14 @@
   <data name="RadTextBoxControlAWGTemperaturbereichMax.Location" type="System.Drawing.Point, System.Drawing">
     <value>529, 191</value>
   </data>
-  <data name="&gt;&gt;RadLabel11.ZOrder" xml:space="preserve">
-    <value>65</value>
+  <data name="&gt;&gt;lbltotlast.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="lbladditiveTarahoechstlast.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
   </data>
-  <data name="lblE1.TabIndex" type="System.Int32, mscorlib">
-    <value>34</value>
+  <data name="RadScrollablePanel1.PanelContainer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>869, 1205</value>
   </data>
   <data name="Label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -4999,17 +4946,20 @@
   <data name="PictureBoxWZ10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;RadLabel106.Name" xml:space="preserve">
-    <value>RadLabel106</value>
+  <data name="RadLabel78.Location" type="System.Drawing.Point, System.Drawing">
+    <value>488, 298</value>
   </data>
-  <data name="lblVerbindungEichfehlergrenze.Size" type="System.Drawing.Size, System.Drawing">
-    <value>222, 18</value>
+  <data name="lblKGMax2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 18</value>
   </data>
   <data name="&gt;&gt;RadLabel30.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlWaageAnzahlWaegezellen.Name" xml:space="preserve">
-    <value>RadTextBoxControlWaageAnzahlWaegezellen</value>
+  <data name="&gt;&gt;PictureBox14.Name" xml:space="preserve">
+    <value>PictureBox14</value>
+  </data>
+  <data name="&gt;&gt;lblEichwert.Name" xml:space="preserve">
+    <value>lblEichwert</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlWaageHoechstlast1.Name" xml:space="preserve">
     <value>RadTextBoxControlWaageHoechstlast1</value>
@@ -5019,6 +4969,9 @@
   </data>
   <data name="&gt;&gt;PictureBoxWZ6.ZOrder" xml:space="preserve">
     <value>9</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlAWGTemperaturbereichMax.Parent" xml:space="preserve">
+    <value>RadGroupBoxAWG</value>
   </data>
   <data name="&gt;&gt;RadLabel96.Parent" xml:space="preserve">
     <value>RadGroupBoxAWG</value>
@@ -5032,8 +4985,11 @@
   <data name="lblWZKlasse2.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 18</value>
   </data>
-  <data name="&gt;&gt;RadLabel61.ZOrder" xml:space="preserve">
-    <value>51</value>
+  <data name="lblWZEichfehlergrenze.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 322</value>
+  </data>
+  <data name="&gt;&gt;lblAWGTemperatur.Parent" xml:space="preserve">
+    <value>RadGroupBoxAWG</value>
   </data>
   <data name="&gt;&gt;lblWZMinTeilungswert.Name" xml:space="preserve">
     <value>lblWZMinTeilungswert</value>
@@ -5047,14 +5003,14 @@
   <data name="lblKGMax1.Size" type="System.Drawing.Size, System.Drawing">
     <value>18, 18</value>
   </data>
-  <data name="&gt;&gt;RadLabel108.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="&gt;&gt;lblAnzWaeegezellen.Name" xml:space="preserve">
+    <value>lblAnzWaeegezellen</value>
   </data>
   <data name="lblEKG1.TabIndex" type="System.Int32, mscorlib">
     <value>58</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlAWGTemperaturbereichMax.Parent" xml:space="preserve">
-    <value>RadGroupBoxAWG</value>
+  <data name="&gt;&gt;RadTextBoxControlWaageTotlast.Name" xml:space="preserve">
+    <value>RadTextBoxControlWaageTotlast</value>
   </data>
   <data name="&gt;&gt;RadLabel52.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
@@ -5062,11 +5018,14 @@
   <data name="&gt;&gt;RadLabel108.Name" xml:space="preserve">
     <value>RadLabel108</value>
   </data>
-  <data name="&gt;&gt;RadLabel60.Name" xml:space="preserve">
-    <value>RadLabel60</value>
+  <data name="PictureBox15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 21</value>
   </data>
-  <data name="Label14.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="&gt;&gt;RadLabel62.Name" xml:space="preserve">
+    <value>RadLabel62</value>
+  </data>
+  <data name="RadTextBoxControlWaageEichwert3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>728, 122</value>
   </data>
   <data name="&gt;&gt;lblKabel.Name" xml:space="preserve">
     <value>lblKabel</value>
@@ -5077,17 +5036,23 @@
   <data name="&gt;&gt;RadTextBoxControlWZMaxTeilungswerte.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;lbladditiveTarahoechstlast.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="RadLabel38.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 22</value>
   </data>
-  <data name="lblWZKlasse.TabIndex" type="System.Int32, mscorlib">
-    <value>115</value>
+  <data name="&gt;&gt;lblAWGMinMessSignal.Parent" xml:space="preserve">
+    <value>RadGroupBoxAWG</value>
+  </data>
+  <data name="RadLabel98.Text" xml:space="preserve">
+    <value>V</value>
   </data>
   <data name="&gt;&gt;lbladditiveTarahoechstlast.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
   </data>
   <data name="Label3.TabIndex" type="System.Int32, mscorlib">
     <value>73</value>
+  </data>
+  <data name="RadSeparator14.Text" xml:space="preserve">
+    <value>RadSeparator14</value>
   </data>
   <data name="lblWaageKlasse2.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 18</value>
@@ -5098,26 +5063,29 @@
   <data name="&gt;&gt;lblAWGKlasse2.Parent" xml:space="preserve">
     <value>RadGroupBoxAWG</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlAWGGrenzwerteLastwiderstandMin.ZOrder" xml:space="preserve">
-    <value>34</value>
+  <data name="RadTextBoxControlWZKriechteilungsfaktor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>390, 220</value>
   </data>
-  <data name="&gt;&gt;Label2.Name" xml:space="preserve">
-    <value>Label2</value>
+  <data name="RadTextBoxControlWZTemperaturbereichMAX.Location" type="System.Drawing.Point, System.Drawing">
+    <value>530, 296</value>
   </data>
-  <data name="&gt;&gt;lblWZMindestvorlast.Name" xml:space="preserve">
-    <value>lblWZMindestvorlast</value>
+  <data name="&gt;&gt;lblWZTeilungswerte.ZOrder" xml:space="preserve">
+    <value>60</value>
   </data>
   <data name="lblMax1.Location" type="System.Drawing.Point, System.Drawing">
     <value>324, 72</value>
   </data>
-  <data name="&gt;&gt;lblPflichtfeld2.Parent" xml:space="preserve">
-    <value>RadGroupBoxWaage</value>
+  <data name="&gt;&gt;lblUebersetzung.ZOrder" xml:space="preserve">
+    <value>78</value>
   </data>
   <data name="RadTextBoxControlAWGKlasse.Location" type="System.Drawing.Point, System.Drawing">
     <value>390, 21</value>
   </data>
-  <data name="PictureBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>18, 21</value>
+  <data name="&gt;&gt;PictureBoxWZ5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="RadLabel62.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;span style="font-size: 10pt"&gt;v&lt;/span&gt;min&lt;/html&gt;</value>
   </data>
   <data name="RadTextBoxControlWZMindestvorlast.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 20</value>
@@ -5128,8 +5096,9 @@
   <data name="Label2.Text" xml:space="preserve">
     <value>*</value>
   </data>
-  <data name="RadTextBoxControlWaageEcklastzuschlag.Location" type="System.Drawing.Point, System.Drawing">
-    <value>391, 243</value>
+  <data name="lblEinschaltnullbereich.Text" xml:space="preserve">
+    <value>initial zero setting range
+</value>
   </data>
   <data name="&gt;&gt;lblWZRueckkehrVorlastsignal.ZOrder" xml:space="preserve">
     <value>42</value>
@@ -5143,8 +5112,14 @@
   <data name="&gt;&gt;RadGroupBoxWaage.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
+  <data name="RadTextBoxControlWaageKabelquerschnitt.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
   <data name="Label7.Location" type="System.Drawing.Point, System.Drawing">
     <value>477, 269</value>
+  </data>
+  <data name="RadSeparator5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>306, 68</value>
   </data>
   <data name="&gt;&gt;lblAWGSpeisespannung.Name" xml:space="preserve">
     <value>lblAWGSpeisespannung</value>
@@ -5152,8 +5127,8 @@
   <data name="lblPflichtfeld5.Size" type="System.Drawing.Size, System.Drawing">
     <value>11, 18</value>
   </data>
-  <data name="RadTextBoxControlWZMinTeilungswert.Location" type="System.Drawing.Point, System.Drawing">
-    <value>390, 168</value>
+  <data name="PictureBoxWZ2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 21</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlWaageTemperaturbereichMin.Name" xml:space="preserve">
     <value>RadTextBoxControlWaageTemperaturbereichMin</value>
@@ -5166,6 +5141,9 @@
   </data>
   <data name="Label12.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
+  </data>
+  <data name="RadLabel61.TabIndex" type="System.Int32, mscorlib">
+    <value>97</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlWaageHoechstlast2.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
@@ -5191,14 +5169,17 @@
   <data name="RadTextBoxControlWaageAnzahlWaegezellen.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  <data name="&gt;&gt;PictureBox13.Name" xml:space="preserve">
-    <value>PictureBox13</value>
+  <data name="RadTextBoxControlWaageUebersetzungsverhaeltnis.Location" type="System.Drawing.Point, System.Drawing">
+    <value>391, 165</value>
   </data>
-  <data name="&gt;&gt;RadLabel55.Parent" xml:space="preserve">
-    <value>RadGroupBoxWZ</value>
+  <data name="&gt;&gt;lblE2.Name" xml:space="preserve">
+    <value>lblE2</value>
   </data>
-  <data name="&gt;&gt;PictureBoxWZ4.Name" xml:space="preserve">
-    <value>PictureBoxWZ4</value>
+  <data name="RadLabel89.TabIndex" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <data name="lblWZKlasse.TabIndex" type="System.Int32, mscorlib">
+    <value>115</value>
   </data>
   <data name="RadTextBoxControlAWGBruchteilEichfehlergrenze.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -5206,11 +5187,17 @@
   <data name="&gt;&gt;RadScrollablePanel1.PanelContainer.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="RadSeparator5.TabIndex" type="System.Int32, mscorlib">
-    <value>47</value>
+  <data name="&gt;&gt;lbladditiveTarahoechstlast.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButton1.Name" xml:space="preserve">
     <value>RadButton1</value>
+  </data>
+  <data name="&gt;&gt;lblWZRueckkehrVorlastsignal.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="PictureBox12.TabIndex" type="System.Int32, mscorlib">
+    <value>99</value>
   </data>
   <data name="&gt;&gt;lblKabellaenge.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
@@ -5218,26 +5205,26 @@
   <data name="&gt;&gt;RadLabel41.Parent" xml:space="preserve">
     <value>RadGroupBoxAWG</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlWZTemperaturbereichMIN.Parent" xml:space="preserve">
-    <value>RadGroupBoxWZ</value>
+  <data name="&gt;&gt;PictureBox1.ZOrder" xml:space="preserve">
+    <value>34</value>
   </data>
   <data name="&gt;&gt;lblE1.ZOrder" xml:space="preserve">
     <value>53</value>
   </data>
-  <data name="&gt;&gt;RadLabel39.Name" xml:space="preserve">
-    <value>RadLabel39</value>
+  <data name="RadTextBoxControlEinschaltnullstellbereich.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 20</value>
   </data>
-  <data name="RadLabel26.Location" type="System.Drawing.Point, System.Drawing">
-    <value>324, 345</value>
+  <data name="RadTextBoxControlWaageTotlast.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
   </data>
   <data name="&gt;&gt;lblKabellaenge.Name" xml:space="preserve">
     <value>lblKabellaenge</value>
   </data>
-  <data name="RadButton1.TabIndex" type="System.Int32, mscorlib">
-    <value>148</value>
+  <data name="&gt;&gt;RadTextBoxControlWaageHoechstlast1.Parent" xml:space="preserve">
+    <value>RadGroupBoxWaage</value>
   </data>
-  <data name="&gt;&gt;PictureBoxWZ9.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="RadTextBoxControlWZMinTeilungswert.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 20</value>
   </data>
   <data name="&gt;&gt;Label3.Name" xml:space="preserve">
     <value>Label3</value>
@@ -5245,14 +5232,14 @@
   <data name="&gt;&gt;lblE2.ZOrder" xml:space="preserve">
     <value>51</value>
   </data>
-  <data name="&gt;&gt;lblVerbindungEichfehlergrenze.Type" xml:space="preserve">
+  <data name="&gt;&gt;lblAnzWaeegezellen.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblMax1.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="RadSeparator14.Text" xml:space="preserve">
-    <value>RadSeparator14</value>
+  <data name="RadTextBoxControlWaageEcklastzuschlag.Location" type="System.Drawing.Point, System.Drawing">
+    <value>391, 243</value>
   </data>
   <data name="&gt;&gt;PictureBox14.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -5263,8 +5250,8 @@
   <data name="PictureBox1.TabIndex" type="System.Int32, mscorlib">
     <value>53</value>
   </data>
-  <data name="lblWZEichfehlergrenze.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 322</value>
+  <data name="&gt;&gt;RadLabel30.Name" xml:space="preserve">
+    <value>RadLabel30</value>
   </data>
   <data name="RadLabel111.TabIndex" type="System.Int32, mscorlib">
     <value>134</value>
@@ -5290,20 +5277,26 @@
   <data name="PictureBoxWZ8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlWZWaegezellenkennwert.ZOrder" xml:space="preserve">
-    <value>47</value>
+  <data name="&gt;&gt;RadTextBoxControlWZBruchteilEichfehlergrenze.Parent" xml:space="preserve">
+    <value>RadGroupBoxWZ</value>
+  </data>
+  <data name="RadLabel101.Location" type="System.Drawing.Point, System.Drawing">
+    <value>452, 296</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlWZMinTeilungswert.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="PictureBoxWZ7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="RadLabel66.Location" type="System.Drawing.Point, System.Drawing">
+    <value>323, 64</value>
+  </data>
+  <data name="&gt;&gt;RadGroupBoxAWG.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="&gt;&gt;PictureBoxWZ10.Parent" xml:space="preserve">
     <value>RadGroupBoxWZ</value>
   </data>
-  <data name="RadLabel87.TabIndex" type="System.Int32, mscorlib">
-    <value>61</value>
+  <data name="RadTextBoxControlWaageEichwert2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 20</value>
   </data>
   <data name="RadLabel90.Text" xml:space="preserve">
     <value>° C</value>
@@ -5314,7 +5307,7 @@
   <data name="&gt;&gt;RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.Name" xml:space="preserve">
     <value>RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt</value>
   </data>
-  <data name="&gt;&gt;lblAWGKlasse2.Type" xml:space="preserve">
+  <data name="&gt;&gt;RadLabel90.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;PictureBoxWZ2.Name" xml:space="preserve">
@@ -5329,8 +5322,8 @@
   <data name="lblE3.TabIndex" type="System.Int32, mscorlib">
     <value>38</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlEinschaltnullstellbereich.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="RadTextBoxControlWaageKabelquerschnitt.Text" xml:space="preserve">
+    <value>0,22</value>
   </data>
   <data name="RadSeparator12.TabIndex" type="System.Int32, mscorlib">
     <value>113</value>
@@ -5359,14 +5352,21 @@
   <data name="&gt;&gt;lblWaageKlasse2.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;lblWZKlasse.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="RadTextBoxControlWaageHoechstlast3.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="RadLabel61.Text" xml:space="preserve">
+    <value>Y
+</value>
   </data>
   <data name="RadTextBoxControlAWGGrenzwerteLastwiderstandMin.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 20</value>
   </data>
-  <data name="&gt;&gt;lblAWGMindesteingangsspannung.Name" xml:space="preserve">
-    <value>lblAWGMindesteingangsspannung</value>
+  <data name="&gt;&gt;RadLabel39.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="lblPflichtfeld1.Text" xml:space="preserve">
+    <value>*</value>
   </data>
   <data name="&gt;&gt;RadLabel92.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
@@ -5386,8 +5386,8 @@
   <data name="RadLabel15.Location" type="System.Drawing.Point, System.Drawing">
     <value>324, 217</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlWZBruchteilEichfehlergrenze.Parent" xml:space="preserve">
-    <value>RadGroupBoxWZ</value>
+  <data name="&gt;&gt;RadTextBoxControlAWGAnschlussart.Name" xml:space="preserve">
+    <value>RadTextBoxControlAWGAnschlussart</value>
   </data>
   <data name="lblPflichtfeld2.Location" type="System.Drawing.Point, System.Drawing">
     <value>814, 70</value>
@@ -5406,8 +5406,5 @@
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>pl</value>
   </metadata>
 </root>

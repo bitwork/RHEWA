@@ -386,10 +386,10 @@
     <value>Zakres zerowania włączeniowego</value>
   </data>
   <data name="lblAnzWaeegezellen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 18</value>
+    <value>167, 18</value>
   </data>
   <data name="lblAnzWaeegezellen.Text" xml:space="preserve">
-    <value>Numer czujnika tensometrycznego</value>
+    <value>Ilość czujnika tensometrycznego</value>
   </data>
   <data name="lblUebersetzung.Size" type="System.Drawing.Size, System.Drawing">
     <value>63, 18</value>
