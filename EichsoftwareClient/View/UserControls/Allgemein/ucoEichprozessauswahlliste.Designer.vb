@@ -109,6 +109,7 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadGridViewAuswahlliste.MasterTemplate.AllowRowHeaderContextMenu = False
         Me.RadGridViewAuswahlliste.MasterTemplate.AllowRowResize = False
         Me.RadGridViewAuswahlliste.MasterTemplate.AllowSearchRow = True
+        Me.RadGridViewAuswahlliste.MasterTemplate.Caption = resources.GetString("RadGridViewAuswahlliste.MasterTemplate.Caption")
         Me.RadGridViewAuswahlliste.MasterTemplate.ShowGroupedColumns = True
         Me.RadGridViewAuswahlliste.MasterTemplate.ViewDefinition = TableViewDefinition1
         Me.RadGridViewAuswahlliste.Name = "RadGridViewAuswahlliste"
@@ -130,15 +131,16 @@ Partial Class ucoEichprozessauswahlliste
         '
         'RadPageView1
         '
+        resources.ApplyResources(Me.RadPageView1, "RadPageView1")
         Me.RadPageView1.Controls.Add(Me.RadPageViewPageEigene)
         Me.RadPageView1.Controls.Add(Me.RadPageViewPageAlle)
-        resources.ApplyResources(Me.RadPageView1, "RadPageView1")
         Me.RadPageView1.Name = "RadPageView1"
         Me.RadPageView1.SelectedPage = Me.RadPageViewPageEigene
         CType(Me.RadPageView1.GetChildAt(0).GetChildAt(0).GetChildAt(1), Telerik.WinControls.UI.StripViewButtonsPanel).Visibility = Telerik.WinControls.ElementVisibility.Hidden
         '
         'RadPageViewPageEigene
         '
+        resources.ApplyResources(Me.RadPageViewPageEigene, "RadPageViewPageEigene")
         Me.RadPageViewPageEigene.Controls.Add(Me.RadButtonProtokollAblegen)
         Me.RadPageViewPageEigene.Controls.Add(Me.RadButtonNeuStandardwaage)
         Me.RadPageViewPageEigene.Controls.Add(Me.RadButtonEinstellungen)
@@ -149,7 +151,6 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadPageViewPageEigene.Controls.Add(Me.RadButtonClientNeu)
         Me.RadPageViewPageEigene.Controls.Add(Me.RadButtonClientBearbeiten)
         Me.RadPageViewPageEigene.ItemSize = New System.Drawing.SizeF(50.0!, 28.0!)
-        resources.ApplyResources(Me.RadPageViewPageEigene, "RadPageViewPageEigene")
         Me.RadPageViewPageEigene.Name = "RadPageViewPageEigene"
         '
         'RadButtonProtokollAblegen
@@ -192,6 +193,7 @@ Partial Class ucoEichprozessauswahlliste
         '
         resources.ApplyResources(Me.RadCheckBoxAusblendenClientGeloeschterDokumente, "RadCheckBoxAusblendenClientGeloeschterDokumente")
         Me.RadCheckBoxAusblendenClientGeloeschterDokumente.Name = "RadCheckBoxAusblendenClientGeloeschterDokumente"
+        Me.RadCheckBoxAusblendenClientGeloeschterDokumente.TextWrap = True
         '
         'RadButtonClientAusblenden
         '
@@ -219,6 +221,7 @@ Partial Class ucoEichprozessauswahlliste
         '
         'RadPageViewPageAlle
         '
+        resources.ApplyResources(Me.RadPageViewPageAlle, "RadPageViewPageAlle")
         Me.RadPageViewPageAlle.Controls.Add(Me.RadGridViewRHEWAAlle)
         Me.RadPageViewPageAlle.Controls.Add(Me.Label3)
         Me.RadPageViewPageAlle.Controls.Add(Me.RadDateTimePickerFilterMonatLadeAlleEichprozesseBis)
@@ -232,8 +235,7 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadPageViewPageAlle.Controls.Add(Me.RadButtonEichprozessGenehmigenRHEWA)
         Me.RadPageViewPageAlle.Controls.Add(Me.RadButtonEichungAnsehenRHEWA)
         Me.RadPageViewPageAlle.Controls.Add(Me.FlowLayoutPanel1)
-        Me.RadPageViewPageAlle.ItemSize = New System.Drawing.SizeF(27.0!, 28.0!)
-        resources.ApplyResources(Me.RadPageViewPageAlle, "RadPageViewPageAlle")
+        Me.RadPageViewPageAlle.ItemSize = New System.Drawing.SizeF(35.0!, 28.0!)
         Me.RadPageViewPageAlle.Name = "RadPageViewPageAlle"
         '
         'RadGridViewRHEWAAlle
@@ -248,6 +250,7 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadGridViewRHEWAAlle.MasterTemplate.AllowDeleteRow = False
         Me.RadGridViewRHEWAAlle.MasterTemplate.AllowEditRow = False
         Me.RadGridViewRHEWAAlle.MasterTemplate.AllowRowResize = False
+        Me.RadGridViewRHEWAAlle.MasterTemplate.Caption = resources.GetString("RadGridViewRHEWAAlle.MasterTemplate.Caption")
         Me.RadGridViewRHEWAAlle.MasterTemplate.ShowGroupedColumns = True
         Me.RadGridViewRHEWAAlle.MasterTemplate.ViewDefinition = TableViewDefinition2
         Me.RadGridViewRHEWAAlle.Name = "RadGridViewRHEWAAlle"
@@ -274,8 +277,8 @@ Partial Class ucoEichprozessauswahlliste
         '
         'RadButtonRefresh
         '
-        Me.RadButtonRefresh.Image = Global.EichsoftwareClient.My.Resources.Resources.database_refresh
         resources.ApplyResources(Me.RadButtonRefresh, "RadButtonRefresh")
+        Me.RadButtonRefresh.Image = Global.EichsoftwareClient.My.Resources.Resources.database_refresh
         Me.RadButtonRefresh.Name = "RadButtonRefresh"
         '
         'RadCheckBoxLadeAlleEichprozesse
@@ -359,7 +362,6 @@ Partial Class ucoEichprozessauswahlliste
         CType(Me.RadPageView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadPageView1.ResumeLayout(False)
         Me.RadPageViewPageEigene.ResumeLayout(False)
-        Me.RadPageViewPageEigene.PerformLayout()
         CType(Me.RadButtonProtokollAblegen, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonNeuStandardwaage, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonEinstellungen, System.ComponentModel.ISupportInitialize).EndInit()

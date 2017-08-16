@@ -206,7 +206,7 @@ Partial Class FrmMainContainer
         'LayoutControlItem2
         '
         Me.LayoutControlItem2.AssociatedControl = Me.PictureBoxRHEWALogo
-        Me.LayoutControlItem2.Bounds = New System.Drawing.Rectangle(0, 660, 235, 78)
+        Me.LayoutControlItem2.Bounds = New System.Drawing.Rectangle(0, 620, 230, 78)
         Me.LayoutControlItem2.MinSize = New System.Drawing.Size(230, 78)
         Me.LayoutControlItem2.Name = "LayoutControlItem2"
         resources.ApplyResources(Me.LayoutControlItem2, "LayoutControlItem2")
@@ -214,7 +214,7 @@ Partial Class FrmMainContainer
         'LayoutControlItem5
         '
         Me.LayoutControlItem5.AssociatedControl = Me.RadButtonChangeLanguageToGerman
-        Me.LayoutControlItem5.Bounds = New System.Drawing.Rectangle(235, 660, 46, 78)
+        Me.LayoutControlItem5.Bounds = New System.Drawing.Rectangle(230, 620, 46, 78)
         Me.LayoutControlItem5.ControlVerticalAlignment = Telerik.WinControls.UI.RadVerticalAlignment.Center
         Me.LayoutControlItem5.Name = "LayoutControlItem5"
         resources.ApplyResources(Me.LayoutControlItem5, "LayoutControlItem5")
@@ -222,7 +222,7 @@ Partial Class FrmMainContainer
         'LayoutControlItem6
         '
         Me.LayoutControlItem6.AssociatedControl = Me.RadButtonChangeLanguageToEnglish
-        Me.LayoutControlItem6.Bounds = New System.Drawing.Rectangle(281, 660, 47, 78)
+        Me.LayoutControlItem6.Bounds = New System.Drawing.Rectangle(276, 620, 46, 78)
         Me.LayoutControlItem6.ControlVerticalAlignment = Telerik.WinControls.UI.RadVerticalAlignment.Center
         Me.LayoutControlItem6.Name = "LayoutControlItem6"
         resources.ApplyResources(Me.LayoutControlItem6, "LayoutControlItem6")
@@ -230,7 +230,7 @@ Partial Class FrmMainContainer
         'LayoutControlItem7
         '
         Me.LayoutControlItem7.AssociatedControl = Me.RadButtonChangeLanguageToPolish
-        Me.LayoutControlItem7.Bounds = New System.Drawing.Rectangle(328, 660, 94, 78)
+        Me.LayoutControlItem7.Bounds = New System.Drawing.Rectangle(322, 620, 46, 78)
         Me.LayoutControlItem7.ControlVerticalAlignment = Telerik.WinControls.UI.RadVerticalAlignment.Center
         Me.LayoutControlItem7.Name = "LayoutControlItem7"
         resources.ApplyResources(Me.LayoutControlItem7, "LayoutControlItem7")
@@ -238,7 +238,7 @@ Partial Class FrmMainContainer
         'LayoutControlItem8
         '
         Me.LayoutControlItem8.AssociatedControl = Me.RadButtonPlausibilitaet
-        Me.LayoutControlItem8.Bounds = New System.Drawing.Rectangle(914, 660, 158, 78)
+        Me.LayoutControlItem8.Bounds = New System.Drawing.Rectangle(743, 620, 120, 78)
         Me.LayoutControlItem8.Name = "LayoutControlItem8"
         resources.ApplyResources(Me.LayoutControlItem8, "LayoutControlItem8")
         Me.LayoutControlItem8.Visibility = Telerik.WinControls.ElementVisibility.Hidden
@@ -246,21 +246,21 @@ Partial Class FrmMainContainer
         'LayoutControlItem9
         '
         Me.LayoutControlItem9.AssociatedControl = Me.RadButtonNavigateForwards
-        Me.LayoutControlItem9.Bounds = New System.Drawing.Rectangle(1179, 660, 93, 78)
+        Me.LayoutControlItem9.Bounds = New System.Drawing.Rectangle(945, 620, 71, 78)
         Me.LayoutControlItem9.Name = "LayoutControlItem9"
         resources.ApplyResources(Me.LayoutControlItem9, "LayoutControlItem9")
         '
         'LayoutControlItem10
         '
         Me.LayoutControlItem10.AssociatedControl = Me.RadButtonNavigateBackwards
-        Me.LayoutControlItem10.Bounds = New System.Drawing.Rectangle(1072, 660, 107, 78)
+        Me.LayoutControlItem10.Bounds = New System.Drawing.Rectangle(863, 620, 82, 78)
         Me.LayoutControlItem10.Name = "LayoutControlItem10"
         resources.ApplyResources(Me.LayoutControlItem10, "LayoutControlItem10")
         '
         'LayoutControlItem11
         '
         Me.LayoutControlItem11.AssociatedControl = Me.RadButtonVersenden
-        Me.LayoutControlItem11.Bounds = New System.Drawing.Rectangle(422, 660, 225, 78)
+        Me.LayoutControlItem11.Bounds = New System.Drawing.Rectangle(368, 620, 172, 78)
         Me.LayoutControlItem11.MaxSize = New System.Drawing.Size(311, 78)
         Me.LayoutControlItem11.Name = "LayoutControlItem11"
         resources.ApplyResources(Me.LayoutControlItem11, "LayoutControlItem11")
@@ -269,35 +269,35 @@ Partial Class FrmMainContainer
         'LayoutControlItem13
         '
         Me.LayoutControlItem13.AssociatedControl = Me.RadScrollablePanelTrafficLightBreadcrumb
-        Me.LayoutControlItem13.Bounds = New System.Drawing.Rectangle(299, 0, 973, 86)
+        Me.LayoutControlItem13.Bounds = New System.Drawing.Rectangle(239, 0, 777, 81)
         Me.LayoutControlItem13.Name = "LayoutControlItem13"
         resources.ApplyResources(Me.LayoutControlItem13, "LayoutControlItem13")
         '
         'LayoutControlItem14
         '
         Me.LayoutControlItem14.AssociatedControl = Me.RadPanel1
-        Me.LayoutControlItem14.Bounds = New System.Drawing.Rectangle(0, 90, 974, 570)
+        Me.LayoutControlItem14.Bounds = New System.Drawing.Rectangle(0, 85, 778, 535)
         Me.LayoutControlItem14.Name = "LayoutControlItem14"
         resources.ApplyResources(Me.LayoutControlItem14, "LayoutControlItem14")
         '
         'LayoutControlItem12
         '
         Me.LayoutControlItem12.AssociatedControl = Me.RadButtonEntsperren
-        Me.LayoutControlItem12.Bounds = New System.Drawing.Rectangle(647, 660, 267, 78)
+        Me.LayoutControlItem12.Bounds = New System.Drawing.Rectangle(540, 620, 203, 78)
         Me.LayoutControlItem12.Name = "LayoutControlItem12"
         resources.ApplyResources(Me.LayoutControlItem12, "LayoutControlItem12")
         Me.LayoutControlItem12.Visibility = Telerik.WinControls.ElementVisibility.Hidden
         '
         'lblHeadertext
         '
-        Me.lblHeadertext.Bounds = New System.Drawing.Rectangle(0, 0, 299, 90)
+        Me.lblHeadertext.Bounds = New System.Drawing.Rectangle(0, 0, 239, 85)
         Me.lblHeadertext.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblHeadertext.Name = "lblHeadertext"
         resources.ApplyResources(Me.lblHeadertext, "lblHeadertext")
         '
         'radlabelContextHelp
         '
-        Me.radlabelContextHelp.Bounds = New System.Drawing.Rectangle(978, 90, 294, 570)
+        Me.radlabelContextHelp.Bounds = New System.Drawing.Rectangle(782, 85, 234, 535)
         Me.radlabelContextHelp.Image = Global.EichsoftwareClient.My.Resources.Resources.help
         Me.radlabelContextHelp.ImageAlignment = System.Drawing.ContentAlignment.TopRight
         Me.radlabelContextHelp.MaxSize = New System.Drawing.Size(360, 3000)
@@ -307,12 +307,12 @@ Partial Class FrmMainContainer
         '
         'LayoutControlSplitterItem1
         '
-        Me.LayoutControlSplitterItem1.Bounds = New System.Drawing.Rectangle(974, 90, 4, 570)
+        Me.LayoutControlSplitterItem1.Bounds = New System.Drawing.Rectangle(778, 85, 4, 535)
         Me.LayoutControlSplitterItem1.Name = "LayoutControlSplitterItem1"
         '
         'LayoutControlSplitterItem2
         '
-        Me.LayoutControlSplitterItem2.Bounds = New System.Drawing.Rectangle(299, 86, 973, 4)
+        Me.LayoutControlSplitterItem2.Bounds = New System.Drawing.Rectangle(239, 81, 777, 4)
         Me.LayoutControlSplitterItem2.Name = "LayoutControlSplitterItem2"
         '
         'ImageListTrafficLight

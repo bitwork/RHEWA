@@ -119,10 +119,10 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="RadScrollablePanelTrafficLightBreadcrumb.Location" type="System.Drawing.Point, System.Drawing">
-    <value>302, 3</value>
+    <value>242, 3</value>
   </data>
   <data name="RadScrollablePanelTrafficLightBreadcrumb.PanelContainer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>965, 78</value>
+    <value>769, 73</value>
   </data>
   <data name="&gt;&gt;RadScrollablePanelTrafficLightBreadcrumb.PanelContainer.Name" xml:space="preserve">
     <value>RadScrollablePanelTrafficLightBreadcrumb.PanelContainer</value>
@@ -137,7 +137,7 @@
     <value>0</value>
   </data>
   <data name="RadScrollablePanelTrafficLightBreadcrumb.Size" type="System.Drawing.Size, System.Drawing">
-    <value>967, 80</value>
+    <value>771, 75</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="RadScrollablePanelTrafficLightBreadcrumb.TabIndex" type="System.Int32, mscorlib">
@@ -163,7 +163,7 @@
     <value>NoControl</value>
   </data>
   <data name="PictureBoxRHEWALogo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 663</value>
+    <value>3, 623</value>
   </data>
   <data name="PictureBoxRHEWALogo.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>188, 74</value>
@@ -202,7 +202,7 @@
     <value>MiddleCenter</value>
   </data>
   <data name="RadButtonChangeLanguageToGerman.Location" type="System.Drawing.Point, System.Drawing">
-    <value>238, 674</value>
+    <value>233, 634</value>
   </data>
   <data name="RadButtonChangeLanguageToGerman.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 50</value>
@@ -235,7 +235,7 @@
     <value>MiddleCenter</value>
   </data>
   <data name="RadButtonChangeLanguageToEnglish.Location" type="System.Drawing.Point, System.Drawing">
-    <value>284, 674</value>
+    <value>279, 634</value>
   </data>
   <data name="RadButtonChangeLanguageToEnglish.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 50</value>
@@ -268,7 +268,7 @@
     <value>MiddleCenter</value>
   </data>
   <data name="RadButtonChangeLanguageToPolish.Location" type="System.Drawing.Point, System.Drawing">
-    <value>331, 674</value>
+    <value>325, 634</value>
   </data>
   <data name="RadButtonChangeLanguageToPolish.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 50</value>
@@ -295,13 +295,13 @@
     <value>Bottom, Right</value>
   </data>
   <data name="RadButtonPlausibilitaet.Location" type="System.Drawing.Point, System.Drawing">
-    <value>917, 663</value>
+    <value>746, 623</value>
   </data>
   <data name="RadButtonPlausibilitaet.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>181, 72</value>
   </data>
   <data name="RadButtonPlausibilitaet.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 72</value>
+    <value>114, 72</value>
   </data>
   <data name="RadButtonPlausibilitaet.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -331,10 +331,10 @@
     <value>MiddleCenter</value>
   </data>
   <data name="RadButtonNavigateForwards.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1182, 663</value>
+    <value>948, 623</value>
   </data>
   <data name="RadButtonNavigateForwards.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 72</value>
+    <value>65, 72</value>
   </data>
   <data name="RadButtonNavigateForwards.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -373,10 +373,10 @@
     <value>MiddleCenter</value>
   </data>
   <data name="RadButtonNavigateBackwards.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1075, 663</value>
+    <value>866, 623</value>
   </data>
   <data name="RadButtonNavigateBackwards.Size" type="System.Drawing.Size, System.Drawing">
-    <value>101, 72</value>
+    <value>76, 72</value>
   </data>
   <data name="RadButtonNavigateBackwards.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -409,13 +409,13 @@
     <value>Bottom, Right</value>
   </data>
   <data name="RadButtonVersenden.Location" type="System.Drawing.Point, System.Drawing">
-    <value>425, 663</value>
+    <value>371, 623</value>
   </data>
   <data name="RadButtonVersenden.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>188, 74</value>
   </data>
   <data name="RadButtonVersenden.Size" type="System.Drawing.Size, System.Drawing">
-    <value>188, 72</value>
+    <value>166, 72</value>
   </data>
   <data name="RadButtonVersenden.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -445,7 +445,7 @@
     <value>Bottom, Right</value>
   </data>
   <data name="RadButtonEntsperren.Location" type="System.Drawing.Point, System.Drawing">
-    <value>650, 663</value>
+    <value>543, 623</value>
   </data>
   <data name="RadButtonEntsperren.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>166, 72</value>
@@ -478,10 +478,10 @@
     <value>10</value>
   </data>
   <data name="RadPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 93</value>
+    <value>3, 88</value>
   </data>
   <data name="RadPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>968, 564</value>
+    <value>772, 529</value>
   </data>
   <data name="RadPanel1.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -550,7 +550,7 @@
     <value>0, 0</value>
   </data>
   <data name="LayoutMaster.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1272, 738</value>
+    <value>1016, 698</value>
   </data>
   <data name="LayoutMaster.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -578,7 +578,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAB6
-        EgAAAk1TRnQBSQFMAgEBAwEAAYQBBQGEAQUBIAEAASABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAGA
+        EgAAAk1TRnQBSQFMAgEBAwEAAYwBBQGMAQUBIAEAASABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAGA
         AwABIAMAAQEBAAEgBgABQP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wBPAAEBAwQBBgMLAQ8DEAEV
         AxABFgMQARYDEAEVAwsBDwMEAQYDAAEBWwABAQMEAQYDCwEPAxABFQMQARYDEAEWAxABFQMLAQ8DBAEG
         AwABAVsAAQEDBAEGAwsBDwMQARUDEAEWAxABFgMQARUDCwEPAwQBBgMAAQHUAAMCAQMDCgEOAxcBIAMj
@@ -720,7 +720,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1272, 738</value>
+    <value>1016, 698</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

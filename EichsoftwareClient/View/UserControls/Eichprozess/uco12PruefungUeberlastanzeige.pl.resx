@@ -131,7 +131,7 @@
     <value>Wyświetlacz: pokazuje przeciążenie; przy podłączonej drukarce wydruk nie możliwy</value>
   </data>
   <data name="RadCheckBoxUeberlast.Location" type="System.Drawing.Point, System.Drawing">
-    <value>847, 29</value>
+    <value>855, 29</value>
   </data>
   <data name="lblPflichtfeld1.Location" type="System.Drawing.Point, System.Drawing">
     <value>838, 29</value>

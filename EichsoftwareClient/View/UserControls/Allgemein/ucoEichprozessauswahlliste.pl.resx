@@ -128,13 +128,16 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="RadCheckBoxAusblendenClientGeloeschterDokumente.Location" type="System.Drawing.Point, System.Drawing">
-    <value>256, 418</value>
+    <value>527, 455</value>
   </data>
   <data name="RadCheckBoxAusblendenClientGeloeschterDokumente.Size" type="System.Drawing.Size, System.Drawing">
     <value>137, 18</value>
   </data>
   <data name="RadCheckBoxAusblendenClientGeloeschterDokumente.Text" xml:space="preserve">
     <value>Pokazać ukryte procesy</value>
+  </data>
+  <data name="RadButtonClientAusblenden.Location" type="System.Drawing.Point, System.Drawing">
+    <value>527, 410</value>
   </data>
   <data name="RadButtonClientAusblenden.Text" xml:space="preserve">
     <value>Proces ukryć</value>
