@@ -6,26 +6,34 @@ Imports Microsoft.VisualBasic
 ''' </summary>
 ''' <remarks></remarks>
 Public Class clsOfficeExports
-
     ''' <summary>
-    ''' Kompatiblitätsnachweis DEUTSCH
+    '''  Kompatiblitätsnachweis
     ''' </summary>
-    ''' <remarks></remarks>
-    Public Sub ExportKompatiblitaetsnachweisDE(ByVal objEichProzess As Eichprozess)
+    ''' <param name="objEichProzess"></param>
+    ''' <param name="Sprache">DE oder EN</param>
+    Public Sub ExportKompatiblitaetsnachweis(ByVal objEichProzess As Eichprozess, ByVal Sprache As String)
         Dim pEichProzess As Eichprozess = objEichProzess
 
         Dim objExcelApp As New Microsoft.Office.Interop.Excel.Application
+        objExcelApp.Visible = False
         Dim objExcelWorkbook As Microsoft.Office.Interop.Excel.Workbook
         Dim objExcelWorksheetDatenEingabe As Microsoft.Office.Interop.Excel.Worksheet
 
         Dim objExcelWorksheetTabelle1 As Microsoft.Office.Interop.Excel.Worksheet
         Dim ExcelSavePath As String
-        Dim DocumentName As String = "Kompatibilitätsnachweis DE" & "_" & pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer & ".xls"
+        Dim DocumentName As String = "Kompatibilitätsnachweis " & Sprache & "_" & pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer & ".xls"
         For Each c As Char In System.IO.Path.GetInvalidFileNameChars()
             DocumentName = DocumentName.Replace(c, "_"c)
         Next
         Dim CompletePath As String
-        Dim b() As Byte = My.Resources.Kompatibilitätsnachweis_DE
+
+        Dim b() As Byte
+        If Sprache = "DE" Then
+            b = My.Resources.Kompatibilitätsnachweis_DE
+        ElseIf Sprache = "EN" Then
+            b = My.Resources.Kompatibilitätsnachweis_EN
+        End If
+
         Dim FolderBrowserDialog As New FolderBrowserDialog
 
         Dim Hoechstlast As Decimal
@@ -54,7 +62,12 @@ Public Class clsOfficeExports
             objExcelWorkbook = objExcelApp.Workbooks.Open(CompletePath)
 
             'Worksheets zuweisen
-            objExcelWorksheetDatenEingabe = objExcelWorkbook.Worksheets("Daten-Eingabe")
+            If Sprache = "DE" Then
+                objExcelWorksheetDatenEingabe = objExcelWorkbook.Worksheets("Daten-Eingabe")
+            ElseIf Sprache = "EN" Then
+                objExcelWorksheetDatenEingabe = objExcelWorkbook.Worksheets("Data-Input")
+            End If
+
             objExcelWorksheetTabelle1 = objExcelWorkbook.Worksheets("Tabelle1")
 
             'Die Rows stehen vorne und die Collumns hinten. G20 Entspricht also (20=20, 7=G).
@@ -385,7 +398,10 @@ Public Class clsOfficeExports
             '_________________________________________________________________________________________________________________________________
 
             'aufrufen des Ausblenden Markos welche die EWerte Positioniert und je nach Waagenart die anderen Ergebnis Sheets einblendet
-            objExcelApp.Run("Ausblenden")
+            Try
+                objExcelApp.Run("Ausblenden")
+            Catch ex As Exception
+            End Try
 
             'excel dokument speichern
             objExcelWorkbook.Save()
@@ -409,428 +425,33 @@ Public Class clsOfficeExports
 
             End Try
 
-            'excel dokument Anzeigen
-            Process.Start(CompletePath)
-        End If
-    End Sub
-
-    ''' <summary>
-    ''' Kompatiblitätsnachweis ENGLISCH
-    ''' </summary>
-    ''' <remarks></remarks>
-    Public Sub ExportKompatiblitaetsnachweisEN(ByVal objEichProzess As Eichprozess)
-        Dim pEichProzess As Eichprozess = objEichProzess
-
-        Dim objExcelApp As New Microsoft.Office.Interop.Excel.Application
-        Dim objExcelWorkbook As Microsoft.Office.Interop.Excel.Workbook
-        Dim objExcelWorksheetDatenEingabe As Microsoft.Office.Interop.Excel.Worksheet
-        Dim objExcelWorksheetTabelle1 As Microsoft.Office.Interop.Excel.Worksheet
-        Dim ExcelSavePath As String
-        Dim DocumentName As String = "Kompatibilitätsnachweis EN" & "_" & pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer & ".xls"
-        For Each c As Char In System.IO.Path.GetInvalidFileNameChars()
-            DocumentName = DocumentName.Replace(c, "_"c)
-        Next
-        Dim CompletePath As String
-        Dim b() As Byte = My.Resources.Kompatibilitätsnachweis_EN
-        Dim FolderBrowserDialog As New FolderBrowserDialog
-
-        Dim Hoechstlast As Decimal
-        If (pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast.Contains(";")) Then
-            Hoechstlast = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast.Split(";")(1)
-        Else
-            Hoechstlast = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast
-        End If
-
-        'Template excel dokument kopieren an Ort den der Benutzer über FolderBrowserDialog angibt
-        If FolderBrowserDialog.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
-            ExcelSavePath = FolderBrowserDialog.SelectedPath
-
-            'Dokumentpfad erstellen
-            CompletePath = ExcelSavePath & "\" & DocumentName
-
-            'Dokument abspeichern
-            Try
-                System.IO.File.WriteAllBytes(CompletePath, b)
-            Catch ex As Exception
-                MessageBox.Show(ex.Message)
-                Exit Sub
-            End Try
-            'excel dokument öffnen
-            objExcelWorkbook = objExcelApp.Workbooks.Open(CompletePath)
-
-            'Worksheets zuweisen
-            objExcelWorksheetDatenEingabe = objExcelWorkbook.Worksheets("Data-Input")
-            objExcelWorksheetTabelle1 = objExcelWorkbook.Worksheets("Tabelle1")
-
-            'Die Rows stehen vorne und die Collumns hinten. G20 Entspricht also (20=20, 7=G).
-            '_________________________________________________________________________________________________________________________________
-
-            '_________________________________________________________________________________________________________________________________
-
-            '_________________________________________________________________________________________________________________________________
-            'AUSWAHLFELDER ANFANG
-            '_________________________________________________________________________________________________________________________________
-
-            'Waagentyp NSW befüllen in A14 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(14, 1).value = pEichProzess.Lookup_Waagentyp.Typ_EN
-
-            'Waagentyp  NSW befüllen in A10 auf Tabelle1
-            If pEichProzess.Lookup_Waagenart.Art_EN = "One range WI" Then
-                objExcelWorksheetTabelle1.Cells(10, 1).value = 1
-            End If
-
-            If pEichProzess.Lookup_Waagenart.Art_EN = "Two ranges WI" Then
-                objExcelWorksheetTabelle1.Cells(10, 1).value = 2
-            End If
-
-            If pEichProzess.Lookup_Waagenart.Art_EN = "Three ranges WI" Then
-                objExcelWorksheetTabelle1.Cells(10, 1).value = 3
-            End If
-
-            If pEichProzess.Lookup_Waagenart.Art_EN = "Two-interval WI" Then
-                objExcelWorksheetTabelle1.Cells(10, 1).value = 4
-            End If
-
-            If pEichProzess.Lookup_Waagenart.Art_EN = "Three -interval WI" Then
-                objExcelWorksheetTabelle1.Cells(10, 1).value = 5
-            End If
-
-            '_________________________________________________________________________________________________________________________________
-            'AUSWAHLFELDER ENDE
-            '_________________________________________________________________________________________________________________________________
-
-            '_________________________________________________________________________________________________________________________________
-            'NSW ANFANG
-            '_________________________________________________________________________________________________________________________________
-
-            'Anschrift Waagenbaufirma befüllen in C4 TEIL1 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(4, 3).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Hersteller
-
-            'Anschrift Waagenbaufirma befüllen in C5 TEIL2 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(5, 3).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Strasse & " " & pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Postleitzahl & " " & pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Ort
-
-            'Verbindungselemente_BruchteilEichfehlergrenze in G49 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(49, 7).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Verbindungselemente_BruchteilEichfehlergrenze
-
-            'Waage_AdditiveTarahoechstlast befüllen in G20 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(20, 7).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AdditiveTarahoechstlast
-
-            'Waage_AnzahlWaegezellen befüllen in G16 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(16, 7).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen
-
-            'Waage_Bauartzulassung befüllen in A19 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(19, 1).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Bauartzulassung
-
-            'Waage_Ecklastzuschlag befüllen in G18 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(18, 7).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Ecklastzuschlag
-
-            If pEichProzess.Lookup_Waagenart.Art_EN = "One range WI" Then
-
-                'Waage_Eichwert1 befüllen in H12 auf Daten-Eingabe
-                objExcelWorksheetDatenEingabe.Cells(11, 8).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1
-
-            End If
-
-            If pEichProzess.Lookup_Waagenart.Art_EN = "Two ranges WI" Then
-
-                'Waage_Eichwert1 befüllen in H12 auf Daten-Eingabe
-                objExcelWorksheetDatenEingabe.Cells(12, 8).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1
-
-                'Waage_Eichwert2 befüllen in H13 auf Daten-Eingabe
-                objExcelWorksheetDatenEingabe.Cells(13, 8).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2
-
-            ElseIf pEichProzess.Lookup_Waagenart.Art_EN = "Two-interval WI" Then
-
-                'Waage_Eichwert1 befüllen in H12 auf Daten-Eingabe
-                objExcelWorksheetDatenEingabe.Cells(12, 8).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1
-
-                'Waage_Eichwert2 befüllen in H13 auf Daten-Eingabe
-                objExcelWorksheetDatenEingabe.Cells(13, 8).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2
-
-            End If
-
-            If pEichProzess.Lookup_Waagenart.Art_EN = "Three ranges WI" Then
-
-                'Waage_Eichwert1 befüllen in H12 auf Daten-Eingabe
-                objExcelWorksheetDatenEingabe.Cells(12, 8).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1
-
-                'Waage_Eichwert2 befüllen in H13 auf Daten-Eingabe
-                objExcelWorksheetDatenEingabe.Cells(13, 8).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2
-
-                'Waage_Eichwert3 befüllen in H14 auf Daten-Eingabe
-                objExcelWorksheetDatenEingabe.Cells(14, 8).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3
-
-            ElseIf pEichProzess.Lookup_Waagenart.Art_EN = "Three -interval WI" Then
-
-                'Waage_Eichwert1 befüllen in G12 auf Daten-Eingabe
-                objExcelWorksheetDatenEingabe.Cells(12, 8).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1
-
-                'Waage_Eichwert2 befüllen in G13 auf Daten-Eingabe
-                objExcelWorksheetDatenEingabe.Cells(13, 8).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2
-
-                'Waage_Eichwert3 befüllen in G14 auf Daten-Eingabe
-                objExcelWorksheetDatenEingabe.Cells(14, 8).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3
-
-            End If
-
-            'Waage_Einschaltnullstellbereich befüllen in G17 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(17, 7).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Einschaltnullstellbereich
-
-            'Waage_FabrikNummer befüllen in A12 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(12, 1).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer
-
-            'Waage_Genauigkeitsklasse befüllen in G10 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(10, 7).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Genauigkeitsklasse
-
-            'Waage_GrenzenTemperaturbereichMAX befüllen in H21 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(21, 8).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_GrenzenTemperaturbereichMAX
-
-            'Waage_GrenzenTemperaturbereichMIN befüllen in G21 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(21, 7).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_GrenzenTemperaturbereichMIN
-
-            If pEichProzess.Lookup_Waagenart.Art_EN = "One range WI" Then
-
-                'Waage_Hoechstlast1 befüllen in G11 auf Daten-Eingabe
-                objExcelWorksheetDatenEingabe.Cells(11, 7).Value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1()
-
-            End If
-
-            If pEichProzess.Lookup_Waagenart.Art_EN = "Two ranges WI" Then
-
-                'Waage_Hoechstlast1 befüllen in G12 auf Daten-Eingabe
-                objExcelWorksheetDatenEingabe.Cells(12, 7).Value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1()
-
-                'Waage_Hoechstlast2 befüllen in G13 auf Daten-Eingabe
-                objExcelWorksheetDatenEingabe.Cells(13, 7).Value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2()
-
-            ElseIf pEichProzess.Lookup_Waagenart.Art_EN = "Two-interval WI" Then
-
-                'Waage_Hoechstlast1 befüllen in G12 auf Daten-Eingabe
-                objExcelWorksheetDatenEingabe.Cells(12, 7).Value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1()
-
-                'Waage_Hoechstlast2 befüllen in G13 auf Daten-Eingabe
-                objExcelWorksheetDatenEingabe.Cells(13, 7).Value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2()
-
-            End If
-
-            If pEichProzess.Lookup_Waagenart.Art_EN = "Three ranges WI" Then
-
-                'Waage_Hoechstlast1 befüllen in G12 auf Daten-Eingabe
-                objExcelWorksheetDatenEingabe.Cells(12, 7).Value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1()
-
-                'Waage_Hoechstlast2 befüllen in G13 auf Daten-Eingabe
-                objExcelWorksheetDatenEingabe.Cells(13, 7).Value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2()
-
-                'Waage_Hoechstlast3 befüllen in G14 auf Daten-Eingabe
-                objExcelWorksheetDatenEingabe.Cells(14, 7).Value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3()
-
-            ElseIf pEichProzess.Lookup_Waagenart.Art_EN = "Three -interval WI" Then
-
-                'Waage_Hoechstlast1 befüllen in G12 auf Daten-Eingabe
-                objExcelWorksheetDatenEingabe.Cells(12, 7).Value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1()
-
-                'Waage_Hoechstlast2 befüllen in G13 auf Daten-Eingabe
-                objExcelWorksheetDatenEingabe.Cells(13, 7).Value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2()
-
-                'Waage_Hoechstlast3 befüllen in G14 auf Daten-Eingabe
-                objExcelWorksheetDatenEingabe.Cells(14, 7).Value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3()
-
-            End If
-
-            'Waage_Kabellaenge befüllen in G22 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(22, 7).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Kabellaenge
-
-            'Waage_Kabelquerschnitt befüllen in G23 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(23, 7).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Kabelquerschnitt
-
-            'Waage_Revisionsnummer befüllen in UNBEKANNT !
-
-            'Waage_Totlast befüllen in G19 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(19, 7).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Totlast
-
-            'Waage_Uebersetzungsverhaeltnis befüllen in G15 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(15, 7).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Uebersetzungsverhaeltnis
-
-            'Waage_Zulassungsinhaber befüllen in A23 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(23, 1).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Zulassungsinhaber
-
-            'WZ_Hoechstlast befüllen in G37 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(37, 7).value = Hoechstlast
-
-            '_________________________________________________________________________________________________________________________________
-            'NSW ENDE
-            '_________________________________________________________________________________________________________________________________
-
-            '_________________________________________________________________________________________________________________________________
-            'AWG ANFANG
-            '_________________________________________________________________________________________________________________________________
-
-            'Anschlussart AWG befüllen G33 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(33, 7).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_AWG_Anschlussart
-
-            'Bauartzulassung AWG befüllen in A34 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(34, 1).value = pEichProzess.Lookup_Auswertegeraet.Bauartzulassung
-
-            'BruchteilEichfehlergrenze AWG befüllen in G32 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(32, 7).value = pEichProzess.Lookup_Auswertegeraet.BruchteilEichfehlergrenze
-
-            'Genauigkeitsklasse AWG befüllen in G25 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(25, 7).value = pEichProzess.Lookup_Auswertegeraet.Genauigkeitsklasse
-
-            'GrenzwertLastwiderstandMAX AWG befüllen in H30 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(30, 8).value = pEichProzess.Lookup_Auswertegeraet.GrenzwertLastwiderstandMAX
-
-            'GrenzwertLastwiderstandMIN AWG befüllen in G30 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(30, 7).value = pEichProzess.Lookup_Auswertegeraet.GrenzwertLastwiderstandMIN
-
-            'Hersteller AWG befüllen in A27 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(27, 1).value = pEichProzess.Lookup_Auswertegeraet.Hersteller
-
-            'KabellaengeQuerschnitt AWG befüllen in G34 auf Daten-Eingabe
-            If IsNumeric(pEichProzess.Lookup_Auswertegeraet.KabellaengeQuerschnitt) Then
-                objExcelWorksheetDatenEingabe.Cells(34, 7).value = CDec(pEichProzess.Lookup_Auswertegeraet.KabellaengeQuerschnitt)
-            End If
-
-            If Not pEichProzess.Lookup_Waagenart.Art_EN = "One range WI" Then
-
-                'MAXAnzahlTeilungswerteMehrbereichswaage AWG befüllen in G26 auf Daten-Eingabe
-                objExcelWorksheetDatenEingabe.Cells(26, 7).Value = pEichProzess.Lookup_Auswertegeraet.MAXAnzahlTeilungswerteMehrbereichswaage
-            Else
-
-                'MAXAnzahlTeilungswerteEinbereichswaage AWG befüllen in G26 auf Daten-Eingabe
-                objExcelWorksheetDatenEingabe.Cells(26, 7).Value = pEichProzess.Lookup_Auswertegeraet.MAXAnzahlTeilungswerteEinbereichswaage
-
-            End If
-
-            'GrenzwertTemperaturbereichMAX AWG befüllen in H31 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(31, 8).value = pEichProzess.Lookup_Auswertegeraet.GrenzwertTemperaturbereichMAX
-
-            'GrenzwertTemperaturbereichMIN AWG befüllen in G31 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(31, 7).value = pEichProzess.Lookup_Auswertegeraet.GrenzwertTemperaturbereichMIN
-
-            'Mindesteingangsspannung AWG befüllen in G28 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(28, 7).value = pEichProzess.Lookup_Auswertegeraet.Mindesteingangsspannung
-
-            'Mindestmesssignal AWG befüllen in G29 auf Daten-Eingabe
-            If IsNumeric(pEichProzess.Lookup_Auswertegeraet.Mindestmesssignal) Then
-                objExcelWorksheetDatenEingabe.Cells(29, 7).value = CDec(pEichProzess.Lookup_Auswertegeraet.Mindestmesssignal)
-            End If
-
-            'Pruefbericht AWG befüllen in A32 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(32, 1).value = pEichProzess.Lookup_Auswertegeraet.Pruefbericht
-
-            'Speisespannung AWG befüllen in G27 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(27, 7).value = pEichProzess.Lookup_Auswertegeraet.Speisespannung
-
-            'Typ befüllen AWG in A30 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(30, 1).value = pEichProzess.Lookup_Auswertegeraet.Typ
-
-            '_________________________________________________________________________________________________________________________________
-            'AWG ENDE
-            '_________________________________________________________________________________________________________________________________
-
-            '_________________________________________________________________________________________________________________________________
-            'WZ ANFANG
-            '_________________________________________________________________________________________________________________________________
-
-            'Bauartzulassung WZ befüllen in A47 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(47, 1).value = pEichProzess.Lookup_Waegezelle.Bauartzulassung
-
-            'BruchteilEichfehlergrenze WZ befüllen in G47 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(47, 7).value = pEichProzess.Lookup_Waegezelle.BruchteilEichfehlergrenze
-
-            'Genauigkeitsklasse WZ befüllen in G36 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(36, 7).value = pEichProzess.Lookup_Waegezelle.Genauigkeitsklasse
-
-            'GrenzwertTemperaturbereichMAX WZ befüllen in H46 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(46, 8).value = pEichProzess.Lookup_Waegezelle.GrenzwertTemperaturbereichMAX
-
-            'GrenzwertTemperaturbereichMIN WZ befüllen in G46 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(46, 7).value = pEichProzess.Lookup_Waegezelle.GrenzwertTemperaturbereichMIN
-
-            'Hersteller WZ befüllen in A38 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(38, 1).value = pEichProzess.Lookup_Waegezelle.Hersteller
-
-            'Hoechsteteilungsfaktor WZ befüllen in G42 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(42, 7).value = pEichProzess.Lookup_Waegezelle.Hoechsteteilungsfaktor
-
-            'Kriechteilungsfaktor WZ befüllen in G43 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(43, 7).value = pEichProzess.Lookup_Waegezelle.Kriechteilungsfaktor
-
-            'MaxAnzahlTeilungswerte WZ befüllen in G40 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(40, 7).value = pEichProzess.Lookup_Waegezelle.MaxAnzahlTeilungswerte
-
-            'Mindestvorlast WZ befüllen in G38 auf Daten-Eingabe
-
-            If Not pEichProzess.Lookup_Waegezelle.MindestvorlastProzent Is Nothing Then
-                objExcelWorksheetDatenEingabe.Cells(38, 7).value = (pEichProzess.Lookup_Waegezelle.MindestvorlastProzent / 100) * Hoechstlast
-
-            Else
-                objExcelWorksheetDatenEingabe.Cells(38, 7).value = pEichProzess.Lookup_Waegezelle.Mindestvorlast
-
-            End If
-            'MinTeilungswert WZ befüllen in G41 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(41, 7).value = pEichProzess.Lookup_Waegezelle.MinTeilungswert
-
-            'Pruefbericht WZ befüllen in A44 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(44, 1).value = pEichProzess.Lookup_Waegezelle.Pruefbericht
-
-            'RueckkehrVorlastsignal WZ befüllen in G44 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(44, 7).value = pEichProzess.Lookup_Waegezelle.RueckkehrVorlastsignal
-
-            'Waegezellenkennwert WZ befüllen in G39 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(39, 7).value = pEichProzess.Lookup_Waegezelle.Waegezellenkennwert
-
-            'Typ WZ befüllen in A41 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(41, 1).value = pEichProzess.Lookup_Waegezelle.Typ
-
-            'WiderstandWaegezelle WZ befüllen in G45 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(45, 7).value = pEichProzess.Lookup_Waegezelle.WiderstandWaegezelle
-
-            '_________________________________________________________________________________________________________________________________
-            'WZ ENDE
-            '_________________________________________________________________________________________________________________________________
-
-            'excel dokument speichern
-            objExcelWorkbook.Save()
-            objExcelWorkbook.Close()
-            Try
-                System.Runtime.InteropServices.Marshal.ReleaseComObject(objExcelWorksheetDatenEingabe) : objExcelWorksheetDatenEingabe = Nothing
-            Catch ex As Exception
-
-            End Try
-            Try
-                System.Runtime.InteropServices.Marshal.ReleaseComObject(objExcelWorkbook) : objExcelWorkbook = Nothing
-            Catch ex As Exception
-
-            End Try
-            Try
-                System.Runtime.InteropServices.Marshal.ReleaseComObject(objExcelApp) : objExcelApp = Nothing
-            Catch ex As Exception
-
-            End Try
 
             'excel dokument Anzeigen
             Process.Start(CompletePath)
         End If
     End Sub
 
-    ''' <summary>
-    ''' Konformitätserklärung DEUTSCH
-    ''' </summary>
-    ''' <remarks></remarks>
-    Public Sub ExportKonformitaetssnachweisDE(ByVal objEichProzess As Eichprozess)
+    Public Sub ExportKonformitaetssnachweis(ByVal objEichProzess As Eichprozess, ByVal Sprache As String)
 
         Dim objExcelApp As New Microsoft.Office.Interop.Excel.Application
         Dim objExcelWorkbook As Microsoft.Office.Interop.Excel.Workbook
         Dim objExcelWorksheetKonformerk As Microsoft.Office.Interop.Excel.Worksheet
         Dim ExcelSavePath As String
-        Dim DocumentName As String = "Konformitätserklärung DE" & "_" & objEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer & ".xls"
+        Dim DocumentName As String = "Konformitätserklärung " & Sprache & "_" & objEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer & ".xls"
         For Each c As Char In System.IO.Path.GetInvalidFileNameChars()
             DocumentName = DocumentName.Replace(c, "_"c)
         Next
         Dim CompletePath As String
-        Dim b() As Byte = My.Resources.Konformitätserklärung_DE
+
+        Dim b() As Byte
+        If Sprache = "DE" Then
+            b = My.Resources.Konformitätserklärung_DE
+        ElseIf Sprache = "PL" Then
+            b = My.Resources.Konformitätserklärung_PL
+        ElseIf Sprache = "RO" Then
+            b = My.Resources.Konformitätserklärung_RO
+        End If
+
         Dim FolderBrowserDialog As New FolderBrowserDialog
 
         'Template excel dokument kopieren an Ort den der Benutzer über FolderBrowserDialog angibt
@@ -891,183 +512,28 @@ Public Class clsOfficeExports
         End If
     End Sub
 
-    ''' <summary>
-    ''' Konformitätserklärung POLNISCH
-    ''' </summary>
-    ''' <remarks></remarks>
-    Public Sub ExportKonformitaetssnachweisPL(ByVal objEichProzess As Eichprozess)
-        Dim pEichProzess As Eichprozess = objEichProzess
-
-        Dim objExcelApp As New Microsoft.Office.Interop.Excel.Application
-        Dim objExcelWorkbook As Microsoft.Office.Interop.Excel.Workbook
-        Dim objExcelWorksheetKonformerk As Microsoft.Office.Interop.Excel.Worksheet
-        Dim ExcelSavePath As String
-        Dim DocumentName As String = "Konformitätserklärung PL" & "_" & pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer & ".xls"
-        For Each c As Char In System.IO.Path.GetInvalidFileNameChars()
-            DocumentName = DocumentName.Replace(c, "_"c)
-        Next
-        Dim CompletePath As String
-        Dim b() As Byte = My.Resources.Konformitätserklärung_PL
-        Dim FolderBrowserDialog As New FolderBrowserDialog
-
-        'Template excel dokument kopieren an Ort den der Benutzer über FolderBrowserDialog angibt
-        If FolderBrowserDialog.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
-            ExcelSavePath = FolderBrowserDialog.SelectedPath
-
-            'Dokumentpfad erstellen
-            CompletePath = ExcelSavePath & "\" & DocumentName
-
-            'Dokument abspeichern
-            Try
-                System.IO.File.WriteAllBytes(CompletePath, b)
-            Catch ex As Exception
-                MessageBox.Show(ex.Message)
-                Exit Sub
-            End Try
-            'excel dokument öffnen
-            objExcelWorkbook = objExcelApp.Workbooks.Open(CompletePath)
-
-            'Worksheets zuweisen
-            objExcelWorksheetKonformerk = objExcelWorkbook.Worksheets("Konformerk.")
-
-            'Waagentyp befüllen in E21 auf Konformerk. (Werte kommen aus Typen)
-            If Not pEichProzess.Lookup_Auswertegeraet.Typ Is Nothing Then
-                objExcelWorksheetKonformerk.Cells(21, 5).value = pEichProzess.Lookup_Auswertegeraet.Typ.ToString
-            End If
-
-            'Fabrikationsnummer befüllen in E29 auf Konformerk.
-            objExcelWorksheetKonformerk.Cells(29, 5).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer
-
-            'Aufstellungsort befüllen in B55 auf Konformerk.
-            objExcelWorksheetKonformerk.Cells(55, 2).value = pEichProzess.Eichprotokoll.Identifikationsdaten_Aufstellungsort
-
-            'Fallbeschleunigung befüllen in E55 auf Konformerk.
-            objExcelWorksheetKonformerk.Cells(55, 5).value = pEichProzess.Eichprotokoll.Fallbeschleunigung_g
-
-            'excel dokument speichern
-            objExcelWorkbook.Save()
-            objExcelWorkbook.Close()
-            Try
-                System.Runtime.InteropServices.Marshal.ReleaseComObject(objExcelWorksheetKonformerk) : objExcelWorksheetKonformerk = Nothing
-
-            Catch ex As Exception
-
-            End Try
-            Try
-                System.Runtime.InteropServices.Marshal.ReleaseComObject(objExcelWorkbook) : objExcelWorkbook = Nothing
-
-            Catch ex As Exception
-
-            End Try
-            Try
-                System.Runtime.InteropServices.Marshal.ReleaseComObject(objExcelApp) : objExcelApp = Nothing
-
-            Catch ex As Exception
-
-            End Try
-
-            'excel dokument Anzeigen
-            Process.Start(CompletePath)
-        End If
-    End Sub
-
-    ''' <summary>
-    ''' Konformitätserklärung RUMÄNISCH
-    ''' </summary>
-    ''' <remarks></remarks>
-    Public Sub ExportKonformitaetssnachweisRU(ByVal objEichProzess As Eichprozess)
-        Dim pEichProzess As Eichprozess = objEichProzess
-
-        Dim objExcelApp As New Microsoft.Office.Interop.Excel.Application
-        Dim objExcelWorkbook As Microsoft.Office.Interop.Excel.Workbook
-        Dim objExcelWorksheetKonformerk As Microsoft.Office.Interop.Excel.Worksheet
-        Dim ExcelSavePath As String
-        Dim DocumentName As String = "Konformitätserklärung RO" & "_" & pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer & ".xls"
-        For Each c As Char In System.IO.Path.GetInvalidFileNameChars()
-            DocumentName = DocumentName.Replace(c, "_"c)
-        Next
-        Dim CompletePath As String
-        Dim b() As Byte = My.Resources.Konformitätserklärung_RO
-        Dim FolderBrowserDialog As New FolderBrowserDialog
-
-        'Template excel dokument kopieren an Ort den der Benutzer über FolderBrowserDialog angibt
-        If FolderBrowserDialog.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
-            ExcelSavePath = FolderBrowserDialog.SelectedPath
-
-            'Dokumentpfad erstellen
-            CompletePath = ExcelSavePath & "\" & DocumentName
-
-            'Dokument abspeichern
-            Try
-                System.IO.File.WriteAllBytes(CompletePath, b)
-            Catch ex As Exception
-                MessageBox.Show(ex.Message)
-                Exit Sub
-            End Try
-            'excel dokument öffnen
-            objExcelWorkbook = objExcelApp.Workbooks.Open(CompletePath)
-
-            'Worksheets zuweisen
-            objExcelWorksheetKonformerk = objExcelWorkbook.Worksheets("Konformerk.")
-
-            'Waagentyp befüllen in E21 auf Konformerk. (Werte kommen aus Typen)
-            If Not pEichProzess.Lookup_Auswertegeraet.Typ Is Nothing Then
-                objExcelWorksheetKonformerk.Cells(21, 5).value = pEichProzess.Lookup_Auswertegeraet.Typ.ToString
-            End If
-
-            'Fabrikationsnummer befüllen in E29 auf Konformerk.
-            objExcelWorksheetKonformerk.Cells(29, 5).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer
-
-            'Aufstellungsort befüllen in B55 auf Konformerk.
-            objExcelWorksheetKonformerk.Cells(55, 2).value = pEichProzess.Eichprotokoll.Identifikationsdaten_Aufstellungsort
-
-            'Fallbeschleunigung befüllen in E55 auf Konformerk.
-            objExcelWorksheetKonformerk.Cells(55, 5).value = pEichProzess.Eichprotokoll.Fallbeschleunigung_g
-
-            'excel dokument speichern
-            objExcelWorkbook.Save()
-            objExcelWorkbook.Close()
-            Try
-                System.Runtime.InteropServices.Marshal.ReleaseComObject(objExcelWorksheetKonformerk) : objExcelWorksheetKonformerk = Nothing
-
-            Catch ex As Exception
-
-            End Try
-            Try
-                System.Runtime.InteropServices.Marshal.ReleaseComObject(objExcelWorkbook) : objExcelWorkbook = Nothing
-
-            Catch ex As Exception
-
-            End Try
-            Try
-                System.Runtime.InteropServices.Marshal.ReleaseComObject(objExcelApp) : objExcelApp = Nothing
-
-            Catch ex As Exception
-
-            End Try
-
-            'excel dokument Anzeigen
-            Process.Start(CompletePath)
-        End If
-    End Sub
-
-    ''' <summary>
-    ''' Ersteichung DEUTSCH
-    ''' </summary>
-    ''' <remarks></remarks>
-    Public Sub ExportErsteichungDE(ByVal objEichProzess As Eichprozess)
+    Public Sub ExportErsteichung(ByVal objEichProzess As Eichprozess, ByVal Sprache As String)
         Dim pEichProzess As Eichprozess = objEichProzess
 
         Dim objWordApp As New Microsoft.Office.Interop.Word.Application
+        objWordApp.Visible = False
         Dim objWordDoc As Microsoft.Office.Interop.Word.Document
         Dim FolderBrowserDialog As New FolderBrowserDialog
         Dim WordSavePath As String
         Dim CompletePath As String
-        Dim b() As Byte = My.Resources.Ersteichung_DE
+        Dim b() As Byte
+
+        If Sprache = "DE" Then
+            b = My.Resources.Ersteichung_DE
+        ElseIf Sprache = "EN" Then
+            b = My.Resources.Ersteichung_EN
+        ElseIf Sprache = "PL" Then
+            b = My.Resources.Ersteichung_PL
+        End If
 
         If FolderBrowserDialog.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
             WordSavePath = FolderBrowserDialog.SelectedPath
-            CompletePath = WordSavePath & "\Ersteichung_DE" & "_" & pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer & ".doc"
+            CompletePath = WordSavePath & "\Ersteichung_" & Sprache & "_" & pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer & ".doc"
 
 
 
@@ -1079,97 +545,27 @@ Public Class clsOfficeExports
                 Exit Sub
             End Try
             objWordDoc = objWordApp.Documents.Open(CompletePath)
-            objWordApp.Visible = True
 
             With objWordDoc
                 .FormFields("Nummer").Result = ""
-                .FormFields("Typ").Result = pEichProzess.Lookup_Auswertegeraet.Typ & " - " & pEichProzess.Lookup_Waagentyp.Typ
                 .FormFields("FabrSerienNummer").Result = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer
                 .FormFields("Auftraggeber").Result = pEichProzess.Eichprotokoll.Identifikationsdaten_Benutzer
                 .FormFields("Ort").Result = pEichProzess.Eichprotokoll.Identifikationsdaten_Aufstellungsort.ToString
                 .FormFields("Fallbeschleunigung").Result = pEichProzess.Eichprotokoll.Fallbeschleunigung_g.ToString
                 .FormFields("ADatum").Result = pEichProzess.Eichprotokoll.Identifikationsdaten_Datum.Value.ToShortDateString
 
+
+                If Sprache = "DE" Then
+                    .FormFields("Typ").Result = pEichProzess.Lookup_Auswertegeraet.Typ & " - " & pEichProzess.Lookup_Waagentyp.Typ
+                ElseIf Sprache = "EN" Then
+                    .FormFields("Typ").Result = pEichProzess.Lookup_Auswertegeraet.Typ & " - " & pEichProzess.Lookup_Waagentyp.Typ_EN
+                ElseIf Sprache = "PL" Then
+                    .FormFields("Typ").Result = pEichProzess.Lookup_Auswertegeraet.Typ & " - " & pEichProzess.Lookup_Waagentyp.Typ_PL
+                End If
             End With
-        End If
-    End Sub
 
-    ''' <summary>
-    ''' Ersteichung ENGLISCH
-    ''' </summary>
-    ''' <remarks></remarks>
-    Public Sub ExportErsteichungEN(ByVal objEichProzess As Eichprozess)
-        Dim pEichProzess As Eichprozess = objEichProzess
-
-        Dim objWordApp As New Microsoft.Office.Interop.Word.Application
-        Dim objWordDoc As Microsoft.Office.Interop.Word.Document
-        Dim FolderBrowserDialog As New FolderBrowserDialog
-        Dim WordSavePath As String
-        Dim CompletePath As String
-        Dim b() As Byte = My.Resources.Ersteichung_EN
-
-        If FolderBrowserDialog.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
-            WordSavePath = FolderBrowserDialog.SelectedPath
-            CompletePath = WordSavePath & "\Ersteichung_EN" & "_" & pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer & ".doc"
-            'Hier wird das Dokument gespeichert.
-            Try
-                System.IO.File.WriteAllBytes(CompletePath, b)
-            Catch ex As Exception
-                MessageBox.Show(ex.Message)
-                Exit Sub
-            End Try
-            objWordDoc = objWordApp.Documents.Open(CompletePath)
             objWordApp.Visible = True
 
-            With objWordDoc
-                .FormFields("Nummer").Result = ""
-                .FormFields("Typ").Result = pEichProzess.Lookup_Auswertegeraet.Typ & " - " & pEichProzess.Lookup_Waagentyp.Typ_EN
-                .FormFields("FabrSerienNummer").Result = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer
-                .FormFields("Auftraggeber").Result = pEichProzess.Eichprotokoll.Identifikationsdaten_Benutzer
-                .FormFields("Ort").Result = pEichProzess.Eichprotokoll.Identifikationsdaten_Aufstellungsort.ToString
-                .FormFields("Fallbeschleunigung").Result = pEichProzess.Eichprotokoll.Fallbeschleunigung_g.ToString
-                .FormFields("ADatum").Result = pEichProzess.Eichprotokoll.Identifikationsdaten_Datum.Value.ToShortDateString
-            End With
-        End If
-    End Sub
-
-    ''' <summary>
-    ''' Ersteichung POLNISCH
-    ''' </summary>
-    ''' <remarks></remarks>
-    Public Sub ExportErsteichungPL(ByVal objEichProzess As Eichprozess)
-        Dim pEichProzess As Eichprozess = objEichProzess
-
-        Dim objWordApp As New Microsoft.Office.Interop.Word.Application
-        Dim objWordDoc As Microsoft.Office.Interop.Word.Document
-        Dim FolderBrowserDialog As New FolderBrowserDialog
-        Dim WordSavePath As String
-        Dim CompletePath As String
-        Dim b() As Byte = My.Resources.Ersteichung_PL
-
-        If FolderBrowserDialog.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
-            WordSavePath = FolderBrowserDialog.SelectedPath
-            CompletePath = WordSavePath & "\Ersteichung_PL" & "_" & pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer & ".doc"
-
-            'Hier wird das Dokument gespeichert.
-            Try
-                System.IO.File.WriteAllBytes(CompletePath, b)
-            Catch ex As Exception
-                MessageBox.Show(ex.Message)
-                Exit Sub
-            End Try
-            objWordDoc = objWordApp.Documents.Open(CompletePath)
-            objWordApp.Visible = True
-
-            With objWordDoc
-                .FormFields("Nummer").Result = ""
-                .FormFields("Typ").Result = pEichProzess.Lookup_Auswertegeraet.Typ & " - " & pEichProzess.Lookup_Waagentyp.Typ_PL
-                .FormFields("FabrSerienNummer").Result = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer
-                .FormFields("Auftraggeber").Result = pEichProzess.Eichprotokoll.Identifikationsdaten_Benutzer
-                .FormFields("Ort").Result = pEichProzess.Eichprotokoll.Identifikationsdaten_Aufstellungsort.ToString
-                .FormFields("Fallbeschleunigung").Result = pEichProzess.Eichprotokoll.Fallbeschleunigung_g.ToString
-                .FormFields("ADatum").Result = pEichProzess.Eichprotokoll.Identifikationsdaten_Datum.Value.ToShortDateString
-            End With
         End If
     End Sub
 
@@ -1197,7 +593,7 @@ Public Class clsOfficeExports
             'Hier wird das Dokument gespeichert.
 
             objWordDoc = objWordApp.Documents.Add()
-            objWordApp.Visible = True
+            objWordApp.Visible = False
 
             With objWordDoc
                 Dim r = objWordDoc.Range(Nothing, Nothing)
@@ -1554,6 +950,8 @@ Public Class clsOfficeExports
                     End Try
                 End Using
             End With
+            objWordApp.Visible = True
+
         End If
     End Sub
 

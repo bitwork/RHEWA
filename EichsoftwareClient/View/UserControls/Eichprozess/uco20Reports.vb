@@ -170,7 +170,7 @@ Public Class uco20Reports
     ''' <remarks></remarks>
     Private Sub RadButtonExportKompatibliaetsnachweisDE_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonExportKompatibliaetsnachweisDE.Click
         AktuellerStatusDirty = True
-        objOfficeExports.ExportKompatiblitaetsnachweisDE(objEichprozess)
+        objOfficeExports.ExportKompatiblitaetsnachweis(objEichprozess, "DE")
     End Sub
 
     ''' <summary>
@@ -181,7 +181,7 @@ Public Class uco20Reports
     ''' <remarks></remarks>
     Private Sub RadButtonExportKompatibliaetsnachweisEN_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonExportKompatibliaetsnachweisEN.Click
         AktuellerStatusDirty = True
-        objOfficeExports.ExportKompatiblitaetsnachweisEN(objEichprozess)
+        objOfficeExports.ExportKompatiblitaetsnachweis(objEichprozess, "EN")
     End Sub
 
     ''' <summary>
@@ -192,7 +192,7 @@ Public Class uco20Reports
     ''' <remarks></remarks>
     Private Sub RadButtonExportKonformitaetserklaerungDE_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonExportKonformitaetserklaerungDE.Click
         AktuellerStatusDirty = True
-        objOfficeExports.ExportKonformitaetssnachweisDE(objEichprozess)
+        objOfficeExports.ExportKonformitaetssnachweis(objEichprozess, "DE")
     End Sub
 
     ''' <summary>
@@ -203,7 +203,7 @@ Public Class uco20Reports
     ''' <remarks></remarks>
     Private Sub RadButtonExportKonformitaetserklaerungPL_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonExportKonformitaetserklaerungPL.Click
         AktuellerStatusDirty = True
-        objOfficeExports.ExportKonformitaetssnachweisPL(objEichprozess)
+        objOfficeExports.ExportKonformitaetssnachweis(objEichprozess, "PL")
     End Sub
 
     ''' <summary>
@@ -214,7 +214,7 @@ Public Class uco20Reports
     ''' <remarks></remarks>
     Private Sub RadButtonExportKonformitaetserklaerungRO_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonExportKonformitaetserklaerungRO.Click
         AktuellerStatusDirty = True
-        objOfficeExports.ExportKonformitaetssnachweisRU(objEichprozess)
+        objOfficeExports.ExportKonformitaetssnachweis(objEichprozess, "RO")
     End Sub
 
     ''' <summary>
@@ -225,7 +225,7 @@ Public Class uco20Reports
     ''' <remarks></remarks>
     Private Sub RadButtonExportErstEichungDE_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonExportErstEichungDE.Click
         AktuellerStatusDirty = True
-        objOfficeExports.ExportErsteichungDE(objEichprozess)
+        objOfficeExports.ExportErsteichung(objEichprozess, "DE")
 
     End Sub
 
@@ -237,7 +237,7 @@ Public Class uco20Reports
     ''' <remarks></remarks>
     Private Sub RadButtonExportErstEichungEN_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonExportErstEichungEN.Click
         AktuellerStatusDirty = True
-        objOfficeExports.ExportErsteichungEN(objEichprozess)
+        objOfficeExports.ExportErsteichung(objEichprozess, "EN")
     End Sub
 
     ''' <summary>
@@ -248,7 +248,7 @@ Public Class uco20Reports
     ''' <remarks></remarks>
     Private Sub RadButtonExportErstEichungPL_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonExportErstEichungPL.Click
         AktuellerStatusDirty = True
-        objOfficeExports.ExportErsteichungPL(objEichprozess)
+        objOfficeExports.ExportErsteichung(objEichprozess, "PL")
     End Sub
 
     ''' <summary>
