@@ -79,8 +79,9 @@ Public Class ucoEichprozessauswahlliste
                 My.Settings.Save()
 
             End If
-            RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.Value = My.Settings.RHEWAFilterMonatVon
             RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.Value = My.Settings.RHEWAFilterMonatBis
+
+            RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.Value = My.Settings.RHEWAFilterMonatVon
         Catch ex As Exception
             RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.Value = Date.Now.Date
         End Try
