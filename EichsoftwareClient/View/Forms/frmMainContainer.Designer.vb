@@ -51,10 +51,10 @@ Partial Class FrmMainContainer
         Me.lblHeadertext = New Telerik.WinControls.UI.LayoutControlLabelItem()
         Me.radlabelContextHelp = New Telerik.WinControls.UI.LayoutControlLabelItem()
         Me.LayoutControlSplitterItem1 = New Telerik.WinControls.UI.LayoutControlSplitterItem()
+        Me.LayoutControlSplitterItem2 = New Telerik.WinControls.UI.LayoutControlSplitterItem()
         Me.ImageListTrafficLight = New System.Windows.Forms.ImageList(Me.components)
         Me.LayoutControlItem3 = New Telerik.WinControls.UI.LayoutControlItem()
         Me.LayoutControlLabelItem1 = New Telerik.WinControls.UI.LayoutControlLabelItem()
-        Me.LayoutControlSplitterItem2 = New Telerik.WinControls.UI.LayoutControlSplitterItem()
         CType(Me.RadScrollablePanelTrafficLightBreadcrumb, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadScrollablePanelTrafficLightBreadcrumb.SuspendLayout()
         CType(Me.LayoutMaster, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -310,6 +310,11 @@ Partial Class FrmMainContainer
         Me.LayoutControlSplitterItem1.Bounds = New System.Drawing.Rectangle(974, 74, 4, 586)
         Me.LayoutControlSplitterItem1.Name = "LayoutControlSplitterItem1"
         '
+        'LayoutControlSplitterItem2
+        '
+        Me.LayoutControlSplitterItem2.Bounds = New System.Drawing.Rectangle(299, 70, 973, 4)
+        Me.LayoutControlSplitterItem2.Name = "LayoutControlSplitterItem2"
+        '
         'ImageListTrafficLight
         '
         Me.ImageListTrafficLight.ImageStream = CType(resources.GetObject("ImageListTrafficLight.ImageStream"), System.Windows.Forms.ImageListStreamer)
@@ -335,11 +340,6 @@ Partial Class FrmMainContainer
         Me.LayoutControlLabelItem1.DrawText = False
         Me.LayoutControlLabelItem1.Name = "LayoutControlLabelItem1"
         Me.LayoutControlLabelItem1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
-        '
-        'LayoutControlSplitterItem2
-        '
-        Me.LayoutControlSplitterItem2.Bounds = New System.Drawing.Rectangle(299, 70, 973, 4)
-        Me.LayoutControlSplitterItem2.Name = "LayoutControlSplitterItem2"
         '
         'FrmMainContainer
         '

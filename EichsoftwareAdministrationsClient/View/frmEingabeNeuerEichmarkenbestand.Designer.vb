@@ -51,7 +51,7 @@ Partial Class frmEingabeNeuerEichmarkenbestand
         Me.RadButton1.Location = New System.Drawing.Point(487, 263)
         Me.RadButton1.Name = "RadButton1"
         Me.RadButton1.Size = New System.Drawing.Size(110, 24)
-        Me.RadButton1.TabIndex = 8
+        Me.RadButton1.TabIndex = 9
         Me.RadButton1.Text = "OK"
         '
         'RadLabel1
@@ -59,7 +59,7 @@ Partial Class frmEingabeNeuerEichmarkenbestand
         Me.RadLabel1.Location = New System.Drawing.Point(12, 48)
         Me.RadLabel1.Name = "RadLabel1"
         Me.RadLabel1.Size = New System.Drawing.Size(165, 18)
-        Me.RadLabel1.TabIndex = 2
+        Me.RadLabel1.TabIndex = 1
         Me.RadLabel1.Text = "+ Neue Marken Benannte Stelle"
         '
         'RadTextBoxControl1
@@ -67,14 +67,14 @@ Partial Class frmEingabeNeuerEichmarkenbestand
         Me.RadTextBoxControl1.Location = New System.Drawing.Point(218, 48)
         Me.RadTextBoxControl1.Name = "RadTextBoxControl1"
         Me.RadTextBoxControl1.Size = New System.Drawing.Size(379, 20)
-        Me.RadTextBoxControl1.TabIndex = 3
+        Me.RadTextBoxControl1.TabIndex = 2
         '
         'RadLabel2
         '
         Me.RadLabel2.Location = New System.Drawing.Point(12, 74)
         Me.RadLabel2.Name = "RadLabel2"
         Me.RadLabel2.Size = New System.Drawing.Size(200, 18)
-        Me.RadLabel2.TabIndex = 4
+        Me.RadLabel2.TabIndex = 3
         Me.RadLabel2.Text = "+ Neue Marken Sicherungsmarke klein"
         '
         'RadTextBoxControl2
@@ -82,7 +82,7 @@ Partial Class frmEingabeNeuerEichmarkenbestand
         Me.RadTextBoxControl2.Location = New System.Drawing.Point(218, 74)
         Me.RadTextBoxControl2.Name = "RadTextBoxControl2"
         Me.RadTextBoxControl2.Size = New System.Drawing.Size(379, 20)
-        Me.RadTextBoxControl2.TabIndex = 5
+        Me.RadTextBoxControl2.TabIndex = 4
         Me.RadTextBoxControl2.TabStop = False
         '
         'RadLabel3
@@ -90,7 +90,7 @@ Partial Class frmEingabeNeuerEichmarkenbestand
         Me.RadLabel3.Location = New System.Drawing.Point(21, 12)
         Me.RadLabel3.Name = "RadLabel3"
         Me.RadLabel3.Size = New System.Drawing.Size(462, 18)
-        Me.RadLabel3.TabIndex = 9
+        Me.RadLabel3.TabIndex = 0
         Me.RadLabel3.Text = "Die hier eingetragenen Marken werden dem Bestand von Ausgeteilten Marken hinzugef" &
     "ügt"
         '
@@ -99,7 +99,7 @@ Partial Class frmEingabeNeuerEichmarkenbestand
         Me.RadTextBoxControl3.Location = New System.Drawing.Point(218, 100)
         Me.RadTextBoxControl3.Name = "RadTextBoxControl3"
         Me.RadTextBoxControl3.Size = New System.Drawing.Size(379, 20)
-        Me.RadTextBoxControl3.TabIndex = 11
+        Me.RadTextBoxControl3.TabIndex = 6
         Me.RadTextBoxControl3.TabStop = False
         '
         'RadLabel4
@@ -107,7 +107,7 @@ Partial Class frmEingabeNeuerEichmarkenbestand
         Me.RadLabel4.Location = New System.Drawing.Point(12, 100)
         Me.RadLabel4.Name = "RadLabel4"
         Me.RadLabel4.Size = New System.Drawing.Size(200, 18)
-        Me.RadLabel4.TabIndex = 10
+        Me.RadLabel4.TabIndex = 5
         Me.RadLabel4.Text = "+ Neue Marken Sicherungsmarke groß"
         '
         'RadTextBoxControl4
@@ -115,7 +115,7 @@ Partial Class frmEingabeNeuerEichmarkenbestand
         Me.RadTextBoxControl4.Location = New System.Drawing.Point(218, 126)
         Me.RadTextBoxControl4.Name = "RadTextBoxControl4"
         Me.RadTextBoxControl4.Size = New System.Drawing.Size(379, 20)
-        Me.RadTextBoxControl4.TabIndex = 13
+        Me.RadTextBoxControl4.TabIndex = 8
         Me.RadTextBoxControl4.TabStop = False
         '
         'RadLabel5
@@ -123,7 +123,7 @@ Partial Class frmEingabeNeuerEichmarkenbestand
         Me.RadLabel5.Location = New System.Drawing.Point(12, 126)
         Me.RadLabel5.Name = "RadLabel5"
         Me.RadLabel5.Size = New System.Drawing.Size(158, 18)
-        Me.RadLabel5.TabIndex = 12
+        Me.RadLabel5.TabIndex = 7
         Me.RadLabel5.Text = "+ Neue Marken Hinweismarke"
         '
         'frmEingabeNeuerEichmarkenbestand
