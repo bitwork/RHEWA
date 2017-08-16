@@ -62,6 +62,7 @@ Partial Class Uco21Versenden
         '
         resources.ApplyResources(Me.RadButtonAnRhewaSenden, "RadButtonAnRhewaSenden")
         Me.RadButtonAnRhewaSenden.Name = "RadButtonAnRhewaSenden"
+        Me.RadButtonAnRhewaSenden.TextWrap = True
         '
         'BackgroundWorkerUploadFTP
         '

@@ -117,68 +117,128 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="RadCheckBoxAusblendenGeloeschterDokumente.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 18</value>
+  <data name="RadGridViewAuswahlliste.MasterTemplate.Caption" xml:space="preserve">
+    <value />
   </data>
-  <data name="RadButtonEichprozessAblehnenRHEWA.Text" xml:space="preserve">
-    <value>Odrzucić</value>
-  </data>
-  <data name="RadPageViewPageAlle.Text" xml:space="preserve">
-    <value>Wszystkie</value>
-  </data>
-  <data name="RadCheckBoxLadeAlleEichprozesse.Text" xml:space="preserve">
-    <value>Wszystkie załadować ( niezależnie od filtra)</value>
-  </data>
-  <data name="RadButtonEichungAnsehenRHEWA.Text" xml:space="preserve">
-    <value>Popatrz</value>
-  </data>
-  <data name="Label3.Text" xml:space="preserve">
-    <value>do</value>
-  </data>
-  <data name="RadPageViewPageEigene.Text" xml:space="preserve">
-    <value>Własne</value>
-  </data>
-  <data name="Label1.Text" xml:space="preserve">
-    <value>Filtrowanie według miesiąca uploadu</value>
-  </data>
-  <data name="RadButtonEichprozessGenehmigenRHEWA.Text" xml:space="preserve">
-    <value>Zezwolić</value>
-  </data>
-  <data name="RadButtonEichprozessKopierenRHEWA.Text" xml:space="preserve">
-    <value>Skopiować</value>
-  </data>
-  <data name="RadButtonRefresh.Text" xml:space="preserve">
-    <value>Zaktualizować listę</value>
-  </data>
-  <data name="RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.CustomFormat" xml:space="preserve">
-    <value>MM.rrrr</value>
-  </data>
-  <data name="RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.CustomFormat" xml:space="preserve">
-    <value>MM.rrrr</value>
-  </data>
-  <data name="RadPageView1.Text" xml:space="preserve">
-    <value>własne</value>
-  </data>
-  <data name="Label2.Text" xml:space="preserve">
-    <value>z</value>
-  </data>
-  <data name="RadCheckBoxAusblendenClientGeloeschterDokumente.Text" xml:space="preserve">
-    <value>&lt;html&gt;  Wskazać uprzednio &lt;br /&gt;  uktyte procesy legalizacji&lt;/html&gt;</value>
-  </data>
-  <data name="RadButtonClientNeu.Text" xml:space="preserve">
-    <value>&lt;html&gt;&lt;p&gt;Tworzenie&lt;/p&gt;&lt;p&gt;procesu&lt;/p&gt;&lt;/html&gt;</value>
-  </data>
-  <data name="RadButtonClientAusblenden.Text" xml:space="preserve">
-    <value>Proces ukryć</value>
-  </data>
-  <data name="RadButtonClientBearbeiten.Text" xml:space="preserve">
-    <value>Proces opracować</value>
+  <data name="RadButtonProtokollAblegen.Text" xml:space="preserve">
+    <value>Zapisz niekompletny proces w chmurze</value>
   </data>
   <data name="RadButtonClientUpdateDatabase.Text" xml:space="preserve">
     <value>Sprawdzić status wysłanych procesów</value>
   </data>
-  <data name="RadButtonProtokollAblegen.Text" xml:space="preserve">
-    <value>Zapisz niekompletny proces w Cloud</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="RadCheckBoxAusblendenClientGeloeschterDokumente.Location" type="System.Drawing.Point, System.Drawing">
+    <value>256, 418</value>
+  </data>
+  <data name="RadCheckBoxAusblendenClientGeloeschterDokumente.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 18</value>
+  </data>
+  <data name="RadCheckBoxAusblendenClientGeloeschterDokumente.Text" xml:space="preserve">
+    <value>Pokazać ukryte procesy</value>
+  </data>
+  <data name="RadButtonClientAusblenden.Text" xml:space="preserve">
+    <value>Proces ukryć</value>
+  </data>
+  <data name="RadButtonClientNeu.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;Tworzenie&lt;/p&gt;&lt;p&gt;procesu&lt;/p&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="RadButtonClientBearbeiten.Text" xml:space="preserve">
+    <value>Proces opracować</value>
+  </data>
+  <data name="RadPageViewPageEigene.Text" xml:space="preserve">
+    <value>Własne</value>
+  </data>
+  <data name="RadGridViewRHEWAAlle.MasterTemplate.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadGridViewRHEWAAlle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1097, 379</value>
+  </data>
+  <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>354, 13</value>
+  </data>
+  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>19, 18</value>
+  </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>do</value>
+  </data>
+  <data name="RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.CustomFormat" xml:space="preserve">
+    <value>MM.rrrr</value>
+  </data>
+  <data name="RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.Location" type="System.Drawing.Point, System.Drawing">
+    <value>386, 11</value>
+  </data>
+  <data name="RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.Text" xml:space="preserve">
+    <value>07.rrrr</value>
+  </data>
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>11, 18</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>z</value>
+  </data>
+  <data name="RadButtonRefresh.Location" type="System.Drawing.Point, System.Drawing">
+    <value>930, 5</value>
+  </data>
+  <data name="RadButtonRefresh.Text" xml:space="preserve">
+    <value>Zaktualizować listę</value>
+  </data>
+  <data name="RadCheckBoxLadeAlleEichprozesse.Location" type="System.Drawing.Point, System.Drawing">
+    <value>690, 12</value>
+  </data>
+  <data name="RadCheckBoxLadeAlleEichprozesse.Size" type="System.Drawing.Size, System.Drawing">
+    <value>234, 18</value>
+  </data>
+  <data name="RadCheckBoxLadeAlleEichprozesse.Text" xml:space="preserve">
+    <value>Wszystkie załadować ( niezależnie od filtra)</value>
+  </data>
+  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>191, 18</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Filtrowanie według miesiąca uploadu</value>
+  </data>
+  <data name="RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.CustomFormat" xml:space="preserve">
+    <value>MM.rrrr</value>
+  </data>
+  <data name="RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.Location" type="System.Drawing.Point, System.Drawing">
+    <value>259, 11</value>
+  </data>
+  <data name="RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.Text" xml:space="preserve">
+    <value>07.rrrr</value>
+  </data>
+  <data name="RadButtonEichprozessKopierenRHEWA.Location" type="System.Drawing.Point, System.Drawing">
+    <value>874, 432</value>
+  </data>
+  <data name="RadButtonEichprozessKopierenRHEWA.Text" xml:space="preserve">
+    <value>Skopiować</value>
+  </data>
+  <data name="RadButtonEichprozessAblehnenRHEWA.Location" type="System.Drawing.Point, System.Drawing">
+    <value>640, 432</value>
+  </data>
+  <data name="RadButtonEichprozessAblehnenRHEWA.Text" xml:space="preserve">
+    <value>Odrzucić</value>
+  </data>
+  <data name="RadButtonEichprozessGenehmigenRHEWA.Location" type="System.Drawing.Point, System.Drawing">
+    <value>524, 432</value>
+  </data>
+  <data name="RadButtonEichprozessGenehmigenRHEWA.Text" xml:space="preserve">
+    <value>Zezwolić</value>
+  </data>
+  <data name="RadButtonEichungAnsehenRHEWA.Location" type="System.Drawing.Point, System.Drawing">
+    <value>990, 432</value>
+  </data>
+  <data name="RadButtonEichungAnsehenRHEWA.Text" xml:space="preserve">
+    <value>Popatrz</value>
+  </data>
+  <data name="RadPageViewPageAlle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1114, 476</value>
+  </data>
+  <data name="RadPageViewPageAlle.Text" xml:space="preserve">
+    <value>Wszystkie</value>
+  </data>
+  <data name="RadPageView1.Text" xml:space="preserve">
+    <value>własne</value>
   </data>
 </root>

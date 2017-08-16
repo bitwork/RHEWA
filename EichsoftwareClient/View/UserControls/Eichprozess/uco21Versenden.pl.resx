@@ -121,13 +121,7 @@
   <data name="RadButtonUploadPath.Location" type="System.Drawing.Point, System.Drawing">
     <value>672, 25</value>
   </data>
-  <data name="RadLabel1.Text" xml:space="preserve">
-    <value>Upload</value>
-  </data>
-  <data name="OpenFileDialog1.Filter" xml:space="preserve">
-    <value>ZIP files (*.zip)|*.zip|RAR files (*.rar)|*.rar|7-ZIP files (*.7z)|*.7z</value>
-  </data>
   <data name="RadButtonAnRhewaSenden.Text" xml:space="preserve">
-    <value>Prześlij protokół pomiarowy do RHEWA</value>
+    <value>Wyślij do RHEWA</value>
   </data>
 </root>

@@ -232,7 +232,7 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadPageViewPageAlle.Controls.Add(Me.RadButtonEichprozessGenehmigenRHEWA)
         Me.RadPageViewPageAlle.Controls.Add(Me.RadButtonEichungAnsehenRHEWA)
         Me.RadPageViewPageAlle.Controls.Add(Me.FlowLayoutPanel1)
-        Me.RadPageViewPageAlle.ItemSize = New System.Drawing.SizeF(35.0!, 28.0!)
+        Me.RadPageViewPageAlle.ItemSize = New System.Drawing.SizeF(27.0!, 28.0!)
         resources.ApplyResources(Me.RadPageViewPageAlle, "RadPageViewPageAlle")
         Me.RadPageViewPageAlle.Name = "RadPageViewPageAlle"
         '

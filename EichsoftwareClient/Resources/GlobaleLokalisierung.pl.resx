@@ -531,7 +531,7 @@ RC3          3         15000                        0           2        1100</v
     <value>Wynik dowodu kompatybilności</value>
   </data>
   <data name="Ueberschrift_Stammdaten" xml:space="preserve">
-    <value>Wpis danych podstawowych</value>
+    <value>Wpis danych</value>
   </data>
   <data name="Waagenart" xml:space="preserve">
     <value>Rodzaj wagi</value>
@@ -619,7 +619,7 @@ RC3          3         15000                        0           2        1100</v
     <value>Zabezpieczenie danych legalizacyjnych i innych danych</value>
   </data>
   <data name="Ueberschrift_PruefungFallbeschleunigung" xml:space="preserve">
-    <value>Uwzględnienie przyspieszenia grawitacyjnego</value>
+    <value>Przyspieszenie grawitacyjne</value>
   </data>
   <data name="Ueberschrift_PruefungRollendelasten" xml:space="preserve">
     <value>Waga dla ciężarów tocznych</value>

@@ -166,12 +166,12 @@ Dane nie zostaną skasowane. Po wybraniu "Synchronizuj wszystko", zostaną wszys
     <value>Przerwać</value>
   </data>
   <data name="RadButtonGridSettingsZuruecksetzen.Text" xml:space="preserve">
-    <value>Rezetowanie formatu tabeli</value>
+    <value>Resetowanie formatu tabeli</value>
+  </data>
+  <data name="cmdSendDiagnosticData.Text" xml:space="preserve">
+    <value>Prześlij dane diagnostyczne do RHEWA</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Konfiguracja</value>
-  </data>
-  <data name="cmdSendDiagnosticData.Text" xml:space="preserve">
-    <value>Send diagnostic data to RHEWA</value>
   </data>
 </root>

@@ -320,6 +320,12 @@ Public Class clsDBFunctions
         updateScript = "ALTER TABLE [Eichprotokoll] Alter Column  [Komponenten_WaegezellenFabriknummer] nvarchar(250) NULL"
         DBContext.Database.ExecuteSqlCommand(updateScript)
 
+        'übersätzung an Status 
+        DBContext.Lookup_Vorgangsstatus.Where(Function(x) x.ID = 2).First.Status_PL = "Wpis danych"
+        DBContext.Lookup_Vorgangsstatus.Where(Function(x) x.ID = 18).First.Status_PL = "Przyspieszenie grawitacyjne"
+        DBContext.Lookup_Vorgangsstatus.Where(Function(x) x.ID = 21).First.Status_PL = "Wysłane"
+
+
 
         Dim objVersion = DBContext.Datenbankversion.FirstOrDefault
         If Not objVersion Is Nothing Then
