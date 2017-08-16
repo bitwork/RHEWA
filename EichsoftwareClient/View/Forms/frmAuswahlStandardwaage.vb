@@ -58,8 +58,8 @@
                                         'anzeigen des Dialogs zur Bearbeitung der Eichung
                                         Dim f As New FrmMainContainer(objClientEichprozess)
                                         f.ShowDialog()
-                                        'nach dem schließen des Dialogs aktualisieren
-                                        Me.Close()
+                                        ''nach dem schließen des Dialogs aktualisieren
+                                        'Me.Close()
                                     End If
                                 End If
                             End If
