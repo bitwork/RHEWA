@@ -702,7 +702,7 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
     Private Sub RadButtonAddMarkenbestand_Click(sender As Object, e As EventArgs) Handles RadButtonAddMarkenbestand.Click
         For Each row In RadGridView1.MasterTemplate.SelectedRows
 
-            If row.Cells("ZurBearbeitungGesperrtDurch").Value.Equals(System.Environment.UserName) Or row.Cells("ZurBearbeitungGesperrtDurch").Value = "" Then
+            If row.Cells("ZurBearbeitungGesperrtDurch").Value Is Nothing OrElse row.Cells("ZurBearbeitungGesperrtDurch").Value.Equals(System.Environment.UserName) Or row.Cells("ZurBearbeitungGesperrtDurch").Value = "" Then
                 Dim SelectedId = row.Cells("ID").Value
 
                 Dim f As New frmEingabeNeuerEichmarkenbestand(SelectedId)
