@@ -127,6 +127,15 @@
   <data name="lblPflichtfeld1.Location" type="System.Drawing.Point, System.Drawing">
     <value>394, 181</value>
   </data>
+  <data name="RadButton1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
+  </data>
+  <data name="RadButton1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>556, 252</value>
+  </data>
+  <data name="RadButton1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 78</value>
+  </data>
   <data name="RadButton1.Text" xml:space="preserve">
     <value>Pokaż granicę błędu legalizacyjnego</value>
   </data>
@@ -222,6 +231,15 @@
   </data>
   <data name="RadTextBoxControlAnzeigeLinks1.Location" type="System.Drawing.Point, System.Drawing">
     <value>206, 180</value>
+  </data>
+  <data name="RadButtonShowEFG.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
+  </data>
+  <data name="RadButtonShowEFG.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 256</value>
+  </data>
+  <data name="RadButtonShowEFG.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 80</value>
   </data>
   <data name="RadButtonShowEFG.Text" xml:space="preserve">
     <value>Pokaż granicę błędu legalizacyjnego</value>

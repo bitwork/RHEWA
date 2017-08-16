@@ -70,11 +70,11 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadTextBoxControlFehlerLinks2 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlFehlerLinks3 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxAuffahrtLinks1 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.RadCheckBoxlblAuffahrtRechts3 = New Telerik.WinControls.UI.RadCheckBox()
+        Me.RadCheckBoxAuffahrtRechts3 = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadCheckBoxAuffahrtLinks2 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.RadCheckBoxlblAuffahrtRechts2 = New Telerik.WinControls.UI.RadCheckBox()
+        Me.RadCheckBoxAuffahrtRechts2 = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadCheckBoxAuffahrtLinks3 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.RadCheckBoxlblAuffahrtRechts1 = New Telerik.WinControls.UI.RadCheckBox()
+        Me.RadCheckBoxAuffahrtRechts1 = New Telerik.WinControls.UI.RadCheckBox()
         Me.lblBelastungsstelleRechts = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlFehlerRechts3 = New Telerik.WinControls.UI.RadTextBox()
         Me.lblAuffahrtRechts1 = New Telerik.WinControls.UI.RadLabel()
@@ -143,11 +143,11 @@ Partial Class uco13PruefungRollendeLasten
         CType(Me.RadTextBoxControlFehlerLinks2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlFehlerLinks3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadCheckBoxAuffahrtLinks1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadCheckBoxlblAuffahrtRechts3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadCheckBoxAuffahrtRechts3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadCheckBoxAuffahrtLinks2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadCheckBoxlblAuffahrtRechts2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadCheckBoxAuffahrtRechts2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadCheckBoxAuffahrtLinks3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadCheckBoxlblAuffahrtRechts1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadCheckBoxAuffahrtRechts1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblBelastungsstelleRechts, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlFehlerRechts3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblAuffahrtRechts1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -177,7 +177,6 @@ Partial Class uco13PruefungRollendeLasten
         '
         'RadScrollablePanel1.PanelContainer
         '
-        resources.ApplyResources(Me.RadScrollablePanel1.PanelContainer, "RadScrollablePanel1.PanelContainer")
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.lblPflichtfeld6)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.lblPflichtfeld5)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.lblPflichtfeld4)
@@ -223,11 +222,11 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadTextBoxControlFehlerLinks2)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadTextBoxControlFehlerLinks3)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadCheckBoxAuffahrtLinks1)
-        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadCheckBoxlblAuffahrtRechts3)
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadCheckBoxAuffahrtRechts3)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadCheckBoxAuffahrtLinks2)
-        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadCheckBoxlblAuffahrtRechts2)
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadCheckBoxAuffahrtRechts2)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadCheckBoxAuffahrtLinks3)
-        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadCheckBoxlblAuffahrtRechts1)
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadCheckBoxAuffahrtRechts1)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.lblBelastungsstelleRechts)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadTextBoxControlFehlerRechts3)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.lblAuffahrtRechts1)
@@ -246,73 +245,75 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadTextBoxControlLastRechts3)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.lblEFGWertRechts)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadTextBoxControlLastRechts1)
+        resources.ApplyResources(Me.RadScrollablePanel1.PanelContainer, "RadScrollablePanel1.PanelContainer")
         '
         'lblPflichtfeld6
         '
-        resources.ApplyResources(Me.lblPflichtfeld6, "lblPflichtfeld6")
         Me.lblPflichtfeld6.ForeColor = System.Drawing.Color.Red
+        resources.ApplyResources(Me.lblPflichtfeld6, "lblPflichtfeld6")
         Me.lblPflichtfeld6.Name = "lblPflichtfeld6"
         '
         'lblPflichtfeld5
         '
-        resources.ApplyResources(Me.lblPflichtfeld5, "lblPflichtfeld5")
         Me.lblPflichtfeld5.ForeColor = System.Drawing.Color.Red
+        resources.ApplyResources(Me.lblPflichtfeld5, "lblPflichtfeld5")
         Me.lblPflichtfeld5.Name = "lblPflichtfeld5"
         '
         'lblPflichtfeld4
         '
-        resources.ApplyResources(Me.lblPflichtfeld4, "lblPflichtfeld4")
         Me.lblPflichtfeld4.ForeColor = System.Drawing.Color.Red
+        resources.ApplyResources(Me.lblPflichtfeld4, "lblPflichtfeld4")
         Me.lblPflichtfeld4.Name = "lblPflichtfeld4"
         '
         'lblPflichtfeld3
         '
-        resources.ApplyResources(Me.lblPflichtfeld3, "lblPflichtfeld3")
         Me.lblPflichtfeld3.ForeColor = System.Drawing.Color.Red
+        resources.ApplyResources(Me.lblPflichtfeld3, "lblPflichtfeld3")
         Me.lblPflichtfeld3.Name = "lblPflichtfeld3"
         '
         'lblPflichtfeld2
         '
-        resources.ApplyResources(Me.lblPflichtfeld2, "lblPflichtfeld2")
         Me.lblPflichtfeld2.ForeColor = System.Drawing.Color.Red
+        resources.ApplyResources(Me.lblPflichtfeld2, "lblPflichtfeld2")
         Me.lblPflichtfeld2.Name = "lblPflichtfeld2"
         '
         'lblPflichtfeld1
         '
-        resources.ApplyResources(Me.lblPflichtfeld1, "lblPflichtfeld1")
         Me.lblPflichtfeld1.ForeColor = System.Drawing.Color.Red
+        resources.ApplyResources(Me.lblPflichtfeld1, "lblPflichtfeld1")
         Me.lblPflichtfeld1.Name = "lblPflichtfeld1"
         '
         'RadButton1
         '
         resources.ApplyResources(Me.RadButton1, "RadButton1")
         Me.RadButton1.Name = "RadButton1"
+        Me.RadButton1.TextWrap = True
         '
         'PictureBox18
         '
-        resources.ApplyResources(Me.PictureBox18, "PictureBox18")
         Me.PictureBox18.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBox18, "PictureBox18")
         Me.PictureBox18.Name = "PictureBox18"
         Me.PictureBox18.TabStop = False
         '
         'PictureBox79
         '
-        resources.ApplyResources(Me.PictureBox79, "PictureBox79")
         Me.PictureBox79.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBox79, "PictureBox79")
         Me.PictureBox79.Name = "PictureBox79"
         Me.PictureBox79.TabStop = False
         '
         'PictureBox2
         '
-        resources.ApplyResources(Me.PictureBox2, "PictureBox2")
         Me.PictureBox2.Image = Global.EichsoftwareClient.My.Resources.Resources.Verschiebeweg_GB
+        resources.ApplyResources(Me.PictureBox2, "PictureBox2")
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.TabStop = False
         '
         'PictureBox15
         '
-        resources.ApplyResources(Me.PictureBox15, "PictureBox15")
         Me.PictureBox15.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBox15, "PictureBox15")
         Me.PictureBox15.Name = "PictureBox15"
         Me.PictureBox15.TabStop = False
         '
@@ -323,8 +324,8 @@ Partial Class uco13PruefungRollendeLasten
         '
         'PictureBox16
         '
-        resources.ApplyResources(Me.PictureBox16, "PictureBox16")
         Me.PictureBox16.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBox16, "PictureBox16")
         Me.PictureBox16.Name = "PictureBox16"
         Me.PictureBox16.TabStop = False
         '
@@ -335,8 +336,8 @@ Partial Class uco13PruefungRollendeLasten
         '
         'PictureBox17
         '
-        resources.ApplyResources(Me.PictureBox17, "PictureBox17")
         Me.PictureBox17.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBox17, "PictureBox17")
         Me.PictureBox17.Name = "PictureBox17"
         Me.PictureBox17.TabStop = False
         '
@@ -347,8 +348,8 @@ Partial Class uco13PruefungRollendeLasten
         '
         'PictureBox12
         '
-        resources.ApplyResources(Me.PictureBox12, "PictureBox12")
         Me.PictureBox12.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBox12, "PictureBox12")
         Me.PictureBox12.Name = "PictureBox12"
         Me.PictureBox12.TabStop = False
         '
@@ -359,8 +360,8 @@ Partial Class uco13PruefungRollendeLasten
         '
         'PictureBox13
         '
-        resources.ApplyResources(Me.PictureBox13, "PictureBox13")
         Me.PictureBox13.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBox13, "PictureBox13")
         Me.PictureBox13.Name = "PictureBox13"
         Me.PictureBox13.TabStop = False
         '
@@ -371,8 +372,8 @@ Partial Class uco13PruefungRollendeLasten
         '
         'PictureBox14
         '
-        resources.ApplyResources(Me.PictureBox14, "PictureBox14")
         Me.PictureBox14.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBox14, "PictureBox14")
         Me.PictureBox14.Name = "PictureBox14"
         Me.PictureBox14.TabStop = False
         '
@@ -383,8 +384,8 @@ Partial Class uco13PruefungRollendeLasten
         '
         'PictureBox9
         '
-        resources.ApplyResources(Me.PictureBox9, "PictureBox9")
         Me.PictureBox9.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBox9, "PictureBox9")
         Me.PictureBox9.Name = "PictureBox9"
         Me.PictureBox9.TabStop = False
         '
@@ -395,8 +396,8 @@ Partial Class uco13PruefungRollendeLasten
         '
         'PictureBox10
         '
-        resources.ApplyResources(Me.PictureBox10, "PictureBox10")
         Me.PictureBox10.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBox10, "PictureBox10")
         Me.PictureBox10.Name = "PictureBox10"
         Me.PictureBox10.TabStop = False
         '
@@ -407,8 +408,8 @@ Partial Class uco13PruefungRollendeLasten
         '
         'PictureBox11
         '
-        resources.ApplyResources(Me.PictureBox11, "PictureBox11")
         Me.PictureBox11.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBox11, "PictureBox11")
         Me.PictureBox11.Name = "PictureBox11"
         Me.PictureBox11.TabStop = False
         '
@@ -421,8 +422,8 @@ Partial Class uco13PruefungRollendeLasten
         '
         'PictureBox8
         '
-        resources.ApplyResources(Me.PictureBox8, "PictureBox8")
         Me.PictureBox8.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBox8, "PictureBox8")
         Me.PictureBox8.Name = "PictureBox8"
         Me.PictureBox8.TabStop = False
         '
@@ -434,8 +435,8 @@ Partial Class uco13PruefungRollendeLasten
         '
         'PictureBox7
         '
-        resources.ApplyResources(Me.PictureBox7, "PictureBox7")
         Me.PictureBox7.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBox7, "PictureBox7")
         Me.PictureBox7.Name = "PictureBox7"
         Me.PictureBox7.TabStop = False
         '
@@ -444,11 +445,12 @@ Partial Class uco13PruefungRollendeLasten
         resources.ApplyResources(Me.RadTextBoxControllastLinks3, "RadTextBoxControllastLinks3")
         Me.RadTextBoxControllastLinks3.MaxLength = 20
         Me.RadTextBoxControllastLinks3.Name = "RadTextBoxControllastLinks3"
+        Me.RadTextBoxControllastLinks3.TabStop = False
         '
         'PictureBox6
         '
-        resources.ApplyResources(Me.PictureBox6, "PictureBox6")
         Me.PictureBox6.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBox6, "PictureBox6")
         Me.PictureBox6.Name = "PictureBox6"
         Me.PictureBox6.TabStop = False
         '
@@ -457,6 +459,7 @@ Partial Class uco13PruefungRollendeLasten
         resources.ApplyResources(Me.RadTextBoxControlLastLinks2, "RadTextBoxControlLastLinks2")
         Me.RadTextBoxControlLastLinks2.MaxLength = 20
         Me.RadTextBoxControlLastLinks2.Name = "RadTextBoxControlLastLinks2"
+        Me.RadTextBoxControlLastLinks2.TabStop = False
         '
         'RadTextBoxControlAnzeigeLinks1
         '
@@ -468,6 +471,7 @@ Partial Class uco13PruefungRollendeLasten
         '
         resources.ApplyResources(Me.RadButtonShowEFG, "RadButtonShowEFG")
         Me.RadButtonShowEFG.Name = "RadButtonShowEFG"
+        Me.RadButtonShowEFG.TextWrap = True
         '
         'RadTextBoxControlAnzeigeLinks2
         '
@@ -477,8 +481,8 @@ Partial Class uco13PruefungRollendeLasten
         '
         'PictureBox5
         '
-        resources.ApplyResources(Me.PictureBox5, "PictureBox5")
         Me.PictureBox5.Image = Global.EichsoftwareClient.My.Resources.Resources.LKW_Gedreht
+        resources.ApplyResources(Me.PictureBox5, "PictureBox5")
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.TabStop = False
         '
@@ -490,8 +494,8 @@ Partial Class uco13PruefungRollendeLasten
         '
         'PictureBox4
         '
-        resources.ApplyResources(Me.PictureBox4, "PictureBox4")
         Me.PictureBox4.Image = Global.EichsoftwareClient.My.Resources.Resources.LKW
+        resources.ApplyResources(Me.PictureBox4, "PictureBox4")
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.TabStop = False
         '
@@ -505,8 +509,8 @@ Partial Class uco13PruefungRollendeLasten
         '
         'PictureBox3
         '
-        resources.ApplyResources(Me.PictureBox3, "PictureBox3")
         Me.PictureBox3.Image = Global.EichsoftwareClient.My.Resources.Resources.Fahrzeug_Wenden_GB
+        resources.ApplyResources(Me.PictureBox3, "PictureBox3")
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.TabStop = False
         '
@@ -532,11 +536,11 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadCheckBoxAuffahrtLinks1.Name = "RadCheckBoxAuffahrtLinks1"
         Me.RadCheckBoxAuffahrtLinks1.TabStop = False
         '
-        'RadCheckBoxlblAuffahrtRechts3
+        'RadCheckBoxAuffahrtRechts3
         '
-        resources.ApplyResources(Me.RadCheckBoxlblAuffahrtRechts3, "RadCheckBoxlblAuffahrtRechts3")
-        Me.RadCheckBoxlblAuffahrtRechts3.Name = "RadCheckBoxlblAuffahrtRechts3"
-        Me.RadCheckBoxlblAuffahrtRechts3.TabStop = False
+        resources.ApplyResources(Me.RadCheckBoxAuffahrtRechts3, "RadCheckBoxAuffahrtRechts3")
+        Me.RadCheckBoxAuffahrtRechts3.Name = "RadCheckBoxAuffahrtRechts3"
+        Me.RadCheckBoxAuffahrtRechts3.TabStop = False
         '
         'RadCheckBoxAuffahrtLinks2
         '
@@ -544,11 +548,11 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadCheckBoxAuffahrtLinks2.Name = "RadCheckBoxAuffahrtLinks2"
         Me.RadCheckBoxAuffahrtLinks2.TabStop = False
         '
-        'RadCheckBoxlblAuffahrtRechts2
+        'RadCheckBoxAuffahrtRechts2
         '
-        resources.ApplyResources(Me.RadCheckBoxlblAuffahrtRechts2, "RadCheckBoxlblAuffahrtRechts2")
-        Me.RadCheckBoxlblAuffahrtRechts2.Name = "RadCheckBoxlblAuffahrtRechts2"
-        Me.RadCheckBoxlblAuffahrtRechts2.TabStop = False
+        resources.ApplyResources(Me.RadCheckBoxAuffahrtRechts2, "RadCheckBoxAuffahrtRechts2")
+        Me.RadCheckBoxAuffahrtRechts2.Name = "RadCheckBoxAuffahrtRechts2"
+        Me.RadCheckBoxAuffahrtRechts2.TabStop = False
         '
         'RadCheckBoxAuffahrtLinks3
         '
@@ -556,11 +560,11 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadCheckBoxAuffahrtLinks3.Name = "RadCheckBoxAuffahrtLinks3"
         Me.RadCheckBoxAuffahrtLinks3.TabStop = False
         '
-        'RadCheckBoxlblAuffahrtRechts1
+        'RadCheckBoxAuffahrtRechts1
         '
-        resources.ApplyResources(Me.RadCheckBoxlblAuffahrtRechts1, "RadCheckBoxlblAuffahrtRechts1")
-        Me.RadCheckBoxlblAuffahrtRechts1.Name = "RadCheckBoxlblAuffahrtRechts1"
-        Me.RadCheckBoxlblAuffahrtRechts1.TabStop = False
+        resources.ApplyResources(Me.RadCheckBoxAuffahrtRechts1, "RadCheckBoxAuffahrtRechts1")
+        Me.RadCheckBoxAuffahrtRechts1.Name = "RadCheckBoxAuffahrtRechts1"
+        Me.RadCheckBoxAuffahrtRechts1.TabStop = False
         '
         'lblBelastungsstelleRechts
         '
@@ -642,8 +646,8 @@ Partial Class uco13PruefungRollendeLasten
         '
         'PictureBox1
         '
-        resources.ApplyResources(Me.PictureBox1, "PictureBox1")
         Me.PictureBox1.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBox1, "PictureBox1")
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.TabStop = False
         '
@@ -652,6 +656,7 @@ Partial Class uco13PruefungRollendeLasten
         resources.ApplyResources(Me.RadTextBoxControlLastRechts2, "RadTextBoxControlLastRechts2")
         Me.RadTextBoxControlLastRechts2.MaxLength = 20
         Me.RadTextBoxControlLastRechts2.Name = "RadTextBoxControlLastRechts2"
+        Me.RadTextBoxControlLastRechts2.TabStop = False
         '
         'lblEFGRechts
         '
@@ -663,6 +668,7 @@ Partial Class uco13PruefungRollendeLasten
         resources.ApplyResources(Me.RadTextBoxControlLastRechts3, "RadTextBoxControlLastRechts3")
         Me.RadTextBoxControlLastRechts3.MaxLength = 20
         Me.RadTextBoxControlLastRechts3.Name = "RadTextBoxControlLastRechts3"
+        Me.RadTextBoxControlLastRechts3.TabStop = False
         '
         'lblEFGWertRechts
         '
@@ -676,6 +682,7 @@ Partial Class uco13PruefungRollendeLasten
         resources.ApplyResources(Me.RadTextBoxControlLastRechts1, "RadTextBoxControlLastRechts1")
         Me.RadTextBoxControlLastRechts1.MaxLength = 20
         Me.RadTextBoxControlLastRechts1.Name = "RadTextBoxControlLastRechts1"
+        Me.RadTextBoxControlLastRechts1.TabStop = False
         '
         'PanelContainer
         '
@@ -736,11 +743,11 @@ Partial Class uco13PruefungRollendeLasten
         CType(Me.RadTextBoxControlFehlerLinks2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlFehlerLinks3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadCheckBoxAuffahrtLinks1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadCheckBoxlblAuffahrtRechts3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadCheckBoxAuffahrtRechts3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadCheckBoxAuffahrtLinks2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadCheckBoxlblAuffahrtRechts2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadCheckBoxAuffahrtRechts2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadCheckBoxAuffahrtLinks3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadCheckBoxlblAuffahrtRechts1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadCheckBoxAuffahrtRechts1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblBelastungsstelleRechts, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlFehlerRechts3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblAuffahrtRechts1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -793,11 +800,11 @@ Partial Class uco13PruefungRollendeLasten
     Friend WithEvents RadTextBoxControlFehlerLinks3 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlLastRechts1 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxAuffahrtLinks1 As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents RadCheckBoxlblAuffahrtRechts3 As Telerik.WinControls.UI.RadCheckBox
+    Friend WithEvents RadCheckBoxAuffahrtRechts3 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents RadCheckBoxAuffahrtLinks2 As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents RadCheckBoxlblAuffahrtRechts2 As Telerik.WinControls.UI.RadCheckBox
+    Friend WithEvents RadCheckBoxAuffahrtRechts2 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents RadCheckBoxAuffahrtLinks3 As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents RadCheckBoxlblAuffahrtRechts1 As Telerik.WinControls.UI.RadCheckBox
+    Friend WithEvents RadCheckBoxAuffahrtRechts1 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents lblEFGWertRechts As Telerik.WinControls.UI.RadMaskedEditBox
     Friend WithEvents lblEFGRechts As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblFehlerRechts As Telerik.WinControls.UI.RadLabel

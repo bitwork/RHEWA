@@ -42,6 +42,13 @@ Public Class uco13PruefungRollendeLasten
         End If
         EichprozessStatusReihenfolge = GlobaleEnumeratoren.enuEichprozessStatus.WaagenFuerRollendeLasten
 
+        LadeBilder()
+
+        'daten füllen
+        LoadFromDatabase()
+    End Sub
+
+    Private Sub LadeBilder()
         If AktuellerBenutzer.Instance.AktuelleSprache.ToLower = "en" Then
             PictureBox2.Image = My.Resources.Verschiebeweg_GB
             PictureBox3.Image = My.Resources.Fahrzeug_Wenden_GB
@@ -55,9 +62,6 @@ Public Class uco13PruefungRollendeLasten
             PictureBox2.Image = My.Resources.Verschiebeweg_GB
             PictureBox3.Image = My.Resources.Fahrzeug_Wenden_GB
         End If
-
-        'daten füllen
-        LoadFromDatabase()
     End Sub
 
 #Region "Bereich Links"
@@ -68,194 +72,29 @@ Public Class uco13PruefungRollendeLasten
 
     Private Sub BerechneFehlerundEFGLinks(Optional Sender As Telerik.WinControls.UI.RadTextBox = Nothing)
         AktuellerStatusDirty = True
-
         'damit keine Event Kettenreaktion durchgeführt wird, werden die Events ab hier unterbrochen
         _suspendEvents = True
-
-        Try
-            'zuweisen der last an alle Felder
-            If Sender.Equals(RadTextBoxControlLastLinks1) Then
-                RadTextBoxControlLastLinks1.Text = RadTextBoxControlLastLinks1.Text
-                RadTextBoxControlLastLinks2.Text = RadTextBoxControlLastLinks1.Text
-                RadTextBoxControllastLinks3.Text = RadTextBoxControlLastLinks1.Text
-            ElseIf Sender.Equals(RadTextBoxControlLastLinks2) Then
-                RadTextBoxControlLastLinks1.Text = RadTextBoxControlLastLinks2.Text
-                RadTextBoxControlLastLinks2.Text = RadTextBoxControlLastLinks2.Text
-                RadTextBoxControllastLinks3.Text = RadTextBoxControlLastLinks2.Text
-            ElseIf Sender.Equals(RadTextBoxControllastLinks3) Then
-                RadTextBoxControlLastLinks1.Text = RadTextBoxControllastLinks3.Text
-                RadTextBoxControlLastLinks2.Text = RadTextBoxControllastLinks3.Text
-                RadTextBoxControllastLinks3.Text = RadTextBoxControllastLinks3.Text
-            End If
-
-        Catch e As Exception
-        End Try
-
         'EFG
-
-        Try
-            'nimm Max von den Bereichen
-            'wenn die Last > ist als  2000e-3000e dann nehme EFG2000e sonst EFG500e
-            Select Case objEichprozess.Lookup_Waagenart.Art
-                Case Is = "Einbereichswaage"
-                    If CDec(RadTextBoxControlLastLinks1.Text) > Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 2000), _intNullstellenE, MidpointRounding.AwayFromZero) Then
-                        lblEFGWertLinks.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 1.5), _intNullstellenE, MidpointRounding.AwayFromZero)
-                    Else
-                        lblEFGWertLinks.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 1), _intNullstellenE, MidpointRounding.AwayFromZero)
-                    End If
-                Case Is = "Zweibereichswaage", "Zweiteilungswaage"
-                    If CDec(RadTextBoxControlLastLinks1.Text) > Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 2000), _intNullstellenE, MidpointRounding.AwayFromZero) Then
-                        lblEFGWertLinks.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 1.5), _intNullstellenE, MidpointRounding.AwayFromZero)
-                    Else
-                        lblEFGWertLinks.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 1), _intNullstellenE, MidpointRounding.AwayFromZero)
-                    End If
-
-                Case Is = "Dreibereichswaage", "Dreiteilungswaage"
-                    If CDec(RadTextBoxControlLastLinks1.Text) > Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 2000), _intNullstellenE, MidpointRounding.AwayFromZero) Then
-                        lblEFGWertLinks.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 1.5), _intNullstellenE, MidpointRounding.AwayFromZero)
-                    Else
-                        lblEFGWertLinks.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 1), _intNullstellenE, MidpointRounding.AwayFromZero)
-                    End If
-            End Select
-        Catch e As Exception
-        End Try
-
-        'neu berechnen der Fehler und EFG
-        Try
-            RadTextBoxControlFehlerLinks1.Text = CDec(RadTextBoxControlAnzeigeLinks1.Text) - CDec(RadTextBoxControlLastLinks1.Text)
-            If CDec(RadTextBoxControlAnzeigeLinks1.Text) > CDec(RadTextBoxControlLastLinks1.Text) + CDec(lblEFGWertLinks.Text) Then
-                RadCheckBoxAuffahrtLinks1.Checked = False
-            ElseIf CDec(RadTextBoxControlAnzeigeLinks1.Text) < CDec(RadTextBoxControlLastLinks1.Text) - CDec(lblEFGWertLinks.Text) Then
-                RadCheckBoxAuffahrtLinks1.Checked = False
-            Else
-                RadCheckBoxAuffahrtLinks1.Checked = True
-            End If
-        Catch ex As Exception
-        End Try
-
-        'fehler
-        Try
-            RadTextBoxControlFehlerLinks2.Text = CDec(RadTextBoxControlAnzeigeLinks2.Text) - CDec(RadTextBoxControlLastLinks2.Text)
-            If CDec(RadTextBoxControlAnzeigeLinks2.Text) > CDec(RadTextBoxControlLastLinks2.Text) + CDec(lblEFGWertLinks.Text) Then
-                RadCheckBoxAuffahrtLinks2.Checked = False
-            ElseIf CDec(RadTextBoxControlAnzeigeLinks2.Text) < CDec(RadTextBoxControlLastLinks2.Text) - CDec(lblEFGWertLinks.Text) Then
-                RadCheckBoxAuffahrtLinks2.Checked = False
-            Else
-                RadCheckBoxAuffahrtLinks2.Checked = True
-            End If
-        Catch ex As Exception
-        End Try
-
-        Try
-            RadTextBoxControlFehlerLinks3.Text = CDec(RadTextBoxControlAnzeigeLinks3.Text) - CDec(RadTextBoxControllastLinks3.Text)
-            If CDec(RadTextBoxControlAnzeigeLinks3.Text) > CDec(RadTextBoxControllastLinks3.Text) + CDec(lblEFGWertLinks.Text) Then
-                RadCheckBoxAuffahrtLinks3.Checked = False
-            ElseIf CDec(RadTextBoxControlAnzeigeLinks3.Text) < CDec(RadTextBoxControllastLinks3.Text) - CDec(lblEFGWertLinks.Text) Then
-                RadCheckBoxAuffahrtLinks3.Checked = False
-            Else
-                RadCheckBoxAuffahrtLinks3.Checked = True
-            End If
-        Catch ex As Exception
-        End Try
-
+        BerechneEFG(lblEFGWertLinks)
+        'fehler berechnen
+        BeechneFehler(RadTextBoxControlFehlerLinks1, RadTextBoxControlAnzeigeLinks1, RadTextBoxControlLastLinks1, lblEFGWertLinks, RadCheckBoxAuffahrtLinks1)
+        BeechneFehler(RadTextBoxControlFehlerLinks2, RadTextBoxControlAnzeigeLinks2, RadTextBoxControlLastLinks2, lblEFGWertLinks, RadCheckBoxAuffahrtLinks2)
+        BeechneFehler(RadTextBoxControlFehlerLinks3, RadTextBoxControlAnzeigeLinks3, RadTextBoxControllastLinks3, lblEFGWertLinks, RadCheckBoxAuffahrtLinks3)
         _suspendEvents = False
     End Sub
+
+
     Private Sub BerechneFehlerundEFGRechts(Optional sender As Telerik.WinControls.UI.RadTextBox = Nothing)
-
         AktuellerStatusDirty = True
-
         'damit keine Event Kettenreaktion durchgeführt wird, werden die Events ab hier unterbrochen
         _suspendEvents = True
-
-        Try
-            'zuweisen der last an alle Felder
-            If sender.Equals(RadTextBoxControlLastRechts1) Then
-                RadTextBoxControlLastRechts1.Text = RadTextBoxControlLastRechts1.Text
-                RadTextBoxControlLastRechts2.Text = RadTextBoxControlLastRechts1.Text
-                RadTextBoxControlLastRechts3.Text = RadTextBoxControlLastRechts1.Text
-            ElseIf sender.Equals(RadTextBoxControlLastRechts2) Then
-                RadTextBoxControlLastRechts1.Text = RadTextBoxControlLastRechts2.Text
-                RadTextBoxControlLastRechts2.Text = RadTextBoxControlLastRechts2.Text
-                RadTextBoxControlLastRechts3.Text = RadTextBoxControlLastRechts2.Text
-            ElseIf sender.Equals(RadTextBoxControlLastRechts3) Then
-                RadTextBoxControlLastRechts1.Text = RadTextBoxControlLastRechts3.Text
-                RadTextBoxControlLastRechts2.Text = RadTextBoxControlLastRechts3.Text
-                RadTextBoxControlLastRechts3.Text = RadTextBoxControlLastRechts3.Text
-            End If
-
-        Catch e As Exception
-        End Try
-
         'neu berechnen der Fehler und EFG
-
         'EFG
-
-        Try
-            'nimm Max von den Bereichen
-            'wenn die Last > ist als  2000e-3000e dann nehme EFG2000e sonst EFG500e
-            Select Case objEichprozess.Lookup_Waagenart.Art
-                Case Is = "Einbereichswaage"
-                    If CDec(RadTextBoxControlLastRechts1.Text) > Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 2000), _intNullstellenE, MidpointRounding.AwayFromZero) Then
-                        lblEFGWertRechts.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 1.5), _intNullstellenE, MidpointRounding.AwayFromZero)
-                    Else
-                        lblEFGWertRechts.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 1), _intNullstellenE, MidpointRounding.AwayFromZero)
-                    End If
-                Case Is = "Zweibereichswaage", "Zweiteilungswaage"
-                    If CDec(RadTextBoxControlLastRechts1.Text) > Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 2000), _intNullstellenE, MidpointRounding.AwayFromZero) Then
-                        lblEFGWertRechts.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 1.5), _intNullstellenE, MidpointRounding.AwayFromZero)
-                    Else
-                        lblEFGWertRechts.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 1), _intNullstellenE, MidpointRounding.AwayFromZero)
-                    End If
-
-                Case Is = "Dreibereichswaage", "Dreiteilungswaage"
-                    If CDec(RadTextBoxControlLastRechts1.Text) > Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 2000), _intNullstellenE, MidpointRounding.AwayFromZero) Then
-                        lblEFGWertRechts.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 1.5), _intNullstellenE, MidpointRounding.AwayFromZero)
-                    Else
-                        lblEFGWertRechts.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 1), _intNullstellenE, MidpointRounding.AwayFromZero)
-                    End If
-            End Select
-
-        Catch e As Exception
-        End Try
-
-        'fehler
-
-        Try
-            RadTextBoxControlFehlerRechts1.Text = CDec(RadTextBoxControlAnzeigeRechts1.Text) - CDec(RadTextBoxControlLastRechts1.Text)
-            If CDec(RadTextBoxControlAnzeigeRechts1.Text) > CDec(RadTextBoxControlLastRechts1.Text) + CDec(lblEFGWertRechts.Text) Then
-                RadCheckBoxlblAuffahrtRechts1.Checked = False
-            ElseIf CDec(RadTextBoxControlAnzeigeRechts1.Text) < CDec(RadTextBoxControlLastRechts1.Text) - CDec(lblEFGWertRechts.Text) Then
-                RadCheckBoxlblAuffahrtRechts1.Checked = False
-            Else
-                RadCheckBoxlblAuffahrtRechts1.Checked = True
-            End If
-        Catch ex As Exception
-        End Try
-
-        Try
-            RadTextBoxControlFehlerRechts2.Text = CDec(RadTextBoxControlAnzeigeRechts2.Text) - CDec(RadTextBoxControlLastRechts2.Text)
-            If CDec(RadTextBoxControlAnzeigeRechts2.Text) > CDec(RadTextBoxControlLastRechts2.Text) + CDec(lblEFGWertRechts.Text) Then
-                RadCheckBoxlblAuffahrtRechts2.Checked = False
-            ElseIf CDec(RadTextBoxControlAnzeigeRechts2.Text) < CDec(RadTextBoxControlLastRechts2.Text) - CDec(lblEFGWertRechts.Text) Then
-                RadCheckBoxlblAuffahrtRechts2.Checked = False
-            Else
-                RadCheckBoxlblAuffahrtRechts2.Checked = True
-            End If
-        Catch ex As Exception
-        End Try
-
-        Try
-            RadTextBoxControlFehlerRechts3.Text = CDec(RadTextBoxControlAnzeigeRechts3.Text) - CDec(RadTextBoxControlLastRechts3.Text)
-            If CDec(RadTextBoxControlAnzeigeRechts3.Text) > CDec(RadTextBoxControlLastRechts3.Text) + CDec(lblEFGWertRechts.Text) Then
-                RadCheckBoxlblAuffahrtRechts3.Checked = False
-            ElseIf CDec(RadTextBoxControlAnzeigeRechts3.Text) < CDec(RadTextBoxControlLastRechts3.Text) - CDec(lblEFGWertRechts.Text) Then
-                RadCheckBoxlblAuffahrtRechts3.Checked = False
-            Else
-                RadCheckBoxlblAuffahrtRechts3.Checked = True
-            End If
-        Catch ex As Exception
-        End Try
-
+        BerechneEFG(lblEFGWertRechts)
+        'fehler berechnen
+        BeechneFehler(RadTextBoxControlFehlerRechts1, RadTextBoxControlAnzeigeRechts1, RadTextBoxControlLastRechts1, lblEFGWertRechts, RadCheckBoxAuffahrtRechts1)
+        BeechneFehler(RadTextBoxControlFehlerRechts2, RadTextBoxControlAnzeigeRechts2, RadTextBoxControlLastRechts2, lblEFGWertRechts, RadCheckBoxAuffahrtRechts2)
+        BeechneFehler(RadTextBoxControlFehlerRechts3, RadTextBoxControlAnzeigeRechts3, RadTextBoxControlLastRechts3, lblEFGWertRechts, RadCheckBoxAuffahrtRechts3)
         _suspendEvents = False
     End Sub
 
@@ -265,7 +104,7 @@ Public Class uco13PruefungRollendeLasten
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     ''' <remarks></remarks>
-    Private Sub RadTextBoxControlAnzeigeLinks1_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlAnzeigeLinks3.TextChanged, RadTextBoxControlAnzeigeLinks2.TextChanged, RadTextBoxControlAnzeigeLinks1.TextChanged, RadTextBoxControlLastLinks1.TextChanged, RadTextBoxControlLastLinks2.TextChanged, RadTextBoxControllastLinks3.TextChanged
+    Private Sub RadTextBoxControlAnzeigeLinks1_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlAnzeigeLinks3.TextChanged, RadTextBoxControlAnzeigeLinks2.TextChanged, RadTextBoxControlAnzeigeLinks1.TextChanged
         Try
             If _suspendEvents = True Then Exit Sub
             BerechneFehlerundEFGLinks(sender)
@@ -275,6 +114,20 @@ Public Class uco13PruefungRollendeLasten
 
 #End Region
 
+    Private Sub RadTextBoxControlLastLinks1_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlLastRechts3.TextChanged, RadTextBoxControlLastRechts2.TextChanged, RadTextBoxControlLastRechts1.TextChanged, RadTextBoxControllastLinks3.TextChanged, RadTextBoxControlLastLinks2.TextChanged, RadTextBoxControlLastLinks1.TextChanged
+        If _suspendEvents = True Then Exit Sub
+
+        RadTextBoxControlLastRechts3.Text = CType(sender, Telerik.WinControls.UI.RadTextBox).Text
+        RadTextBoxControlLastRechts2.Text = CType(sender, Telerik.WinControls.UI.RadTextBox).Text
+        RadTextBoxControlLastRechts1.Text = CType(sender, Telerik.WinControls.UI.RadTextBox).Text
+        RadTextBoxControllastLinks3.Text = CType(sender, Telerik.WinControls.UI.RadTextBox).Text
+        RadTextBoxControlLastLinks2.Text = CType(sender, Telerik.WinControls.UI.RadTextBox).Text
+        RadTextBoxControlLastLinks1.Text = CType(sender, Telerik.WinControls.UI.RadTextBox).Text
+
+        BerechneFehlerundEFGLinks(sender)
+        BerechneFehlerundEFGRechts(sender)
+    End Sub
+
 #Region "bereich Rechts"
     ''' <summary>
     ''' wenn sich einer der Anzeige Werte ändert, müssen die Fehler und EFG neu berechnet werden
@@ -282,8 +135,7 @@ Public Class uco13PruefungRollendeLasten
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     ''' <remarks></remarks>
-    Private Sub RadTextBoxControlAnzeigeRechts1_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlAnzeigeRechts3.TextChanged, RadTextBoxControlAnzeigeRechts2.TextChanged, RadTextBoxControlAnzeigeRechts1.TextChanged,
-          RadTextBoxControlLastRechts1.TextChanged, RadTextBoxControlLastRechts2.TextChanged, RadTextBoxControlLastRechts3.TextChanged
+    Private Sub RadTextBoxControlAnzeigeRechts1_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlAnzeigeRechts3.TextChanged, RadTextBoxControlAnzeigeRechts2.TextChanged, RadTextBoxControlAnzeigeRechts1.TextChanged
         Try
             If _suspendEvents = True Then Exit Sub
 
@@ -429,7 +281,7 @@ Public Class uco13PruefungRollendeLasten
             RadTextBoxControlLastRechts1.Text = _currentObjPruefungRollendeLasten.Last
             RadTextBoxControlAnzeigeRechts1.Text = _currentObjPruefungRollendeLasten.Anzeige
             RadTextBoxControlFehlerRechts1.Text = _currentObjPruefungRollendeLasten.Fehler
-            RadCheckBoxlblAuffahrtRechts1.Checked = _currentObjPruefungRollendeLasten.EFG
+            RadCheckBoxAuffahrtRechts1.Checked = _currentObjPruefungRollendeLasten.EFG
         End If
 
         'anzeige KG Nur laden wenn schon etwas eingegeben wurde
@@ -439,7 +291,7 @@ Public Class uco13PruefungRollendeLasten
             RadTextBoxControlLastRechts2.Text = _currentObjPruefungRollendeLasten.Last
             RadTextBoxControlAnzeigeRechts2.Text = _currentObjPruefungRollendeLasten.Anzeige
             RadTextBoxControlFehlerRechts2.Text = _currentObjPruefungRollendeLasten.Fehler
-            RadCheckBoxlblAuffahrtRechts2.Checked = _currentObjPruefungRollendeLasten.EFG
+            RadCheckBoxAuffahrtRechts2.Checked = _currentObjPruefungRollendeLasten.EFG
         End If
 
         'anzeige KG Nur laden wenn schon etwas eingegeben wurde
@@ -449,10 +301,65 @@ Public Class uco13PruefungRollendeLasten
             RadTextBoxControlLastRechts3.Text = _currentObjPruefungRollendeLasten.Last
             RadTextBoxControlAnzeigeRechts3.Text = _currentObjPruefungRollendeLasten.Anzeige
             RadTextBoxControlFehlerRechts3.Text = _currentObjPruefungRollendeLasten.Fehler
-            RadCheckBoxlblAuffahrtRechts3.Checked = _currentObjPruefungRollendeLasten.EFG
+            RadCheckBoxAuffahrtRechts3.Checked = _currentObjPruefungRollendeLasten.EFG
         End If
 
     End Sub
+
+    Private Sub BerechneEFG(EFGWert As Telerik.WinControls.UI.RadMaskedEditBox)
+        Try
+            'nimm Max von den Bereichen
+            'wenn die Last > ist als  2000e-3000e dann nehme EFG2000e sonst EFG500e
+            Select Case objEichprozess.Lookup_Waagenart.Art
+                Case Is = "Einbereichswaage"
+                    If CDec(RadTextBoxControlLastLinks1.Text) > Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 2000), _intNullstellenE, MidpointRounding.AwayFromZero) Then
+                        EFGWert.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 1.5), _intNullstellenE, MidpointRounding.AwayFromZero)
+                    Else
+                        EFGWert.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 1), _intNullstellenE, MidpointRounding.AwayFromZero)
+                    End If
+                Case Is = "Zweibereichswaage", "Zweiteilungswaage"
+                    If CDec(RadTextBoxControlLastLinks1.Text) > Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 2000), _intNullstellenE, MidpointRounding.AwayFromZero) Then
+                        EFGWert.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 1.5), _intNullstellenE, MidpointRounding.AwayFromZero)
+                    Else
+                        EFGWert.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 1), _intNullstellenE, MidpointRounding.AwayFromZero)
+                    End If
+
+                Case Is = "Dreibereichswaage", "Dreiteilungswaage"
+                    If CDec(RadTextBoxControlLastLinks1.Text) > Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 2000), _intNullstellenE, MidpointRounding.AwayFromZero) Then
+                        EFGWert.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 1.5), _intNullstellenE, MidpointRounding.AwayFromZero)
+                    Else
+                        EFGWert.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 1), _intNullstellenE, MidpointRounding.AwayFromZero)
+                    End If
+            End Select
+        Catch e As Exception
+        End Try
+    End Sub
+
+    Private Sub BeechneFehler(TextFehler As Telerik.WinControls.UI.RadTextBox,
+                           TextAnzeige As Telerik.WinControls.UI.RadTextBox,
+                           TextLast As Telerik.WinControls.UI.RadTextBox,
+                           TextEFG As Telerik.WinControls.UI.RadMaskedEditBox,
+                           CheckEG As Telerik.WinControls.UI.RadCheckBox)
+        'neu berechnen der Fehler und EFG
+        Try
+            If IsNumeric(TextAnzeige.Text) And IsNumeric(TextLast.Text) Then
+                TextFehler.Text = CDec(TextAnzeige.Text) - CDec(TextLast.Text)
+            End If
+            If IsNumeric(TextAnzeige.Text) And IsNumeric(TextLast.Text) And IsNumeric(TextEFG.Text) Then
+                If CDec(TextAnzeige.Text) > CDec(TextLast.Text) + CDec(TextEFG.Text) Then
+                    CheckEG.Checked = False
+                ElseIf CDec(TextAnzeige.Text) < CDec(TextLast.Text) - CDec(TextEFG.Text) Then
+                    CheckEG.Checked = False
+                Else
+                    CheckEG.Checked = True
+                End If
+            Else
+                CheckEG.Checked = True
+            End If
+        Catch ex As Exception
+        End Try
+    End Sub
+
 
     ''' <summary>
     ''' Füllt das Objekt mit den Werten aus den Steuerlementen
@@ -509,21 +416,21 @@ Public Class uco13PruefungRollendeLasten
                 PObjPruefung.Last = RadTextBoxControlLastRechts1.Text
                 PObjPruefung.Anzeige = RadTextBoxControlAnzeigeRechts1.Text
                 PObjPruefung.Fehler = RadTextBoxControlFehlerRechts1.Text
-                PObjPruefung.EFG = RadCheckBoxlblAuffahrtRechts1.Checked
+                PObjPruefung.EFG = RadCheckBoxAuffahrtRechts1.Checked
                 PObjPruefung.EFGExtra = lblEFGWertRechts.Text
             End If
             If PObjPruefung.Belastungsstelle = "2" Then
                 PObjPruefung.Last = RadTextBoxControlLastRechts2.Text
                 PObjPruefung.Anzeige = RadTextBoxControlAnzeigeRechts2.Text
                 PObjPruefung.Fehler = RadTextBoxControlFehlerRechts2.Text
-                PObjPruefung.EFG = RadCheckBoxlblAuffahrtRechts2.Checked
+                PObjPruefung.EFG = RadCheckBoxAuffahrtRechts2.Checked
                 PObjPruefung.EFGExtra = lblEFGWertRechts.Text
             End If
             If PObjPruefung.Belastungsstelle = "3" Then
                 PObjPruefung.Last = RadTextBoxControlLastRechts3.Text
                 PObjPruefung.Anzeige = RadTextBoxControlAnzeigeRechts3.Text
                 PObjPruefung.Fehler = RadTextBoxControlFehlerRechts3.Text
-                PObjPruefung.EFG = RadCheckBoxlblAuffahrtRechts3.Checked
+                PObjPruefung.EFG = RadCheckBoxAuffahrtRechts3.Checked
                 PObjPruefung.EFGExtra = lblEFGWertRechts.Text
             End If
         End If
@@ -558,9 +465,9 @@ Public Class uco13PruefungRollendeLasten
 
         End If
 
-        If RadCheckBoxlblAuffahrtRechts1.Checked = False And RadCheckBoxlblAuffahrtRechts1.Visible = True Or
-              RadCheckBoxlblAuffahrtRechts2.Checked = False And RadCheckBoxlblAuffahrtRechts2.Visible = True Or
-              RadCheckBoxlblAuffahrtRechts3.Checked = False And RadCheckBoxlblAuffahrtRechts2.Visible = True Then
+        If RadCheckBoxAuffahrtRechts1.Checked = False And RadCheckBoxAuffahrtRechts1.Visible = True Or
+              RadCheckBoxAuffahrtRechts2.Checked = False And RadCheckBoxAuffahrtRechts2.Visible = True Or
+              RadCheckBoxAuffahrtRechts3.Checked = False And RadCheckBoxAuffahrtRechts2.Visible = True Then
             AbortSaving = True
             RadTextBoxControlAnzeigeRechts1.TextBoxElement.Border.ForeColor = Color.Red
             RadTextBoxControlAnzeigeRechts2.TextBoxElement.Border.ForeColor = Color.Red
@@ -805,7 +712,7 @@ Public Class uco13PruefungRollendeLasten
 
     End Sub
 
-    Private Sub RadCheckBoxAuffahrtLinks1_MouseClick(sender As Object, e As MouseEventArgs) Handles RadCheckBoxlblAuffahrtRechts3.MouseClick, RadCheckBoxlblAuffahrtRechts2.MouseClick, RadCheckBoxlblAuffahrtRechts1.MouseClick, RadCheckBoxAuffahrtLinks3.MouseClick, RadCheckBoxAuffahrtLinks2.MouseClick, RadCheckBoxAuffahrtLinks1.MouseClick
+    Private Sub RadCheckBoxAuffahrtLinks1_MouseClick(sender As Object, e As MouseEventArgs) Handles RadCheckBoxAuffahrtRechts3.MouseClick, RadCheckBoxAuffahrtRechts2.MouseClick, RadCheckBoxAuffahrtRechts1.MouseClick, RadCheckBoxAuffahrtLinks3.MouseClick, RadCheckBoxAuffahrtLinks2.MouseClick, RadCheckBoxAuffahrtLinks1.MouseClick
         CType(sender, Telerik.WinControls.UI.RadCheckBox).Checked = Not CType(sender, Telerik.WinControls.UI.RadCheckBox).Checked
     End Sub
 
