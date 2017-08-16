@@ -141,7 +141,6 @@ Partial Class uco_7EichprotokollDaten
         Me.RadLabel23 = New Telerik.WinControls.UI.RadLabel()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.lblGenauigkeitsklasse = New Telerik.WinControls.UI.RadLabel()
         Me.PictureBoxGenauigkeitsklasse = New System.Windows.Forms.PictureBox()
         Me.RadCheckBoxNichtselbsteinspielend = New Telerik.WinControls.UI.RadCheckBox()
@@ -165,6 +164,7 @@ Partial Class uco_7EichprotokollDaten
         Me.lblBenutzer = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlBenutzer = New Telerik.WinControls.UI.RadTextBox()
         Me.BackgroundWorkerPruefscheinnummern = New System.ComponentModel.BackgroundWorker()
+        Me.RadLabel1 = New Telerik.WinControls.UI.RadLabel()
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadScrollablePanel1.PanelContainer.SuspendLayout()
         Me.RadScrollablePanel1.SuspendLayout()
@@ -297,7 +297,6 @@ Partial Class uco_7EichprotokollDaten
         CType(Me.RadLabel23, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblGenauigkeitsklasse, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxGenauigkeitsklasse, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadCheckBoxNichtselbsteinspielend, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -324,6 +323,7 @@ Partial Class uco_7EichprotokollDaten
         CType(Me.RadTextBoxControlAufstellungsort, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblBenutzer, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBenutzer, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'RadScrollablePanel1
@@ -859,7 +859,6 @@ Partial Class uco_7EichprotokollDaten
         Me.RadGroupBoxIdentifikationsdaten.Controls.Add(Me.RadGroupBoxMax2)
         Me.RadGroupBoxIdentifikationsdaten.Controls.Add(Me.PictureBox6)
         Me.RadGroupBoxIdentifikationsdaten.Controls.Add(Me.PictureBox3)
-        Me.RadGroupBoxIdentifikationsdaten.Controls.Add(Me.PictureBox2)
         Me.RadGroupBoxIdentifikationsdaten.Controls.Add(Me.lblGenauigkeitsklasse)
         Me.RadGroupBoxIdentifikationsdaten.Controls.Add(Me.PictureBoxGenauigkeitsklasse)
         Me.RadGroupBoxIdentifikationsdaten.Controls.Add(Me.RadCheckBoxNichtselbsteinspielend)
@@ -878,6 +877,7 @@ Partial Class uco_7EichprotokollDaten
         Me.RadGroupBoxIdentifikationsdaten.Controls.Add(Me.RadTextBoxControlAufstellungsort)
         Me.RadGroupBoxIdentifikationsdaten.Controls.Add(Me.lblBenutzer)
         Me.RadGroupBoxIdentifikationsdaten.Controls.Add(Me.RadTextBoxControlBenutzer)
+        Me.RadGroupBoxIdentifikationsdaten.Controls.Add(Me.RadLabel1)
         resources.ApplyResources(Me.RadGroupBoxIdentifikationsdaten, "RadGroupBoxIdentifikationsdaten")
         Me.RadGroupBoxIdentifikationsdaten.Name = "RadGroupBoxIdentifikationsdaten"
         '
@@ -1169,13 +1169,6 @@ Partial Class uco_7EichprotokollDaten
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.TabStop = False
         '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox2, "PictureBox2")
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.TabStop = False
-        '
         'lblGenauigkeitsklasse
         '
         resources.ApplyResources(Me.lblGenauigkeitsklasse, "lblGenauigkeitsklasse")
@@ -1322,6 +1315,12 @@ Partial Class uco_7EichprotokollDaten
         '
         'BackgroundWorkerPruefscheinnummern
         '
+        '
+        'RadLabel1
+        '
+        Me.RadLabel1.ForeColor = System.Drawing.Color.Red
+        resources.ApplyResources(Me.RadLabel1, "RadLabel1")
+        Me.RadLabel1.Name = "RadLabel1"
         '
         'uco_7EichprotokollDaten
         '
@@ -1472,7 +1471,6 @@ Partial Class uco_7EichprotokollDaten
         CType(Me.RadLabel23, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblGenauigkeitsklasse, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxGenauigkeitsklasse, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadCheckBoxNichtselbsteinspielend, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1499,6 +1497,7 @@ Partial Class uco_7EichprotokollDaten
         CType(Me.RadTextBoxControlAufstellungsort, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblBenutzer, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBenutzer, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1555,7 +1554,6 @@ Partial Class uco_7EichprotokollDaten
     Friend WithEvents lblGenauigkeitsklasse As Telerik.WinControls.UI.RadLabel
     Friend WithEvents PictureBox6 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox7 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox8 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox9 As System.Windows.Forms.PictureBox
@@ -1643,4 +1641,5 @@ Partial Class uco_7EichprotokollDaten
     Friend WithEvents RadTextBoxControlDruckerTyp As Telerik.WinControls.UI.RadDropDownList
     Friend WithEvents BackgroundWorkerPruefscheinnummern As System.ComponentModel.BackgroundWorker
     Friend WithEvents RadTextBoxControlDatum As Telerik.WinControls.UI.RadDateTimePicker
+    Friend WithEvents RadLabel1 As Telerik.WinControls.UI.RadLabel
 End Class

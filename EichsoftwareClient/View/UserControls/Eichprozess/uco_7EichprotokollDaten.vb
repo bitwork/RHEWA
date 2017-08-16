@@ -577,7 +577,9 @@ Public Class uco_7EichprotokollDaten
 
         If RadCheckBoxDrucker.Checked Then
             If RadTextBoxControlDruckerTyp.Text = "" Then
+                RadTextBoxControlDruckerTyp.Focus()
                 AbortSaving = True
+                MarkControlRed(RadTextBoxControlDruckerTyp)
             End If
         End If
 
@@ -585,6 +587,12 @@ Public Class uco_7EichprotokollDaten
             RadTextBoxControlBetragNormallast.Focus()
             AbortSaving = True
             MarkControlRed(RadTextBoxControlBetragNormallast)
+        End If
+
+        If IsDate(RadTextBoxControlDatum.Text) = False Then
+            RadTextBoxControlDatum.Focus()
+            AbortSaving = True
+            MarkControlRed(RadTextBoxControlDatum)
         End If
 
         'fehlermeldung anzeigen bei falscher validierung
