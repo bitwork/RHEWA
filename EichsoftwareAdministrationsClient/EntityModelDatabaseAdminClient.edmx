@@ -87,7 +87,7 @@
           <Property Name="Pruefverfahren_BetragNormallast" Type="nvarchar" MaxLength="50" />
           <Property Name="Komponenten_Softwarestand" Type="nvarchar" MaxLength="50" />
           <Property Name="Komponenten_Eichzaehlerstand" Type="nvarchar" MaxLength="50" />
-          <Property Name="Komponenten_WaegezellenFabriknummer" Type="nvarchar" MaxLength="50" />
+          <Property Name="Komponenten_WaegezellenFabriknummer" Type="nvarchar" MaxLength="250" />
           <Property Name="Verwendungszweck_HalbAutomatisch" Type="bit" />
           <Property Name="Verwendungszweck_Automatisch" Type="bit" />
           <Property Name="Verwendungszweck_Nullnachfuehrung" Type="bit" />
@@ -1189,7 +1189,7 @@
           <Property Name="Pruefverfahren_BetragNormallast" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Komponenten_Softwarestand" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Komponenten_Eichzaehlerstand" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Komponenten_WaegezellenFabriknummer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Komponenten_WaegezellenFabriknummer" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="Verwendungszweck_HalbAutomatisch" Type="Boolean" />
           <Property Name="Verwendungszweck_Automatisch" Type="Boolean" />
           <Property Name="Verwendungszweck_Nullnachfuehrung" Type="Boolean" />

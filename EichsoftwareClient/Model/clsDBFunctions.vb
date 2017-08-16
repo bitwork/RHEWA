@@ -102,21 +102,56 @@ Public Class clsDBFunctions
     End Function
 
     Public Shared Function UpdateClientDatenbank()
+        'IM Entity Framework dieser Version ist es nicht so einfach möglich zu prüfen, ob es felder gibt oder nicht. Ursprünglich gab es gar keine Versionierung der Datenbank
+        'Sprich das Feld DBVersion welches geprüft wird, gab es noch gar nicht. Das kann ich nur durch die Exception herausfinden.
+        'SPäter kam die Erkenntnis, dass es nicht sinnvoll ist die DB Version in der Konfiguration zu speichern, da diese Tabelle pro Lizenz eine Zeile einträgt
+        'Die DB Version aber nicht an der Lizenz hängt. Deswegen wurde im späteren Schritt v4 auf eine neue Tabelle umgestellt, die nur zur Versionsverwaltung dient. Diese kann auch ohne Lizenz Updates durchführen
+
+        UpdateClientDatenbankAlt()
 
 
+        'Ab hier kann nun sauber mit der DB Version gearbeit werden. Der Code oben ist historisch gewachsen. Ab hier sollte es nun vernünftig funktioneren
 
+        Using DBContext As New Entities
+
+
+            Dim objVersion = DBContext.Datenbankversion.FirstOrDefault
+            If Not objVersion Is Nothing Then
+                If objVersion.version < 5 Then
+                    UpdateVersion5(DBContext)
+                End If
+
+                'If objVersion.version < 6 Then
+                '    UpdateVersion6(DBContext)
+                'End If
+                'If objVersion.version < 7 Then
+                '    UpdateVersion7(DBContext)
+                'End If
+            End If
+        End Using
+
+
+        If Debugger.IsAttached = False Then
+            LoescheDevBenutzer()
+        End If
+
+        Return True
+    End Function
+
+    ''' <summary>
+    ''' IM Entity Framework dieser Version ist es nicht so einfach möglich zu prüfen, ob es felder gibt oder nicht. Ursprünglich gab es gar keine Versionierung der Datenbank
+    '''Sprich das Feld DBVersion welches geprüft wird, gab es noch gar nicht. Das kann ich nur durch die Exception herausfinden.
+    '''SPäter kam die Erkenntnis, dass es nicht sinnvoll ist die DB Version in der Konfiguration zu speichern, da diese Tabelle pro Lizenz eine Zeile einträgt
+    '''Die DB Version aber nicht an der Lizenz hängt. Deswegen wurde im späteren Schritt v4 auf eine neue Tabelle umgestellt, die nur zur Versionsverwaltung dient. Diese kann auch ohne Lizenz Updates durchführen
+    ''' </summary>
+    ''' <returns></returns>
+    Private Shared Function UpdateClientDatenbankAlt() As Boolean
         Try
             Using DBContext As New Entities
 
                 Dim config = DBContext.Konfiguration.FirstOrDefault
                 If config.DBVersion < 2 Then
-
-                    UpdateVersion2(DBContext)
-                End If
-
-                If config.DBVersion < 3 Then
-                    UpdateVersion3(DBContext)
-
+                    'Der Aufruf wird nur getätigt, damit die Exception auftrtt, falls das Feld DBVersion gar nicht existiert
                 End If
             End Using
         Catch ex As Entity.Core.EntityCommandExecutionException
@@ -126,6 +161,7 @@ Public Class clsDBFunctions
                     Dim updateScript As String = ""
                     updateScript = "ALTER TABLE [Konfiguration] ADD [DBVersion] nvarchar(25) DEFAULT '1' NULL"
                     DBContext.Database.ExecuteSqlCommand(updateScript)
+                    'erneuter aufruf der Update Routine
                     UpdateClientDatenbank()
                 End Using
             Catch ex2 As Exception
@@ -133,10 +169,22 @@ Public Class clsDBFunctions
         Catch ex As InvalidOperationException ' keine Lizenz eingetragen
             Return False
         End Try
+
+        Using DBContext As New Entities
+            Dim config = DBContext.Konfiguration.FirstOrDefault
+            If config.DBVersion < 2 Then
+                UpdateVersion2(DBContext)
+            End If
+
+            If config.DBVersion < 3 Then
+                UpdateVersion3(DBContext)
+            End If
+        End Using
+
+        'WICHTIG ab hier neue Tabelle mit Versionsinformationen damit keine Lizenz vorhanden sein muss um die änderungen einzutragen...
         Try
             Using DBContext As New Entities
 
-                'ab hier neue Tabelle mit Versionsinformationen damit keine Lizenz vorhanden sein muss um die änderungen einzutragen...
 
                 Dim objVersion = DBContext.Datenbankversion.FirstOrDefault
                 If objVersion Is Nothing Then
@@ -151,13 +199,6 @@ Public Class clsDBFunctions
             Catch ex2 As Exception
             End Try
         End Try
-
-
-        If Debugger.IsAttached = False Then
-            LoescheDevBenutzer()
-        End If
-
-        Return True
     End Function
 
 
@@ -271,6 +312,21 @@ Public Class clsDBFunctions
             End If
         Catch ex As Exception
         End Try
+    End Sub
+
+    Private Shared Sub UpdateVersion5(DBContext As Entities)
+        Dim updateScript As String = ""
+
+        updateScript = "ALTER TABLE [Eichprotokoll] Alter Column  [Komponenten_WaegezellenFabriknummer] nvarchar(250) NULL"
+        DBContext.Database.ExecuteSqlCommand(updateScript)
+
+
+        Dim objVersion = DBContext.Datenbankversion.FirstOrDefault
+        If Not objVersion Is Nothing Then
+                objVersion.version = 5
+                DBContext.SaveChanges()
+            End If
+
     End Sub
 #End Region
 

@@ -9,7 +9,7 @@
         <EntityTypeShape EntityType="HerstellerersteichungModel.Firmen" Width="1.5" PointX="7.75" PointY="8.875" />
         <EntityTypeShape EntityType="HerstellerersteichungModel.ServerAblageEichprozesse" Width="1.5" PointX="0.75" PointY="0.75" />
         <EntityTypeShape EntityType="HerstellerersteichungModel.ServerEichmarkenverwaltung" Width="1.5" PointX="2.75" PointY="0.75" />
-        <EntityTypeShape EntityType="HerstellerersteichungModel.ServerEichprotokoll" Width="1.5" PointX="3" PointY="17.5" />
+        <EntityTypeShape EntityType="HerstellerersteichungModel.ServerEichprotokoll" Width="2.625" PointX="3" PointY="17.5" />
         <EntityTypeShape EntityType="HerstellerersteichungModel.ServerEichprozess" Width="1.5" PointX="8.25" PointY="22.125" />
         <EntityTypeShape EntityType="HerstellerersteichungModel.ServerFirmenZusatzdaten" Width="1.5" PointX="10" PointY="7.125" />
         <EntityTypeShape EntityType="HerstellerersteichungModel.ServerKompatiblitaetsnachweis" Width="1.5" PointX="6" PointY="59" />

@@ -269,14 +269,14 @@ Partial Class FrmMainContainer
         'LayoutControlItem13
         '
         Me.LayoutControlItem13.AssociatedControl = Me.RadScrollablePanelTrafficLightBreadcrumb
-        Me.LayoutControlItem13.Bounds = New System.Drawing.Rectangle(299, 0, 973, 70)
+        Me.LayoutControlItem13.Bounds = New System.Drawing.Rectangle(299, 0, 973, 86)
         Me.LayoutControlItem13.Name = "LayoutControlItem13"
         resources.ApplyResources(Me.LayoutControlItem13, "LayoutControlItem13")
         '
         'LayoutControlItem14
         '
         Me.LayoutControlItem14.AssociatedControl = Me.RadPanel1
-        Me.LayoutControlItem14.Bounds = New System.Drawing.Rectangle(0, 74, 974, 586)
+        Me.LayoutControlItem14.Bounds = New System.Drawing.Rectangle(0, 90, 974, 570)
         Me.LayoutControlItem14.Name = "LayoutControlItem14"
         resources.ApplyResources(Me.LayoutControlItem14, "LayoutControlItem14")
         '
@@ -290,14 +290,14 @@ Partial Class FrmMainContainer
         '
         'lblHeadertext
         '
-        Me.lblHeadertext.Bounds = New System.Drawing.Rectangle(0, 0, 299, 74)
+        Me.lblHeadertext.Bounds = New System.Drawing.Rectangle(0, 0, 299, 90)
         Me.lblHeadertext.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblHeadertext.Name = "lblHeadertext"
         resources.ApplyResources(Me.lblHeadertext, "lblHeadertext")
         '
         'radlabelContextHelp
         '
-        Me.radlabelContextHelp.Bounds = New System.Drawing.Rectangle(978, 74, 294, 586)
+        Me.radlabelContextHelp.Bounds = New System.Drawing.Rectangle(978, 90, 294, 570)
         Me.radlabelContextHelp.Image = Global.EichsoftwareClient.My.Resources.Resources.help
         Me.radlabelContextHelp.ImageAlignment = System.Drawing.ContentAlignment.TopRight
         Me.radlabelContextHelp.MaxSize = New System.Drawing.Size(360, 3000)
@@ -307,12 +307,12 @@ Partial Class FrmMainContainer
         '
         'LayoutControlSplitterItem1
         '
-        Me.LayoutControlSplitterItem1.Bounds = New System.Drawing.Rectangle(974, 74, 4, 586)
+        Me.LayoutControlSplitterItem1.Bounds = New System.Drawing.Rectangle(974, 90, 4, 570)
         Me.LayoutControlSplitterItem1.Name = "LayoutControlSplitterItem1"
         '
         'LayoutControlSplitterItem2
         '
-        Me.LayoutControlSplitterItem2.Bounds = New System.Drawing.Rectangle(299, 70, 973, 4)
+        Me.LayoutControlSplitterItem2.Bounds = New System.Drawing.Rectangle(299, 86, 973, 4)
         Me.LayoutControlSplitterItem2.Name = "LayoutControlSplitterItem2"
         '
         'ImageListTrafficLight

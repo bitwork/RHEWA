@@ -721,9 +721,10 @@ Partial Class uco_7EichprotokollDaten
         'RadTextBoxControlWZFabriknummer
         '
         resources.ApplyResources(Me.RadTextBoxControlWZFabriknummer, "RadTextBoxControlWZFabriknummer")
-        Me.RadTextBoxControlWZFabriknummer.MaxLength = 50
+        Me.RadTextBoxControlWZFabriknummer.MaxLength = 250
         Me.RadTextBoxControlWZFabriknummer.Multiline = True
         Me.RadTextBoxControlWZFabriknummer.Name = "RadTextBoxControlWZFabriknummer"
+        Me.RadTextBoxControlWZFabriknummer.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         '
         'lblAnzahlWZ
         '
