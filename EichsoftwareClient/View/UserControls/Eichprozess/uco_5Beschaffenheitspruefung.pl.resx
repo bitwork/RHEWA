@@ -118,8 +118,8 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lblPflichtfeld1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>964, 7</value>
+  <data name="RadCheckBoxApprove.Location" type="System.Drawing.Point, System.Drawing">
+    <value>549, 915</value>
   </data>
   <data name="RadLabel20.Size" type="System.Drawing.Size, System.Drawing">
     <value>168, 18</value>
@@ -132,20 +132,24 @@
 </value>
   </data>
   <data name="RadGroupBoxAufstellbedingungen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>13292, 59</value>
+    <value>16316, 59</value>
   </data>
   <data name="RadGroupBoxAufstellbedingungen.Text" xml:space="preserve">
     <value>Kryteria dla miejsca instalacji wagi:									
 </value>
   </data>
-  <data name="RadCheckBoxApprove.Location" type="System.Drawing.Point, System.Drawing">
-    <value>987, 895</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="RadLabel19.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lblPflichtfeld1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>500, 14</value>
   </data>
   <data name="RadLabel19.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 885</value>
   </data>
   <data name="RadLabel19.Size" type="System.Drawing.Size, System.Drawing">
-    <value>978, 37</value>
+    <value>540, 97</value>
   </data>
   <data name="RadLabel19.Text" xml:space="preserve">
     <value>Sprawdziłem wszystkie wyżej wymienione kryteria. Wszystkie kryteria są spełnione.</value>
@@ -173,7 +177,7 @@
 </value>
   </data>
   <data name="RadGroupBoxWaegebruecke.Size" type="System.Drawing.Size, System.Drawing">
-    <value>13292, 153</value>
+    <value>16316, 153</value>
   </data>
   <data name="RadGroupBoxWaegebruecke.Text" xml:space="preserve">
     <value>Kryteria dla stosowanego pomostu wagowego:										
@@ -219,7 +223,7 @@
 </value>
   </data>
   <data name="RadGroupBoxWaegezellen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>13292, 193</value>
+    <value>16316, 193</value>
   </data>
   <data name="RadGroupBoxWaegezellen.Text" xml:space="preserve">
     <value>Kryteria dla stosowanego(ych) czujnika(ów) tensometrycznego(ych):										
@@ -259,7 +263,7 @@
 </value>
   </data>
   <data name="RadGroupBoxVerbindungselemente.Size" type="System.Drawing.Size, System.Drawing">
-    <value>13292, 191</value>
+    <value>16316, 191</value>
   </data>
   <data name="RadGroupBoxVerbindungselemente.Text" xml:space="preserve">
     <value>Kryteria dla używanych elementów łączących:										
@@ -302,7 +306,7 @@
     <value>Kryteria dla mierników RHEWA:										</value>
   </data>
   <data name="RadGroupBoxAuswerteGeraete.Size" type="System.Drawing.Size, System.Drawing">
-    <value>13292, 205</value>
+    <value>16316, 205</value>
   </data>
   <data name="RadGroupBoxAuswerteGeraete.Text" xml:space="preserve">
     <value>Kryteria dla mierników RHEWA:										</value>
