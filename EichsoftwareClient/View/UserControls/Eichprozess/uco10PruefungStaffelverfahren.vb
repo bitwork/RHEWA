@@ -829,33 +829,7 @@ Public Class uco10PruefungStaffelverfahren
     Private Sub BerechneStaffelBereich(ByVal Staffel As String, ByVal Bereich As String)
         Try
             Dim Last1 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 1))
-            If Last1.Visible = False Then
-                Exit Sub
-            End If
-            Dim Last2 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 2))
-            Dim Last3Normallast As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 3))
-            Dim Last4 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 4))
-
-            Dim Anzeige1 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Anzeige{2}", CInt(Staffel), CInt(Bereich), 1))
-            Dim Anzeige2 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Anzeige{2}", CInt(Staffel), CInt(Bereich), 2))
-            Dim Anzeige3Normallast As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Anzeige{2}", CInt(Staffel), CInt(Bereich), 3))
-            Dim Anzeige4 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Anzeige{2}", CInt(Staffel), CInt(Bereich), 4))
-
-            Dim Fehler1 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 1))
-            Dim Fehler2 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 2))
-            Dim Fehler3 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 3))
-            Dim Fehler4 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 4))
-            Dim Fehler5 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 5))
-            Dim Fehler6 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 6))
-            Dim Fehler7 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 7))
-
-            Dim EFG1 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblStaffel{0}Bereich{1}EFGWert{2}", CInt(Staffel), CInt(Bereich), 1))
-            Dim EFG2 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblStaffel{0}Bereich{1}EFGWert{2}", CInt(Staffel), CInt(Bereich), 2))
-            Dim EFG3 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblStaffel{0}Bereich{1}EFGWert{2}", CInt(Staffel), CInt(Bereich), 3))
-            Dim EFG4 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblStaffel{0}Bereich{1}EFGWert{2}", CInt(Staffel), CInt(Bereich), 4))
-            Dim EFG5 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblStaffel{0}Bereich{1}EFGWert{2}", CInt(Staffel), CInt(Bereich), 5))
-            Dim EFG6 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblStaffel{0}Bereich{1}EFGWert{2}", CInt(Staffel), CInt(Bereich), 6))
-            Dim EFG7 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblStaffel{0}Bereich{1}EFGWert{2}", CInt(Staffel), CInt(Bereich), 7))
+            If Last1.Visible = False Then Exit Sub
 
             Dim Eichwert As String = ""
             If Bereich = "1" AndAlso AnzahlBereiche >= 1 Then
@@ -867,189 +841,240 @@ Public Class uco10PruefungStaffelverfahren
             End If
 
             If Staffel = "1" Then
-
-                'Im Bereich 1 wird gegen den nullwert geprüft. Ab bereich 2 gegen 20e
-                If Bereich = "1" Then
-                    'fehler berechnen
-                    Try
-                        Fehler1.Text = CDec(Anzeige1.Text) - CDec(Last1.Text)
-                    Catch e As InvalidCastException
-                    End Try
-                    Try
-                        Fehler2.Text = CDec(Anzeige2.Text) - CDec(Last2.Text)
-                    Catch e As InvalidCastException
-                    End Try
-                Else
-                    'fehler berechnen
-                    Try
-                        Fehler1.Text = CDec(Anzeige1.Text) - CDec(Last1.Text)
-                    Catch e As InvalidCastException
-                    End Try
-                End If
-
-                Try
-                    Fehler3.Text = CDec(Anzeige3Normallast.Text) - CDec(Last3Normallast.Text)
-                Catch e As InvalidCastException
-                End Try
-                Try
-                    Fehler4.Text = CDec(Anzeige4.Text) - CDec(Last4.Text)
-                Catch e As InvalidCastException
-                End Try
-
-                '4. last entspricht der ersten Last (üblicherweise 0)
-                Last4.Text = Last1.Text
-
-                'EFG Wert 1 und 2 Berechnen
-
-                Try
-                    If CDec(Last1.Text) < Math.Round(CDec(Eichwert * 500), _intNullstellenE, MidpointRounding.AwayFromZero) Then
-                        'Im Bereich 1 wird gegen den nullwert geprüft. Ab bereich 2 gegen 20e. dort fällt EFG2 weg. stattdessen wird EFG3 genutzt
-                        If Bereich = "1" Then
-                            EFG1.Text = Math.Round(CDec(Eichwert) * 0.5, _intNullstellenE)
-                            EFG2.Text = Math.Round(CDec(Eichwert) * 0.5, _intNullstellenE)
-                        Else
-                            EFG1.Text = Math.Round(CDec(Eichwert) * 0.5, _intNullstellenE)
-                            EFG3.Text = Math.Round(CDec(Eichwert) * 0.5, _intNullstellenE)
-                        End If
-                    Else
-                        'Im Bereich 1 wird gegen den nullwert geprüft. Ab bereich 2 gegen 20e. dort fällt EFG2 weg. stattdessen wird EFG3 genutzt
-                        If Bereich = "1" Then
-                            EFG1.Text = Math.Round(CDec(Eichwert), _intNullstellenE)
-                            EFG2.Text = Math.Round(CDec(Eichwert), _intNullstellenE)
-                        Else
-
-                            EFG1.Text = Math.Round(CDec(Eichwert), _intNullstellenE)
-                            EFG3.Text = Math.Round(CDec(Eichwert), _intNullstellenE)
-                        End If
-                    End If
-                Catch ex As InvalidCastException
-                End Try
-
-                'berechnen der Differenzen
-                Try
-                    Fehler5.Text = CDec(Anzeige4.Text) - CDec(Anzeige1.Text)
-                Catch ex As InvalidCastException
-                End Try
-
-                'messabweichung berechnen (abgeändert von Excel mappe. hier wird statt der min. normalien die eingebene Normalien Menge genommen
-                Try
-                    'Fehler6.Text = CDec(Anzeige3.Text) - CDec(Anzeige1.Text) - CDec(Last3.Text) //alte Rechnung
-
-                    'weitere Anpassung nach Absprache mit Herrn Lüling und Herrn Strack:
-                    'Ermittlung der Messabweichung für eine Staffel
-
-                    'Für die Ermittlung der Messabweichung der Staffel 1 für den Bereich 1 gilt folgende Formel:
-                    'Messabweichung = Anzeigewert (Normallast) – Anzeigewert (Nullwert) – Normallast
-                    If Bereich = "1" Then
-                        Fehler6.Text = CDec(Anzeige3Normallast.Text) - CDec(Anzeige1.Text) - CDec(Last3Normallast.Text)
-                    Else
-                        'Für die Ermittlung der Messabweichung der Staffel 1 für die Bereiche 2 und 3 wird in der bestehenden Prüfanweisung keine Vorgehensweise beschrieben. Deshalb wird an dieser Stelle der Berechnung folgende Vereinbarung zugrunde gelegt: Die Mindestlast bleibt bei der Ermittlung der Messabweichung an dieser Stelle unberücksichtigt. Lediglich die Differenz von SOLL und IST der Mindestlast wird berücksichtigt.
-                        'Folgende Formel gilt:
-                        'Messabweichung = Anzeigewert (Normallast) – (Anzeigewert (Mindestlast) – Mindestlast) – Normallast
-                        Fehler6.Text = (CDec(Anzeige3Normallast.Text)) - (CDec(Anzeige1.Text) - CDec(Last1.Text)) - CDec(Last3Normallast.Text)
-                    End If
-
-                Catch ex As InvalidCastException
-                End Try
-
-                'messabweichung zur WAage
-                Try
-                    Fehler7.Text = Fehler6.Text
-                Catch e As InvalidCastException
-                End Try
-
-                'EFG'Wert 3 Berechnen
-                Try
-                    '=WENN(B130<$B$49;WERT(0,5*$B$15);(1*$B$15))
-                    If CDec(Last3Normallast.Text) < Math.Round(CDec(Eichwert * 500), _intNullstellenE, MidpointRounding.AwayFromZero) Then
-                        EFG3.Text = Math.Round(CDec(Eichwert * 0.5), _intNullstellenE)
-                    Else
-                        EFG3.Text = Math.Round(CDec(Eichwert), _intNullstellenE)
-                    End If
-                Catch e As InvalidCastException
-                End Try
-
-                'Berechnen von EFG  4
-                Try
-                    '=WENN(B130<$B$49;WERT(0,5*$B$15);(1*$B$15))
-                    If CDec(Last4.Text) < Math.Round(CDec(Eichwert * 500), _intNullstellenE, MidpointRounding.AwayFromZero) Then
-                        EFG4.Text = Math.Round(CDec(Eichwert * 0.5), _intNullstellenE)
-                    Else
-                        EFG4.Text = Math.Round(CDec(Eichwert), _intNullstellenE)
-                    End If
-                Catch e As InvalidCastException
-                End Try
-
-                'berechnen von EFG 5
-                Try
-                    EFG5.Text = Math.Round(CDec(Eichwert), _intNullstellenE) / 5
-                Catch e As InvalidCastException
-                End Try
-
-                'Berechnen von EFG   6 und 7
-                Try
-                    If CDec(Last3Normallast.Text) < Math.Round(CDec(Eichwert * 500), _intNullstellenE, MidpointRounding.AwayFromZero) Then
-                        EFG6.Text = Math.Round(CDec(Eichwert * 0.5), _intNullstellenE)
-                        EFG7.Text = Math.Round(CDec(Eichwert * 0.5), _intNullstellenE)
-                    Else
-                        EFG6.Text = Math.Round(CDec(Eichwert), _intNullstellenE)
-                        EFG7.Text = Math.Round(CDec(Eichwert), _intNullstellenE)
-                    End If
-                Catch e As InvalidCastException
-                End Try
-
+                BerechneStaffel1(Bereich, Staffel, Eichwert)
             Else 'staffel 2 - 7 werden anders berechnet
-                'lasten
-                Try
-                    Last3Normallast.Text = CDec(Last2.Text) + CDec(Anzeige1.Text)
-                Catch e As Exception
-                End Try
-                Try
-                    Last4.Text = Anzeige1.Text
-                Catch e As Exception
-                End Try
-
-                Try
-                    'Differenz Staffel
-                    If Last3Normallast.Text = "0" Then
-                        Fehler6.Text = "0"
-                    Else
-                        Fehler6.Text = (CDec(Anzeige3Normallast.Text) - CDec(Anzeige1.Text)) - CDec(Last2.Text)
-                    End If
-                Catch e As Exception
-                End Try
-
-                Try
-                    'Differenze Normallast
-                    Fehler5.Text = CDec(Anzeige4.Text) - CDec(Anzeige1.Text)
-                Catch e As Exception
-                End Try
-
-                Try
-                    'berechnen von EFG 5
-                    EFG5.Text = Math.Round(CDec(Eichwert), _intNullstellenE) / 5
-                Catch e As Exception
-                End Try
-                Try
-
-                    'Berechne EFG Wert 6 und 7
-                    If CDec(Last3Normallast.Text) < Math.Round(CDec(Eichwert * 2000), _intNullstellenE, MidpointRounding.AwayFromZero) Then
-                        EFG6.Text = Math.Round(CDec(Eichwert), _intNullstellenE)
-                        EFG7.Text = Math.Round(CDec(Eichwert), _intNullstellenE)
-                    Else
-                        EFG6.Text = Math.Round(CDec(Eichwert), _intNullstellenE) * 1.5
-                        EFG7.Text = Math.Round(CDec(Eichwert), _intNullstellenE) * 1.5
-                    End If
-                Catch e As Exception
-                End Try
-
+                BerechneStaffel2To7(Bereich, Staffel, Eichwert)
             End If
-
         Catch ex As Exception
             MessageBox.Show(ex.StackTrace, ex.Message)
         End Try
-
     End Sub
+
+
+    Private Sub BerechneStaffel1(Bereich As String, Staffel As String, Eichwert As String) ', Last1 As Telerik.WinControls.UI.RadTextBox, Last2 As Telerik.WinControls.UI.RadTextBox, Last3Normallast As Telerik.WinControls.UI.RadTextBox, ByRef Last4 As Telerik.WinControls.UI.RadTextBox, Anzeige1 As Telerik.WinControls.UI.RadTextBox, Anzeige2 As Telerik.WinControls.UI.RadTextBox, Anzeige3Normallast As Telerik.WinControls.UI.RadTextBox, Anzeige4 As Telerik.WinControls.UI.RadTextBox, ByRef Fehler1 As Telerik.WinControls.UI.RadTextBox, ByRef Fehler2 As Telerik.WinControls.UI.RadTextBox, ByRef Fehler3 As Telerik.WinControls.UI.RadTextBox, ByRef Fehler4 As Telerik.WinControls.UI.RadTextBox, ByRef Fehler5 As Telerik.WinControls.UI.RadTextBox, ByRef Fehler6 As Telerik.WinControls.UI.RadTextBox, ByRef Fehler7 As Telerik.WinControls.UI.RadTextBox, ByRef EFG1 As Telerik.WinControls.UI.RadMaskedEditBox, ByRef EFG2 As Telerik.WinControls.UI.RadMaskedEditBox, ByRef EFG3 As Telerik.WinControls.UI.RadMaskedEditBox, ByRef EFG4 As Telerik.WinControls.UI.RadMaskedEditBox, ByRef EFG5 As Telerik.WinControls.UI.RadMaskedEditBox, ByRef EFG6 As Telerik.WinControls.UI.RadMaskedEditBox, ByRef EFG7 As Telerik.WinControls.UI.RadMaskedEditBox, Eichwert As String)
+        Dim Last1 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 1))
+        Dim Last2 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 2))
+        Dim Last3Normallast As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 3))
+        Dim Last4 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 4))
+        Dim Anzeige1 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Anzeige{2}", CInt(Staffel), CInt(Bereich), 1))
+        Dim Anzeige2 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Anzeige{2}", CInt(Staffel), CInt(Bereich), 2))
+        Dim Anzeige3Normallast As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Anzeige{2}", CInt(Staffel), CInt(Bereich), 3))
+        Dim Anzeige4 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Anzeige{2}", CInt(Staffel), CInt(Bereich), 4))
+        Dim Fehler1 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 1))
+        Dim Fehler2 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 2))
+        Dim Fehler3 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 3))
+        Dim Fehler4 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 4))
+        Dim Fehler5 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 5))
+        Dim Fehler6 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 6))
+        Dim Fehler7 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 7))
+        Dim EFG1 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblStaffel{0}Bereich{1}EFGWert{2}", CInt(Staffel), CInt(Bereich), 1))
+        Dim EFG2 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblStaffel{0}Bereich{1}EFGWert{2}", CInt(Staffel), CInt(Bereich), 2))
+        Dim EFG3 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblStaffel{0}Bereich{1}EFGWert{2}", CInt(Staffel), CInt(Bereich), 3))
+        Dim EFG4 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblStaffel{0}Bereich{1}EFGWert{2}", CInt(Staffel), CInt(Bereich), 4))
+        Dim EFG5 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblStaffel{0}Bereich{1}EFGWert{2}", CInt(Staffel), CInt(Bereich), 5))
+        Dim EFG6 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblStaffel{0}Bereich{1}EFGWert{2}", CInt(Staffel), CInt(Bereich), 6))
+        Dim EFG7 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblStaffel{0}Bereich{1}EFGWert{2}", CInt(Staffel), CInt(Bereich), 7))
+
+        'Im Bereich 1 wird gegen den nullwert geprüft. Ab bereich 2 gegen 20e
+        If Bereich = "1" Then
+            'fehler berechnen
+            Try
+                Fehler1.Text = CDec(Anzeige1.Text) - CDec(Last1.Text)
+            Catch e As InvalidCastException
+            End Try
+            Try
+                Fehler2.Text = CDec(Anzeige2.Text) - CDec(Last2.Text)
+            Catch e As InvalidCastException
+            End Try
+        Else
+            'fehler berechnen
+            Try
+                Fehler1.Text = CDec(Anzeige1.Text) - CDec(Last1.Text)
+            Catch e As InvalidCastException
+            End Try
+        End If
+
+        Try
+            Fehler3.Text = CDec(Anzeige3Normallast.Text) - CDec(Last3Normallast.Text)
+        Catch e As InvalidCastException
+        End Try
+        Try
+            Fehler4.Text = CDec(Anzeige4.Text) - CDec(Last4.Text)
+        Catch e As InvalidCastException
+        End Try
+
+        '4. last entspricht der ersten Last (üblicherweise 0)
+        Last4.Text = Last1.Text
+
+        'EFG Wert 1 und 2 Berechnen
+
+        Try
+            If CDec(Last1.Text) < Math.Round(CDec(Eichwert * 500), _intNullstellenE, MidpointRounding.AwayFromZero) Then
+                'Im Bereich 1 wird gegen den nullwert geprüft. Ab bereich 2 gegen 20e. dort fällt EFG2 weg. stattdessen wird EFG3 genutzt
+                If Bereich = "1" Then
+                    EFG1.Text = Math.Round(CDec(Eichwert) * 0.5, _intNullstellenE)
+                    EFG2.Text = Math.Round(CDec(Eichwert) * 0.5, _intNullstellenE)
+                Else
+                    EFG1.Text = Math.Round(CDec(Eichwert) * 0.5, _intNullstellenE)
+                    EFG3.Text = Math.Round(CDec(Eichwert) * 0.5, _intNullstellenE)
+                End If
+            Else
+                'Im Bereich 1 wird gegen den nullwert geprüft. Ab bereich 2 gegen 20e. dort fällt EFG2 weg. stattdessen wird EFG3 genutzt
+                If Bereich = "1" Then
+                    EFG1.Text = Math.Round(CDec(Eichwert), _intNullstellenE)
+                    EFG2.Text = Math.Round(CDec(Eichwert), _intNullstellenE)
+                Else
+
+                    EFG1.Text = Math.Round(CDec(Eichwert), _intNullstellenE)
+                    EFG3.Text = Math.Round(CDec(Eichwert), _intNullstellenE)
+                End If
+            End If
+        Catch ex As InvalidCastException
+        End Try
+
+        'berechnen der Differenzen
+        Try
+            Fehler5.Text = CDec(Anzeige4.Text) - CDec(Anzeige1.Text)
+        Catch ex As InvalidCastException
+        End Try
+
+        'messabweichung berechnen (abgeändert von Excel mappe. hier wird statt der min. normalien die eingebene Normalien Menge genommen
+        Try
+            'Fehler6.Text = CDec(Anzeige3.Text) - CDec(Anzeige1.Text) - CDec(Last3.Text) //alte Rechnung
+
+            'weitere Anpassung nach Absprache mit Herrn Lüling und Herrn Strack:
+            'Ermittlung der Messabweichung für eine Staffel
+
+            'Für die Ermittlung der Messabweichung der Staffel 1 für den Bereich 1 gilt folgende Formel:
+            'Messabweichung = Anzeigewert (Normallast) – Anzeigewert (Nullwert) – Normallast
+            If Bereich = "1" Then
+                Fehler6.Text = CDec(Anzeige3Normallast.Text) - CDec(Anzeige1.Text) - CDec(Last3Normallast.Text)
+            Else
+                'Für die Ermittlung der Messabweichung der Staffel 1 für die Bereiche 2 und 3 wird in der bestehenden Prüfanweisung keine Vorgehensweise beschrieben. Deshalb wird an dieser Stelle der Berechnung folgende Vereinbarung zugrunde gelegt: Die Mindestlast bleibt bei der Ermittlung der Messabweichung an dieser Stelle unberücksichtigt. Lediglich die Differenz von SOLL und IST der Mindestlast wird berücksichtigt.
+                'Folgende Formel gilt:
+                'Messabweichung = Anzeigewert (Normallast) – (Anzeigewert (Mindestlast) – Mindestlast) – Normallast
+                Fehler6.Text = (CDec(Anzeige3Normallast.Text)) - (CDec(Anzeige1.Text) - CDec(Last1.Text)) - CDec(Last3Normallast.Text)
+            End If
+
+        Catch ex As InvalidCastException
+        End Try
+
+        'messabweichung zur WAage
+        Try
+            Fehler7.Text = Fehler6.Text
+        Catch e As InvalidCastException
+        End Try
+
+        'EFG'Wert 3 Berechnen
+        Try
+            '=WENN(B130<$B$49;WERT(0,5*$B$15);(1*$B$15))
+            If CDec(Last3Normallast.Text) < Math.Round(CDec(Eichwert * 500), _intNullstellenE, MidpointRounding.AwayFromZero) Then
+                EFG3.Text = Math.Round(CDec(Eichwert * 0.5), _intNullstellenE)
+            Else
+                EFG3.Text = Math.Round(CDec(Eichwert), _intNullstellenE)
+            End If
+        Catch e As InvalidCastException
+        End Try
+
+        'Berechnen von EFG  4
+        Try
+            '=WENN(B130<$B$49;WERT(0,5*$B$15);(1*$B$15))
+            If CDec(Last4.Text) < Math.Round(CDec(Eichwert * 500), _intNullstellenE, MidpointRounding.AwayFromZero) Then
+                EFG4.Text = Math.Round(CDec(Eichwert * 0.5), _intNullstellenE)
+            Else
+                EFG4.Text = Math.Round(CDec(Eichwert), _intNullstellenE)
+            End If
+        Catch e As InvalidCastException
+        End Try
+
+        'berechnen von EFG 5
+        Try
+            EFG5.Text = Math.Round(CDec(Eichwert), _intNullstellenE) / 5
+        Catch e As InvalidCastException
+        End Try
+
+        'Berechnen von EFG   6 und 7
+        Try
+            If CDec(Last3Normallast.Text) < Math.Round(CDec(Eichwert * 500), _intNullstellenE, MidpointRounding.AwayFromZero) Then
+                EFG6.Text = Math.Round(CDec(Eichwert * 0.5), _intNullstellenE)
+                EFG7.Text = Math.Round(CDec(Eichwert * 0.5), _intNullstellenE)
+            Else
+                EFG6.Text = Math.Round(CDec(Eichwert), _intNullstellenE)
+                EFG7.Text = Math.Round(CDec(Eichwert), _intNullstellenE)
+            End If
+        Catch e As InvalidCastException
+        End Try
+    End Sub
+
+    Private Sub BerechneStaffel2To7(Bereich As String, Staffel As String, Eichwert As String) 'Last2 As Telerik.WinControls.UI.RadTextBox, ByRef Last3Normallast As Telerik.WinControls.UI.RadTextBox, ByRef Last4 As Telerik.WinControls.UI.RadTextBox, Anzeige1 As Telerik.WinControls.UI.RadTextBox, Anzeige3Normallast As Telerik.WinControls.UI.RadTextBox, Anzeige4 As Telerik.WinControls.UI.RadTextBox, ByRef Fehler5 As Telerik.WinControls.UI.RadTextBox, ByRef Fehler6 As Telerik.WinControls.UI.RadTextBox, ByRef EFG5 As Telerik.WinControls.UI.RadMaskedEditBox, ByRef EFG6 As Telerik.WinControls.UI.RadMaskedEditBox, ByRef EFG7 As Telerik.WinControls.UI.RadMaskedEditBox, Eichwert As String)
+        Dim Last1 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 1))
+        Dim Last2 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 2))
+        Dim Last3Normallast As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 3))
+        Dim Last4 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 4))
+        Dim Anzeige1 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Anzeige{2}", CInt(Staffel), CInt(Bereich), 1))
+        Dim Anzeige3Normallast As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Anzeige{2}", CInt(Staffel), CInt(Bereich), 3))
+        Dim Anzeige4 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Anzeige{2}", CInt(Staffel), CInt(Bereich), 4))
+        Dim Fehler5 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 5))
+        Dim Fehler6 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 6))
+        Dim EFG5 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblStaffel{0}Bereich{1}EFGWert{2}", CInt(Staffel), CInt(Bereich), 5))
+        Dim EFG6 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblStaffel{0}Bereich{1}EFGWert{2}", CInt(Staffel), CInt(Bereich), 6))
+        Dim EFG7 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblStaffel{0}Bereich{1}EFGWert{2}", CInt(Staffel), CInt(Bereich), 7))
+
+        'lasten
+        Try
+            If IsNumeric(Last2.Text) And IsNumeric(Anzeige1.Text) Then
+                Last3Normallast.Text = CDec(Last2.Text) + CDec(Anzeige1.Text)
+            End If
+        Catch e As Exception
+        End Try
+        Try
+            Last4.Text = Anzeige1.Text
+        Catch e As Exception
+        End Try
+
+        Try
+            'Differenz Staffel
+            If Last3Normallast.Text = "0" Then
+                Fehler6.Text = "0"
+            Else
+                If IsNumeric(Anzeige3Normallast.Text) And IsNumeric(Anzeige1.Text) And IsNumeric(Last2.Text) Then
+                    Fehler6.Text = (CDec(Anzeige3Normallast.Text) - CDec(Anzeige1.Text)) - CDec(Last2.Text)
+                End If
+            End If
+        Catch e As Exception
+        End Try
+
+        Try
+            'Differenze Normallast
+            If IsNumeric(Anzeige4.Text) And IsNumeric(Anzeige1.Text) Then
+                Fehler5.Text = CDec(Anzeige4.Text) - CDec(Anzeige1.Text)
+            End If
+
+        Catch e As Exception
+        End Try
+
+        Try
+            'berechnen von EFG 5
+            EFG5.Text = Math.Round(CDec(Eichwert), _intNullstellenE) / 5
+        Catch e As Exception
+        End Try
+        Try
+            'Berechne EFG Wert 6 und 7
+            If IsNumeric(Last3Normallast.Text) Then
+
+                If CDec(Last3Normallast.Text) < Math.Round(CDec(Eichwert * 2000), _intNullstellenE, MidpointRounding.AwayFromZero) Then
+                    EFG6.Text = Math.Round(CDec(Eichwert), _intNullstellenE)
+                    EFG7.Text = Math.Round(CDec(Eichwert), _intNullstellenE)
+                Else
+                    EFG6.Text = Math.Round(CDec(Eichwert), _intNullstellenE) * 1.5
+                    EFG7.Text = Math.Round(CDec(Eichwert), _intNullstellenE) * 1.5
+                End If
+            End If
+
+        Catch e As Exception
+        End Try
+    End Sub
+
 
     ''' <summary>
     ''' Event welches bei allen Textboxen triggerd und die Berechnungsroutinen anstößt
@@ -1057,13 +1082,13 @@ Public Class uco10PruefungStaffelverfahren
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     ''' <remarks></remarks>
-    Private Sub RadTextBoxControlEingaben_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlStaffel5Bereich1Last4.TextChanged, RadTextBoxControlStaffel5Bereich1Last3.TextChanged, RadTextBoxControlStaffel5Bereich1Last2.TextChanged, RadTextBoxControlStaffel5Bereich1Last1.TextChanged, RadTextBoxControlStaffel5Bereich1Anzeige1.TextChanged, RadTextBoxControlStaffel4Bereich1Last4.TextChanged, RadTextBoxControlStaffel4Bereich1Last3.TextChanged, RadTextBoxControlStaffel4Bereich1Last2.TextChanged, RadTextBoxControlStaffel4Bereich1Last1.TextChanged, RadTextBoxControlStaffel4Bereich1Anzeige1.TextChanged, RadTextBoxControlStaffel3Bereich1Last2.TextChanged, RadTextBoxControlStaffel3Bereich1Last1.TextChanged, RadTextBoxControlStaffel3Bereich1Anzeige1.TextChanged, RadTextBoxControlStaffel2Bereich1Last2.TextChanged, RadTextBoxControlStaffel2Bereich1Last1.TextChanged, RadTextBoxControlStaffel2Bereich1Anzeige1.TextChanged, RadTextBoxControlStaffel1Bereich1Last4.TextChanged, RadTextBoxControlStaffel1Bereich1Last3.TextChanged, RadTextBoxControlStaffel1Bereich1Last2.TextChanged, RadTextBoxControlStaffel1Bereich1Last1.TextChanged, RadTextBoxControlStaffel1Bereich1Anzeige4.TextChanged, RadTextBoxControlStaffel1Bereich1Anzeige3.TextChanged, RadTextBoxControlStaffel1Bereich1Anzeige2.TextChanged, RadTextBoxControlStaffel1Bereich1Anzeige1.TextChanged,
-    RadTextBoxControlStaffel5Bereich2Last4.TextChanged, RadTextBoxControlStaffel5Bereich2Last3.TextChanged, RadTextBoxControlStaffel5Bereich2Last2.TextChanged, RadTextBoxControlStaffel5Bereich2Last1.TextChanged, RadTextBoxControlStaffel5Bereich2Anzeige1.TextChanged, RadTextBoxControlStaffel4Bereich2Last4.TextChanged, RadTextBoxControlStaffel4Bereich2Last3.TextChanged, RadTextBoxControlStaffel4Bereich2Last2.TextChanged, RadTextBoxControlStaffel4Bereich2Last1.TextChanged, RadTextBoxControlStaffel4Bereich2Anzeige1.TextChanged, RadTextBoxControlStaffel3Bereich2Last2.TextChanged, RadTextBoxControlStaffel3Bereich2Last1.TextChanged, RadTextBoxControlStaffel3Bereich2Anzeige1.TextChanged, RadTextBoxControlStaffel2Bereich2Last2.TextChanged, RadTextBoxControlStaffel2Bereich2Last1.TextChanged, RadTextBoxControlStaffel2Bereich2Anzeige1.TextChanged, RadTextBoxControlStaffel1Bereich2Last4.TextChanged, RadTextBoxControlStaffel1Bereich2Last3.TextChanged, RadTextBoxControlStaffel1Bereich2Last1.TextChanged, RadTextBoxControlStaffel1Bereich2Anzeige4.TextChanged, RadTextBoxControlStaffel1Bereich2Anzeige3.TextChanged, RadTextBoxControlStaffel1Bereich2Anzeige1.TextChanged,
-    RadTextBoxControlStaffel5Bereich3Last4.TextChanged, RadTextBoxControlStaffel5Bereich3Last3.TextChanged, RadTextBoxControlStaffel5Bereich3Last2.TextChanged, RadTextBoxControlStaffel5Bereich3Last1.TextChanged, RadTextBoxControlStaffel5Bereich3Anzeige1.TextChanged, RadTextBoxControlStaffel4Bereich3Last4.TextChanged, RadTextBoxControlStaffel4Bereich3Last3.TextChanged, RadTextBoxControlStaffel4Bereich3Last2.TextChanged, RadTextBoxControlStaffel4Bereich3Last1.TextChanged, RadTextBoxControlStaffel4Bereich3Anzeige1.TextChanged, RadTextBoxControlStaffel3Bereich3Last2.TextChanged, RadTextBoxControlStaffel3Bereich3Last1.TextChanged, RadTextBoxControlStaffel3Bereich3Anzeige1.TextChanged, RadTextBoxControlStaffel2Bereich3Last2.TextChanged, RadTextBoxControlStaffel2Bereich3Last1.TextChanged, RadTextBoxControlStaffel2Bereich3Anzeige1.TextChanged, RadTextBoxControlStaffel1Bereich3Last4.TextChanged, RadTextBoxControlStaffel1Bereich3Last3.TextChanged, RadTextBoxControlStaffel1Bereich3Last1.TextChanged, RadTextBoxControlStaffel1Bereich3Anzeige4.TextChanged, RadTextBoxControlStaffel1Bereich3Anzeige3.TextChanged, RadTextBoxControlStaffel1Bereich3Anzeige1.TextChanged,
-    RadTextBoxControlStaffel5Bereich3Anzeige4.TextChanged, RadTextBoxControlStaffel5Bereich3Anzeige3.TextChanged, RadTextBoxControlStaffel5Bereich2Anzeige4.TextChanged, RadTextBoxControlStaffel5Bereich2Anzeige3.TextChanged, RadTextBoxControlStaffel5Bereich1Anzeige4.TextChanged, RadTextBoxControlStaffel5Bereich1Anzeige3.TextChanged, RadTextBoxControlStaffel4Bereich3Anzeige4.TextChanged, RadTextBoxControlStaffel4Bereich3Anzeige3.TextChanged, RadTextBoxControlStaffel4Bereich2Anzeige4.TextChanged, RadTextBoxControlStaffel4Bereich2Anzeige3.TextChanged, RadTextBoxControlStaffel4Bereich1Anzeige4.TextChanged, RadTextBoxControlStaffel4Bereich1Anzeige3.TextChanged, RadTextBoxControlStaffel3Bereich3Anzeige4.TextChanged, RadTextBoxControlStaffel3Bereich3Anzeige3.TextChanged, RadTextBoxControlStaffel3Bereich2Anzeige4.TextChanged, RadTextBoxControlStaffel3Bereich2Anzeige3.TextChanged, RadTextBoxControlStaffel3Bereich1Anzeige4.TextChanged, RadTextBoxControlStaffel3Bereich1Anzeige3.TextChanged, RadTextBoxControlStaffel2Bereich3Anzeige4.TextChanged, RadTextBoxControlStaffel2Bereich3Anzeige3.TextChanged, RadTextBoxControlStaffel2Bereich2Anzeige4.TextChanged, RadTextBoxControlStaffel2Bereich2Anzeige3.TextChanged, RadTextBoxControlStaffel2Bereich1Anzeige4.TextChanged, RadTextBoxControlStaffel2Bereich1Anzeige3.TextChanged
+    Private Sub RadTextBoxControlEingaben_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlStaffel5Bereich1Last4.Leave, RadTextBoxControlStaffel5Bereich1Last3.Leave, RadTextBoxControlStaffel5Bereich1Last2.Leave, RadTextBoxControlStaffel5Bereich1Last1.Leave, RadTextBoxControlStaffel5Bereich1Anzeige1.Leave, RadTextBoxControlStaffel4Bereich1Last4.Leave, RadTextBoxControlStaffel4Bereich1Last3.Leave, RadTextBoxControlStaffel4Bereich1Last2.Leave, RadTextBoxControlStaffel4Bereich1Last1.Leave, RadTextBoxControlStaffel4Bereich1Anzeige1.Leave, RadTextBoxControlStaffel3Bereich1Last2.Leave, RadTextBoxControlStaffel3Bereich1Last1.Leave, RadTextBoxControlStaffel3Bereich1Anzeige1.Leave, RadTextBoxControlStaffel2Bereich1Last2.Leave, RadTextBoxControlStaffel2Bereich1Last1.Leave, RadTextBoxControlStaffel2Bereich1Anzeige1.Leave, RadTextBoxControlStaffel1Bereich1Last4.Leave, RadTextBoxControlStaffel1Bereich1Last3.Leave, RadTextBoxControlStaffel1Bereich1Last2.Leave, RadTextBoxControlStaffel1Bereich1Last1.Leave, RadTextBoxControlStaffel1Bereich1Anzeige4.Leave, RadTextBoxControlStaffel1Bereich1Anzeige3.Leave, RadTextBoxControlStaffel1Bereich1Anzeige2.Leave, RadTextBoxControlStaffel1Bereich1Anzeige1.Leave,
+    RadTextBoxControlStaffel5Bereich2Last4.Leave, RadTextBoxControlStaffel5Bereich2Last3.Leave, RadTextBoxControlStaffel5Bereich2Last2.Leave, RadTextBoxControlStaffel5Bereich2Last1.Leave, RadTextBoxControlStaffel5Bereich2Anzeige1.Leave, RadTextBoxControlStaffel4Bereich2Last4.Leave, RadTextBoxControlStaffel4Bereich2Last3.Leave, RadTextBoxControlStaffel4Bereich2Last2.Leave, RadTextBoxControlStaffel4Bereich2Last1.Leave, RadTextBoxControlStaffel4Bereich2Anzeige1.Leave, RadTextBoxControlStaffel3Bereich2Last2.Leave, RadTextBoxControlStaffel3Bereich2Last1.Leave, RadTextBoxControlStaffel3Bereich2Anzeige1.Leave, RadTextBoxControlStaffel2Bereich2Last2.Leave, RadTextBoxControlStaffel2Bereich2Last1.Leave, RadTextBoxControlStaffel2Bereich2Anzeige1.Leave, RadTextBoxControlStaffel1Bereich2Last4.Leave, RadTextBoxControlStaffel1Bereich2Last3.Leave, RadTextBoxControlStaffel1Bereich2Last1.Leave, RadTextBoxControlStaffel1Bereich2Anzeige4.Leave, RadTextBoxControlStaffel1Bereich2Anzeige3.Leave, RadTextBoxControlStaffel1Bereich2Anzeige1.Leave,
+    RadTextBoxControlStaffel5Bereich3Last4.Leave, RadTextBoxControlStaffel5Bereich3Last3.Leave, RadTextBoxControlStaffel5Bereich3Last2.Leave, RadTextBoxControlStaffel5Bereich3Last1.Leave, RadTextBoxControlStaffel5Bereich3Anzeige1.Leave, RadTextBoxControlStaffel4Bereich3Last4.Leave, RadTextBoxControlStaffel4Bereich3Last3.Leave, RadTextBoxControlStaffel4Bereich3Last2.Leave, RadTextBoxControlStaffel4Bereich3Last1.Leave, RadTextBoxControlStaffel4Bereich3Anzeige1.Leave, RadTextBoxControlStaffel3Bereich3Last2.Leave, RadTextBoxControlStaffel3Bereich3Last1.Leave, RadTextBoxControlStaffel3Bereich3Anzeige1.Leave, RadTextBoxControlStaffel2Bereich3Last2.Leave, RadTextBoxControlStaffel2Bereich3Last1.Leave, RadTextBoxControlStaffel2Bereich3Anzeige1.Leave, RadTextBoxControlStaffel1Bereich3Last4.Leave, RadTextBoxControlStaffel1Bereich3Last3.Leave, RadTextBoxControlStaffel1Bereich3Last1.Leave, RadTextBoxControlStaffel1Bereich3Anzeige4.Leave, RadTextBoxControlStaffel1Bereich3Anzeige3.Leave, RadTextBoxControlStaffel1Bereich3Anzeige1.Leave,
+    RadTextBoxControlStaffel5Bereich3Anzeige4.Leave, RadTextBoxControlStaffel5Bereich3Anzeige3.Leave, RadTextBoxControlStaffel5Bereich2Anzeige4.Leave, RadTextBoxControlStaffel5Bereich2Anzeige3.Leave, RadTextBoxControlStaffel5Bereich1Anzeige4.Leave, RadTextBoxControlStaffel5Bereich1Anzeige3.Leave, RadTextBoxControlStaffel4Bereich3Anzeige4.Leave, RadTextBoxControlStaffel4Bereich3Anzeige3.Leave, RadTextBoxControlStaffel4Bereich2Anzeige4.Leave, RadTextBoxControlStaffel4Bereich2Anzeige3.Leave, RadTextBoxControlStaffel4Bereich1Anzeige4.Leave, RadTextBoxControlStaffel4Bereich1Anzeige3.Leave, RadTextBoxControlStaffel3Bereich3Anzeige4.Leave, RadTextBoxControlStaffel3Bereich3Anzeige3.Leave, RadTextBoxControlStaffel3Bereich2Anzeige4.Leave, RadTextBoxControlStaffel3Bereich2Anzeige3.Leave, RadTextBoxControlStaffel3Bereich1Anzeige4.Leave, RadTextBoxControlStaffel3Bereich1Anzeige3.Leave, RadTextBoxControlStaffel2Bereich3Anzeige4.Leave, RadTextBoxControlStaffel2Bereich3Anzeige3.Leave, RadTextBoxControlStaffel2Bereich2Anzeige4.Leave, RadTextBoxControlStaffel2Bereich2Anzeige3.Leave, RadTextBoxControlStaffel2Bereich1Anzeige4.Leave, RadTextBoxControlStaffel2Bereich1Anzeige3.Leave
 
         If _suspendEvents = True Then Exit Sub
-        If TimerRunning Then Exit Sub Else StartTimer()
+        'If TimerRunning Then Exit Sub Else StartTimer()
         _suspendEvents = True
 
         AktuellerStatusDirty = True
@@ -1089,51 +1114,92 @@ Public Class uco10PruefungStaffelverfahren
 
             'die Messabweichung durch alle Staffeln durchreichen
             Dim Fehler6Staffel1 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 1, CInt(Bereich), 6))
-            If Fehler6Staffel1.Visible = False Then
-                Exit Sub
-            End If
-            Dim Fehler6Staffel2 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 2, CInt(Bereich), 6))
-            Dim Fehler6Staffel3 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 3, CInt(Bereich), 6))
-            Dim Fehler6Staffel4 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 4, CInt(Bereich), 6))
-            Dim Fehler6Staffel5 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 5, CInt(Bereich), 6))
-
+            If Fehler6Staffel1.Visible = False Then Exit Sub
             Dim Fehler7Staffel1 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 1, CInt(Bereich), 7))
-            Dim Fehler7Staffel2 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 2, CInt(Bereich), 7))
-            Dim Fehler7Staffel3 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 3, CInt(Bereich), 7))
-            Dim Fehler7Staffel4 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 4, CInt(Bereich), 7))
-            Dim Fehler7Staffel5 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 5, CInt(Bereich), 7))
 
-            Try
+            'staffel 1
+            If IsNumeric(Fehler6Staffel1.Text) Then
                 'differenz der Waage Berechnen
                 Fehler7Staffel1.Text = CDec(Fehler6Staffel1.Text)
-            Catch ex As Exception
+
+                'staffel 2
+                Dim Fehler6Staffel2 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 2, CInt(Bereich), 6))
+                Dim Fehler7Staffel2 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 2, CInt(Bereich), 7))
+
+                If IsNumeric(Fehler6Staffel2.Text) Then
+                    Fehler7Staffel2.Text = CDec(Fehler6Staffel1.Text) + CDec(Fehler6Staffel2.Text)
+                    'staffel 3
+                    Dim Fehler6Staffel3 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 3, CInt(Bereich), 6))
+                    Dim Fehler7Staffel3 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 3, CInt(Bereich), 7))
+
+                    If IsNumeric(Fehler6Staffel3.Text) Then
+                        Fehler7Staffel3.Text = CDec(Fehler6Staffel1.Text) + CDec(Fehler6Staffel2.Text) + CDec(Fehler6Staffel3.Text)
+
+                        'staffel 4
+                        Dim Fehler6Staffel4 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 4, CInt(Bereich), 6))
+                        Dim Fehler7Staffel4 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 4, CInt(Bereich), 7))
+
+                        If IsNumeric(Fehler6Staffel4.Text) Then
+                            Fehler7Staffel4.Text = CDec(Fehler6Staffel1.Text) + CDec(Fehler6Staffel2.Text) + CDec(Fehler6Staffel3.Text) + CDec(Fehler6Staffel4.Text)
+
+                            'staffel 5
+                            Dim Fehler6Staffel5 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 5, CInt(Bereich), 6))
+                            Dim Fehler7Staffel5 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 5, CInt(Bereich), 7))
+                            If IsNumeric(Fehler6Staffel5.Text) Then
+                                Fehler7Staffel5.Text = CDec(Fehler6Staffel1.Text) + CDec(Fehler6Staffel2.Text) + CDec(Fehler6Staffel3.Text) + CDec(Fehler6Staffel4.Text) + CDec(Fehler6Staffel5.Text)
+                            Else
+                                Fehler7Staffel5.Text = ""
+                                Exit Sub
+                            End If
+                        Else
+                            Fehler7Staffel4.Text = ""
+                            Exit Sub
+                        End If
+                    Else
+                        Fehler7Staffel3.Text = ""
+                        Exit Sub
+                    End If
+                Else
+                    Fehler7Staffel2.Text = ""
+                    Exit Sub
+                End If
+            Else
                 Fehler7Staffel1.Text = ""
                 Exit Sub
-            End Try
-            Try
-                Fehler7Staffel2.Text = CDec(Fehler6Staffel1.Text) + CDec(Fehler6Staffel2.Text)
-            Catch ex As Exception
-                Fehler7Staffel2.Text = ""
-                Exit Sub
-            End Try
-            Try
-                Fehler7Staffel3.Text = CDec(Fehler6Staffel1.Text) + CDec(Fehler6Staffel2.Text) + CDec(Fehler6Staffel3.Text)
-            Catch ex As Exception
-                Fehler7Staffel3.Text = ""
-                Exit Sub
-            End Try
-            Try
-                Fehler7Staffel4.Text = CDec(Fehler6Staffel1.Text) + CDec(Fehler6Staffel2.Text) + CDec(Fehler6Staffel3.Text) + CDec(Fehler6Staffel4.Text)
-            Catch ex As Exception
-                Fehler7Staffel4.Text = ""
-                Exit Sub
-            End Try
-            Try
-                Fehler7Staffel5.Text = CDec(Fehler6Staffel1.Text) + CDec(Fehler6Staffel2.Text) + CDec(Fehler6Staffel3.Text) + CDec(Fehler6Staffel4.Text) + CDec(Fehler6Staffel5.Text)
-            Catch ex As Exception
-                Fehler7Staffel5.Text = ""
-                Exit Sub
-            End Try
+            End If
+
+            'Try
+            '    'differenz der Waage Berechnen
+            '    Fehler7Staffel1.Text = CDec(Fehler6Staffel1.Text)
+            'Catch ex As Exception
+            '    Fehler7Staffel1.Text = ""
+            '    Exit Sub
+            'End Try
+
+            'Try
+            '    Fehler7Staffel2.Text = CDec(Fehler6Staffel1.Text) + CDec(Fehler6Staffel2.Text)
+            'Catch ex As Exception
+            '    Fehler7Staffel2.Text = ""
+            '    Exit Sub
+            'End Try
+            'Try
+            '    Fehler7Staffel3.Text = CDec(Fehler6Staffel1.Text) + CDec(Fehler6Staffel2.Text) + CDec(Fehler6Staffel3.Text)
+            'Catch ex As Exception
+            '    Fehler7Staffel3.Text = ""
+            '    Exit Sub
+            'End Try
+            'Try
+            '    Fehler7Staffel4.Text = CDec(Fehler6Staffel1.Text) + CDec(Fehler6Staffel2.Text) + CDec(Fehler6Staffel3.Text) + CDec(Fehler6Staffel4.Text)
+            'Catch ex As Exception
+            '    Fehler7Staffel4.Text = ""
+            '    Exit Sub
+            'End Try
+            'Try
+            '    Fehler7Staffel5.Text = CDec(Fehler6Staffel1.Text) + CDec(Fehler6Staffel2.Text) + CDec(Fehler6Staffel3.Text) + CDec(Fehler6Staffel4.Text) + CDec(Fehler6Staffel5.Text)
+            'Catch ex As Exception
+            '    Fehler7Staffel5.Text = ""
+            '    Exit Sub
+            'End Try
         Catch ex As Exception
         End Try
     End Sub
@@ -1508,14 +1574,14 @@ Public Class uco10PruefungStaffelverfahren
         End If
     End Sub
 
-    Private Sub uco10PruefungStaffelverfahren_TimerStopped() Handles Me.TimerStopped
-        'For staffel As Integer = 1 To 5
-        '    For bereich As Integer = 1 To 3
-        '        BerechneStaffelBereich(staffel, bereich)
-        '        BerechneMessabweichung(bereich)
-        '    Next
-        'Next
-    End Sub
+    'Private Sub uco10PruefungStaffelverfahren_TimerStopped() Handles Me.TimerStopped
+    '    'For staffel As Integer = 1 To 5
+    '    '    For bereich As Integer = 1 To 3
+    '    '        BerechneStaffelBereich(staffel, bereich)
+    '    '        BerechneMessabweichung(bereich)
+    '    '    Next
+    '    'Next
+    'End Sub
 
 #End Region
 
