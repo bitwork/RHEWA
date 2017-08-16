@@ -318,12 +318,23 @@ Public Class uco_7EichprotokollDaten
         RadTextBoxControlEichzaehlerstand.Text = objEichprozess.Eichprotokoll.Komponenten_Eichzaehlerstand
 
         RadTextBoxControlWZHersteller.Text = objEichprozess.Lookup_Waegezelle.Hersteller
-        RadTextBoxControlWZTyp.Text = objEichprozess.Lookup_Waegezelle.Typ
+        RadTextBoxControlWZTyp.Text = objEichprozess.Lookup_Waegezelle.typ
         RadTextBoxControlWZAnzahl.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen
         RadTextBoxControlWZFabriknummer.Text = objEichprozess.Eichprotokoll.Komponenten_WaegezellenFabriknummer
 
         'bereich Verwendungszweck
-        RadTextBoxControlWaagentyp.Text = objEichprozess.Lookup_Waagentyp.Typ
+        If objEichprozess?.Lookup_Waagentyp IsNot Nothing Then
+            Select Case AktuellerBenutzer.Instance.AktuelleSprache
+                Case "de"
+                    RadTextBoxControlWaagentyp.Text = objEichprozess.Lookup_Waagentyp.Typ
+
+                Case "en"
+                    RadTextBoxControlWaagentyp.Text = objEichprozess.Lookup_Waagentyp.Typ_EN
+
+                Case "pl"
+                    RadTextBoxControlWaagentyp.Text = objEichprozess.Lookup_Waagentyp.Typ_PL
+            End Select
+        End If
 
         Select Case objEichprozess.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren
             Case Is = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgmitNormalien, GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgimStaffelverfahren
@@ -731,6 +742,8 @@ Public Class uco_7EichprotokollDaten
             Catch ex As Exception
             End Try
         End If
+
+
         _suspendEvents = oldsuspendEvents
     End Sub
 
