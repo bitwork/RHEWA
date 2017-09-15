@@ -1081,9 +1081,13 @@ Public Class ucoEichprozessauswahlliste
 
     Private Sub RadButtonProtokollAblegen_Click(sender As Object, e As EventArgs) Handles RadButtonProtokollAblegen.Click
         If Not Me.VorgangsnummerGridClient.Equals("") Then
-            clsWebserviceFunctions.LegeEichprotokollAb(VorgangsnummerGridClient)
-            'neu laden der Liste
-            LoadFromDatabase()
+            If clsWebserviceFunctions.LegeEichprotokollAb(VorgangsnummerGridClient) Then
+                'neu laden der Liste
+                LoadFromDatabase()
+            Else
+                MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_UngueltigeLizenz)
+            End If
+
         End If
     End Sub
 #End Region

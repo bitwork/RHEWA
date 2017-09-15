@@ -53,10 +53,10 @@ Public Class clsWebserviceFunctions
 
                     If objLic.Aktiv = False Then
                         bolneuStammdaten = False
-                        Return False
+                        ' Return False
                         DBContext.SaveChanges()
                         MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_UngueltigeLizenz)
-                        Application.Exit()
+                       ' Application.Exit()
                         Exit Function
                     End If
 
@@ -850,7 +850,7 @@ Public Class clsWebserviceFunctions
         Dim jsonSerializerSettings = New JsonSerializerSettings()
         jsonSerializerSettings.PreserveReferencesHandling = PreserveReferencesHandling.Objects
 
-        Dim jsonStrings = New List(Of String) 'TODO aus webservice
+        Dim jsonStrings = New List(Of String) ' aus webservice
         Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
             Try
                 webContext.Open()
@@ -859,6 +859,7 @@ Public Class clsWebserviceFunctions
             End Try
 
             Dim result = webContext.getAblageEichprozesse(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+            If result Is Nothing Then Exit Sub 'wenn nichts abgelegt wurde
             jsonStrings.AddRange(result)
             Dim successful As Boolean = False
             Using DBContext As New Entities
