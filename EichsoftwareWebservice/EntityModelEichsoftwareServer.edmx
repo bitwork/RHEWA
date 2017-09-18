@@ -1151,21 +1151,21 @@
           <Property Name="BenannteStelleAnzahl" Type="Int32" />
           <Property Name="BenannteStelleAnzahlMeldestand" Type="Int32" />
           <Property Name="BenannteStelleFehlmenge" Type="Int32" />
+          <Property Name="BenannteStelleAnzahlAusgeteilt" Type="Int32" />
           <Property Name="SicherungsmarkeKleinAnzahl" Type="Int32" />
           <Property Name="SicherungsmarkeKleinAnzahlMeldestand" Type="Int32" />
           <Property Name="SicherungsmarkeKleinFehlmenge" Type="Int32" />
+          <Property Name="SicherungsmarkeKleinAnzahlAusgeteilt" Type="Int32" />
           <Property Name="SicherungsmarkeGrossAnzahl" Type="Int32" />
           <Property Name="SicherungsmarkeGrossAnzahlMeldestand" Type="Int32" />
           <Property Name="SicherungsmarkeGrossFehlmenge" Type="Int32" />
+          <Property Name="SicherungsmarkeGrossAnzahlAusgeteilt" Type="Int32" />
           <Property Name="HinweismarkeAnzahl" Type="Int32" />
           <Property Name="HinweismarkeAnzahlMeldestand" Type="Int32" />
           <Property Name="HinweismarkeFehlmenge" Type="Int32" />
+          <Property Name="HinweismarkeAnzahlAusgeteilt" Type="Int32" />
           <Property Name="Bemerkung" Type="String" MaxLength="999" FixedLength="false" Unicode="true" />
           <Property Name="ZurBearbeitungGesperrtDurch" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="BenannteStelleAnzahlAusgeteilt" Type="Int32" />
-          <Property Name="SicherungsmarkeKleinAnzahlAusgeteilt" Type="Int32" />
-          <Property Name="SicherungsmarkeGrossAnzahlAusgeteilt" Type="Int32" />
-          <Property Name="HinweismarkeAnzahlAusgeteilt" Type="Int32" />
         </EntityType>
         <EntityType Name="ServerEichprotokoll">
           <Key>
@@ -2033,21 +2033,21 @@
           <EntitySetMapping Name="ServerEichmarkenverwaltung">
             <EntityTypeMapping TypeName="HerstellerersteichungModel.ServerEichmarkenverwaltung">
               <MappingFragment StoreEntitySet="ServerEichmarkenverwaltung">
-                <ScalarProperty Name="HinweismarkeAnzahlAusgeteilt" ColumnName="HinweismarkeAnzahlAusgeteilt" />
-                <ScalarProperty Name="SicherungsmarkeGrossAnzahlAusgeteilt" ColumnName="SicherungsmarkeGrossAnzahlAusgeteilt" />
-                <ScalarProperty Name="SicherungsmarkeKleinAnzahlAusgeteilt" ColumnName="SicherungsmarkeKleinAnzahlAusgeteilt" />
-                <ScalarProperty Name="BenannteStelleAnzahlAusgeteilt" ColumnName="BenannteStelleAnzahlAusgeteilt" />
                 <ScalarProperty Name="ZurBearbeitungGesperrtDurch" ColumnName="ZurBearbeitungGesperrtDurch" />
                 <ScalarProperty Name="Bemerkung" ColumnName="Bemerkung" />
+                <ScalarProperty Name="HinweismarkeAnzahlAusgeteilt" ColumnName="HinweismarkeAnzahlAusgeteilt" />
                 <ScalarProperty Name="HinweismarkeFehlmenge" ColumnName="HinweismarkeFehlmenge" />
                 <ScalarProperty Name="HinweismarkeAnzahlMeldestand" ColumnName="HinweismarkeAnzahlMeldestand" />
                 <ScalarProperty Name="HinweismarkeAnzahl" ColumnName="HinweismarkeAnzahl" />
+                <ScalarProperty Name="SicherungsmarkeGrossAnzahlAusgeteilt" ColumnName="SicherungsmarkeGrossAnzahlAusgeteilt" />
                 <ScalarProperty Name="SicherungsmarkeGrossFehlmenge" ColumnName="SicherungsmarkeGrossFehlmenge" />
                 <ScalarProperty Name="SicherungsmarkeGrossAnzahlMeldestand" ColumnName="SicherungsmarkeGrossAnzahlMeldestand" />
                 <ScalarProperty Name="SicherungsmarkeGrossAnzahl" ColumnName="SicherungsmarkeGrossAnzahl" />
+                <ScalarProperty Name="SicherungsmarkeKleinAnzahlAusgeteilt" ColumnName="SicherungsmarkeKleinAnzahlAusgeteilt" />
                 <ScalarProperty Name="SicherungsmarkeKleinFehlmenge" ColumnName="SicherungsmarkeKleinFehlmenge" />
                 <ScalarProperty Name="SicherungsmarkeKleinAnzahlMeldestand" ColumnName="SicherungsmarkeKleinAnzahlMeldestand" />
                 <ScalarProperty Name="SicherungsmarkeKleinAnzahl" ColumnName="SicherungsmarkeKleinAnzahl" />
+                <ScalarProperty Name="BenannteStelleAnzahlAusgeteilt" ColumnName="BenannteStelleAnzahlAusgeteilt" />
                 <ScalarProperty Name="BenannteStelleFehlmenge" ColumnName="BenannteStelleFehlmenge" />
                 <ScalarProperty Name="BenannteStelleAnzahlMeldestand" ColumnName="BenannteStelleAnzahlMeldestand" />
                 <ScalarProperty Name="BenannteStelleAnzahl" ColumnName="BenannteStelleAnzahl" />

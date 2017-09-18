@@ -17,20 +17,20 @@ Partial Public Class ServerEichmarkenverwaltung
     Public Property BenannteStelleAnzahl As Nullable(Of Integer)
     Public Property BenannteStelleAnzahlMeldestand As Nullable(Of Integer)
     Public Property BenannteStelleFehlmenge As Nullable(Of Integer)
+    Public Property BenannteStelleAnzahlAusgeteilt As Nullable(Of Integer)
     Public Property SicherungsmarkeKleinAnzahl As Nullable(Of Integer)
     Public Property SicherungsmarkeKleinAnzahlMeldestand As Nullable(Of Integer)
     Public Property SicherungsmarkeKleinFehlmenge As Nullable(Of Integer)
+    Public Property SicherungsmarkeKleinAnzahlAusgeteilt As Nullable(Of Integer)
     Public Property SicherungsmarkeGrossAnzahl As Nullable(Of Integer)
     Public Property SicherungsmarkeGrossAnzahlMeldestand As Nullable(Of Integer)
     Public Property SicherungsmarkeGrossFehlmenge As Nullable(Of Integer)
+    Public Property SicherungsmarkeGrossAnzahlAusgeteilt As Nullable(Of Integer)
     Public Property HinweismarkeAnzahl As Nullable(Of Integer)
     Public Property HinweismarkeAnzahlMeldestand As Nullable(Of Integer)
     Public Property HinweismarkeFehlmenge As Nullable(Of Integer)
+    Public Property HinweismarkeAnzahlAusgeteilt As Nullable(Of Integer)
     Public Property Bemerkung As String
     Public Property ZurBearbeitungGesperrtDurch As String
-    Public Property BenannteStelleAnzahlAusgeteilt As Nullable(Of Integer)
-    Public Property SicherungsmarkeKleinAnzahlAusgeteilt As Nullable(Of Integer)
-    Public Property SicherungsmarkeGrossAnzahlAusgeteilt As Nullable(Of Integer)
-    Public Property HinweismarkeAnzahlAusgeteilt As Nullable(Of Integer)
 
 End Class
