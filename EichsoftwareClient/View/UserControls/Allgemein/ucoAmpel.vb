@@ -1,5 +1,6 @@
 ﻿Imports System.Drawing
 Imports System.Drawing.Imaging
+Imports EichsoftwareClient
 ''' <summary>
 ''' UCO für die Amplefunktion oben Rechts. Navigation und Anzeige des Statuses
 ''' </summary>
@@ -103,7 +104,6 @@ Public Class ucoAmpel
     ''' <remarks></remarks>
     Private Sub LokalisierungNeeded() Handles _ParentForm.LokalisierungNeeded
         FillDataset(Update:=True)
-        '  Changes()
     End Sub
 
     ''' <summary>
@@ -136,13 +136,11 @@ Public Class ucoAmpel
                     If pStatus = GlobaleEnumeratoren.enuEichprozessStatus.Versenden Then
                         If Not _ParentForm.CurrentEichprozess Is Nothing Then
                             If _ParentForm.CurrentEichprozess.FK_Bearbeitungsstatus = GlobaleEnumeratoren.enuBearbeitungsstatus.noch_nicht_versendet Or
- _ParentForm.CurrentEichprozess.FK_Bearbeitungsstatus = GlobaleEnumeratoren.enuBearbeitungsstatus.Fehlerhaft Then
+                               _ParentForm.CurrentEichprozess.FK_Bearbeitungsstatus = GlobaleEnumeratoren.enuBearbeitungsstatus.Fehlerhaft Then
                                 item("Image") = ConvertBitmapToByteArray(My.Resources.bullet_yellow)
                             Else
                                 item("Image") = ConvertBitmapToByteArray(My.Resources.bullet_green)
                                 Datasource.AcceptChanges()
-                                'FindeElementUndSelektiere(GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe)
-                                'Exit Sub
                             End If
                         Else
                             item("Image") = ConvertBitmapToByteArray(My.Resources.bullet_yellow)
@@ -239,168 +237,89 @@ Public Class ucoAmpel
     ''' <commentauthor>In dem Grid stehen dann aber alle Stati. Es werden nicht unbenötigte ausgeblendet</commentauthor>
     Private Sub FillDataset(Optional Update As Boolean = False)
         If Update = True Then
-            Datasource.Rows(0)("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_Stammdaten
-            Datasource.Rows(1)("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_Kompatiblitaetsnachweis
-            Datasource.Rows(2)("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_KompatiblitaetsnachweisErgebnis
-            Datasource.Rows(3)("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_Beschaffenheitspruefung
-            Datasource.Rows(4)("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_Eichprotokollverfahrensauswahl
-            Datasource.Rows(5)("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_EichprotokollStammdaten
-            Datasource.Rows(6)("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungNullstellungundAussermittigeBelastung
-            Datasource.Rows(7)("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungDerRichtigkeitMitNormallast
-            Datasource.Rows(8)("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungStaffelverfahren
-            Datasource.Rows(9)("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungDerWiederholbarkeit
-            Datasource.Rows(10)("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungUeberlastAnzeige
-            Datasource.Rows(11)("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungRollendelasten
-            Datasource.Rows(12)("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungAnsprechvermoegen
-            Datasource.Rows(13)("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungStabilitaet
-            Datasource.Rows(14)("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungTaraEinrichtung
-            Datasource.Rows(15)("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungEignungAchslastwaegungen
-            Datasource.Rows(16)("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungFallbeschleunigung
-            Datasource.Rows(17)("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungEichtechnischeSicherung
-            Datasource.Rows(18)("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_Exports
-            Datasource.Rows(19)("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_Versenden
-            Datasource.AcceptChanges()
+            UpdateDataset()
         Else
-            Try
-                Datasource.AcceptChanges()
-                Datasource.Clear()
-                Datasource.AcceptChanges()
-            Catch ex As Exception
-
-            End Try
-            Dim nrow As DataRow = Datasource.NewRow
-            nrow("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_Stammdaten
-            nrow("Status") = CInt(GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe)
-            nrow("Image") = ConvertBitmapToByteArray(My.Resources.bullet_red)
-            Datasource.Rows.Add(nrow)
-
-            nrow = Datasource.NewRow
-            nrow("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_Kompatiblitaetsnachweis
-            nrow("Status") = CInt(GlobaleEnumeratoren.enuEichprozessStatus.Kompatbilitaetsnachweis)
-            nrow("Image") = ConvertBitmapToByteArray(My.Resources.bullet_red)
-            Datasource.Rows.Add(nrow)
-
-            nrow = Datasource.NewRow
-            nrow("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_KompatiblitaetsnachweisErgebnis
-            nrow("Status") = CInt(GlobaleEnumeratoren.enuEichprozessStatus.KompatbilitaetsnachweisErgebnis)
-            nrow("Image") = ConvertBitmapToByteArray(My.Resources.bullet_red)
-            Datasource.Rows.Add(nrow)
-
-            nrow = Datasource.NewRow
-            nrow("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_Beschaffenheitspruefung
-            nrow("Status") = CInt(GlobaleEnumeratoren.enuEichprozessStatus.Beschaffenheitspruefung)
-            nrow("Image") = ConvertBitmapToByteArray(My.Resources.bullet_red)
-            Datasource.Rows.Add(nrow)
-
-            nrow = Datasource.NewRow
-            nrow("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_Eichprotokollverfahrensauswahl
-            nrow("Status") = CInt(GlobaleEnumeratoren.enuEichprozessStatus.AuswahlKonformitätsverfahren)
-            nrow("Image") = ConvertBitmapToByteArray(My.Resources.bullet_red)
-            Datasource.Rows.Add(nrow)
-
-            nrow = Datasource.NewRow
-            nrow("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_EichprotokollStammdaten
-            nrow("Status") = CInt(GlobaleEnumeratoren.enuEichprozessStatus.EichprotokollStammdaten)
-            nrow("Image") = ConvertBitmapToByteArray(My.Resources.bullet_red)
-            Datasource.Rows.Add(nrow)
-
-            nrow = Datasource.NewRow
-            nrow("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungNullstellungundAussermittigeBelastung
-            nrow("Status") = CInt(GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderGenauigkeitderNullstellungUndAussermittigeBelastung)
-            nrow("Image") = ConvertBitmapToByteArray(My.Resources.bullet_red)
-            Datasource.Rows.Add(nrow)
-
-            nrow = Datasource.NewRow
-            nrow("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungDerRichtigkeitMitNormallast
-            nrow("Status") = CInt(GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitNormallastLinearitaet)
-            nrow("Image") = ConvertBitmapToByteArray(My.Resources.bullet_red)
-            Datasource.Rows.Add(nrow)
-
-            nrow = Datasource.NewRow
-            nrow("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungStaffelverfahren
-            nrow("Status") = CInt(GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitErsatzlast)
-            nrow("Image") = ConvertBitmapToByteArray(My.Resources.bullet_red)
-            Datasource.Rows.Add(nrow)
-
-            nrow = Datasource.NewRow
-            nrow("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungDerWiederholbarkeit
-            nrow("Status") = CInt(GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderWiederholbarkeit)
-            nrow("Image") = ConvertBitmapToByteArray(My.Resources.bullet_red)
-            Datasource.Rows.Add(nrow)
-
-            nrow = Datasource.NewRow
-            nrow("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungUeberlastAnzeige
-            nrow("Status") = CInt(GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderÜberlastanzeige)
-            nrow("Image") = ConvertBitmapToByteArray(My.Resources.bullet_red)
-            Datasource.Rows.Add(nrow)
-
-            nrow = Datasource.NewRow
-            nrow("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungRollendelasten
-            nrow("Status") = CInt(GlobaleEnumeratoren.enuEichprozessStatus.WaagenFuerRollendeLasten)
-            nrow("Image") = ConvertBitmapToByteArray(My.Resources.bullet_red)
-            Datasource.Rows.Add(nrow)
-
-            nrow = Datasource.NewRow
-            nrow("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungAnsprechvermoegen
-            nrow("Status") = CInt(GlobaleEnumeratoren.enuEichprozessStatus.PrüfungdesAnsprechvermögens)
-            nrow("Image") = ConvertBitmapToByteArray(My.Resources.bullet_red)
-            Datasource.Rows.Add(nrow)
-
-            nrow = Datasource.NewRow
-            nrow("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungStabilitaet
-            nrow("Status") = CInt(GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderStabilitätderGleichgewichtslage)
-            nrow("Image") = ConvertBitmapToByteArray(My.Resources.bullet_red)
-            Datasource.Rows.Add(nrow)
-
-            nrow = Datasource.NewRow
-            nrow("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungTaraEinrichtung
-            nrow("Status") = CInt(GlobaleEnumeratoren.enuEichprozessStatus.Taraeinrichtung)
-            nrow("Image") = ConvertBitmapToByteArray(My.Resources.bullet_red)
-            Datasource.Rows.Add(nrow)
-
-            nrow = Datasource.NewRow
-            nrow("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungEignungAchslastwaegungen
-            nrow("Status") = CInt(GlobaleEnumeratoren.enuEichprozessStatus.EignungfürAchslastwägungen)
-            nrow("Image") = ConvertBitmapToByteArray(My.Resources.bullet_red)
-            Datasource.Rows.Add(nrow)
-
-            nrow = Datasource.NewRow
-            nrow("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungFallbeschleunigung
-            nrow("Status") = CInt(GlobaleEnumeratoren.enuEichprozessStatus.BerücksichtigungderFallbeschleunigung)
-            nrow("Image") = ConvertBitmapToByteArray(My.Resources.bullet_red)
-            Datasource.Rows.Add(nrow)
-
-            nrow = Datasource.NewRow
-            nrow("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungEichtechnischeSicherung
-            nrow("Status") = CInt(GlobaleEnumeratoren.enuEichprozessStatus.EichtechnischeSicherungundDatensicherung)
-            nrow("Image") = ConvertBitmapToByteArray(My.Resources.bullet_red)
-            Datasource.Rows.Add(nrow)
-
-            nrow = Datasource.NewRow
-            nrow("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_Exports
-            nrow("Status") = CInt(GlobaleEnumeratoren.enuEichprozessStatus.Export)
-            nrow("Image") = ConvertBitmapToByteArray(My.Resources.bullet_red)
-            Datasource.Rows.Add(nrow)
-
-            nrow = Datasource.NewRow
-            nrow("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_Versenden
-            nrow("Status") = CInt(GlobaleEnumeratoren.enuEichprozessStatus.Versenden)
-            nrow("Image") = ConvertBitmapToByteArray(My.Resources.bullet_red)
-            Datasource.Rows.Add(nrow)
-
-            RadListView1.DataSource = Datasource
-            RadListView1.DisplayMember = "Title"
-            RadListView1.ValueMember = "Status"
-
-            ' give each of the data items a key (= the id of the usercontrol)
-            For Each item As Telerik.WinControls.UI.ListViewDataItem In RadListView1.Items
-                item.Key = item.Value
-            Next
-
-            Datasource.AcceptChanges()
+            CreateDataset()
         End If
 
     End Sub
+
+    Private Sub CreateDataset()
+        Try
+            Datasource.AcceptChanges()
+            Datasource.Clear()
+            Datasource.AcceptChanges()
+        Catch ex As Exception
+
+        End Try
+        Dim nrow As DataRow = Datasource.NewRow
+        createRow(nrow, My.Resources.GlobaleLokalisierung.Ueberschrift_Stammdaten, GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe, My.Resources.bullet_red)
+        createRow(nrow, My.Resources.GlobaleLokalisierung.Ueberschrift_Kompatiblitaetsnachweis, GlobaleEnumeratoren.enuEichprozessStatus.Kompatbilitaetsnachweis, My.Resources.bullet_red)
+        createRow(nrow, My.Resources.GlobaleLokalisierung.Ueberschrift_KompatiblitaetsnachweisErgebnis, GlobaleEnumeratoren.enuEichprozessStatus.KompatbilitaetsnachweisErgebnis, My.Resources.bullet_red)
+        createRow(nrow, My.Resources.GlobaleLokalisierung.Ueberschrift_Beschaffenheitspruefung, GlobaleEnumeratoren.enuEichprozessStatus.Beschaffenheitspruefung, My.Resources.bullet_red)
+        createRow(nrow, My.Resources.GlobaleLokalisierung.Ueberschrift_Eichprotokollverfahrensauswahl, GlobaleEnumeratoren.enuEichprozessStatus.AuswahlKonformitätsverfahren, My.Resources.bullet_red)
+        createRow(nrow, My.Resources.GlobaleLokalisierung.Ueberschrift_EichprotokollStammdaten, GlobaleEnumeratoren.enuEichprozessStatus.EichprotokollStammdaten, My.Resources.bullet_red)
+        createRow(nrow, My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungNullstellungundAussermittigeBelastung, GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderGenauigkeitderNullstellungUndAussermittigeBelastung, My.Resources.bullet_red)
+        createRow(nrow, My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungDerRichtigkeitMitNormallast, GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitNormallastLinearitaet, My.Resources.bullet_red)
+        createRow(nrow, My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungStaffelverfahren, GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitErsatzlast, My.Resources.bullet_red)
+        createRow(nrow, My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungDerWiederholbarkeit, GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderWiederholbarkeit, My.Resources.bullet_red)
+        createRow(nrow, My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungUeberlastAnzeige, GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderÜberlastanzeige, My.Resources.bullet_red)
+        createRow(nrow, My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungRollendelasten, GlobaleEnumeratoren.enuEichprozessStatus.WaagenFuerRollendeLasten, My.Resources.bullet_red)
+        createRow(nrow, My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungAnsprechvermoegen, GlobaleEnumeratoren.enuEichprozessStatus.PrüfungdesAnsprechvermögens, My.Resources.bullet_red)
+        createRow(nrow, My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungStabilitaet, GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderStabilitätderGleichgewichtslage, My.Resources.bullet_red)
+        createRow(nrow, My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungTaraEinrichtung, GlobaleEnumeratoren.enuEichprozessStatus.Taraeinrichtung, My.Resources.bullet_red)
+        createRow(nrow, My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungEignungAchslastwaegungen, GlobaleEnumeratoren.enuEichprozessStatus.EignungfürAchslastwägungen, My.Resources.bullet_red)
+        createRow(nrow, My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungFallbeschleunigung, GlobaleEnumeratoren.enuEichprozessStatus.BerücksichtigungderFallbeschleunigung, My.Resources.bullet_red)
+        createRow(nrow, My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungEichtechnischeSicherung, GlobaleEnumeratoren.enuEichprozessStatus.EichtechnischeSicherungundDatensicherung, My.Resources.bullet_red)
+        createRow(nrow, My.Resources.GlobaleLokalisierung.Ueberschrift_Exports, GlobaleEnumeratoren.enuEichprozessStatus.Export, My.Resources.bullet_red)
+        createRow(nrow, My.Resources.GlobaleLokalisierung.Ueberschrift_Versenden, GlobaleEnumeratoren.enuEichprozessStatus.Versenden, My.Resources.bullet_red)
+
+
+        RadListView1.DataSource = Datasource
+        RadListView1.DisplayMember = "Title"
+        RadListView1.ValueMember = "Status"
+
+        ' give each of the data items a key (= the id of the usercontrol)
+        For Each item As Telerik.WinControls.UI.ListViewDataItem In RadListView1.Items
+            item.Key = item.Value
+        Next
+
+        Datasource.AcceptChanges()
+    End Sub
+
+    Private Sub UpdateDataset()
+        Datasource.Rows(0)("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_Stammdaten
+        Datasource.Rows(1)("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_Kompatiblitaetsnachweis
+        Datasource.Rows(2)("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_KompatiblitaetsnachweisErgebnis
+        Datasource.Rows(3)("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_Beschaffenheitspruefung
+        Datasource.Rows(4)("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_Eichprotokollverfahrensauswahl
+        Datasource.Rows(5)("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_EichprotokollStammdaten
+        Datasource.Rows(6)("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungNullstellungundAussermittigeBelastung
+        Datasource.Rows(7)("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungDerRichtigkeitMitNormallast
+        Datasource.Rows(8)("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungStaffelverfahren
+        Datasource.Rows(9)("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungDerWiederholbarkeit
+        Datasource.Rows(10)("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungUeberlastAnzeige
+        Datasource.Rows(11)("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungRollendelasten
+        Datasource.Rows(12)("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungAnsprechvermoegen
+        Datasource.Rows(13)("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungStabilitaet
+        Datasource.Rows(14)("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungTaraEinrichtung
+        Datasource.Rows(15)("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungEignungAchslastwaegungen
+        Datasource.Rows(16)("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungFallbeschleunigung
+        Datasource.Rows(17)("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungEichtechnischeSicherung
+        Datasource.Rows(18)("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_Exports
+        Datasource.Rows(19)("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_Versenden
+        Datasource.AcceptChanges()
+    End Sub
+
+    Private Sub createRow(nrow As DataRow, ueberschrift As String, status As GlobaleEnumeratoren.enuEichprozessStatus, bullet As Bitmap)
+        nrow = Datasource.NewRow
+        nrow("Title") = ueberschrift
+        nrow("Status") = CInt(status)
+        nrow("Image") = ConvertBitmapToByteArray(bullet)
+        Datasource.Rows.Add(nrow)
+    End Sub
+
+
 
     ''' <summary>
     ''' Blendet Vorgangs Element aus
@@ -461,36 +380,6 @@ Public Class ucoAmpel
             Exit Sub
         End Try
     End Sub
-
-    ' ''' <summary>
-    ' ''' navigieren
-    ' ''' </summary>
-    ' ''' <param name="sender"></param>
-    ' ''' <param name="e"></param>
-    ' ''' <remarks></remarks>
-    'Private Sub RadListView1_ItemMouseClick(sender As Object, e As Telerik.WinControls.UI.ListViewItemEventArgs) Handles RadListView1.ItemMouseClick
-    '    'abbruch falls Status noch rot. hier darf nicht hingesprungen werden
-    '    Try
-    '        Dim ItemImage = DirectCast(e.Item("Image"), Byte())
-    '        Dim CompareImage = ConvertBitmapToByteArray(My.Resources.bullet_red)
-
-    '        'im debugger zur einfachheit, kann per click auf jeden Status gesprungen werden
-    '        'If Debugger.IsAttached Then
-    '        '    RaiseEvent Navigieren(e.Item("Status"))
-    '        '    Exit Sub
-    '        'Else
-    '        'prüfen ob das gewählte element rot ist. wenn nicht das letzte gelbe element wählen
-    '        If ItemImage.SequenceEqual(CompareImage) Then
-    '            Me.FindeElementUndSelektiere(Me.AktuellerGewaehlterVorgang)
-    '            Exit Sub
-    '        End If
-    '        'End If
-
-    '        RaiseEvent Navigieren(e.Item("Status"))
-    '    Catch ex As Exception
-    '        Exit Sub
-    '    End Try
-    'End Sub
 
     ''' <summary>
     ''' Event welches von Telerik gebraucht wird, um unser Custom Visual Item in der Listbox zu erzeugen

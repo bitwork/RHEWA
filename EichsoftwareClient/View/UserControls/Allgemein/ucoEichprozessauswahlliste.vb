@@ -309,6 +309,7 @@ Public Class ucoEichprozessauswahlliste
             RadGridViewAuswahlliste.DataSource = Nothing
 
             RadGridViewRHEWAAlle.DataSource = Nothing
+            'laden des Grid Layouts aus User Settings
             AktuellerBenutzer.LadeGridLayout(Me)
             'aktualisieren des Grids
             LoadFromDatabase()
@@ -669,7 +670,7 @@ Public Class ucoEichprozessauswahlliste
     Private Sub ZeigeServerEichprozess()
         If Not Me.VorgangsnummerGridServer.Equals("") Then
 
-            Dim objClientEichprozess = clsWebserviceFunctions.ZeigeServerEichprozess(VorgangsnummerGridServer)
+            Dim objClientEichprozess = clsWebserviceFunctions.LadeServerEichprozessZurReadonlyAnzeige(VorgangsnummerGridServer)
             'anzeigen des Dialogs zur Bearbeitung der Eichung
             If Not objClientEichprozess Is Nothing Then
 

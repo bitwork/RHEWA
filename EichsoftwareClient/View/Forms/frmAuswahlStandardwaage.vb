@@ -53,7 +53,7 @@
                                     Fabriknummer = InputBox("Neue Fabriknummer")
 
                                     'holen einer lokalen Kopie des Server eichprozesses
-                                    Dim objClientEichprozess = clsWebserviceFunctions.GetLokaleKopieVonEichprozess(ID, Fabriknummer)
+                                    Dim objClientEichprozess = clsWebserviceFunctions.GetLokaleKopieVonEichprozessFuerStandardwaage(ID, Fabriknummer)
                                     If Not objClientEichprozess Is Nothing Then
                                         'anzeigen des Dialogs zur Bearbeitung der Eichung
                                         Dim f As New FrmMainContainer(objClientEichprozess)

@@ -58,6 +58,10 @@ Public Class frmPlausibiltaetspruefung
     End Sub
 
     Private Sub RadButtonPruefe_Click(sender As Object, e As EventArgs) Handles RadButtonPruefe.Click
+        Pruefe()
+    End Sub
+
+    Private Sub Pruefe()
         If Not _objEichprozess Is Nothing Then
             Dim objPlausiblitaet As New clsPlausibilitaetspruefung
             objPlausiblitaet.LadeWerte(RadDropDownListWaegebruecke.SelectedIndex + 1, RadTextBoxControlPath.Text, _objEichprozess)

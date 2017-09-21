@@ -1,5 +1,6 @@
 Imports Newtonsoft.Json
 Imports System.Data.Entity.Migrations
+Imports EichsoftwareClient
 ''' <summary>
 ''' Klasse mit allegmeinen aufrufen des Webservices
 ''' </summary>
@@ -56,7 +57,7 @@ Public Class clsWebserviceFunctions
                         ' Return False
                         DBContext.SaveChanges()
                         MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_UngueltigeLizenz)
-                       ' Application.Exit()
+                        ' Application.Exit()
                         Exit Function
                     End If
 
@@ -79,6 +80,7 @@ Public Class clsWebserviceFunctions
         End Try
     End Function
 
+#Region "Wägezelle"
     ''' <summary>
     ''' holt neue oder aktualisierte WZ aus DB über Webservice
     ''' </summary>
@@ -96,19 +98,9 @@ Public Class clsWebserviceFunctions
                 Using DBContext As New Entities
 
                     'Eingrenzen welche Daten synchronisiert werden müssen, je nach Einstllung des Benutzers
-                    Dim StartDatum As Date = #1/1/2000#
-                    Dim EndDatum As Date = #12/31/2999#
-
-                    If AktuellerBenutzer.Instance.Synchronisierungsmodus = "Alles" Then
-                    ElseIf AktuellerBenutzer.Instance.Synchronisierungsmodus = "Ab" Then
-                        StartDatum = AktuellerBenutzer.Instance.SyncAb
-                    ElseIf AktuellerBenutzer.Instance.Synchronisierungsmodus = "Zwischen" Then
-                        StartDatum = AktuellerBenutzer.Instance.SyncAb
-                        EndDatum = AktuellerBenutzer.Instance.SyncBis
-                    Else
-                        AktuellerBenutzer.Instance.Synchronisierungsmodus = "Alles"
-                        AktuellerBenutzer.SaveSettings()
-                    End If
+                    Dim StartDatum As Date = Nothing
+                    Dim EndDatum As Date = Nothing
+                    GetStartUndEndDatum(StartDatum, EndDatum)
 
                     Dim objWZResultList = webContext.GetNeueWZ(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, AktuellerBenutzer.Instance.LetztesUpdate, My.User.Name, System.Environment.UserDomainName, My.Computer.Name, StartDatum, EndDatum)
 
@@ -124,63 +116,9 @@ Public Class clsWebserviceFunctions
 
                                 'prüfen ob es bereits einen Artikel in der lokalen DB gibt, mit dem aktuellen ID-Wert
                                 If query.Count = 0 Then 'Es gbit den Artikel noch nicht in der lokalen Datebank => insert
-                                    Dim newWZ As New Lookup_Waegezelle
-
-                                    newWZ.ID = objServerArtikel._ID
-                                    newWZ.Hoechsteteilungsfaktor = objServerArtikel._Hoechsteteilungsfaktor
-                                    newWZ.Kriechteilungsfaktor = objServerArtikel._Kriechteilungsfaktor
-                                    newWZ.MaxAnzahlTeilungswerte = objServerArtikel._MaxAnzahlTeilungswerte
-                                    newWZ.Mindestvorlast = objServerArtikel._Mindestvorlast
-                                    newWZ.MindestvorlastProzent = objServerArtikel._MindestvorlastProzent
-
-                                    newWZ.MinTeilungswert = objServerArtikel._MinTeilungswert
-                                    newWZ.RueckkehrVorlastsignal = objServerArtikel._RueckkehrVorlastsignal
-                                    newWZ.Waegezellenkennwert = objServerArtikel._Waegezellenkennwert
-                                    newWZ.WiderstandWaegezelle = objServerArtikel._WiderstandWaegezelle
-                                    newWZ.Bauartzulassung = objServerArtikel._Bauartzulassung
-                                    newWZ.BruchteilEichfehlergrenze = objServerArtikel._BruchteilEichfehlergrenze
-                                    newWZ.Genauigkeitsklasse = objServerArtikel._Genauigkeitsklasse
-                                    newWZ.GrenzwertTemperaturbereichMAX = objServerArtikel._GrenzwertTemperaturbereichMAX
-                                    newWZ.GrenzwertTemperaturbereichMIN = objServerArtikel._GrenzwertTemperaturbereichMIN
-                                    newWZ.Hersteller = objServerArtikel._Hersteller
-                                    newWZ.Pruefbericht = objServerArtikel._Pruefbericht
-                                    newWZ.Typ = objServerArtikel._Typ
-                                    newWZ.Deaktiviert = objServerArtikel._Deaktiviert
-                                    newWZ.Neu = objServerArtikel._Neu
-                                    'hinzufügen des neu erzeugten Artikels in Lokale Datenbank
-
-                                    DBContext.Lookup_Waegezelle.Add(newWZ)
-                                    Try
-                                        DBContext.SaveChanges()
-                                        bolNeuWZ = True
-                                    Catch e As Exception
-                                        MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_Speichern, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                                        MessageBox.Show(e.StackTrace, e.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                                    End Try
-
+                                    bolNeuWZ = InsertNeueWZ(bolNeuWZ, DBContext, objServerArtikel)
                                 Else 'Es gibt den Artikel bereits, er wird geupdated
-                                    For Each objWZ As Lookup_Waegezelle In query 'es sollte nur einen Artikel Geben, da die IDs eindeutig sind.
-                                        objWZ.Hoechsteteilungsfaktor = objServerArtikel._Hoechsteteilungsfaktor
-                                        objWZ.Kriechteilungsfaktor = objServerArtikel._Kriechteilungsfaktor
-                                        objWZ.MaxAnzahlTeilungswerte = objServerArtikel._MaxAnzahlTeilungswerte
-                                        objWZ.Mindestvorlast = objServerArtikel._Mindestvorlast
-                                        objWZ.MindestvorlastProzent = objServerArtikel._MindestvorlastProzent
-
-                                        objWZ.MinTeilungswert = objServerArtikel._MinTeilungswert
-                                        objWZ.RueckkehrVorlastsignal = objServerArtikel._RueckkehrVorlastsignal
-                                        objWZ.Waegezellenkennwert = objServerArtikel._Waegezellenkennwert
-                                        objWZ.WiderstandWaegezelle = objServerArtikel._WiderstandWaegezelle
-                                        objWZ.Bauartzulassung = objServerArtikel._Bauartzulassung
-                                        objWZ.BruchteilEichfehlergrenze = objServerArtikel._BruchteilEichfehlergrenze
-                                        objWZ.Genauigkeitsklasse = objServerArtikel._Genauigkeitsklasse
-                                        objWZ.GrenzwertTemperaturbereichMAX = objServerArtikel._GrenzwertTemperaturbereichMAX
-                                        objWZ.GrenzwertTemperaturbereichMIN = objServerArtikel._GrenzwertTemperaturbereichMIN
-                                        objWZ.Hersteller = objServerArtikel._Hersteller
-                                        objWZ.Pruefbericht = objServerArtikel._Pruefbericht
-                                        objWZ.Typ = objServerArtikel._Typ
-                                        objWZ.Deaktiviert = objServerArtikel._Deaktiviert
-                                        objWZ.Neu = objServerArtikel._Neu
-                                    Next
+                                    UpdateNeueWZ(objServerArtikel, query)
                                 End If
                             Catch ex As Exception
                                 MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -200,6 +138,75 @@ Public Class clsWebserviceFunctions
         End Try
     End Sub
 
+    Private Shared Sub UpdateNeueWZ(objServerArtikel As EichsoftwareWebservice.ServerLookup_Waegezelle, query As IQueryable(Of Lookup_Waegezelle))
+        For Each objWZ As Lookup_Waegezelle In query 'es sollte nur einen Artikel Geben, da die IDs eindeutig sind.
+            objWZ.Hoechsteteilungsfaktor = objServerArtikel._Hoechsteteilungsfaktor
+            objWZ.Kriechteilungsfaktor = objServerArtikel._Kriechteilungsfaktor
+            objWZ.MaxAnzahlTeilungswerte = objServerArtikel._MaxAnzahlTeilungswerte
+            objWZ.Mindestvorlast = objServerArtikel._Mindestvorlast
+            objWZ.MindestvorlastProzent = objServerArtikel._MindestvorlastProzent
+
+            objWZ.MinTeilungswert = objServerArtikel._MinTeilungswert
+            objWZ.RueckkehrVorlastsignal = objServerArtikel._RueckkehrVorlastsignal
+            objWZ.Waegezellenkennwert = objServerArtikel._Waegezellenkennwert
+            objWZ.WiderstandWaegezelle = objServerArtikel._WiderstandWaegezelle
+            objWZ.Bauartzulassung = objServerArtikel._Bauartzulassung
+            objWZ.BruchteilEichfehlergrenze = objServerArtikel._BruchteilEichfehlergrenze
+            objWZ.Genauigkeitsklasse = objServerArtikel._Genauigkeitsklasse
+            objWZ.GrenzwertTemperaturbereichMAX = objServerArtikel._GrenzwertTemperaturbereichMAX
+            objWZ.GrenzwertTemperaturbereichMIN = objServerArtikel._GrenzwertTemperaturbereichMIN
+            objWZ.Hersteller = objServerArtikel._Hersteller
+            objWZ.Pruefbericht = objServerArtikel._Pruefbericht
+            objWZ.Typ = objServerArtikel._Typ
+            objWZ.Deaktiviert = objServerArtikel._Deaktiviert
+            objWZ.Neu = objServerArtikel._Neu
+        Next
+    End Sub
+
+    Private Shared Function InsertNeueWZ(bolNeuWZ As Boolean, DBContext As Entities, objServerArtikel As EichsoftwareWebservice.ServerLookup_Waegezelle) As Boolean
+        Dim newWZ As New Lookup_Waegezelle
+
+        newWZ.ID = objServerArtikel._ID
+        newWZ.Hoechsteteilungsfaktor = objServerArtikel._Hoechsteteilungsfaktor
+        newWZ.Kriechteilungsfaktor = objServerArtikel._Kriechteilungsfaktor
+        newWZ.MaxAnzahlTeilungswerte = objServerArtikel._MaxAnzahlTeilungswerte
+        newWZ.Mindestvorlast = objServerArtikel._Mindestvorlast
+        newWZ.MindestvorlastProzent = objServerArtikel._MindestvorlastProzent
+
+        newWZ.MinTeilungswert = objServerArtikel._MinTeilungswert
+        newWZ.RueckkehrVorlastsignal = objServerArtikel._RueckkehrVorlastsignal
+        newWZ.Waegezellenkennwert = objServerArtikel._Waegezellenkennwert
+        newWZ.WiderstandWaegezelle = objServerArtikel._WiderstandWaegezelle
+        newWZ.Bauartzulassung = objServerArtikel._Bauartzulassung
+        newWZ.BruchteilEichfehlergrenze = objServerArtikel._BruchteilEichfehlergrenze
+        newWZ.Genauigkeitsklasse = objServerArtikel._Genauigkeitsklasse
+        newWZ.GrenzwertTemperaturbereichMAX = objServerArtikel._GrenzwertTemperaturbereichMAX
+        newWZ.GrenzwertTemperaturbereichMIN = objServerArtikel._GrenzwertTemperaturbereichMIN
+        newWZ.Hersteller = objServerArtikel._Hersteller
+        newWZ.Pruefbericht = objServerArtikel._Pruefbericht
+        newWZ.Typ = objServerArtikel._Typ
+        newWZ.Deaktiviert = objServerArtikel._Deaktiviert
+        newWZ.Neu = objServerArtikel._Neu
+
+        'hinzufügen des neu erzeugten Artikels in Lokale Datenbank
+        DBContext.Lookup_Waegezelle.Add(newWZ)
+
+        Try
+            DBContext.SaveChanges()
+            bolNeuWZ = True
+        Catch e As Exception
+            MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_Speichern, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show(e.StackTrace, e.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+
+        Return bolNeuWZ
+    End Function
+#End Region
+
+#Region "Auswertegerät"
+
+
+
     ''' <summary>
     ''' holt neue oder aktualisierte AWGs aus DB über Webservice
     ''' </summary>
@@ -216,19 +223,9 @@ Public Class clsWebserviceFunctions
                 End Try
                 Using DBContext As New Entities
                     'Eingrenzen welche Daten synchronisiert werden müssen, je nach Einstllung des Benutzers
-                    Dim StartDatum As Date = #1/1/2000#
-                    Dim EndDatum As Date = #12/31/2999#
-
-                    If AktuellerBenutzer.Instance.Synchronisierungsmodus = "Alles" Then
-                    ElseIf AktuellerBenutzer.Instance.Synchronisierungsmodus = "Ab" Then
-                        StartDatum = AktuellerBenutzer.Instance.SyncAb
-                    ElseIf AktuellerBenutzer.Instance.Synchronisierungsmodus = "Zwischen" Then
-                        StartDatum = AktuellerBenutzer.Instance.SyncAb
-                        EndDatum = AktuellerBenutzer.Instance.SyncBis
-                    Else
-                        AktuellerBenutzer.Instance.Synchronisierungsmodus = "Alles"
-                        AktuellerBenutzer.SaveSettings()
-                    End If
+                    Dim StartDatum As Date = Nothing
+                    Dim EndDatum As Date = Nothing
+                    GetStartUndEndDatum(StartDatum, EndDatum)
 
                     Dim objAWGResultList = webContext.GetNeuesAWG(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, AktuellerBenutzer.Instance.LetztesUpdate, My.User.Name, System.Environment.UserDomainName, My.Computer.Name, StartDatum, EndDatum)
                     If Not objAWGResultList Is Nothing Then
@@ -242,65 +239,9 @@ Public Class clsWebserviceFunctions
 
                             'prüfen ob es bereits einen Artikel in der lokalen DB gibt, mit dem aktuellen ID-Wert
                             If query.Count = 0 Then 'Es gbit den Artikel noch nicht in der lokalen Datebank => insert
-                                Dim newAWG As New Lookup_Auswertegeraet
-
-                                newAWG.ID = objServerArtikel._ID
-                                newAWG.Bauartzulassung = objServerArtikel._Bauartzulassung
-                                newAWG.BruchteilEichfehlergrenze = objServerArtikel._BruchteilEichfehlergrenze
-                                newAWG.Genauigkeitsklasse = objServerArtikel._Genauigkeitsklasse
-                                newAWG.GrenzwertLastwiderstandMAX = objServerArtikel._GrenzwertLastwiderstandMAX
-                                newAWG.GrenzwertLastwiderstandMIN = objServerArtikel._GrenzwertLastwiderstandMIN
-                                newAWG.GrenzwertTemperaturbereichMAX = objServerArtikel._GrenzwertTemperaturbereichMAX
-                                newAWG.GrenzwertTemperaturbereichMIN = objServerArtikel._GrenzwertTemperaturbereichMIN
-                                newAWG.Hersteller = objServerArtikel._Hersteller
-                                newAWG.KabellaengeQuerschnitt = objServerArtikel._KabellaengeQuerschnitt
-                                newAWG.MAXAnzahlTeilungswerteEinbereichswaage = objServerArtikel._MAXAnzahlTeilungswerteEinbereichswaage
-                                newAWG.MAXAnzahlTeilungswerteMehrbereichswaage = objServerArtikel._MAXAnzahlTeilungswerteMehrbereichswaage
-                                newAWG.Mindesteingangsspannung = objServerArtikel._Mindesteingangsspannung
-                                newAWG.Mindestmesssignal = objServerArtikel._Mindestmesssignal
-                                newAWG.Pruefbericht = objServerArtikel._Pruefbericht
-                                newAWG.Speisespannung = objServerArtikel._Speisespannung
-                                newAWG.Typ = objServerArtikel._Typ
-                                newAWG.Deaktiviert = objServerArtikel._Deaktiviert
-                                newAWG.TaraeinrichtungHalbSelbsttaetig = objServerArtikel._TaraeinrichtungHalbSelbsttaetig
-                                newAWG.TaraeinrichtungSelbsttaetig = objServerArtikel._TaraeinrichtungSelbsttaetig
-                                newAWG.TaraeinrichtungTaraeingabe = objServerArtikel._TaraeinrichtungTaraeingabe
-                                newAWG.NullstellungHalbSelbsttaetig = objServerArtikel._NullstellungHalbSelbsttaetig
-                                newAWG.NullstellungSelbsttaetig = objServerArtikel._NullstellungSelbsttaetig
-                                newAWG.NullstellungNullnachfuehrung = objServerArtikel._NullstellungNullnachfuehrung
-
-                                'hinzufügen des neu erzeugten Artikels in Lokale Datenbank
-                                DBContext.Lookup_Auswertegeraet.Add(newAWG)
-                                DBContext.SaveChanges()
-                                bolNeuAWG = True
-
+                                bolNeuAWG = InsertNeuesAWG(DBContext, objServerArtikel)
                             Else 'Es gibt den Artikel bereits, er wird geupdated
-                                For Each objAWG As Lookup_Auswertegeraet In query 'es sollte nur einen Artikel Geben, da die IDs eindeutig sind.
-                                    objAWG.Bauartzulassung = objServerArtikel._Bauartzulassung
-                                    objAWG.BruchteilEichfehlergrenze = objServerArtikel._BruchteilEichfehlergrenze
-                                    objAWG.Genauigkeitsklasse = objServerArtikel._Genauigkeitsklasse
-                                    objAWG.GrenzwertLastwiderstandMAX = objServerArtikel._GrenzwertLastwiderstandMAX
-                                    objAWG.GrenzwertLastwiderstandMIN = objServerArtikel._GrenzwertLastwiderstandMIN
-                                    objAWG.GrenzwertTemperaturbereichMAX = objServerArtikel._GrenzwertTemperaturbereichMAX
-                                    objAWG.GrenzwertTemperaturbereichMIN = objServerArtikel._GrenzwertTemperaturbereichMIN
-                                    objAWG.Hersteller = objServerArtikel._Hersteller
-                                    objAWG.KabellaengeQuerschnitt = objServerArtikel._KabellaengeQuerschnitt
-                                    objAWG.MAXAnzahlTeilungswerteEinbereichswaage = objServerArtikel._MAXAnzahlTeilungswerteEinbereichswaage
-                                    objAWG.MAXAnzahlTeilungswerteMehrbereichswaage = objServerArtikel._MAXAnzahlTeilungswerteMehrbereichswaage
-                                    objAWG.Mindesteingangsspannung = objServerArtikel._Mindesteingangsspannung
-                                    objAWG.Mindestmesssignal = objServerArtikel._Mindestmesssignal
-                                    objAWG.Pruefbericht = objServerArtikel._Pruefbericht
-                                    objAWG.Speisespannung = objServerArtikel._Speisespannung
-                                    objAWG.Typ = objServerArtikel._Typ
-                                    objAWG.TaraeinrichtungHalbSelbsttaetig = objServerArtikel._TaraeinrichtungHalbSelbsttaetig
-                                    objAWG.TaraeinrichtungSelbsttaetig = objServerArtikel._TaraeinrichtungSelbsttaetig
-                                    objAWG.TaraeinrichtungTaraeingabe = objServerArtikel._TaraeinrichtungTaraeingabe
-                                    objAWG.NullstellungHalbSelbsttaetig = objServerArtikel._NullstellungHalbSelbsttaetig
-                                    objAWG.NullstellungSelbsttaetig = objServerArtikel._NullstellungSelbsttaetig
-                                    objAWG.NullstellungNullnachfuehrung = objServerArtikel._NullstellungNullnachfuehrung
-                                    objAWG.Deaktiviert = objServerArtikel._Deaktiviert
-                                    bolNeuAWG = True
-                                Next
+                                bolNeuAWG = UpdateNeuesAWG(bolNeuAWG, objServerArtikel, query)
                             End If
                         Next
                     End If
@@ -319,6 +260,76 @@ Public Class clsWebserviceFunctions
             MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+
+    Private Shared Function UpdateNeuesAWG(bolNeuAWG As Boolean, objServerArtikel As EichsoftwareWebservice.ServerLookup_Auswertegeraet, query As IQueryable(Of Lookup_Auswertegeraet)) As Boolean
+        For Each objAWG As Lookup_Auswertegeraet In query 'es sollte nur einen Artikel Geben, da die IDs eindeutig sind.
+            objAWG.Bauartzulassung = objServerArtikel._Bauartzulassung
+            objAWG.BruchteilEichfehlergrenze = objServerArtikel._BruchteilEichfehlergrenze
+            objAWG.Genauigkeitsklasse = objServerArtikel._Genauigkeitsklasse
+            objAWG.GrenzwertLastwiderstandMAX = objServerArtikel._GrenzwertLastwiderstandMAX
+            objAWG.GrenzwertLastwiderstandMIN = objServerArtikel._GrenzwertLastwiderstandMIN
+            objAWG.GrenzwertTemperaturbereichMAX = objServerArtikel._GrenzwertTemperaturbereichMAX
+            objAWG.GrenzwertTemperaturbereichMIN = objServerArtikel._GrenzwertTemperaturbereichMIN
+            objAWG.Hersteller = objServerArtikel._Hersteller
+            objAWG.KabellaengeQuerschnitt = objServerArtikel._KabellaengeQuerschnitt
+            objAWG.MAXAnzahlTeilungswerteEinbereichswaage = objServerArtikel._MAXAnzahlTeilungswerteEinbereichswaage
+            objAWG.MAXAnzahlTeilungswerteMehrbereichswaage = objServerArtikel._MAXAnzahlTeilungswerteMehrbereichswaage
+            objAWG.Mindesteingangsspannung = objServerArtikel._Mindesteingangsspannung
+            objAWG.Mindestmesssignal = objServerArtikel._Mindestmesssignal
+            objAWG.Pruefbericht = objServerArtikel._Pruefbericht
+            objAWG.Speisespannung = objServerArtikel._Speisespannung
+            objAWG.Typ = objServerArtikel._Typ
+            objAWG.TaraeinrichtungHalbSelbsttaetig = objServerArtikel._TaraeinrichtungHalbSelbsttaetig
+            objAWG.TaraeinrichtungSelbsttaetig = objServerArtikel._TaraeinrichtungSelbsttaetig
+            objAWG.TaraeinrichtungTaraeingabe = objServerArtikel._TaraeinrichtungTaraeingabe
+            objAWG.NullstellungHalbSelbsttaetig = objServerArtikel._NullstellungHalbSelbsttaetig
+            objAWG.NullstellungSelbsttaetig = objServerArtikel._NullstellungSelbsttaetig
+            objAWG.NullstellungNullnachfuehrung = objServerArtikel._NullstellungNullnachfuehrung
+            objAWG.Deaktiviert = objServerArtikel._Deaktiviert
+            bolNeuAWG = True
+        Next
+
+        Return bolNeuAWG
+    End Function
+
+    Private Shared Function InsertNeuesAWG(DBContext As Entities, objServerArtikel As EichsoftwareWebservice.ServerLookup_Auswertegeraet) As Boolean
+        Dim bolNeuAWG As Boolean
+        Dim newAWG As New Lookup_Auswertegeraet
+
+        newAWG.ID = objServerArtikel._ID
+        newAWG.Bauartzulassung = objServerArtikel._Bauartzulassung
+        newAWG.BruchteilEichfehlergrenze = objServerArtikel._BruchteilEichfehlergrenze
+        newAWG.Genauigkeitsklasse = objServerArtikel._Genauigkeitsklasse
+        newAWG.GrenzwertLastwiderstandMAX = objServerArtikel._GrenzwertLastwiderstandMAX
+        newAWG.GrenzwertLastwiderstandMIN = objServerArtikel._GrenzwertLastwiderstandMIN
+        newAWG.GrenzwertTemperaturbereichMAX = objServerArtikel._GrenzwertTemperaturbereichMAX
+        newAWG.GrenzwertTemperaturbereichMIN = objServerArtikel._GrenzwertTemperaturbereichMIN
+        newAWG.Hersteller = objServerArtikel._Hersteller
+        newAWG.KabellaengeQuerschnitt = objServerArtikel._KabellaengeQuerschnitt
+        newAWG.MAXAnzahlTeilungswerteEinbereichswaage = objServerArtikel._MAXAnzahlTeilungswerteEinbereichswaage
+        newAWG.MAXAnzahlTeilungswerteMehrbereichswaage = objServerArtikel._MAXAnzahlTeilungswerteMehrbereichswaage
+        newAWG.Mindesteingangsspannung = objServerArtikel._Mindesteingangsspannung
+        newAWG.Mindestmesssignal = objServerArtikel._Mindestmesssignal
+        newAWG.Pruefbericht = objServerArtikel._Pruefbericht
+        newAWG.Speisespannung = objServerArtikel._Speisespannung
+        newAWG.Typ = objServerArtikel._Typ
+        newAWG.Deaktiviert = objServerArtikel._Deaktiviert
+        newAWG.TaraeinrichtungHalbSelbsttaetig = objServerArtikel._TaraeinrichtungHalbSelbsttaetig
+        newAWG.TaraeinrichtungSelbsttaetig = objServerArtikel._TaraeinrichtungSelbsttaetig
+        newAWG.TaraeinrichtungTaraeingabe = objServerArtikel._TaraeinrichtungTaraeingabe
+        newAWG.NullstellungHalbSelbsttaetig = objServerArtikel._NullstellungHalbSelbsttaetig
+        newAWG.NullstellungSelbsttaetig = objServerArtikel._NullstellungSelbsttaetig
+        newAWG.NullstellungNullnachfuehrung = objServerArtikel._NullstellungNullnachfuehrung
+
+        'hinzufügen des neu erzeugten Artikels in Lokale Datenbank
+        DBContext.Lookup_Auswertegeraet.Add(newAWG)
+        DBContext.SaveChanges()
+        bolNeuAWG = True
+        Return bolNeuAWG
+    End Function
+#End Region
+
+#Region "Genehmigungsstatus"
 
     ''' <summary>
     ''' holt aktuellen Status eigenerer Eichungenen (z.b. Abgelehnt oder Erfolgreich) aus DB über Webservice
@@ -397,6 +408,94 @@ Public Class clsWebserviceFunctions
     End Sub
 
     ''' <summary>
+    ''' genehmigt Eichprozess anhand von Vorgangsnummer auf dem Server
+    ''' </summary>
+    ''' <param name="Vorgangsnummer"></param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Public Shared Function GenehmigeEichprozess(ByVal Vorgangsnummer As String)
+        Dim result As String = ""
+        Dim Messagetext As String = ""
+        Dim bolSetGueltig As Boolean = True 'variable zum abbrechen des Prozesses, falls jemand anderes an dem DS arbeitet
+
+        'neue Datenbankverbindung
+        Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
+            Try
+                webContext.Open()
+            Catch ex As Exception
+                MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Return False
+            End Try
+
+            'prüfen ob der datensatz von jemand anderem in Bearbeitung ist
+
+            Messagetext = webContext.CheckSperrung(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+            If Messagetext.Equals("") = False Then
+                'rhewa arbeitet in deutsch und hat keine lokalisierung gewünscht
+                result = webContext.SetSperrung(True, AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                If result = "" Then
+                    bolSetGueltig = True
+                Else
+                    MessageBox.Show(result)
+                    bolSetGueltig = False
+                    Return False
+                End If
+            End If
+            If bolSetGueltig Then
+                webContext.SetEichprozessGenehmight(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                Return True
+            End If
+        End Using
+
+        Return False
+    End Function
+
+
+    ''' <summary>
+    '''  lehnt Eichprozess ab, anhand von Vorgangsnummer auf dem Server
+    ''' </summary>
+    ''' <param name="Vorgangsnummer"></param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Public Shared Function AblehnenEichprozess(ByVal Vorgangsnummer As String) As Boolean
+        Dim result As String = ""
+        Dim bolSetUnueltig As Boolean = True 'variable zum abbrechen des Prozesses, falls jemand anderes an dem DS arbeitet
+        Dim Messagetext As String = ""
+        'neue Datenbankverbindung
+        Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
+            Try
+                webContext.Open()
+            Catch ex As Exception
+                MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Return False
+            End Try
+
+            Messagetext = webContext.CheckSperrung(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+            If Messagetext.Equals("") = False Then
+                'rhewa arbeitet in deutsch und hat keine lokalisierung gewünscht
+                If MessageBox.Show("Dieser Konformitätsbewertungsprozess wird von '" & Messagetext & "' bearbeitet. Möchten Sie seine Arbeit wirklich überschreiben und den Prozess ablehnen?", My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo) = DialogResult.Yes Then
+                    result = webContext.SetSperrung(True, AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                    If result = "" Then
+                        bolSetUnueltig = True
+                    Else
+                        MessageBox.Show(result)
+                        bolSetUnueltig = False
+                        Return False
+                    End If
+                Else
+                    bolSetUnueltig = False
+                End If
+            End If
+            If bolSetUnueltig Then
+                webContext.SetEichprozessUngueltig(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                Return True
+            End If
+        End Using
+        Return False
+    End Function
+#End Region
+#Region "Eichprozess"
+    ''' <summary>
     ''' holt alle einem zugehörigen Eichprotokolle vom RHEWA Server. z.B. wenn die anwendung auf einem neuem PC installiert wurde
     ''' </summary>
     ''' <remarks></remarks>
@@ -412,19 +511,9 @@ Public Class clsWebserviceFunctions
                 End Try
                 Using DBContext As New Entities
                     'Eingrenzen welche Daten synchronisiert werden müssen, je nach Einstllung des Benutzers
-                    Dim StartDatum As Date = #1/1/2000#
-                    Dim EndDatum As Date = #12/31/2999#
-
-                    If AktuellerBenutzer.Instance.Synchronisierungsmodus = "Alles" Then
-                    ElseIf AktuellerBenutzer.Instance.Synchronisierungsmodus = "Ab" Then
-                        StartDatum = AktuellerBenutzer.Instance.SyncAb
-                    ElseIf AktuellerBenutzer.Instance.Synchronisierungsmodus = "Zwischen" Then
-                        StartDatum = AktuellerBenutzer.Instance.SyncAb
-                        EndDatum = AktuellerBenutzer.Instance.SyncBis
-                    Else
-                        AktuellerBenutzer.Instance.Synchronisierungsmodus = "Alles"
-                        AktuellerBenutzer.SaveSettings()
-                    End If
+                    Dim StartDatum As Date = Nothing
+                    Dim EndDatum As Date = Nothing
+                    GetStartUndEndDatum(StartDatum, EndDatum)
 
                     Try
                         'wenn es eine Änderung gab, wird das geänderte Objekt vom Server abgerufen. Damit können änderungen die von einem RHEWA Mitarbeiter durchgeführt wurden übernommen werden
@@ -588,7 +677,7 @@ Public Class clsWebserviceFunctions
     ''' <param name="NeueFabriknummer"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Shared Function GetLokaleKopieVonEichprozess(ByVal Vorgangsnummer As String, ByVal NeueFabriknummer As String) As Eichprozess
+    Public Shared Function GetLokaleKopieVonEichprozessFuerStandardwaage(ByVal Vorgangsnummer As String, ByVal NeueFabriknummer As String) As Eichprozess
         Dim objServerEichprozess As EichsoftwareWebservice.ServerEichprozess = Nothing
         Dim objClientEichprozess As Eichprozess = Nothing
         'neue Datenbankverbindung
@@ -610,32 +699,9 @@ Public Class clsWebserviceFunctions
 
                     'umwandeln des Serverobjektes in Clientobject
                     clsClientServerConversionFunctions.CopyClientObjectPropertiesWithNewIDs(objClientEichprozess, objServerEichprozess)
+                    'zurücksetzen einiger Werte für die neue Standardwaage
+                    objClientEichprozess = clsClientServerConversionFunctions.SetDefaultWerteFuerStandardwaage(NeueFabriknummer, objClientEichprozess)
 
-                    'vorgangsnummer editieren
-                    objClientEichprozess.Vorgangsnummer = Guid.NewGuid.ToString
-                    objClientEichprozess.FK_Bearbeitungsstatus = 4 'noch nichts
-                    objClientEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe
-
-                    'standardwaaeg zur identifizierung des verkürrtzten Prozesses setzen
-                    objClientEichprozess.AusStandardwaageErzeugt = True
-                    'neue Fabriknummer
-                    objClientEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer = NeueFabriknummer
-                    'Prüfscheinnummer leeren
-                    objClientEichprozess.Eichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer = ""
-                    'Außermittige Belastung Leeren
-                    objClientEichprozess.Eichprotokoll.PruefungAussermittigeBelastung.Clear()
-                    'Genauigkeit Nullstellung leeren
-                    objClientEichprozess.Eichprotokoll.GenauigkeitNullstellung_InOrdnung = False
-                    'Prüfung Linearität leeren
-                    objClientEichprozess.Eichprotokoll.PruefungLinearitaetFallend.Clear()
-                    objClientEichprozess.Eichprotokoll.PruefungLinearitaetSteigend.Clear()
-                    'Überlastanzeige leeren
-                    objClientEichprozess.Eichprotokoll.Ueberlastanzeige_Ueberlast = False
-                    'Fallbeschleunigung wird geleert
-                    objClientEichprozess.Eichprotokoll.Fallbeschleunigung_ms2 = False
-                    objClientEichprozess.Eichprotokoll.Identifikationsdaten_Datum = Date.Now.Date
-                    objClientEichprozess.Eichprotokoll.Beschaffenheitspruefung_LetztePruefung = Nothing
-                    objClientEichprozess.Eichprotokoll.Identifikationsdaten_Baujahr = Date.Now.Year
                     'hinufügen zur Lokalen DB
                     dbcontext.Eichprozess.Add(objClientEichprozess)
 
@@ -668,113 +734,11 @@ Public Class clsWebserviceFunctions
         End Using
     End Function
 
-    ' ''' <summary>
-    ' ''' erzeugt 1:1 kopie von Serverobjekt in lokaler DB. wird nicht mehr benötigt, da der kopiervorgang nun verschärft wurde und keine 1:1 kopie mehr erzeugt werden darf.
-    ' ''' </summary>
-    ' ''' <param name="Vorgangsnummer"></param>
-    ' ''' <returns></returns>
-    ' ''' <remarks></remarks>
-    'Public Shared Function old_GetLokaleKopieVonEichprozess(ByVal Vorgangsnummer As String) As Eichprozess
-    '    Dim objServerEichprozess As EichsoftwareWebservice.ServerEichprozess = Nothing
-    '    Dim objClientEichprozess As Eichprozess = Nothing
-    '    'neue Datenbankverbindung
-    '    Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
-    '        Try
-    '            webContext.Open()
-    '        Catch ex As Exception
-    '            MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
-    '            Return Nothing
-    '        End Try
-    '        Using dbcontext As New Entities
-    '            Try
-    '                objClientEichprozess = dbcontext.Eichprozess.Create
-    '                objServerEichprozess = webContext.GetEichProzess(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
 
-    '                If objServerEichprozess Is Nothing Then
-    '                    MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_KeinServerObjektEichung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
-    '                End If
 
-    '                'umwandeln des Serverobjektes in Clientobject
-    '                clsClientServerConversionFunctions.CopyClientObjectPropertiesWithNewIDs(objClientEichprozess, objServerEichprozess)
+#End Region
+#Region "JSON Ablage Eichprozess"
 
-    '                'vorgangsnummer editieren
-    '                objClientEichprozess.Vorgangsnummer = Guid.NewGuid.ToString
-    '                objClientEichprozess.FK_Bearbeitungsstatus = 4 'noch nichts
-    '                objClientEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe
-
-    '                dbcontext.Eichprozess.Add(objClientEichprozess)
-
-    '                Try
-    '                    dbcontext.SaveChanges()
-    '                Catch ex As Entity.Infrastructure.DbUpdateException
-    '                    MessageBox.Show(ex.InnerException.InnerException.Message)
-    '                    MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_SpeicherAnomalie, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK)
-    '                    If AktuellerBenutzer.Instance.Lizenz.RHEWALizenz Then
-    '                        MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_SpeicherAnomalieRhewaZusatztext, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK)
-    '                    End If
-
-    '                    Return Nothing
-    '                Catch ex2 As Entity.Validation.DbEntityValidationException
-    '                    For Each o In ex2.EntityValidationErrors
-    '                        For Each v In o.ValidationErrors
-    '                            MessageBox.Show(v.ErrorMessage & " " & v.PropertyName)
-    '                        Next
-    '                    Next
-    '                    Return Nothing
-    '                End Try
-
-    '                Return objClientEichprozess
-
-    '            Catch ex As Exception
-    '                Return Nothing
-    '            End Try
-    '        End Using
-    '    End Using
-
-    'End Function
-
-    ''' <summary>
-    ''' genehmigt Eichprozess anhand von Vorgangsnummer auf dem Server
-    ''' </summary>
-    ''' <param name="Vorgangsnummer"></param>
-    ''' <returns></returns>
-    ''' <remarks></remarks>
-    Public Shared Function GenehmigeEichprozess(ByVal Vorgangsnummer As String)
-        Dim result As String = ""
-        Dim Messagetext As String = ""
-        Dim bolSetGueltig As Boolean = True 'variable zum abbrechen des Prozesses, falls jemand anderes an dem DS arbeitet
-
-        'neue Datenbankverbindung
-        Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
-            Try
-                webContext.Open()
-            Catch ex As Exception
-                MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                Return False
-            End Try
-
-            'prüfen ob der datensatz von jemand anderem in Bearbeitung ist
-
-            Messagetext = webContext.CheckSperrung(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
-            If Messagetext.Equals("") = False Then
-                'rhewa arbeitet in deutsch und hat keine lokalisierung gewünscht
-                result = webContext.SetSperrung(True, AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
-                If result = "" Then
-                    bolSetGueltig = True
-                Else
-                    MessageBox.Show(result)
-                    bolSetGueltig = False
-                    Return False
-                End If
-            End If
-            If bolSetGueltig Then
-                webContext.SetEichprozessGenehmight(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
-                Return True
-            End If
-        End Using
-
-        Return False
-    End Function
 
     Friend Shared Function LegeEichprotokollAb(Vorgangsnummer As String) As Boolean
         Dim jsonSerializerSettings = New JsonSerializerSettings()
@@ -787,35 +751,25 @@ Public Class clsWebserviceFunctions
             Dim eichung = (DBContext.Eichprozess.Include("Eichprotokoll") _
                 .Include("Lookup_Waegezelle") _
                 .Include("Eichprotokoll.PruefungAnsprechvermoegen") _
-                 .Include("Eichprotokoll.PruefungLinearitaetFallend") _
-                    .Include("Eichprotokoll.PruefungLinearitaetSteigend") _
-                      .Include("Eichprotokoll.PruefungRollendeLasten") _
-                        .Include("Eichprotokoll.PruefungAussermittigeBelastung") _
-                          .Include("Eichprotokoll.PruefungStabilitaetGleichgewichtslage") _
-                           .Include("Eichprotokoll.PruefungStaffelverfahrenErsatzlast") _
-                            .Include("Eichprotokoll.PruefungStaffelverfahrenNormallast") _
-                             .Include("Eichprotokoll.PruefungWiederholbarkeit") _
-            .Include("Kompatiblitaetsnachweis") _
-            .Include("Mogelstatistik") _
-            .Where(Function(C) C.Vorgangsnummer = Vorgangsnummer)).FirstOrDefault
+                .Include("Eichprotokoll.PruefungLinearitaetFallend") _
+                .Include("Eichprotokoll.PruefungLinearitaetSteigend") _
+                .Include("Eichprotokoll.PruefungRollendeLasten") _
+                .Include("Eichprotokoll.PruefungAussermittigeBelastung") _
+                .Include("Eichprotokoll.PruefungStabilitaetGleichgewichtslage") _
+                .Include("Eichprotokoll.PruefungStaffelverfahrenErsatzlast") _
+                .Include("Eichprotokoll.PruefungStaffelverfahrenNormallast") _
+                .Include("Eichprotokoll.PruefungWiederholbarkeit") _
+                .Include("Kompatiblitaetsnachweis") _
+                .Include("Mogelstatistik") _
+                .Where(Function(C) C.Vorgangsnummer = Vorgangsnummer)).FirstOrDefault
 
             If Not eichung Is Nothing Then
-                If eichung.FK_Bearbeitungsstatus = 3 Then
-                    'nur nicht versendete dürfen abgelegt werden
-                    MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_EichprotokollBereitsGenehmigt, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    Return False
-                End If
-                If eichung.FK_Bearbeitungsstatus = 2 Then
-                    'nur nicht versendete dürfen abgelegt werden
-                    MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_EichprotokollBereitsAbgelehnt, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    Return False
-                End If
-                If eichung.FK_Bearbeitungsstatus = 1 Then
-                    'nur nicht versendete dürfen abgelegt werden
-                    MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_SpeicherAnomalie, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                If pruefeBearbeitungsstatus(eichung) = False Then
                     Return False
                 End If
 
+                'leeren der WZ wenn sie nicht neu ist
+                'falls serverseitig änderungen vorgenommen werden, können die später wieder ins Objekt übernommen werden
                 If eichung.Lookup_Waegezelle.Neu = False Then
                     eichung.Lookup_Waegezelle = Nothing
                 End If
@@ -846,6 +800,25 @@ Public Class clsWebserviceFunctions
         Return False
     End Function
 
+    Private Shared Function pruefeBearbeitungsstatus(eichung As Eichprozess) As Boolean
+        If eichung.FK_Bearbeitungsstatus = 3 Then
+            'nur nicht versendete dürfen abgelegt werden
+            MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_EichprotokollBereitsGenehmigt, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return False
+        End If
+        If eichung.FK_Bearbeitungsstatus = 2 Then
+            'nur nicht versendete dürfen abgelegt werden
+            MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_EichprotokollBereitsAbgelehnt, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return False
+        End If
+        If eichung.FK_Bearbeitungsstatus = 1 Then
+            'nur nicht versendete dürfen abgelegt werden
+            MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_SpeicherAnomalie, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return False
+        End If
+        Return True
+    End Function
+
     Friend Shared Sub RufeAbgelegteEichprozesseab()
         Dim jsonSerializerSettings = New JsonSerializerSettings()
         jsonSerializerSettings.PreserveReferencesHandling = PreserveReferencesHandling.Objects
@@ -865,16 +838,20 @@ Public Class clsWebserviceFunctions
             Using DBContext As New Entities
                 For Each jsonString In jsonStrings
                     Dim neweichung As Eichprozess = JsonConvert.DeserializeObject(jsonString, GetType(Eichprozess), jsonSerializerSettings)
-                    ' lokal hinzufügen
+
+                    'wenn informationen zur neuen WZ vom Client übermittelt wurden können diese nun wieder eingelsen werden
                     If neweichung.Lookup_Waegezelle Is Nothing = False Then
                         Dim allreadyexists = DBContext.Lookup_Waegezelle.Where(Function(c) c.ID = neweichung.Lookup_Waegezelle.ID).FirstOrDefault
                         If Not allreadyexists Is Nothing Then
                             neweichung.Lookup_Waegezelle = Nothing
                         End If
                     End If
+
                     For Each o In neweichung.Mogelstatistik
                         o.Lookup_Waegezelle = Nothing
                     Next
+                    ' lokal hinzufügen
+
                     DBContext.Eichprozess.Add(neweichung)
                 Next
                 Try
@@ -897,48 +874,9 @@ Public Class clsWebserviceFunctions
 
     End Sub
 
-    ''' <summary>
-    '''  lehnt Eichprozess ab, anhand von Vorgangsnummer auf dem Server
-    ''' </summary>
-    ''' <param name="Vorgangsnummer"></param>
-    ''' <returns></returns>
-    ''' <remarks></remarks>
-    Public Shared Function AblehnenEichprozess(ByVal Vorgangsnummer As String) As Boolean
-        Dim result As String = ""
-        Dim bolSetUnueltig As Boolean = True 'variable zum abbrechen des Prozesses, falls jemand anderes an dem DS arbeitet
-        Dim Messagetext As String = ""
-        'neue Datenbankverbindung
-        Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
-            Try
-                webContext.Open()
-            Catch ex As Exception
-                MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                Return False
-            End Try
+#End Region
 
-            Messagetext = webContext.CheckSperrung(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
-            If Messagetext.Equals("") = False Then
-                'rhewa arbeitet in deutsch und hat keine lokalisierung gewünscht
-                If MessageBox.Show("Dieser Konformitätsbewertungsprozess wird von '" & Messagetext & "' bearbeitet. Möchten Sie seine Arbeit wirklich überschreiben und den Prozess ablehnen?", My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo) = DialogResult.Yes Then
-                    result = webContext.SetSperrung(True, AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
-                    If result = "" Then
-                        bolSetUnueltig = True
-                    Else
-                        MessageBox.Show(result)
-                        bolSetUnueltig = False
-                        Return False
-                    End If
-                Else
-                    bolSetUnueltig = False
-                End If
-            End If
-            If bolSetUnueltig Then
-                webContext.SetEichprozessUngueltig(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
-                Return True
-            End If
-        End Using
-        Return False
-    End Function
+
 
     ''' <summary>
     ''' lädt serverobjekt herunter ohne es in der lokalen DB zu speichern. So kann das in Memoryobjekt genutzt werden um es anzuschauen
@@ -946,7 +884,7 @@ Public Class clsWebserviceFunctions
     ''' <param name="Vorgangsnummer"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Shared Function ZeigeServerEichprozess(ByVal Vorgangsnummer As String) As Eichprozess
+    Public Shared Function LadeServerEichprozessZurReadonlyAnzeige(ByVal Vorgangsnummer As String) As Eichprozess
         Dim objServerEichprozess As EichsoftwareWebservice.ServerEichprozess = Nothing
         Dim objClientEichprozess As Eichprozess = Nothing
         'neue Datenbankverbindung
@@ -974,6 +912,8 @@ Public Class clsWebserviceFunctions
         End Using
         Return Nothing
     End Function
+
+#Region "Schreibsperre"
 
     ''' <summary>
     ''' Sperrt den aktuellen Server Eichprozess zur Bearbeitung. Wenn ein anderer Benutzer diesen DS öffnen will, kriegt er eine hinweismeldung
@@ -1058,6 +998,7 @@ Public Class clsWebserviceFunctions
             Return ""
         End Try
     End Function
+#End Region
 
     ''' <summary>
     ''' Methode welche Eichprozesse vom Server holt, die als Standardwaage deklariert sind und die Daten in eine für das datagrid Bindbare Auflistung speichert.
@@ -1204,5 +1145,22 @@ Public Class clsWebserviceFunctions
             Return False
         End Try
     End Function
+
+
+    Private Shared Sub GetStartUndEndDatum(ByRef StartDatum As Date, ByRef EndDatum As Date)
+        StartDatum = #1/1/2000#
+        EndDatum = #12/31/2999#
+
+        If AktuellerBenutzer.Instance.Synchronisierungsmodus = "Alles" Then
+        ElseIf AktuellerBenutzer.Instance.Synchronisierungsmodus = "Ab" Then
+            StartDatum = AktuellerBenutzer.Instance.SyncAb
+        ElseIf AktuellerBenutzer.Instance.Synchronisierungsmodus = "Zwischen" Then
+            StartDatum = AktuellerBenutzer.Instance.SyncAb
+            EndDatum = AktuellerBenutzer.Instance.SyncBis
+        Else
+            AktuellerBenutzer.Instance.Synchronisierungsmodus = "Alles"
+            AktuellerBenutzer.SaveSettings()
+        End If
+    End Sub
 
 End Class

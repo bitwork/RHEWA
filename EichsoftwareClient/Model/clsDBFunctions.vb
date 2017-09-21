@@ -2,6 +2,9 @@ Imports System.IO
 Imports System.Runtime.Serialization
 Imports EichsoftwareClient
 
+''' <summary>
+''' Klasse mit Funktionen für spezielle Aktionen gegen die Client Datenbank
+''' </summary>
 Public Class clsDBFunctions
 
     ' ''' <summary>
@@ -48,6 +51,10 @@ Public Class clsDBFunctions
     '    End Try
     'End Sub
 
+    ''' <summary>
+    ''' alle lokalen Benutzer aus Client DB löschen
+    ''' </summary>
+    ''' <returns></returns>
     Public Shared Function LoescheLokaleBenutzer() As Boolean
         'alle Tabellen iterieren und löschen. Das commit wird erst am Ende ausgeführt, deswegen ist die löschreihenefolge egal
         Using DBContext As New Entities
@@ -62,6 +69,10 @@ Public Class clsDBFunctions
         End Using
     End Function
 
+    ''' <summary>
+    ''' Löscht die Hill Testlizenz
+    ''' </summary>
+    ''' <returns></returns>
     Public Shared Function LoescheDevBenutzer() As Boolean
         Try
             'alle Tabellen iterieren und löschen. Das commit wird erst am Ende ausgeführt, deswegen ist die löschreihenefolge egal
@@ -81,6 +92,10 @@ Public Class clsDBFunctions
         Return True
     End Function
 
+    ''' <summary>
+    ''' Verbindung zur DB öffnen
+    ''' </summary>
+    ''' <returns></returns>
     Public Shared Function CheckLocalDatabaseExists() As Boolean
         Using DBContext As New Entities
             Try
@@ -92,35 +107,48 @@ Public Class clsDBFunctions
             Return True
         End Using
     End Function
-
-    Public Shared Function CopyLocalDatabaseToApplicationFolder()
+    ''' <summary>
+    ''' Damit die Client DB bei Änderungen in der Entwicklung nicht überschrieben wird (copy allways), wird sie in einem Unterverzeichnis gespeichert. wenn beim Benutzer keine DB vorhanden ist, wird sie aus dem Unterverzeichnis in das vom Entity Framework verwendete Verzeichnis verschoben.
+    ''' Änderungen an der DB müssen über die DB Updateroutine durchgeführt werden
+    ''' </summary>
+    ''' <returns></returns>
+    Public Shared Sub CopyLocalDatabaseToApplicationFolder()
         Dim currentpath = Reflection.Assembly.GetExecutingAssembly().Location.Replace(Reflection.Assembly.GetExecutingAssembly().ManifestModule.Name, "")
         Dim databasename = "EichsoftwareClientdatabase.sdf"
         If IO.File.Exists(currentpath & databasename) = False Then
             IO.File.Copy(currentpath & "Resources\" & databasename, currentpath & databasename)
         End If
-    End Function
+    End Sub
 
+    ''' <summary>
+    ''' prüfen ob DB vorhanden ist und wenn nicht erzeugen
+    ''' </summary>
+    Friend Shared Sub prepareDatabase()
+        If clsDBFunctions.CheckLocalDatabaseExists() = False Then
+            clsDBFunctions.CopyLocalDatabaseToApplicationFolder()
+        End If
+    End Sub
+
+    ''' <summary>
+    ''' Updateroutine für Client Datenbanken
+    ''' </summary>
+    ''' <returns></returns>
     Public Shared Function UpdateClientDatenbank()
         'IM Entity Framework dieser Version ist es nicht so einfach möglich zu prüfen, ob es felder gibt oder nicht. Ursprünglich gab es gar keine Versionierung der Datenbank
         'Sprich das Feld DBVersion welches geprüft wird, gab es noch gar nicht. Das kann ich nur durch die Exception herausfinden.
         'SPäter kam die Erkenntnis, dass es nicht sinnvoll ist die DB Version in der Konfiguration zu speichern, da diese Tabelle pro Lizenz eine Zeile einträgt
         'Die DB Version aber nicht an der Lizenz hängt. Deswegen wurde im späteren Schritt v4 auf eine neue Tabelle umgestellt, die nur zur Versionsverwaltung dient. Diese kann auch ohne Lizenz Updates durchführen
-
         UpdateClientDatenbankAlt()
 
 
         'Ab hier kann nun sauber mit der DB Version gearbeit werden. Der Code oben ist historisch gewachsen. Ab hier sollte es nun vernünftig funktioneren
-
         Using DBContext As New Entities
-
-
             Dim objVersion = DBContext.Datenbankversion.FirstOrDefault
             If Not objVersion Is Nothing Then
                 If objVersion.version < 5 Then
                     UpdateVersion5(DBContext)
                 End If
-
+                'TODO bei neuen updates entsprechend weiterführen
                 'If objVersion.version < 6 Then
                 '    UpdateVersion6(DBContext)
                 'End If
@@ -132,6 +160,7 @@ Public Class clsDBFunctions
 
 
         If Debugger.IsAttached = False Then
+            'Löscht die Hill Testlizenz falls vorhanden
             LoescheDevBenutzer()
         End If
 
@@ -146,6 +175,7 @@ Public Class clsDBFunctions
     ''' </summary>
     ''' <returns></returns>
     Private Shared Function UpdateClientDatenbankAlt() As Boolean
+        'WICHTIG HIER DRAN NICHTS MEHR ÄNDERN
         Try
             Using DBContext As New Entities
 
@@ -204,6 +234,10 @@ Public Class clsDBFunctions
 
 
 #Region "DB Updates"
+    ''' <summary>
+    ''' erhöhen der maximalen Feldgröße von den Identifkationsdaten
+    ''' </summary>
+    ''' <param name="DBContext"></param>
     Private Shared Sub UpdateVersion2(DBContext As Entities)
 
         Dim updateScript As String = ""
@@ -228,6 +262,10 @@ Public Class clsDBFunctions
         DBContext.SaveChanges()
     End Sub
 
+    ''' <summary>
+    ''' Eichmarkenverwaltung wurde umgebaut
+    ''' </summary>
+    ''' <param name="DBContext"></param>
     Private Shared Sub UpdateVersion3(DBContext As Entities)
         Dim updateScript As String = ""
 
@@ -291,6 +329,11 @@ Public Class clsDBFunctions
         DBContext.SaveChanges()
     End Sub
 
+
+    ''' <summary>
+    ''' neue Tabelle für Versionierung erzeugen
+    ''' </summary>
+    ''' <param name="DBContext"></param>
     Private Shared Sub updateVersion4(DBContext As Entities)
         Try
             Dim updateScript As String = ""
@@ -314,6 +357,11 @@ Public Class clsDBFunctions
         End Try
     End Sub
 
+    ''' <summary>
+    ''' anpassen polnische lokalisierung
+    ''' Erhöhen der Wägezellenfabrik nummer auf 250 zeichen
+    ''' </summary>
+    ''' <param name="DBContext"></param>
     Private Shared Sub UpdateVersion5(DBContext As Entities)
         Dim updateScript As String = ""
 
@@ -567,24 +615,6 @@ Public Class clsDBFunctions
 
     End Function
 
-    ' ''' <summary>
-    ' ''' Erzeugt einen 1zu1 Kopie eines Objektes
-    ' ''' </summary>
-    ' ''' <typeparam name="T"></typeparam>
-    ' ''' <param name="obj"></param>
-    ' ''' <returns></returns>
-    ' ''' <remarks></remarks>
-    'Private Shared Function DataContractSerialization(Of T)(obj As T) As T
-    '    Dim dcSer As New Runtime.Serialization.DataContractSerializer(obj.[GetType]())
-    '    Dim memoryStream As New IO.MemoryStream()
-
-    '    dcSer.WriteObject(memoryStream, obj)
-    '    memoryStream.Position = 0
-
-    '    Dim newObject As T = DirectCast(dcSer.ReadObject(memoryStream), T)
-    '    Return newObject
-    'End Function
-
     ''' <summary>
     ''' Setzt flag zum ausblenden / einblenden eines Vorgangs
     ''' </summary>
@@ -715,27 +745,10 @@ Public Class clsDBFunctions
         End Using
     End Function
 
-    Public Shared Function Serialize(obj As Object) As String
-        Using memoryStream As New MemoryStream()
-            Using reader As New StreamReader(memoryStream)
-                Dim serializer As New DataContractSerializer(obj.[GetType]())
-                serializer.WriteObject(memoryStream, obj)
-                memoryStream.Position = 0
-                Return reader.ReadToEnd()
-            End Using
-        End Using
-    End Function
-
-    Public Shared Function Deserialize(xml As String, toType As Type) As Object
-        Using stream As Stream = New MemoryStream()
-            Dim data As Byte() = System.Text.Encoding.UTF8.GetBytes(xml)
-            stream.Write(data, 0, data.Length)
-            stream.Position = 0
-            Dim deserializer As New DataContractSerializer(toType)
-            Return deserializer.ReadObject(stream)
-        End Using
-    End Function
-
+    ''' <summary>
+    ''' Support Option um die Datenbank auf den RHEWA FTP zu schieben. Benutzt im Optionsdialog
+    ''' </summary>
+    ''' <returns></returns>
     Public Shared Function SendLocalDatabaseToRHEWAFTP()
         Dim objFTP As New clsFTP
         Dim path As String
@@ -794,35 +807,11 @@ Public Class clsDBFunctions
 
     End Function
 
-    'Friend Shared Function LoescheEichprozess(Vorgangsnummer As String) As Boolean
-    '    Try
-    '        Using DBContext As New Entities
-
-    '            Dim eichung = (DBContext.Eichprozess.Include("Eichprotokoll").Include("Lookup_Auswertegeraet").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik").Where(Function(C) C.Vorgangsnummer = Vorgangsnummer)).FirstOrDefault
-    '            'DBContext.PruefungAnsprechvermoegen.Remove(eichung.Eichprotokoll.PruefungAnsprechvermoegen)
-    '            'DBContext.PruefungAussermittigeBelastung.Remove(eichung.Eichprotokoll.PruefungAussermittigeBelastung)
-    '            'DBContext.PruefungLinearitaetFallend.Remove(eichung.Eichprotokoll.PruefungLinearitaetFallend)
-    '            'DBContext.PruefungLinearitaetSteigend.Remove(eichung.Eichprotokoll.PruefungLinearitaetSteigend)
-    '            'DBContext.PruefungRollendeLasten.Remove(eichung.Eichprotokoll.PruefungRollendeLasten)
-    '            'DBContext.PruefungStabilitaetGleichgewichtslage.Remove(eichung.Eichprotokoll.PruefungStabilitaetGleichgewichtslage)
-    '            'DBContext.PruefungStaffelverfahrenErsatzlast.Remove(eichung.Eichprotokoll.PruefungStaffelverfahrenErsatzlast)
-    '            'DBContext.PruefungStaffelverfahrenNormallast.Remove(eichung.Eichprotokoll.PruefungStaffelverfahrenNormallast)
-    '            'DBContext.PruefungWiederholbarkeit.Remove(eichung.Eichprotokoll.PruefungWiederholbarkeit)
-    '            'DBContext.Eichprotokoll.Remove(eichung.Eichprotokoll)
-    '            'DBContext.Mogelstatistik.Remove(eichung.Mogelstatistik)
-    '            'DBContext.Kompatiblitaetsnachweis.Remove(eichung.Kompatiblitaetsnachweis)
-
-    '            DBContext.Eichprozess.Remove(eichung)
-
-    '            DBContext.SaveChanges()
-
-    '        End Using
-    '        Return True
-    '    Catch ex As Exception
-    '        Return False
-    '    End Try
-    'End Function
-
+    ''' <summary>
+    ''' lokalen eichprozess löschen
+    ''' </summary>
+    ''' <param name="Vorgangsnummer"></param>
+    ''' <returns></returns>
     Public Shared Function LoescheEichprozess(Vorgangsnummer As String) As Boolean
         Try
             'alle Tabellen iterieren und löschen. Das commit wird erst am Ende ausgeführt, deswegen ist die löschreihenefolge egal

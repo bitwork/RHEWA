@@ -121,11 +121,12 @@ Public Class FrmBenutzerauswahl
             End If
 
             If error1 = True Then
+                'eichprozesse und prüfungen löschen
                 clsDBFunctions.LoescheLokaleDatenbank()
+                'alle lokalen Benutzer aus Client DB löschen
                 clsDBFunctions.LoescheLokaleBenutzer()
                 Application.Restart()
                 Exit Sub
-
             End If
 
             My.Settings.LetzterBenutzer = mvarGewaehlteBenutzerLizenz.Lizenzschluessel

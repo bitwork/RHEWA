@@ -11,14 +11,15 @@ Public Class ucoContent
     Private _PreviousUco As ucoContent 'mit dieser variable merkt sich das aktuelle UCO, welches Uco VOR ihm im Eichprozess dran kam
     Private _NextUco As ucoContent 'mit dieser variable merkt sich das aktuelle UCO, welches Uco NACH ihm im Eichprozess dran kam
     Private _objEichprozess As Eichprozess 'das aktuelle Eichprozess Objekt
-    'Private _bolSuspendRefresh As Boolean = False
+    Private _bolEichprozessIsDirty = False
+
     Protected Friend _intNullstellenE1 As Integer = 0 'Variable zum Einstellen der Nullstellen für das Casten und runden der Werte. Abhängig von e Wert. Wenn e = 1 Nullstelle dann hier = 2. wenn e = 2 dann hier = 3. immer eine nullstelle mehr als E
     Protected Friend _intNullstellenE2 As Integer = 0 'Variable zum Einstellen der Nullstellen für das Casten und runden der Werte. Abhängig von e Wert. Wenn e = 1 Nullstelle dann hier = 2. wenn e = 2 dann hier = 3. immer eine nullstelle mehr als E
     Protected Friend _intNullstellenE3 As Integer = 0 'Variable zum Einstellen der Nullstellen für das Casten und runden der Werte. Abhängig von e Wert. Wenn e = 1 Nullstelle dann hier = 2. wenn e = 2 dann hier = 3. immer eine nullstelle mehr als E
     Protected Friend _intNullstellenE As Integer = 0
-    Private _bolEichprozessIsDirty = False
 
     Protected Friend _bolValidierungsmodus As Boolean = False 'wenn dieser Wert auf True steht, dürfen validierungen nicht mehr übersprungen werden
+
     ''' <summary>
     ''' sobald gravierende Änderungen im aktuellen Status vorgenommen werden, wird das Dirty Flag gesetzt. So kann überprüft werden ob Updates durchgeführt werden müssen und ob der aktuelle Vorgangsstatus zurückgesetzt werden muss
     ''' </summary>
@@ -154,27 +155,23 @@ Public Class ucoContent
     End Sub
 
     Sub New(ByRef pParentform As FrmMainContainer, ByRef pObjEichprozess As Eichprozess, Optional ByRef pPreviousUco As ucoContent = Nothing, Optional ByRef pNextUco As ucoContent = Nothing, Optional ByVal pEnuModus As enuDialogModus = enuDialogModus.normal)
-
         ' Dieser Aufruf ist für den Designer erforderlich.
         InitializeComponent()
 
         ' Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
-        'TH zuweisen des Eltern elements
+        ' zuweisen des Eltern elements
         _ParentForm = pParentform
-        'TH zuweisen des vorherigen Steuerelements
+        ' zuweisen des vorherigen Steuerelements
         _PreviousUco = pPreviousUco
-        'TH zuweisen des nachfolgenden Steuerelements, wenn es schon existiert
+        ' zuweisen des nachfolgenden Steuerelements, wenn es schon existiert
         _NextUco = pNextUco
         _objEichprozess = pObjEichprozess
-        ''TH die Zuweisungen werden für die BLätterfunktionalität genutzt
-        '_Breadcrumb = pBreadcrum
-        'TH zuweisen des Zugriffsmoduses auf den Dialog
+        ' zuweisen des Zugriffsmoduses auf den Dialog
         DialogModus = pEnuModus
 
         If Not _ParentForm Is Nothing Then
             _ParentForm.SETContextHelpText("")
         End If
-
     End Sub
 
 #End Region
@@ -224,15 +221,15 @@ Public Class ucoContent
         'Steuerlemente füllen
         'dynamisches laden der Nullstellen:
         Try
-            _intNullstellenE1 = clsGeneralFunctions.GetRHEWADecimalDigits(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1) '.Replace(",", "."))  + 1
+            _intNullstellenE1 = GetRHEWADecimalDigits(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1)
         Catch ex As Exception
         End Try
         Try
-            _intNullstellenE2 = clsGeneralFunctions.GetRHEWADecimalDigits(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2) '.Replace(",", ".")) + 1
+            _intNullstellenE2 = GetRHEWADecimalDigits(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2)
         Catch ex As Exception
         End Try
         Try
-            _intNullstellenE3 = clsGeneralFunctions.GetRHEWADecimalDigits(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3) '.Replace(",", "."))  + 1
+            _intNullstellenE3 = GetRHEWADecimalDigits(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3)
         Catch ex As Exception
         End Try
 
@@ -560,6 +557,39 @@ Public Class ucoContent
 
 #Region "Hilfsfunktionen"
     ''' <summary>
+    ''' Methode zum ermitteln der anzahl der benötigten Nullstellen nach dem RHEWA System
+    ''' </summary>
+    ''' <param name="value"></param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Public Shared Function GetRHEWADecimalDigits(ByVal value As String) As Integer
+        Try
+            If value Is Nothing Then
+                Return 0
+            End If
+            If value = "" Then
+                Return 0
+            End If
+            If CDec(value) >= 1 Then
+                Return 1
+            ElseIf CDec(value) >= 0.1 Then
+                Return 3
+            ElseIf CDec(value) >= 0.01 Then
+                Return 3
+            ElseIf CDec(value) >= 0.001 Then
+                Return 4
+            ElseIf CDec(value) >= 0.0001 Then
+                Return 5
+            Else
+                Return 6
+            End If
+
+        Catch ex As Exception
+            Return 0
+        End Try
+    End Function
+
+    ''' <summary>
     ''' Berechnet die Eichfehlergrenzen anhand der Last (wählt somit den EFG Bereich aus und des Eichwerts bei Mehrbereichswaagen entpsrechend dem Bereich)
     ''' </summary>
     ''' <param name="Gewicht"></param>
@@ -784,41 +814,5 @@ Public Class ucoContent
         End Using
     End Sub
 #End Region
-    '#Region "Timer"
 
-    '    Private _tmrDelaySearch As Timer
-    '    Private Const DelayedTextChangedTimeout As Integer = 1000
-    '    Friend Event TimerStopped()
-
-    '    Private Sub _tmrDelaySearch_Tick(sender As Object, e As EventArgs)
-    '        If _tmrDelaySearch IsNot Nothing Then
-    '            _tmrDelaySearch.Stop()
-    '            RaiseEvent TimerStopped()
-    '        End If
-    '    End Sub
-
-
-
-    '    Friend Sub StartTimer()
-    '        If _tmrDelaySearch IsNot Nothing Then
-    '            _tmrDelaySearch.Stop()
-    '        End If
-
-    '        If _tmrDelaySearch Is Nothing Then
-    '            _tmrDelaySearch = New Timer()
-    '            AddHandler _tmrDelaySearch.Tick, AddressOf _tmrDelaySearch_Tick
-    '            _tmrDelaySearch.Interval = DelayedTextChangedTimeout
-    '        End If
-
-    '        _tmrDelaySearch.Start()
-    '    End Sub
-
-    '    Friend ReadOnly Property TimerRunning As Boolean
-    '        Get
-    '            If _tmrDelaySearch Is Nothing Then Return False
-    '            Return _tmrDelaySearch.Enabled
-    '        End Get
-    '    End Property
-
-    '#End Region
 End Class

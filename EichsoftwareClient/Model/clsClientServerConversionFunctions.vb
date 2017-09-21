@@ -1333,6 +1333,40 @@ Public Class clsClientServerConversionFunctions
         End Using
     End Sub
 
+    ''' <summary>
+    ''' zurücksetzen einiger Werte für die neue Standardwaage wie Vorgangsnummer und Prüfungsergebnisse
+    ''' </summary>
+    ''' <param name="NeueFabriknummer"></param>
+    ''' <param name="objClientEichprozess"></param>
+    ''' <returns></returns>
+    Public Shared Function SetDefaultWerteFuerStandardwaage(NeueFabriknummer As String, objClientEichprozess As Eichprozess) As Eichprozess
+        'vorgangsnummer editieren
+        objClientEichprozess.Vorgangsnummer = Guid.NewGuid.ToString
+        objClientEichprozess.FK_Bearbeitungsstatus = 4 'noch nichts
+        objClientEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe
+
+        'standardwaaeg zur identifizierung des verkürrtzten Prozesses setzen
+        objClientEichprozess.AusStandardwaageErzeugt = True
+        'neue Fabriknummer
+        objClientEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer = NeueFabriknummer
+        'Prüfscheinnummer leeren
+        objClientEichprozess.Eichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer = ""
+        'Außermittige Belastung Leeren
+        objClientEichprozess.Eichprotokoll.PruefungAussermittigeBelastung.Clear()
+        'Genauigkeit Nullstellung leeren
+        objClientEichprozess.Eichprotokoll.GenauigkeitNullstellung_InOrdnung = False
+        'Prüfung Linearität leeren
+        objClientEichprozess.Eichprotokoll.PruefungLinearitaetFallend.Clear()
+        objClientEichprozess.Eichprotokoll.PruefungLinearitaetSteigend.Clear()
+        'Überlastanzeige leeren
+        objClientEichprozess.Eichprotokoll.Ueberlastanzeige_Ueberlast = False
+        'Fallbeschleunigung wird geleert
+        objClientEichprozess.Eichprotokoll.Fallbeschleunigung_ms2 = False
+        objClientEichprozess.Eichprotokoll.Identifikationsdaten_Datum = Date.Now.Date
+        objClientEichprozess.Eichprotokoll.Beschaffenheitspruefung_LetztePruefung = Nothing
+        objClientEichprozess.Eichprotokoll.Identifikationsdaten_Baujahr = Date.Now.Year
+        Return objClientEichprozess
+    End Function
 #End Region
 
 End Class

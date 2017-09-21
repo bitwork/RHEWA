@@ -250,11 +250,9 @@
     <Compile Include="Model\clsDBFunctions.vb" />
     <Compile Include="Model\clsClientServerConversionFunctions.vb" />
     <Compile Include="Model\clsFTP.vb" />
-    <Compile Include="Model\clsGeneralFunctions.vb" />
     <Compile Include="Model\clsOfficeExports.vb" />
     <Compile Include="Model\clsPlausibilitaetspruefung.vb" />
     <Compile Include="Model\clsWebserviceFunctions.vb" />
-    <Compile Include="Model\EichmarkenComparable.vb" />
     <Compile Include="Model\telerikgridlocalizer.vb" />
     <Compile Include="Mogelstatistik.vb">
       <DependentUpon>EntityModel.tt</DependentUpon>
@@ -982,16 +980,16 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App - debug.config">
+    <None Include="Web Config Templates\App - debug.config">
       <SubType>Designer</SubType>
     </None>
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="APP - RHEWA.config">
+    <None Include="Web Config Templates\APP - RHEWA.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="APP - Strato.config">
+    <None Include="Web Config Templates\APP - Strato.config">
       <SubType>Designer</SubType>
     </None>
     <None Include="ClassDiagram1.cd" />

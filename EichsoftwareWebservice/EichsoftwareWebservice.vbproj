@@ -14,7 +14,7 @@
     <RootNamespace>EichsoftwareWebservice</RootNamespace>
     <AssemblyName>EichsoftwareWebservice</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <UseIISExpress>false</UseIISExpress>
+    <UseIISExpress>true</UseIISExpress>
     <TargetFrameworkProfile />
     <FileUpgradeFlags>
     </FileUpgradeFlags>
@@ -34,6 +34,7 @@
     <SccProvider>
     </SccProvider>
     <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -302,19 +303,19 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <Content Include="Web %28DEBUG%29.config">
+    <Content Include="Web Config Templates\Web %28DEBUG%29.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Web STRATO.config">
+    <Content Include="Web Config Templates\Web STRATO.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Web%28DEBUG Liveumgebung%29.config">
+    <Content Include="Web Config Templates\Web%28DEBUG Liveumgebung%29.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Web%28DEBUG Liveumgebung%29.Debug.config">
+    <Content Include="Web Config Templates\Web%28DEBUG Liveumgebung%29.Debug.config">
       <DependentUpon>Web%28DEBUG Liveumgebung%29.config</DependentUpon>
     </Content>
-    <Content Include="Web%28DEBUG Liveumgebung%29.Release.config">
+    <Content Include="Web Config Templates\Web%28DEBUG Liveumgebung%29.Release.config">
       <DependentUpon>Web%28DEBUG Liveumgebung%29.config</DependentUpon>
       <SubType>Designer</SubType>
     </Content>
