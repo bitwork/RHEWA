@@ -133,6 +133,7 @@
       <DependentUpon>EntityModelEichsoftwareServer.edmx</DependentUpon>
       <LastGenOutput>EntityModelEichsoftwareServer.vb</LastGenOutput>
     </Content>
+    <Content Include="README\README.txt" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

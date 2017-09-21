@@ -45,6 +45,7 @@
     <PublisherName>RHEWA</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>163</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -1191,7 +1192,9 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.vb</LastGenOutput>
     </None>
-    <None Include="Service References\EichsoftwareWebservice\configuration.svcinfo" />
+    <None Include="Service References\EichsoftwareWebservice\configuration.svcinfo">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\EichsoftwareWebservice\configuration91.svcinfo" />
     <None Include="Service References\EichsoftwareWebservice\EichsoftwareWebservice.disco" />
     <None Include="Resources\Verschiebeweg_PL.PNG" />

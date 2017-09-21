@@ -1,6 +1,8 @@
 ﻿Imports System.ServiceModel.Description
 Imports System.ServiceModel.Channels
 Imports System.ServiceModel.Dispatcher
+'Quelle http://chabster.blogspot.de/2008/02/wcf-cyclic-references-support.html
+'WCF DataContract serializer isn't by default aware of cyclic object graphs. If you encounter the Object graph for type 'X.Y.Z' contains cycles and cannot be serialized if reference tracking is disabled error - read to the end.
 
 Public Class CyclicReferencesAwareContractBehavior
     Implements IContractBehavior
