@@ -3,6 +3,8 @@ Imports Telerik.WinControls.UI
 Public Class ucoEichprozessauswahlliste
 
     Inherits ucoContent
+    Implements IRhewaEditingDialog
+
 #Region "Member Variables"
     Private WithEvents _ParentForm As FrmMainContainer
     Private objWebserviceFunctions As New clsWebserviceFunctions
@@ -69,6 +71,14 @@ Public Class ucoEichprozessauswahlliste
         Me.SuspendLayout()
         Me.Visible = False
         'laden des eingestellten Moants für den nächsten Programmstart
+        LadeDateTimePickerRHEWAListe()
+        LadeRoutine()
+    End Sub
+
+    ''' <summary>
+    '''  laden des eingestellten Moants für den nächsten Programmstart
+    ''' </summary>
+    Private Sub LadeDateTimePickerRHEWAListe()
         Try
             If My.Settings.RHEWAFilterMonatBis.Equals(New Date) Then
                 My.Settings.RHEWAFilterMonatBis = New Date(Now.Year, Now.Month, 1).AddMonths(1).AddDays(-1)
@@ -85,37 +95,38 @@ Public Class ucoEichprozessauswahlliste
         Catch ex As Exception
             RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.Value = Date.Now.Date
         End Try
-
-        LadeRoutine()
-
     End Sub
 
     Private Sub RadButtonRefresh_Click(sender As Object, e As EventArgs) Handles RadButtonRefresh.Click
         LoadFromDatabase()
 
         'speichern des eingestellen Monats für den nächsten Programmstart
+        SpeichereRhewaDatumsfilterEinstellung()
+    End Sub
+    ''' <summary>
+    '''  speichern des eingestellen Monats für den nächsten Programmstart
+    ''' </summary>
+    Private Sub SpeichereRhewaDatumsfilterEinstellung()
         My.Settings.RHEWAFilterMonatVon = RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.Value
         My.Settings.RHEWAFilterMonatBis = RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.Value
 
         My.Settings.Save()
     End Sub
 
-    Friend Sub LadeRoutine()
+    Protected Friend Sub LadeRoutine()
+        SetzeUeberschrift()
+
         If Not ParentFormular Is Nothing Then
             Try
-                'Hilfetext setzen
-                ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_Hauptmenue)
-                'Überschrift setzen
-                ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_Hauptmenue
-
                 'benutzer auswahl einblenden
-                Dim uco As New ucoBenutzerwechsel(Me)
-                uco.objLizenz = AktuellerBenutzer.Instance.Lizenz
-                uco.Dock = DockStyle.Fill
+                Dim uco As New ucoBenutzerwechsel(Me) With {
+                    .objLizenz = AktuellerBenutzer.Instance.Lizenz,
+                    .Dock = DockStyle.Fill
+                }
                 ParentFormular.RadScrollablePanelTrafficLightBreadcrumb.Controls.Add(uco)
                 ParentFormular.objUCOBenutzerwechsel = uco
-
             Catch ex As Exception
+
             End Try
         End If
 
@@ -156,6 +167,19 @@ Public Class ucoEichprozessauswahlliste
             VerbindeMitWebserviceUndHoleAlles()
         Else
             LoadFromDatabase()
+        End If
+    End Sub
+
+    Protected Friend Overrides Sub SetzeUeberschrift() Implements IRhewaEditingDialog.SetzeUeberschrift
+        If Not ParentFormular Is Nothing Then
+            Try
+                'Hilfetext setzen
+                ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_Hauptmenue)
+                'Überschrift setzen
+                ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_Hauptmenue
+
+            Catch ex As Exception
+            End Try
         End If
     End Sub
 
@@ -232,37 +256,33 @@ Public Class ucoEichprozessauswahlliste
         End Try
     End Sub
 
-    Protected Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
-        If Me.Equals(UserControl) Then
-            MyBase.LokalisierungNeeded(UserControl)
-            'übersetzen und formatierung der Tabelle
-            If AktuellerBenutzer.Instance.AktuelleSprache = "de" Then
-                Telerik.WinControls.UI.Localization.RadGridLocalizationProvider.CurrentProvider = New telerikgridlocalizerDE
-            ElseIf AktuellerBenutzer.Instance.AktuelleSprache = "pl" Then
-                Telerik.WinControls.UI.Localization.RadGridLocalizationProvider.CurrentProvider = New telerikgridlocalizerPL
-            Else
-                Telerik.WinControls.UI.Localization.RadGridLocalizationProvider.CurrentProvider = New telerikgridlocalizerEN
-            End If
-            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucoEichprozessauswahlliste))
-            Lokalisierung(Me, resources)
 
-            'Hilfetext setzen
-            ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_Auswahlliste)
-            'Überschrift setzen
-            ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_Hauptmenue
 
-            LoadFromDatabase()
-
-            'LoadFromDatabase()
-
+    Protected Friend Overrides Sub Lokalisiere() Implements IRhewaEditingDialog.Lokalisiere
+        'übersetzen und formatierung der Tabelle
+        If AktuellerBenutzer.Instance.AktuelleSprache = "de" Then
+            Telerik.WinControls.UI.Localization.RadGridLocalizationProvider.CurrentProvider = New telerikgridlocalizerDE
+        ElseIf AktuellerBenutzer.Instance.AktuelleSprache = "pl" Then
+            Telerik.WinControls.UI.Localization.RadGridLocalizationProvider.CurrentProvider = New telerikgridlocalizerPL
+        Else
+            Telerik.WinControls.UI.Localization.RadGridLocalizationProvider.CurrentProvider = New telerikgridlocalizerEN
         End If
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucoEichprozessauswahlliste))
+        Lokalisierung(Me, resources)
+
+        'Hilfetext setzen
+        ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_Auswahlliste)
+        'Überschrift setzen
+        ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_Hauptmenue
+
+        LoadFromDatabase()
     End Sub
 
     ''' <summary>
     ''' Initiert background threads die aus lokaler Client DB und Server Webservice die vorhandenen Eichungen abrufen
     ''' </summary>
     ''' <remarks></remarks>
-    Protected Friend Overrides Sub LoadFromDatabase()
+    Protected Friend Overrides Sub LoadFromDatabase() Implements IRhewaEditingDialog.LoadFromDatabase
         Me.Enabled = False
 
         If Not BackgroundWorkerLoadFromDatabase.IsBusy Then
@@ -275,14 +295,6 @@ Public Class ucoEichprozessauswahlliste
             End If
         End If
     End Sub
-
-    'Private Sub RadDateTimePickerFilterMonatLadeAlleEichprozesse_ValueChanged(sender As System.Object, e As System.EventArgs) Handles RadDateTimePickerFilterMonatLadeAlleEichprozesse.Validating
-    '    LoadFromDatabase()
-    'End Sub
-
-    'Private Sub RadCheckBoxLadeAlleEichprozesse_ToggleStateChanged(sender As System.Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RadCheckBoxLadeAlleEichprozesse.ToggleStateChanged
-    '    LoadFromDatabase()
-    'End Sub
 
     ''' <summary>
     ''' Konfigurationsdialog anzeigen
@@ -326,6 +338,10 @@ Public Class ucoEichprozessauswahlliste
     ''' <author></author>
     ''' <commentauthor></commentauthor>
     Private Sub RadGridView1_SelectionChanged(sender As System.Object, e As System.EventArgs) Handles RadGridViewRHEWAAlle.SelectionChanged
+        TriggerEnabledStateGenehmigungsButtonns()
+    End Sub
+
+    Private Sub TriggerEnabledStateGenehmigungsButtonns()
         Try
             RadButtonEichprozessAblehnenRHEWA.Enabled = False
             RadButtonEichprozessGenehmigenRHEWA.Enabled = False
@@ -602,8 +618,7 @@ Public Class ucoEichprozessauswahlliste
             Catch ex As Exception
             End Try
 
-            'RadGridViewRHEWAAlle.BestFitColumns()
-            'RadGridViewRHEWAAlle.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
+
             RadGridViewRHEWAAlle.BestFitColumns()
             RadGridViewRHEWAAlle.EnableAlternatingRowColor = False
             RadGridViewRHEWAAlle.ShowNoDataText = False
@@ -615,11 +630,13 @@ Public Class ucoEichprozessauswahlliste
                         Where i.Name = "Fehlerhaft"
 
                 If o.Count = 0 Then
-                    Dim objCondition As New Telerik.WinControls.UI.ConditionalFormattingObject("Fehlerhaft", Telerik.WinControls.UI.ConditionTypes.Equal, "Fehlerhaft", "", True)
-                    objCondition.RowBackColor = Color.FromArgb(254, 120, 110)
+                    Dim objCondition As New ConditionalFormattingObject("Fehlerhaft", Telerik.WinControls.UI.ConditionTypes.Equal, "Fehlerhaft", "", True) With {
+                        .RowBackColor = Color.FromArgb(254, 120, 110)
+                    }
 
-                    Dim objCondition2 As New Telerik.WinControls.UI.ConditionalFormattingObject("Genehmigt", Telerik.WinControls.UI.ConditionTypes.Equal, "Genehmigt", "", True)
-                    objCondition2.RowBackColor = Color.FromArgb(201, 255, 132)
+                    Dim objCondition2 As New ConditionalFormattingObject("Genehmigt", Telerik.WinControls.UI.ConditionTypes.Equal, "Genehmigt", "", True) With {
+                        .RowBackColor = Color.FromArgb(201, 255, 132)
+                    }
 
                     RadGridViewRHEWAAlle.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Add(objCondition)
                     RadGridViewRHEWAAlle.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Add(objCondition2)
@@ -708,33 +725,6 @@ Public Class ucoEichprozessauswahlliste
         End Try
     End Sub
 
-    ' ''' <summary>
-    ' ''' Kopiert eichprozess vom Server in ein Client Objekt als Vorlage
-    ' ''' </summary>
-    ' ''' <remarks></remarks>
-    'Private Sub RadButtonEichprozessKopieren_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonEichprozessKopierenRHEWA.Click
-    '    GetLokaleKopieVonEichprozess()
-    'End Sub
-
-    ' ''' <summary>
-    ' ''' Kopiert eichprozess vom Server in ein Client Objekt als Vorlage 1 zu 1
-    ' ''' </summary>
-    ' ''' <remarks></remarks>
-    'Private Sub GetLokaleKopieVonEichprozess()
-    '    If Not Me.VorgangsnummerGridServer.Equals("") Then
-    '        If MessageBox.Show(My.Resources.GlobaleLokalisierung.Frage_Kopieren, My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
-    '            Dim objClientEichprozess = clsWebserviceFunctions.old_GetLokaleKopieVonEichprozess(VorgangsnummerGridServer)
-
-    '            If Not objClientEichprozess Is Nothing Then
-    '                'anzeigen des Dialogs zur Bearbeitung der Eichung
-    '                Dim f As New FrmMainContainer(objClientEichprozess)
-    '                f.ShowDialog()
-    '                'nach dem schließen des Dialogs aktualisieren
-    '                LoadFromDatabase()
-    '            End If
-    '        End If
-    '    End If
-    'End Sub
 
 #Region "Genehmigen / Ablehnen"
     ''' <summary>
@@ -883,13 +873,6 @@ Public Class ucoEichprozessauswahlliste
 
 #End Region
 
-    ''' <summary>
-    ''' Validations the needed.
-    ''' </summary>
-    ''' <returns></returns>
-    Protected Friend Overrides Function ValidationNeeded() As Boolean
-        Return True
-    End Function
 
     Private Sub RadGridView_ViewCellFormatting(sender As Object, e As CellFormattingEventArgs) Handles RadGridViewAuswahlliste.ViewCellFormatting, RadGridViewRHEWAAlle.ViewCellFormatting
         If (TypeOf e.CellElement Is GridHeaderCellElement) Then
@@ -1092,5 +1075,6 @@ Public Class ucoEichprozessauswahlliste
         End If
     End Sub
 #End Region
+
 
 End Class

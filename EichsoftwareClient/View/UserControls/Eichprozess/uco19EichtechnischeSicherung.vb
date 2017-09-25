@@ -1,6 +1,7 @@
 Public Class uco19EichtechnischeSicherung
 
     Inherits ucoContent
+    Implements IRhewaEditingDialog
 #Region "Member Variables"
     Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken
     'Private AktuellerStatusDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann wird der Vorgang auf Komptabilitätsnachweis zurückgesetzt
@@ -25,34 +26,119 @@ Public Class uco19EichtechnischeSicherung
 #End Region
 
 #Region "Events"
-    ''' <summary>
-    ''' Validations the needed.
-    ''' </summary>
-    ''' <returns></returns>
-    Protected Friend Overrides Function ValidationNeeded() As Boolean
-        LoadFromDatabase()
-        Return ValidateControls()
-    End Function
+
     Private Sub ucoBeschaffenheitspruefung_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-        If Not ParentFormular Is Nothing Then
-            Try
-                'Hilfetext setzen
-                ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungEichtechnischeSicherung)
-                'Überschrift setzen
-                ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungEichtechnischeSicherung
-            Catch ex As Exception
-            End Try
-        End If
+        SetzeUeberschrift()
         EichprozessStatusReihenfolge = GlobaleEnumeratoren.enuEichprozessStatus.EichtechnischeSicherungundDatensicherung
 
         'daten füllen
         LoadFromDatabase()
     End Sub
 
+
+
+
+#Region "Checkboxen EVents mit Textboxen"
+
+    Private Sub RadCheckBoxEichsiegel13x13_ToggleStateChanged(sender As Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RadCheckBoxSicherungsmarkeKlein.ToggleStateChanged
+        RadTextBoxControlSicherungsmarkeKlein.ReadOnly = Not RadCheckBoxSicherungsmarkeKlein.Checked
+        PictureBoxSicherungsmarkeKlein.Visible = Not RadCheckBoxSicherungsmarkeKlein.Checked
+
+        If RadCheckBoxSicherungsmarkeKlein.Checked = False Then
+            RadTextBoxControlSicherungsmarkeKlein.Text = ""
+        End If
+    End Sub
+
+    Private Sub RadCheckBoxEichsiegelRund_ToggleStateChanged(sender As Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RadCheckBoxSicherungsmarkeGross.ToggleStateChanged
+        RadTextBoxControlSicherungsmarkeGross.ReadOnly = Not RadCheckBoxSicherungsmarkeGross.Checked
+        PictureBoxSicherungsmarkeGross.Visible = Not RadCheckBoxSicherungsmarkeGross.Checked
+
+        If RadCheckBoxSicherungsmarkeGross.Checked = False Then
+            RadTextBoxControlSicherungsmarkeGross.Text = ""
+        End If
+    End Sub
+
+    Private Sub RadCheckBoxHinweismarke_ToggleStateChanged(sender As Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RadCheckBoxHinweismarke.ToggleStateChanged
+        RadTextBoxControlHinweismarke.ReadOnly = Not RadCheckBoxHinweismarke.Checked
+        PictureBoxHinweismarke.Visible = Not RadCheckBoxHinweismarke.Checked
+
+        If RadCheckBoxHinweismarke.Checked = False Then
+            RadTextBoxControlHinweismarke.Text = ""
+        End If
+    End Sub
+
+    Private Sub RadCheckBoxBenannteStelle_ToggleStateChanged(sender As Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RadCheckBoxBenannteStelle.ToggleStateChanged
+        RadTextBoxControlBenannteStelle.ReadOnly = Not RadCheckBoxBenannteStelle.Checked
+        PictureBoxBenannteStelle.Visible = Not RadCheckBoxBenannteStelle.Checked
+
+        If RadCheckBoxBenannteStelle.Checked = False Then
+            RadTextBoxControlBenannteStelle.Text = ""
+        End If
+    End Sub
+
+#End Region
+
+    Private Sub RadTextBoxControlBenannteStelle_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles RadTextBoxControlHinweismarke.Validating, RadTextBoxControlSicherungsmarkeKlein.Validating, RadTextBoxControlSicherungsmarkeGross.Validating, RadTextBoxControlBenannteStelle.Validating
+        Dim result As Decimal
+        If Not sender.readonly = True Then
+
+            If sender.name.Equals("RadTextBoxControlBenannteStelle") Then
+                If sender.text <> "1" Then
+
+                    CType(sender, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
+                    System.Media.SystemSounds.Exclamation.Play()
+                    e.Cancel = True
+                    MessageBox.Show(My.Resources.GlobaleLokalisierung.EinsEintragen)
+                End If
+            End If
+
+            'damit das Vorgehen nicht so aggresiv ist, wird es bei leerem Text ignoriert:
+            If CType(sender, Telerik.WinControls.UI.RadTextBox).Text.Equals("") Then
+                CType(sender, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.FromArgb(0, 255, 255, 255)
+                Exit Sub
+            End If
+
+            'versuchen ob der Text in eine Zahl konvertiert werden kann
+            If Not Decimal.TryParse(CType(sender, Telerik.WinControls.UI.RadTextBox).Text, result) Then
+                e.Cancel = True
+                CType(sender, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
+                System.Media.SystemSounds.Exclamation.Play()
+
+            Else 'rahmen zurücksetzen
+                CType(sender, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.FromArgb(0, 255, 255, 255)
+            End If
+        End If
+    End Sub
+
+    Private Sub RadCheckBoxAufbewahrungsdauer_ToggleStateChanged(sender As Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RadCheckBoxAufbewahrungsdauer.ToggleStateChanged
+        RadTextBoxControlAufbewahrungsdauer.ReadOnly = Not RadCheckBoxAufbewahrungsdauer.Checked
+        PictureBoxAilbi.Visible = Not RadCheckBoxAufbewahrungsdauer.Checked
+
+        If RadCheckBoxAufbewahrungsdauer.Checked = False Then
+            RadTextBoxControlAufbewahrungsdauer.Text = ""
+        End If
+    End Sub
+
+
+    Private Sub RadTextBoxControlBenannteStelle_TextChanged(sender As System.Object, e As System.EventArgs) Handles RadTextBoxControlHinweismarke.TextChanged, RadTextBoxControlSicherungsmarkeGross.TextChanged, RadTextBoxControlSicherungsmarkeKlein.TextChanged, RadTextBoxControlBemerkungen.TextChanged, RadTextBoxControlAufbewahrungsdauer.TextChanged, RadTextBoxControlBenannteStelle.TextChanged, RadTextBoxControlSicherungsmarkeKlein.TextChanged, RadTextBoxControlSicherungsmarkeGross.TextChanged, RadTextBoxControlBenannteStelle.TextChanged
+        If _suspendEvents = True Then Exit Sub
+        AktuellerStatusDirty = True
+    End Sub
+
+    Private Sub RadCheckBoxBenannteStelle_Click(sender As System.Object, e As System.EventArgs) Handles RadCheckBoxKonfigurationsProgramm.Click, RadCheckBoxHinweismarke.Click, RadCheckBoxSicherungsmarkeGross.Click, RadCheckBoxSicherungsmarkeKlein.Click, RadCheckBoxAufbewahrungsdauer.Click, RadCheckBoxAlibispeicher.Click, RadCheckBoxBenannteStelle.Click, RadCheckBoxSicherungsmarkeKlein.Click, RadCheckBoxSicherungsmarkeGross.Click, RadCheckBoxBenannteStelle.Click
+        If _suspendEvents = True Then Exit Sub
+        AktuellerStatusDirty = True
+    End Sub
+
 #End Region
 
 #Region "Methods"
-    Protected Friend Overrides Sub LoadFromDatabase()
+
+
+#End Region
+
+#Region "Interface Methods"
+    Protected Friend Overrides Sub LoadFromDatabase() Implements IRhewaEditingDialog.LoadFromDatabase
         objEichprozess = ParentFormular.CurrentEichprozess
         'events abbrechen
         _suspendEvents = True
@@ -87,7 +173,7 @@ Public Class uco19EichtechnischeSicherung
     ''' <remarks></remarks>
     ''' <author></author>
     ''' <commentauthor></commentauthor>
-    Private Sub FillControls()
+    Protected Friend Overrides Sub FillControls() Implements IRhewaEditingDialog.FillControls
         'Steuerlemente füllen
         'TODO Falls ein neues Gerät auf den Markt kommt, muss ein neues Bild in die Resourcen geladen werden und hier verknüpft werden, damit das korrekte angezeigt wird
         'pictureboxen anzeigen
@@ -214,16 +300,6 @@ Public Class uco19EichtechnischeSicherung
             RadTextBoxControlBemerkungen.Text = objEichprozess.Eichprotokoll.Sicherung_Bemerkungen
         End If
 
-
-        ''Vergleichsobjekt. Mit diesem wird später geprüft ob Änderungen an den ursprünglichen Werten vorgenommen wurden
-        'objEichmarkenComparer = New EichmarkenComparable
-        'objEichmarkenComparer.SicherungsmarkeKlein = RadCheckBoxSicherungsmarkeKlein.Checked
-        'objEichmarkenComparer.SicherungsmarkeGross = RadCheckBoxSicherungsmarkeGross.Checked
-        'objEichmarkenComparer.Hinweismarke = RadCheckBoxHinweismarke.Checked
-
-        'objEichmarkenComparer.SicherungsmarkeKleinAnzahl = RadTextBoxControlSicherungsmarkeKlein.Text
-        'objEichmarkenComparer.SicherungsmarkeGrossAnzahl = RadTextBoxControlSicherungsmarkeGross.Text
-        'objEichmarkenComparer.HinweismarkeAnzahl = RadTextBoxControlHinweismarke.Text
     End Sub
 
     ''' <summary>
@@ -232,7 +308,7 @@ Public Class uco19EichtechnischeSicherung
     ''' <remarks></remarks>
     ''' <author></author>
     ''' <commentauthor></commentauthor>
-    Private Sub UpdateObject()
+    Protected Friend Overrides Sub UpdateObjekt() Implements IRhewaEditingDialog.UpdateObjekt
         'checkboxen
         objEichprozess.Eichprotokoll.Sicherung_BenannteStelle = RadCheckBoxBenannteStelle.Checked
         objEichprozess.Eichprotokoll.Sicherung_SicherungsmarkeKlein = RadCheckBoxSicherungsmarkeKlein.Checked
@@ -296,7 +372,7 @@ Public Class uco19EichtechnischeSicherung
     ''' <remarks></remarks>
     ''' <author></author>
     ''' <commentauthor></commentauthor>
-    Protected Friend Overrides Function ValidateControls() As Boolean
+    Protected Friend Overrides Function ValidateControls() As Boolean Implements IRhewaEditingDialog.ValidateControls
         'prüfen ob alle Felder ausgefüllt sind
         Me.AbortSaving = False
 
@@ -345,222 +421,96 @@ Public Class uco19EichtechnischeSicherung
 
     End Function
 
-#End Region
+    Protected Friend Overrides Sub SaveObjekt() Implements IRhewaEditingDialog.SaveObjekt
+        'neuen Context aufbauen
+        Using Context As New Entities
+            'prüfen ob CREATE oder UPDATE durchgeführt werden muss
+            If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
+                'prüfen ob das Objekt anhand der ID gefunden werden kann
+                Dim dobjEichprozess As Eichprozess = (From a In Context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
+                If Not dobjEichprozess Is Nothing Then
+                    'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
+                    objEichprozess = dobjEichprozess
+                    'neuen Status zuweisen
 
-#Region "Overrides"
-    'Speicherroutine
-    Protected Overrides Sub SaveNeeded(ByVal UserControl As UserControl)
-        If Me.Equals(UserControl) Then
-            If DialogModus = enuDialogModus.lesend Then
-                If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.Export Then
-                    objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Export
+                    'Füllt das Objekt mit den Werten aus den Steuerlementen
+                    UpdateObjekt()
+                    'Speichern in Datenbank
+                    Context.SaveChanges()
                 End If
-                ParentFormular.CurrentEichprozess = objEichprozess
-                Exit Sub
             End If
-            If DialogModus = enuDialogModus.korrigierend Then
-                UpdateObject()
-                If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.Export Then
-                    objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Export
-                End If
-                ParentFormular.CurrentEichprozess = objEichprozess
-                Exit Sub
-            End If
+        End Using
+    End Sub
 
-            If ValidateControls() = True Then
+    Protected Friend Overrides Sub AktualisiereStatus() Implements IRhewaEditingDialog.AktualisiereStatus
+        'neuen Context aufbauen
+        Using Context As New Entities
+            'prüfen ob CREATE oder UPDATE durchgeführt werden muss
+            If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
+                'prüfen ob das Objekt anhand der ID gefunden werden kann
+                Dim dobjEichprozess As Eichprozess = (From a In Context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
+                If Not dobjEichprozess Is Nothing Then
+                    'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
+                    objEichprozess = dobjEichprozess
+                    'neuen Status zuweisen
 
-                'neuen Context aufbauen
-                Using Context As New Entities
-                    'prüfen ob CREATE oder UPDATE durchgeführt werden muss
-                    If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
-                        'prüfen ob das Objekt anhand der ID gefunden werden kann
-                        Dim dobjEichprozess As Eichprozess = (From a In Context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
-                        If Not dobjEichprozess Is Nothing Then
-                            'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
-                            objEichprozess = dobjEichprozess
-                            'neuen Status zuweisen
-
-                            If AktuellerStatusDirty = False Then
-                                ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
-                                If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.Export Then
-                                    objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Export
-                                End If
-                            ElseIf AktuellerStatusDirty = True Then
-                                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Export
-                                AktuellerStatusDirty = False
-                            End If
-
-                            'Füllt das Objekt mit den Werten aus den Steuerlementen
-                            UpdateObject()
-                            'Speichern in Datenbank
-                            Context.SaveChanges()
+                    If AktuellerStatusDirty = False Then
+                        ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
+                        If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.Export Then
+                            objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Export
                         End If
+                    ElseIf AktuellerStatusDirty = True Then
+                        objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Export
+                        AktuellerStatusDirty = False
                     End If
-                End Using
 
-                ParentFormular.CurrentEichprozess = objEichprozess
-            End If
-
-        End If
-    End Sub
-
-    Protected Overrides Sub SaveWithoutValidationNeeded(usercontrol As UserControl)
-        MyBase.SaveWithoutValidationNeeded(usercontrol)
-
-        If Me.Equals(usercontrol) Then
-            If DialogModus = enuDialogModus.lesend Then
-                UpdateObject()
-                ParentFormular.CurrentEichprozess = objEichprozess
-                Exit Sub
-            End If
-            'neuen Context aufbauen
-            Using Context As New Entities
-                'prüfen ob CREATE oder UPDATE durchgeführt werden muss
-                If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
-                    'prüfen ob das Objekt anhand der ID gefunden werden kann
-                    Dim dobjEichprozess As Eichprozess = (From a In Context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
-                    If Not dobjEichprozess Is Nothing Then
-                        'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
-                        objEichprozess = dobjEichprozess
-                        'neuen Status zuweisen
-
-                        'Füllt das Objekt mit den Werten aus den Steuerlementen
-                        UpdateObject()
-                        'Speichern in Datenbank
-                        Context.SaveChanges()
-                    End If
+                    'Speichern in Datenbank
+                    Context.SaveChanges()
                 End If
-            End Using
+            End If
+        End Using
+    End Sub
 
+    Protected Friend Overrides Function CheckDialogModus() As Boolean Implements IRhewaEditingDialog.CheckDialogModus
+        If DialogModus = enuDialogModus.lesend Then
+            If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.Export Then
+                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Export
+            End If
             ParentFormular.CurrentEichprozess = objEichprozess
+            Return False
         End If
-    End Sub
-
-    ''' <summary>
-    ''' aktualisieren der Oberfläche wenn nötig
-    ''' </summary>
-    ''' <param name="UserControl"></param>
-    ''' <remarks></remarks>
-    Protected Overrides Sub UpdateNeeded(UserControl As UserControl)
-        If Me.Equals(UserControl) Then
-            MyBase.UpdateNeeded(UserControl)
-            Me.LokalisierungNeeded(UserControl)
-
-
-            LoadFromDatabase()
+        If DialogModus = enuDialogModus.korrigierend Then
+            UpdateObjekt()
+            If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.Export Then
+                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Export
+            End If
+            ParentFormular.CurrentEichprozess = objEichprozess
+            Return False
         End If
-    End Sub
+        Return True
+    End Function
 
-#End Region
-
-    Protected Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
-        If Me.Name.Equals(UserControl.Name) = False Then Exit Sub
-
-        MyBase.LokalisierungNeeded(UserControl)
-
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco19EichtechnischeSicherung))
-        Lokalisierung(Me, resources)
-
-
+    Protected Friend Overrides Sub SetzeUeberschrift() Implements IRhewaEditingDialog.SetzeUeberschrift
         If Not ParentFormular Is Nothing Then
             Try
                 'Hilfetext setzen
-
                 ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungEichtechnischeSicherung)
                 'Überschrift setzen
-
                 ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungEichtechnischeSicherung
             Catch ex As Exception
             End Try
         End If
-
     End Sub
 
-#Region "Checkboxen EVents mit Textboxen"
-
-    Private Sub RadCheckBoxEichsiegel13x13_ToggleStateChanged(sender As Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RadCheckBoxSicherungsmarkeKlein.ToggleStateChanged
-        RadTextBoxControlSicherungsmarkeKlein.ReadOnly = Not RadCheckBoxSicherungsmarkeKlein.Checked
-        PictureBoxSicherungsmarkeKlein.Visible = Not RadCheckBoxSicherungsmarkeKlein.Checked
-
-        If RadCheckBoxSicherungsmarkeKlein.Checked = False Then
-            RadTextBoxControlSicherungsmarkeKlein.Text = ""
-        End If
+    Protected Friend Overrides Sub Lokalisiere() Implements IRhewaEditingDialog.Lokalisiere
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco19EichtechnischeSicherung))
+        Lokalisierung(Me, resources)
     End Sub
-
-    Private Sub RadCheckBoxEichsiegelRund_ToggleStateChanged(sender As Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RadCheckBoxSicherungsmarkeGross.ToggleStateChanged
-        RadTextBoxControlSicherungsmarkeGross.ReadOnly = Not RadCheckBoxSicherungsmarkeGross.Checked
-        PictureBoxSicherungsmarkeGross.Visible = Not RadCheckBoxSicherungsmarkeGross.Checked
-
-        If RadCheckBoxSicherungsmarkeGross.Checked = False Then
-            RadTextBoxControlSicherungsmarkeGross.Text = ""
-        End If
-    End Sub
-
-    Private Sub RadCheckBoxHinweismarke_ToggleStateChanged(sender As Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RadCheckBoxHinweismarke.ToggleStateChanged
-        RadTextBoxControlHinweismarke.ReadOnly = Not RadCheckBoxHinweismarke.Checked
-        PictureBoxHinweismarke.Visible = Not RadCheckBoxHinweismarke.Checked
-
-        If RadCheckBoxHinweismarke.Checked = False Then
-            RadTextBoxControlHinweismarke.Text = ""
-        End If
-    End Sub
-
-    Private Sub RadCheckBoxBenannteStelle_ToggleStateChanged(sender As Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RadCheckBoxBenannteStelle.ToggleStateChanged
-        RadTextBoxControlBenannteStelle.ReadOnly = Not RadCheckBoxBenannteStelle.Checked
-        PictureBoxBenannteStelle.Visible = Not RadCheckBoxBenannteStelle.Checked
-
-        If RadCheckBoxBenannteStelle.Checked = False Then
-            RadTextBoxControlBenannteStelle.Text = ""
-        End If
-    End Sub
-
 #End Region
 
-    Private Sub RadTextBoxControlBenannteStelle_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles RadTextBoxControlHinweismarke.Validating, RadTextBoxControlSicherungsmarkeKlein.Validating, RadTextBoxControlSicherungsmarkeGross.Validating, RadTextBoxControlBenannteStelle.Validating
-        Dim result As Decimal
-        If Not sender.readonly = True Then
 
-            If sender.name.Equals("RadTextBoxControlBenannteStelle") Then
-                If sender.text <> "1" Then
 
-                    CType(sender, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
-                    System.Media.SystemSounds.Exclamation.Play()
-                    e.Cancel = True
-                    MessageBox.Show(My.Resources.GlobaleLokalisierung.EinsEintragen)
-                End If
-            End If
-
-            'damit das Vorgehen nicht so aggresiv ist, wird es bei leerem Text ignoriert:
-            If CType(sender, Telerik.WinControls.UI.RadTextBox).Text.Equals("") Then
-                CType(sender, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.FromArgb(0, 255, 255, 255)
-                Exit Sub
-            End If
-
-            'versuchen ob der Text in eine Zahl konvertiert werden kann
-            If Not Decimal.TryParse(CType(sender, Telerik.WinControls.UI.RadTextBox).Text, result) Then
-                e.Cancel = True
-                CType(sender, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
-                System.Media.SystemSounds.Exclamation.Play()
-
-            Else 'rahmen zurücksetzen
-                CType(sender, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.FromArgb(0, 255, 255, 255)
-            End If
-        End If
-    End Sub
-
-    Private Sub RadCheckBoxAufbewahrungsdauer_ToggleStateChanged(sender As Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RadCheckBoxAufbewahrungsdauer.ToggleStateChanged
-        RadTextBoxControlAufbewahrungsdauer.ReadOnly = Not RadCheckBoxAufbewahrungsdauer.Checked
-        PictureBoxAilbi.Visible = Not RadCheckBoxAufbewahrungsdauer.Checked
-
-        If RadCheckBoxAufbewahrungsdauer.Checked = False Then
-            RadTextBoxControlAufbewahrungsdauer.Text = ""
-        End If
-    End Sub
-
-    'Entsperrroutine
-    Protected Overrides Sub EntsperrungNeeded()
-        MyBase.EntsperrungNeeded()
-
+    Protected Friend Overrides Sub Entsperrung() Implements IRhewaEditingDialog.Entsperrung
         'Hiermit wird ein lesender Vorgang wieder entsperrt.
         EnableControls(Me.RadScrollablePanel1.PanelContainer)
 
@@ -569,23 +519,10 @@ Public Class uco19EichtechnischeSicherung
         ParentFormular.DialogModus = FrmMainContainer.enuDialogModus.korrigierend
     End Sub
 
-    Protected Overrides Sub VersendenNeeded(TargetUserControl As UserControl)
-
-        If Me.Equals(TargetUserControl) Then
-            MyBase.VersendenNeeded(TargetUserControl)
-            UpdateObject()
-            'Erzeugen eines Server Objektes auf basis des aktuellen DS. Setzt es auf es ausserdem auf Fehlerhaft
-            CloneAndSendServerObjekt()
-        End If
+    Protected Friend Overrides Sub Versenden() Implements IRhewaEditingDialog.Versenden
+        UpdateObjekt()
+        'Erzeugen eines Server Objektes auf basis des aktuellen DS. Setzt es auf es ausserdem auf Fehlerhaft
+        CloneAndSendServerObjekt()
     End Sub
 
-    Private Sub RadTextBoxControlBenannteStelle_TextChanged(sender As System.Object, e As System.EventArgs) Handles RadTextBoxControlHinweismarke.TextChanged, RadTextBoxControlSicherungsmarkeGross.TextChanged, RadTextBoxControlSicherungsmarkeKlein.TextChanged, RadTextBoxControlBemerkungen.TextChanged, RadTextBoxControlAufbewahrungsdauer.TextChanged, RadTextBoxControlBenannteStelle.TextChanged, RadTextBoxControlSicherungsmarkeKlein.TextChanged, RadTextBoxControlSicherungsmarkeGross.TextChanged, RadTextBoxControlBenannteStelle.TextChanged
-        If _suspendEvents = True Then Exit Sub
-        AktuellerStatusDirty = True
-    End Sub
-
-    Private Sub RadCheckBoxBenannteStelle_Click(sender As System.Object, e As System.EventArgs) Handles RadCheckBoxKonfigurationsProgramm.Click, RadCheckBoxHinweismarke.Click, RadCheckBoxSicherungsmarkeGross.Click, RadCheckBoxSicherungsmarkeKlein.Click, RadCheckBoxAufbewahrungsdauer.Click, RadCheckBoxAlibispeicher.Click, RadCheckBoxBenannteStelle.Click, RadCheckBoxSicherungsmarkeKlein.Click, RadCheckBoxSicherungsmarkeGross.Click, RadCheckBoxBenannteStelle.Click
-        If _suspendEvents = True Then Exit Sub
-        AktuellerStatusDirty = True
-    End Sub
 End Class

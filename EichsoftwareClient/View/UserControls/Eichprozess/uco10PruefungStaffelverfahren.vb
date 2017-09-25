@@ -4,6 +4,7 @@ Imports System
 Public Class uco10PruefungStaffelverfahren
 
     Inherits ucoContent
+    Implements IRhewaEditingDialog
 
 #Region "Member Variables"
     Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken
@@ -35,25 +36,12 @@ Public Class uco10PruefungStaffelverfahren
 
 #End Region
 
+
+
 #Region "Events"
-    ''' <summary>
-    ''' Validations the needed.
-    ''' </summary>
-    ''' <returns></returns>
-    Protected Friend Overrides Function ValidationNeeded() As Boolean
-        LoadFromDatabase()
-        Return ValidateControls()
-    End Function
+
     Private Sub ucoBeschaffenheitspruefung_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-        If Not ParentFormular Is Nothing Then
-            Try
-                'Hilfetext setzen
-                ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungStaffelverfahren)
-                'Überschrift setzen
-                ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungStaffelverfahren
-            Catch ex As Exception
-            End Try
-        End If
+        SetzeUeberschrift()
         EichprozessStatusReihenfolge = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitErsatzlast
 
         'daten füllen
@@ -131,86 +119,68 @@ Public Class uco10PruefungStaffelverfahren
         End Try
     End Sub
 
+
+    ''' <summary>
+    ''' Event welches bei allen Textboxen triggerd und die Berechnungsroutinen anstößt
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub RadTextBoxControlEingaben_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlStaffel5Bereich1Last4.Leave, RadTextBoxControlStaffel5Bereich1Last3.Leave, RadTextBoxControlStaffel5Bereich1Last2.Leave, RadTextBoxControlStaffel5Bereich1Last1.Leave, RadTextBoxControlStaffel5Bereich1Anzeige1.Leave, RadTextBoxControlStaffel4Bereich1Last4.Leave, RadTextBoxControlStaffel4Bereich1Last3.Leave, RadTextBoxControlStaffel4Bereich1Last2.Leave, RadTextBoxControlStaffel4Bereich1Last1.Leave, RadTextBoxControlStaffel4Bereich1Anzeige1.Leave, RadTextBoxControlStaffel3Bereich1Last2.Leave, RadTextBoxControlStaffel3Bereich1Last1.Leave, RadTextBoxControlStaffel3Bereich1Anzeige1.Leave, RadTextBoxControlStaffel2Bereich1Last2.Leave, RadTextBoxControlStaffel2Bereich1Last1.Leave, RadTextBoxControlStaffel2Bereich1Anzeige1.Leave, RadTextBoxControlStaffel1Bereich1Last4.Leave, RadTextBoxControlStaffel1Bereich1Last3.Leave, RadTextBoxControlStaffel1Bereich1Last2.Leave, RadTextBoxControlStaffel1Bereich1Last1.Leave, RadTextBoxControlStaffel1Bereich1Anzeige4.Leave, RadTextBoxControlStaffel1Bereich1Anzeige3.Leave, RadTextBoxControlStaffel1Bereich1Anzeige2.Leave, RadTextBoxControlStaffel1Bereich1Anzeige1.Leave,
+    RadTextBoxControlStaffel5Bereich2Last4.Leave, RadTextBoxControlStaffel5Bereich2Last3.Leave, RadTextBoxControlStaffel5Bereich2Last2.Leave, RadTextBoxControlStaffel5Bereich2Last1.Leave, RadTextBoxControlStaffel5Bereich2Anzeige1.Leave, RadTextBoxControlStaffel4Bereich2Last4.Leave, RadTextBoxControlStaffel4Bereich2Last3.Leave, RadTextBoxControlStaffel4Bereich2Last2.Leave, RadTextBoxControlStaffel4Bereich2Last1.Leave, RadTextBoxControlStaffel4Bereich2Anzeige1.Leave, RadTextBoxControlStaffel3Bereich2Last2.Leave, RadTextBoxControlStaffel3Bereich2Last1.Leave, RadTextBoxControlStaffel3Bereich2Anzeige1.Leave, RadTextBoxControlStaffel2Bereich2Last2.Leave, RadTextBoxControlStaffel2Bereich2Last1.Leave, RadTextBoxControlStaffel2Bereich2Anzeige1.Leave, RadTextBoxControlStaffel1Bereich2Last4.Leave, RadTextBoxControlStaffel1Bereich2Last3.Leave, RadTextBoxControlStaffel1Bereich2Last1.Leave, RadTextBoxControlStaffel1Bereich2Anzeige4.Leave, RadTextBoxControlStaffel1Bereich2Anzeige3.Leave, RadTextBoxControlStaffel1Bereich2Anzeige1.Leave,
+    RadTextBoxControlStaffel5Bereich3Last4.Leave, RadTextBoxControlStaffel5Bereich3Last3.Leave, RadTextBoxControlStaffel5Bereich3Last2.Leave, RadTextBoxControlStaffel5Bereich3Last1.Leave, RadTextBoxControlStaffel5Bereich3Anzeige1.Leave, RadTextBoxControlStaffel4Bereich3Last4.Leave, RadTextBoxControlStaffel4Bereich3Last3.Leave, RadTextBoxControlStaffel4Bereich3Last2.Leave, RadTextBoxControlStaffel4Bereich3Last1.Leave, RadTextBoxControlStaffel4Bereich3Anzeige1.Leave, RadTextBoxControlStaffel3Bereich3Last2.Leave, RadTextBoxControlStaffel3Bereich3Last1.Leave, RadTextBoxControlStaffel3Bereich3Anzeige1.Leave, RadTextBoxControlStaffel2Bereich3Last2.Leave, RadTextBoxControlStaffel2Bereich3Last1.Leave, RadTextBoxControlStaffel2Bereich3Anzeige1.Leave, RadTextBoxControlStaffel1Bereich3Last4.Leave, RadTextBoxControlStaffel1Bereich3Last3.Leave, RadTextBoxControlStaffel1Bereich3Last1.Leave, RadTextBoxControlStaffel1Bereich3Anzeige4.Leave, RadTextBoxControlStaffel1Bereich3Anzeige3.Leave, RadTextBoxControlStaffel1Bereich3Anzeige1.Leave,
+    RadTextBoxControlStaffel5Bereich3Anzeige4.Leave, RadTextBoxControlStaffel5Bereich3Anzeige3.Leave, RadTextBoxControlStaffel5Bereich2Anzeige4.Leave, RadTextBoxControlStaffel5Bereich2Anzeige3.Leave, RadTextBoxControlStaffel5Bereich1Anzeige4.Leave, RadTextBoxControlStaffel5Bereich1Anzeige3.Leave, RadTextBoxControlStaffel4Bereich3Anzeige4.Leave, RadTextBoxControlStaffel4Bereich3Anzeige3.Leave, RadTextBoxControlStaffel4Bereich2Anzeige4.Leave, RadTextBoxControlStaffel4Bereich2Anzeige3.Leave, RadTextBoxControlStaffel4Bereich1Anzeige4.Leave, RadTextBoxControlStaffel4Bereich1Anzeige3.Leave, RadTextBoxControlStaffel3Bereich3Anzeige4.Leave, RadTextBoxControlStaffel3Bereich3Anzeige3.Leave, RadTextBoxControlStaffel3Bereich2Anzeige4.Leave, RadTextBoxControlStaffel3Bereich2Anzeige3.Leave, RadTextBoxControlStaffel3Bereich1Anzeige4.Leave, RadTextBoxControlStaffel3Bereich1Anzeige3.Leave, RadTextBoxControlStaffel2Bereich3Anzeige4.Leave, RadTextBoxControlStaffel2Bereich3Anzeige3.Leave, RadTextBoxControlStaffel2Bereich2Anzeige4.Leave, RadTextBoxControlStaffel2Bereich2Anzeige3.Leave, RadTextBoxControlStaffel2Bereich1Anzeige4.Leave, RadTextBoxControlStaffel2Bereich1Anzeige3.Leave
+
+        If _suspendEvents = True Then Exit Sub
+        'If TimerRunning Then Exit Sub Else StartTimer()
+        _suspendEvents = True
+
+        AktuellerStatusDirty = True
+
+        Dim staffel As String = GetStaffel(sender)
+        Dim bereich As String = GetBereich(sender)
+        BerechneStaffelBereich(staffel, bereich)
+        BerechneMessabweichung(bereich)
+        _suspendEvents = False
+    End Sub
+
+
+
+#Region "Hilfetexte"
+    Private Sub RadTextBoxControlStaffel1Bereich1Last1_MouseEnter(sender As Object, e As EventArgs) Handles RadTextBoxControlStaffel1Bereich3Last4.MouseEnter, RadTextBoxControlStaffel1Bereich3Last3.MouseEnter, RadTextBoxControlStaffel1Bereich3Last1.MouseEnter, RadTextBoxControlStaffel1Bereich2Last4.MouseEnter, RadTextBoxControlStaffel1Bereich2Last3.MouseEnter, RadTextBoxControlStaffel1Bereich2Last1.MouseEnter, RadTextBoxControlStaffel1Bereich1Last4.MouseEnter, RadTextBoxControlStaffel1Bereich1Last3.MouseEnter, RadTextBoxControlStaffel1Bereich1Last1.MouseEnter
+        ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungStaffelverfahrenNormallast)
+    End Sub
+
+    Private Sub RadGroupBoxStaffel1Bereich1_MouseEnter(sender As Object, e As EventArgs) Handles RadGroupBoxStaffel5Bereich3.MouseEnter, RadGroupBoxStaffel5Bereich2.MouseEnter, RadGroupBoxStaffel5Bereich1.MouseEnter, RadGroupBoxStaffel3Bereich3.MouseEnter, RadGroupBoxStaffel3Bereich2.MouseEnter, RadGroupBoxStaffel3Bereich1.MouseEnter, RadGroupBoxStaffel2Bereich3.MouseEnter, RadGroupBoxStaffel2Bereich2.MouseEnter, RadGroupBoxStaffel2Bereich1.MouseEnter, RadGroupBoxStaffel1Bereich3.MouseEnter, RadGroupBoxStaffel1Bereich2.MouseEnter, RadGroupBoxStaffel1Bereich1.MouseEnter
+        'zurücksetzen der Hilfetexte
+        ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungStaffelverfahren)
+    End Sub
+
+    Private Sub RadTextBoxControlStaffel2Bereich1Last1_MouseEnter(sender As Object, e As EventArgs) Handles RadTextBoxControlStaffel5Bereich3Last1.MouseEnter, RadTextBoxControlStaffel5Bereich2Last1.MouseEnter, RadTextBoxControlStaffel5Bereich1Last1.MouseEnter, RadTextBoxControlStaffel4Bereich3Last1.MouseEnter, RadTextBoxControlStaffel4Bereich2Last1.MouseEnter, RadTextBoxControlStaffel4Bereich1Last1.MouseEnter, RadTextBoxControlStaffel3Bereich3Last1.MouseEnter, RadTextBoxControlStaffel3Bereich2Last1.MouseEnter, RadTextBoxControlStaffel3Bereich1Last1.MouseEnter, RadTextBoxControlStaffel2Bereich3Last1.MouseEnter, RadTextBoxControlStaffel2Bereich2Last1.MouseEnter, RadTextBoxControlStaffel2Bereich1Last1.MouseEnter
+        ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungStaffelverfahrenErsatzlastSoll)
+    End Sub
+
+    Private Sub RadTextBoxControlStaffel2Bereich1Anzeige1_MouseEnter(sender As Object, e As EventArgs) Handles RadTextBoxControlStaffel5Bereich3Anzeige1.MouseEnter, RadTextBoxControlStaffel5Bereich2Anzeige1.MouseEnter, RadTextBoxControlStaffel5Bereich1Anzeige1.MouseEnter, RadTextBoxControlStaffel4Bereich3Anzeige1.MouseEnter, RadTextBoxControlStaffel4Bereich2Anzeige1.MouseEnter, RadTextBoxControlStaffel4Bereich1Anzeige1.MouseEnter, RadTextBoxControlStaffel3Bereich3Anzeige1.MouseEnter, RadTextBoxControlStaffel3Bereich2Anzeige1.MouseEnter, RadTextBoxControlStaffel3Bereich1Anzeige1.MouseEnter, RadTextBoxControlStaffel2Bereich3Anzeige1.MouseEnter, RadTextBoxControlStaffel2Bereich2Anzeige1.MouseEnter, RadTextBoxControlStaffel2Bereich1Anzeige1.MouseEnter
+        ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungStaffelverfahrenErsatzlastIst)
+    End Sub
+
+    Private Sub RadTextBoxControlStaffel2Bereich1Last2_MouseEnter(sender As Object, e As EventArgs) Handles RadTextBoxControlStaffel5Bereich3Last2.MouseEnter, RadTextBoxControlStaffel5Bereich2Last2.MouseEnter, RadTextBoxControlStaffel5Bereich1Last2.MouseEnter, RadTextBoxControlStaffel4Bereich3Last2.MouseEnter, RadTextBoxControlStaffel4Bereich2Last2.MouseEnter, RadTextBoxControlStaffel4Bereich1Last2.MouseEnter, RadTextBoxControlStaffel3Bereich3Last2.MouseEnter, RadTextBoxControlStaffel3Bereich2Last2.MouseEnter, RadTextBoxControlStaffel3Bereich1Last2.MouseEnter, RadTextBoxControlStaffel2Bereich3Last2.MouseEnter, RadTextBoxControlStaffel2Bereich2Last2.MouseEnter, RadTextBoxControlStaffel2Bereich1Last2.MouseEnter
+        ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungStaffelverfahrenErsatzlastNormallast)
+    End Sub
+
+    Private Sub RadTextBoxControlStaffel5Bereich3Anzeige3_MouseEnter(sender As Object, e As EventArgs) Handles RadTextBoxControlStaffel5Bereich3Anzeige3.MouseEnter, RadTextBoxControlStaffel5Bereich2Anzeige3.MouseEnter, RadTextBoxControlStaffel5Bereich1Anzeige3.MouseEnter, RadTextBoxControlStaffel4Bereich3Anzeige3.MouseEnter, RadTextBoxControlStaffel4Bereich2Anzeige3.MouseEnter, RadTextBoxControlStaffel4Bereich1Anzeige3.MouseEnter, RadTextBoxControlStaffel3Bereich3Anzeige3.MouseEnter, RadTextBoxControlStaffel3Bereich2Anzeige3.MouseEnter, RadTextBoxControlStaffel3Bereich1Anzeige3.MouseEnter, RadTextBoxControlStaffel2Bereich3Anzeige3.MouseEnter, RadTextBoxControlStaffel2Bereich2Anzeige3.MouseEnter, RadTextBoxControlStaffel2Bereich1Anzeige3.MouseEnter
+        ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungStaffelverfahrenErsatzlastErsatzPlusNormallast)
+    End Sub
+
+    Private Sub RadTextBoxControlStaffel2Bereich1Anzeige4_MouseEnter(sender As Object, e As EventArgs) Handles RadTextBoxControlStaffel5Bereich3Anzeige4.MouseEnter, RadTextBoxControlStaffel5Bereich2Anzeige4.MouseEnter, RadTextBoxControlStaffel5Bereich1Anzeige4.MouseEnter, RadTextBoxControlStaffel4Bereich3Anzeige4.MouseEnter, RadTextBoxControlStaffel4Bereich2Anzeige4.MouseEnter, RadTextBoxControlStaffel4Bereich1Anzeige4.MouseEnter, RadTextBoxControlStaffel3Bereich3Anzeige4.MouseEnter, RadTextBoxControlStaffel3Bereich2Anzeige4.MouseEnter, RadTextBoxControlStaffel3Bereich1Anzeige4.MouseEnter, RadTextBoxControlStaffel2Bereich3Anzeige4.MouseEnter, RadTextBoxControlStaffel2Bereich2Anzeige4.MouseEnter, RadTextBoxControlStaffel2Bereich1Anzeige4.MouseEnter
+        ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungStaffelverfahrenErsatzlastErsatzlast2)
+    End Sub
+
+#End Region
 #End Region
 
 #Region "Methods"
-    Protected Friend Overrides Sub LoadFromDatabase()
-        SuspendLayout()
-        objEichprozess = ParentFormular.CurrentEichprozess
-        'events abbrechen
-        _suspendEvents = True
-        'Nur laden wenn es sich um eine Bearbeitung handelt (sonst würde das in Memory Objekt überschrieben werden)
-        If Not DialogModus = enuDialogModus.lesend And Not DialogModus = enuDialogModus.korrigierend Then
-            Using context As New Entities
-                'neu laden des Objekts, diesmal mit den lookup Objekten
-                objEichprozess = (From a In context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
 
-                'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
-                Dim query = From a In context.PruefungStaffelverfahrenNormallast Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
-                _ListPruefungStaffelverfahrenNormallast = query.ToList
-
-                'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
-                Dim query2 = From a In context.PruefungStaffelverfahrenErsatzlast Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
-                _ListPruefungStaffelverfahrenErsatzlast = query2.ToList
-
-            End Using
-
-        Else
-            _ListPruefungStaffelverfahrenNormallast.Clear()
-            _ListPruefungStaffelverfahrenErsatzlast.Clear()
-            Try
-                For Each obj In objEichprozess.Eichprotokoll.PruefungStaffelverfahrenNormallast
-                    obj.Eichprotokoll = objEichprozess.Eichprotokoll
-
-                    _ListPruefungStaffelverfahrenNormallast.Add(obj)
-                Next
-                For Each obj In objEichprozess.Eichprotokoll.PruefungStaffelverfahrenErsatzlast
-                    obj.Eichprotokoll = objEichprozess.Eichprotokoll
-
-                    _ListPruefungStaffelverfahrenErsatzlast.Add(obj)
-                Next
-            Catch ex As System.ObjectDisposedException 'fehler im Clientseitigen Lesemodus (bei bereits abegschickter Eichung)
-                Using context As New Entities
-                    'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
-
-                    Dim query = From a In context.PruefungStaffelverfahrenNormallast Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
-                    _ListPruefungStaffelverfahrenNormallast = query.ToList
-
-                    'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
-                    Dim query2 = From a In context.PruefungStaffelverfahrenErsatzlast Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
-                    _ListPruefungStaffelverfahrenErsatzlast = query2.ToList
-                End Using
-            End Try
-
-        End If
-
-        'steuerelemente mit werten aus DB füllen
-        FillControls()
-
-        If DialogModus = enuDialogModus.lesend Then
-            DisableControls(RadGroupBoxStaffel1Bereich1)
-            DisableControls(RadGroupBoxStaffel1Bereich2)
-            DisableControls(RadGroupBoxStaffel1Bereich3)
-
-            DisableControls(RadGroupBoxStaffel2Bereich1)
-            DisableControls(RadGroupBoxStaffel2Bereich2)
-            DisableControls(RadGroupBoxStaffel2Bereich3)
-            DisableControls(RadGroupBoxStaffel3Bereich1)
-            DisableControls(RadGroupBoxStaffel3Bereich2)
-            DisableControls(RadGroupBoxStaffel3Bereich3)
-            DisableControls(RadGroupBoxStaffel4Bereich1)
-            DisableControls(RadGroupBoxStaffel4Bereich2)
-            DisableControls(RadGroupBoxStaffel4Bereich3)
-            DisableControls(RadGroupBoxStaffel5Bereich1)
-            DisableControls(RadGroupBoxStaffel5Bereich2)
-            DisableControls(RadGroupBoxStaffel5Bereich3)
-
-        End If
-
-        'events abbrechen
-        _suspendEvents = False
-        ResumeLayout()
-    End Sub
 
     ''' <summary>
     ''' Entsprechend der Vorgaben die Anzahl der Nullstellen für alle erforderlichen Steuerelemente setzen
@@ -285,25 +255,7 @@ Public Class uco10PruefungStaffelverfahren
         End If
     End Sub
 
-    ''' <summary>
-    ''' Lädt die Werte aus dem Objekt in die Steuerlemente
-    ''' </summary>
-    ''' <remarks></remarks>
-    ''' <author></author>
-    ''' <commentauthor></commentauthor>
-    Private Sub FillControls()
-        HoleNullstellen()
-        SetzeNullstellen()
 
-        'je nach Art der Waage andere Bereichsgruppen ausblenden
-        VersteckeBereiche()
-
-        'füllen der berechnenten Steuerelemente
-        LadeStaffeln()
-
-        'fokus setzen auf erstes Steuerelement
-        RadTextBoxControlStaffel1Bereich1Anzeige1.Focus()
-    End Sub
 
     ''' <summary>
     ''' Methode welche Steuerelemente mit Werten aus übergebener Staffel und Bereich füllt. Lädt die Daten wenn vorhanden aus DB ansonsten werden Standardformeln verwendet
@@ -498,46 +450,6 @@ Public Class uco10PruefungStaffelverfahren
         Next
     End Sub
 
-    ''' <summary>
-    ''' Füllt das Objekt mit den Werten aus den Steuerlementen
-    ''' </summary>
-    ''' <remarks></remarks>
-    ''' <author></author>
-    ''' <commentauthor></commentauthor>
-    Private Sub UpdateObject()
-        If DialogModus = enuDialogModus.normal Then objEichprozess.Bearbeitungsdatum = Date.Now
-
-        'neuen Context aufbauen
-        Using Context As New Entities
-            'jedes objekt initialisieren und aus context laden und updaten
-            For Each obj In _ListPruefungStaffelverfahrenNormallast
-                Dim objPruefung = Context.PruefungStaffelverfahrenNormallast.FirstOrDefault(Function(value) value.ID = obj.ID)
-                If Not objPruefung Is Nothing Then
-                    'in lokaler DB gucken
-                    UpdatePruefungsObject(objPruefung)
-                Else 'es handelt sich um eine Serverobjekt im => Korrekturmodus
-                    If DialogModus = enuDialogModus.korrigierend Then
-                        UpdatePruefungsObject(obj)
-                    End If
-                End If
-            Next
-
-            'jedes objekt initialisieren und aus context laden und updaten
-            For Each obj In _ListPruefungStaffelverfahrenErsatzlast
-                Dim objPruefung = Context.PruefungStaffelverfahrenErsatzlast.FirstOrDefault(Function(value) value.ID = obj.ID)
-                If Not objPruefung Is Nothing Then
-                    'in lokaler DB gucken
-                    UpdatePruefungsObject(objPruefung)
-                Else 'es handelt sich um eine Serverobjekt im => Korrekturmodus
-                    If DialogModus = enuDialogModus.korrigierend Then
-                        UpdatePruefungsObject(obj)
-                    End If
-                End If
-
-            Next
-
-        End Using
-    End Sub
 
     Private Sub UeberschreibePruefungsobjekte()
         objEichprozess.Eichprotokoll.PruefungStaffelverfahrenErsatzlast.Clear()
@@ -725,106 +637,6 @@ Public Class uco10PruefungStaffelverfahren
 
         End Try
     End Sub
-
-    ''' <summary>
-    ''' Gültigkeit der Eingaben überprüfen
-    ''' </summary>
-    ''' <remarks></remarks>
-    ''' <author></author>
-    ''' <commentauthor></commentauthor>
-    Protected Friend Overrides Function ValidateControls() As Boolean
-
-        'prüfen ob alle Felder ausgefüllt sind
-        AbortSaving = False
-
-        For staffel As Integer = 1 To 5
-            For bereich As Integer = 1 To 3
-                BerechneStaffelBereich(staffel, bereich)
-                BerechneMessabweichung(bereich)
-            Next
-        Next
-
-        Dim intausgefuellteStaffeln As Integer = 0
-        Dim einFeldGefuelltInStaffel As Boolean = False
-        If ValidateStaffelAusgefuellt(RadGroupBoxStaffel1Bereich1, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel1Bereich2, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel1Bereich3, einFeldGefuelltInStaffel) Or einFeldGefuelltInStaffel Then
-            intausgefuellteStaffeln = 1
-            einFeldGefuelltInStaffel = False
-            If ValidateStaffelAusgefuellt(RadGroupBoxStaffel2Bereich1, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel2Bereich2, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel2Bereich3, einFeldGefuelltInStaffel) Or einFeldGefuelltInStaffel Then
-                intausgefuellteStaffeln = 2
-                einFeldGefuelltInStaffel = False
-                If ValidateStaffelAusgefuellt(RadGroupBoxStaffel3Bereich1, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel3Bereich2, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel3Bereich3, einFeldGefuelltInStaffel) Or einFeldGefuelltInStaffel Then
-                    intausgefuellteStaffeln = 3
-                    einFeldGefuelltInStaffel = False
-                    If ValidateStaffelAusgefuellt(RadGroupBoxStaffel4Bereich1, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel4Bereich2, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel4Bereich3, einFeldGefuelltInStaffel) Or einFeldGefuelltInStaffel Then
-                        intausgefuellteStaffeln = 4
-                        einFeldGefuelltInStaffel = False
-                        If ValidateStaffelAusgefuellt(RadGroupBoxStaffel5Bereich1, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel5Bereich2, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel5Bereich3, einFeldGefuelltInStaffel) Or einFeldGefuelltInStaffel Then
-                            intausgefuellteStaffeln = 5
-                        End If
-                    End If
-                End If
-            End If
-        Else : AbortSaving = True 'eine Staffel muss ausgefüllt sein
-        End If
-
-        If AbortSaving Then
-            'fehlermeldung anzeigen bei falscher validierung
-            Dim result = Me.ShowValidationErrorBox(False)
-            Return ProcessResult(result)
-
-
-        End If
-
-        'logik zum Valideren der Eichfehlergrenzen der einzelnen Staffeln. Abhängig davon wieviele Staffeln überhaupt ausgefüllt sind
-        If (intausgefuellteStaffeln >= 1) Then
-            'Staffel 1
-            ValidateStaffelEFG(1, 1)
-            If AnzahlBereiche >= 2 Then ValidateStaffelEFG(1, 2)
-            If AnzahlBereiche >= 3 Then ValidateStaffelEFG(1, 3)
-        End If
-
-        'staffel 2
-        If (intausgefuellteStaffeln >= 2) Then
-            ValidateStaffelEFG(2, 1)
-            If AnzahlBereiche >= 2 Then ValidateStaffelEFG(2, 2)
-            If AnzahlBereiche >= 3 Then ValidateStaffelEFG(2, 3)
-        End If
-        'staffel 3
-        If (intausgefuellteStaffeln >= 3) Then
-            ValidateStaffelEFG(3, 1)
-            If AnzahlBereiche >= 2 Then ValidateStaffelEFG(3, 2)
-            If AnzahlBereiche >= 3 Then ValidateStaffelEFG(3, 3)
-        End If
-        'staffel 4
-        If (intausgefuellteStaffeln >= 4) Then
-            ValidateStaffelEFG(4, 1)
-            If AnzahlBereiche >= 2 Then ValidateStaffelEFG(4, 2)
-            If AnzahlBereiche >= 3 Then ValidateStaffelEFG(4, 3)
-        End If
-        'staffel 5
-        If (intausgefuellteStaffeln >= 5) Then
-            ValidateStaffelEFG(5, 1)
-            If AnzahlBereiche >= 2 Then ValidateStaffelEFG(5, 2)
-            If AnzahlBereiche >= 3 Then ValidateStaffelEFG(5, 3)
-        End If
-
-        'fehlermeldung anzeigen bei falscher validierung
-
-        If AbortSaving Then
-            'fehlermeldung anzeigen bei falscher validierung
-            Dim result = Me.ShowValidationErrorBox(False, My.Resources.GlobaleLokalisierung.EichfehlergrenzenNichtEingehalten)
-            Return ProcessResult(result)
-
-        End If
-
-        Return True
-
-    End Function
-
-
-#End Region
-
-#Region "Events die neue Berechnungen beim Ändern von Feldinformationen erfordern"
 
     Private Sub BerechneStaffelBereich(ByVal Staffel As String, ByVal Bereich As String)
         Try
@@ -1076,32 +888,6 @@ Public Class uco10PruefungStaffelverfahren
     End Sub
 
 
-    ''' <summary>
-    ''' Event welches bei allen Textboxen triggerd und die Berechnungsroutinen anstößt
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
-    ''' <remarks></remarks>
-    Private Sub RadTextBoxControlEingaben_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlStaffel5Bereich1Last4.Leave, RadTextBoxControlStaffel5Bereich1Last3.Leave, RadTextBoxControlStaffel5Bereich1Last2.Leave, RadTextBoxControlStaffel5Bereich1Last1.Leave, RadTextBoxControlStaffel5Bereich1Anzeige1.Leave, RadTextBoxControlStaffel4Bereich1Last4.Leave, RadTextBoxControlStaffel4Bereich1Last3.Leave, RadTextBoxControlStaffel4Bereich1Last2.Leave, RadTextBoxControlStaffel4Bereich1Last1.Leave, RadTextBoxControlStaffel4Bereich1Anzeige1.Leave, RadTextBoxControlStaffel3Bereich1Last2.Leave, RadTextBoxControlStaffel3Bereich1Last1.Leave, RadTextBoxControlStaffel3Bereich1Anzeige1.Leave, RadTextBoxControlStaffel2Bereich1Last2.Leave, RadTextBoxControlStaffel2Bereich1Last1.Leave, RadTextBoxControlStaffel2Bereich1Anzeige1.Leave, RadTextBoxControlStaffel1Bereich1Last4.Leave, RadTextBoxControlStaffel1Bereich1Last3.Leave, RadTextBoxControlStaffel1Bereich1Last2.Leave, RadTextBoxControlStaffel1Bereich1Last1.Leave, RadTextBoxControlStaffel1Bereich1Anzeige4.Leave, RadTextBoxControlStaffel1Bereich1Anzeige3.Leave, RadTextBoxControlStaffel1Bereich1Anzeige2.Leave, RadTextBoxControlStaffel1Bereich1Anzeige1.Leave,
-    RadTextBoxControlStaffel5Bereich2Last4.Leave, RadTextBoxControlStaffel5Bereich2Last3.Leave, RadTextBoxControlStaffel5Bereich2Last2.Leave, RadTextBoxControlStaffel5Bereich2Last1.Leave, RadTextBoxControlStaffel5Bereich2Anzeige1.Leave, RadTextBoxControlStaffel4Bereich2Last4.Leave, RadTextBoxControlStaffel4Bereich2Last3.Leave, RadTextBoxControlStaffel4Bereich2Last2.Leave, RadTextBoxControlStaffel4Bereich2Last1.Leave, RadTextBoxControlStaffel4Bereich2Anzeige1.Leave, RadTextBoxControlStaffel3Bereich2Last2.Leave, RadTextBoxControlStaffel3Bereich2Last1.Leave, RadTextBoxControlStaffel3Bereich2Anzeige1.Leave, RadTextBoxControlStaffel2Bereich2Last2.Leave, RadTextBoxControlStaffel2Bereich2Last1.Leave, RadTextBoxControlStaffel2Bereich2Anzeige1.Leave, RadTextBoxControlStaffel1Bereich2Last4.Leave, RadTextBoxControlStaffel1Bereich2Last3.Leave, RadTextBoxControlStaffel1Bereich2Last1.Leave, RadTextBoxControlStaffel1Bereich2Anzeige4.Leave, RadTextBoxControlStaffel1Bereich2Anzeige3.Leave, RadTextBoxControlStaffel1Bereich2Anzeige1.Leave,
-    RadTextBoxControlStaffel5Bereich3Last4.Leave, RadTextBoxControlStaffel5Bereich3Last3.Leave, RadTextBoxControlStaffel5Bereich3Last2.Leave, RadTextBoxControlStaffel5Bereich3Last1.Leave, RadTextBoxControlStaffel5Bereich3Anzeige1.Leave, RadTextBoxControlStaffel4Bereich3Last4.Leave, RadTextBoxControlStaffel4Bereich3Last3.Leave, RadTextBoxControlStaffel4Bereich3Last2.Leave, RadTextBoxControlStaffel4Bereich3Last1.Leave, RadTextBoxControlStaffel4Bereich3Anzeige1.Leave, RadTextBoxControlStaffel3Bereich3Last2.Leave, RadTextBoxControlStaffel3Bereich3Last1.Leave, RadTextBoxControlStaffel3Bereich3Anzeige1.Leave, RadTextBoxControlStaffel2Bereich3Last2.Leave, RadTextBoxControlStaffel2Bereich3Last1.Leave, RadTextBoxControlStaffel2Bereich3Anzeige1.Leave, RadTextBoxControlStaffel1Bereich3Last4.Leave, RadTextBoxControlStaffel1Bereich3Last3.Leave, RadTextBoxControlStaffel1Bereich3Last1.Leave, RadTextBoxControlStaffel1Bereich3Anzeige4.Leave, RadTextBoxControlStaffel1Bereich3Anzeige3.Leave, RadTextBoxControlStaffel1Bereich3Anzeige1.Leave,
-    RadTextBoxControlStaffel5Bereich3Anzeige4.Leave, RadTextBoxControlStaffel5Bereich3Anzeige3.Leave, RadTextBoxControlStaffel5Bereich2Anzeige4.Leave, RadTextBoxControlStaffel5Bereich2Anzeige3.Leave, RadTextBoxControlStaffel5Bereich1Anzeige4.Leave, RadTextBoxControlStaffel5Bereich1Anzeige3.Leave, RadTextBoxControlStaffel4Bereich3Anzeige4.Leave, RadTextBoxControlStaffel4Bereich3Anzeige3.Leave, RadTextBoxControlStaffel4Bereich2Anzeige4.Leave, RadTextBoxControlStaffel4Bereich2Anzeige3.Leave, RadTextBoxControlStaffel4Bereich1Anzeige4.Leave, RadTextBoxControlStaffel4Bereich1Anzeige3.Leave, RadTextBoxControlStaffel3Bereich3Anzeige4.Leave, RadTextBoxControlStaffel3Bereich3Anzeige3.Leave, RadTextBoxControlStaffel3Bereich2Anzeige4.Leave, RadTextBoxControlStaffel3Bereich2Anzeige3.Leave, RadTextBoxControlStaffel3Bereich1Anzeige4.Leave, RadTextBoxControlStaffel3Bereich1Anzeige3.Leave, RadTextBoxControlStaffel2Bereich3Anzeige4.Leave, RadTextBoxControlStaffel2Bereich3Anzeige3.Leave, RadTextBoxControlStaffel2Bereich2Anzeige4.Leave, RadTextBoxControlStaffel2Bereich2Anzeige3.Leave, RadTextBoxControlStaffel2Bereich1Anzeige4.Leave, RadTextBoxControlStaffel2Bereich1Anzeige3.Leave
-
-        If _suspendEvents = True Then Exit Sub
-        'If TimerRunning Then Exit Sub Else StartTimer()
-        _suspendEvents = True
-
-        AktuellerStatusDirty = True
-
-        Dim staffel As String = GetStaffel(sender)
-        Dim bereich As String = GetBereich(sender)
-        BerechneStaffelBereich(staffel, bereich)
-        BerechneMessabweichung(bereich)
-        _suspendEvents = False
-    End Sub
-
-#End Region
-
 #Region " Messabweichung der Waage [SEwi]"
 
     ''' <summary>
@@ -1168,103 +954,271 @@ Public Class uco10PruefungStaffelverfahren
                 Exit Sub
             End If
 
-            'Try
-            '    'differenz der Waage Berechnen
-            '    Fehler7Staffel1.Text = CDec(Fehler6Staffel1.Text)
-            'Catch ex As Exception
-            '    Fehler7Staffel1.Text = ""
-            '    Exit Sub
-            'End Try
-
-            'Try
-            '    Fehler7Staffel2.Text = CDec(Fehler6Staffel1.Text) + CDec(Fehler6Staffel2.Text)
-            'Catch ex As Exception
-            '    Fehler7Staffel2.Text = ""
-            '    Exit Sub
-            'End Try
-            'Try
-            '    Fehler7Staffel3.Text = CDec(Fehler6Staffel1.Text) + CDec(Fehler6Staffel2.Text) + CDec(Fehler6Staffel3.Text)
-            'Catch ex As Exception
-            '    Fehler7Staffel3.Text = ""
-            '    Exit Sub
-            'End Try
-            'Try
-            '    Fehler7Staffel4.Text = CDec(Fehler6Staffel1.Text) + CDec(Fehler6Staffel2.Text) + CDec(Fehler6Staffel3.Text) + CDec(Fehler6Staffel4.Text)
-            'Catch ex As Exception
-            '    Fehler7Staffel4.Text = ""
-            '    Exit Sub
-            'End Try
-            'Try
-            '    Fehler7Staffel5.Text = CDec(Fehler6Staffel1.Text) + CDec(Fehler6Staffel2.Text) + CDec(Fehler6Staffel3.Text) + CDec(Fehler6Staffel4.Text) + CDec(Fehler6Staffel5.Text)
-            'Catch ex As Exception
-            '    Fehler7Staffel5.Text = ""
-            '    Exit Sub
-            'End Try
         Catch ex As Exception
         End Try
     End Sub
 
 #End Region
-
-#Region "Hilfetexte"
-    Private Sub RadTextBoxControlStaffel1Bereich1Last1_MouseEnter(sender As Object, e As EventArgs) Handles RadTextBoxControlStaffel1Bereich3Last4.MouseEnter, RadTextBoxControlStaffel1Bereich3Last3.MouseEnter, RadTextBoxControlStaffel1Bereich3Last1.MouseEnter, RadTextBoxControlStaffel1Bereich2Last4.MouseEnter, RadTextBoxControlStaffel1Bereich2Last3.MouseEnter, RadTextBoxControlStaffel1Bereich2Last1.MouseEnter, RadTextBoxControlStaffel1Bereich1Last4.MouseEnter, RadTextBoxControlStaffel1Bereich1Last3.MouseEnter, RadTextBoxControlStaffel1Bereich1Last1.MouseEnter
-        ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungStaffelverfahrenNormallast)
-    End Sub
-
-    Private Sub RadGroupBoxStaffel1Bereich1_MouseEnter(sender As Object, e As EventArgs) Handles RadGroupBoxStaffel5Bereich3.MouseEnter, RadGroupBoxStaffel5Bereich2.MouseEnter, RadGroupBoxStaffel5Bereich1.MouseEnter, RadGroupBoxStaffel3Bereich3.MouseEnter, RadGroupBoxStaffel3Bereich2.MouseEnter, RadGroupBoxStaffel3Bereich1.MouseEnter, RadGroupBoxStaffel2Bereich3.MouseEnter, RadGroupBoxStaffel2Bereich2.MouseEnter, RadGroupBoxStaffel2Bereich1.MouseEnter, RadGroupBoxStaffel1Bereich3.MouseEnter, RadGroupBoxStaffel1Bereich2.MouseEnter, RadGroupBoxStaffel1Bereich1.MouseEnter
-        'zurücksetzen der Hilfetexte
-        ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungStaffelverfahren)
-    End Sub
-
-    Private Sub RadTextBoxControlStaffel2Bereich1Last1_MouseEnter(sender As Object, e As EventArgs) Handles RadTextBoxControlStaffel5Bereich3Last1.MouseEnter, RadTextBoxControlStaffel5Bereich2Last1.MouseEnter, RadTextBoxControlStaffel5Bereich1Last1.MouseEnter, RadTextBoxControlStaffel4Bereich3Last1.MouseEnter, RadTextBoxControlStaffel4Bereich2Last1.MouseEnter, RadTextBoxControlStaffel4Bereich1Last1.MouseEnter, RadTextBoxControlStaffel3Bereich3Last1.MouseEnter, RadTextBoxControlStaffel3Bereich2Last1.MouseEnter, RadTextBoxControlStaffel3Bereich1Last1.MouseEnter, RadTextBoxControlStaffel2Bereich3Last1.MouseEnter, RadTextBoxControlStaffel2Bereich2Last1.MouseEnter, RadTextBoxControlStaffel2Bereich1Last1.MouseEnter
-        ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungStaffelverfahrenErsatzlastSoll)
-    End Sub
-
-    Private Sub RadTextBoxControlStaffel2Bereich1Anzeige1_MouseEnter(sender As Object, e As EventArgs) Handles RadTextBoxControlStaffel5Bereich3Anzeige1.MouseEnter, RadTextBoxControlStaffel5Bereich2Anzeige1.MouseEnter, RadTextBoxControlStaffel5Bereich1Anzeige1.MouseEnter, RadTextBoxControlStaffel4Bereich3Anzeige1.MouseEnter, RadTextBoxControlStaffel4Bereich2Anzeige1.MouseEnter, RadTextBoxControlStaffel4Bereich1Anzeige1.MouseEnter, RadTextBoxControlStaffel3Bereich3Anzeige1.MouseEnter, RadTextBoxControlStaffel3Bereich2Anzeige1.MouseEnter, RadTextBoxControlStaffel3Bereich1Anzeige1.MouseEnter, RadTextBoxControlStaffel2Bereich3Anzeige1.MouseEnter, RadTextBoxControlStaffel2Bereich2Anzeige1.MouseEnter, RadTextBoxControlStaffel2Bereich1Anzeige1.MouseEnter
-        ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungStaffelverfahrenErsatzlastIst)
-    End Sub
-
-    Private Sub RadTextBoxControlStaffel2Bereich1Last2_MouseEnter(sender As Object, e As EventArgs) Handles RadTextBoxControlStaffel5Bereich3Last2.MouseEnter, RadTextBoxControlStaffel5Bereich2Last2.MouseEnter, RadTextBoxControlStaffel5Bereich1Last2.MouseEnter, RadTextBoxControlStaffel4Bereich3Last2.MouseEnter, RadTextBoxControlStaffel4Bereich2Last2.MouseEnter, RadTextBoxControlStaffel4Bereich1Last2.MouseEnter, RadTextBoxControlStaffel3Bereich3Last2.MouseEnter, RadTextBoxControlStaffel3Bereich2Last2.MouseEnter, RadTextBoxControlStaffel3Bereich1Last2.MouseEnter, RadTextBoxControlStaffel2Bereich3Last2.MouseEnter, RadTextBoxControlStaffel2Bereich2Last2.MouseEnter, RadTextBoxControlStaffel2Bereich1Last2.MouseEnter
-        ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungStaffelverfahrenErsatzlastNormallast)
-    End Sub
-
-    Private Sub RadTextBoxControlStaffel5Bereich3Anzeige3_MouseEnter(sender As Object, e As EventArgs) Handles RadTextBoxControlStaffel5Bereich3Anzeige3.MouseEnter, RadTextBoxControlStaffel5Bereich2Anzeige3.MouseEnter, RadTextBoxControlStaffel5Bereich1Anzeige3.MouseEnter, RadTextBoxControlStaffel4Bereich3Anzeige3.MouseEnter, RadTextBoxControlStaffel4Bereich2Anzeige3.MouseEnter, RadTextBoxControlStaffel4Bereich1Anzeige3.MouseEnter, RadTextBoxControlStaffel3Bereich3Anzeige3.MouseEnter, RadTextBoxControlStaffel3Bereich2Anzeige3.MouseEnter, RadTextBoxControlStaffel3Bereich1Anzeige3.MouseEnter, RadTextBoxControlStaffel2Bereich3Anzeige3.MouseEnter, RadTextBoxControlStaffel2Bereich2Anzeige3.MouseEnter, RadTextBoxControlStaffel2Bereich1Anzeige3.MouseEnter
-        ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungStaffelverfahrenErsatzlastErsatzPlusNormallast)
-    End Sub
-
-    Private Sub RadTextBoxControlStaffel2Bereich1Anzeige4_MouseEnter(sender As Object, e As EventArgs) Handles RadTextBoxControlStaffel5Bereich3Anzeige4.MouseEnter, RadTextBoxControlStaffel5Bereich2Anzeige4.MouseEnter, RadTextBoxControlStaffel5Bereich1Anzeige4.MouseEnter, RadTextBoxControlStaffel4Bereich3Anzeige4.MouseEnter, RadTextBoxControlStaffel4Bereich2Anzeige4.MouseEnter, RadTextBoxControlStaffel4Bereich1Anzeige4.MouseEnter, RadTextBoxControlStaffel3Bereich3Anzeige4.MouseEnter, RadTextBoxControlStaffel3Bereich2Anzeige4.MouseEnter, RadTextBoxControlStaffel3Bereich1Anzeige4.MouseEnter, RadTextBoxControlStaffel2Bereich3Anzeige4.MouseEnter, RadTextBoxControlStaffel2Bereich2Anzeige4.MouseEnter, RadTextBoxControlStaffel2Bereich1Anzeige4.MouseEnter
-        ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungStaffelverfahrenErsatzlastErsatzlast2)
-    End Sub
-
 #End Region
 
-#Region "Overrides"
-    Protected Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
-        If Me.Name.Equals(UserControl.Name) = False Then Exit Sub
 
-        MyBase.LokalisierungNeeded(UserControl)
 
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco10PruefungStaffelverfahren))
-        Lokalisierung(Me, resources)
 
+
+
+#Region "Interface Methods"
+    Protected Friend Overrides Sub SetzeUeberschrift() Implements IRhewaEditingDialog.SetzeUeberschrift
         If Not ParentFormular Is Nothing Then
             Try
                 'Hilfetext setzen
-
                 ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungStaffelverfahren)
                 'Überschrift setzen
-
                 ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungStaffelverfahren
             Catch ex As Exception
             End Try
         End If
+    End Sub
+    Protected Friend Overrides Sub LoadFromDatabase() Implements IRhewaEditingDialog.LoadFromDatabase
+        SuspendLayout()
+        objEichprozess = ParentFormular.CurrentEichprozess
+        'events abbrechen
+        _suspendEvents = True
+        'Nur laden wenn es sich um eine Bearbeitung handelt (sonst würde das in Memory Objekt überschrieben werden)
+        If Not DialogModus = enuDialogModus.lesend And Not DialogModus = enuDialogModus.korrigierend Then
+            Using context As New Entities
+                'neu laden des Objekts, diesmal mit den lookup Objekten
+                objEichprozess = (From a In context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
 
+                'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
+                Dim query = From a In context.PruefungStaffelverfahrenNormallast Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
+                _ListPruefungStaffelverfahrenNormallast = query.ToList
+
+                'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
+                Dim query2 = From a In context.PruefungStaffelverfahrenErsatzlast Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
+                _ListPruefungStaffelverfahrenErsatzlast = query2.ToList
+
+            End Using
+
+        Else
+            _ListPruefungStaffelverfahrenNormallast.Clear()
+            _ListPruefungStaffelverfahrenErsatzlast.Clear()
+            Try
+                For Each obj In objEichprozess.Eichprotokoll.PruefungStaffelverfahrenNormallast
+                    obj.Eichprotokoll = objEichprozess.Eichprotokoll
+
+                    _ListPruefungStaffelverfahrenNormallast.Add(obj)
+                Next
+                For Each obj In objEichprozess.Eichprotokoll.PruefungStaffelverfahrenErsatzlast
+                    obj.Eichprotokoll = objEichprozess.Eichprotokoll
+
+                    _ListPruefungStaffelverfahrenErsatzlast.Add(obj)
+                Next
+            Catch ex As System.ObjectDisposedException 'fehler im Clientseitigen Lesemodus (bei bereits abegschickter Eichung)
+                Using context As New Entities
+                    'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
+
+                    Dim query = From a In context.PruefungStaffelverfahrenNormallast Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
+                    _ListPruefungStaffelverfahrenNormallast = query.ToList
+
+                    'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
+                    Dim query2 = From a In context.PruefungStaffelverfahrenErsatzlast Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
+                    _ListPruefungStaffelverfahrenErsatzlast = query2.ToList
+                End Using
+            End Try
+
+        End If
+
+        'steuerelemente mit werten aus DB füllen
+        FillControls()
+
+        If DialogModus = enuDialogModus.lesend Then
+            DisableControls(RadGroupBoxStaffel1Bereich1)
+            DisableControls(RadGroupBoxStaffel1Bereich2)
+            DisableControls(RadGroupBoxStaffel1Bereich3)
+            DisableControls(RadGroupBoxStaffel2Bereich1)
+            DisableControls(RadGroupBoxStaffel2Bereich2)
+            DisableControls(RadGroupBoxStaffel2Bereich3)
+            DisableControls(RadGroupBoxStaffel3Bereich1)
+            DisableControls(RadGroupBoxStaffel3Bereich2)
+            DisableControls(RadGroupBoxStaffel3Bereich3)
+            DisableControls(RadGroupBoxStaffel4Bereich1)
+            DisableControls(RadGroupBoxStaffel4Bereich2)
+            DisableControls(RadGroupBoxStaffel4Bereich3)
+            DisableControls(RadGroupBoxStaffel5Bereich1)
+            DisableControls(RadGroupBoxStaffel5Bereich2)
+            DisableControls(RadGroupBoxStaffel5Bereich3)
+        End If
+
+        'events abbrechen
+        _suspendEvents = False
+        ResumeLayout()
     End Sub
 
-    'Entsperrroutine
-    Protected Overrides Sub EntsperrungNeeded()
-        MyBase.EntsperrungNeeded()
+    ''' <summary>
+    ''' Lädt die Werte aus dem Objekt in die Steuerlemente
+    ''' </summary>
+    ''' <remarks></remarks>
+    ''' <author></author>
+    ''' <commentauthor></commentauthor>
+    Protected Friend Overrides Sub FillControls() Implements IRhewaEditingDialog.FillControls
+        HoleNullstellen()
+        SetzeNullstellen()
 
+        'je nach Art der Waage andere Bereichsgruppen ausblenden
+        VersteckeBereiche()
+
+        'füllen der berechnenten Steuerelemente
+        LadeStaffeln()
+
+        'fokus setzen auf erstes Steuerelement
+        RadTextBoxControlStaffel1Bereich1Anzeige1.Focus()
+    End Sub
+
+    ''' <summary>
+    ''' Füllt das Objekt mit den Werten aus den Steuerlementen
+    ''' </summary>
+    ''' <remarks></remarks>
+    ''' <author></author>
+    ''' <commentauthor></commentauthor>
+    Protected Friend Overrides Sub UpdateObjekt() Implements IRhewaEditingDialog.UpdateObjekt
+        If DialogModus = enuDialogModus.normal Then objEichprozess.Bearbeitungsdatum = Date.Now
+
+        'neuen Context aufbauen
+        Using Context As New Entities
+            'jedes objekt initialisieren und aus context laden und updaten
+            For Each obj In _ListPruefungStaffelverfahrenNormallast
+                Dim objPruefung = Context.PruefungStaffelverfahrenNormallast.FirstOrDefault(Function(value) value.ID = obj.ID)
+                If Not objPruefung Is Nothing Then
+                    'in lokaler DB gucken
+                    UpdatePruefungsObject(objPruefung)
+                Else 'es handelt sich um eine Serverobjekt im => Korrekturmodus
+                    If DialogModus = enuDialogModus.korrigierend Then
+                        UpdatePruefungsObject(obj)
+                    End If
+                End If
+            Next
+
+            'jedes objekt initialisieren und aus context laden und updaten
+            For Each obj In _ListPruefungStaffelverfahrenErsatzlast
+                Dim objPruefung = Context.PruefungStaffelverfahrenErsatzlast.FirstOrDefault(Function(value) value.ID = obj.ID)
+                If Not objPruefung Is Nothing Then
+                    'in lokaler DB gucken
+                    UpdatePruefungsObject(objPruefung)
+                Else 'es handelt sich um eine Serverobjekt im => Korrekturmodus
+                    If DialogModus = enuDialogModus.korrigierend Then
+                        UpdatePruefungsObject(obj)
+                    End If
+                End If
+            Next
+
+        End Using
+    End Sub
+
+    ''' <summary>
+    ''' Gültigkeit der Eingaben überprüfen
+    ''' </summary>
+    ''' <remarks></remarks>
+    ''' <author></author>
+    ''' <commentauthor></commentauthor>
+    Protected Friend Overrides Function ValidateControls() As Boolean Implements IRhewaEditingDialog.ValidateControls
+
+        'prüfen ob alle Felder ausgefüllt sind
+        AbortSaving = False
+
+        For staffel As Integer = 1 To 5
+            For bereich As Integer = 1 To 3
+                BerechneStaffelBereich(staffel, bereich)
+                BerechneMessabweichung(bereich)
+            Next
+        Next
+
+        Dim intausgefuellteStaffeln As Integer = 0
+        Dim einFeldGefuelltInStaffel As Boolean = False
+        If ValidateStaffelAusgefuellt(RadGroupBoxStaffel1Bereich1, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel1Bereich2, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel1Bereich3, einFeldGefuelltInStaffel) Or einFeldGefuelltInStaffel Then
+            intausgefuellteStaffeln = 1
+            einFeldGefuelltInStaffel = False
+            If ValidateStaffelAusgefuellt(RadGroupBoxStaffel2Bereich1, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel2Bereich2, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel2Bereich3, einFeldGefuelltInStaffel) Or einFeldGefuelltInStaffel Then
+                intausgefuellteStaffeln = 2
+                einFeldGefuelltInStaffel = False
+                If ValidateStaffelAusgefuellt(RadGroupBoxStaffel3Bereich1, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel3Bereich2, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel3Bereich3, einFeldGefuelltInStaffel) Or einFeldGefuelltInStaffel Then
+                    intausgefuellteStaffeln = 3
+                    einFeldGefuelltInStaffel = False
+                    If ValidateStaffelAusgefuellt(RadGroupBoxStaffel4Bereich1, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel4Bereich2, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel4Bereich3, einFeldGefuelltInStaffel) Or einFeldGefuelltInStaffel Then
+                        intausgefuellteStaffeln = 4
+                        einFeldGefuelltInStaffel = False
+                        If ValidateStaffelAusgefuellt(RadGroupBoxStaffel5Bereich1, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel5Bereich2, einFeldGefuelltInStaffel) And ValidateStaffelAusgefuellt(RadGroupBoxStaffel5Bereich3, einFeldGefuelltInStaffel) Or einFeldGefuelltInStaffel Then
+                            intausgefuellteStaffeln = 5
+                        End If
+                    End If
+                End If
+            End If
+        Else : AbortSaving = True 'eine Staffel muss ausgefüllt sein
+        End If
+
+        If AbortSaving Then
+            'fehlermeldung anzeigen bei falscher validierung
+            Dim result = Me.ShowValidationErrorBox(False)
+            Return ProcessResult(result)
+
+
+        End If
+
+        'logik zum Valideren der Eichfehlergrenzen der einzelnen Staffeln. Abhängig davon wieviele Staffeln überhaupt ausgefüllt sind
+        If (intausgefuellteStaffeln >= 1) Then
+            'Staffel 1
+            ValidateStaffelEFG(1, 1)
+            If AnzahlBereiche >= 2 Then ValidateStaffelEFG(1, 2)
+            If AnzahlBereiche >= 3 Then ValidateStaffelEFG(1, 3)
+        End If
+
+        'staffel 2
+        If (intausgefuellteStaffeln >= 2) Then
+            ValidateStaffelEFG(2, 1)
+            If AnzahlBereiche >= 2 Then ValidateStaffelEFG(2, 2)
+            If AnzahlBereiche >= 3 Then ValidateStaffelEFG(2, 3)
+        End If
+        'staffel 3
+        If (intausgefuellteStaffeln >= 3) Then
+            ValidateStaffelEFG(3, 1)
+            If AnzahlBereiche >= 2 Then ValidateStaffelEFG(3, 2)
+            If AnzahlBereiche >= 3 Then ValidateStaffelEFG(3, 3)
+        End If
+        'staffel 4
+        If (intausgefuellteStaffeln >= 4) Then
+            ValidateStaffelEFG(4, 1)
+            If AnzahlBereiche >= 2 Then ValidateStaffelEFG(4, 2)
+            If AnzahlBereiche >= 3 Then ValidateStaffelEFG(4, 3)
+        End If
+        'staffel 5
+        If (intausgefuellteStaffeln >= 5) Then
+            ValidateStaffelEFG(5, 1)
+            If AnzahlBereiche >= 2 Then ValidateStaffelEFG(5, 2)
+            If AnzahlBereiche >= 3 Then ValidateStaffelEFG(5, 3)
+        End If
+
+        'fehlermeldung anzeigen bei falscher validierung
+
+        If AbortSaving Then
+            'fehlermeldung anzeigen bei falscher validierung
+            Dim result = Me.ShowValidationErrorBox(False, My.Resources.GlobaleLokalisierung.EichfehlergrenzenNichtEingehalten)
+            Return ProcessResult(result)
+
+        End If
+
+        Return True
+
+    End Function
+
+
+
+
+    Protected Friend Overrides Sub Lokalisiere() Implements IRhewaEditingDialog.Lokalisiere
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(uco10PruefungStaffelverfahren))
+        Lokalisierung(Me, resources)
+    End Sub
+
+
+    Protected Friend Overrides Sub Entsperrung() Implements IRhewaEditingDialog.Entsperrung
         'Hiermit wird ein lesender Vorgang wieder entsperrt.
         EnableControls(RadGroupBoxStaffel1Bereich1)
         EnableControls(RadGroupBoxStaffel1Bereich2)
@@ -1287,301 +1241,160 @@ Public Class uco10PruefungStaffelverfahren
         ParentFormular.DialogModus = FrmMainContainer.enuDialogModus.korrigierend
     End Sub
 
-    Protected Overrides Sub VersendenNeeded(TargetUserControl As UserControl)
 
-        If Me.Equals(TargetUserControl) Then
-            MyBase.VersendenNeeded(TargetUserControl)
-            UpdateObject()
-            UeberschreibePruefungsobjekte()
+    Protected Friend Overrides Sub Versenden() Implements IRhewaEditingDialog.Versenden
+        UpdateObjekt()
+        UeberschreibePruefungsobjekte()
 
-            'Erzeugen eines Server Objektes auf basis des aktuellen DS. Setzt es auf es ausserdem auf Fehlerhaft
-            CloneAndSendServerObjekt()
-        End If
+        'Erzeugen eines Server Objektes auf basis des aktuellen DS. Setzt es auf es ausserdem auf Fehlerhaft
+        CloneAndSendServerObjekt()
     End Sub
 
-    'Speicherroutine
-    Protected Overrides Sub SaveNeeded(ByVal UserControl As UserControl)
-        If Me.Equals(UserControl) Then
 
-            If DialogModus = enuDialogModus.lesend Then
-                If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderWiederholbarkeit Then
-                    objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderWiederholbarkeit
-                End If
-                ParentFormular.CurrentEichprozess = objEichprozess
-                Exit Sub
-            End If
+    Protected Friend Overrides Sub SaveObjekt() Implements IRhewaEditingDialog.SaveObjekt
+        'neuen Context aufbauen
 
-            If DialogModus = enuDialogModus.korrigierend Then
-                UpdateObject()
-                If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderWiederholbarkeit Then
-                    objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderWiederholbarkeit
-                End If
-                ParentFormular.CurrentEichprozess = objEichprozess
-                Exit Sub
-            End If
+        Using Context As New Entities
+            'prüfen ob CREATE oder UPDATE durchgeführt werden muss
+            If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
+                'prüfen ob das Objekt anhand der ID gefunden werden kann
+                Dim dobjEichprozess As Eichprozess = (From a In Context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
+                If Not dobjEichprozess Is Nothing Then
+                    'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
+                    objEichprozess = dobjEichprozess
 
-            If ValidateControls() = True Then
+                    'wenn es defintiv noch keine pruefungen gibt, neue Anlegen
+                    If _ListPruefungStaffelverfahrenNormallast.Count = 0 Then
+                        'anzahl Bereiche auslesen um damit die anzahl der benötigten Iterationen und Objekt Erzeugungen zu erfahren
+                        Dim intBereiche As Integer = GetAnzahlBereiche()
 
-                'neuen Context aufbauen
-                Using Context As New Entities
+                        For intBereich = 1 To intBereiche
 
-                    'prüfen ob CREATE oder UPDATE durchgeführt werden muss
-                    If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
-                        'prüfen ob das Objekt anhand der ID gefunden werden kann
-                        Dim dobjEichprozess As Eichprozess = (From a In Context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
-                        If Not dobjEichprozess Is Nothing Then
-                            'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
-                            objEichprozess = dobjEichprozess
+                            Dim objPruefung = Context.PruefungStaffelverfahrenNormallast.Create
+                            'wenn es die eine itereation mehr ist:
+                            objPruefung.Bereich = intBereich
+                            objPruefung.Staffel = 1
 
-                            'wenn es defintiv noch keine pruefungen gibt, neue Anlegen
-                            If _ListPruefungStaffelverfahrenNormallast.Count = 0 Then
-                                'anzahl Bereiche auslesen um damit die anzahl der benötigten Iterationen und Objekt Erzeugungen zu erfahren
-                                Dim intBereiche As Integer = 0
-                                If objEichprozess.Lookup_Waagenart.Art = "Einbereichswaage" Then
-                                    intBereiche = 1
-                                ElseIf objEichprozess.Lookup_Waagenart.Art = "Zweibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Zweiteilungswaage" Then
-                                    intBereiche = 2
-                                ElseIf objEichprozess.Lookup_Waagenart.Art = "Dreibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Dreiteilungswaage" Then
-                                    intBereiche = 3
-                                End If
+                            UpdatePruefungsObject(objPruefung)
 
-                                For intBereich = 1 To intBereiche
-
-                                    Dim objPruefung = Context.PruefungStaffelverfahrenNormallast.Create
-                                    'wenn es die eine itereation mehr ist:
-                                    objPruefung.Bereich = intBereich
-                                    objPruefung.Staffel = 1
-
-                                    UpdatePruefungsObject(objPruefung)
-
-                                    Context.SaveChanges()
-
-                                    objEichprozess.Eichprotokoll.PruefungStaffelverfahrenNormallast.Add(objPruefung)
-                                    Context.SaveChanges()
-
-                                    _ListPruefungStaffelverfahrenNormallast.Add(objPruefung)
-                                Next
-
-                            Else ' es gibt bereits welche
-                                'jedes objekt initialisieren und aus context laden und updaten
-                                For Each objPruefung In _ListPruefungStaffelverfahrenNormallast
-                                    objPruefung = Context.PruefungStaffelverfahrenNormallast.FirstOrDefault(Function(value) value.ID = objPruefung.ID)
-                                    UpdatePruefungsObject(objPruefung)
-                                    Context.SaveChanges()
-                                Next
-
-                            End If
-
-                            'ersatzlasten
-                            'wenn es defintiv noch keine pruefungen gibt, neue Anlegen
-                            If _ListPruefungStaffelverfahrenErsatzlast.Count = 0 Then
-                                'anzahl Bereiche auslesen um damit die anzahl der benötigten Iterationen und Objekt Erzeugungen zu erfahren
-                                Dim intBereiche As Integer = 0
-                                If objEichprozess.Lookup_Waagenart.Art = "Einbereichswaage" Then
-                                    intBereiche = 1
-                                ElseIf objEichprozess.Lookup_Waagenart.Art = "Zweibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Zweiteilungswaage" Then
-                                    intBereiche = 2
-                                ElseIf objEichprozess.Lookup_Waagenart.Art = "Dreibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Dreiteilungswaage" Then
-                                    intBereiche = 3
-                                End If
-
-                                For intStaffel As Integer = 2 To 5
-
-                                    For intBereich = 1 To intBereiche
-
-                                        Dim objPruefung = Context.PruefungStaffelverfahrenErsatzlast.Create
-                                        'wenn es die eine itereation mehr ist:
-                                        objPruefung.Bereich = intBereich
-                                        objPruefung.Staffel = intStaffel
-
-                                        UpdatePruefungsObject(objPruefung)
-
-                                        Context.SaveChanges()
-
-                                        objEichprozess.Eichprotokoll.PruefungStaffelverfahrenErsatzlast.Add(objPruefung)
-                                        Context.SaveChanges()
-
-                                        _ListPruefungStaffelverfahrenErsatzlast.Add(objPruefung)
-                                    Next
-                                Next
-
-                            Else ' es gibt bereits welche
-                                'jedes objekt initialisieren und aus context laden und updaten
-                                For Each objPruefung In _ListPruefungStaffelverfahrenErsatzlast
-                                    objPruefung = Context.PruefungStaffelverfahrenErsatzlast.FirstOrDefault(Function(value) value.ID = objPruefung.ID)
-                                    UpdatePruefungsObject(objPruefung)
-                                    Context.SaveChanges()
-                                Next
-
-                            End If
-
-                            'neuen Status zuweisen
-                            If AktuellerStatusDirty = False Then
-                                ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
-                                If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderWiederholbarkeit Then
-                                    objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderWiederholbarkeit
-                                End If
-                            ElseIf AktuellerStatusDirty = True Then
-                                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderWiederholbarkeit
-                                AktuellerStatusDirty = False
-                            End If
-
-                            'Füllt das Objekt mit den Werten aus den Steuerlementen
-                            UpdateObject()
-                            'Speichern in Datenbank
                             Context.SaveChanges()
-                        End If
+
+                            objEichprozess.Eichprotokoll.PruefungStaffelverfahrenNormallast.Add(objPruefung)
+                            Try
+                                Context.SaveChanges()
+
+                            Catch ex As Exception
+                                lblStaffel1Bereich1Anzeige.Text = ""
+                            End Try
+
+                            _ListPruefungStaffelverfahrenNormallast.Add(objPruefung)
+                        Next
+
+                    Else ' es gibt bereits welche
+                        'jedes objekt initialisieren und aus context laden und updaten
+                        For Each objPruefung In _ListPruefungStaffelverfahrenNormallast
+                            objPruefung = Context.PruefungStaffelverfahrenNormallast.FirstOrDefault(Function(value) value.ID = objPruefung.ID)
+                            UpdatePruefungsObject(objPruefung)
+                            Context.SaveChanges()
+                        Next
+
                     End If
-                End Using
 
-                ParentFormular.CurrentEichprozess = objEichprozess
-            End If
+                    'ersatzlasten
+                    'wenn es defintiv noch keine pruefungen gibt, neue Anlegen
+                    If _ListPruefungStaffelverfahrenErsatzlast.Count = 0 Then
+                        'anzahl Bereiche auslesen um damit die anzahl der benötigten Iterationen und Objekt Erzeugungen zu erfahren
+                        Dim intBereiche As Integer = GetAnzahlBereiche()
 
-        End If
-    End Sub
-
-    Protected Overrides Sub SaveWithoutValidationNeeded(usercontrol As UserControl)
-        MyBase.SaveWithoutValidationNeeded(usercontrol)
-        If Me.Equals(usercontrol) Then
-
-            'neuen Context aufbauen
-            Using Context As New Entities
-                If DialogModus = enuDialogModus.lesend Then
-                    UpdateObject()
-                    ParentFormular.CurrentEichprozess = objEichprozess
-                    Exit Sub
-                End If
-
-                'prüfen ob CREATE oder UPDATE durchgeführt werden muss
-                If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
-                    'prüfen ob das Objekt anhand der ID gefunden werden kann
-                    Dim dobjEichprozess As Eichprozess = (From a In Context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
-                    If Not dobjEichprozess Is Nothing Then
-                        'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
-                        objEichprozess = dobjEichprozess
-
-                        'wenn es defintiv noch keine pruefungen gibt, neue Anlegen
-                        If _ListPruefungStaffelverfahrenNormallast.Count = 0 Then
-                            'anzahl Bereiche auslesen um damit die anzahl der benötigten Iterationen und Objekt Erzeugungen zu erfahren
-                            Dim intBereiche As Integer = 0
-                            If objEichprozess.Lookup_Waagenart.Art = "Einbereichswaage" Then
-                                intBereiche = 1
-                            ElseIf objEichprozess.Lookup_Waagenart.Art = "Zweibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Zweiteilungswaage" Then
-                                intBereiche = 2
-                            ElseIf objEichprozess.Lookup_Waagenart.Art = "Dreibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Dreiteilungswaage" Then
-                                intBereiche = 3
-                            End If
+                        For intStaffel As Integer = 2 To 5
 
                             For intBereich = 1 To intBereiche
 
-                                Dim objPruefung = Context.PruefungStaffelverfahrenNormallast.Create
+                                Dim objPruefung = Context.PruefungStaffelverfahrenErsatzlast.Create
                                 'wenn es die eine itereation mehr ist:
                                 objPruefung.Bereich = intBereich
-                                objPruefung.Staffel = 1
+                                objPruefung.Staffel = intStaffel
 
                                 UpdatePruefungsObject(objPruefung)
 
                                 Context.SaveChanges()
 
-                                objEichprozess.Eichprotokoll.PruefungStaffelverfahrenNormallast.Add(objPruefung)
-                                Try
-                                    Context.SaveChanges()
-
-                                Catch ex As Exception
-                                    lblStaffel1Bereich1Anzeige.Text = ""
-                                End Try
-
-                                _ListPruefungStaffelverfahrenNormallast.Add(objPruefung)
-                            Next
-
-                        Else ' es gibt bereits welche
-                            'jedes objekt initialisieren und aus context laden und updaten
-                            For Each objPruefung In _ListPruefungStaffelverfahrenNormallast
-                                objPruefung = Context.PruefungStaffelverfahrenNormallast.FirstOrDefault(Function(value) value.ID = objPruefung.ID)
-                                UpdatePruefungsObject(objPruefung)
+                                objEichprozess.Eichprotokoll.PruefungStaffelverfahrenErsatzlast.Add(objPruefung)
                                 Context.SaveChanges()
+
+                                _ListPruefungStaffelverfahrenErsatzlast.Add(objPruefung)
                             Next
+                        Next
 
-                        End If
-
-                        'ersatzlasten
-                        'wenn es defintiv noch keine pruefungen gibt, neue Anlegen
-                        If _ListPruefungStaffelverfahrenErsatzlast.Count = 0 Then
-                            'anzahl Bereiche auslesen um damit die anzahl der benötigten Iterationen und Objekt Erzeugungen zu erfahren
-                            Dim intBereiche As Integer = 0
-                            If objEichprozess.Lookup_Waagenart.Art = "Einbereichswaage" Then
-                                intBereiche = 1
-                            ElseIf objEichprozess.Lookup_Waagenart.Art = "Zweibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Zweiteilungswaage" Then
-                                intBereiche = 2
-                            ElseIf objEichprozess.Lookup_Waagenart.Art = "Dreibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Dreiteilungswaage" Then
-                                intBereiche = 3
-                            End If
-
-                            For intStaffel As Integer = 2 To 5
-
-                                For intBereich = 1 To intBereiche
-
-                                    Dim objPruefung = Context.PruefungStaffelverfahrenErsatzlast.Create
-                                    'wenn es die eine itereation mehr ist:
-                                    objPruefung.Bereich = intBereich
-                                    objPruefung.Staffel = intStaffel
-
-                                    UpdatePruefungsObject(objPruefung)
-
-                                    Context.SaveChanges()
-
-                                    objEichprozess.Eichprotokoll.PruefungStaffelverfahrenErsatzlast.Add(objPruefung)
-                                    Context.SaveChanges()
-
-                                    _ListPruefungStaffelverfahrenErsatzlast.Add(objPruefung)
-                                Next
-                            Next
-
-                        Else ' es gibt bereits welche
-                            'jedes objekt initialisieren und aus context laden und updaten
-                            For Each objPruefung In _ListPruefungStaffelverfahrenErsatzlast
-                                objPruefung = Context.PruefungStaffelverfahrenErsatzlast.FirstOrDefault(Function(value) value.ID = objPruefung.ID)
-                                UpdatePruefungsObject(objPruefung)
-                                Context.SaveChanges()
-                            Next
-
-                        End If
-
-                        ''Füllt das Objekt mit den Werten aus den Steuerlementen
-                        'UpdateObject()
-                        ''Speichern in Datenbank
-                        'Context.SaveChanges()
+                    Else ' es gibt bereits welche
+                        'jedes objekt initialisieren und aus context laden und updaten
+                        For Each objPruefung In _ListPruefungStaffelverfahrenErsatzlast
+                            objPruefung = Context.PruefungStaffelverfahrenErsatzlast.FirstOrDefault(Function(value) value.ID = objPruefung.ID)
+                            UpdatePruefungsObject(objPruefung)
+                            Context.SaveChanges()
+                        Next
                     End If
                 End If
-            End Using
+            End If
 
+
+
+        End Using
+
+        AktualisiereStatus()
+
+    End Sub
+
+    Protected Friend Overrides Sub AktualisiereStatus() Implements IRhewaEditingDialog.AktualisiereStatus
+        Using Context As New Entities
+            'prüfen ob CREATE oder UPDATE durchgeführt werden muss
+            If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
+                'prüfen ob das Objekt anhand der ID gefunden werden kann
+                Dim dobjEichprozess As Eichprozess = (From a In Context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
+                If Not dobjEichprozess Is Nothing Then
+                    'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
+                    objEichprozess = dobjEichprozess
+
+                    'neuen Status zuweisen
+                    If AktuellerStatusDirty = False Then
+                        ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
+                        If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderWiederholbarkeit Then
+                            objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderWiederholbarkeit
+                        End If
+                    ElseIf AktuellerStatusDirty = True Then
+                        objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderWiederholbarkeit
+                        AktuellerStatusDirty = False
+                    End If
+
+                    'Füllt das Objekt mit den Werten aus den Steuerlementen
+                    UpdateObjekt()
+                    'Speichern in Datenbank
+                    Context.SaveChanges()
+                End If
+            End If
+        End Using
+    End Sub
+
+    Protected Friend Overrides Function CheckDialogModus() As Boolean Implements IRhewaEditingDialog.CheckDialogModus
+        If DialogModus = enuDialogModus.lesend Then
+            If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderWiederholbarkeit Then
+                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderWiederholbarkeit
+            End If
             ParentFormular.CurrentEichprozess = objEichprozess
+            Return False
         End If
 
-    End Sub
-
-    ''' <summary>
-    ''' aktualisieren der Oberfläche wenn nötig
-    ''' </summary>
-    ''' <param name="UserControl"></param>
-    ''' <remarks></remarks>
-    Protected Overrides Sub UpdateNeeded(UserControl As UserControl)
-        If Me.Equals(UserControl) Then
-            MyBase.UpdateNeeded(UserControl)
-            Me.LokalisierungNeeded(UserControl)
-
-            LoadFromDatabase()
+        If DialogModus = enuDialogModus.korrigierend Then
+            UpdateObjekt()
+            If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderWiederholbarkeit Then
+                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderWiederholbarkeit
+            End If
+            ParentFormular.CurrentEichprozess = objEichprozess
+            Return False
         End If
-    End Sub
+        Return True
+    End Function
 
-    'Private Sub uco10PruefungStaffelverfahren_TimerStopped() Handles Me.TimerStopped
-    '    'For staffel As Integer = 1 To 5
-    '    '    For bereich As Integer = 1 To 3
-    '    '        BerechneStaffelBereich(staffel, bereich)
-    '    '        BerechneMessabweichung(bereich)
-    '    '    Next
-    '    'Next
-    'End Sub
 
 #End Region
 

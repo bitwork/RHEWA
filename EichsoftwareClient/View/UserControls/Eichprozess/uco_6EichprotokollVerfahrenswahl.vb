@@ -1,6 +1,9 @@
+Imports EichsoftwareClient
+
 Public Class uco_6EichprotokollVerfahrenswahl
 
     Inherits ucoContent
+    Implements IRhewaEditingDialog
 
 #Region "Member Variables"
     Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken (z.b. selected index changed beim laden des Formulars)
@@ -25,53 +28,9 @@ Public Class uco_6EichprotokollVerfahrenswahl
 #End Region
 
 #Region "Events"
-    ''' <summary>
-    ''' Validations the needed.
-    ''' </summary>
-    ''' <returns></returns>
-    Protected Friend Overrides Function ValidationNeeded() As Boolean
-        Return ValidateControls()
-    End Function
-
-    ''' <summary>
-    ''' Gültigkeit der Eingaben überprüfen
-    ''' </summary>
-    ''' <remarks></remarks>
-    ''' <author></author>
-    ''' <commentauthor></commentauthor>
-    Protected Friend Overrides Function ValidateControls() As Boolean
-        'prüfen ob alle Felder ausgefüllt sind
-        Me.AbortSaving = False
-        If RadRadioButtonFahrzeugwaagen.IsChecked Or RadRadioButtonNormalien.IsChecked Or RadRadioButtonStaffelverfahren.IsChecked Then
-            Return True
-        Else
-            AbortSaving = True
-            'fehlermeldung anzeigen bei falscher validierung
-            Dim result = Me.ShowValidationErrorBox(True)
-
-            If result = DialogResult.Yes Or result = DialogResult.Ignore Then
-                Return True
-            ElseIf result = DialogResult.Retry Then
-                Me.RadRadioButtonNormalien.IsChecked = True
-                Return True
-            Else
-                Return False
-            End If
-            Return False
-        End If
-    End Function
     Private Sub ucoBeschaffenheitspruefung_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         _suspendEvents = True
-        If Not ParentFormular Is Nothing Then
-
-            Try
-                'Hilfetext setzen
-                ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_Eichprotokollverfahrensauswahl)
-                'Überschrift setzen
-                ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_Eichprotokollverfahrensauswahl
-            Catch ex As Exception
-            End Try
-        End If
+        SetzeUeberschrift()
         EichprozessStatusReihenfolge = GlobaleEnumeratoren.enuEichprozessStatus.AuswahlKonformitätsverfahren
 
         'daten füllen
@@ -79,53 +38,18 @@ Public Class uco_6EichprotokollVerfahrenswahl
         _suspendEvents = False
     End Sub
 
-    Protected Friend Overrides Sub LoadFromDatabase()
-        objEichprozess = ParentFormular.CurrentEichprozess
-        If Not DialogModus = enuDialogModus.lesend And Not DialogModus = enuDialogModus.korrigierend Then
-            Using context As New Entities
-                'neu laden des Objekts, diesmal mit den lookup Objekten
-                'Nur laden wenn es sich um eine Bearbeitung handelt (sonst würde das in Memory Objekt überschrieben werden)
-                objEichprozess = (From a In context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
-            End Using
-        End If
-        _objEichprotokoll = objEichprozess.Eichprotokoll
-
-        'steuerelemente mit werten aus DB füllen
-        FillControls()
-        If DialogModus = enuDialogModus.lesend Then
-            'falls der Konformitätsbewertungsvorgang nur lesend betrchtet werden soll, wird versucht alle Steuerlemente auf REadonly zu setzen. Wenn das nicht klappt,werden sie disabled
-            DisableControls(Me)
-        End If
-    End Sub
-
     ''' <summary>
-    ''' Lädt die Werte aus dem Beschaffenheitspruefungsobjekt in die Steuerlemente
+    ''' Status des Verfahrens speichern
     ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="args"></param>
     ''' <remarks></remarks>
-    ''' <author></author>
-    ''' <commentauthor></commentauthor>
-    Private Sub FillControls()
-        'je nach Art der Waage MAX1, Max2 oder MAX3 auslesen. Wenn dieser Wert unter 1000KG liegt, wird automatisch ü.60 KG mit normalien gewählt
-        EnableDisableRadioButtons()
-
-        'wenn keiner der Fälle zugetroffen hat, ist die auswahl nach dem Verfahren frei
-
-        If Not objEichprozess.Eichprotokoll Is Nothing Then
-            If _objEichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = GlobaleEnumeratoren.enuVerfahrensauswahl.Fahrzeugwaagen Then
-                RadRadioButtonFahrzeugwaagen.IsChecked = True
-            ElseIf _objEichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgmitNormalien Then
-                RadRadioButtonNormalien.IsChecked = True
-            ElseIf _objEichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgimStaffelverfahren Then
-                RadRadioButtonStaffelverfahren.IsChecked = True
-                'Else
-                '    RadRadioButtonNormalien.IsChecked = True
-                '    _objEichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgmitNormalien
-            End If
-        End If
-
-        '  RadRadioButtonNormalien.Focus()
-
+    Private Sub RadRadioButton_ToggleStateChanged(sender As Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RadRadioButtonNormalien.ToggleStateChanged, RadRadioButtonFahrzeugwaagen.ToggleStateChanged, RadRadioButtonStaffelverfahren.ToggleStateChanged
+        If _suspendEvents = True Then Exit Sub
+        AktuellerStatusDirty = True
     End Sub
+#End Region
+#Region "Methods"
     ''' <summary>
     ''' je nach Art der Waage MAX1, Max2 oder MAX3 auslesen. Wenn dieser Wert unter 1000KG liegt, wird automatisch ü.60 KG mit normalien gewählt
     '''
@@ -150,16 +74,102 @@ Public Class uco_6EichprotokollVerfahrenswahl
                 End If
         End Select
 
-        'If bolLock Then
-        '    '  objEichprozess.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgmitNormalien
-        '    RadRadioButtonNormalien.IsChecked = True
-        'Else
-        '    '    objEichprozess.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgimStaffelverfahren
-        '    RadRadioButtonStaffelverfahren.IsChecked = True
-        'End If
-
         RadRadioButtonFahrzeugwaagen.Enabled = Not bolLock
         RadRadioButtonStaffelverfahren.Enabled = Not bolLock
+    End Sub
+
+
+#End Region
+
+#Region "Interface Methods"
+
+    ''' <summary>
+    ''' Gültigkeit der Eingaben überprüfen
+    ''' </summary>
+    ''' <remarks></remarks>
+    ''' <author></author>
+    ''' <commentauthor></commentauthor>
+    Protected Friend Overrides Function ValidateControls() As Boolean Implements IRhewaEditingDialog.ValidateControls
+        'prüfen ob alle Felder ausgefüllt sind
+        Me.AbortSaving = False
+        If RadRadioButtonFahrzeugwaagen.IsChecked Or RadRadioButtonNormalien.IsChecked Or RadRadioButtonStaffelverfahren.IsChecked Then
+            Return True
+        Else
+            AbortSaving = True
+            'fehlermeldung anzeigen bei falscher validierung
+            Dim result = Me.ShowValidationErrorBox(True)
+
+            If result = DialogResult.Yes Or result = DialogResult.Ignore Then
+                Return True
+            ElseIf result = DialogResult.Retry Then
+                Me.RadRadioButtonNormalien.IsChecked = True
+                Return True
+            Else
+                Return False
+            End If
+            Return False
+        End If
+    End Function
+
+    Protected Friend Overrides Sub SetzeUeberschrift() Implements IRhewaEditingDialog.SetzeUeberschrift
+        If Not ParentFormular Is Nothing Then
+
+            Try
+                'Hilfetext setzen
+                ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_Eichprotokollverfahrensauswahl)
+                'Überschrift setzen
+                ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_Eichprotokollverfahrensauswahl
+            Catch ex As Exception
+            End Try
+        End If
+    End Sub
+
+    Protected Friend Overrides Sub LoadFromDatabase() Implements IRhewaEditingDialog.LoadFromDatabase
+        objEichprozess = ParentFormular.CurrentEichprozess
+        If Not DialogModus = enuDialogModus.lesend And Not DialogModus = enuDialogModus.korrigierend Then
+            Using context As New Entities
+                'neu laden des Objekts, diesmal mit den lookup Objekten
+                'Nur laden wenn es sich um eine Bearbeitung handelt (sonst würde das in Memory Objekt überschrieben werden)
+                objEichprozess = (From a In context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
+            End Using
+        End If
+        _objEichprotokoll = objEichprozess.Eichprotokoll
+
+        'steuerelemente mit werten aus DB füllen
+        FillControls()
+        If DialogModus = enuDialogModus.lesend Then
+            'falls der Konformitätsbewertungsvorgang nur lesend betrchtet werden soll, wird versucht alle Steuerlemente auf REadonly zu setzen. Wenn das nicht klappt,werden sie disabled
+            DisableControls(Me)
+        End If
+    End Sub
+
+    ''' <summary>
+    ''' Lädt die Werte aus dem Beschaffenheitspruefungsobjekt in die Steuerlemente
+    ''' </summary>
+    ''' <remarks></remarks>
+    ''' <author></author>
+    ''' <commentauthor></commentauthor>
+    Protected Friend Overrides Sub FillControls() Implements IRhewaEditingDialog.FillControls
+        'je nach Art der Waage MAX1, Max2 oder MAX3 auslesen. Wenn dieser Wert unter 1000KG liegt, wird automatisch ü.60 KG mit normalien gewählt
+        EnableDisableRadioButtons()
+
+        'wenn keiner der Fälle zugetroffen hat, ist die auswahl nach dem Verfahren frei
+
+        If Not objEichprozess.Eichprotokoll Is Nothing Then
+            If _objEichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = GlobaleEnumeratoren.enuVerfahrensauswahl.Fahrzeugwaagen Then
+                RadRadioButtonFahrzeugwaagen.IsChecked = True
+            ElseIf _objEichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgmitNormalien Then
+                RadRadioButtonNormalien.IsChecked = True
+            ElseIf _objEichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgimStaffelverfahren Then
+                RadRadioButtonStaffelverfahren.IsChecked = True
+                'Else
+                '    RadRadioButtonNormalien.IsChecked = True
+                '    _objEichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgmitNormalien
+            End If
+        End If
+
+        '  RadRadioButtonNormalien.Focus()
+
     End Sub
 
     ''' <summary>
@@ -168,7 +178,7 @@ Public Class uco_6EichprotokollVerfahrenswahl
     ''' <remarks></remarks>
     ''' <author></author>
     ''' <commentauthor></commentauthor>
-    Private Sub UpdateObject()
+    Protected Friend Overrides Sub UpdateObjekt() Implements IRhewaEditingDialog.UpdateObjekt
         If DialogModus = enuDialogModus.normal Then objEichprozess.Bearbeitungsdatum = Date.Now
         'je nachdem ob das Objekt schon existiert (man ist im Vorgang bereits weiter)  oder nicht, das eine oder andere Objekt ansprechen. Der Hintergrund kommt leider vom Entity Framework
         'ich habe erst eine ID im Eichprotokoll, wenn ich dieses Speichere. Somit kann ich dem Eichprozess FK aufs Eichprotokoll nur zuweisen, wenn das Eichprotokoll bereits gespeichert ist
@@ -194,127 +204,96 @@ Public Class uco_6EichprotokollVerfahrenswahl
         End If
     End Sub
 
-    ''' <summary>
-    ''' aktualisieren der Oberfläche wenn nötig
-    ''' </summary>
-    ''' <param name="UserControl"></param>
-    ''' <remarks></remarks>
-    Protected Overrides Sub UpdateNeeded(UserControl As UserControl)
-        If Me.Equals(UserControl) Then
-            MyBase.UpdateNeeded(UserControl)
-            Me.LokalisierungNeeded(UserControl)
+    Protected Friend Overrides Sub SaveObjekt() Implements IRhewaEditingDialog.SaveObjekt
+        'neuen Context aufbauen
+        Using Context As New Entities
 
-            LoadFromDatabase()
-        End If
+            If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
+
+                If _objEichprotokoll Is Nothing Then           'neues Eichprotokoll anlegen und verfahrens Art zuweisen
+                    _objEichprotokoll = Context.Eichprotokoll.Create
+                    Context.Eichprotokoll.Add(_objEichprotokoll)
+
+                Else
+                    Dim dobjEichprotkoll As Eichprotokoll = Context.Eichprotokoll.FirstOrDefault(Function(value) value.ID = _objEichprotokoll.ID)
+                    _objEichprotokoll = dobjEichprotkoll
+                End If
+
+                'Füllt das Objekt mit den Werten aus den Steuerlementen
+                UpdateObjekt()
+                'Speichern in Datenbank
+                Context.SaveChanges()
+
+                'zuweisen des eichprotokolls an den eichprozess
+
+                'prüfen ob das Objekt anhand der ID gefunden werden kann
+                Dim dobjEichprozess As Eichprozess = (From a In Context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
+                If Not dobjEichprozess Is Nothing Then
+                    'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
+                    objEichprozess = dobjEichprozess
+                    objEichprozess.FK_Eichprotokoll = _objEichprotokoll.ID 'zuweisen des eichprotokolls an den eichprozess
+                    objEichprozess.Eichprotokoll = _objEichprotokoll
+
+                    'Füllt das Objekt mit den Werten aus den Steuerlementen
+                    UpdateObjekt()
+                    'Speichern in Datenbank
+                    Context.SaveChanges()
+                End If
+            End If
+        End Using
     End Sub
 
-    'Speicherroutine
-    Protected Overrides Sub SaveNeeded(ByVal UserControl As UserControl)
-        If Me.Equals(UserControl) Then
-            'neuen Context aufbauen
-            If DialogModus = enuDialogModus.lesend Then
-                If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.EichprotokollStammdaten Then
-                    objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.EichprotokollStammdaten
-                End If
-                ParentFormular.CurrentEichprozess = objEichprozess
-                Exit Sub
-            End If
-            If DialogModus = enuDialogModus.korrigierend Then
-                UpdateObject()
-                If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.EichprotokollStammdaten Then
-                    objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.EichprotokollStammdaten
-                End If
-                ParentFormular.CurrentEichprozess = objEichprozess
-                Exit Sub
-            End If
-            If ValidateControls() = True Then
-
-                Using Context As New Entities
-
-                    If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
-
-                        If _objEichprotokoll Is Nothing Then           'neues Eichprotokoll anlegen und verfahrens Art zuweisen
-                            _objEichprotokoll = Context.Eichprotokoll.Create
-                            Context.Eichprotokoll.Add(_objEichprotokoll)
-
-                        Else
-                            Dim dobjEichprotkoll As Eichprotokoll = Context.Eichprotokoll.FirstOrDefault(Function(value) value.ID = _objEichprotokoll.ID)
-                            _objEichprotokoll = dobjEichprotkoll
+    Protected Friend Overrides Sub AktualisiereStatus() Implements IRhewaEditingDialog.AktualisiereStatus
+        'neuen Context aufbauen
+        Using Context As New Entities
+            If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
+                Dim dobjEichprozess As Eichprozess = (From a In Context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
+                If Not dobjEichprozess Is Nothing Then
+                    'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
+                    objEichprozess = dobjEichprozess
+                    'neuen Status zuweisen
+                    If AktuellerStatusDirty = False Then
+                        If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.EichprotokollStammdaten Then
+                            objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.EichprotokollStammdaten
                         End If
-
-                        'Füllt das Objekt mit den Werten aus den Steuerlementen
-                        UpdateObject()
-                        'Speichern in Datenbank
-                        Context.SaveChanges()
-
-                        'zuweisen des eichprotokolls an den eichprozess
-
-                        'prüfen ob das Objekt anhand der ID gefunden werden kann
-                        Dim dobjEichprozess As Eichprozess = (From a In Context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
-                        If Not dobjEichprozess Is Nothing Then
-                            'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
-                            objEichprozess = dobjEichprozess
-                            objEichprozess.FK_Eichprotokoll = _objEichprotokoll.ID 'zuweisen des eichprotokolls an den eichprozess
-                            objEichprozess.Eichprotokoll = _objEichprotokoll
-                            'neuen Status zuweisen
-                            If AktuellerStatusDirty = False Then
-                                If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.EichprotokollStammdaten Then
-                                    objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.EichprotokollStammdaten
-                                End If
-                            ElseIf AktuellerStatusDirty = True Then
-                                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.EichprotokollStammdaten
-                            End If
-                            ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
-
-                            'Füllt das Objekt mit den Werten aus den Steuerlementen
-                            UpdateObject()
-                            'Speichern in Datenbank
-                            Context.SaveChanges()
-
-                        End If
+                    ElseIf AktuellerStatusDirty = True Then
+                        objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.EichprotokollStammdaten
                     End If
-                End Using
-                ParentFormular.CurrentEichprozess = objEichprozess
+                    ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
+
+                    'Füllt das Objekt mit den Werten aus den Steuerlementen
+                    UpdateObjekt()
+                    'Speichern in Datenbank
+                    Context.SaveChanges()
+                End If
             End If
-        End If
+        End Using
     End Sub
 
-    Protected Overrides Sub SaveWithoutValidationNeeded(usercontrol As UserControl)
-        If Me.Equals(usercontrol) Then
-            If DialogModus = enuDialogModus.lesend Then
-                UpdateObject()
-                ParentFormular.CurrentEichprozess = objEichprozess
-                Exit Sub
+    Protected Friend Overrides Function CheckDialogModus() As Boolean Implements IRhewaEditingDialog.CheckDialogModus
+        If DialogModus = enuDialogModus.lesend Then
+            If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.EichprotokollStammdaten Then
+                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.EichprotokollStammdaten
             End If
-            'neuen Context aufbauen
-            Using Context As New Entities
-                'prüfen ob CREATE oder UPDATE durchgeführt werden muss
-                If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
-                    'prüfen ob das Objekt anhand der ID gefunden werden kann
-                    Dim dobjEichprozess As Eichprozess = (From a In Context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
-                    If Not dobjEichprozess Is Nothing Then
-                        'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
-                        objEichprozess = dobjEichprozess
-                        'neuen Status zuweisen
-
-                        'Füllt das Objekt mit den Werten aus den Steuerlementen
-                        UpdateObject()
-                        'Speichern in Datenbank
-                        Context.SaveChanges()
-                    End If
-                End If
-            End Using
-
             ParentFormular.CurrentEichprozess = objEichprozess
+            Return False
         End If
-    End Sub
-#End Region
+        If DialogModus = enuDialogModus.korrigierend Then
+            UpdateObjekt()
+            If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.EichprotokollStammdaten Then
+                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.EichprotokollStammdaten
+            End If
+            ParentFormular.CurrentEichprozess = objEichprozess
+            Return False
+        End If
+        Return True
+    End Function
 
-    Protected Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
-        If Me.Name.Equals(UserControl.Name) = False Then Exit Sub
 
-        MyBase.LokalisierungNeeded(UserControl)
 
+
+
+    Protected Friend Overrides Sub Lokalisiere() Implements IRhewaEditingDialog.Lokalisiere
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco_6EichprotokollVerfahrenswahl))
         Lokalisierung(Me, resources)
 
@@ -327,24 +306,9 @@ Public Class uco_6EichprotokollVerfahrenswahl
             Catch ex As Exception
             End Try
         End If
-
     End Sub
 
-    ''' <summary>
-    ''' Status des Verfahrens speichern
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="args"></param>
-    ''' <remarks></remarks>
-    Private Sub RadRadioButton_ToggleStateChanged(sender As Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RadRadioButtonNormalien.ToggleStateChanged, RadRadioButtonFahrzeugwaagen.ToggleStateChanged, RadRadioButtonStaffelverfahren.ToggleStateChanged
-        If _suspendEvents = True Then Exit Sub
-        AktuellerStatusDirty = True
-    End Sub
-
-    'Entsperrroutine
-    Protected Overrides Sub EntsperrungNeeded()
-        MyBase.EntsperrungNeeded()
-
+    Protected Friend Overrides Sub Entsperrung() Implements IRhewaEditingDialog.Entsperrung
         'Hiermit wird ein lesender Vorgang wieder entsperrt.
         EnableControls(Me)
 
@@ -353,14 +317,11 @@ Public Class uco_6EichprotokollVerfahrenswahl
         ParentFormular.DialogModus = FrmMainContainer.enuDialogModus.korrigierend
     End Sub
 
-    Protected Overrides Sub VersendenNeeded(TargetUserControl As UserControl)
-
-        If Me.Equals(TargetUserControl) Then
-            MyBase.VersendenNeeded(TargetUserControl)
-
-            UpdateObject()
-            'Erzeugen eines Server Objektes auf basis des aktuellen DS. Setzt es auf es ausserdem auf Fehlerhaft
-            CloneAndSendServerObjekt()
-        End If
+    Protected Friend Overrides Sub Versenden() Implements IRhewaEditingDialog.Versenden
+        UpdateObjekt()
+        'Erzeugen eines Server Objektes auf basis des aktuellen DS. Setzt es auf es ausserdem auf Fehlerhaft
+        CloneAndSendServerObjekt()
     End Sub
+
+#End Region
 End Class

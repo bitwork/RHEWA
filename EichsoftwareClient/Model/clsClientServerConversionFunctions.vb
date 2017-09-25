@@ -187,9 +187,10 @@ Public Class clsClientServerConversionFunctions
         Try
             Dim intCounter As Integer = 0
             For Each sourceo In SourceObject._ServerEichprotokoll.ServerPruefungAnsprechvermoegen
-                Dim targeto = New PruefungAnsprechvermoegen
-                targeto.Anzeige = sourceo._Anzeige
-                targeto.FK_Eichprotokoll = sourceo._FK_Eichprotokoll
+                Dim targeto = New PruefungAnsprechvermoegen With {
+                    .Anzeige = sourceo._Anzeige,
+                    .FK_Eichprotokoll = sourceo._FK_Eichprotokoll
+                }
                 If bolNewIDs Then
                     targeto.FK_Eichprotokoll = TargetObject.Eichprotokoll.ID
                     targeto.ID = sourceo._ID
@@ -208,14 +209,15 @@ Public Class clsClientServerConversionFunctions
         Try
             Dim intCounter As Integer = 0
             For Each sourceo In SourceObject._ServerEichprotokoll.ServerPruefungAussermittigeBelastung
-                Dim targeto = New PruefungAussermittigeBelastung
-                targeto.Anzeige = sourceo._Anzeige
-                targeto.Belastungsort = sourceo._Belastungsort
-                targeto.Bereich = sourceo._Bereich
-                targeto.EFG = sourceo._EFG
-                targeto.EFGExtra = sourceo._EFGExtra
-                targeto.Fehler = sourceo._Fehler
-                targeto.FK_Eichprotokoll = sourceo._FK_Eichprotokoll
+                Dim targeto = New PruefungAussermittigeBelastung With {
+                    .Anzeige = sourceo._Anzeige,
+                    .Belastungsort = sourceo._Belastungsort,
+                    .Bereich = sourceo._Bereich,
+                    .EFG = sourceo._EFG,
+                    .EFGExtra = sourceo._EFGExtra,
+                    .Fehler = sourceo._Fehler,
+                    .FK_Eichprotokoll = sourceo._FK_Eichprotokoll
+                }
                 If bolNewIDs Then
                     targeto.FK_Eichprotokoll = TargetObject.Eichprotokoll.ID
                     targeto.ID = sourceo._ID
@@ -231,13 +233,14 @@ Public Class clsClientServerConversionFunctions
         Try
             Dim intCounter As Integer = 0
             For Each sourceo In SourceObject._ServerEichprotokoll.ServerPruefungLinearitaetFallend
-                Dim targeto = New PruefungLinearitaetFallend
-                targeto.Anzeige = sourceo._Anzeige
-                targeto.Messpunkt = sourceo._Messpunkt
-                targeto.Bereich = sourceo._Bereich
-                targeto.EFG = sourceo._EFG
-                targeto.Fehler = sourceo._Fehler
-                targeto.FK_Eichprotokoll = sourceo._FK_Eichprotokoll
+                Dim targeto = New PruefungLinearitaetFallend With {
+                    .Anzeige = sourceo._Anzeige,
+                    .Messpunkt = sourceo._Messpunkt,
+                    .Bereich = sourceo._Bereich,
+                    .EFG = sourceo._EFG,
+                    .Fehler = sourceo._Fehler,
+                    .FK_Eichprotokoll = sourceo._FK_Eichprotokoll
+                }
                 If bolNewIDs Then
                     targeto.FK_Eichprotokoll = TargetObject.Eichprotokoll.ID
                     targeto.ID = sourceo._ID
@@ -253,13 +256,14 @@ Public Class clsClientServerConversionFunctions
         Try
             Dim intCounter As Integer = 0
             For Each sourceo In SourceObject._ServerEichprotokoll.ServerPruefungLinearitaetSteigend
-                Dim targeto = New PruefungLinearitaetSteigend
-                targeto.Anzeige = sourceo._Anzeige
-                targeto.Messpunkt = sourceo._Messpunkt
-                targeto.Bereich = sourceo._Bereich
-                targeto.EFG = sourceo._EFG
-                targeto.Fehler = sourceo._Fehler
-                targeto.FK_Eichprotokoll = sourceo._FK_Eichprotokoll
+                Dim targeto = New PruefungLinearitaetSteigend With {
+                    .Anzeige = sourceo._Anzeige,
+                    .Messpunkt = sourceo._Messpunkt,
+                    .Bereich = sourceo._Bereich,
+                    .EFG = sourceo._EFG,
+                    .Fehler = sourceo._Fehler,
+                    .FK_Eichprotokoll = sourceo._FK_Eichprotokoll
+                }
                 If bolNewIDs Then
                     targeto.FK_Eichprotokoll = TargetObject.Eichprotokoll.ID
                     targeto.ID = sourceo._ID
@@ -274,14 +278,15 @@ Public Class clsClientServerConversionFunctions
         Try
             Dim intCounter As Integer = 0
             For Each sourceo In SourceObject._ServerEichprotokoll.ServerPruefungRollendeLasten
-                Dim targeto = New PruefungRollendeLasten
-                targeto.Anzeige = sourceo._Anzeige
-                targeto.AuffahrtSeite = sourceo._AuffahrtSeite
-                targeto.Belastungsstelle = sourceo._Belastungsstelle
-                targeto.EFG = sourceo._EFG
-                targeto.EFGExtra = sourceo._EFGExtra
-                targeto.Fehler = sourceo._Fehler
-                targeto.FK_Eichprotokoll = sourceo._FK_Eichprotokoll
+                Dim targeto = New PruefungRollendeLasten With {
+                    .Anzeige = sourceo._Anzeige,
+                    .AuffahrtSeite = sourceo._AuffahrtSeite,
+                    .Belastungsstelle = sourceo._Belastungsstelle,
+                    .EFG = sourceo._EFG,
+                    .EFGExtra = sourceo._EFGExtra,
+                    .Fehler = sourceo._Fehler,
+                    .FK_Eichprotokoll = sourceo._FK_Eichprotokoll
+                }
                 If bolNewIDs Then
                     targeto.FK_Eichprotokoll = TargetObject.Eichprotokoll.ID
                     targeto.ID = sourceo._ID
@@ -296,13 +301,14 @@ Public Class clsClientServerConversionFunctions
         Try
             Dim intCounter As Integer = 0
             For Each sourceo In SourceObject._ServerEichprotokoll.ServerPruefungStabilitaetGleichgewichtslage
-                Dim targeto = New PruefungStabilitaetGleichgewichtslage
-                targeto.Anzeige = sourceo._Anzeige
-                targeto.AbdruckOK = sourceo._AbdruckOK
-                targeto.Durchlauf = sourceo._Durchlauf
-                targeto.MAX = sourceo._MAX
-                targeto.MIN = sourceo._MIN
-                targeto.FK_Eichprotokoll = sourceo._FK_Eichprotokoll
+                Dim targeto = New PruefungStabilitaetGleichgewichtslage With {
+                    .Anzeige = sourceo._Anzeige,
+                    .AbdruckOK = sourceo._AbdruckOK,
+                    .Durchlauf = sourceo._Durchlauf,
+                    .MAX = sourceo._MAX,
+                    .MIN = sourceo._MIN,
+                    .FK_Eichprotokoll = sourceo._FK_Eichprotokoll
+                }
                 If bolNewIDs Then
                     targeto.FK_Eichprotokoll = TargetObject.Eichprotokoll.ID
                     targeto.ID = sourceo._ID
@@ -318,17 +324,18 @@ Public Class clsClientServerConversionFunctions
         Try
             Dim intCounter As Integer = 0
             For Each sourceo In SourceObject._ServerEichprotokoll.ServerPruefungStaffelverfahrenErsatzlast
-                Dim targeto = New PruefungStaffelverfahrenErsatzlast
-                targeto.Bereich = sourceo._Bereich
-                targeto.DifferenzAnzeigewerte_EFG = sourceo._DifferenzAnzeigewerte_EFG
-                targeto.DifferenzAnzeigewerte_Fehler = sourceo._DifferenzAnzeigewerte_Fehler
-                targeto.Ersatzlast_Ist = sourceo._Ersatzlast_Ist
-                targeto.Ersatzlast_Soll = sourceo._Ersatzlast_Soll
-                targeto.Ersatzlast2_Ist = sourceo._Ersatzlast2_Ist
-                targeto.Ersatzlast2_Soll = sourceo._Ersatzlast2_Soll
-                targeto.ErsatzUndNormallast_Ist = sourceo._ErsatzUndNormallast_Ist
-                targeto.ErsatzUndNormallast_Soll = sourceo._ErsatzUndNormallast_Soll
-                targeto.FK_Eichprotokoll = sourceo._FK_Eichprotokoll
+                Dim targeto = New PruefungStaffelverfahrenErsatzlast With {
+                    .Bereich = sourceo._Bereich,
+                    .DifferenzAnzeigewerte_EFG = sourceo._DifferenzAnzeigewerte_EFG,
+                    .DifferenzAnzeigewerte_Fehler = sourceo._DifferenzAnzeigewerte_Fehler,
+                    .Ersatzlast_Ist = sourceo._Ersatzlast_Ist,
+                    .Ersatzlast_Soll = sourceo._Ersatzlast_Soll,
+                    .Ersatzlast2_Ist = sourceo._Ersatzlast2_Ist,
+                    .Ersatzlast2_Soll = sourceo._Ersatzlast2_Soll,
+                    .ErsatzUndNormallast_Ist = sourceo._ErsatzUndNormallast_Ist,
+                    .ErsatzUndNormallast_Soll = sourceo._ErsatzUndNormallast_Soll,
+                    .FK_Eichprotokoll = sourceo._FK_Eichprotokoll
+                }
                 If bolNewIDs Then
                     targeto.FK_Eichprotokoll = TargetObject.Eichprotokoll.ID
                     targeto.ID = sourceo._ID
@@ -349,11 +356,12 @@ Public Class clsClientServerConversionFunctions
         Try
             Dim intCounter As Integer = 0
             For Each sourceo In SourceObject._ServerEichprotokoll.ServerPruefungStaffelverfahrenNormallast
-                Dim targeto = New PruefungStaffelverfahrenNormallast
-                targeto.Bereich = sourceo._Bereich
-                targeto.DifferenzAnzeigewerte_EFG = sourceo._DifferenzAnzeigewerte_EFG
-                targeto.DifferenzAnzeigewerte_Fehler = sourceo._DifferenzAnzeigewerte_Fehler
-                targeto.FK_Eichprotokoll = sourceo._FK_Eichprotokoll
+                Dim targeto = New PruefungStaffelverfahrenNormallast With {
+                    .Bereich = sourceo._Bereich,
+                    .DifferenzAnzeigewerte_EFG = sourceo._DifferenzAnzeigewerte_EFG,
+                    .DifferenzAnzeigewerte_Fehler = sourceo._DifferenzAnzeigewerte_Fehler,
+                    .FK_Eichprotokoll = sourceo._FK_Eichprotokoll
+                }
                 If bolNewIDs Then
                     targeto.FK_Eichprotokoll = TargetObject.Eichprotokoll.ID
                     targeto.ID = sourceo._ID
@@ -389,14 +397,15 @@ Public Class clsClientServerConversionFunctions
         Try
             Dim intCounter As Integer = 0
             For Each sourceo In SourceObject._ServerEichprotokoll.ServerPruefungWiederholbarkeit
-                Dim targeto = New PruefungWiederholbarkeit
-                targeto.Anzeige = sourceo._Anzeige
-                targeto.Belastung = sourceo._Belastung
-                targeto.Wiederholung = sourceo._Wiederholung
-                targeto.EFG = sourceo._EFG
-                targeto.EFG_Extra = sourceo._EFG_Extra
-                targeto.Fehler = sourceo._Fehler
-                targeto.FK_Eichprotokoll = sourceo._FK_Eichprotokoll
+                Dim targeto = New PruefungWiederholbarkeit With {
+                    .Anzeige = sourceo._Anzeige,
+                    .Belastung = sourceo._Belastung,
+                    .Wiederholung = sourceo._Wiederholung,
+                    .EFG = sourceo._EFG,
+                    .EFG_Extra = sourceo._EFG_Extra,
+                    .Fehler = sourceo._Fehler,
+                    .FK_Eichprotokoll = sourceo._FK_Eichprotokoll
+                }
                 If bolNewIDs Then
                     targeto.FK_Eichprotokoll = TargetObject.Eichprotokoll.ID
                     targeto.ID = sourceo._ID
@@ -413,35 +422,36 @@ Public Class clsClientServerConversionFunctions
             Try
                 Dim intCounter As Integer = 0
                 For Each sourceo In SourceObject._ServerMogelstatistik
-                    Dim targeto = New Mogelstatistik
-                    targeto.FK_Auswertegeraet = TargetObject.FK_Auswertegeraet
-                    targeto.FK_Eichprozess = TargetObject.ID
-                    targeto.FK_Waegezelle = TargetObject.FK_Waegezelle
-                    targeto.Kompatiblitaet_AnschriftWaagenbaufirma = sourceo._Kompatiblitaet_AnschriftWaagenbaufirma
-                    targeto.Kompatiblitaet_AWG_Anschlussart = sourceo._Kompatiblitaet_AWG_Anschlussart
-                    targeto.Kompatiblitaet_Verbindungselemente_BruchteilEichfehlergrenze = sourceo._Kompatiblitaet_Verbindungselemente_BruchteilEichfehlergrenze
-                    targeto.Kompatiblitaet_Waage_AdditiveTarahoechstlast = sourceo._Kompatiblitaet_Waage_AdditiveTarahoechstlast
-                    targeto.Kompatiblitaet_Waage_AnzahlWaegezellen = sourceo._Kompatiblitaet_Waage_AnzahlWaegezellen
-                    targeto.Kompatiblitaet_Waage_Bauartzulassung = sourceo._Kompatiblitaet_Waage_Bauartzulassung
-                    targeto.Kompatiblitaet_Waage_Ecklastzuschlag = sourceo._Kompatiblitaet_Waage_Ecklastzuschlag
-                    targeto.Kompatiblitaet_Waage_Einschaltnullstellbereich = sourceo._Kompatiblitaet_Waage_Einschaltnullstellbereich
-                    targeto.Kompatiblitaet_Waage_FabrikNummer = sourceo._Kompatiblitaet_Waage_FabrikNummer
-                    targeto.Kompatiblitaet_Waage_Genauigkeitsklasse = sourceo._Kompatiblitaet_Waage_Genauigkeitsklasse
-                    targeto.Kompatiblitaet_Waage_GrenzenTemperaturbereichMAX = sourceo._Kompatiblitaet_Waage_GrenzenTemperaturbereichMAX
-                    targeto.Kompatiblitaet_Waage_GrenzenTemperaturbereichMIN = sourceo._Kompatiblitaet_Waage_GrenzenTemperaturbereichMIN
-                    targeto.Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich1 = sourceo._Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich1
-                    targeto.Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich2 = sourceo._Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich2
-                    targeto.Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich3 = sourceo._Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich3
-                    targeto.Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich1 = sourceo._Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich1
-                    targeto.Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich2 = sourceo._Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich2
-                    targeto.Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich3 = sourceo._Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich3
-                    targeto.Kompatiblitaet_Waage_Kabellaenge = sourceo._Kompatiblitaet_Waage_Kabellaenge
-                    targeto.Kompatiblitaet_Waage_Kabelquerschnitt = sourceo._Kompatiblitaet_Waage_Kabelquerschnitt
-                    targeto.Kompatiblitaet_Waage_Revisionsnummer = sourceo._Kompatiblitaet_Waage_Revisionsnummer
-                    targeto.Kompatiblitaet_Waage_Totlast = sourceo._Kompatiblitaet_Waage_Totlast
-                    targeto.Kompatiblitaet_Waage_Uebersetzungsverhaeltnis = sourceo._Kompatiblitaet_Waage_Uebersetzungsverhaeltnis
-                    targeto.Kompatiblitaet_Waage_Zulassungsinhaber = sourceo._Kompatiblitaet_Waage_Zulassungsinhaber
-                    targeto.Kompatiblitaet_WZ_Hoechstlast = sourceo._Kompatiblitaet_WZ_Hoechstlast
+                    Dim targeto = New Mogelstatistik With {
+                        .FK_Auswertegeraet = TargetObject.FK_Auswertegeraet,
+                        .FK_Eichprozess = TargetObject.ID,
+                        .FK_Waegezelle = TargetObject.FK_Waegezelle,
+                        .Kompatiblitaet_AnschriftWaagenbaufirma = sourceo._Kompatiblitaet_AnschriftWaagenbaufirma,
+                        .Kompatiblitaet_AWG_Anschlussart = sourceo._Kompatiblitaet_AWG_Anschlussart,
+                        .Kompatiblitaet_Verbindungselemente_BruchteilEichfehlergrenze = sourceo._Kompatiblitaet_Verbindungselemente_BruchteilEichfehlergrenze,
+                        .Kompatiblitaet_Waage_AdditiveTarahoechstlast = sourceo._Kompatiblitaet_Waage_AdditiveTarahoechstlast,
+                        .Kompatiblitaet_Waage_AnzahlWaegezellen = sourceo._Kompatiblitaet_Waage_AnzahlWaegezellen,
+                        .Kompatiblitaet_Waage_Bauartzulassung = sourceo._Kompatiblitaet_Waage_Bauartzulassung,
+                        .Kompatiblitaet_Waage_Ecklastzuschlag = sourceo._Kompatiblitaet_Waage_Ecklastzuschlag,
+                        .Kompatiblitaet_Waage_Einschaltnullstellbereich = sourceo._Kompatiblitaet_Waage_Einschaltnullstellbereich,
+                        .Kompatiblitaet_Waage_FabrikNummer = sourceo._Kompatiblitaet_Waage_FabrikNummer,
+                        .Kompatiblitaet_Waage_Genauigkeitsklasse = sourceo._Kompatiblitaet_Waage_Genauigkeitsklasse,
+                        .Kompatiblitaet_Waage_GrenzenTemperaturbereichMAX = sourceo._Kompatiblitaet_Waage_GrenzenTemperaturbereichMAX,
+                        .Kompatiblitaet_Waage_GrenzenTemperaturbereichMIN = sourceo._Kompatiblitaet_Waage_GrenzenTemperaturbereichMIN,
+                        .Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich1 = sourceo._Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich1,
+                        .Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich2 = sourceo._Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich2,
+                        .Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich3 = sourceo._Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich3,
+                        .Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich1 = sourceo._Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich1,
+                        .Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich2 = sourceo._Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich2,
+                        .Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich3 = sourceo._Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich3,
+                        .Kompatiblitaet_Waage_Kabellaenge = sourceo._Kompatiblitaet_Waage_Kabellaenge,
+                        .Kompatiblitaet_Waage_Kabelquerschnitt = sourceo._Kompatiblitaet_Waage_Kabelquerschnitt,
+                        .Kompatiblitaet_Waage_Revisionsnummer = sourceo._Kompatiblitaet_Waage_Revisionsnummer,
+                        .Kompatiblitaet_Waage_Totlast = sourceo._Kompatiblitaet_Waage_Totlast,
+                        .Kompatiblitaet_Waage_Uebersetzungsverhaeltnis = sourceo._Kompatiblitaet_Waage_Uebersetzungsverhaeltnis,
+                        .Kompatiblitaet_Waage_Zulassungsinhaber = sourceo._Kompatiblitaet_Waage_Zulassungsinhaber,
+                        .Kompatiblitaet_WZ_Hoechstlast = sourceo._Kompatiblitaet_WZ_Hoechstlast
+                    }
 
                     TargetObject.Mogelstatistik.Add(targeto)
                     intCounter += 1
@@ -471,13 +481,14 @@ Public Class clsClientServerConversionFunctions
                 ReDim TargetObject._ServerEichprotokoll.ServerPruefungAnsprechvermoegen(query.Count - 1)
                 Dim intCounter As Integer = 0
                 For Each sourceo In query
-                    Dim targeto = New EichsoftwareWebservice.ServerPruefungAnsprechvermoegen
-                    targeto._Anzeige = sourceo.Anzeige
-                    targeto._FK_Eichprotokoll = sourceo.FK_Eichprotokoll
-                    targeto._Last = sourceo.Last
-                    targeto._Last1d = sourceo.Last1d
-                    targeto._LastL = sourceo.LastL
-                    targeto._Ziffernsprung = sourceo.Ziffernsprung
+                    Dim targeto = New EichsoftwareWebservice.ServerPruefungAnsprechvermoegen With {
+                        ._Anzeige = sourceo.Anzeige,
+                        ._FK_Eichprotokoll = sourceo.FK_Eichprotokoll,
+                        ._Last = sourceo.Last,
+                        ._Last1d = sourceo.Last1d,
+                        ._LastL = sourceo.LastL,
+                        ._Ziffernsprung = sourceo.Ziffernsprung
+                    }
                     TargetObject._ServerEichprotokoll.ServerPruefungAnsprechvermoegen(intCounter) = targeto
                     intCounter += 1
                 Next
@@ -495,15 +506,16 @@ Public Class clsClientServerConversionFunctions
                 ReDim TargetObject._ServerEichprotokoll.ServerPruefungAussermittigeBelastung(query.Count - 1)
                 Dim intCounter As Integer = 0
                 For Each sourceo In query
-                    Dim targeto = New EichsoftwareWebservice.ServerPruefungAussermittigeBelastung
-                    targeto._Anzeige = sourceo.Anzeige
-                    targeto._Belastungsort = sourceo.Belastungsort
-                    targeto._Bereich = sourceo.Bereich
-                    targeto._EFG = sourceo.EFG
-                    targeto._EFGExtra = sourceo.EFGExtra
-                    targeto._Fehler = sourceo.Fehler
-                    targeto._FK_Eichprotokoll = sourceo.FK_Eichprotokoll
-                    targeto._Last = sourceo.Last
+                    Dim targeto = New EichsoftwareWebservice.ServerPruefungAussermittigeBelastung With {
+                        ._Anzeige = sourceo.Anzeige,
+                        ._Belastungsort = sourceo.Belastungsort,
+                        ._Bereich = sourceo.Bereich,
+                        ._EFG = sourceo.EFG,
+                        ._EFGExtra = sourceo.EFGExtra,
+                        ._Fehler = sourceo.Fehler,
+                        ._FK_Eichprotokoll = sourceo.FK_Eichprotokoll,
+                        ._Last = sourceo.Last
+                    }
 
                     TargetObject._ServerEichprotokoll.ServerPruefungAussermittigeBelastung(intCounter) = targeto
                     intCounter += 1
@@ -521,14 +533,15 @@ Public Class clsClientServerConversionFunctions
                 ReDim TargetObject._ServerEichprotokoll.ServerPruefungLinearitaetFallend(query.Count - 1)
                 Dim intCounter As Integer = 0
                 For Each sourceo In query
-                    Dim targeto = New EichsoftwareWebservice.ServerPruefungLinearitaetFallend
-                    targeto._Anzeige = sourceo.Anzeige
-                    targeto._Messpunkt = sourceo.Messpunkt
-                    targeto._Bereich = sourceo.Bereich
-                    targeto._EFG = sourceo.EFG
-                    targeto._Fehler = sourceo.Fehler
-                    targeto._FK_Eichprotokoll = sourceo.FK_Eichprotokoll
-                    targeto._Last = sourceo.Last
+                    Dim targeto = New EichsoftwareWebservice.ServerPruefungLinearitaetFallend With {
+                        ._Anzeige = sourceo.Anzeige,
+                        ._Messpunkt = sourceo.Messpunkt,
+                        ._Bereich = sourceo.Bereich,
+                        ._EFG = sourceo.EFG,
+                        ._Fehler = sourceo.Fehler,
+                        ._FK_Eichprotokoll = sourceo.FK_Eichprotokoll,
+                        ._Last = sourceo.Last
+                    }
 
                     TargetObject._ServerEichprotokoll.ServerPruefungLinearitaetFallend(intCounter) = targeto
                     intCounter += 1
@@ -548,14 +561,15 @@ Public Class clsClientServerConversionFunctions
                 ReDim TargetObject._ServerEichprotokoll.ServerPruefungLinearitaetSteigend(query.Count - 1)
                 Dim intCounter As Integer = 0
                 For Each sourceo In query
-                    Dim targeto = New EichsoftwareWebservice.ServerPruefungLinearitaetSteigend
-                    targeto._Anzeige = sourceo.Anzeige
-                    targeto._Messpunkt = sourceo.Messpunkt
-                    targeto._Bereich = sourceo.Bereich
-                    targeto._EFG = sourceo.EFG
-                    targeto._Fehler = sourceo.Fehler
-                    targeto._FK_Eichprotokoll = sourceo.FK_Eichprotokoll
-                    targeto._Last = sourceo.Last
+                    Dim targeto = New EichsoftwareWebservice.ServerPruefungLinearitaetSteigend With {
+                        ._Anzeige = sourceo.Anzeige,
+                        ._Messpunkt = sourceo.Messpunkt,
+                        ._Bereich = sourceo.Bereich,
+                        ._EFG = sourceo.EFG,
+                        ._Fehler = sourceo.Fehler,
+                        ._FK_Eichprotokoll = sourceo.FK_Eichprotokoll,
+                        ._Last = sourceo.Last
+                    }
                     TargetObject._ServerEichprotokoll.ServerPruefungLinearitaetSteigend(intCounter) = targeto
                     intCounter += 1
                 Next
@@ -574,15 +588,16 @@ Public Class clsClientServerConversionFunctions
                 ReDim TargetObject._ServerEichprotokoll.ServerPruefungRollendeLasten(query.Count - 1)
                 Dim intCounter As Integer = 0
                 For Each sourceo In query
-                    Dim targeto = New EichsoftwareWebservice.ServerPruefungRollendeLasten
-                    targeto._Anzeige = sourceo.Anzeige
-                    targeto._AuffahrtSeite = sourceo.AuffahrtSeite
-                    targeto._Belastungsstelle = sourceo.Belastungsstelle
-                    targeto._EFG = sourceo.EFG
-                    targeto._EFGExtra = sourceo.EFGExtra
-                    targeto._Fehler = sourceo.Fehler
-                    targeto._FK_Eichprotokoll = sourceo.FK_Eichprotokoll
-                    targeto._Last = sourceo.Last
+                    Dim targeto = New EichsoftwareWebservice.ServerPruefungRollendeLasten With {
+                        ._Anzeige = sourceo.Anzeige,
+                        ._AuffahrtSeite = sourceo.AuffahrtSeite,
+                        ._Belastungsstelle = sourceo.Belastungsstelle,
+                        ._EFG = sourceo.EFG,
+                        ._EFGExtra = sourceo.EFGExtra,
+                        ._Fehler = sourceo.Fehler,
+                        ._FK_Eichprotokoll = sourceo.FK_Eichprotokoll,
+                        ._Last = sourceo.Last
+                    }
                     TargetObject._ServerEichprotokoll.ServerPruefungRollendeLasten(intCounter) = targeto
                     intCounter += 1
                 Next
@@ -601,14 +616,15 @@ Public Class clsClientServerConversionFunctions
                 ReDim TargetObject._ServerEichprotokoll.ServerPruefungStabilitaetGleichgewichtslage(query.Count - 1)
                 Dim intCounter As Integer = 0
                 For Each sourceo In query
-                    Dim targeto = New EichsoftwareWebservice.ServerPruefungStabilitaetGleichgewichtslage
-                    targeto._Anzeige = sourceo.Anzeige
-                    targeto._AbdruckOK = sourceo.AbdruckOK
-                    targeto._Durchlauf = sourceo.Durchlauf
-                    targeto._MAX = sourceo.MAX
-                    targeto._MIN = sourceo.MIN
-                    targeto._FK_Eichprotokoll = sourceo.FK_Eichprotokoll
-                    targeto._Last = sourceo.Last
+                    Dim targeto = New EichsoftwareWebservice.ServerPruefungStabilitaetGleichgewichtslage With {
+                        ._Anzeige = sourceo.Anzeige,
+                        ._AbdruckOK = sourceo.AbdruckOK,
+                        ._Durchlauf = sourceo.Durchlauf,
+                        ._MAX = sourceo.MAX,
+                        ._MIN = sourceo.MIN,
+                        ._FK_Eichprotokoll = sourceo.FK_Eichprotokoll,
+                        ._Last = sourceo.Last
+                    }
 
                     TargetObject._ServerEichprotokoll.ServerPruefungStabilitaetGleichgewichtslage(intCounter) = targeto
                     intCounter += 1
@@ -626,23 +642,24 @@ Public Class clsClientServerConversionFunctions
                 ReDim TargetObject._ServerEichprotokoll.ServerPruefungStaffelverfahrenErsatzlast(query.Count - 1)
                 Dim intCounter As Integer = 0
                 For Each sourceo In query
-                    Dim targeto = New EichsoftwareWebservice.ServerPruefungStaffelverfahrenErsatzlast
-                    targeto._Bereich = sourceo.Bereich
-                    targeto._DifferenzAnzeigewerte_EFG = sourceo.DifferenzAnzeigewerte_EFG
-                    targeto._DifferenzAnzeigewerte_Fehler = sourceo.DifferenzAnzeigewerte_Fehler
-                    targeto._Ersatzlast_Ist = sourceo.Ersatzlast_Ist
-                    targeto._Ersatzlast_Soll = sourceo.Ersatzlast_Soll
-                    targeto._Ersatzlast2_Ist = sourceo.Ersatzlast2_Ist
-                    targeto._Ersatzlast2_Soll = sourceo.Ersatzlast2_Soll
-                    targeto._ErsatzUndNormallast_Ist = sourceo.ErsatzUndNormallast_Ist
-                    targeto._ErsatzUndNormallast_Soll = sourceo.ErsatzUndNormallast_Soll
-                    targeto._FK_Eichprotokoll = sourceo.FK_Eichprotokoll
-                    targeto._MessabweichungStaffel_EFG = sourceo.MessabweichungStaffel_EFG
-                    targeto._MessabweichungStaffel_Fehler = sourceo.MessabweichungStaffel_Fehler
-                    targeto._MessabweichungWaage_EFG = sourceo.MessabweichungWaage_EFG
-                    targeto._MessabweichungWaage_Fehler = sourceo.MessabweichungWaage_Fehler
-                    targeto._Staffel = sourceo.Staffel
-                    targeto._ZusaetzlicheErsatzlast_Soll = sourceo.ZusaetzlicheErsatzlast_Soll
+                    Dim targeto = New EichsoftwareWebservice.ServerPruefungStaffelverfahrenErsatzlast With {
+                        ._Bereich = sourceo.Bereich,
+                        ._DifferenzAnzeigewerte_EFG = sourceo.DifferenzAnzeigewerte_EFG,
+                        ._DifferenzAnzeigewerte_Fehler = sourceo.DifferenzAnzeigewerte_Fehler,
+                        ._Ersatzlast_Ist = sourceo.Ersatzlast_Ist,
+                        ._Ersatzlast_Soll = sourceo.Ersatzlast_Soll,
+                        ._Ersatzlast2_Ist = sourceo.Ersatzlast2_Ist,
+                        ._Ersatzlast2_Soll = sourceo.Ersatzlast2_Soll,
+                        ._ErsatzUndNormallast_Ist = sourceo.ErsatzUndNormallast_Ist,
+                        ._ErsatzUndNormallast_Soll = sourceo.ErsatzUndNormallast_Soll,
+                        ._FK_Eichprotokoll = sourceo.FK_Eichprotokoll,
+                        ._MessabweichungStaffel_EFG = sourceo.MessabweichungStaffel_EFG,
+                        ._MessabweichungStaffel_Fehler = sourceo.MessabweichungStaffel_Fehler,
+                        ._MessabweichungWaage_EFG = sourceo.MessabweichungWaage_EFG,
+                        ._MessabweichungWaage_Fehler = sourceo.MessabweichungWaage_Fehler,
+                        ._Staffel = sourceo.Staffel,
+                        ._ZusaetzlicheErsatzlast_Soll = sourceo.ZusaetzlicheErsatzlast_Soll
+                    }
 
                     TargetObject._ServerEichprotokoll.ServerPruefungStaffelverfahrenErsatzlast(intCounter) = targeto
                     intCounter += 1
@@ -662,32 +679,33 @@ Public Class clsClientServerConversionFunctions
                 ReDim TargetObject._ServerEichprotokoll.ServerPruefungStaffelverfahrenNormallast(query.Count - 1)
                 Dim intCounter As Integer = 0
                 For Each sourceo In query
-                    Dim targeto = New EichsoftwareWebservice.ServerPruefungStaffelverfahrenNormallast
-                    targeto._Bereich = sourceo.Bereich
-                    targeto._DifferenzAnzeigewerte_EFG = sourceo.DifferenzAnzeigewerte_EFG
-                    targeto._DifferenzAnzeigewerte_Fehler = sourceo.DifferenzAnzeigewerte_Fehler
-                    targeto._FK_Eichprotokoll = sourceo.FK_Eichprotokoll
-                    targeto._MessabweichungStaffel_EFG = sourceo.MessabweichungStaffel_EFG
-                    targeto._MessabweichungStaffel_Fehler = sourceo.MessabweichungStaffel_Fehler
-                    targeto._MessabweichungWaage_EFG = sourceo.MessabweichungWaage_EFG
-                    targeto._MessabweichungWaage_Fehler = sourceo.MessabweichungWaage_Fehler
-                    targeto._NormalLast_Anzeige_1 = sourceo.NormalLast_Anzeige_1
-                    targeto._NormalLast_Anzeige_2 = sourceo.NormalLast_Anzeige_2
-                    targeto._NormalLast_Anzeige_3 = sourceo.NormalLast_Anzeige_3
-                    targeto._NormalLast_Anzeige_4 = sourceo.NormalLast_Anzeige_4
-                    targeto._NormalLast_EFG_1 = sourceo.NormalLast_EFG_1
-                    targeto._NormalLast_EFG_2 = sourceo.NormalLast_EFG_2
-                    targeto._NormalLast_EFG_3 = sourceo.NormalLast_EFG_3
-                    targeto._NormalLast_EFG_4 = sourceo.NormalLast_EFG_4
-                    targeto._NormalLast_Fehler_1 = sourceo.NormalLast_Fehler_1
-                    targeto._NormalLast_Fehler_2 = sourceo.NormalLast_Fehler_2
-                    targeto._NormalLast_Fehler_3 = sourceo.NormalLast_Fehler_3
-                    targeto._NormalLast_Fehler_4 = sourceo.NormalLast_Fehler_1
-                    targeto._NormalLast_Last_1 = sourceo.NormalLast_Last_1
-                    targeto._NormalLast_Last_2 = sourceo.NormalLast_Last_2
-                    targeto._NormalLast_Last_3 = sourceo.NormalLast_Last_3
-                    targeto._NormalLast_Last_4 = sourceo.NormalLast_Last_4
-                    targeto._Staffel = sourceo.Staffel
+                    Dim targeto = New EichsoftwareWebservice.ServerPruefungStaffelverfahrenNormallast With {
+                        ._Bereich = sourceo.Bereich,
+                        ._DifferenzAnzeigewerte_EFG = sourceo.DifferenzAnzeigewerte_EFG,
+                        ._DifferenzAnzeigewerte_Fehler = sourceo.DifferenzAnzeigewerte_Fehler,
+                        ._FK_Eichprotokoll = sourceo.FK_Eichprotokoll,
+                        ._MessabweichungStaffel_EFG = sourceo.MessabweichungStaffel_EFG,
+                        ._MessabweichungStaffel_Fehler = sourceo.MessabweichungStaffel_Fehler,
+                        ._MessabweichungWaage_EFG = sourceo.MessabweichungWaage_EFG,
+                        ._MessabweichungWaage_Fehler = sourceo.MessabweichungWaage_Fehler,
+                        ._NormalLast_Anzeige_1 = sourceo.NormalLast_Anzeige_1,
+                        ._NormalLast_Anzeige_2 = sourceo.NormalLast_Anzeige_2,
+                        ._NormalLast_Anzeige_3 = sourceo.NormalLast_Anzeige_3,
+                        ._NormalLast_Anzeige_4 = sourceo.NormalLast_Anzeige_4,
+                        ._NormalLast_EFG_1 = sourceo.NormalLast_EFG_1,
+                        ._NormalLast_EFG_2 = sourceo.NormalLast_EFG_2,
+                        ._NormalLast_EFG_3 = sourceo.NormalLast_EFG_3,
+                        ._NormalLast_EFG_4 = sourceo.NormalLast_EFG_4,
+                        ._NormalLast_Fehler_1 = sourceo.NormalLast_Fehler_1,
+                        ._NormalLast_Fehler_2 = sourceo.NormalLast_Fehler_2,
+                        ._NormalLast_Fehler_3 = sourceo.NormalLast_Fehler_3,
+                        ._NormalLast_Fehler_4 = sourceo.NormalLast_Fehler_1,
+                        ._NormalLast_Last_1 = sourceo.NormalLast_Last_1,
+                        ._NormalLast_Last_2 = sourceo.NormalLast_Last_2,
+                        ._NormalLast_Last_3 = sourceo.NormalLast_Last_3,
+                        ._NormalLast_Last_4 = sourceo.NormalLast_Last_4,
+                        ._Staffel = sourceo.Staffel
+                    }
 
                     TargetObject._ServerEichprotokoll.ServerPruefungStaffelverfahrenNormallast(intCounter) = targeto
                     intCounter += 1
@@ -708,15 +726,16 @@ Public Class clsClientServerConversionFunctions
                 ReDim TargetObject._ServerEichprotokoll.ServerPruefungWiederholbarkeit(query.Count - 1)
                 Dim intCounter As Integer = 0
                 For Each sourceo In query
-                    Dim targeto = New EichsoftwareWebservice.ServerPruefungWiederholbarkeit
-                    targeto._Anzeige = sourceo.Anzeige
-                    targeto._Belastung = sourceo.Belastung
-                    targeto._Wiederholung = sourceo.Wiederholung
-                    targeto._EFG = sourceo.EFG
-                    targeto._EFG_Extra = sourceo.EFG_Extra
-                    targeto._Fehler = sourceo.Fehler
-                    targeto._FK_Eichprotokoll = sourceo.FK_Eichprotokoll
-                    targeto._Last = sourceo.Last
+                    Dim targeto = New EichsoftwareWebservice.ServerPruefungWiederholbarkeit With {
+                        ._Anzeige = sourceo.Anzeige,
+                        ._Belastung = sourceo.Belastung,
+                        ._Wiederholung = sourceo.Wiederholung,
+                        ._EFG = sourceo.EFG,
+                        ._EFG_Extra = sourceo.EFG_Extra,
+                        ._Fehler = sourceo.Fehler,
+                        ._FK_Eichprotokoll = sourceo.FK_Eichprotokoll,
+                        ._Last = sourceo.Last
+                    }
 
                     TargetObject._ServerEichprotokoll.ServerPruefungWiederholbarkeit(intCounter) = targeto
                     intCounter += 1
@@ -736,35 +755,36 @@ Public Class clsClientServerConversionFunctions
                 ReDim TargetObject._ServerMogelstatistik(query.Count - 1)
                 Dim intCounter As Integer = 0
                 For Each sourceo In query
-                    Dim targeto = New EichsoftwareWebservice.ServerMogelstatistik
-                    targeto._FK_Auswertegeraet = sourceo.FK_Auswertegeraet
-                    targeto._FK_Eichprozess = sourceo.FK_Eichprozess
-                    targeto._FK_Waegezelle = sourceo.FK_Waegezelle
-                    targeto._Kompatiblitaet_AnschriftWaagenbaufirma = sourceo.Kompatiblitaet_AnschriftWaagenbaufirma
-                    targeto._Kompatiblitaet_AWG_Anschlussart = sourceo.Kompatiblitaet_AWG_Anschlussart
-                    targeto._Kompatiblitaet_Verbindungselemente_BruchteilEichfehlergrenze = sourceo.Kompatiblitaet_Verbindungselemente_BruchteilEichfehlergrenze
-                    targeto._Kompatiblitaet_Waage_AdditiveTarahoechstlast = sourceo.Kompatiblitaet_Waage_AdditiveTarahoechstlast
-                    targeto._Kompatiblitaet_Waage_AnzahlWaegezellen = sourceo.Kompatiblitaet_Waage_AnzahlWaegezellen
-                    targeto._Kompatiblitaet_Waage_Bauartzulassung = sourceo.Kompatiblitaet_Waage_Bauartzulassung
-                    targeto._Kompatiblitaet_Waage_Ecklastzuschlag = sourceo.Kompatiblitaet_Waage_Ecklastzuschlag
-                    targeto._Kompatiblitaet_Waage_Einschaltnullstellbereich = sourceo.Kompatiblitaet_Waage_Einschaltnullstellbereich
-                    targeto._Kompatiblitaet_Waage_FabrikNummer = sourceo.Kompatiblitaet_Waage_FabrikNummer
-                    targeto._Kompatiblitaet_Waage_Genauigkeitsklasse = sourceo.Kompatiblitaet_Waage_Genauigkeitsklasse
-                    targeto._Kompatiblitaet_Waage_GrenzenTemperaturbereichMAX = sourceo.Kompatiblitaet_Waage_GrenzenTemperaturbereichMAX
-                    targeto._Kompatiblitaet_Waage_GrenzenTemperaturbereichMIN = sourceo.Kompatiblitaet_Waage_GrenzenTemperaturbereichMIN
-                    targeto._Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich1 = sourceo.Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich1
-                    targeto._Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich2 = sourceo.Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich2
-                    targeto._Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich3 = sourceo.Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich3
-                    targeto._Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich1 = sourceo.Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich1
-                    targeto._Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich2 = sourceo.Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich2
-                    targeto._Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich3 = sourceo.Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich3
-                    targeto._Kompatiblitaet_Waage_Kabellaenge = sourceo.Kompatiblitaet_Waage_Kabellaenge
-                    targeto._Kompatiblitaet_Waage_Kabelquerschnitt = sourceo.Kompatiblitaet_Waage_Kabelquerschnitt
-                    targeto._Kompatiblitaet_Waage_Revisionsnummer = sourceo.Kompatiblitaet_Waage_Revisionsnummer
-                    targeto._Kompatiblitaet_Waage_Totlast = sourceo.Kompatiblitaet_Waage_Totlast
-                    targeto._Kompatiblitaet_Waage_Uebersetzungsverhaeltnis = sourceo.Kompatiblitaet_Waage_Uebersetzungsverhaeltnis
-                    targeto._Kompatiblitaet_Waage_Zulassungsinhaber = sourceo.Kompatiblitaet_Waage_Zulassungsinhaber
-                    targeto._Kompatiblitaet_WZ_Hoechstlast = sourceo.Kompatiblitaet_WZ_Hoechstlast
+                    Dim targeto = New EichsoftwareWebservice.ServerMogelstatistik With {
+                        ._FK_Auswertegeraet = sourceo.FK_Auswertegeraet,
+                        ._FK_Eichprozess = sourceo.FK_Eichprozess,
+                        ._FK_Waegezelle = sourceo.FK_Waegezelle,
+                        ._Kompatiblitaet_AnschriftWaagenbaufirma = sourceo.Kompatiblitaet_AnschriftWaagenbaufirma,
+                        ._Kompatiblitaet_AWG_Anschlussart = sourceo.Kompatiblitaet_AWG_Anschlussart,
+                        ._Kompatiblitaet_Verbindungselemente_BruchteilEichfehlergrenze = sourceo.Kompatiblitaet_Verbindungselemente_BruchteilEichfehlergrenze,
+                        ._Kompatiblitaet_Waage_AdditiveTarahoechstlast = sourceo.Kompatiblitaet_Waage_AdditiveTarahoechstlast,
+                        ._Kompatiblitaet_Waage_AnzahlWaegezellen = sourceo.Kompatiblitaet_Waage_AnzahlWaegezellen,
+                        ._Kompatiblitaet_Waage_Bauartzulassung = sourceo.Kompatiblitaet_Waage_Bauartzulassung,
+                        ._Kompatiblitaet_Waage_Ecklastzuschlag = sourceo.Kompatiblitaet_Waage_Ecklastzuschlag,
+                        ._Kompatiblitaet_Waage_Einschaltnullstellbereich = sourceo.Kompatiblitaet_Waage_Einschaltnullstellbereich,
+                        ._Kompatiblitaet_Waage_FabrikNummer = sourceo.Kompatiblitaet_Waage_FabrikNummer,
+                        ._Kompatiblitaet_Waage_Genauigkeitsklasse = sourceo.Kompatiblitaet_Waage_Genauigkeitsklasse,
+                        ._Kompatiblitaet_Waage_GrenzenTemperaturbereichMAX = sourceo.Kompatiblitaet_Waage_GrenzenTemperaturbereichMAX,
+                        ._Kompatiblitaet_Waage_GrenzenTemperaturbereichMIN = sourceo.Kompatiblitaet_Waage_GrenzenTemperaturbereichMIN,
+                        ._Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich1 = sourceo.Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich1,
+                        ._Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich2 = sourceo.Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich2,
+                        ._Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich3 = sourceo.Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich3,
+                        ._Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich1 = sourceo.Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich1,
+                        ._Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich2 = sourceo.Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich2,
+                        ._Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich3 = sourceo.Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich3,
+                        ._Kompatiblitaet_Waage_Kabellaenge = sourceo.Kompatiblitaet_Waage_Kabellaenge,
+                        ._Kompatiblitaet_Waage_Kabelquerschnitt = sourceo.Kompatiblitaet_Waage_Kabelquerschnitt,
+                        ._Kompatiblitaet_Waage_Revisionsnummer = sourceo.Kompatiblitaet_Waage_Revisionsnummer,
+                        ._Kompatiblitaet_Waage_Totlast = sourceo.Kompatiblitaet_Waage_Totlast,
+                        ._Kompatiblitaet_Waage_Uebersetzungsverhaeltnis = sourceo.Kompatiblitaet_Waage_Uebersetzungsverhaeltnis,
+                        ._Kompatiblitaet_Waage_Zulassungsinhaber = sourceo.Kompatiblitaet_Waage_Zulassungsinhaber,
+                        ._Kompatiblitaet_WZ_Hoechstlast = sourceo.Kompatiblitaet_WZ_Hoechstlast
+                    }
 
                     TargetObject._ServerMogelstatistik(intCounter) = targeto
                     intCounter += 1
@@ -803,106 +823,104 @@ Public Class clsClientServerConversionFunctions
     End Sub
 
     Private Shared Sub CopyServerKompNachweis(ByRef TargetObject As EichsoftwareWebservice.ServerEichprozess, ByRef SourceObject As Eichprozess)
-        TargetObject._ServerKompatiblitaetsnachweis = New EichsoftwareWebservice.ServerKompatiblitaetsnachweis
-
-        TargetObject._ServerKompatiblitaetsnachweis.Kompatiblitaet_AWG_Anschlussart = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_AWG_Anschlussart
-        TargetObject._ServerKompatiblitaetsnachweis.Kompatiblitaet_Hersteller = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Hersteller
-        TargetObject._ServerKompatiblitaetsnachweis.Kompatiblitaet_Ort = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Ort
-        TargetObject._ServerKompatiblitaetsnachweis.Kompatiblitaet_Postleitzahl = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Postleitzahl
-        TargetObject._ServerKompatiblitaetsnachweis.Kompatiblitaet_Strasse = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Strasse
-        TargetObject._ServerKompatiblitaetsnachweis.Kompatiblitaet_Verbindungselemente_BruchteilEichfehlergrenze = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Verbindungselemente_BruchteilEichfehlergrenze
-        TargetObject._ServerKompatiblitaetsnachweis.Kompatiblitaet_Waage_AdditiveTarahoechstlast = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AdditiveTarahoechstlast
-        TargetObject._ServerKompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen
-        TargetObject._ServerKompatiblitaetsnachweis.Kompatiblitaet_Waage_Bauartzulassung = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Bauartzulassung
-        TargetObject._ServerKompatiblitaetsnachweis.Kompatiblitaet_Waage_Ecklastzuschlag = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Ecklastzuschlag
-        TargetObject._ServerKompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1
-        TargetObject._ServerKompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2
-        TargetObject._ServerKompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3
-        TargetObject._ServerKompatiblitaetsnachweis.Kompatiblitaet_Waage_Einschaltnullstellbereich = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Einschaltnullstellbereich
-        TargetObject._ServerKompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer
-        TargetObject._ServerKompatiblitaetsnachweis.Kompatiblitaet_Waage_Genauigkeitsklasse = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Genauigkeitsklasse
-        TargetObject._ServerKompatiblitaetsnachweis.Kompatiblitaet_Waage_GrenzenTemperaturbereichMAX = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_GrenzenTemperaturbereichMAX
-        TargetObject._ServerKompatiblitaetsnachweis.Kompatiblitaet_Waage_GrenzenTemperaturbereichMIN = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_GrenzenTemperaturbereichMIN
-        TargetObject._ServerKompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1 = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1
-        TargetObject._ServerKompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2
-        TargetObject._ServerKompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3
-        TargetObject._ServerKompatiblitaetsnachweis.Kompatiblitaet_Waage_Kabellaenge = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Kabellaenge
-        TargetObject._ServerKompatiblitaetsnachweis.Kompatiblitaet_Waage_Kabelquerschnitt = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Kabelquerschnitt
-        TargetObject._ServerKompatiblitaetsnachweis.Kompatiblitaet_Waage_Revisionsnummer = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Revisionsnummer
-        TargetObject._ServerKompatiblitaetsnachweis.Kompatiblitaet_Waage_Totlast = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Totlast
-        TargetObject._ServerKompatiblitaetsnachweis.Kompatiblitaet_Waage_Uebersetzungsverhaeltnis = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Uebersetzungsverhaeltnis
-        TargetObject._ServerKompatiblitaetsnachweis.Kompatiblitaet_Waage_Zulassungsinhaber = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Zulassungsinhaber
-        TargetObject._ServerKompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast
+        TargetObject._ServerKompatiblitaetsnachweis = New EichsoftwareWebservice.ServerKompatiblitaetsnachweis With {
+            .Kompatiblitaet_AWG_Anschlussart = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_AWG_Anschlussart,
+            .Kompatiblitaet_Hersteller = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Hersteller,
+            .Kompatiblitaet_Ort = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Ort,
+            .Kompatiblitaet_Postleitzahl = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Postleitzahl,
+            .Kompatiblitaet_Strasse = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Strasse,
+            .Kompatiblitaet_Verbindungselemente_BruchteilEichfehlergrenze = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Verbindungselemente_BruchteilEichfehlergrenze,
+            .Kompatiblitaet_Waage_AdditiveTarahoechstlast = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AdditiveTarahoechstlast,
+            .Kompatiblitaet_Waage_AnzahlWaegezellen = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen,
+            .Kompatiblitaet_Waage_Bauartzulassung = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Bauartzulassung,
+            .Kompatiblitaet_Waage_Ecklastzuschlag = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Ecklastzuschlag,
+            .Kompatiblitaet_Waage_Eichwert1 = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1,
+            .Kompatiblitaet_Waage_Eichwert2 = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2,
+            .Kompatiblitaet_Waage_Eichwert3 = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3,
+            .Kompatiblitaet_Waage_Einschaltnullstellbereich = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Einschaltnullstellbereich,
+            .Kompatiblitaet_Waage_FabrikNummer = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer,
+            .Kompatiblitaet_Waage_Genauigkeitsklasse = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Genauigkeitsklasse,
+            .Kompatiblitaet_Waage_GrenzenTemperaturbereichMAX = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_GrenzenTemperaturbereichMAX,
+            .Kompatiblitaet_Waage_GrenzenTemperaturbereichMIN = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_GrenzenTemperaturbereichMIN,
+            .Kompatiblitaet_Waage_Hoechstlast1 = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1,
+            .Kompatiblitaet_Waage_Hoechstlast2 = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2,
+            .Kompatiblitaet_Waage_Hoechstlast3 = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3,
+            .Kompatiblitaet_Waage_Kabellaenge = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Kabellaenge,
+            .Kompatiblitaet_Waage_Kabelquerschnitt = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Kabelquerschnitt,
+            .Kompatiblitaet_Waage_Revisionsnummer = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Revisionsnummer,
+            .Kompatiblitaet_Waage_Totlast = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Totlast,
+            .Kompatiblitaet_Waage_Uebersetzungsverhaeltnis = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Uebersetzungsverhaeltnis,
+            .Kompatiblitaet_Waage_Zulassungsinhaber = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Zulassungsinhaber,
+            .Kompatiblitaet_WZ_Hoechstlast = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast
+        }
 
     End Sub
 
     Private Shared Sub CopyServerEichprotokoll(ByRef TargetObject As EichsoftwareWebservice.ServerEichprozess, ByRef SourceObject As Eichprozess)
-        TargetObject._ServerEichprotokoll = New EichsoftwareWebservice.ServerEichprotokoll
-
-        TargetObject._ServerEichprotokoll.EignungAchlastwaegungen_Geprueft = SourceObject.Eichprotokoll.EignungAchlastwaegungen_Geprueft
-        TargetObject._ServerEichprotokoll.EignungAchlastwaegungen_WaagenbrueckeEbene = SourceObject.Eichprotokoll.EignungAchlastwaegungen_WaagenbrueckeEbene
-        TargetObject._ServerEichprotokoll.EignungAchlastwaegungen_WaageNichtGeeignet = SourceObject.Eichprotokoll.EignungAchlastwaegungen_WaageNichtGeeignet
-        TargetObject._ServerEichprotokoll.Beschaffenheitspruefung_Genehmigt = SourceObject.Eichprotokoll.Beschaffenheitspruefung_Genehmigt
-        TargetObject._ServerEichprotokoll.Fallbeschleunigung_g = SourceObject.Eichprotokoll.Fallbeschleunigung_g
-        TargetObject._ServerEichprotokoll.Fallbeschleunigung_ms2 = SourceObject.Eichprotokoll.Fallbeschleunigung_ms2
-        TargetObject._ServerEichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = SourceObject.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren
-        TargetObject._ServerEichprotokoll.Identifikationsdaten_Benutzer = SourceObject.Eichprotokoll.Identifikationsdaten_Benutzer
-        TargetObject._ServerEichprotokoll.GenauigkeitNullstellung_InOrdnung = SourceObject.Eichprotokoll.GenauigkeitNullstellung_InOrdnung
-        TargetObject._ServerEichprotokoll.Identifikationsdaten_Aufstellungsort = SourceObject.Eichprotokoll.Identifikationsdaten_Aufstellungsort
-        TargetObject._ServerEichprotokoll.Identifikationsdaten_Baujahr = SourceObject.Eichprotokoll.Identifikationsdaten_Baujahr
-        TargetObject._ServerEichprotokoll.Identifikationsdaten_Datum = SourceObject.Eichprotokoll.Identifikationsdaten_Datum
-        TargetObject._ServerEichprotokoll.Identifikationsdaten_HybridMechanisch = SourceObject.Eichprotokoll.Identifikationsdaten_HybridMechanisch
-        TargetObject._ServerEichprotokoll.Identifikationsdaten_Min1 = SourceObject.Eichprotokoll.Identifikationsdaten_Min1
-        TargetObject._ServerEichprotokoll.Identifikationsdaten_Min2 = SourceObject.Eichprotokoll.Identifikationsdaten_Min2
-        TargetObject._ServerEichprotokoll.Identifikationsdaten_Min3 = SourceObject.Eichprotokoll.Identifikationsdaten_Min3
-        TargetObject._ServerEichprotokoll.Identifikationsdaten_NichtSelbsteinspielend = SourceObject.Eichprotokoll.Identifikationsdaten_NichtSelbsteinspielend
-        TargetObject._ServerEichprotokoll.Identifikationsdaten_Pruefer = SourceObject.Eichprotokoll.Identifikationsdaten_Pruefer
-        TargetObject._ServerEichprotokoll.Identifikationsdaten_Selbsteinspielend = SourceObject.Eichprotokoll.Identifikationsdaten_Selbsteinspielend
-        TargetObject._ServerEichprotokoll.Komponenten_Eichzaehlerstand = SourceObject.Eichprotokoll.Komponenten_Eichzaehlerstand
-        TargetObject._ServerEichprotokoll.Komponenten_Softwarestand = SourceObject.Eichprotokoll.Komponenten_Softwarestand
-        TargetObject._ServerEichprotokoll.Komponenten_WaegezellenFabriknummer = SourceObject.Eichprotokoll.Komponenten_WaegezellenFabriknummer
-        TargetObject._ServerEichprotokoll.Pruefverfahren_BetragNormallast = SourceObject.Eichprotokoll.Pruefverfahren_BetragNormallast
-        TargetObject._ServerEichprotokoll.Pruefverfahren_VolleNormallast = SourceObject.Eichprotokoll.Pruefverfahren_VolleNormallast
-        TargetObject._ServerEichprotokoll.Pruefverfahren_VollstaendigesStaffelverfahren = SourceObject.Eichprotokoll.Pruefverfahren_VollstaendigesStaffelverfahren
-        TargetObject._ServerEichprotokoll.Sicherung_AlibispeicherAufbewahrungsdauerReduziert = SourceObject.Eichprotokoll.Sicherung_AlibispeicherAufbewahrungsdauerReduziert
-        TargetObject._ServerEichprotokoll.Sicherung_AlibispeicherAufbewahrungsdauerReduziertBegruendung = SourceObject.Eichprotokoll.Sicherung_AlibispeicherAufbewahrungsdauerReduziertBegruendung
-        TargetObject._ServerEichprotokoll.Sicherung_AlibispeicherEingerichtet = SourceObject.Eichprotokoll.Sicherung_AlibispeicherEingerichtet
-        TargetObject._ServerEichprotokoll.Sicherung_Bemerkungen = SourceObject.Eichprotokoll.Sicherung_Bemerkungen
-        TargetObject._ServerEichprotokoll.Sicherung_BenannteStelle = SourceObject.Eichprotokoll.Sicherung_BenannteStelle
-        TargetObject._ServerEichprotokoll.Sicherung_BenannteStelleAnzahl = SourceObject.Eichprotokoll.Sicherung_BenannteStelleAnzahl
-
-        TargetObject._ServerEichprotokoll.Sicherung_DatenAusgelesen = SourceObject.Eichprotokoll.Sicherung_DatenAusgelesen
-        TargetObject._ServerEichprotokoll.Sicherung_SicherungsmarkeKlein = SourceObject.Eichprotokoll.Sicherung_SicherungsmarkeKlein
-        TargetObject._ServerEichprotokoll.Sicherung_SicherungsmarkeKleinAnzahl = SourceObject.Eichprotokoll.Sicherung_SicherungsmarkeKleinAnzahl
-        TargetObject._ServerEichprotokoll.Sicherung_SicherungsmarkeGross = SourceObject.Eichprotokoll.Sicherung_SicherungsmarkeGross
-        TargetObject._ServerEichprotokoll.Sicherung_SicherungsmarkeGrossAnzahl = SourceObject.Eichprotokoll.Sicherung_SicherungsmarkeGrossAnzahl
-
-        TargetObject._ServerEichprotokoll.Sicherung_Hinweismarke = SourceObject.Eichprotokoll.Sicherung_Hinweismarke
-        TargetObject._ServerEichprotokoll.Sicherung_HinweismarkeAnzahl = SourceObject.Eichprotokoll.Sicherung_HinweismarkeAnzahl
-        TargetObject._ServerEichprotokoll.Taraeinrichtung_ErweiterteRichtigkeitspruefungOK = SourceObject.Eichprotokoll.Taraeinrichtung_ErweiterteRichtigkeitspruefungOK
-        TargetObject._ServerEichprotokoll.Taraeinrichtung_GenauigkeitTarierungOK = SourceObject.Eichprotokoll.Taraeinrichtung_GenauigkeitTarierungOK
-        TargetObject._ServerEichprotokoll.Taraeinrichtung_TaraausgleichseinrichtungOK = SourceObject.Eichprotokoll.Taraeinrichtung_TaraausgleichseinrichtungOK
-        TargetObject._ServerEichprotokoll.Taraeinrichtung_Taraeingabe = SourceObject.Eichprotokoll.Taraeinrichtung_Taraeingabe
-        TargetObject._ServerEichprotokoll.Ueberlastanzeige_Max = SourceObject.Eichprotokoll.Ueberlastanzeige_Max
-        TargetObject._ServerEichprotokoll.Ueberlastanzeige_Ueberlast = SourceObject.Eichprotokoll.Ueberlastanzeige_Ueberlast
-        TargetObject._ServerEichprotokoll.Verwendungszweck_Automatisch = SourceObject.Eichprotokoll.Verwendungszweck_Automatisch
-        TargetObject._ServerEichprotokoll.Verwendungszweck_AutoTara = SourceObject.Eichprotokoll.Verwendungszweck_AutoTara
-        TargetObject._ServerEichprotokoll.Verwendungszweck_Drucker = SourceObject.Eichprotokoll.Verwendungszweck_Drucker
-        TargetObject._ServerEichprotokoll.Verwendungszweck_Druckertyp = SourceObject.Eichprotokoll.Verwendungszweck_Druckertyp
-        TargetObject._ServerEichprotokoll.Verwendungszweck_EichfaehigerDatenspeicher = SourceObject.Eichprotokoll.Verwendungszweck_EichfaehigerDatenspeicher
-        TargetObject._ServerEichprotokoll.Verwendungszweck_Fahrzeugwaagen_Dimension = SourceObject.Eichprotokoll.Verwendungszweck_Fahrzeugwaagen_Dimension
-        TargetObject._ServerEichprotokoll.Verwendungszweck_Fahrzeugwaagen_MxM = SourceObject.Eichprotokoll.Verwendungszweck_Fahrzeugwaagen_MxM
-        TargetObject._ServerEichprotokoll.Verwendungszweck_HalbAutomatisch = SourceObject.Eichprotokoll.Verwendungszweck_HalbAutomatisch
-        TargetObject._ServerEichprotokoll.Verwendungszweck_HandTara = SourceObject.Eichprotokoll.Verwendungszweck_HandTara
-        TargetObject._ServerEichprotokoll.Verwendungszweck_Nullnachfuehrung = SourceObject.Eichprotokoll.Verwendungszweck_Nullnachfuehrung
-        TargetObject._ServerEichprotokoll.Verwendungszweck_PC = SourceObject.Eichprotokoll.Verwendungszweck_PC
-        TargetObject._ServerEichprotokoll.Verwendungszweck_ZubehoerVerschiedenes = SourceObject.Eichprotokoll.Verwendungszweck_ZubehoerVerschiedenes
-        TargetObject._ServerEichprotokoll.Wiederholbarkeit_Staffelverfahren_MINNormalien = SourceObject.Eichprotokoll.Wiederholbarkeit_Staffelverfahren_MINNormalien
-        TargetObject._ServerEichprotokoll.Beschaffenheitspruefung_Genauigkeitsklasse = SourceObject.Eichprotokoll.Beschaffenheitspruefung_Genauigkeitsklasse
-        TargetObject._ServerEichprotokoll.Beschaffenheitspruefung_Pruefintervall = SourceObject.Eichprotokoll.Beschaffenheitspruefung_Pruefintervall
-        TargetObject._ServerEichprotokoll.Beschaffenheitspruefung_LetztePruefung = SourceObject.Eichprotokoll.Beschaffenheitspruefung_LetztePruefung
-        TargetObject._ServerEichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer = SourceObject.Eichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer
-        TargetObject._ServerEichprotokoll.Beschaffenheitspruefung_EichfahrzeugFirma = SourceObject.Eichprotokoll.Beschaffenheitspruefung_EichfahrzeugFirma
+        TargetObject._ServerEichprotokoll = New EichsoftwareWebservice.ServerEichprotokoll With {
+            .EignungAchlastwaegungen_Geprueft = SourceObject.Eichprotokoll.EignungAchlastwaegungen_Geprueft,
+            .EignungAchlastwaegungen_WaagenbrueckeEbene = SourceObject.Eichprotokoll.EignungAchlastwaegungen_WaagenbrueckeEbene,
+            .EignungAchlastwaegungen_WaageNichtGeeignet = SourceObject.Eichprotokoll.EignungAchlastwaegungen_WaageNichtGeeignet,
+            .Beschaffenheitspruefung_Genehmigt = SourceObject.Eichprotokoll.Beschaffenheitspruefung_Genehmigt,
+            .Fallbeschleunigung_g = SourceObject.Eichprotokoll.Fallbeschleunigung_g,
+            .Fallbeschleunigung_ms2 = SourceObject.Eichprotokoll.Fallbeschleunigung_ms2,
+            .FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = SourceObject.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren,
+            .Identifikationsdaten_Benutzer = SourceObject.Eichprotokoll.Identifikationsdaten_Benutzer,
+            .GenauigkeitNullstellung_InOrdnung = SourceObject.Eichprotokoll.GenauigkeitNullstellung_InOrdnung,
+            .Identifikationsdaten_Aufstellungsort = SourceObject.Eichprotokoll.Identifikationsdaten_Aufstellungsort,
+            .Identifikationsdaten_Baujahr = SourceObject.Eichprotokoll.Identifikationsdaten_Baujahr,
+            .Identifikationsdaten_Datum = SourceObject.Eichprotokoll.Identifikationsdaten_Datum,
+            .Identifikationsdaten_HybridMechanisch = SourceObject.Eichprotokoll.Identifikationsdaten_HybridMechanisch,
+            .Identifikationsdaten_Min1 = SourceObject.Eichprotokoll.Identifikationsdaten_Min1,
+            .Identifikationsdaten_Min2 = SourceObject.Eichprotokoll.Identifikationsdaten_Min2,
+            .Identifikationsdaten_Min3 = SourceObject.Eichprotokoll.Identifikationsdaten_Min3,
+            .Identifikationsdaten_NichtSelbsteinspielend = SourceObject.Eichprotokoll.Identifikationsdaten_NichtSelbsteinspielend,
+            .Identifikationsdaten_Pruefer = SourceObject.Eichprotokoll.Identifikationsdaten_Pruefer,
+            .Identifikationsdaten_Selbsteinspielend = SourceObject.Eichprotokoll.Identifikationsdaten_Selbsteinspielend,
+            .Komponenten_Eichzaehlerstand = SourceObject.Eichprotokoll.Komponenten_Eichzaehlerstand,
+            .Komponenten_Softwarestand = SourceObject.Eichprotokoll.Komponenten_Softwarestand,
+            .Komponenten_WaegezellenFabriknummer = SourceObject.Eichprotokoll.Komponenten_WaegezellenFabriknummer,
+            .Pruefverfahren_BetragNormallast = SourceObject.Eichprotokoll.Pruefverfahren_BetragNormallast,
+            .Pruefverfahren_VolleNormallast = SourceObject.Eichprotokoll.Pruefverfahren_VolleNormallast,
+            .Pruefverfahren_VollstaendigesStaffelverfahren = SourceObject.Eichprotokoll.Pruefverfahren_VollstaendigesStaffelverfahren,
+            .Sicherung_AlibispeicherAufbewahrungsdauerReduziert = SourceObject.Eichprotokoll.Sicherung_AlibispeicherAufbewahrungsdauerReduziert,
+            .Sicherung_AlibispeicherAufbewahrungsdauerReduziertBegruendung = SourceObject.Eichprotokoll.Sicherung_AlibispeicherAufbewahrungsdauerReduziertBegruendung,
+            .Sicherung_AlibispeicherEingerichtet = SourceObject.Eichprotokoll.Sicherung_AlibispeicherEingerichtet,
+            .Sicherung_Bemerkungen = SourceObject.Eichprotokoll.Sicherung_Bemerkungen,
+            .Sicherung_BenannteStelle = SourceObject.Eichprotokoll.Sicherung_BenannteStelle,
+            .Sicherung_BenannteStelleAnzahl = SourceObject.Eichprotokoll.Sicherung_BenannteStelleAnzahl,
+            .Sicherung_DatenAusgelesen = SourceObject.Eichprotokoll.Sicherung_DatenAusgelesen,
+            .Sicherung_SicherungsmarkeKlein = SourceObject.Eichprotokoll.Sicherung_SicherungsmarkeKlein,
+            .Sicherung_SicherungsmarkeKleinAnzahl = SourceObject.Eichprotokoll.Sicherung_SicherungsmarkeKleinAnzahl,
+            .Sicherung_SicherungsmarkeGross = SourceObject.Eichprotokoll.Sicherung_SicherungsmarkeGross,
+            .Sicherung_SicherungsmarkeGrossAnzahl = SourceObject.Eichprotokoll.Sicherung_SicherungsmarkeGrossAnzahl,
+            .Sicherung_Hinweismarke = SourceObject.Eichprotokoll.Sicherung_Hinweismarke,
+            .Sicherung_HinweismarkeAnzahl = SourceObject.Eichprotokoll.Sicherung_HinweismarkeAnzahl,
+            .Taraeinrichtung_ErweiterteRichtigkeitspruefungOK = SourceObject.Eichprotokoll.Taraeinrichtung_ErweiterteRichtigkeitspruefungOK,
+            .Taraeinrichtung_GenauigkeitTarierungOK = SourceObject.Eichprotokoll.Taraeinrichtung_GenauigkeitTarierungOK,
+            .Taraeinrichtung_TaraausgleichseinrichtungOK = SourceObject.Eichprotokoll.Taraeinrichtung_TaraausgleichseinrichtungOK,
+            .Taraeinrichtung_Taraeingabe = SourceObject.Eichprotokoll.Taraeinrichtung_Taraeingabe,
+            .Ueberlastanzeige_Max = SourceObject.Eichprotokoll.Ueberlastanzeige_Max,
+            .Ueberlastanzeige_Ueberlast = SourceObject.Eichprotokoll.Ueberlastanzeige_Ueberlast,
+            .Verwendungszweck_Automatisch = SourceObject.Eichprotokoll.Verwendungszweck_Automatisch,
+            .Verwendungszweck_AutoTara = SourceObject.Eichprotokoll.Verwendungszweck_AutoTara,
+            .Verwendungszweck_Drucker = SourceObject.Eichprotokoll.Verwendungszweck_Drucker,
+            .Verwendungszweck_Druckertyp = SourceObject.Eichprotokoll.Verwendungszweck_Druckertyp,
+            .Verwendungszweck_EichfaehigerDatenspeicher = SourceObject.Eichprotokoll.Verwendungszweck_EichfaehigerDatenspeicher,
+            .Verwendungszweck_Fahrzeugwaagen_Dimension = SourceObject.Eichprotokoll.Verwendungszweck_Fahrzeugwaagen_Dimension,
+            .Verwendungszweck_Fahrzeugwaagen_MxM = SourceObject.Eichprotokoll.Verwendungszweck_Fahrzeugwaagen_MxM,
+            .Verwendungszweck_HalbAutomatisch = SourceObject.Eichprotokoll.Verwendungszweck_HalbAutomatisch,
+            .Verwendungszweck_HandTara = SourceObject.Eichprotokoll.Verwendungszweck_HandTara,
+            .Verwendungszweck_Nullnachfuehrung = SourceObject.Eichprotokoll.Verwendungszweck_Nullnachfuehrung,
+            .Verwendungszweck_PC = SourceObject.Eichprotokoll.Verwendungszweck_PC,
+            .Verwendungszweck_ZubehoerVerschiedenes = SourceObject.Eichprotokoll.Verwendungszweck_ZubehoerVerschiedenes,
+            .Wiederholbarkeit_Staffelverfahren_MINNormalien = SourceObject.Eichprotokoll.Wiederholbarkeit_Staffelverfahren_MINNormalien,
+            .Beschaffenheitspruefung_Genauigkeitsklasse = SourceObject.Eichprotokoll.Beschaffenheitspruefung_Genauigkeitsklasse,
+            .Beschaffenheitspruefung_Pruefintervall = SourceObject.Eichprotokoll.Beschaffenheitspruefung_Pruefintervall,
+            .Beschaffenheitspruefung_LetztePruefung = SourceObject.Eichprotokoll.Beschaffenheitspruefung_LetztePruefung,
+            .Beschaffenheitspruefung_Pruefscheinnummer = SourceObject.Eichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer,
+            .Beschaffenheitspruefung_EichfahrzeugFirma = SourceObject.Eichprotokoll.Beschaffenheitspruefung_EichfahrzeugFirma
+        }
     End Sub
 
 #End Region
@@ -1082,13 +1100,14 @@ Public Class clsClientServerConversionFunctions
                 dbcontext.SaveChanges()
 
                 For Each sourceo In SourceObject._ServerEichprotokoll.ServerPruefungAnsprechvermoegen
-                    Dim targeto = New PruefungAnsprechvermoegen
-                    targeto.Anzeige = sourceo._Anzeige
-                    targeto.FK_Eichprotokoll = TargetObject.Eichprotokoll.ID
-                    targeto.Last = sourceo._Last
-                    targeto.Last1d = sourceo._Last1d
-                    targeto.LastL = sourceo._LastL
-                    targeto.Ziffernsprung = sourceo._Ziffernsprung
+                    Dim targeto = New PruefungAnsprechvermoegen With {
+                        .Anzeige = sourceo._Anzeige,
+                        .FK_Eichprotokoll = TargetObject.Eichprotokoll.ID,
+                        .Last = sourceo._Last,
+                        .Last1d = sourceo._Last1d,
+                        .LastL = sourceo._LastL,
+                        .Ziffernsprung = sourceo._Ziffernsprung
+                    }
                     TargetObject.Eichprotokoll.PruefungAnsprechvermoegen.Add(targeto)
                 Next
             Catch e As Exception
@@ -1104,15 +1123,16 @@ Public Class clsClientServerConversionFunctions
                 dbcontext.SaveChanges()
 
                 For Each sourceo In SourceObject._ServerEichprotokoll.ServerPruefungAussermittigeBelastung
-                    Dim targeto = New PruefungAussermittigeBelastung
-                    targeto.Anzeige = sourceo._Anzeige
-                    targeto.Belastungsort = sourceo._Belastungsort
-                    targeto.Bereich = sourceo._Bereich
-                    targeto.EFG = sourceo._EFG
-                    targeto.EFGExtra = sourceo._EFGExtra
-                    targeto.Fehler = sourceo._Fehler
-                    targeto.FK_Eichprotokoll = TargetObject.Eichprotokoll.ID
-                    targeto.Last = sourceo._Last
+                    Dim targeto = New PruefungAussermittigeBelastung With {
+                        .Anzeige = sourceo._Anzeige,
+                        .Belastungsort = sourceo._Belastungsort,
+                        .Bereich = sourceo._Bereich,
+                        .EFG = sourceo._EFG,
+                        .EFGExtra = sourceo._EFGExtra,
+                        .Fehler = sourceo._Fehler,
+                        .FK_Eichprotokoll = TargetObject.Eichprotokoll.ID,
+                        .Last = sourceo._Last
+                    }
 
                     TargetObject.Eichprotokoll.PruefungAussermittigeBelastung.Add(targeto)
                 Next
@@ -1128,14 +1148,15 @@ Public Class clsClientServerConversionFunctions
                 dbcontext.SaveChanges()
 
                 For Each sourceo In SourceObject._ServerEichprotokoll.ServerPruefungLinearitaetFallend
-                    Dim targeto = New PruefungLinearitaetFallend
-                    targeto.Anzeige = sourceo._Anzeige
-                    targeto.Messpunkt = sourceo._Messpunkt
-                    targeto.Bereich = sourceo._Bereich
-                    targeto.EFG = sourceo._EFG
-                    targeto.Fehler = sourceo._Fehler
-                    targeto.FK_Eichprotokoll = TargetObject.Eichprotokoll.ID
-                    targeto.Last = sourceo._Last
+                    Dim targeto = New PruefungLinearitaetFallend With {
+                        .Anzeige = sourceo._Anzeige,
+                        .Messpunkt = sourceo._Messpunkt,
+                        .Bereich = sourceo._Bereich,
+                        .EFG = sourceo._EFG,
+                        .Fehler = sourceo._Fehler,
+                        .FK_Eichprotokoll = TargetObject.Eichprotokoll.ID,
+                        .Last = sourceo._Last
+                    }
 
                     TargetObject.Eichprotokoll.PruefungLinearitaetFallend.Add(targeto)
                 Next
@@ -1152,14 +1173,15 @@ Public Class clsClientServerConversionFunctions
                 dbcontext.SaveChanges()
 
                 For Each sourceo In SourceObject._ServerEichprotokoll.ServerPruefungLinearitaetSteigend
-                    Dim targeto = New PruefungLinearitaetSteigend
-                    targeto.Anzeige = sourceo._Anzeige
-                    targeto.Messpunkt = sourceo._Messpunkt
-                    targeto.Bereich = sourceo._Bereich
-                    targeto.EFG = sourceo._EFG
-                    targeto.Fehler = sourceo._Fehler
-                    targeto.FK_Eichprotokoll = TargetObject.Eichprotokoll.ID
-                    targeto.Last = sourceo._Last
+                    Dim targeto = New PruefungLinearitaetSteigend With {
+                        .Anzeige = sourceo._Anzeige,
+                        .Messpunkt = sourceo._Messpunkt,
+                        .Bereich = sourceo._Bereich,
+                        .EFG = sourceo._EFG,
+                        .Fehler = sourceo._Fehler,
+                        .FK_Eichprotokoll = TargetObject.Eichprotokoll.ID,
+                        .Last = sourceo._Last
+                    }
                     TargetObject.Eichprotokoll.PruefungLinearitaetSteigend.Add(targeto)
                 Next
             Catch e As Exception
@@ -1176,15 +1198,16 @@ Public Class clsClientServerConversionFunctions
                 dbcontext.SaveChanges()
 
                 For Each sourceo In SourceObject._ServerEichprotokoll.ServerPruefungRollendeLasten
-                    Dim targeto = New PruefungRollendeLasten
-                    targeto.Anzeige = sourceo._Anzeige
-                    targeto.AuffahrtSeite = sourceo._AuffahrtSeite
-                    targeto.Belastungsstelle = sourceo._Belastungsstelle
-                    targeto.EFG = sourceo._EFG
-                    targeto.EFGExtra = sourceo._EFGExtra
-                    targeto.Fehler = sourceo._Fehler
-                    targeto.FK_Eichprotokoll = TargetObject.Eichprotokoll.ID
-                    targeto.Last = sourceo._Last
+                    Dim targeto = New PruefungRollendeLasten With {
+                        .Anzeige = sourceo._Anzeige,
+                        .AuffahrtSeite = sourceo._AuffahrtSeite,
+                        .Belastungsstelle = sourceo._Belastungsstelle,
+                        .EFG = sourceo._EFG,
+                        .EFGExtra = sourceo._EFGExtra,
+                        .Fehler = sourceo._Fehler,
+                        .FK_Eichprotokoll = TargetObject.Eichprotokoll.ID,
+                        .Last = sourceo._Last
+                    }
                     TargetObject.Eichprotokoll.PruefungRollendeLasten.Add(targeto)
                 Next
             Catch e As Exception
@@ -1200,14 +1223,15 @@ Public Class clsClientServerConversionFunctions
                 dbcontext.SaveChanges()
 
                 For Each sourceo In SourceObject._ServerEichprotokoll.ServerPruefungStabilitaetGleichgewichtslage
-                    Dim targeto = New PruefungStabilitaetGleichgewichtslage
-                    targeto.Anzeige = sourceo._Anzeige
-                    targeto.AbdruckOK = sourceo._AbdruckOK
-                    targeto.Durchlauf = sourceo._Durchlauf
-                    targeto.MAX = sourceo._MAX
-                    targeto.MIN = sourceo._MIN
-                    targeto.Last = sourceo._Last
-                    targeto.FK_Eichprotokoll = TargetObject.Eichprotokoll.ID
+                    Dim targeto = New PruefungStabilitaetGleichgewichtslage With {
+                        .Anzeige = sourceo._Anzeige,
+                        .AbdruckOK = sourceo._AbdruckOK,
+                        .Durchlauf = sourceo._Durchlauf,
+                        .MAX = sourceo._MAX,
+                        .MIN = sourceo._MIN,
+                        .Last = sourceo._Last,
+                        .FK_Eichprotokoll = TargetObject.Eichprotokoll.ID
+                    }
                     TargetObject.Eichprotokoll.PruefungStabilitaetGleichgewichtslage.Add(targeto)
                 Next
             Catch e As Exception
@@ -1223,23 +1247,24 @@ Public Class clsClientServerConversionFunctions
                 dbcontext.SaveChanges()
 
                 For Each sourceo In SourceObject._ServerEichprotokoll.ServerPruefungStaffelverfahrenErsatzlast
-                    Dim targeto = New PruefungStaffelverfahrenErsatzlast
-                    targeto.Bereich = sourceo._Bereich
-                    targeto.DifferenzAnzeigewerte_EFG = sourceo._DifferenzAnzeigewerte_EFG
-                    targeto.DifferenzAnzeigewerte_Fehler = sourceo._DifferenzAnzeigewerte_Fehler
-                    targeto.Ersatzlast_Ist = sourceo._Ersatzlast_Ist
-                    targeto.Ersatzlast_Soll = sourceo._Ersatzlast_Soll
-                    targeto.Ersatzlast2_Ist = sourceo._Ersatzlast2_Ist
-                    targeto.Ersatzlast2_Soll = sourceo._Ersatzlast2_Soll
-                    targeto.ErsatzUndNormallast_Ist = sourceo._ErsatzUndNormallast_Ist
-                    targeto.ErsatzUndNormallast_Soll = sourceo._ErsatzUndNormallast_Soll
-                    targeto.FK_Eichprotokoll = TargetObject.Eichprotokoll.ID
-                    targeto.MessabweichungStaffel_EFG = sourceo._MessabweichungStaffel_EFG
-                    targeto.MessabweichungStaffel_Fehler = sourceo._MessabweichungStaffel_Fehler
-                    targeto.MessabweichungWaage_EFG = sourceo._MessabweichungWaage_EFG
-                    targeto.MessabweichungWaage_Fehler = sourceo._MessabweichungWaage_Fehler
-                    targeto.Staffel = sourceo._Staffel
-                    targeto.ZusaetzlicheErsatzlast_Soll = sourceo._ZusaetzlicheErsatzlast_Soll
+                    Dim targeto = New PruefungStaffelverfahrenErsatzlast With {
+                        .Bereich = sourceo._Bereich,
+                        .DifferenzAnzeigewerte_EFG = sourceo._DifferenzAnzeigewerte_EFG,
+                        .DifferenzAnzeigewerte_Fehler = sourceo._DifferenzAnzeigewerte_Fehler,
+                        .Ersatzlast_Ist = sourceo._Ersatzlast_Ist,
+                        .Ersatzlast_Soll = sourceo._Ersatzlast_Soll,
+                        .Ersatzlast2_Ist = sourceo._Ersatzlast2_Ist,
+                        .Ersatzlast2_Soll = sourceo._Ersatzlast2_Soll,
+                        .ErsatzUndNormallast_Ist = sourceo._ErsatzUndNormallast_Ist,
+                        .ErsatzUndNormallast_Soll = sourceo._ErsatzUndNormallast_Soll,
+                        .FK_Eichprotokoll = TargetObject.Eichprotokoll.ID,
+                        .MessabweichungStaffel_EFG = sourceo._MessabweichungStaffel_EFG,
+                        .MessabweichungStaffel_Fehler = sourceo._MessabweichungStaffel_Fehler,
+                        .MessabweichungWaage_EFG = sourceo._MessabweichungWaage_EFG,
+                        .MessabweichungWaage_Fehler = sourceo._MessabweichungWaage_Fehler,
+                        .Staffel = sourceo._Staffel,
+                        .ZusaetzlicheErsatzlast_Soll = sourceo._ZusaetzlicheErsatzlast_Soll
+                    }
 
                     TargetObject.Eichprotokoll.PruefungStaffelverfahrenErsatzlast.Add(targeto)
 
@@ -1257,32 +1282,33 @@ Public Class clsClientServerConversionFunctions
                 Next
                 dbcontext.SaveChanges()
                 For Each sourceo In SourceObject._ServerEichprotokoll.ServerPruefungStaffelverfahrenNormallast
-                    Dim targeto = New PruefungStaffelverfahrenNormallast
-                    targeto.Bereich = sourceo._Bereich
-                    targeto.DifferenzAnzeigewerte_EFG = sourceo._DifferenzAnzeigewerte_EFG
-                    targeto.DifferenzAnzeigewerte_Fehler = sourceo._DifferenzAnzeigewerte_Fehler
-                    targeto.FK_Eichprotokoll = TargetObject.Eichprotokoll.ID
-                    targeto.MessabweichungStaffel_EFG = sourceo._MessabweichungStaffel_EFG
-                    targeto.MessabweichungStaffel_Fehler = sourceo._MessabweichungStaffel_Fehler
-                    targeto.MessabweichungWaage_EFG = sourceo._MessabweichungWaage_EFG
-                    targeto.MessabweichungWaage_Fehler = sourceo._MessabweichungWaage_Fehler
-                    targeto.NormalLast_Anzeige_1 = sourceo._NormalLast_Anzeige_1
-                    targeto.NormalLast_Anzeige_2 = sourceo._NormalLast_Anzeige_2
-                    targeto.NormalLast_Anzeige_3 = sourceo._NormalLast_Anzeige_3
-                    targeto.NormalLast_Anzeige_4 = sourceo._NormalLast_Anzeige_4
-                    targeto.NormalLast_EFG_1 = sourceo._NormalLast_EFG_1
-                    targeto.NormalLast_EFG_2 = sourceo._NormalLast_EFG_2
-                    targeto.NormalLast_EFG_3 = sourceo._NormalLast_EFG_3
-                    targeto.NormalLast_EFG_4 = sourceo._NormalLast_EFG_4
-                    targeto.NormalLast_Fehler_1 = sourceo._NormalLast_Fehler_1
-                    targeto.NormalLast_Fehler_2 = sourceo._NormalLast_Fehler_2
-                    targeto.NormalLast_Fehler_3 = sourceo._NormalLast_Fehler_3
-                    targeto.NormalLast_Fehler_4 = sourceo._NormalLast_Fehler_1
-                    targeto.NormalLast_Last_1 = sourceo._NormalLast_Last_1
-                    targeto.NormalLast_Last_2 = sourceo._NormalLast_Last_2
-                    targeto.NormalLast_Last_3 = sourceo._NormalLast_Last_3
-                    targeto.NormalLast_Last_4 = sourceo._NormalLast_Last_4
-                    targeto.Staffel = sourceo._Staffel
+                    Dim targeto = New PruefungStaffelverfahrenNormallast With {
+                        .Bereich = sourceo._Bereich,
+                        .DifferenzAnzeigewerte_EFG = sourceo._DifferenzAnzeigewerte_EFG,
+                        .DifferenzAnzeigewerte_Fehler = sourceo._DifferenzAnzeigewerte_Fehler,
+                        .FK_Eichprotokoll = TargetObject.Eichprotokoll.ID,
+                        .MessabweichungStaffel_EFG = sourceo._MessabweichungStaffel_EFG,
+                        .MessabweichungStaffel_Fehler = sourceo._MessabweichungStaffel_Fehler,
+                        .MessabweichungWaage_EFG = sourceo._MessabweichungWaage_EFG,
+                        .MessabweichungWaage_Fehler = sourceo._MessabweichungWaage_Fehler,
+                        .NormalLast_Anzeige_1 = sourceo._NormalLast_Anzeige_1,
+                        .NormalLast_Anzeige_2 = sourceo._NormalLast_Anzeige_2,
+                        .NormalLast_Anzeige_3 = sourceo._NormalLast_Anzeige_3,
+                        .NormalLast_Anzeige_4 = sourceo._NormalLast_Anzeige_4,
+                        .NormalLast_EFG_1 = sourceo._NormalLast_EFG_1,
+                        .NormalLast_EFG_2 = sourceo._NormalLast_EFG_2,
+                        .NormalLast_EFG_3 = sourceo._NormalLast_EFG_3,
+                        .NormalLast_EFG_4 = sourceo._NormalLast_EFG_4,
+                        .NormalLast_Fehler_1 = sourceo._NormalLast_Fehler_1,
+                        .NormalLast_Fehler_2 = sourceo._NormalLast_Fehler_2,
+                        .NormalLast_Fehler_3 = sourceo._NormalLast_Fehler_3,
+                        .NormalLast_Fehler_4 = sourceo._NormalLast_Fehler_1,
+                        .NormalLast_Last_1 = sourceo._NormalLast_Last_1,
+                        .NormalLast_Last_2 = sourceo._NormalLast_Last_2,
+                        .NormalLast_Last_3 = sourceo._NormalLast_Last_3,
+                        .NormalLast_Last_4 = sourceo._NormalLast_Last_4,
+                        .Staffel = sourceo._Staffel
+                    }
 
                     TargetObject.Eichprotokoll.PruefungStaffelverfahrenNormallast.Add(targeto)
 
@@ -1300,15 +1326,16 @@ Public Class clsClientServerConversionFunctions
                 dbcontext.SaveChanges()
 
                 For Each sourceo In SourceObject._ServerEichprotokoll.ServerPruefungWiederholbarkeit
-                    Dim targeto = New PruefungWiederholbarkeit
-                    targeto.Anzeige = sourceo._Anzeige
-                    targeto.Belastung = sourceo._Belastung
-                    targeto.Wiederholung = sourceo._Wiederholung
-                    targeto.EFG = sourceo._EFG
-                    targeto.EFG_Extra = sourceo._EFG_Extra
-                    targeto.Fehler = sourceo._Fehler
-                    targeto.FK_Eichprotokoll = TargetObject.Eichprotokoll.ID
-                    targeto.Last = sourceo._Last
+                    Dim targeto = New PruefungWiederholbarkeit With {
+                        .Anzeige = sourceo._Anzeige,
+                        .Belastung = sourceo._Belastung,
+                        .Wiederholung = sourceo._Wiederholung,
+                        .EFG = sourceo._EFG,
+                        .EFG_Extra = sourceo._EFG_Extra,
+                        .Fehler = sourceo._Fehler,
+                        .FK_Eichprotokoll = TargetObject.Eichprotokoll.ID,
+                        .Last = sourceo._Last
+                    }
 
                     TargetObject.Eichprotokoll.PruefungWiederholbarkeit.Add(targeto)
                 Next

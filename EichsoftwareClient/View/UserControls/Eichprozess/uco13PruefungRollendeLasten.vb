@@ -1,6 +1,8 @@
 Public Class uco13PruefungRollendeLasten
 
     Inherits ucoContent
+    Implements IRhewaEditingDialog
+    Implements IRhewaPruefungDialog
 
 #Region "Member Variables"
     Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken
@@ -21,48 +23,19 @@ Public Class uco13PruefungRollendeLasten
     End Sub
 #End Region
 
+
+
 #Region "Events"
-    ''' <summary>
-    ''' Validations the needed.
-    ''' </summary>
-    ''' <returns></returns>
-    Protected Friend Overrides Function ValidationNeeded() As Boolean
-        LoadFromDatabase()
-        Return ValidateControls()
-    End Function
+
     Private Sub ucoBeschaffenheitspruefung_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-        If Not ParentFormular Is Nothing Then
-            Try
-                'Hilfetext setzen
-                ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungRollendeLasten)
-                'Überschrift setzen
-                ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungRollendelasten
-            Catch ex As Exception
-            End Try
-        End If
+        SetzeUeberschrift()
         EichprozessStatusReihenfolge = GlobaleEnumeratoren.enuEichprozessStatus.WaagenFuerRollendeLasten
 
         LadeBilder()
-
         'daten füllen
         LoadFromDatabase()
     End Sub
 
-    Private Sub LadeBilder()
-        If AktuellerBenutzer.Instance.AktuelleSprache.ToLower = "en" Then
-            PictureBox2.Image = My.Resources.Verschiebeweg_GB
-            PictureBox3.Image = My.Resources.Fahrzeug_Wenden_GB
-        ElseIf AktuellerBenutzer.Instance.AktuelleSprache = "de" Then
-            PictureBox2.Image = My.Resources.Verschiebeweg_DE
-            PictureBox3.Image = My.Resources.Fahrzeug_Wenden_DE
-        ElseIf AktuellerBenutzer.Instance.AktuelleSprache = "pl" Then
-            PictureBox2.Image = My.Resources.Verschiebeweg_PL
-            PictureBox3.Image = My.Resources.Fahrzeug_Wenden_PL
-        Else
-            PictureBox2.Image = My.Resources.Verschiebeweg_GB
-            PictureBox3.Image = My.Resources.Fahrzeug_Wenden_GB
-        End If
-    End Sub
 
 #Region "Bereich Links"
 
@@ -70,33 +43,6 @@ Public Class uco13PruefungRollendeLasten
         BasicTextboxValidation(sender, e)
     End Sub
 
-    Private Sub BerechneFehlerundEFGLinks(Optional Sender As Telerik.WinControls.UI.RadTextBox = Nothing)
-        AktuellerStatusDirty = True
-        'damit keine Event Kettenreaktion durchgeführt wird, werden die Events ab hier unterbrochen
-        _suspendEvents = True
-        'EFG
-        BerechneEFG(lblEFGWertLinks)
-        'fehler berechnen
-        BeechneFehler(RadTextBoxControlFehlerLinks1, RadTextBoxControlAnzeigeLinks1, RadTextBoxControlLastLinks1, lblEFGWertLinks, RadCheckBoxAuffahrtLinks1)
-        BeechneFehler(RadTextBoxControlFehlerLinks2, RadTextBoxControlAnzeigeLinks2, RadTextBoxControlLastLinks2, lblEFGWertLinks, RadCheckBoxAuffahrtLinks2)
-        BeechneFehler(RadTextBoxControlFehlerLinks3, RadTextBoxControlAnzeigeLinks3, RadTextBoxControllastLinks3, lblEFGWertLinks, RadCheckBoxAuffahrtLinks3)
-        _suspendEvents = False
-    End Sub
-
-
-    Private Sub BerechneFehlerundEFGRechts(Optional sender As Telerik.WinControls.UI.RadTextBox = Nothing)
-        AktuellerStatusDirty = True
-        'damit keine Event Kettenreaktion durchgeführt wird, werden die Events ab hier unterbrochen
-        _suspendEvents = True
-        'neu berechnen der Fehler und EFG
-        'EFG
-        BerechneEFG(lblEFGWertRechts)
-        'fehler berechnen
-        BeechneFehler(RadTextBoxControlFehlerRechts1, RadTextBoxControlAnzeigeRechts1, RadTextBoxControlLastRechts1, lblEFGWertRechts, RadCheckBoxAuffahrtRechts1)
-        BeechneFehler(RadTextBoxControlFehlerRechts2, RadTextBoxControlAnzeigeRechts2, RadTextBoxControlLastRechts2, lblEFGWertRechts, RadCheckBoxAuffahrtRechts2)
-        BeechneFehler(RadTextBoxControlFehlerRechts3, RadTextBoxControlAnzeigeRechts3, RadTextBoxControlLastRechts3, lblEFGWertRechts, RadCheckBoxAuffahrtRechts3)
-        _suspendEvents = False
-    End Sub
 
     ''' <summary>
     ''' wenn sich einer der Anzeige Werte ändert, müssen die Fehler und EFG neu berechnet werden
@@ -153,88 +99,58 @@ Public Class uco13PruefungRollendeLasten
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub RadButtonShowEFG_Click(sender As Object, e As EventArgs) Handles RadButtonShowEFG.Click
-        Dim f As New frmEichfehlergrenzen(objEichprozess)
-        f.Show()
+        ShowEichfehlergrenzenDialog()
     End Sub
 #End Region
 
+
+
+
 #Region "Methods"
-    Protected Friend Overrides Sub LoadFromDatabase()
-
-        objEichprozess = ParentFormular.CurrentEichprozess
-        'events abbrechen
-        _suspendEvents = True
-        'Nur laden wenn es sich um eine Bearbeitung handelt (sonst würde das in Memory Objekt überschrieben werden)
-        If Not DialogModus = enuDialogModus.lesend And Not DialogModus = enuDialogModus.korrigierend Then
-            Using context As New Entities
-                'neu laden des Objekts, diesmal mit den lookup Objekten
-                objEichprozess = (From a In context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
-
-                'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
-                Dim query = From a In context.PruefungRollendeLasten Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
-                _ListPruefungRollendeLasten = query.ToList
-
-            End Using
+    Private Sub LadeBilder()
+        If AktuellerBenutzer.Instance.AktuelleSprache.ToLower = "en" Then
+            PictureBox2.Image = My.Resources.Verschiebeweg_GB
+            PictureBox3.Image = My.Resources.Fahrzeug_Wenden_GB
+        ElseIf AktuellerBenutzer.Instance.AktuelleSprache = "de" Then
+            PictureBox2.Image = My.Resources.Verschiebeweg_DE
+            PictureBox3.Image = My.Resources.Fahrzeug_Wenden_DE
+        ElseIf AktuellerBenutzer.Instance.AktuelleSprache = "pl" Then
+            PictureBox2.Image = My.Resources.Verschiebeweg_PL
+            PictureBox3.Image = My.Resources.Fahrzeug_Wenden_PL
         Else
-            _ListPruefungRollendeLasten.Clear()
-
-            Try
-                For Each obj In objEichprozess.Eichprotokoll.PruefungRollendeLasten
-                    obj.Eichprotokoll = objEichprozess.Eichprotokoll
-
-                    _ListPruefungRollendeLasten.Add(obj)
-                Next
-            Catch ex As System.ObjectDisposedException 'fehler im Clientseitigen Lesemodus (bei bereits abegschickter Eichung)
-                Using context As New Entities
-                    'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
-                    Dim query = From a In context.PruefungRollendeLasten Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
-                    _ListPruefungRollendeLasten = query.ToList
-
-                End Using
-            End Try
-
+            PictureBox2.Image = My.Resources.Verschiebeweg_GB
+            PictureBox3.Image = My.Resources.Fahrzeug_Wenden_GB
         End If
+    End Sub
 
-        'steuerelemente mit werten aus DB füllen
-        FillControls()
-
-        If DialogModus = enuDialogModus.lesend Then
-            'falls der Konformitätsbewertungsvorgang nur lesend betrchtet werden soll, wird versucht alle Steuerlemente auf REadonly zu setzen. Wenn das nicht klappt,werden sie disabled
-            DisableControls(RadScrollablePanel1.PanelContainer)
-
-        End If
-        'events abbrechen
+    Private Sub BerechneFehlerundEFGLinks(Optional Sender As Telerik.WinControls.UI.RadTextBox = Nothing)
+        AktuellerStatusDirty = True
+        'damit keine Event Kettenreaktion durchgeführt wird, werden die Events ab hier unterbrochen
+        _suspendEvents = True
+        'EFG
+        BerechneEFG(lblEFGWertLinks)
+        'fehler berechnen
+        BeechneFehler(RadTextBoxControlFehlerLinks1, RadTextBoxControlAnzeigeLinks1, RadTextBoxControlLastLinks1, lblEFGWertLinks, RadCheckBoxAuffahrtLinks1)
+        BeechneFehler(RadTextBoxControlFehlerLinks2, RadTextBoxControlAnzeigeLinks2, RadTextBoxControlLastLinks2, lblEFGWertLinks, RadCheckBoxAuffahrtLinks2)
+        BeechneFehler(RadTextBoxControlFehlerLinks3, RadTextBoxControlAnzeigeLinks3, RadTextBoxControllastLinks3, lblEFGWertLinks, RadCheckBoxAuffahrtLinks3)
         _suspendEvents = False
     End Sub
 
-    ''' <summary>
-    ''' Lädt die Werte aus dem Objekt in die Steuerlemente
-    ''' </summary>
-    ''' <remarks></remarks>
-    ''' <author></author>
-    ''' <commentauthor></commentauthor>
-    Private Sub FillControls()
-        'Steuerlemente füllen
-        'dynamisches laden der Nullstellen:
 
-        HoleNullstellen()
-
-        'füllen der berechnenten Steuerelemente
-
-        lblEFGWertLinks.Mask = "F" & _intNullstellenE 'anzahl nullstellen für Textcontrol definieren
-        lblEFGWertRechts.Mask = "F" & _intNullstellenE 'anzahl nullstellen für Textcontrol definieren
-
-        'wenn es sich um das Staffel oder Fahrzeugwaagen verfahren handelt wird an dieser Stelle die Wiederholbarkeit nur mit MAX geprüft. MIN erfolgte dann bereits vorher
-
-        FillControlsLinks()
-        FillControlsRechts()
-        BerechneFehlerundEFGLinks()
-        BerechneFehlerundEFGRechts()
-
-        'fokus setzen auf erstes Steuerelement
-        RadTextBoxControlAnzeigeLinks1.Focus()
-
+    Private Sub BerechneFehlerundEFGRechts(Optional sender As Telerik.WinControls.UI.RadTextBox = Nothing)
+        AktuellerStatusDirty = True
+        'damit keine Event Kettenreaktion durchgeführt wird, werden die Events ab hier unterbrochen
+        _suspendEvents = True
+        'neu berechnen der Fehler und EFG
+        'EFG
+        BerechneEFG(lblEFGWertRechts)
+        'fehler berechnen
+        BeechneFehler(RadTextBoxControlFehlerRechts1, RadTextBoxControlAnzeigeRechts1, RadTextBoxControlLastRechts1, lblEFGWertRechts, RadCheckBoxAuffahrtRechts1)
+        BeechneFehler(RadTextBoxControlFehlerRechts2, RadTextBoxControlAnzeigeRechts2, RadTextBoxControlLastRechts2, lblEFGWertRechts, RadCheckBoxAuffahrtRechts2)
+        BeechneFehler(RadTextBoxControlFehlerRechts3, RadTextBoxControlAnzeigeRechts3, RadTextBoxControlLastRechts3, lblEFGWertRechts, RadCheckBoxAuffahrtRechts3)
+        _suspendEvents = False
     End Sub
+
     Private Sub FillControlsLinks()
 
         'anzeige KG Nur laden wenn schon etwas eingegeben wurde
@@ -361,31 +277,46 @@ Public Class uco13PruefungRollendeLasten
     End Sub
 
 
-    ''' <summary>
-    ''' Füllt das Objekt mit den Werten aus den Steuerlementen
-    ''' </summary>
-    ''' <remarks></remarks>
-    ''' <author></author>
-    ''' <commentauthor></commentauthor>
-    Private Sub UpdateObject()
-        'neuen Context aufbauen
-        Using Context As New Entities
+    Private Sub LadePruefungen() Implements IRhewaPruefungDialog.LadePruefungen
+        'Nur laden wenn es sich um eine Bearbeitung handelt (sonst würde das in Memory Objekt überschrieben werden)
+        If Not DialogModus = enuDialogModus.lesend And Not DialogModus = enuDialogModus.korrigierend Then
+            LadePruefungenLeseModus()
+        Else
+            LadePruefungenBearbeitungsModus()
+        End If
+    End Sub
 
-            'jedes objekt initialisieren und aus context laden und updaten
-            For Each obj In _ListPruefungRollendeLasten
-                Dim objPruefung = Context.PruefungRollendeLasten.FirstOrDefault(Function(value) value.ID = obj.ID)
-                If Not objPruefung Is Nothing Then
-                    'in lokaler DB gucken
-                    UpdatePruefungsObject(objPruefung)
-                Else 'es handelt sich um eine Serverobjekt im => Korrekturmodus
-                    If DialogModus = enuDialogModus.korrigierend Then
-                        UpdatePruefungsObject(obj)
-                    End If
-                End If
+    Private Sub LadePruefungenBearbeitungsModus() Implements IRhewaPruefungDialog.LadePruefungenBearbeitungsModus
+        _ListPruefungRollendeLasten.Clear()
+
+        Try
+            For Each obj In objEichprozess.Eichprotokoll.PruefungRollendeLasten
+                obj.Eichprotokoll = objEichprozess.Eichprotokoll
+
+                _ListPruefungRollendeLasten.Add(obj)
             Next
+        Catch ex As System.ObjectDisposedException 'fehler im Clientseitigen Lesemodus (bei bereits abegschickter Eichung)
+            Using context As New Entities
+                'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
+                Dim query = From a In context.PruefungRollendeLasten Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
+                _ListPruefungRollendeLasten = query.ToList
+
+            End Using
+        End Try
+    End Sub
+
+    Private Sub LadePruefungenLeseModus() Implements IRhewaPruefungDialog.LadePruefungenLeseModus
+        Using context As New Entities
+            'neu laden des Objekts, diesmal mit den lookup Objekten
+            objEichprozess = (From a In context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
+
+            'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
+            Dim query = From a In context.PruefungRollendeLasten Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
+            _ListPruefungRollendeLasten = query.ToList
 
         End Using
     End Sub
+
 
     Private Sub UpdatePruefungsObject(ByVal PObjPruefung As PruefungRollendeLasten)
         If PObjPruefung.AuffahrtSeite = "links" Then
@@ -444,13 +375,110 @@ Public Class uco13PruefungRollendeLasten
 
     End Sub
 
+
+
+#End Region
+
+#Region "Interface Methods"
+
+
+    Protected Friend Overrides Sub SetzeUeberschrift() Implements IRhewaEditingDialog.SetzeUeberschrift
+        If Not ParentFormular Is Nothing Then
+            Try
+                'Hilfetext setzen
+                ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungRollendeLasten)
+                'Überschrift setzen
+                ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungRollendelasten
+            Catch ex As Exception
+            End Try
+        End If
+    End Sub
+
+
+    Protected Friend Overrides Sub LoadFromDatabase() Implements IRhewaEditingDialog.LoadFromDatabase
+
+        objEichprozess = ParentFormular.CurrentEichprozess
+        'events abbrechen
+        _suspendEvents = True
+        LadePruefungen()
+
+        'steuerelemente mit werten aus DB füllen
+        FillControls()
+
+        If DialogModus = enuDialogModus.lesend Then
+            'falls der Konformitätsbewertungsvorgang nur lesend betrchtet werden soll, wird versucht alle Steuerlemente auf REadonly zu setzen. Wenn das nicht klappt,werden sie disabled
+            DisableControls(RadScrollablePanel1.PanelContainer)
+
+        End If
+        'events abbrechen
+        _suspendEvents = False
+    End Sub
+
+    ''' <summary>
+    ''' Lädt die Werte aus dem Objekt in die Steuerlemente
+    ''' </summary>
+    ''' <remarks></remarks>
+    ''' <author></author>
+    ''' <commentauthor></commentauthor>
+    Protected Friend Overrides Sub FillControls() Implements IRhewaEditingDialog.FillControls
+        'Steuerlemente füllen
+        'dynamisches laden der Nullstellen:
+
+        HoleNullstellen()
+
+        'füllen der berechnenten Steuerelemente
+
+        lblEFGWertLinks.Mask = "F" & _intNullstellenE 'anzahl nullstellen für Textcontrol definieren
+        lblEFGWertRechts.Mask = "F" & _intNullstellenE 'anzahl nullstellen für Textcontrol definieren
+
+        'wenn es sich um das Staffel oder Fahrzeugwaagen verfahren handelt wird an dieser Stelle die Wiederholbarkeit nur mit MAX geprüft. MIN erfolgte dann bereits vorher
+
+        FillControlsLinks()
+        FillControlsRechts()
+        BerechneFehlerundEFGLinks()
+        BerechneFehlerundEFGRechts()
+
+        'fokus setzen auf erstes Steuerelement
+        RadTextBoxControlAnzeigeLinks1.Focus()
+
+    End Sub
+
+
+
+    ''' <summary>
+    ''' Füllt das Objekt mit den Werten aus den Steuerlementen
+    ''' </summary>
+    ''' <remarks></remarks>
+    ''' <author></author>
+    ''' <commentauthor></commentauthor>
+    Protected Friend Overrides Sub UpdateObjekt() Implements IRhewaEditingDialog.UpdateObjekt
+        'neuen Context aufbauen
+        Using Context As New Entities
+
+            'jedes objekt initialisieren und aus context laden und updaten
+            For Each obj In _ListPruefungRollendeLasten
+                Dim objPruefung = Context.PruefungRollendeLasten.FirstOrDefault(Function(value) value.ID = obj.ID)
+                If Not objPruefung Is Nothing Then
+                    'in lokaler DB gucken
+                    UpdatePruefungsObject(objPruefung)
+                Else 'es handelt sich um eine Serverobjekt im => Korrekturmodus
+                    If DialogModus = enuDialogModus.korrigierend Then
+                        UpdatePruefungsObject(obj)
+                    End If
+                End If
+            Next
+
+        End Using
+    End Sub
+
+
     ''' <summary>
     ''' Gültigkeit der Eingaben überprüfen
     ''' </summary>
     ''' <remarks></remarks>
     ''' <author></author>
     ''' <commentauthor></commentauthor>
-    Protected Friend Overrides Function ValidateControls() As Boolean
+    Protected Friend Overrides Function ValidateControls() As Boolean Implements IRhewaEditingDialog.ValidateControls
         'prüfen ob alle Felder ausgefüllt sind
         Me.AbortSaving = False
 
@@ -480,7 +508,7 @@ Public Class uco13PruefungRollendeLasten
 
     End Function
 
-    Protected Friend Overrides Sub OverwriteIstSoll()
+    Protected Friend Overrides Sub OverwriteIstSoll() Implements IRhewaEditingDialog.OverwriteIstSoll
         RadTextBoxControlAnzeigeLinks1.Text = RadTextBoxControlLastLinks1.Text
         RadTextBoxControlAnzeigeLinks2.Text = RadTextBoxControlLastLinks2.Text
         RadTextBoxControlAnzeigeLinks3.Text = RadTextBoxControllastLinks3.Text
@@ -490,241 +518,145 @@ Public Class uco13PruefungRollendeLasten
         RadTextBoxControlAnzeigeRechts3.Text = RadTextBoxControlLastRechts3.Text
     End Sub
 
-#End Region
 
-#Region "Overrides"
-    'Speicherroutine
-    Protected Overrides Sub SaveNeeded(ByVal UserControl As UserControl)
-        If Me.Equals(UserControl) Then
 
-            If DialogModus = enuDialogModus.lesend Then
-                If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.PrüfungdesAnsprechvermögens Then
-                    objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungdesAnsprechvermögens
-                End If
-                ParentFormular.CurrentEichprozess = objEichprozess
-                Exit Sub
-            End If
 
-            If DialogModus = enuDialogModus.korrigierend Then
-                UpdateObject()
-                If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.PrüfungdesAnsprechvermögens Then
-                    objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungdesAnsprechvermögens
-                End If
-                ParentFormular.CurrentEichprozess = objEichprozess
-                Exit Sub
-            End If
+    Protected Friend Overrides Sub SaveObjekt() Implements IRhewaEditingDialog.SaveObjekt
+        Using Context As New Entities
+            'prüfen ob CREATE oder UPDATE durchgeführt werden muss
+            If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
+                'prüfen ob das Objekt anhand der ID gefunden werden kann
+                Dim dobjEichprozess As Eichprozess = (From a In Context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
+                If Not dobjEichprozess Is Nothing Then
+                    'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
+                    objEichprozess = dobjEichprozess
 
-            If ValidateControls() = True Then
+                    'wenn es defintiv noch keine pruefungen gibt, neue Anlegen
+                    If _ListPruefungRollendeLasten.Count = 0 Then
+                        'anzahl Wiederholungen beträgt 3 um damit die anzahl der benötigten Iterationen und Objekt Erzeugungen zu erfahren
+                        For i As Integer = 1 To 3
 
-                'neuen Context aufbauen
-                Using Context As New Entities
+                            'linke Last
+                            Dim objPruefung = Context.PruefungRollendeLasten.Create
 
-                    'prüfen ob CREATE oder UPDATE durchgeführt werden muss
-                    If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
-                        'prüfen ob das Objekt anhand der ID gefunden werden kann
-                        Dim dobjEichprozess As Eichprozess = (From a In Context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
-                        If Not dobjEichprozess Is Nothing Then
-                            'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
-                            objEichprozess = dobjEichprozess
+                            objPruefung.Belastungsstelle = i
+                            objPruefung.AuffahrtSeite = "links"
+                            UpdatePruefungsObject(objPruefung)
 
-                            'wenn es defintiv noch keine pruefungen gibt, neue Anlegen
-                            If _ListPruefungRollendeLasten.Count = 0 Then
-                                'anzahl Wiederholungen beträgt 3 um damit die anzahl der benötigten Iterationen und Objekt Erzeugungen zu erfahren
-                                For i As Integer = 1 To 3
-
-                                    'linke Last
-                                    Dim objPruefung = Context.PruefungRollendeLasten.Create
-
-                                    objPruefung.Belastungsstelle = i
-                                    objPruefung.AuffahrtSeite = "links"
-                                    UpdatePruefungsObject(objPruefung)
-
-                                    Context.SaveChanges()
-
-                                    objEichprozess.Eichprotokoll.PruefungRollendeLasten.Add(objPruefung)
-                                    Context.SaveChanges()
-
-                                    _ListPruefungRollendeLasten.Add(objPruefung)
-
-                                    'rechte Last
-                                    objPruefung = Nothing
-                                    objPruefung = Context.PruefungRollendeLasten.Create
-                                    'wenn es die eine itereation mehr ist:
-                                    objPruefung.AuffahrtSeite = "rechts"
-                                    objPruefung.Belastungsstelle = i
-                                    UpdatePruefungsObject(objPruefung)
-
-                                    Context.SaveChanges()
-
-                                    objEichprozess.Eichprotokoll.PruefungRollendeLasten.Add(objPruefung)
-                                    Context.SaveChanges()
-
-                                    _ListPruefungRollendeLasten.Add(objPruefung)
-                                Next
-                            Else ' es gibt bereits welche
-                                'jedes objekt initialisieren und aus context laden und updaten
-                                For Each objPruefung In _ListPruefungRollendeLasten
-                                    objPruefung = Context.PruefungRollendeLasten.FirstOrDefault(Function(value) value.ID = objPruefung.ID)
-                                    UpdatePruefungsObject(objPruefung)
-                                    Context.SaveChanges()
-                                Next
-                            End If
-
-                            'neuen Status zuweisen
-                            'die reihenfolge wird hier je nach Verfahren verändert
-
-                            If AktuellerStatusDirty = False Then
-                                ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
-                                If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.PrüfungdesAnsprechvermögens Then
-                                    objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungdesAnsprechvermögens
-                                End If
-                            ElseIf AktuellerStatusDirty = True Then
-                                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungdesAnsprechvermögens
-                                AktuellerStatusDirty = False
-                            End If
-
-                            'Füllt das Objekt mit den Werten aus den Steuerlementen
-                            UpdateObject()
-                            'Speichern in Datenbank
                             Context.SaveChanges()
-                        End If
-                    End If
-                End Using
 
-                ParentFormular.CurrentEichprozess = objEichprozess
+                            objEichprozess.Eichprotokoll.PruefungRollendeLasten.Add(objPruefung)
+                            Context.SaveChanges()
+
+                            _ListPruefungRollendeLasten.Add(objPruefung)
+
+                            'rechte Last
+                            objPruefung = Nothing
+                            objPruefung = Context.PruefungRollendeLasten.Create
+                            'wenn es die eine itereation mehr ist:
+                            objPruefung.AuffahrtSeite = "rechts"
+                            objPruefung.Belastungsstelle = i
+                            UpdatePruefungsObject(objPruefung)
+
+                            Context.SaveChanges()
+
+                            objEichprozess.Eichprotokoll.PruefungRollendeLasten.Add(objPruefung)
+                            Context.SaveChanges()
+
+                            _ListPruefungRollendeLasten.Add(objPruefung)
+                        Next
+                    Else ' es gibt bereits welche
+                        'jedes objekt initialisieren und aus context laden und updaten
+                        For Each objPruefung In _ListPruefungRollendeLasten
+                            objPruefung = Context.PruefungRollendeLasten.FirstOrDefault(Function(value) value.ID = objPruefung.ID)
+                            UpdatePruefungsObject(objPruefung)
+                            Context.SaveChanges()
+                        Next
+                    End If
+
+                    'Füllt das Objekt mit den Werten aus den Steuerlementen
+                    UpdateObjekt()
+                    'Speichern in Datenbank
+                    Context.SaveChanges()
+
+                End If
             End If
-
-        End If
+        End Using
     End Sub
 
-    Protected Overrides Sub SaveWithoutValidationNeeded(usercontrol As UserControl)
-        MyBase.SaveWithoutValidationNeeded(usercontrol)
 
-        If Me.Equals(usercontrol) Then
+    Protected Friend Overrides Sub AktualisiereStatus() Implements IRhewaEditingDialog.AktualisiereStatus
+        Using Context As New Entities
+            If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
+                'prüfen ob das Objekt anhand der ID gefunden werden kann
+                Dim dobjEichprozess As Eichprozess = (From a In Context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
+                If Not dobjEichprozess Is Nothing Then
+                    'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
+                    objEichprozess = dobjEichprozess
 
-            'neuen Context aufbauen
-            Using Context As New Entities
-                If DialogModus = enuDialogModus.lesend Then
-                    UpdateObject()
-                    ParentFormular.CurrentEichprozess = objEichprozess
-                    Exit Sub
-                End If
+                    'neuen Status zuweisen
+                    'die reihenfolge wird hier je nach Verfahren verändert
 
-                'prüfen ob CREATE oder UPDATE durchgeführt werden muss
-                If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
-                    'prüfen ob das Objekt anhand der ID gefunden werden kann
-                    Dim dobjEichprozess As Eichprozess = (From a In Context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
-                    If Not dobjEichprozess Is Nothing Then
-                        'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
-                        objEichprozess = dobjEichprozess
-
-                        'wenn es defintiv noch keine pruefungen gibt, neue Anlegen
-                        If _ListPruefungRollendeLasten.Count = 0 Then
-                            'anzahl Wiederholungen beträgt 3 um damit die anzahl der benötigten Iterationen und Objekt Erzeugungen zu erfahren
-                            For i As Integer = 1 To 3
-
-                                'linke Last
-                                Dim objPruefung = Context.PruefungRollendeLasten.Create
-
-                                objPruefung.Belastungsstelle = i
-                                objPruefung.AuffahrtSeite = "links"
-                                UpdatePruefungsObject(objPruefung)
-
-                                Context.SaveChanges()
-
-                                objEichprozess.Eichprotokoll.PruefungRollendeLasten.Add(objPruefung)
-                                Context.SaveChanges()
-
-                                _ListPruefungRollendeLasten.Add(objPruefung)
-
-                                'rechte Last
-                                objPruefung = Nothing
-                                objPruefung = Context.PruefungRollendeLasten.Create
-                                'wenn es die eine itereation mehr ist:
-                                objPruefung.AuffahrtSeite = "rechts"
-                                objPruefung.Belastungsstelle = i
-                                UpdatePruefungsObject(objPruefung)
-
-                                Context.SaveChanges()
-
-                                objEichprozess.Eichprotokoll.PruefungRollendeLasten.Add(objPruefung)
-                                Context.SaveChanges()
-
-                                _ListPruefungRollendeLasten.Add(objPruefung)
-                            Next
-                        Else ' es gibt bereits welche
-                            'jedes objekt initialisieren und aus context laden und updaten
-                            For Each objPruefung In _ListPruefungRollendeLasten
-                                objPruefung = Context.PruefungRollendeLasten.FirstOrDefault(Function(value) value.ID = objPruefung.ID)
-                                UpdatePruefungsObject(objPruefung)
-                                Context.SaveChanges()
-                            Next
+                    If AktuellerStatusDirty = False Then
+                        ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
+                        If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.PrüfungdesAnsprechvermögens Then
+                            objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungdesAnsprechvermögens
                         End If
-
-                        'Füllt das Objekt mit den Werten aus den Steuerlementen
-                        UpdateObject()
-                        'Speichern in Datenbank
-                        Context.SaveChanges()
+                    ElseIf AktuellerStatusDirty = True Then
+                        objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungdesAnsprechvermögens
+                        AktuellerStatusDirty = False
                     End If
+
+                    'Füllt das Objekt mit den Werten aus den Steuerlementen
+                    UpdateObjekt()
+                    'Speichern in Datenbank
+                    Context.SaveChanges()
                 End If
-            End Using
+            End If
+        End Using
+    End Sub
 
+    Protected Friend Overrides Function CheckDialogModus() As Boolean Implements IRhewaEditingDialog.CheckDialogModus
+        If DialogModus = enuDialogModus.lesend Then
+            If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.PrüfungdesAnsprechvermögens Then
+                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungdesAnsprechvermögens
+            End If
             ParentFormular.CurrentEichprozess = objEichprozess
+            Return False
         End If
-    End Sub
 
-    ''' <summary>
-    ''' aktualisieren der Oberfläche wenn nötig
-    ''' </summary>
-    ''' <param name="UserControl"></param>
-    ''' <remarks></remarks>
-    Protected Overrides Sub UpdateNeeded(UserControl As UserControl)
-        If Me.Equals(UserControl) Then
-            MyBase.UpdateNeeded(UserControl)
-            Me.LokalisierungNeeded(UserControl)
-
-
-            LoadFromDatabase()
+        If DialogModus = enuDialogModus.korrigierend Then
+            UpdateObjekt()
+            If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.PrüfungdesAnsprechvermögens Then
+                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungdesAnsprechvermögens
+            End If
+            ParentFormular.CurrentEichprozess = objEichprozess
+            Return False
         End If
-    End Sub
+        Return True
+    End Function
 
-#End Region
 
-    Protected Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
-        If Me.Name.Equals(UserControl.Name) = False Then Exit Sub
-
-        MyBase.LokalisierungNeeded(UserControl)
-
+    Protected Friend Overrides Sub Lokalisiere() Implements IRhewaEditingDialog.Lokalisiere
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco13PruefungRollendeLasten))
         Lokalisierung(Me, resources)
-
-        If Not ParentFormular Is Nothing Then
-            Try
-                'Hilfetext setzen
-
-                ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungRollendeLasten)
-                'Überschrift setzen
-
-                ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungRollendelasten
-            Catch ex As Exception
-            End Try
-        End If
-
     End Sub
+
+
+
+#End Region
+
 
     Private Sub RadCheckBoxAuffahrtLinks1_MouseClick(sender As Object, e As MouseEventArgs) Handles RadCheckBoxAuffahrtRechts3.MouseClick, RadCheckBoxAuffahrtRechts2.MouseClick, RadCheckBoxAuffahrtRechts1.MouseClick, RadCheckBoxAuffahrtLinks3.MouseClick, RadCheckBoxAuffahrtLinks2.MouseClick, RadCheckBoxAuffahrtLinks1.MouseClick
         CType(sender, Telerik.WinControls.UI.RadCheckBox).Checked = Not CType(sender, Telerik.WinControls.UI.RadCheckBox).Checked
     End Sub
 
     Private Sub RadButton1_Click(sender As Object, e As EventArgs) Handles RadButton1.Click
-        Dim f As New frmEichfehlergrenzen(objEichprozess)
-        f.Show()
+        ShowEichfehlergrenzenDialog()
     End Sub
 
-    'Entsperrroutine
-    Protected Overrides Sub EntsperrungNeeded()
-        MyBase.EntsperrungNeeded()
 
+    Protected Friend Overrides Sub Entsperrung() Implements IRhewaEditingDialog.Entsperrung
         'Hiermit wird ein lesender Vorgang wieder entsperrt.
         EnableControls(RadScrollablePanel1.PanelContainer)
 
@@ -733,16 +665,10 @@ Public Class uco13PruefungRollendeLasten
         ParentFormular.DialogModus = FrmMainContainer.enuDialogModus.korrigierend
     End Sub
 
-    Protected Overrides Sub VersendenNeeded(TargetUserControl As UserControl)
-
-        If Me.Equals(TargetUserControl) Then
-            MyBase.VersendenNeeded(TargetUserControl)
-            UpdateObject()
-            UeberschreibePruefungsobjekte()
-            'Erzeugen eines Server Objektes auf basis des aktuellen DS. Setzt es auf es ausserdem auf Fehlerhaft
-            CloneAndSendServerObjekt()
-        End If
+    Protected Friend Overrides Sub Versenden() Implements IRhewaEditingDialog.Versenden
+        UpdateObjekt()
+        UeberschreibePruefungsobjekte()
+        'Erzeugen eines Server Objektes auf basis des aktuellen DS. Setzt es auf es ausserdem auf Fehlerhaft
+        CloneAndSendServerObjekt()
     End Sub
-
-
 End Class

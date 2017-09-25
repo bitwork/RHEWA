@@ -157,23 +157,6 @@ Public Class FrmMainContainer
     ''' <author></author>
     ''' <commentauthor></commentauthor>
     Private Sub ChangeActiveContentUserControl(ByVal uco As UserControl)
-        'Dim ucos = From tmpuco In _ListofUcos Where tmpuco.Name = uco.Name
-        'If ucos.Count > 0 Then
-        '    _CurrentUco = uco
-
-        'Dim controls = From tmpcontrol In Me.SplitPanelContent1.Controls Where tmpcontrol.Name = _CurrentUco.Name
-        'If controls.Count = 0 Then
-        '    Me.SplitPanelContent1.Controls.Add(_CurrentUco)
-        'Else
-        '    Me.SplitPanelContent1.Controls.Remove(_CurrentUco)
-        '    Me.SplitPanelContent1.Controls.Add(_CurrentUco)
-
-        '    controls(0).bringtofront()
-        'End If
-
-        '    _CurrentUco.BringToFront()
-        '    _CurrentUco.Dock = DockStyle.Fill
-        'End If
 
         Dim ucos = From tmpuco In _ListofUcos Where tmpuco.Name = uco.Name
         If ucos.Count > 0 Then
@@ -244,7 +227,11 @@ Public Class FrmMainContainer
     ''' <param name="Code"></param>
     ''' <remarks></remarks>
     Friend Sub changeCulture(ByVal Code As String)
-        Dim culture As CultureInfo = CultureInfo.GetCultureInfo(Code)
+        Dim culture As CultureInfo = CultureInfo.GetCultureInfo(Code).Clone
+        'Es gibt viele Berechnungen, diese sollen ausschließlich im deutschen Zahlenformat durchgeführt werden
+        culture.NumberFormat.NumberDecimalSeparator = ","
+        culture.NumberFormat.NumberGroupSeparator = "."
+
         Threading.Thread.CurrentThread.CurrentCulture = culture
         Threading.Thread.CurrentThread.CurrentUICulture = culture
         Application.CurrentCulture = culture
@@ -441,17 +428,19 @@ Public Class FrmMainContainer
             Dim uco As Object = Nothing
             'aktuelen Status zur Ampel zuweisen
 
-            If CurrentEichprozess.FK_Bearbeitungsstatus = GlobaleEnumeratoren.enuBearbeitungsstatus.Fehlerhaft AndAlso Me.DialogModus <> enuDialogModus.lesend Then
-                BreadCrumb.AktuellerGewaehlterVorgang = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe
-            Else
-                BreadCrumb.AktuellerGewaehlterVorgang = CurrentEichprozess.FK_Vorgangsstatus
-            End If
+            'If CurrentEichprozess.FK_Bearbeitungsstatus = GlobaleEnumeratoren.enuBearbeitungsstatus.Fehlerhaft AndAlso Me.DialogModus <> enuDialogModus.lesend Then
+            '    BreadCrumb.AktuellerGewaehlterVorgang = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe
+            'Else
+            '    BreadCrumb.AktuellerGewaehlterVorgang = CurrentEichprozess.FK_Vorgangsstatus
+            'End If
             If Me.DialogModus = enuDialogModus.lesend Then 'falls RHEWA seitig ein DS angeguckt wird, ist dieser bereits fertig, soll aber dennoch von anfang an angeguckt werden
                 uco = New uco_2StammdatenEingabe(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
                 'auf erste seite Blättern
+                BreadCrumb.AktuellerGewaehlterVorgang = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe
                 BreadCrumb.FindeElementUndSelektiere(GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe)
 
             Else
+                BreadCrumb.AktuellerGewaehlterVorgang = CurrentEichprozess.FK_Vorgangsstatus
                 Select Case CurrentEichprozess.FK_Vorgangsstatus
                     Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe
                         uco = New uco_2StammdatenEingabe(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)

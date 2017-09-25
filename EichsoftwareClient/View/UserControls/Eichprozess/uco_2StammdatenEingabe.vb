@@ -1,6 +1,9 @@
+Imports EichsoftwareClient
+
 Public Class uco_2StammdatenEingabe
 
     Inherits ucoContent
+    Implements IRhewaEditingDialog
 
 #Region "Member Variables"
     Private _DatasourceDropdownListWaagentyp As IEnumerable 'datenquelle für dropdown
@@ -31,14 +34,6 @@ Public Class uco_2StammdatenEingabe
 #End Region
 
 #Region "Events"
-    ''' <summary>
-    ''' Validations the needed.
-    ''' </summary>
-    ''' <returns></returns>
-    Protected Friend Overrides Function ValidationNeeded() As Boolean
-        LoadFromDatabase()
-        Return ValidateControls()
-    End Function
 
     ''' <summary>
     ''' lade routine des ucos. Hilfetext und überschrift text setzen. ausserdem dropdownlisten füllen
@@ -50,25 +45,17 @@ Public Class uco_2StammdatenEingabe
     ''' <commentauthor></commentauthor>
     Private Sub ucoBeschaffenheitspruefung_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         Me.SuspendLayout()
-        If Not ParentFormular Is Nothing Then
-            Try
-                'Hilfetext setzen
-                ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_Stammdaten)
-                'Überschrift setzen
-                ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_Stammdaten
-
-            Catch ex As Exception
-            End Try
-        End If
+        SetzeUeberschrift()
 
         'daten füllen
         LoadFromDatabase()
 
         'fokus setzen
-        '        RadTextBoxStammdatenWaagenbaufirma.Focus()
         RadTextBoxWaageSeriennummer.Focus()
         Me.ResumeLayout()
     End Sub
+
+
 
     'wenn die Art der Waage oder die WZ gewechselt wurde, muss kontrolliert werden, ob der Konformitätsbewertungsvorgang bereits fortschritten ist. Wenn also bereits ein späterer Status erreicht wurde, muss dieser zurückgesetzt werden auf die Stammdateneingabe
     Private Sub RadDropDownListWaagenArt_SelectedIndexChanged(sender As Object, e As Telerik.WinControls.UI.Data.PositionChangedEventArgs) Handles RadDropDownListWaagenArt.SelectedIndexChanged, RadDropdownlistWaagenTyp.SelectedIndexChanged
@@ -186,35 +173,6 @@ Public Class uco_2StammdatenEingabe
         End Try
     End Sub
 
-    Protected Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
-        If Me.Name.Equals(UserControl.Name) = False Then Exit Sub
-        MyBase.LokalisierungNeeded(UserControl)
-
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco_2StammdatenEingabe))
-        Lokalisierung(Me, resources)
-
-        'je nach sprache andere werte aus DB abrufen für Waagentyp
-        Select Case AktuellerBenutzer.Instance.AktuelleSprache.ToLower
-            Case Is = "en"
-                RadDropdownlistWaagenTyp.DisplayMember = "Typ_EN"
-                RadDropDownListWaagenArt.DisplayMember = "Art_EN"
-            Case Is = "de"
-                RadDropdownlistWaagenTyp.DisplayMember = "Typ"
-                RadDropDownListWaagenArt.DisplayMember = "Art"
-            Case Is = "pl"
-                RadDropdownlistWaagenTyp.DisplayMember = "Typ_PL"
-                RadDropDownListWaagenArt.DisplayMember = "Art_PL"
-            Case Else
-                RadDropdownlistWaagenTyp.DisplayMember = "Typ_EN"
-                RadDropDownListWaagenArt.DisplayMember = "Art_EN"
-
-        End Select
-        'Hilfetext setzen
-        ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_Stammdaten)
-        'Überschrift setzen
-        ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_Stammdaten
-
-    End Sub
 
     ''' <summary>
     ''' öffnen des dialoges zum speichern einer neuen Waegezelle
@@ -284,7 +242,68 @@ Public Class uco_2StammdatenEingabe
 
 #Region "Methods"
 
-    Protected Friend Overrides Sub LoadFromDatabase()
+
+    ''' <summary>
+    ''' methode zum Filtern der Dropdownliste
+    ''' </summary>
+    ''' <param name="listitem"></param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    ''' <author></author>
+    ''' <commentauthor></commentauthor>
+    Private Function FilterItem(listitem As Telerik.WinControls.UI.RadListDataItem) As Boolean
+        Try
+            If CType(listitem.DataBoundItem, Lookup_Waegezelle).Hersteller = RadDropdownlistlWZHersteller.Text Then
+                Return True
+            End If
+            Return False
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
+
+#End Region
+
+#Region "Interface Methods"
+
+    Protected Friend Overrides Sub SetzeUeberschrift() Implements IRhewaEditingDialog.SetzeUeberschrift
+        If Not ParentFormular Is Nothing Then
+            Try
+                'Hilfetext setzen
+                ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_Stammdaten)
+                'Überschrift setzen
+                ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_Stammdaten
+
+            Catch ex As Exception
+            End Try
+        End If
+    End Sub
+    Protected Friend Overrides Sub Lokalisiere() Implements IRhewaEditingDialog.Lokalisiere
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco_2StammdatenEingabe))
+        Lokalisierung(Me, resources)
+
+        'je nach sprache andere werte aus DB abrufen für Waagentyp
+        Select Case AktuellerBenutzer.Instance.AktuelleSprache.ToLower
+            Case Is = "en"
+                RadDropdownlistWaagenTyp.DisplayMember = "Typ_EN"
+                RadDropDownListWaagenArt.DisplayMember = "Art_EN"
+            Case Is = "de"
+                RadDropdownlistWaagenTyp.DisplayMember = "Typ"
+                RadDropDownListWaagenArt.DisplayMember = "Art"
+            Case Is = "pl"
+                RadDropdownlistWaagenTyp.DisplayMember = "Typ_PL"
+                RadDropDownListWaagenArt.DisplayMember = "Art_PL"
+            Case Else
+                RadDropdownlistWaagenTyp.DisplayMember = "Typ_EN"
+                RadDropDownListWaagenArt.DisplayMember = "Art_EN"
+
+        End Select
+        'Hilfetext setzen
+        ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_Stammdaten)
+        'Überschrift setzen
+        ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_Stammdaten
+    End Sub
+    Protected Friend Overrides Sub LoadFromDatabase() Implements IRhewaEditingDialog.LoadFromDatabase
         objEichprozess = ParentFormular.CurrentEichprozess
 
         'events abbrechen
@@ -338,13 +357,15 @@ Public Class uco_2StammdatenEingabe
 
     End Sub
 
+
     ''' <summary>
     ''' Lädt die Werte aus dem Beschaffenheitspruefungsobjekt in die Steuerlemente
     ''' </summary>
     ''' <remarks></remarks>
     ''' <author></author>
     ''' <commentauthor></commentauthor>
-    Private Sub FillControls()
+    Protected Friend Overrides Sub FillControls() Implements IRhewaEditingDialog.FillControls
+        MyBase.FillControls()
         'dropdown controls füllen
         'zuweisen der Datenquelle
         RadDropdownlistWaagenTyp.DataSource = _DatasourceDropdownListWaagentyp
@@ -482,28 +503,13 @@ Public Class uco_2StammdatenEingabe
         'fokus setzen
         RadTextBoxStammdatenWaagenbaufirma.Focus()
     End Sub
-
-    ''' <summary>
-    ''' aktualisieren der Oberfläche wenn nötig
-    ''' </summary>
-    ''' <param name="UserControl"></param>
-    ''' <remarks></remarks>
-    Protected Overrides Sub UpdateNeeded(UserControl As UserControl)
-        If Me.Equals(UserControl) Then
-            MyBase.UpdateNeeded(UserControl)
-            Me.LokalisierungNeeded(UserControl)
-
-            LoadFromDatabase()
-        End If
-    End Sub
-
     ''' <summary>
     ''' Füllt das Objekt mit den Werten aus den Steuerlementen
     ''' </summary>
     ''' <remarks></remarks>
     ''' <author></author>
     ''' <commentauthor></commentauthor>
-    Private Sub UpdateObject()
+    Protected Friend Overrides Sub UpdateObjekt() Implements IRhewaEditingDialog.UpdateObjekt
 
         objEichprozess.FK_Auswertegeraet = RadDropdownlistAWGTyp.SelectedValue
         objEichprozess.FK_WaagenArt = RadDropDownListWaagenArt.SelectedValue
@@ -526,13 +532,28 @@ Public Class uco_2StammdatenEingabe
         ParentFormular.CurrentEichprozess = objEichprozess
     End Sub
 
-    ''' <summary>
-    ''' Gültigkeit der Eingaben überprüfen
-    ''' </summary>
-    ''' <remarks></remarks>
-    ''' <author></author>
-    ''' <commentauthor></commentauthor>
-    Protected Friend Overrides Function ValidateControls() As Boolean
+
+
+    Protected Friend Overrides Sub OverwriteIstSoll() Implements IRhewaEditingDialog.OverwriteIstSoll
+        RadTextBoxAWGBauartzulassung.Text = "Bauartzulassung"
+        RadTextBoxAWGHersteller.Text = "bitwork GmbH"
+        RadTextBoxAWGPruefbericht.Text = "Prüfbereicht"
+        RadTextBoxStammdatenOrt.Text = "Ort"
+        RadTextBoxStammdatenPLZ.Text = "PLZ"
+        RadTextBoxStammdatenStrasse.Text = "Strasse"
+        RadTextBoxStammdatenWaagenbaufirma.Text = "Waagenbaufirma"
+        RadTextBoxWaageSeriennummer.Text = "Seriennummer"
+        RadTextBoxWaageZulassungsinhaber.Text = "Zulassungsinhaber"
+        RadTextBoxWZBauartzulassung.Text = "Bauartzulassung"
+        RadTextBoxWZPruefbericht.Text = "Pruefbereicht"
+        RadDropdownlistAWGTyp.SelectedIndex = 1
+        RadDropdownlistlWZHersteller.Text = "Hersteller"
+        RadDropdownlistlWZTyp.SelectedIndex = 1
+        RadDropDownListWaagenArt.SelectedIndex = 1
+        RadDropdownlistWaagenTyp.SelectedIndex = 1
+    End Sub
+
+    Protected Friend Overrides Function ValidateControls() As Boolean Implements IRhewaEditingDialog.ValidateControls
         Me.AbortSaving = False
         'prüfen ob alle Felder ausgefüllt sind
         For Each GroupBox In RadScrollablePanel1.PanelContainer.Controls
@@ -610,121 +631,79 @@ Public Class uco_2StammdatenEingabe
         End If
         Return True
     End Function
+    Protected Friend Overrides Sub SaveObjekt() Implements IRhewaEditingDialog.SaveObjekt
 
-    Protected Friend Overrides Sub OverwriteIstSoll()
-        RadTextBoxAWGBauartzulassung.Text = "Bauartzulassung"
-        RadTextBoxAWGHersteller.Text = "bitwork GmbH"
-        RadTextBoxAWGPruefbericht.Text = "Prüfbereicht"
-        RadTextBoxStammdatenOrt.Text = "Ort"
-        RadTextBoxStammdatenPLZ.Text = "PLZ"
-        RadTextBoxStammdatenStrasse.Text = "Strasse"
-        RadTextBoxStammdatenWaagenbaufirma.Text = "Waagenbaufirma"
-        RadTextBoxWaageSeriennummer.Text = "Seriennummer"
-        RadTextBoxWaageZulassungsinhaber.Text = "Zulassungsinhaber"
-        RadTextBoxWZBauartzulassung.Text = "Bauartzulassung"
-        RadTextBoxWZPruefbericht.Text = "Pruefbereicht"
-        RadDropdownlistAWGTyp.SelectedIndex = 1
-        RadDropdownlistlWZHersteller.Text = "Hersteller"
-        RadDropdownlistlWZTyp.SelectedIndex = 1
-        RadDropDownListWaagenArt.SelectedIndex = 1
-        RadDropdownlistWaagenTyp.SelectedIndex = 1
-    End Sub
-
-    'Speicherroutine
-    Protected Overrides Sub SaveNeeded(ByVal UserControl As UserControl)
-        If Me.Equals(UserControl) Then
-
-            If DialogModus = enuDialogModus.lesend Then
-                If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.Kompatbilitaetsnachweis Then
-                    objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Kompatbilitaetsnachweis
+        'neuen Context aufbauen
+        Using Context As New Entities
+            'prüfen ob CREATE oder UPDATE durchgeführt werden muss
+            If objEichprozess.ID = 0 Then 'Neue ID also CREATE Operation
+                If objEichprozess.Kompatiblitaetsnachweis Is Nothing Then
+                    objEichprozess.Kompatiblitaetsnachweis = Context.Kompatiblitaetsnachweis.Create
                 End If
-                ParentFormular.CurrentEichprozess = objEichprozess
-                Exit Sub
-            End If
-            If DialogModus = enuDialogModus.korrigierend Then
-                UpdateObject()
-                If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.Kompatbilitaetsnachweis Then
-                    objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Kompatbilitaetsnachweis
-                End If
-                ParentFormular.CurrentEichprozess = objEichprozess
-                Exit Sub
-            End If
+                'Füllt das Objekt mit den Werten aus den Steuerlementen
+                UpdateObjekt()
+                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Kompatbilitaetsnachweis
+                objEichprozess.FK_Bearbeitungsstatus = 4 'noch nicht versandt
+                objEichprozess.ErzeugerLizenz = AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel
+                Context.Eichprozess.Add(objEichprozess)
+                'Speichern in Datenbank
+                Context.SaveChanges()
+            Else 'UPDATE
 
-            If ValidateControls() Then
+                'prüfen ob das Objekt anhand der ID gefunden werden kann
+                Dim dbobjEichprozess As Eichprozess = (From a In Context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
+                If Not dbobjEichprozess Is Nothing Then
+                    'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
+                    objEichprozess = dbobjEichprozess
 
-                'neuen Context aufbauen
-                Using Context As New Entities
-                    'prüfen ob CREATE oder UPDATE durchgeführt werden muss
-                    If objEichprozess.ID = 0 Then 'Neue ID also CREATE Operation
-                        If objEichprozess.Kompatiblitaetsnachweis Is Nothing Then
-                            objEichprozess.Kompatiblitaetsnachweis = Context.Kompatiblitaetsnachweis.Create
+                    'prüfen ob es änderungen am Objekt gab
+                    If AktuellerStatusDirty = False Then
+                        ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
+                        If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.Kompatbilitaetsnachweis Then
+                            objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Kompatbilitaetsnachweis
                         End If
-                        'Füllt das Objekt mit den Werten aus den Steuerlementen
-                        UpdateObject()
+                    ElseIf AktuellerStatusDirty = True Then
                         objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Kompatbilitaetsnachweis
-                        objEichprozess.FK_Bearbeitungsstatus = 4 'noch nicht versandt
-                        objEichprozess.ErzeugerLizenz = AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel
-                        Context.Eichprozess.Add(objEichprozess)
-                        'Speichern in Datenbank
-                        Context.SaveChanges()
-                    Else 'UPDATE
-
-                        'prüfen ob das Objekt anhand der ID gefunden werden kann
-                        Dim dbobjEichprozess As Eichprozess = (From a In Context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
-                        If Not dbobjEichprozess Is Nothing Then
-                            'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
-                            objEichprozess = dbobjEichprozess
-
-                            'prüfen ob es änderungen am Objekt gab
-                            If AktuellerStatusDirty = False Then
-                                ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
-                                If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.Kompatbilitaetsnachweis Then
-                                    objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Kompatbilitaetsnachweis
-                                End If
-                            ElseIf AktuellerStatusDirty = True Then
-                                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Kompatbilitaetsnachweis
-                                AktuellerStatusDirty = False
-                            End If
-
-                            'Füllt das Objekt mit den Werten aus den Steuerlementen
-                            UpdateObject()
-                            'Speichern in Datenbank
-                            Context.SaveChanges()
-                        End If
+                        AktuellerStatusDirty = False
                     End If
-                End Using
 
-                ParentFormular.CurrentEichprozess = objEichprozess
+                    'Füllt das Objekt mit den Werten aus den Steuerlementen
+                    UpdateObjekt()
+                    'Speichern in Datenbank
+                    Context.SaveChanges()
+                End If
             End If
-        End If
+        End Using
+
+        ParentFormular.CurrentEichprozess = objEichprozess
     End Sub
 
-    ''' <summary>
-    ''' methode zum Filtern der Dropdownliste
-    ''' </summary>
-    ''' <param name="listitem"></param>
-    ''' <returns></returns>
-    ''' <remarks></remarks>
-    ''' <author></author>
-    ''' <commentauthor></commentauthor>
-    Private Function FilterItem(listitem As Telerik.WinControls.UI.RadListDataItem) As Boolean
-        Try
-            If CType(listitem.DataBoundItem, Lookup_Waegezelle).Hersteller = RadDropdownlistlWZHersteller.Text Then
-                Return True
+    Protected Friend Overrides Sub AktualisiereStatus() Implements IRhewaEditingDialog.AktualisiereStatus
+        'nichts in diesem Dialog
+    End Sub
+    Protected Friend Overrides Function CheckDialogModus() As Boolean Implements IRhewaEditingDialog.CheckDialogModus
+        If DialogModus = enuDialogModus.lesend Then
+            If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.Kompatbilitaetsnachweis Then
+                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Kompatbilitaetsnachweis
             End If
+            ParentFormular.CurrentEichprozess = objEichprozess
             Return False
-        Catch ex As Exception
+        End If
+        If DialogModus = enuDialogModus.korrigierend Then
+            UpdateObjekt()
+            If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.Kompatbilitaetsnachweis Then
+                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Kompatbilitaetsnachweis
+            End If
+            ParentFormular.CurrentEichprozess = objEichprozess
             Return False
-        End Try
+        End If
+        Return True
     End Function
 
-#End Region
-
-#Region "Overrides"
-    'Entsperrroutine
-    Protected Overrides Sub EntsperrungNeeded()
-        MyBase.EntsperrungNeeded()
-
+    ''' <summary>
+    ''' Entsperrroutine
+    ''' </summary>
+    Protected Friend Overrides Sub Entsperrung() Implements IRhewaEditingDialog.Entsperrung
         'Hiermit wird ein lesender Vorgang wieder entsperrt.
         EnableControls(RadGroupBoxAWG)
         EnableControls(RadGroupBoxStammdaten)
@@ -736,17 +715,20 @@ Public Class uco_2StammdatenEingabe
         ParentFormular.DialogModus = FrmMainContainer.enuDialogModus.korrigierend
     End Sub
 
-    Protected Overrides Sub VersendenNeeded(TargetUserControl As UserControl)
 
-        If Me.Equals(TargetUserControl) Then
-            MyBase.VersendenNeeded(TargetUserControl)
-
-            UpdateObject()
-            'Erzeugen eines Server Objektes auf basis des aktuellen DS. Setzt es auf es ausserdem auf Fehlerhaft
-            CloneAndSendServerObjekt()
-        End If
+    ''' <summary>
+    ''' 
+    ''' </summary>
+    Protected Friend Overrides Sub Versenden() Implements IRhewaEditingDialog.Versenden
+        UpdateObjekt()
+        'Erzeugen eines Server Objektes auf basis des aktuellen DS. Setzt es auf es ausserdem auf Fehlerhaft
+        CloneAndSendServerObjekt()
     End Sub
+
+
+
 #End Region
+
 #Region "Workaround für Telerik Bug"
 
     'in der aktuellen Telerik Version q1 2013 gibt es ein Bug mit den Dropdownlisten. Diese erhalten keinen Fokus wenn man sie mit Tab ansteuert
@@ -774,6 +756,13 @@ Public Class uco_2StammdatenEingabe
     Private Sub Uco_MouseEnter(sender As Object, e As EventArgs) Handles Me.MouseEnter
         ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_Stammdaten)
     End Sub
+
+
+
+
+
+
 #End Region
+
 
 End Class

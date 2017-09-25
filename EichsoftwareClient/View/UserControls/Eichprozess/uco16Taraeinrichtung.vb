@@ -1,6 +1,7 @@
 Public Class uco16Taraeinrichtung
 
     Inherits ucoContent
+    Implements IRhewaEditingDialog
 #Region "Member Variables"
     Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken
     'Private AktuellerStatusDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann wird der Vorgang auf Komptabilitätsnachweis zurückgesetzt
@@ -22,29 +23,15 @@ Public Class uco16Taraeinrichtung
 #End Region
 
 #Region "Events"
-    ''' <summary>
-    ''' Validations the needed.
-    ''' </summary>
-    ''' <returns></returns>
-    Protected Friend Overrides Function ValidationNeeded() As Boolean
-        LoadFromDatabase()
-        Return ValidateControls()
-    End Function
+
     Private Sub ucoBeschaffenheitspruefung_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-        If Not ParentFormular Is Nothing Then
-            Try
-                'Hilfetext setzen
-                ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungTaraEinrichtung)
-                'Überschrift setzen
-                ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungTaraEinrichtung
-            Catch ex As Exception
-            End Try
-        End If
+        SetzeUeberschrift()
         EichprozessStatusReihenfolge = GlobaleEnumeratoren.enuEichprozessStatus.Taraeinrichtung
 
         'daten füllen
         LoadFromDatabase()
     End Sub
+
 
     ''' <summary>
     ''' Bei Änderungen DirtyFlag Setzen
@@ -60,7 +47,12 @@ Public Class uco16Taraeinrichtung
 #End Region
 
 #Region "Methods"
-    Protected Friend Overrides Sub LoadFromDatabase()
+
+
+#End Region
+
+#Region "Interface Methods"
+    Protected Friend Overrides Sub LoadFromDatabase() Implements IRhewaEditingDialog.LoadFromDatabase
         objEichprozess = ParentFormular.CurrentEichprozess
         'events abbrechen
         _suspendEvents = True
@@ -90,7 +82,7 @@ Public Class uco16Taraeinrichtung
     ''' <remarks></remarks>
     ''' <author></author>
     ''' <commentauthor></commentauthor>
-    Private Sub FillControls()
+    Protected Friend Overrides Sub FillControls() Implements IRhewaEditingDialog.FillControls
         'Steuerlemente füllen
 
         If Not objEichprozess.Eichprotokoll.Taraeinrichtung_ErweiterteRichtigkeitspruefungOK Is Nothing Then
@@ -111,7 +103,7 @@ Public Class uco16Taraeinrichtung
     ''' <remarks></remarks>
     ''' <author></author>
     ''' <commentauthor></commentauthor>
-    Private Sub UpdateObject()
+    Protected Friend Overrides Sub UpdateObjekt() Implements IRhewaEditingDialog.UpdateObjekt
         If DialogModus = enuDialogModus.normal Then objEichprozess.Bearbeitungsdatum = Date.Now
 
         objEichprozess.Eichprotokoll.Taraeinrichtung_ErweiterteRichtigkeitspruefungOK = RadCheckBoxTaraErweiterteRichtigkeitspruefung.Checked
@@ -125,7 +117,7 @@ Public Class uco16Taraeinrichtung
     ''' <remarks></remarks>
     ''' <author></author>
     ''' <commentauthor></commentauthor>
-    Protected Friend Overrides Function ValidateControls() As Boolean
+    Protected Friend Overrides Function ValidateControls() As Boolean Implements IRhewaEditingDialog.ValidateControls
         'prüfen ob alle Felder ausgefüllt sind
         Me.AbortSaving = False
 
@@ -146,162 +138,117 @@ Public Class uco16Taraeinrichtung
         Return ProcessResult(result)
     End Function
 
-    Protected Friend Overrides Sub OverwriteIstSoll()
+    Protected Friend Overrides Sub OverwriteIstSoll() Implements IRhewaEditingDialog.OverwriteIstSoll
         RadCheckBoxTaraausgleicheinrichtungOK.Checked = True
         RadCheckBoxTaraErweiterteRichtigkeitspruefung.Checked = True
     End Sub
-
-#End Region
-
-#Region "Overrides"
-    'Speicherroutine
-    Protected Overrides Sub SaveNeeded(ByVal UserControl As UserControl)
-        If Me.Equals(UserControl) Then
-
-            If DialogModus = enuDialogModus.lesend Or DialogModus = enuDialogModus.korrigierend Then
-                If DialogModus = enuDialogModus.korrigierend Then
-                    UpdateObject()
-                End If
-
-                Select Case objEichprozess.Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren.Verfahren
-                    Case Is = "über 60kg mit Normalien", "über 60kg im Staffelverfahren"
-                        ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
-                        If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.BerücksichtigungderFallbeschleunigung Then
-                            objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.BerücksichtigungderFallbeschleunigung
-                        End If
-                    Case Is = "Fahrzeugwaagen"
-                        If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.EignungfürAchslastwägungen Then
-                            objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.EignungfürAchslastwägungen
-                        End If
-                End Select
-                ParentFormular.CurrentEichprozess = objEichprozess
-                Exit Sub
-            End If
-
-            If ValidateControls() = True Then
-
-                'neuen Context aufbauen
-                Using Context As New Entities
-                    'prüfen ob CREATE oder UPDATE durchgeführt werden muss
-                    If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
-                        'prüfen ob das Objekt anhand der ID gefunden werden kann
-                        Dim dobjEichprozess As Eichprozess = (From a In Context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
-                        If Not dobjEichprozess Is Nothing Then
-                            'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
-                            objEichprozess = dobjEichprozess
-                            'neuen Status zuweisen
-
-                            Select Case objEichprozess.Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren.Verfahren
-                                Case Is = "über 60kg mit Normalien", "über 60kg im Staffelverfahren"
-                                    If AktuellerStatusDirty = False Then
-                                        ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
-                                        If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.BerücksichtigungderFallbeschleunigung Then
-                                            objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.BerücksichtigungderFallbeschleunigung
-                                        End If
-                                    ElseIf AktuellerStatusDirty = True Then
-                                        objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.BerücksichtigungderFallbeschleunigung
-                                        AktuellerStatusDirty = False
-                                    End If
-                                Case Is = "Fahrzeugwaagen"
-                                    If AktuellerStatusDirty = False Then
-                                        ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
-                                        If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.EignungfürAchslastwägungen Then
-                                            objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.EignungfürAchslastwägungen
-                                        End If
-                                    ElseIf AktuellerStatusDirty = True Then
-                                        objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.EignungfürAchslastwägungen
-                                        AktuellerStatusDirty = False
-                                    End If
-                            End Select
-
-                            'Füllt das Objekt mit den Werten aus den Steuerlementen
-                            UpdateObject()
-                            'Speichern in Datenbank
-                            Context.SaveChanges()
-                        End If
-                    End If
-                End Using
-
-                ParentFormular.CurrentEichprozess = objEichprozess
-            End If
-
-        End If
-
-    End Sub
-
-    Protected Overrides Sub SaveWithoutValidationNeeded(usercontrol As UserControl)
-        MyBase.SaveWithoutValidationNeeded(usercontrol)
-
-        If Me.Equals(usercontrol) Then
-            If DialogModus = enuDialogModus.lesend Then
-                UpdateObject()
-                ParentFormular.CurrentEichprozess = objEichprozess
-                Exit Sub
-            End If
-            'neuen Context aufbauen
-            Using Context As New Entities
-                'prüfen ob CREATE oder UPDATE durchgeführt werden muss
-                If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
-                    'prüfen ob das Objekt anhand der ID gefunden werden kann
-                    Dim dobjEichprozess As Eichprozess = (From a In Context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
-                    If Not dobjEichprozess Is Nothing Then
-                        'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
-                        objEichprozess = dobjEichprozess
-                        'neuen Status zuweisen
-
-                        'Füllt das Objekt mit den Werten aus den Steuerlementen
-                        UpdateObject()
-                        'Speichern in Datenbank
-                        Context.SaveChanges()
-                    End If
-                End If
-            End Using
-
-            ParentFormular.CurrentEichprozess = objEichprozess
-        End If
-    End Sub
-
-    ''' <summary>
-    ''' aktualisieren der Oberfläche wenn nötig
-    ''' </summary>
-    ''' <param name="UserControl"></param>
-    ''' <remarks></remarks>
-    Protected Overrides Sub UpdateNeeded(UserControl As UserControl)
-        If Me.Equals(UserControl) Then
-            MyBase.UpdateNeeded(UserControl)
-            Me.LokalisierungNeeded(UserControl)
-
-
-            LoadFromDatabase()
-        End If
-    End Sub
-
-    Protected Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
-        If Me.Name.Equals(UserControl.Name) = False Then Exit Sub
-
-        MyBase.LokalisierungNeeded(UserControl)
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco16Taraeinrichtung))
-        Lokalisierung(Me, resources)
-
-
+    Protected Friend Overrides Sub SetzeUeberschrift() Implements IRhewaEditingDialog.SetzeUeberschrift
         If Not ParentFormular Is Nothing Then
             Try
                 'Hilfetext setzen
-
                 ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungTaraEinrichtung)
                 'Überschrift setzen
-
                 ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungTaraEinrichtung
             Catch ex As Exception
             End Try
         End If
-
     End Sub
 
-    'Entsperrroutine
-    Protected Overrides Sub EntsperrungNeeded()
-        MyBase.EntsperrungNeeded()
 
+    Protected Friend Overrides Sub SaveObjekt() Implements IRhewaEditingDialog.SaveObjekt
+        'neuen Context aufbauen
+        Using Context As New Entities
+            'prüfen ob CREATE oder UPDATE durchgeführt werden muss
+            If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
+                'prüfen ob das Objekt anhand der ID gefunden werden kann
+                Dim dobjEichprozess As Eichprozess = (From a In Context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
+                If Not dobjEichprozess Is Nothing Then
+                    'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
+                    objEichprozess = dobjEichprozess
+                    'neuen Status zuweisen
+
+                    'Füllt das Objekt mit den Werten aus den Steuerlementen
+                    UpdateObjekt()
+                    'Speichern in Datenbank
+                    Context.SaveChanges()
+                End If
+            End If
+        End Using
+    End Sub
+    Protected Friend Overrides Sub AktualisiereStatus() Implements IRhewaEditingDialog.AktualisiereStatus
+        'neuen Context aufbauen
+        Using Context As New Entities
+            'prüfen ob CREATE oder UPDATE durchgeführt werden muss
+            If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
+                'prüfen ob das Objekt anhand der ID gefunden werden kann
+                Dim dobjEichprozess As Eichprozess = (From a In Context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
+                If Not dobjEichprozess Is Nothing Then
+                    'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
+                    objEichprozess = dobjEichprozess
+                    'neuen Status zuweisen
+
+                    Select Case objEichprozess.Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren.Verfahren
+                        Case Is = "über 60kg mit Normalien", "über 60kg im Staffelverfahren"
+                            If AktuellerStatusDirty = False Then
+                                ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
+                                If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.BerücksichtigungderFallbeschleunigung Then
+                                    objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.BerücksichtigungderFallbeschleunigung
+                                End If
+                            ElseIf AktuellerStatusDirty = True Then
+                                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.BerücksichtigungderFallbeschleunigung
+                                AktuellerStatusDirty = False
+                            End If
+                        Case Is = "Fahrzeugwaagen"
+                            If AktuellerStatusDirty = False Then
+                                ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
+                                If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.EignungfürAchslastwägungen Then
+                                    objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.EignungfürAchslastwägungen
+                                End If
+                            ElseIf AktuellerStatusDirty = True Then
+                                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.EignungfürAchslastwägungen
+                                AktuellerStatusDirty = False
+                            End If
+                    End Select
+
+                    'Speichern in Datenbank
+                    Context.SaveChanges()
+                End If
+            End If
+        End Using
+    End Sub
+    Protected Friend Overrides Function CheckDialogmodus() As Boolean Implements IRhewaEditingDialog.CheckDialogModus
+        If DialogModus = enuDialogModus.lesend Or DialogModus = enuDialogModus.korrigierend Then
+            If DialogModus = enuDialogModus.korrigierend Then
+                UpdateObjekt()
+            End If
+
+            Select Case objEichprozess.Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren.Verfahren
+                Case Is = "über 60kg mit Normalien", "über 60kg im Staffelverfahren"
+                    ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
+                    If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.BerücksichtigungderFallbeschleunigung Then
+                        objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.BerücksichtigungderFallbeschleunigung
+                    End If
+                Case Is = "Fahrzeugwaagen"
+                    If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.EignungfürAchslastwägungen Then
+                        objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.EignungfürAchslastwägungen
+                    End If
+            End Select
+            ParentFormular.CurrentEichprozess = objEichprozess
+            Return False
+        End If
+        Return True
+    End Function
+
+
+
+    Protected Friend Overrides Sub Lokalisiere() Implements IRhewaEditingDialog.Lokalisiere
+        Dim resources As ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco16Taraeinrichtung))
+        Lokalisierung(Me, resources)
+    End Sub
+
+
+
+    Protected Friend Overrides Sub Entsperrung() Implements IRhewaEditingDialog.Entsperrung
         'Hiermit wird ein lesender Vorgang wieder entsperrt.
         EnableControls(RadScrollablePanel1.PanelContainer)
 
@@ -310,14 +257,11 @@ Public Class uco16Taraeinrichtung
         ParentFormular.DialogModus = FrmMainContainer.enuDialogModus.korrigierend
     End Sub
 
-    Protected Overrides Sub VersendenNeeded(TargetUserControl As UserControl)
 
-        If Me.Equals(TargetUserControl) Then
-            MyBase.VersendenNeeded(TargetUserControl)
-            UpdateObject()
-            'Erzeugen eines Server Objektes auf basis des aktuellen DS. Setzt es auf es ausserdem auf Fehlerhaft
-            CloneAndSendServerObjekt()
-        End If
+    Protected Friend Overrides Sub Versenden() Implements IRhewaEditingDialog.Versenden
+        UpdateObjekt()
+        'Erzeugen eines Server Objektes auf basis des aktuellen DS. Setzt es auf es ausserdem auf Fehlerhaft
+        CloneAndSendServerObjekt()
     End Sub
 
 #End Region

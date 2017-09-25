@@ -1,6 +1,7 @@
 Public Class uco_3Kompatiblititaetsnachweis
 
     Inherits ucoContent
+    Implements IRhewaEditingDialog
 
 #Region "Member Variables"
     Private _objMogelstatistik As Mogelstatistik
@@ -25,26 +26,11 @@ Public Class uco_3Kompatiblititaetsnachweis
 #End Region
 
 #Region "Events"
-    ''' <summary>
-    ''' Validations the needed.
-    ''' </summary>
-    ''' <returns></returns>
-    Protected Friend Overrides Function ValidationNeeded() As Boolean
-        LoadFromDatabase()
-        Return ValidateControls()
-    End Function
+
     Private Sub ucoBeschaffenheitspruefung_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         Me.SuspendLayout()
 
-        If Not ParentFormular Is Nothing Then
-            Try
-                'Hilfetext setzen
-                ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_KompatiblitaetsnachweisHilfe)
-                'Überschrift setzen
-                ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_Kompatiblitaetsnachweis
-            Catch ex As Exception
-            End Try
-        End If
+        SetzeUeberschrift()
         EichprozessStatusReihenfolge = GlobaleEnumeratoren.enuEichprozessStatus.Kompatbilitaetsnachweis
 
         'daten füllen
@@ -53,748 +39,13 @@ Public Class uco_3Kompatiblititaetsnachweis
         Me.ResumeLayout()
 
     End Sub
-
-    Protected Friend Overrides Sub LoadFromDatabase()
-        objEichprozess = ParentFormular.CurrentEichprozess
-        'events abbrechen
-        _suspendEvents = True
-
-        'Nur laden wenn es sich um eine Bearbeitung handelt (sonst würde das in Memory Objekt überschrieben werden)
-        If Not DialogModus = enuDialogModus.lesend And Not DialogModus = enuDialogModus.korrigierend Then
-            Using context As New Entities
-                'neu laden des Objekts, diesmal mit den lookup Objekten
-                objEichprozess = (From a In context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
-            End Using
-        End If
-        'steuerelemente mit werten aus DB füllen
-        FillControls()
-        'events abbrechen
-        _suspendEvents = False
-    End Sub
-
-    ''' <summary>
-    ''' Lädt die Werte aus dem Beschaffenheitspruefungsobjekt in die Steuerlemente
-    ''' </summary>
-    ''' <remarks></remarks>
-    ''' <author></author>
-    ''' <commentauthor></commentauthor>
-    Private Sub FillControls()
-        'art der Waage abrufen um dementsprechend Höchlast und Eichwerte Steuerlemente auszublenden
-        'Dim Waagenart As Lookup_Waagenart = Nothing
-        'waagenarten abrufen
-
-        'nur überschreiben wenn leer. Wird genutzt für vor und zurück blättern-
-        If Not objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1 Is Nothing Then
-            RadTextBoxControlWaageHoechstlast1.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1
-        End If
-        If Not objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 Is Nothing Then
-            RadTextBoxControlWaageHoechstlast2.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2
-        End If
-        If Not objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 Is Nothing Then
-            RadTextBoxControlWaageHoechstlast3.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3
-        End If
-        If Not objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 Is Nothing Then
-            RadTextBoxControlWaageEichwert1.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1
-        End If
-        If Not objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 Is Nothing Then
-            RadTextBoxControlWaageEichwert2.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2
-        End If
-        If Not objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 Is Nothing Then
-            RadTextBoxControlWaageEichwert3.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3
-        End If
-
-        'nur wenn die Werte bereits geschrieben wurden, werden Sie in die Textboxen übernommen, da sonst die autowerte überschrieben würden
-        If Not objEichprozess.Kompatiblitaetsnachweis Is Nothing Then
-            If Not objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Uebersetzungsverhaeltnis Is Nothing Then
-                RadTextBoxControlWaageUebersetzungsverhaeltnis.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Uebersetzungsverhaeltnis
-            End If
-            If Not objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen Is Nothing Then
-                RadTextBoxControlWaageAnzahlWaegezellen.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen
-
-            End If
-            If Not objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Einschaltnullstellbereich Is Nothing Then
-                RadTextBoxControlEinschaltnullstellbereich.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Einschaltnullstellbereich
-            End If
-            If Not objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Ecklastzuschlag Is Nothing Then
-                RadTextBoxControlWaageEcklastzuschlag.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Ecklastzuschlag
-
-            End If
-            If Not objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Totlast Is Nothing Then
-                RadTextBoxControlWaageTotlast.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Totlast
-
-            End If
-            If Not objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Kabellaenge Is Nothing Then
-                RadTextBoxControlWaageKabellaenge.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Kabellaenge
-
-            End If
-            If Not objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Kabelquerschnitt Is Nothing Then
-                RadTextBoxControlWaageKabelquerschnitt.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Kabelquerschnitt
-
-            End If
-            If Not objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_AWG_Anschlussart Is Nothing Then
-                RadTextBoxControlAWGAnschlussart.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_AWG_Anschlussart
-
-            End If
-
-            If Not objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast Is Nothing Then
-                RadTextBoxControlWZHoechstlast.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast.Split(";")(0)
-            End If
-        End If
-
-        If DialogModus = enuDialogModus.lesend Then
-            'falls der Konformitätsbewertungsvorgang nur lesend betrchtet werden soll, wird versucht alle Steuerlemente auf REadonly zu setzen. Wenn das nicht klappt,werden sie disabled
-            DisableControls(RadGroupBoxAWG)
-            DisableControls(RadGroupBoxVerbindungselemente)
-            DisableControls(RadGroupBoxWaage)
-            DisableControls(RadGroupBoxWZ)
-
-        End If
-
-        If Not objEichprozess.FK_WaagenArt Is Nothing Then
-
-            '  Waagenart = (From dbWaagenart In Context.Lookup_Waagenart Select dbWaagenart Where dbWaagenart.ID = objEichprozess.FK_WaagenArt).FirstOrDefault
-
-            If objEichprozess.Lookup_Waagenart.Art = "Einbereichswaage" Then
-                'zweiten und dritten bereich ausblenden
-                lblMax2.Visible = False
-                RadTextBoxControlWaageHoechstlast2.Visible = False
-                lblKGMax2.Visible = False
-
-                lblPflichtfeld1.Visible = True
-                lblPflichtfeld2.Visible = True
-                lblPflichtfeld3.Visible = False
-                lblPflichtfeld4.Visible = False
-                lblPflichtfeld5.Visible = False
-                lblPflichtfeld6.Visible = False
-
-                lblE2.Visible = False
-                RadTextBoxControlWaageEichwert2.Visible = False
-                lblEKG2.Visible = False
-
-                lblMax3.Visible = False
-                RadTextBoxControlWaageHoechstlast3.Visible = False
-                lblKGMax3.Visible = False
-
-                lblE3.Visible = False
-                RadTextBoxControlWaageEichwert3.Visible = False
-                lblEKG3.Visible = False
-
-                'umbennenen des Textes
-                lblMax1.Text = "Max"
-                lblE1.Text = "e"
-
-            ElseIf objEichprozess.Lookup_Waagenart.Art = "Zweibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Zweiteilungswaage" Then
-
-                'zweiten Bereich einblenden
-                lblMax2.Visible = True
-                RadTextBoxControlWaageHoechstlast2.Visible = True
-                lblKGMax2.Visible = True
-
-                lblE2.Visible = True
-                RadTextBoxControlWaageEichwert2.Visible = True
-                lblEKG2.Visible = True
-
-                lblPflichtfeld1.Visible = True
-                lblPflichtfeld2.Visible = True
-                lblPflichtfeld3.Visible = True
-                lblPflichtfeld4.Visible = True
-                lblPflichtfeld5.Visible = False
-                lblPflichtfeld6.Visible = False
-
-                'dritten Ausblenden
-                lblMax3.Visible = False
-                RadTextBoxControlWaageHoechstlast3.Visible = False
-                lblKGMax3.Visible = False
-
-                lblE3.Visible = False
-                RadTextBoxControlWaageEichwert3.Visible = False
-                lblEKG3.Visible = False
-
-                lblMax1.Text = "Max1"
-                lblE1.Text = "e1"
-            ElseIf objEichprozess.Lookup_Waagenart.Art = "Dreibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Dreiteilungswaage" Then
-                'zweiten und dritten bereich einblenden
-
-                'zweiten Bereich einblenden
-                lblMax2.Visible = True
-                RadTextBoxControlWaageHoechstlast2.Visible = True
-                lblKGMax2.Visible = True
-
-                lblPflichtfeld1.Visible = True
-                lblPflichtfeld2.Visible = True
-                lblPflichtfeld3.Visible = True
-                lblPflichtfeld4.Visible = True
-                lblPflichtfeld5.Visible = True
-                lblPflichtfeld6.Visible = True
-
-                lblE2.Visible = True
-                RadTextBoxControlWaageEichwert2.Visible = True
-                lblEKG2.Visible = True
-
-                'dritten Ausblenden
-                lblMax3.Visible = True
-                RadTextBoxControlWaageHoechstlast3.Visible = True
-                lblKGMax3.Visible = True
-
-                lblE3.Visible = True
-                RadTextBoxControlWaageEichwert3.Visible = True
-                lblEKG3.Visible = True
-
-                lblMax1.Text = "Max1"
-                lblE1.Text = "e1"
-            End If
-
-        End If
-
-        'vorfüllen der Werte abhängig vom AWG
-        If Not objEichprozess.FK_Auswertegeraet Is Nothing Then
-
-            '  Dim AWG = (From dbAWG In Context.Lookup_Auswertegeraet Select dbAWG Where dbAWG.ID = objEichprozess.FK_Auswertegeraet).FirstOrDefault
-            Dim AWG = objEichprozess.Lookup_Auswertegeraet
-
-            'abhängig von Waagenart den einen Wert oder den anderen auslesen
-            If Not objEichprozess.Lookup_Waagenart Is Nothing Then
-                If objEichprozess.Lookup_Waagenart.Art = "Einbereichswaage" Then
-                    RadTextBoxControlAWGTeilungswerte.Text = AWG.MAXAnzahlTeilungswerteEinbereichswaage
-                Else
-                    RadTextBoxControlAWGTeilungswerte.Text = AWG.MAXAnzahlTeilungswerteMehrbereichswaage
-                End If
-            End If
-            RadTextBoxControlAWGSpeisespannung.Text = AWG.Speisespannung
-            RadTextBoxControlAWGMindestmesssignal.Text = AWG.Mindestmesssignal
-            RadTextBoxControlAWGGrenzwerteLastwiderstandMin.Text = AWG.GrenzwertLastwiderstandMIN
-            RadTextBoxControlAWGGrenzwerteLastwiderstandMax.Text = AWG.GrenzwertLastwiderstandMAX
-            RadTextBoxControlAWGKabellaenge.Text = AWG.KabellaengeQuerschnitt
-            RadTextBoxControlAWGKlasse.Text = AWG.Genauigkeitsklasse
-
-            RadTextBoxControlAWGTemperaturbereichMax.Text = AWG.GrenzwertTemperaturbereichMAX
-            RadTextBoxControlAWGTemperaturbereichMin.Text = AWG.GrenzwertTemperaturbereichMIN
-        End If
-
-        'vorfüllen der Werte abhängig vom WZ
-        If Not objEichprozess.FK_Waegezelle Is Nothing Then
-            'Dim WZ = (From dbWZ In Context.Lookup_Waegezelle Select dbWZ Where dbWZ.ID = objEichprozess.FK_Waegezelle).FirstOrDefault
-            Dim wz = objEichprozess.Lookup_Waegezelle
-
-            If Not wz.Genauigkeitsklasse Is Nothing Then
-                RadTextBoxControlWZGenauigkeitsklasse.Text = wz.Genauigkeitsklasse
-            End If
-
-            If Not wz.Mindestvorlast Is Nothing Then
-                RadTextBoxControlWZMindestvorlast.Text = wz.Mindestvorlast
-                If IsNumeric(RadTextBoxControlWZHoechstlast.Text) Then
-                    Try
-                        If Not objEichprozess.Lookup_Waegezelle.MindestvorlastProzent Is Nothing Then
-                            RadTextBoxControlWZMindestvorlast.Text = (objEichprozess.Lookup_Waegezelle.MindestvorlastProzent / 100) * RadTextBoxControlWZHoechstlast.Text
-                        End If
-                    Catch ex As Exception
-                    End Try
-                End If
-            End If
-            If Not wz.Waegezellenkennwert Is Nothing Then
-                RadTextBoxControlWZWaegezellenkennwert.Text = wz.Waegezellenkennwert
-
-            End If
-            If Not wz.MaxAnzahlTeilungswerte Is Nothing Then
-                RadTextBoxControlWZMaxTeilungswerte.Text = wz.MaxAnzahlTeilungswerte
-
-            End If
-            If Not wz.MinTeilungswert Is Nothing Then
-                RadTextBoxControlWZMinTeilungswert.Text = wz.MinTeilungswert
-
-            End If
-            If Not wz.Hoechsteteilungsfaktor Is Nothing Then
-                Dim wertHoechsteteilungsfaktor = objEichprozess.Lookup_Waegezelle.Hoechsteteilungsfaktor
-                Dim wertHoechsteteilungsfaktorAufgedruckt = ""
-                If Not objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast Is Nothing Then
-                    If objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast.Contains(";") Then
-                        wertHoechsteteilungsfaktorAufgedruckt = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast.Split(";")(1)
-                    End If
-                End If
-
-                RadTextBoxControlWZHoechstteilungsfaktor.Text = wertHoechsteteilungsfaktor
-                RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.Text = wertHoechsteteilungsfaktorAufgedruckt
-
-            End If
-
-            If Not wz.Kriechteilungsfaktor Is Nothing Then
-                RadTextBoxControlWZKriechteilungsfaktor.Text = wz.Kriechteilungsfaktor
-
-            End If
-            If Not wz.RueckkehrVorlastsignal Is Nothing Then
-                RadTextBoxControlWZRueckkehrVorlastsignal.Text = wz.RueckkehrVorlastsignal
-
-            End If
-            If Not wz.WiderstandWaegezelle Is Nothing Then
-                RadTextBoxControlWZWiderstand.Text = wz.WiderstandWaegezelle
-
-            End If
-
-            If Not wz.GrenzwertTemperaturbereichMAX Is Nothing Then
-                RadTextBoxControlWZTemperaturbereichMAX.Text = wz.GrenzwertTemperaturbereichMAX
-
-            End If
-            If Not wz.GrenzwertTemperaturbereichMIN Is Nothing Then
-                RadTextBoxControlWZTemperaturbereichMIN.Text = wz.GrenzwertTemperaturbereichMIN
-
-            End If
-
-        End If
-
-        'wenn eine neue WZ angelegt wurde, dürfen hier auch Werte für dieses eingegeben werden
-        If objEichprozess.Lookup_Waegezelle.Neu = True Then
-            'auslbenden der Schloss bilder
-            PictureBoxWZ1.Visible = False
-            PictureBoxWZ2.Visible = False
-            PictureBoxWZ3.Visible = False
-            PictureBoxWZ4.Visible = False
-            PictureBoxWZ5.Visible = False
-            PictureBoxWZ6.Visible = False
-            PictureBoxWZ7.Visible = False
-            PictureBoxWZ8.Visible = False
-            PictureBoxWZ9.Visible = False
-
-            'felder beschreiben lassen
-            RadTextBoxControlWZGenauigkeitsklasse.ReadOnly = False
-            RadTextBoxControlWZGenauigkeitsklasse.Enabled = True
-
-            RadTextBoxControlWZHoechstteilungsfaktor.ReadOnly = False
-            RadTextBoxControlWZKriechteilungsfaktor.ReadOnly = False
-            RadTextBoxControlWZMaxTeilungswerte.ReadOnly = False
-            RadTextBoxControlWZMindestvorlast.ReadOnly = False
-            RadTextBoxControlWZMinTeilungswert.ReadOnly = False
-            RadTextBoxControlWZRueckkehrVorlastsignal.ReadOnly = False
-            RadTextBoxControlWZWaegezellenkennwert.ReadOnly = False
-            RadTextBoxControlWZWiderstand.ReadOnly = False
-
-            'tabstops erlauben
-            RadTextBoxControlWZGenauigkeitsklasse.TabStop = True
-            RadTextBoxControlWZHoechstteilungsfaktor.TabStop = True
-            RadTextBoxControlWZKriechteilungsfaktor.TabStop = True
-            RadTextBoxControlWZMaxTeilungswerte.TabStop = True
-            RadTextBoxControlWZMindestvorlast.TabStop = True
-            RadTextBoxControlWZMinTeilungswert.TabStop = True
-            RadTextBoxControlWZRueckkehrVorlastsignal.TabStop = True
-            RadTextBoxControlWZWaegezellenkennwert.TabStop = True
-            RadTextBoxControlWZWiderstand.TabStop = True
-        Else
-            PictureBoxWZ1.Visible = True
-            PictureBoxWZ2.Visible = True
-            PictureBoxWZ3.Visible = True
-            PictureBoxWZ4.Visible = True
-            PictureBoxWZ5.Visible = True
-            PictureBoxWZ6.Visible = True
-            PictureBoxWZ7.Visible = True
-            PictureBoxWZ8.Visible = True
-            PictureBoxWZ9.Visible = True
-            PictureBoxWZ10.Visible = True
-            PictureBoxWZ11.Visible = True
-
-            RadTextBoxControlWZGenauigkeitsklasse.ReadOnly = True
-
-            RadTextBoxControlWZHoechstteilungsfaktor.ReadOnly = True
-            RadTextBoxControlWZKriechteilungsfaktor.ReadOnly = True
-            RadTextBoxControlWZMaxTeilungswerte.ReadOnly = True
-            RadTextBoxControlWZMindestvorlast.ReadOnly = True
-            RadTextBoxControlWZMinTeilungswert.ReadOnly = True
-            RadTextBoxControlWZRueckkehrVorlastsignal.ReadOnly = True
-            RadTextBoxControlWZWaegezellenkennwert.ReadOnly = True
-            RadTextBoxControlWZWiderstand.ReadOnly = True
-
-            'tabstops verbieten
-            RadTextBoxControlWZGenauigkeitsklasse.TabStop = False
-            RadTextBoxControlWZHoechstteilungsfaktor.TabStop = False
-            RadTextBoxControlWZKriechteilungsfaktor.TabStop = False
-            RadTextBoxControlWZMaxTeilungswerte.TabStop = False
-            RadTextBoxControlWZMindestvorlast.TabStop = False
-            RadTextBoxControlWZMinTeilungswert.TabStop = False
-            RadTextBoxControlWZRueckkehrVorlastsignal.TabStop = False
-            RadTextBoxControlWZWaegezellenkennwert.TabStop = False
-            RadTextBoxControlWZWiderstand.TabStop = False
-
-        End If
-
-        'fokus setzen
-        RadTextBoxControlWaageHoechstlast1.Focus()
-
-    End Sub
-
-    ''' <summary>
-    ''' Füllt das Objekt mit den Werten aus den Steuerlementen
-    ''' </summary>
-    ''' <remarks></remarks>
-    ''' <author></author>
-    ''' <commentauthor></commentauthor>
-    Private Sub UpdateObject()
-        If DialogModus = enuDialogModus.normal Then objEichprozess.Bearbeitungsdatum = Date.Now
-
-        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_AWG_Anschlussart = RadTextBoxControlAWGAnschlussart.Text.Trim
-        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast = RadTextBoxControlWZHoechstlast.Text.Trim.Split(";")(0)
-        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Verbindungselemente_BruchteilEichfehlergrenze = RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze.Text.Trim
-        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AdditiveTarahoechstlast = RadTextBoxControlWaageAdditiveTarahoechstlast.Text.Trim
-        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen = RadTextBoxControlWaageAnzahlWaegezellen.Text.Trim
-        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Ecklastzuschlag = RadTextBoxControlWaageEcklastzuschlag.Text.Trim
-        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Einschaltnullstellbereich = RadTextBoxControlEinschaltnullstellbereich.Text.Trim
-        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Genauigkeitsklasse = RadTextBoxControlWaageKlasse.Text.ToUpper.Trim
-        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_GrenzenTemperaturbereichMAX = RadTextBoxControlWaageTemperaturbereichMax.Text.Trim
-        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_GrenzenTemperaturbereichMIN = RadTextBoxControlWaageTemperaturbereichMin.Text.Trim
-        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Kabellaenge = RadTextBoxControlWaageKabellaenge.Text.Trim
-        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Kabelquerschnitt = RadTextBoxControlWaageKabelquerschnitt.Text.Trim
-        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Totlast = RadTextBoxControlWaageTotlast.Text.Trim
-        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Uebersetzungsverhaeltnis = RadTextBoxControlWaageUebersetzungsverhaeltnis.Text.Trim
-        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1 = RadTextBoxControlWaageHoechstlast1.Text.Trim
-        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 = RadTextBoxControlWaageHoechstlast2.Text.Trim
-        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 = RadTextBoxControlWaageHoechstlast3.Text.Trim
-        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 = RadTextBoxControlWaageEichwert1.Text.Trim
-        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 = RadTextBoxControlWaageEichwert2.Text.Trim
-        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 = RadTextBoxControlWaageEichwert3.Text.Trim
-        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Revisionsnummer = ""
-
-        If RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.Text.Trim <> "" Then
-            objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast += ";" & RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.Text.Trim
-        End If
-
-        'im falle einer neuen WZ die Werte übernehmen
-        If objEichprozess.Lookup_Waegezelle.Neu Then
-            objEichprozess.Lookup_Waegezelle.Genauigkeitsklasse = RadTextBoxControlWZGenauigkeitsklasse.Text.ToUpper.Trim
-            objEichprozess.Lookup_Waegezelle.Mindestvorlast = RadTextBoxControlWZMindestvorlast.Text.Trim
-            objEichprozess.Lookup_Waegezelle.Waegezellenkennwert = RadTextBoxControlWZWaegezellenkennwert.Text.Trim
-            objEichprozess.Lookup_Waegezelle.MaxAnzahlTeilungswerte = RadTextBoxControlWZMaxTeilungswerte.Text.Trim
-            objEichprozess.Lookup_Waegezelle.MinTeilungswert = RadTextBoxControlWZMinTeilungswert.Text.Trim
-            objEichprozess.Lookup_Waegezelle.Kriechteilungsfaktor = RadTextBoxControlWZKriechteilungsfaktor.Text.Trim
-            objEichprozess.Lookup_Waegezelle.Hoechsteteilungsfaktor = RadTextBoxControlWZHoechstteilungsfaktor.Text.Trim
-            objEichprozess.Lookup_Waegezelle.RueckkehrVorlastsignal = RadTextBoxControlWZRueckkehrVorlastsignal.Text.Trim
-            objEichprozess.Lookup_Waegezelle.WiderstandWaegezelle = RadTextBoxControlWZWiderstand.Text.Trim
-            objEichprozess.Lookup_Waegezelle.GrenzwertTemperaturbereichMIN = RadTextBoxControlWZTemperaturbereichMIN.Text.Trim
-            objEichprozess.Lookup_Waegezelle.GrenzwertTemperaturbereichMAX = RadTextBoxControlWZTemperaturbereichMAX.Text.Trim
-            objEichprozess.Lookup_Waegezelle.BruchteilEichfehlergrenze = RadTextBoxControlWZBruchteilEichfehlergrenze.Text.Trim
-        End If
-
-        'Mogelstatistik Objekt erzeugen. Dies passiert immer wenn geblättert wird.
-        Dim objMogelstatistik As Mogelstatistik = New Mogelstatistik
-
-        objMogelstatistik.Eichprozess = objEichprozess
-        objMogelstatistik.FK_Auswertegeraet = objEichprozess.FK_Auswertegeraet
-        objMogelstatistik.FK_Eichprozess = objEichprozess.ID
-        objMogelstatistik.FK_Waegezelle = objEichprozess.FK_Waegezelle
-        objMogelstatistik.Kompatiblitaet_AnschriftWaagenbaufirma = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Hersteller + " | " + objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Strasse + " " + objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Ort + ", " + objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Postleitzahl
-        objMogelstatistik.Kompatiblitaet_AWG_Anschlussart = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_AWG_Anschlussart
-        objMogelstatistik.Kompatiblitaet_Verbindungselemente_BruchteilEichfehlergrenze = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Verbindungselemente_BruchteilEichfehlergrenze
-        objMogelstatistik.Kompatiblitaet_Waage_AdditiveTarahoechstlast = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AdditiveTarahoechstlast
-        objMogelstatistik.Kompatiblitaet_Waage_AnzahlWaegezellen = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen
-        objMogelstatistik.Kompatiblitaet_Waage_Bauartzulassung = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Bauartzulassung
-        objMogelstatistik.Kompatiblitaet_Waage_Ecklastzuschlag = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Ecklastzuschlag
-        objMogelstatistik.Kompatiblitaet_Waage_Einschaltnullstellbereich = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Einschaltnullstellbereich
-        objMogelstatistik.Kompatiblitaet_Waage_FabrikNummer = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer
-        objMogelstatistik.Kompatiblitaet_Waage_Genauigkeitsklasse = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Genauigkeitsklasse
-        objMogelstatistik.Kompatiblitaet_Waage_GrenzenTemperaturbereichMAX = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_GrenzenTemperaturbereichMAX
-        objMogelstatistik.Kompatiblitaet_Waage_GrenzenTemperaturbereichMIN = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_GrenzenTemperaturbereichMIN
-        objMogelstatistik.Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich1 = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1
-        objMogelstatistik.Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich2 = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2
-        objMogelstatistik.Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich3 = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3
-        objMogelstatistik.Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich1 = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1
-        objMogelstatistik.Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich2 = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2
-        objMogelstatistik.Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich3 = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3
-        objMogelstatistik.Kompatiblitaet_Waage_Kabellaenge = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Kabellaenge
-        objMogelstatistik.Kompatiblitaet_Waage_Kabelquerschnitt = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Kabelquerschnitt
-        objMogelstatistik.Kompatiblitaet_Waage_Totlast = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Totlast
-        objMogelstatistik.Kompatiblitaet_Waage_Uebersetzungsverhaeltnis = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Uebersetzungsverhaeltnis
-        objMogelstatistik.Kompatiblitaet_Waage_Zulassungsinhaber = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Zulassungsinhaber
-        objMogelstatistik.Kompatiblitaet_WZ_Hoechstlast = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast
-
-        'Vergleichen ob Änderungen vorliegen
-        If objMogelstatistik.Equals(_objMogelstatistik) Then
-            _objMogelstatistik = Nothing
-        Else
-            _objMogelstatistik = objMogelstatistik
-        End If
-
-    End Sub
-
-    ''' <summary>
-    ''' Gültigkeit der Eingaben überprüfen
-    ''' </summary>
-    ''' <remarks></remarks>
-    ''' <author></author>
-    ''' <commentauthor></commentauthor>
-    Protected Friend Overrides Function ValidateControls() As Boolean
-
-        'If Debugger.IsAttached Then 'für debugzwecke
-        '    Return True
-        'End If
-        'prüfen ob alle Felder ausgefüllt sind
-        AbortSaving = False
-        For Each GroupBox In RadScrollablePanel1.PanelContainer.Controls
-            If TypeOf GroupBox Is Telerik.WinControls.UI.RadGroupBox Then
-                For Each Control In GroupBox.controls
-                    If TypeOf Control Is Telerik.WinControls.UI.RadTextBox Then
-                        If Control.readonly = False AndAlso Control.visible = True Then
-
-                            'anzahl wZ limitieren
-                            If Control.Equals(RadTextBoxControlWaageAnzahlWaegezellen) Then
-                                'darf nicht höher als 12 sein
-                                If Not String.IsNullOrWhiteSpace(RadTextBoxControlWaageAnzahlWaegezellen.Text) Then
-                                    If CInt(RadTextBoxControlWaageAnzahlWaegezellen.Text) > 12 Then
-                                        RadTextBoxControlWaageAnzahlWaegezellen.Text = 12
-                                        CType(Control, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
-                                        'CType(Control, Telerik.WinControls.UI.RadTextBox).Focus()
-                                        'Return False
-                                        Me.AbortSaving = True
-                                        Continue For
-                                    End If
-                                    If CInt(RadTextBoxControlWaageAnzahlWaegezellen.Text) < 1 Then
-                                        RadTextBoxControlWaageAnzahlWaegezellen.Text = 1
-                                        CType(Control, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
-                                        'CType(Control, Telerik.WinControls.UI.RadTextBox).Focus()
-                                        'Return False
-                                        Me.AbortSaving = True
-                                        Continue For
-                                    End If
-
-                                End If
-                            End If
-
-                            If Control.Text.trim.Equals("") Then
-
-                                'sonderfälle
-                                'emin kein Pflichtfeld
-                                If Control.Equals(RadTextBoxControlWZMindestvorlast) Then
-                                    'standardwert auf 0 setzen
-                                    RadTextBoxControlWZMindestvorlast.Text = 0
-                                    Continue For
-                                End If
-
-                                'minteilungswert darf leer sein, wenn Hoechsteilungsfaktor gefüllt
-                                If Control.Equals(RadTextBoxControlWZMinTeilungswert) Then
-                                    'ist gültig wenn hoechstteilungsfaktor gefüllt
-                                    If Not RadTextBoxControlWZHoechstteilungsfaktor.Text.Trim.Equals("") Then
-                                        Continue For
-                                    End If
-                                End If
-
-                                'Hoechsteilungsfaktor darf leer sein, wenn minteilungswert gefüllt
-                                If Control.Equals(RadTextBoxControlWZHoechstteilungsfaktor) Then
-                                    'ist gültig wenn min Teilungswert gefüllt
-                                    If Not RadTextBoxControlWZMinTeilungswert.Text.Trim.Equals("") Then
-                                        Continue For
-                                    End If
-                                End If
-                                'RadTextBoxControlWZKriechteilungsfaktor darf leer sein wenn RadTextBoxControlWZRueckkehrVorlastsignal gefüllt ist
-                                If Control.Equals(RadTextBoxControlWZKriechteilungsfaktor) Then
-                                    'ist gültig wenn Rückkehr des Vorlastsignals gefüllt
-                                    If Not RadTextBoxControlWZRueckkehrVorlastsignal.Text.Trim.Equals("") Then
-                                        Continue For
-                                    End If
-                                End If
-                                'RadTextBoxControlWZRueckkehrVorlastsignal darf leer sein wenn RadTextBoxControlWZKriechteilungsfaktor gefüllt ist
-                                If Control.Equals(RadTextBoxControlWZRueckkehrVorlastsignal) Then
-                                    'ist gültig wenn Kriechteilungsfaktor gefüllt
-                                    If Not RadTextBoxControlWZKriechteilungsfaktor.Text.Trim.Equals("") Then
-                                        Continue For
-                                    End If
-                                End If
-
-                                Me.AbortSaving = True
-
-                                CType(Control, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
-                                ' CType(Control, Telerik.WinControls.UI.RadTextBox).Focus()
-                                '  Return False
-
-                            End If
-                        End If
-                    End If
-                Next
-            End If
-        Next
-
-        If RadTextBoxControlWZGenauigkeitsklasse.ReadOnly = False Then
-            If RadTextBoxControlWZGenauigkeitsklasse.Text.ToUpper = "A" _
-          Or RadTextBoxControlWZGenauigkeitsklasse.Text.ToUpper = "B" _
-          Or RadTextBoxControlWZGenauigkeitsklasse.Text.ToUpper = "C" _
-          Or RadTextBoxControlWZGenauigkeitsklasse.Text = "D".ToUpper _
-          Then
-            Else
-                'Ungültiger Wert für Genauigikeitsklasse
-                MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_GenaugigkeitsklasseUnguelitg, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-                Me.AbortSaving = True
-                RadTextBoxControlWZGenauigkeitsklasse.TextBoxElement.Border.ForeColor = Color.Red
-                RadTextBoxControlWZGenauigkeitsklasse.Focus()
-                Return False
-            End If
-        End If
-
-        If Me.AbortSaving = True Then
-            If Debugger.IsAttached Then 'standardwerte füllen für schnelleres testen
-                Dim result = Me.ShowValidationErrorBox(True)
-                Return ProcessResult(result)
-            Else
-                MessageBox.Show(My.Resources.GlobaleLokalisierung.PflichtfelderAusfuellen, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-                Return False
-            End If
-        End If
-
-        'Speichern soll nicht abgebrochen werden, da alles okay ist
-        Me.AbortSaving = False
-        Return True
-
-        'prüfen ob eine neue WZ angelegt wurde (über button und neuem Dialog vermutlich)
-    End Function
-
-    Protected Friend Overrides Sub OverwriteIstSoll()
-        RadTextBoxControlWaageHoechstlast1.Text = "1000"
-        RadTextBoxControlWaageHoechstlast2.Text = "2000"
-        RadTextBoxControlWaageEichwert1.Text = "5"
-        RadTextBoxControlWaageEichwert2.Text = "25"
-        RadTextBoxControlWaageAnzahlWaegezellen.Text = "4"
-        RadTextBoxControlEinschaltnullstellbereich.Text = "1"
-        RadTextBoxControlWaageEcklastzuschlag.Text = "1"
-        RadTextBoxControlWaageTotlast.Text = "1"
-        RadTextBoxControlWZHoechstlast.Text = "2500"
-    End Sub
-
-    'Speicherroutine
-    Protected Overrides Sub SaveNeeded(ByVal UserControl As UserControl)
-        If Me.Equals(UserControl) Then
-            If DialogModus = enuDialogModus.lesend Then
-                If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.KompatbilitaetsnachweisErgebnis Then
-                    objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.KompatbilitaetsnachweisErgebnis
-                End If
-                ParentFormular.CurrentEichprozess = objEichprozess
-                Exit Sub
-            End If
-
-            If DialogModus = enuDialogModus.korrigierend Then
-                UpdateObject()
-                If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.KompatbilitaetsnachweisErgebnis Then
-                    objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.KompatbilitaetsnachweisErgebnis
-                End If
-                ParentFormular.CurrentEichprozess = objEichprozess
-                Exit Sub
-            End If
-
-            If ValidateControls() = True Then
-
-                'neuen Context aufbauen
-                Using Context As New Entities
-                    'prüfen ob CREATE oder UPDATE durchgeführt werden muss
-                    If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
-                        'prüfen ob das Objekt anhand der ID gefunden werden kann
-                        Dim dobjEichprozess As Eichprozess = (From a In Context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
-                        If Not dobjEichprozess Is Nothing Then
-                            'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
-                            objEichprozess = dobjEichprozess
-                            'neuen Status zuweisen
-
-                            If AktuellerStatusDirty = False Then
-                                ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
-                                If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.KompatbilitaetsnachweisErgebnis Then
-                                    objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.KompatbilitaetsnachweisErgebnis
-                                End If
-                            ElseIf AktuellerStatusDirty = True Then
-                                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.KompatbilitaetsnachweisErgebnis
-                                AktuellerStatusDirty = False
-                            End If
-
-                            'Füllt das Objekt mit den Werten aus den Steuerlementen
-                            UpdateObject()
-                            'Speichern in Datenbank
-                            Context.SaveChanges()
-
-                            'Mogelstatistik neuen Eintrag anlegen
-                            If Not _objMogelstatistik Is Nothing Then
-                                Context.Mogelstatistik.Add(_objMogelstatistik)
-                                Context.SaveChanges()
-                            End If
-                        End If
-                    End If
-                End Using
-
-                ParentFormular.CurrentEichprozess = objEichprozess
-            End If
-
-        End If
-    End Sub
-
-    Protected Overrides Sub SaveWithoutValidationNeeded(ByVal UserControl As UserControl)
-        If Me.Equals(UserControl) Then
-            If DialogModus = enuDialogModus.lesend Then
-                UpdateObject()
-                ParentFormular.CurrentEichprozess = objEichprozess
-                Exit Sub
-            End If
-
-            'neuen Context aufbauen
-            Using Context As New Entities
-                'prüfen ob CREATE oder UPDATE durchgeführt werden muss
-                If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
-                    'prüfen ob das Objekt anhand der ID gefunden werden kann
-                    Dim dobjEichprozess As Eichprozess = (From a In Context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
-                    If Not dobjEichprozess Is Nothing Then
-                        'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
-                        objEichprozess = dobjEichprozess
-                        'neuen Status zuweisen
-
-                        'Füllt das Objekt mit den Werten aus den Steuerlementen
-                        UpdateObject()
-                        'Speichern in Datenbank
-                        Context.SaveChanges()
-
-                        'Mogelstatistik neuen Eintrag anlegen
-                        If Not _objMogelstatistik Is Nothing Then
-                            Context.Mogelstatistik.Add(_objMogelstatistik)
-                            Context.SaveChanges()
-                        End If
-                    End If
-                End If
-            End Using
-
-            ParentFormular.CurrentEichprozess = objEichprozess
-        End If
-
-    End Sub
-
-#End Region
-
-    Protected Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
-        If Me.Name.Equals(UserControl.Name) = False Then Exit Sub
-
-        MyBase.LokalisierungNeeded(UserControl)
-
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco_3Kompatiblititaetsnachweis))
-        Lokalisierung(Me, resources)
-
-        If Not ParentFormular Is Nothing Then
-            Try
-                'Hilfetext setzen
-                ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_KompatiblitaetsnachweisHilfe)
-                'Überschrift setzen
-                ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_Kompatiblitaetsnachweis
-            Catch ex As Exception
-            End Try
-        End If
-
-    End Sub
-
-    ''' <summary>
-    ''' aktualisieren der Oberfläche wenn nötig
-    ''' </summary>
-    ''' <param name="UserControl"></param>
-    ''' <remarks></remarks>
-    Protected Overrides Sub UpdateNeeded(UserControl As UserControl)
-        If Me.Equals(UserControl) Then
-            MyBase.UpdateNeeded(UserControl)
-            Me.LokalisierungNeeded(UserControl)
-
-            LoadFromDatabase()
-        End If
-    End Sub
-
     ''' <summary>
     ''' Event welches alle MouseHovers der Textboxen abfängt um den entsprechenden Hilfetext anzuzeigen
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     ''' <remarks></remarks>
+    <DebuggerStepThrough>
     Private Sub RadTextBoxControlWaageKlasse_GotFocus(sender As Object, e As EventArgs) _
         Handles RadTextBoxControlWaageTotlast.GotFocus,
                 RadTextBoxControlWaageAdditiveTarahoechstlast.GotFocus,
@@ -881,8 +132,109 @@ Public Class uco_3Kompatiblititaetsnachweis
                 RadTextBoxControlWZBruchteilEichfehlergrenze.MouseHover,
                 RadTextBoxControlWZTemperaturbereichMIN.MouseHover
 
-        Dim senderControl As Telerik.WinControls.UI.RadTextBox
-        senderControl = TryCast(sender, Telerik.WinControls.UI.RadTextBox)
+        SetHelpText(sender)
+    End Sub
+
+
+    ''' <summary>
+    ''' event welches prüft ob in den eingabefeldern auch nur gültige Zahlen eingegeben wurden
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub RadTextBoxControlWaageHoechstlast1_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles RadTextBoxControlWZWiderstand.Validating, RadTextBoxControlWZWaegezellenkennwert.Validating, RadTextBoxControlWZTemperaturbereichMIN.Validating, RadTextBoxControlWZTemperaturbereichMAX.Validating, RadTextBoxControlWZRueckkehrVorlastsignal.Validating, RadTextBoxControlWZMinTeilungswert.Validating, RadTextBoxControlWZMindestvorlast.Validating, RadTextBoxControlWZMaxTeilungswerte.Validating, RadTextBoxControlWZKriechteilungsfaktor.Validating, RadTextBoxControlWZHoechstteilungsfaktor.Validating, RadTextBoxControlWZHoechstlast.Validating, RadTextBoxControlWZBruchteilEichfehlergrenze.Validating, RadTextBoxControlWaageUebersetzungsverhaeltnis.Validating, RadTextBoxControlWaageTotlast.Validating, RadTextBoxControlWaageKabelquerschnitt.Validating, RadTextBoxControlWaageKabellaenge.Validating, RadTextBoxControlWaageHoechstlast3.Validating, RadTextBoxControlWaageHoechstlast2.Validating, RadTextBoxControlWaageHoechstlast1.Validating, RadTextBoxControlWaageEichwert3.Validating, RadTextBoxControlWaageEichwert2.Validating, RadTextBoxControlWaageEichwert1.Validating, RadTextBoxControlWaageEcklastzuschlag.Validating, RadTextBoxControlWaageAnzahlWaegezellen.Validating, RadTextBoxControlEinschaltnullstellbereich.Validating, RadTextBoxControlAWGAnschlussart.Validating
+        BasicTextboxNumberValidation(sender, e)
+    End Sub
+
+    ''' <summary>
+    ''' Es dürfen nur kommas aber keine Punkte eingegeben werden. Sonst wird das mit der Lokalisiernug zu komplex.
+    ''' In EN gibt es z.b. , als 1000er trennzeichen . als kommatrennzeichen
+    ''' in DE gibtt es das genau anders herum
+    ''' und in PL gibt es gar kein 1000er Trennzeichen
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub RadTextBoxControlWaageKlasse_TextChanging(sender As Object, e As Telerik.WinControls.TextChangingEventArgs) Handles RadTextBoxControlWZWiderstand.TextChanging, RadTextBoxControlWZWaegezellenkennwert.TextChanging,
+        RadTextBoxControlWZTemperaturbereichMIN.TextChanging, RadTextBoxControlWZTemperaturbereichMAX.TextChanging, RadTextBoxControlWZRueckkehrVorlastsignal.TextChanging,
+        RadTextBoxControlWZMinTeilungswert.TextChanging, RadTextBoxControlWZMindestvorlast.TextChanging, RadTextBoxControlWZMaxTeilungswerte.TextChanging,
+        RadTextBoxControlWZKriechteilungsfaktor.TextChanging, RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.TextChanging, RadTextBoxControlWZHoechstteilungsfaktor.TextChanging, RadTextBoxControlWZHoechstlast.TextChanging,
+        RadTextBoxControlWZBruchteilEichfehlergrenze.TextChanging, RadTextBoxControlWaageUebersetzungsverhaeltnis.TextChanging,
+        RadTextBoxControlWaageTotlast.TextChanging, RadTextBoxControlWaageTemperaturbereichMin.TextChanging, RadTextBoxControlWaageTemperaturbereichMax.TextChanging,
+        RadTextBoxControlWaageKlasse.TextChanging, RadTextBoxControlWaageKabelquerschnitt.TextChanging, RadTextBoxControlWaageKabellaenge.TextChanging,
+        RadTextBoxControlWaageHoechstlast3.TextChanging, RadTextBoxControlWaageHoechstlast2.TextChanging, RadTextBoxControlWaageHoechstlast1.TextChanging,
+        RadTextBoxControlWaageEichwert3.TextChanging, RadTextBoxControlWaageEichwert2.TextChanging, RadTextBoxControlWaageEichwert1.TextChanging,
+        RadTextBoxControlWaageEcklastzuschlag.TextChanging, RadTextBoxControlWaageAnzahlWaegezellen.TextChanging, RadTextBoxControlWaageAdditiveTarahoechstlast.TextChanging,
+        RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze.TextChanging, RadTextBoxControlEinschaltnullstellbereich.TextChanging, RadTextBoxControlAWGTemperaturbereichMin.TextChanging,
+        RadTextBoxControlAWGTemperaturbereichMax.TextChanging, RadTextBoxControlAWGTeilungswerte.TextChanging, RadTextBoxControlAWGSpeisespannung.TextChanging,
+        RadTextBoxControlAWGMindestmesssignal.TextChanging, RadTextBoxControlAWGMindesteingangsspannung.TextChanging, RadTextBoxControlAWGKlasse.TextChanging,
+        RadTextBoxControlAWGKabellaenge.TextChanging, RadTextBoxControlAWGGrenzwerteLastwiderstandMin.TextChanging, RadTextBoxControlAWGGrenzwerteLastwiderstandMax.TextChanging,
+        RadTextBoxControlAWGBruchteilEichfehlergrenze.TextChanging, RadTextBoxControlAWGAnschlussart.TextChanging
+
+        If _suspendEvents = True Then Exit Sub
+
+        If e.NewValue.Contains(".") Then
+            e.NewValue = e.NewValue.Replace(".", "")
+            e.Cancel = True
+        End If
+    End Sub
+
+    ''' <summary>
+    ''' wenn an den Textboxen etwas geändert wurde, ist das objekt als Dirty zu markieren
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub RadTextBoxControlWaageKlasse_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlWZWiderstand.TextChanged, RadTextBoxControlWZWaegezellenkennwert.TextChanged, RadTextBoxControlWZTemperaturbereichMIN.TextChanged, RadTextBoxControlWZTemperaturbereichMAX.TextChanged, RadTextBoxControlWZRueckkehrVorlastsignal.TextChanged, RadTextBoxControlWZMinTeilungswert.TextChanged, RadTextBoxControlWZMindestvorlast.TextChanged, RadTextBoxControlWZMaxTeilungswerte.TextChanged, RadTextBoxControlWZKriechteilungsfaktor.TextChanged, RadTextBoxControlWZHoechstteilungsfaktor.TextChanged, RadTextBoxControlWZHoechstlast.TextChanged, RadTextBoxControlWZBruchteilEichfehlergrenze.TextChanged, RadTextBoxControlWaageUebersetzungsverhaeltnis.TextChanged, RadTextBoxControlWaageTotlast.TextChanged, RadTextBoxControlWaageTemperaturbereichMin.TextChanged, RadTextBoxControlWaageTemperaturbereichMax.TextChanged, RadTextBoxControlWaageKlasse.TextChanged, RadTextBoxControlWaageKabelquerschnitt.TextChanged, RadTextBoxControlWaageKabellaenge.TextChanged, RadTextBoxControlWaageHoechstlast3.TextChanged, RadTextBoxControlWaageHoechstlast2.TextChanged, RadTextBoxControlWaageHoechstlast1.TextChanged, RadTextBoxControlWaageEichwert3.TextChanged, RadTextBoxControlWaageEichwert2.TextChanged, RadTextBoxControlWaageEichwert1.TextChanged, RadTextBoxControlWaageEcklastzuschlag.TextChanged, RadTextBoxControlWaageAnzahlWaegezellen.TextChanged, RadTextBoxControlWaageAdditiveTarahoechstlast.TextChanged, RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze.TextChanged, RadTextBoxControlEinschaltnullstellbereich.TextChanged, RadTextBoxControlAWGTemperaturbereichMin.TextChanged, RadTextBoxControlAWGTemperaturbereichMax.TextChanged, RadTextBoxControlAWGTeilungswerte.TextChanged, RadTextBoxControlAWGSpeisespannung.TextChanged, RadTextBoxControlAWGMindestmesssignal.TextChanged, RadTextBoxControlAWGMindesteingangsspannung.TextChanged, RadTextBoxControlAWGKlasse.TextChanged, RadTextBoxControlAWGKabellaenge.TextChanged, RadTextBoxControlAWGGrenzwerteLastwiderstandMin.TextChanged, RadTextBoxControlAWGGrenzwerteLastwiderstandMax.TextChanged, RadTextBoxControlAWGBruchteilEichfehlergrenze.TextChanged, RadTextBoxControlAWGAnschlussart.TextChanged, RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.TextChanged
+        If _suspendEvents = True Then Exit Sub
+        AktuellerStatusDirty = True
+
+        If sender.name = RadTextBoxControlWZHoechstlast.Name Then
+            If IsNumeric(RadTextBoxControlWZHoechstlast.Text) Then
+                If Not objEichprozess Is Nothing Then
+                    If Not objEichprozess.Lookup_Waegezelle Is Nothing Then
+                        Try
+                            If Not objEichprozess.Lookup_Waegezelle.MindestvorlastProzent Is Nothing Then
+                                RadTextBoxControlWZMindestvorlast.Text = (objEichprozess.Lookup_Waegezelle.MindestvorlastProzent / 100) * RadTextBoxControlWZHoechstlast.Text
+
+                            End If
+                        Catch ex As Exception
+                        End Try
+                    End If
+                End If
+            End If
+        End If
+    End Sub
+
+    Private Sub RadTextBoxControlWZGenauigkeitsklasse_TextChanging(sender As Object, e As Telerik.WinControls.TextChangingEventArgs) Handles RadTextBoxControlWZGenauigkeitsklasse.TextChanging
+        If _suspendEvents = True Then
+            e.Cancel = False
+            Exit Sub
+        End If
+
+        If e.NewValue.ToUpper = "A" Or e.NewValue.ToUpper = "B" Or e.NewValue.ToUpper = "C" Or e.NewValue.ToUpper = "D" _
+            Or e.NewValue.ToUpper = "I" Or e.NewValue.ToUpper = "II" Or e.NewValue.ToUpper = "III" Or e.NewValue.ToUpper = "IV" _
+            Or e.NewValue.ToUpper = "" Then
+            e.Cancel = False
+        Else
+
+            e.Cancel = True
+        End If
+    End Sub
+
+    Private Sub RadButton1_Click(sender As Object, e As EventArgs) Handles RadButton1.Click
+        RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.ReadOnly = False
+    End Sub
+
+
+#End Region
+#Region "Methods"
+    ''' <summary>
+    ''' im rechten Bereich die hinterlegten Hilfetexte einblenden
+    ''' </summary>
+    ''' <param name="sender"></param>
+    Private Sub SetHelpText(sender As Object)
+        Dim senderControl As Telerik.WinControls.UI.RadTextBox = TryCast(sender, Telerik.WinControls.UI.RadTextBox)
 
         If Not senderControl Is Nothing Then
             Select Case senderControl.Name
@@ -1014,102 +366,343 @@ Public Class uco_3Kompatiblititaetsnachweis
 
             End Select
         End If
-
     End Sub
+    Private Sub FillKompNachweis()
+        If Not objEichprozess.Kompatiblitaetsnachweis Is Nothing Then
+            If Not objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Uebersetzungsverhaeltnis Is Nothing Then
+                RadTextBoxControlWaageUebersetzungsverhaeltnis.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Uebersetzungsverhaeltnis
+            End If
+            If Not objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen Is Nothing Then
+                RadTextBoxControlWaageAnzahlWaegezellen.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen
 
-    ''' <summary>
-    ''' event welches prüft ob in den eingabefeldern auch nur gültige Zahlen eingegeben wurden
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
-    ''' <remarks></remarks>
-    Private Sub RadTextBoxControlWaageHoechstlast1_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles RadTextBoxControlWZWiderstand.Validating, RadTextBoxControlWZWaegezellenkennwert.Validating, RadTextBoxControlWZTemperaturbereichMIN.Validating, RadTextBoxControlWZTemperaturbereichMAX.Validating, RadTextBoxControlWZRueckkehrVorlastsignal.Validating, RadTextBoxControlWZMinTeilungswert.Validating, RadTextBoxControlWZMindestvorlast.Validating, RadTextBoxControlWZMaxTeilungswerte.Validating, RadTextBoxControlWZKriechteilungsfaktor.Validating, RadTextBoxControlWZHoechstteilungsfaktor.Validating, RadTextBoxControlWZHoechstlast.Validating, RadTextBoxControlWZBruchteilEichfehlergrenze.Validating, RadTextBoxControlWaageUebersetzungsverhaeltnis.Validating, RadTextBoxControlWaageTotlast.Validating, RadTextBoxControlWaageKabelquerschnitt.Validating, RadTextBoxControlWaageKabellaenge.Validating, RadTextBoxControlWaageHoechstlast3.Validating, RadTextBoxControlWaageHoechstlast2.Validating, RadTextBoxControlWaageHoechstlast1.Validating, RadTextBoxControlWaageEichwert3.Validating, RadTextBoxControlWaageEichwert2.Validating, RadTextBoxControlWaageEichwert1.Validating, RadTextBoxControlWaageEcklastzuschlag.Validating, RadTextBoxControlWaageAnzahlWaegezellen.Validating, RadTextBoxControlEinschaltnullstellbereich.Validating, RadTextBoxControlAWGAnschlussart.Validating
+            End If
+            If Not objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Einschaltnullstellbereich Is Nothing Then
+                RadTextBoxControlEinschaltnullstellbereich.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Einschaltnullstellbereich
+            End If
+            If Not objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Ecklastzuschlag Is Nothing Then
+                RadTextBoxControlWaageEcklastzuschlag.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Ecklastzuschlag
 
-        BasicTextboxNumberValidation(sender, e)
+            End If
+            If Not objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Totlast Is Nothing Then
+                RadTextBoxControlWaageTotlast.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Totlast
 
+            End If
+            If Not objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Kabellaenge Is Nothing Then
+                RadTextBoxControlWaageKabellaenge.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Kabellaenge
 
-    End Sub
+            End If
+            If Not objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Kabelquerschnitt Is Nothing Then
+                RadTextBoxControlWaageKabelquerschnitt.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Kabelquerschnitt
 
-    ''' <summary>
-    ''' Es dürfen nur kommas aber keine Punkte eingegeben werden. Sonst wird das mit der Lokalisiernug zu komplex.
-    ''' In EN gibt es z.b. , als 1000er trennzeichen . als kommatrennzeichen
-    ''' in DE gibtt es das genau anders herum
-    ''' und in PL gibt es gar kein 1000er Trennzeichen
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
-    ''' <remarks></remarks>
-    Private Sub RadTextBoxControlWaageKlasse_TextChanging(sender As Object, e As Telerik.WinControls.TextChangingEventArgs) Handles RadTextBoxControlWZWiderstand.TextChanging, RadTextBoxControlWZWaegezellenkennwert.TextChanging,
-        RadTextBoxControlWZTemperaturbereichMIN.TextChanging, RadTextBoxControlWZTemperaturbereichMAX.TextChanging, RadTextBoxControlWZRueckkehrVorlastsignal.TextChanging,
-        RadTextBoxControlWZMinTeilungswert.TextChanging, RadTextBoxControlWZMindestvorlast.TextChanging, RadTextBoxControlWZMaxTeilungswerte.TextChanging,
-        RadTextBoxControlWZKriechteilungsfaktor.TextChanging, RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.TextChanging, RadTextBoxControlWZHoechstteilungsfaktor.TextChanging, RadTextBoxControlWZHoechstlast.TextChanging,
-        RadTextBoxControlWZBruchteilEichfehlergrenze.TextChanging, RadTextBoxControlWaageUebersetzungsverhaeltnis.TextChanging,
-        RadTextBoxControlWaageTotlast.TextChanging, RadTextBoxControlWaageTemperaturbereichMin.TextChanging, RadTextBoxControlWaageTemperaturbereichMax.TextChanging,
-        RadTextBoxControlWaageKlasse.TextChanging, RadTextBoxControlWaageKabelquerschnitt.TextChanging, RadTextBoxControlWaageKabellaenge.TextChanging,
-        RadTextBoxControlWaageHoechstlast3.TextChanging, RadTextBoxControlWaageHoechstlast2.TextChanging, RadTextBoxControlWaageHoechstlast1.TextChanging,
-        RadTextBoxControlWaageEichwert3.TextChanging, RadTextBoxControlWaageEichwert2.TextChanging, RadTextBoxControlWaageEichwert1.TextChanging,
-        RadTextBoxControlWaageEcklastzuschlag.TextChanging, RadTextBoxControlWaageAnzahlWaegezellen.TextChanging, RadTextBoxControlWaageAdditiveTarahoechstlast.TextChanging,
-        RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze.TextChanging, RadTextBoxControlEinschaltnullstellbereich.TextChanging, RadTextBoxControlAWGTemperaturbereichMin.TextChanging,
-        RadTextBoxControlAWGTemperaturbereichMax.TextChanging, RadTextBoxControlAWGTeilungswerte.TextChanging, RadTextBoxControlAWGSpeisespannung.TextChanging,
-        RadTextBoxControlAWGMindestmesssignal.TextChanging, RadTextBoxControlAWGMindesteingangsspannung.TextChanging, RadTextBoxControlAWGKlasse.TextChanging,
-        RadTextBoxControlAWGKabellaenge.TextChanging, RadTextBoxControlAWGGrenzwerteLastwiderstandMin.TextChanging, RadTextBoxControlAWGGrenzwerteLastwiderstandMax.TextChanging,
-        RadTextBoxControlAWGBruchteilEichfehlergrenze.TextChanging, RadTextBoxControlAWGAnschlussart.TextChanging
+            End If
+            If Not objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_AWG_Anschlussart Is Nothing Then
+                RadTextBoxControlAWGAnschlussart.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_AWG_Anschlussart
 
-        If _suspendEvents = True Then Exit Sub
+            End If
 
-        If e.NewValue.Contains(".") Then
-            e.NewValue = e.NewValue.Replace(".", "")
-            e.Cancel = True
-        End If
-    End Sub
-
-    ''' <summary>
-    ''' wenn an den Textboxen etwas geändert wurde, ist das objekt als Dirty zu markieren
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
-    ''' <remarks></remarks>
-    Private Sub RadTextBoxControlWaageKlasse_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlWZWiderstand.TextChanged, RadTextBoxControlWZWaegezellenkennwert.TextChanged, RadTextBoxControlWZTemperaturbereichMIN.TextChanged, RadTextBoxControlWZTemperaturbereichMAX.TextChanged, RadTextBoxControlWZRueckkehrVorlastsignal.TextChanged, RadTextBoxControlWZMinTeilungswert.TextChanged, RadTextBoxControlWZMindestvorlast.TextChanged, RadTextBoxControlWZMaxTeilungswerte.TextChanged, RadTextBoxControlWZKriechteilungsfaktor.TextChanged, RadTextBoxControlWZHoechstteilungsfaktor.TextChanged, RadTextBoxControlWZHoechstlast.TextChanged, RadTextBoxControlWZBruchteilEichfehlergrenze.TextChanged, RadTextBoxControlWaageUebersetzungsverhaeltnis.TextChanged, RadTextBoxControlWaageTotlast.TextChanged, RadTextBoxControlWaageTemperaturbereichMin.TextChanged, RadTextBoxControlWaageTemperaturbereichMax.TextChanged, RadTextBoxControlWaageKlasse.TextChanged, RadTextBoxControlWaageKabelquerschnitt.TextChanged, RadTextBoxControlWaageKabellaenge.TextChanged, RadTextBoxControlWaageHoechstlast3.TextChanged, RadTextBoxControlWaageHoechstlast2.TextChanged, RadTextBoxControlWaageHoechstlast1.TextChanged, RadTextBoxControlWaageEichwert3.TextChanged, RadTextBoxControlWaageEichwert2.TextChanged, RadTextBoxControlWaageEichwert1.TextChanged, RadTextBoxControlWaageEcklastzuschlag.TextChanged, RadTextBoxControlWaageAnzahlWaegezellen.TextChanged, RadTextBoxControlWaageAdditiveTarahoechstlast.TextChanged, RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze.TextChanged, RadTextBoxControlEinschaltnullstellbereich.TextChanged, RadTextBoxControlAWGTemperaturbereichMin.TextChanged, RadTextBoxControlAWGTemperaturbereichMax.TextChanged, RadTextBoxControlAWGTeilungswerte.TextChanged, RadTextBoxControlAWGSpeisespannung.TextChanged, RadTextBoxControlAWGMindestmesssignal.TextChanged, RadTextBoxControlAWGMindesteingangsspannung.TextChanged, RadTextBoxControlAWGKlasse.TextChanged, RadTextBoxControlAWGKabellaenge.TextChanged, RadTextBoxControlAWGGrenzwerteLastwiderstandMin.TextChanged, RadTextBoxControlAWGGrenzwerteLastwiderstandMax.TextChanged, RadTextBoxControlAWGBruchteilEichfehlergrenze.TextChanged, RadTextBoxControlAWGAnschlussart.TextChanged, RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.TextChanged
-        If _suspendEvents = True Then Exit Sub
-        AktuellerStatusDirty = True
-
-        If sender.name = RadTextBoxControlWZHoechstlast.Name Then
-            If IsNumeric(RadTextBoxControlWZHoechstlast.Text) Then
-                If Not objEichprozess Is Nothing Then
-                    If Not objEichprozess.Lookup_Waegezelle Is Nothing Then
-                        Try
-                            If Not objEichprozess.Lookup_Waegezelle.MindestvorlastProzent Is Nothing Then
-                                RadTextBoxControlWZMindestvorlast.Text = (objEichprozess.Lookup_Waegezelle.MindestvorlastProzent / 100) * RadTextBoxControlWZHoechstlast.Text
-
-                            End If
-                        Catch ex As Exception
-                        End Try
-                    End If
-                End If
+            If Not objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast Is Nothing Then
+                RadTextBoxControlWZHoechstlast.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast.Split(";")(0)
             End If
         End If
     End Sub
 
-    Private Sub RadTextBoxControlWZGenauigkeitsklasse_TextChanging(sender As Object, e As Telerik.WinControls.TextChangingEventArgs) Handles RadTextBoxControlWZGenauigkeitsklasse.TextChanging
-        If _suspendEvents = True Then
-            e.Cancel = False
-            Exit Sub
-        End If
+    Private Sub FillNeueWZ()
+        If objEichprozess.Lookup_Waegezelle.Neu = True Then
+            'auslbenden der Schloss bilder
+            PictureBoxWZ1.Visible = False
+            PictureBoxWZ2.Visible = False
+            PictureBoxWZ3.Visible = False
+            PictureBoxWZ4.Visible = False
+            PictureBoxWZ5.Visible = False
+            PictureBoxWZ6.Visible = False
+            PictureBoxWZ7.Visible = False
+            PictureBoxWZ8.Visible = False
+            PictureBoxWZ9.Visible = False
 
-        If e.NewValue.ToUpper = "A" Or e.NewValue.ToUpper = "B" Or e.NewValue.ToUpper = "C" Or e.NewValue.ToUpper = "D" _
-            Or e.NewValue.ToUpper = "I" Or e.NewValue.ToUpper = "II" Or e.NewValue.ToUpper = "III" Or e.NewValue.ToUpper = "IV" _
-            Or e.NewValue.ToUpper = "" Then
-            e.Cancel = False
+            'felder beschreiben lassen
+            RadTextBoxControlWZGenauigkeitsklasse.ReadOnly = False
+            RadTextBoxControlWZGenauigkeitsklasse.Enabled = True
+
+            RadTextBoxControlWZHoechstteilungsfaktor.ReadOnly = False
+            RadTextBoxControlWZKriechteilungsfaktor.ReadOnly = False
+            RadTextBoxControlWZMaxTeilungswerte.ReadOnly = False
+            RadTextBoxControlWZMindestvorlast.ReadOnly = False
+            RadTextBoxControlWZMinTeilungswert.ReadOnly = False
+            RadTextBoxControlWZRueckkehrVorlastsignal.ReadOnly = False
+            RadTextBoxControlWZWaegezellenkennwert.ReadOnly = False
+            RadTextBoxControlWZWiderstand.ReadOnly = False
+
+            'tabstops erlauben
+            RadTextBoxControlWZGenauigkeitsklasse.TabStop = True
+            RadTextBoxControlWZHoechstteilungsfaktor.TabStop = True
+            RadTextBoxControlWZKriechteilungsfaktor.TabStop = True
+            RadTextBoxControlWZMaxTeilungswerte.TabStop = True
+            RadTextBoxControlWZMindestvorlast.TabStop = True
+            RadTextBoxControlWZMinTeilungswert.TabStop = True
+            RadTextBoxControlWZRueckkehrVorlastsignal.TabStop = True
+            RadTextBoxControlWZWaegezellenkennwert.TabStop = True
+            RadTextBoxControlWZWiderstand.TabStop = True
         Else
+            PictureBoxWZ1.Visible = True
+            PictureBoxWZ2.Visible = True
+            PictureBoxWZ3.Visible = True
+            PictureBoxWZ4.Visible = True
+            PictureBoxWZ5.Visible = True
+            PictureBoxWZ6.Visible = True
+            PictureBoxWZ7.Visible = True
+            PictureBoxWZ8.Visible = True
+            PictureBoxWZ9.Visible = True
+            PictureBoxWZ10.Visible = True
+            PictureBoxWZ11.Visible = True
 
-            e.Cancel = True
+            RadTextBoxControlWZGenauigkeitsklasse.ReadOnly = True
+
+            RadTextBoxControlWZHoechstteilungsfaktor.ReadOnly = True
+            RadTextBoxControlWZKriechteilungsfaktor.ReadOnly = True
+            RadTextBoxControlWZMaxTeilungswerte.ReadOnly = True
+            RadTextBoxControlWZMindestvorlast.ReadOnly = True
+            RadTextBoxControlWZMinTeilungswert.ReadOnly = True
+            RadTextBoxControlWZRueckkehrVorlastsignal.ReadOnly = True
+            RadTextBoxControlWZWaegezellenkennwert.ReadOnly = True
+            RadTextBoxControlWZWiderstand.ReadOnly = True
+
+            'tabstops verbieten
+            RadTextBoxControlWZGenauigkeitsklasse.TabStop = False
+            RadTextBoxControlWZHoechstteilungsfaktor.TabStop = False
+            RadTextBoxControlWZKriechteilungsfaktor.TabStop = False
+            RadTextBoxControlWZMaxTeilungswerte.TabStop = False
+            RadTextBoxControlWZMindestvorlast.TabStop = False
+            RadTextBoxControlWZMinTeilungswert.TabStop = False
+            RadTextBoxControlWZRueckkehrVorlastsignal.TabStop = False
+            RadTextBoxControlWZWaegezellenkennwert.TabStop = False
+            RadTextBoxControlWZWiderstand.TabStop = False
+
         End If
     End Sub
 
-    'Entsperrroutine
-    Protected Overrides Sub EntsperrungNeeded()
-        MyBase.EntsperrungNeeded()
+    Private Sub FillWZ()
+        If Not objEichprozess.FK_Waegezelle Is Nothing Then
+            'Dim WZ = (From dbWZ In Context.Lookup_Waegezelle Select dbWZ Where dbWZ.ID = objEichprozess.FK_Waegezelle).FirstOrDefault
+            Dim wz = objEichprozess.Lookup_Waegezelle
 
+            If Not wz.Genauigkeitsklasse Is Nothing Then
+                RadTextBoxControlWZGenauigkeitsklasse.Text = wz.Genauigkeitsklasse
+            End If
+
+            If Not wz.Mindestvorlast Is Nothing Then
+                RadTextBoxControlWZMindestvorlast.Text = wz.Mindestvorlast
+                If IsNumeric(RadTextBoxControlWZHoechstlast.Text) Then
+                    Try
+                        If Not objEichprozess.Lookup_Waegezelle.MindestvorlastProzent Is Nothing Then
+                            RadTextBoxControlWZMindestvorlast.Text = (objEichprozess.Lookup_Waegezelle.MindestvorlastProzent / 100) * RadTextBoxControlWZHoechstlast.Text
+                        End If
+                    Catch ex As Exception
+                    End Try
+                End If
+            End If
+            If Not wz.Waegezellenkennwert Is Nothing Then
+                RadTextBoxControlWZWaegezellenkennwert.Text = wz.Waegezellenkennwert
+
+            End If
+            If Not wz.MaxAnzahlTeilungswerte Is Nothing Then
+                RadTextBoxControlWZMaxTeilungswerte.Text = wz.MaxAnzahlTeilungswerte
+
+            End If
+            If Not wz.MinTeilungswert Is Nothing Then
+                RadTextBoxControlWZMinTeilungswert.Text = wz.MinTeilungswert
+
+            End If
+            If Not wz.Hoechsteteilungsfaktor Is Nothing Then
+                Dim wertHoechsteteilungsfaktor = objEichprozess.Lookup_Waegezelle.Hoechsteteilungsfaktor
+                Dim wertHoechsteteilungsfaktorAufgedruckt = ""
+                If Not objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast Is Nothing Then
+                    If objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast.Contains(";") Then
+                        wertHoechsteteilungsfaktorAufgedruckt = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast.Split(";")(1)
+                    End If
+                End If
+
+                RadTextBoxControlWZHoechstteilungsfaktor.Text = wertHoechsteteilungsfaktor
+                RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.Text = wertHoechsteteilungsfaktorAufgedruckt
+
+            End If
+
+            If Not wz.Kriechteilungsfaktor Is Nothing Then
+                RadTextBoxControlWZKriechteilungsfaktor.Text = wz.Kriechteilungsfaktor
+
+            End If
+            If Not wz.RueckkehrVorlastsignal Is Nothing Then
+                RadTextBoxControlWZRueckkehrVorlastsignal.Text = wz.RueckkehrVorlastsignal
+
+            End If
+            If Not wz.WiderstandWaegezelle Is Nothing Then
+                RadTextBoxControlWZWiderstand.Text = wz.WiderstandWaegezelle
+
+            End If
+
+            If Not wz.GrenzwertTemperaturbereichMAX Is Nothing Then
+                RadTextBoxControlWZTemperaturbereichMAX.Text = wz.GrenzwertTemperaturbereichMAX
+
+            End If
+            If Not wz.GrenzwertTemperaturbereichMIN Is Nothing Then
+                RadTextBoxControlWZTemperaturbereichMIN.Text = wz.GrenzwertTemperaturbereichMIN
+
+            End If
+
+        End If
+    End Sub
+
+    Private Sub FillAWG()
+        If Not objEichprozess.FK_Auswertegeraet Is Nothing Then
+
+            '  Dim AWG = (From dbAWG In Context.Lookup_Auswertegeraet Select dbAWG Where dbAWG.ID = objEichprozess.FK_Auswertegeraet).FirstOrDefault
+            Dim AWG = objEichprozess.Lookup_Auswertegeraet
+
+            'abhängig von Waagenart den einen Wert oder den anderen auslesen
+            If Not objEichprozess.Lookup_Waagenart Is Nothing Then
+                If objEichprozess.Lookup_Waagenart.Art = "Einbereichswaage" Then
+                    RadTextBoxControlAWGTeilungswerte.Text = AWG.MAXAnzahlTeilungswerteEinbereichswaage
+                Else
+                    RadTextBoxControlAWGTeilungswerte.Text = AWG.MAXAnzahlTeilungswerteMehrbereichswaage
+                End If
+            End If
+            RadTextBoxControlAWGSpeisespannung.Text = AWG.Speisespannung
+            RadTextBoxControlAWGMindestmesssignal.Text = AWG.Mindestmesssignal
+            RadTextBoxControlAWGGrenzwerteLastwiderstandMin.Text = AWG.GrenzwertLastwiderstandMIN
+            RadTextBoxControlAWGGrenzwerteLastwiderstandMax.Text = AWG.GrenzwertLastwiderstandMAX
+            RadTextBoxControlAWGKabellaenge.Text = AWG.KabellaengeQuerschnitt
+            RadTextBoxControlAWGKlasse.Text = AWG.Genauigkeitsklasse
+
+            RadTextBoxControlAWGTemperaturbereichMax.Text = AWG.GrenzwertTemperaturbereichMAX
+            RadTextBoxControlAWGTemperaturbereichMin.Text = AWG.GrenzwertTemperaturbereichMIN
+        End If
+    End Sub
+
+    Private Sub FillWaagenArt()
+        If Not objEichprozess.FK_WaagenArt Is Nothing Then
+            '  Waagenart = (From dbWaagenart In Context.Lookup_Waagenart Select dbWaagenart Where dbWaagenart.ID = objEichprozess.FK_WaagenArt).FirstOrDefault
+
+            If objEichprozess.Lookup_Waagenart.Art = "Einbereichswaage" Then
+                'zweiten und dritten bereich ausblenden
+                lblMax2.Visible = False
+                RadTextBoxControlWaageHoechstlast2.Visible = False
+                lblKGMax2.Visible = False
+
+                lblPflichtfeld1.Visible = True
+                lblPflichtfeld2.Visible = True
+                lblPflichtfeld3.Visible = False
+                lblPflichtfeld4.Visible = False
+                lblPflichtfeld5.Visible = False
+                lblPflichtfeld6.Visible = False
+
+                lblE2.Visible = False
+                RadTextBoxControlWaageEichwert2.Visible = False
+                lblEKG2.Visible = False
+
+                lblMax3.Visible = False
+                RadTextBoxControlWaageHoechstlast3.Visible = False
+                lblKGMax3.Visible = False
+
+                lblE3.Visible = False
+                RadTextBoxControlWaageEichwert3.Visible = False
+                lblEKG3.Visible = False
+
+                'umbennenen des Textes
+                lblMax1.Text = "Max"
+                lblE1.Text = "e"
+
+            ElseIf objEichprozess.Lookup_Waagenart.Art = "Zweibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Zweiteilungswaage" Then
+
+                'zweiten Bereich einblenden
+                lblMax2.Visible = True
+                RadTextBoxControlWaageHoechstlast2.Visible = True
+                lblKGMax2.Visible = True
+
+                lblE2.Visible = True
+                RadTextBoxControlWaageEichwert2.Visible = True
+                lblEKG2.Visible = True
+
+                lblPflichtfeld1.Visible = True
+                lblPflichtfeld2.Visible = True
+                lblPflichtfeld3.Visible = True
+                lblPflichtfeld4.Visible = True
+                lblPflichtfeld5.Visible = False
+                lblPflichtfeld6.Visible = False
+
+                'dritten Ausblenden
+                lblMax3.Visible = False
+                RadTextBoxControlWaageHoechstlast3.Visible = False
+                lblKGMax3.Visible = False
+
+                lblE3.Visible = False
+                RadTextBoxControlWaageEichwert3.Visible = False
+                lblEKG3.Visible = False
+
+                lblMax1.Text = "Max1"
+                lblE1.Text = "e1"
+            ElseIf objEichprozess.Lookup_Waagenart.Art = "Dreibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Dreiteilungswaage" Then
+                'zweiten und dritten bereich einblenden
+
+                'zweiten Bereich einblenden
+                lblMax2.Visible = True
+                RadTextBoxControlWaageHoechstlast2.Visible = True
+                lblKGMax2.Visible = True
+
+                lblPflichtfeld1.Visible = True
+                lblPflichtfeld2.Visible = True
+                lblPflichtfeld3.Visible = True
+                lblPflichtfeld4.Visible = True
+                lblPflichtfeld5.Visible = True
+                lblPflichtfeld6.Visible = True
+
+                lblE2.Visible = True
+                RadTextBoxControlWaageEichwert2.Visible = True
+                lblEKG2.Visible = True
+
+                'dritten Ausblenden
+                lblMax3.Visible = True
+                RadTextBoxControlWaageHoechstlast3.Visible = True
+                lblKGMax3.Visible = True
+
+                lblE3.Visible = True
+                RadTextBoxControlWaageEichwert3.Visible = True
+                lblEKG3.Visible = True
+
+                lblMax1.Text = "Max1"
+                lblE1.Text = "e1"
+            End If
+
+        End If
+    End Sub
+
+    Private Sub FillEichwert()
+        If Not objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 Is Nothing Then
+            RadTextBoxControlWaageEichwert1.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1
+        End If
+        If Not objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 Is Nothing Then
+            RadTextBoxControlWaageEichwert2.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2
+        End If
+        If Not objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 Is Nothing Then
+            RadTextBoxControlWaageEichwert3.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3
+        End If
+    End Sub
+
+    Private Sub FillHoechstlast()
+        If Not objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1 Is Nothing Then
+            RadTextBoxControlWaageHoechstlast1.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1
+        End If
+        If Not objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 Is Nothing Then
+            RadTextBoxControlWaageHoechstlast2.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2
+        End If
+        If Not objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 Is Nothing Then
+            RadTextBoxControlWaageHoechstlast3.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3
+        End If
+    End Sub
+#End Region
+
+
+#Region "Interface Methods"
+
+    Protected Friend Overrides Sub Entsperrung() Implements IRhewaEditingDialog.Entsperrung
         'Hiermit wird ein lesender Vorgang wieder entsperrt.
         EnableControls(RadGroupBoxAWG)
         EnableControls(RadGroupBoxVerbindungselemente)
@@ -1121,19 +714,418 @@ Public Class uco_3Kompatiblititaetsnachweis
         ParentFormular.DialogModus = FrmMainContainer.enuDialogModus.korrigierend
     End Sub
 
-    Protected Overrides Sub VersendenNeeded(TargetUserControl As UserControl)
 
-        If Me.Equals(TargetUserControl) Then
-            MyBase.VersendenNeeded(TargetUserControl)
-
-            UpdateObject()
-            'Erzeugen eines Server Objektes auf basis des aktuellen DS. Setzt es auf es ausserdem auf Fehlerhaft
-            CloneAndSendServerObjekt()
-
+    Protected Friend Overrides Sub Versenden() Implements IRhewaEditingDialog.Versenden
+        UpdateObjekt()
+        'Erzeugen eines Server Objektes auf basis des aktuellen DS. Setzt es auf es ausserdem auf Fehlerhaft
+        CloneAndSendServerObjekt()
+    End Sub
+    Protected Friend Overrides Sub SetzeUeberschrift() Implements IRhewaEditingDialog.SetzeUeberschrift
+        If Not ParentFormular Is Nothing Then
+            Try
+                'Hilfetext setzen
+                ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_KompatiblitaetsnachweisHilfe)
+                'Überschrift setzen
+                ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_Kompatiblitaetsnachweis
+            Catch ex As Exception
+            End Try
         End If
     End Sub
 
-    Private Sub RadButton1_Click(sender As Object, e As EventArgs) Handles RadButton1.Click
-        RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.ReadOnly = False
+    Protected Friend Overrides Sub LoadFromDatabase() Implements IRhewaEditingDialog.LoadFromDatabase
+        objEichprozess = ParentFormular.CurrentEichprozess
+        'events abbrechen
+        _suspendEvents = True
+
+        'Nur laden wenn es sich um eine Bearbeitung handelt (sonst würde das in Memory Objekt überschrieben werden)
+        If Not DialogModus = enuDialogModus.lesend And Not DialogModus = enuDialogModus.korrigierend Then
+            Using context As New Entities
+                'neu laden des Objekts, diesmal mit den lookup Objekten
+                objEichprozess = (From a In context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
+            End Using
+        End If
+        'steuerelemente mit werten aus DB füllen
+        FillControls()
+        'events abbrechen
+        _suspendEvents = False
     End Sub
+
+    ''' <summary>
+    ''' Lädt die Werte aus dem Beschaffenheitspruefungsobjekt in die Steuerlemente
+    ''' </summary>
+    ''' <remarks></remarks>
+    ''' <author></author>
+    ''' <commentauthor></commentauthor>
+    Protected Friend Overrides Sub FillControls() Implements IRhewaEditingDialog.FillControls
+        If DialogModus = enuDialogModus.lesend Then
+            'falls der Konformitätsbewertungsvorgang nur lesend betrchtet werden soll, wird versucht alle Steuerlemente auf REadonly zu setzen. Wenn das nicht klappt,werden sie disabled
+            DisableControls(RadGroupBoxAWG)
+            DisableControls(RadGroupBoxVerbindungselemente)
+            DisableControls(RadGroupBoxWaage)
+            DisableControls(RadGroupBoxWZ)
+        End If
+
+        'art der Waage abrufen um dementsprechend Höchlast und Eichwerte Steuerlemente auszublenden
+        'Dim Waagenart As Lookup_Waagenart = Nothing
+        'waagenarten abrufen
+
+        'nur überschreiben wenn leer. Wird genutzt für vor und zurück blättern-
+        FillHoechstlast()
+        FillEichwert()
+
+        'nur wenn die Werte bereits geschrieben wurden, werden Sie in die Textboxen übernommen, da sonst die autowerte überschrieben würden
+        FillKompNachweis()
+
+        FillWaagenArt()
+
+        'vorfüllen der Werte abhängig vom AWG
+        FillAWG()
+
+        'vorfüllen der Werte abhängig vom WZ
+        FillWZ()
+
+        'wenn eine neue WZ angelegt wurde, dürfen hier auch Werte für dieses eingegeben werden
+        FillNeueWZ()
+
+        'fokus setzen
+        RadTextBoxControlWaageHoechstlast1.Focus()
+
+    End Sub
+
+
+
+    ''' <summary>
+    ''' Füllt das Objekt mit den Werten aus den Steuerlementen
+    ''' </summary>
+    ''' <remarks></remarks>
+    ''' <author></author>
+    ''' <commentauthor></commentauthor>
+    Protected Friend Overrides Sub UpdateObjekt() Implements IRhewaEditingDialog.UpdateObjekt
+        If DialogModus = enuDialogModus.normal Then objEichprozess.Bearbeitungsdatum = Date.Now
+
+        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_AWG_Anschlussart = RadTextBoxControlAWGAnschlussart.Text.Trim
+        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast = RadTextBoxControlWZHoechstlast.Text.Trim.Split(";")(0)
+        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Verbindungselemente_BruchteilEichfehlergrenze = RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze.Text.Trim
+        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AdditiveTarahoechstlast = RadTextBoxControlWaageAdditiveTarahoechstlast.Text.Trim
+        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen = RadTextBoxControlWaageAnzahlWaegezellen.Text.Trim
+        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Ecklastzuschlag = RadTextBoxControlWaageEcklastzuschlag.Text.Trim
+        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Einschaltnullstellbereich = RadTextBoxControlEinschaltnullstellbereich.Text.Trim
+        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Genauigkeitsklasse = RadTextBoxControlWaageKlasse.Text.ToUpper.Trim
+        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_GrenzenTemperaturbereichMAX = RadTextBoxControlWaageTemperaturbereichMax.Text.Trim
+        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_GrenzenTemperaturbereichMIN = RadTextBoxControlWaageTemperaturbereichMin.Text.Trim
+        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Kabellaenge = RadTextBoxControlWaageKabellaenge.Text.Trim
+        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Kabelquerschnitt = RadTextBoxControlWaageKabelquerschnitt.Text.Trim
+        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Totlast = RadTextBoxControlWaageTotlast.Text.Trim
+        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Uebersetzungsverhaeltnis = RadTextBoxControlWaageUebersetzungsverhaeltnis.Text.Trim
+        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1 = RadTextBoxControlWaageHoechstlast1.Text.Trim
+        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 = RadTextBoxControlWaageHoechstlast2.Text.Trim
+        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 = RadTextBoxControlWaageHoechstlast3.Text.Trim
+        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 = RadTextBoxControlWaageEichwert1.Text.Trim
+        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 = RadTextBoxControlWaageEichwert2.Text.Trim
+        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 = RadTextBoxControlWaageEichwert3.Text.Trim
+        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Revisionsnummer = ""
+
+        If RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.Text.Trim <> "" Then
+            objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast += ";" & RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.Text.Trim
+        End If
+
+        'im falle einer neuen WZ die Werte übernehmen
+        If objEichprozess.Lookup_Waegezelle.Neu Then
+            objEichprozess.Lookup_Waegezelle.Genauigkeitsklasse = RadTextBoxControlWZGenauigkeitsklasse.Text.ToUpper.Trim
+            objEichprozess.Lookup_Waegezelle.Mindestvorlast = RadTextBoxControlWZMindestvorlast.Text.Trim
+            objEichprozess.Lookup_Waegezelle.Waegezellenkennwert = RadTextBoxControlWZWaegezellenkennwert.Text.Trim
+            objEichprozess.Lookup_Waegezelle.MaxAnzahlTeilungswerte = RadTextBoxControlWZMaxTeilungswerte.Text.Trim
+            objEichprozess.Lookup_Waegezelle.MinTeilungswert = RadTextBoxControlWZMinTeilungswert.Text.Trim
+            objEichprozess.Lookup_Waegezelle.Kriechteilungsfaktor = RadTextBoxControlWZKriechteilungsfaktor.Text.Trim
+            objEichprozess.Lookup_Waegezelle.Hoechsteteilungsfaktor = RadTextBoxControlWZHoechstteilungsfaktor.Text.Trim
+            objEichprozess.Lookup_Waegezelle.RueckkehrVorlastsignal = RadTextBoxControlWZRueckkehrVorlastsignal.Text.Trim
+            objEichprozess.Lookup_Waegezelle.WiderstandWaegezelle = RadTextBoxControlWZWiderstand.Text.Trim
+            objEichprozess.Lookup_Waegezelle.GrenzwertTemperaturbereichMIN = RadTextBoxControlWZTemperaturbereichMIN.Text.Trim
+            objEichprozess.Lookup_Waegezelle.GrenzwertTemperaturbereichMAX = RadTextBoxControlWZTemperaturbereichMAX.Text.Trim
+            objEichprozess.Lookup_Waegezelle.BruchteilEichfehlergrenze = RadTextBoxControlWZBruchteilEichfehlergrenze.Text.Trim
+        End If
+
+        'Mogelstatistik Objekt erzeugen. Dies passiert immer wenn geblättert wird.
+        Dim objMogelstatistik As Mogelstatistik = New Mogelstatistik
+
+        objMogelstatistik.Eichprozess = objEichprozess
+        objMogelstatistik.FK_Auswertegeraet = objEichprozess.FK_Auswertegeraet
+        objMogelstatistik.FK_Eichprozess = objEichprozess.ID
+        objMogelstatistik.FK_Waegezelle = objEichprozess.FK_Waegezelle
+        objMogelstatistik.Kompatiblitaet_AnschriftWaagenbaufirma = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Hersteller + " | " + objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Strasse + " " + objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Ort + ", " + objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Postleitzahl
+        objMogelstatistik.Kompatiblitaet_AWG_Anschlussart = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_AWG_Anschlussart
+        objMogelstatistik.Kompatiblitaet_Verbindungselemente_BruchteilEichfehlergrenze = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Verbindungselemente_BruchteilEichfehlergrenze
+        objMogelstatistik.Kompatiblitaet_Waage_AdditiveTarahoechstlast = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AdditiveTarahoechstlast
+        objMogelstatistik.Kompatiblitaet_Waage_AnzahlWaegezellen = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen
+        objMogelstatistik.Kompatiblitaet_Waage_Bauartzulassung = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Bauartzulassung
+        objMogelstatistik.Kompatiblitaet_Waage_Ecklastzuschlag = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Ecklastzuschlag
+        objMogelstatistik.Kompatiblitaet_Waage_Einschaltnullstellbereich = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Einschaltnullstellbereich
+        objMogelstatistik.Kompatiblitaet_Waage_FabrikNummer = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer
+        objMogelstatistik.Kompatiblitaet_Waage_Genauigkeitsklasse = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Genauigkeitsklasse
+        objMogelstatistik.Kompatiblitaet_Waage_GrenzenTemperaturbereichMAX = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_GrenzenTemperaturbereichMAX
+        objMogelstatistik.Kompatiblitaet_Waage_GrenzenTemperaturbereichMIN = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_GrenzenTemperaturbereichMIN
+        objMogelstatistik.Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich1 = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1
+        objMogelstatistik.Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich2 = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2
+        objMogelstatistik.Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich3 = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3
+        objMogelstatistik.Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich1 = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1
+        objMogelstatistik.Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich2 = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2
+        objMogelstatistik.Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich3 = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3
+        objMogelstatistik.Kompatiblitaet_Waage_Kabellaenge = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Kabellaenge
+        objMogelstatistik.Kompatiblitaet_Waage_Kabelquerschnitt = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Kabelquerschnitt
+        objMogelstatistik.Kompatiblitaet_Waage_Totlast = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Totlast
+        objMogelstatistik.Kompatiblitaet_Waage_Uebersetzungsverhaeltnis = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Uebersetzungsverhaeltnis
+        objMogelstatistik.Kompatiblitaet_Waage_Zulassungsinhaber = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Zulassungsinhaber
+        objMogelstatistik.Kompatiblitaet_WZ_Hoechstlast = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast
+
+        'Vergleichen ob Änderungen vorliegen
+        If objMogelstatistik.Equals(_objMogelstatistik) Then
+            _objMogelstatistik = Nothing
+        Else
+            _objMogelstatistik = objMogelstatistik
+        End If
+
+    End Sub
+
+    ''' <summary>
+    ''' Gültigkeit der Eingaben überprüfen
+    ''' </summary>
+    ''' <remarks></remarks>
+    ''' <author></author>
+    ''' <commentauthor></commentauthor>
+    Protected Friend Overrides Function ValidateControls() As Boolean Implements IRhewaEditingDialog.ValidateControls
+
+        'If Debugger.IsAttached Then 'für debugzwecke
+        '    Return True
+        'End If
+        'prüfen ob alle Felder ausgefüllt sind
+        AbortSaving = False
+        For Each GroupBox In RadScrollablePanel1.PanelContainer.Controls
+            If TypeOf GroupBox Is Telerik.WinControls.UI.RadGroupBox Then
+                For Each Control In GroupBox.controls
+                    If TypeOf Control Is Telerik.WinControls.UI.RadTextBox Then
+                        If Control.readonly = False AndAlso Control.visible = True Then
+
+                            'anzahl wZ limitieren
+                            If Control.Equals(RadTextBoxControlWaageAnzahlWaegezellen) Then
+                                'darf nicht höher als 12 sein
+                                If Not String.IsNullOrWhiteSpace(RadTextBoxControlWaageAnzahlWaegezellen.Text) Then
+                                    If CInt(RadTextBoxControlWaageAnzahlWaegezellen.Text) > 12 Then
+                                        RadTextBoxControlWaageAnzahlWaegezellen.Text = 12
+                                        CType(Control, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
+                                        'CType(Control, Telerik.WinControls.UI.RadTextBox).Focus()
+                                        'Return False
+                                        Me.AbortSaving = True
+                                        Continue For
+                                    End If
+                                    If CInt(RadTextBoxControlWaageAnzahlWaegezellen.Text) < 1 Then
+                                        RadTextBoxControlWaageAnzahlWaegezellen.Text = 1
+                                        CType(Control, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
+                                        'CType(Control, Telerik.WinControls.UI.RadTextBox).Focus()
+                                        'Return False
+                                        Me.AbortSaving = True
+                                        Continue For
+                                    End If
+
+                                End If
+                            End If
+
+                            If Control.Text.trim.Equals("") Then
+
+                                'sonderfälle
+                                'emin kein Pflichtfeld
+                                If Control.Equals(RadTextBoxControlWZMindestvorlast) Then
+                                    'standardwert auf 0 setzen
+                                    RadTextBoxControlWZMindestvorlast.Text = 0
+                                    Continue For
+                                End If
+
+                                'minteilungswert darf leer sein, wenn Hoechsteilungsfaktor gefüllt
+                                If Control.Equals(RadTextBoxControlWZMinTeilungswert) Then
+                                    'ist gültig wenn hoechstteilungsfaktor gefüllt
+                                    If Not RadTextBoxControlWZHoechstteilungsfaktor.Text.Trim.Equals("") Then
+                                        Continue For
+                                    End If
+                                End If
+
+                                'Hoechsteilungsfaktor darf leer sein, wenn minteilungswert gefüllt
+                                If Control.Equals(RadTextBoxControlWZHoechstteilungsfaktor) Then
+                                    'ist gültig wenn min Teilungswert gefüllt
+                                    If Not RadTextBoxControlWZMinTeilungswert.Text.Trim.Equals("") Then
+                                        Continue For
+                                    End If
+                                End If
+                                'RadTextBoxControlWZKriechteilungsfaktor darf leer sein wenn RadTextBoxControlWZRueckkehrVorlastsignal gefüllt ist
+                                If Control.Equals(RadTextBoxControlWZKriechteilungsfaktor) Then
+                                    'ist gültig wenn Rückkehr des Vorlastsignals gefüllt
+                                    If Not RadTextBoxControlWZRueckkehrVorlastsignal.Text.Trim.Equals("") Then
+                                        Continue For
+                                    End If
+                                End If
+                                'RadTextBoxControlWZRueckkehrVorlastsignal darf leer sein wenn RadTextBoxControlWZKriechteilungsfaktor gefüllt ist
+                                If Control.Equals(RadTextBoxControlWZRueckkehrVorlastsignal) Then
+                                    'ist gültig wenn Kriechteilungsfaktor gefüllt
+                                    If Not RadTextBoxControlWZKriechteilungsfaktor.Text.Trim.Equals("") Then
+                                        Continue For
+                                    End If
+                                End If
+
+                                Me.AbortSaving = True
+
+                                CType(Control, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
+                                ' CType(Control, Telerik.WinControls.UI.RadTextBox).Focus()
+                                '  Return False
+
+                            End If
+                        End If
+                    End If
+                Next
+            End If
+        Next
+
+        If RadTextBoxControlWZGenauigkeitsklasse.ReadOnly = False Then
+            If RadTextBoxControlWZGenauigkeitsklasse.Text.ToUpper = "A" _
+          Or RadTextBoxControlWZGenauigkeitsklasse.Text.ToUpper = "B" _
+          Or RadTextBoxControlWZGenauigkeitsklasse.Text.ToUpper = "C" _
+          Or RadTextBoxControlWZGenauigkeitsklasse.Text = "D".ToUpper _
+          Then
+            Else
+                'Ungültiger Wert für Genauigikeitsklasse
+                MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_GenaugigkeitsklasseUnguelitg, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                Me.AbortSaving = True
+                RadTextBoxControlWZGenauigkeitsklasse.TextBoxElement.Border.ForeColor = Color.Red
+                RadTextBoxControlWZGenauigkeitsklasse.Focus()
+                Return False
+            End If
+        End If
+
+        If Me.AbortSaving = True Then
+            If Debugger.IsAttached Then 'standardwerte füllen für schnelleres testen
+                Dim result = Me.ShowValidationErrorBox(True)
+                Return ProcessResult(result)
+            Else
+                MessageBox.Show(My.Resources.GlobaleLokalisierung.PflichtfelderAusfuellen, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                Return False
+            End If
+        End If
+
+        'Speichern soll nicht abgebrochen werden, da alles okay ist
+        Me.AbortSaving = False
+        Return True
+
+        'prüfen ob eine neue WZ angelegt wurde (über button und neuem Dialog vermutlich)
+    End Function
+
+    Protected Friend Overrides Sub OverwriteIstSoll() Implements IRhewaEditingDialog.OverwriteIstSoll
+        RadTextBoxControlWaageHoechstlast1.Text = "1000"
+        RadTextBoxControlWaageHoechstlast2.Text = "2000"
+        RadTextBoxControlWaageEichwert1.Text = "5"
+        RadTextBoxControlWaageEichwert2.Text = "25"
+        RadTextBoxControlWaageAnzahlWaegezellen.Text = "4"
+        RadTextBoxControlEinschaltnullstellbereich.Text = "1"
+        RadTextBoxControlWaageEcklastzuschlag.Text = "1"
+        RadTextBoxControlWaageTotlast.Text = "1"
+        RadTextBoxControlWZHoechstlast.Text = "2500"
+    End Sub
+
+
+
+    Protected Friend Overrides Sub SaveObjekt() Implements IRhewaEditingDialog.SaveObjekt
+        'neuen Context aufbauen
+        Using Context As New Entities
+            'prüfen ob CREATE oder UPDATE durchgeführt werden muss
+            If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
+                'prüfen ob das Objekt anhand der ID gefunden werden kann
+                Dim dobjEichprozess As Eichprozess = (From a In Context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
+                If Not dobjEichprozess Is Nothing Then
+                    'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
+                    objEichprozess = dobjEichprozess
+                    'neuen Status zuweisen
+
+
+
+                    'Füllt das Objekt mit den Werten aus den Steuerlementen
+                    UpdateObjekt()
+                    'Speichern in Datenbank
+                    Context.SaveChanges()
+
+                    'Mogelstatistik neuen Eintrag anlegen
+                    If Not _objMogelstatistik Is Nothing Then
+                        Context.Mogelstatistik.Add(_objMogelstatistik)
+                        Context.SaveChanges()
+                    End If
+                End If
+            End If
+        End Using
+
+
+    End Sub
+
+
+    Protected Friend Overrides Sub AktualisiereStatus() Implements IRhewaEditingDialog.AktualisiereStatus
+        Using Context As New Entities
+            'prüfen ob CREATE oder UPDATE durchgeführt werden muss
+            If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
+                'prüfen ob das Objekt anhand der ID gefunden werden kann
+                Dim dobjEichprozess As Eichprozess = (From a In Context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
+                If Not dobjEichprozess Is Nothing Then
+                    'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
+                    objEichprozess = dobjEichprozess
+
+                    If AktuellerStatusDirty = False Then
+                        ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
+                        If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.KompatbilitaetsnachweisErgebnis Then
+                            objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.KompatbilitaetsnachweisErgebnis
+                        End If
+                    ElseIf AktuellerStatusDirty = True Then
+                        objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.KompatbilitaetsnachweisErgebnis
+                        AktuellerStatusDirty = False
+                    End If
+
+                    'Füllt das Objekt mit den Werten aus den Steuerlementen
+                    UpdateObjekt()
+                    'Speichern in Datenbank
+                    Context.SaveChanges()
+                End If
+            End If
+        End Using
+    End Sub
+
+
+    Protected Friend Overrides Function CheckDialogModus() As Boolean Implements IRhewaEditingDialog.CheckDialogModus
+        If DialogModus = enuDialogModus.lesend Then
+            If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.KompatbilitaetsnachweisErgebnis Then
+                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.KompatbilitaetsnachweisErgebnis
+            End If
+            ParentFormular.CurrentEichprozess = objEichprozess
+            Return False
+        End If
+
+        If DialogModus = enuDialogModus.korrigierend Then
+            UpdateObjekt()
+            If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.KompatbilitaetsnachweisErgebnis Then
+                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.KompatbilitaetsnachweisErgebnis
+            End If
+            ParentFormular.CurrentEichprozess = objEichprozess
+            Return False
+        End If
+        Return True
+    End Function
+
+
+
+    Protected Friend Overrides Sub Lokalisiere() Implements IRhewaEditingDialog.Lokalisiere
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco_3Kompatiblititaetsnachweis))
+        Lokalisierung(Me, resources)
+
+        If Not ParentFormular Is Nothing Then
+            Try
+                'Hilfetext setzen
+                ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_KompatiblitaetsnachweisHilfe)
+                'Überschrift setzen
+                ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_Kompatiblitaetsnachweis
+            Catch ex As Exception
+            End Try
+        End If
+    End Sub
+#End Region
 End Class

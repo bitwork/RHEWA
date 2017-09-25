@@ -83,8 +83,10 @@ Public Class ucoAmpel
             Return _aktuellerGewaehlterVorgang
         End Get
         Set(value As GlobaleEnumeratoren.enuEichprozessStatus)
-            _aktuellerGewaehlterVorgang = value
-            RaiseEvent NotifyPropertyChanged()
+            If _aktuellerGewaehlterVorgang <> value Then
+                _aktuellerGewaehlterVorgang = value
+                RaiseEvent NotifyPropertyChanged()
+            End If
         End Set
     End Property
 #End Region
@@ -363,11 +365,6 @@ Public Class ucoAmpel
             Dim ItemImage = DirectCast(e.Item("Image"), Byte())
             Dim CompareImage = ConvertBitmapToByteArray(My.Resources.bullet_red)
 
-            'im debugger zur einfachheit, kann per click auf jeden Status gesprungen werden
-            'If Debugger.IsAttached Then
-            '    RaiseEvent Navigieren(e.Item("Status"))
-            '    Exit Sub
-            'Else
             'prüfen ob das gewählte element rot ist. wenn nicht das letzte gelbe element wählen
             If ItemImage.SequenceEqual(CompareImage) Then
                 Me.FindeElementUndSelektiere(Me.AktuellerGewaehlterVorgang)
@@ -413,18 +410,11 @@ Public Class ucoAmpel
                 SammelUngueltigeStati(objEichprozess, returnlist)
             Catch ex As NullReferenceException
                 'neu laden des Objekts, diesmal mit den lookup Objekten
-                Using context As New Entities
-                    Dim vorgangsnummer As String = objEichprozess.Vorgangsnummer
-                    objEichprozess = (From a In context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
-                    SammelUngueltigeStati(objEichprozess, returnlist)
-                End Using
+                ReloadEichprozess(objEichprozess, returnlist)
             Catch ex As ObjectDisposedException
                 'neu laden des Objekts, diesmal mit den lookup Objekten
-                Using context As New Entities
-                    Dim vorgangsnummer As String = objEichprozess.Vorgangsnummer
-                    objEichprozess = (From a In context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
-                    SammelUngueltigeStati(objEichprozess, returnlist)
-                End Using
+                ReloadEichprozess(objEichprozess, returnlist)
+
             End Try
 
             Return returnlist
@@ -435,6 +425,19 @@ Public Class ucoAmpel
             Return Nothing
         End Try
     End Function
+    ''' <summary>
+    '''neu laden des Objekts, diesmal mit den lookup Objekten
+    ''' </summary>
+    ''' <param name="objEichprozess"></param>
+    ''' <param name="returnlist"></param>
+    Private Sub ReloadEichprozess(ByRef objEichprozess As Eichprozess, ByRef returnlist As List(Of GlobaleEnumeratoren.enuEichprozessStatus))
+        Using context As New Entities
+            Dim vorgangsnummer As String = objEichprozess.Vorgangsnummer
+            objEichprozess = (From a In context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = vorgangsnummer).FirstOrDefault
+
+            SammelUngueltigeStati(objEichprozess, returnlist)
+        End Using
+    End Sub
 
     ''' <summary>
     '''  Methode welche abhängig von diversen Faktoren Listitems aus der auslistung entfernt oder hinzufügt. So gibt es einige Prüfungen z.b. nur für Achlastwägungen

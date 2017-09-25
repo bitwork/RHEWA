@@ -3,12 +3,13 @@ Imports EichsoftwareClient.EichsoftwareWebservice
 Public Class uco_7EichprotokollDaten
 
     Inherits ucoContent
+    Implements IRhewaEditingDialog
 
 #Region "Member Variables"
     Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken
-    'Private AktuellerStatusDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann wird der Vorgang auf Komptabilitätsnachweis zurückgesetzt
     Private _objEichprotokoll As Eichprotokoll
-    'Private _objDBFunctions As New clsDBFunctions
+    Private ListPruefscheinnnummernGesperrt As List(Of StatusPrüfscheinnummer)
+    Private ListPruefscheinnnummern As List(Of StatusPrüfscheinnummer)
 #End Region
 
 #Region "Constructors"
@@ -29,24 +30,9 @@ Public Class uco_7EichprotokollDaten
 #End Region
 
 #Region "Events"
-    ''' <summary>
-    ''' Validations the needed.
-    ''' </summary>
-    ''' <returns></returns>
-    Protected Friend Overrides Function ValidationNeeded() As Boolean
-        LoadFromDatabase()
-        Return ValidateControls()
-    End Function
+
     Private Sub ucoBeschaffenheitspruefung_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-        If Not ParentFormular Is Nothing Then
-            Try
-                'Hilfetext setzen
-                ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_EichprotokollStammdaten)
-                'Überschrift setzen
-                ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_EichprotokollStammdaten
-            Catch ex As Exception
-            End Try
-        End If
+        SetzeUeberschrift()
         EichprozessStatusReihenfolge = GlobaleEnumeratoren.enuEichprozessStatus.EichprotokollStammdaten
 
         'daten füllen
@@ -65,78 +51,32 @@ Public Class uco_7EichprotokollDaten
 
     End Sub
 
+
+
+    ''' <summary>
+    ''' Diese Checkboxen (siehe Handles) sollen nur readonly sein.
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="args"></param>
+    ''' <remarks></remarks>
+    Private Sub RadCheckBoxVollstaendigesStaffelverfahren_ToggleStateChanging(sender As Object, args As Telerik.WinControls.UI.StateChangingEventArgs) Handles RadCheckBoxVollstaendigesStaffelverfahren.ToggleStateChanging, RadCheckBoxNichtselbsteinspielend.ToggleStateChanging, RadCheckBoxMehrteilungswaage.ToggleStateChanging, RadCheckBoxMehrbereichswaage.ToggleStateChanging, RadCheckBoxHalbSelbsteinspielend.ToggleStateChanging
+        If _suspendEvents = False Then
+            args.Cancel = True
+        End If
+    End Sub
+
+    Private Sub RadCheckBoxDrucker_ToggleStateChanged(sender As Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RadCheckBoxDrucker.ToggleStateChanged
+        If _suspendEvents Then Exit Sub
+        RadTextBoxControlDruckerTyp.Enabled = RadCheckBoxDrucker.Checked
+        AktuellerStatusDirty = True
+        If RadTextBoxControlDruckerTyp.Enabled = False Then
+            RadTextBoxControlDruckerTyp.Text = ""
+        End If
+    End Sub
+
 #End Region
 
 #Region "Methods"
-    Protected Friend Overrides Sub LoadFromDatabase()
-        objEichprozess = ParentFormular.CurrentEichprozess
-        'events abbrechen
-        _suspendEvents = True
-        'Nur laden wenn es sich um eine Bearbeitung handelt (sonst würde das in Memory Objekt überschrieben werden)
-        If Not DialogModus = enuDialogModus.lesend And Not DialogModus = enuDialogModus.korrigierend Then
-            Using context As New Entities
-                'neu laden des Objekts, diesmal mit den lookup Objekten
-                objEichprozess = (From a In context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
-                _objEichprotokoll = objEichprozess.Eichprotokoll
-
-                Dim Coll As New AutoCompleteStringCollection
-                Coll.AddRange((From o In context.Eichprotokoll Where Not o.Verwendungszweck_Druckertyp Is Nothing And o.Verwendungszweck_Druckertyp <> String.Empty Select o.Verwendungszweck_Druckertyp).Distinct.ToArray)
-                RadTextBoxControlDruckerTyp.AutoCompleteDataSource = Coll
-                RadTextBoxControlDruckerTyp.DataSource = Coll
-            End Using
-        End If
-        'steuerelemente mit werten aus DB füllen
-        FillControls()
-        'fokus setzen auf erstes Steuerelement
-        RadTextBoxControlBenutzer.Focus()
-
-        If DialogModus = enuDialogModus.lesend Then
-            DisableControls(RadGroupBoxBeschaffenheitspruefung)
-            DisableControls(RadGroupBoxBeschaffenheitspruefungNormalien)
-            DisableControls(RadGroupBoxIdentifikationsdaten)
-            DisableControls(RadGroupBoxKomponenten)
-            DisableControls(RadGroupBoxMax1)
-            DisableControls(RadGroupBoxMax2)
-            DisableControls(RadGroupBoxMax3)
-            DisableControls(RadGroupBoxPruefverfahren)
-            DisableControls(RadGroupBoxVerwendungszweck)
-            DisableControls(RadGroupBoxVerwendungszweckArtderWaage)
-            DisableControls(RadGroupBoxVerwendungszweckEquipment)
-            DisableControls(RadGroupBoxVerwendungszweckNullstellung)
-            DisableControls(RadGroupBoxVerwendungszweckTara)
-
-        End If
-        'events abbrechen
-        _suspendEvents = False
-    End Sub
-
-    ''' <summary>
-    ''' Lädt die Werte aus dem Objekt in die Steuerlemente
-    ''' </summary>
-    ''' <remarks></remarks>
-    ''' <author></author>
-    ''' <commentauthor></commentauthor>
-    Private Sub FillControls()
-        Dim dMAXHoechlast As Decimal = GetHoechstlast()
-
-        'Steuerlemente füllen
-
-        SetControlsSonderfaelleRHEWALizenz()
-        FillControlsIdentifikationsdaten()
-        FillControlsGenauigkeitsklasse()
-        FillControlsWaagenInformationen()
-        FillControlsBerechnungHoechstwert()
-        FillControlsNormallast(dMAXHoechlast)
-        FillControlsSonderfaelleNachVerfahren(dMAXHoechlast)
-        FillControlsKomponenten()
-        FillControlsWagentyp()
-        FillControlsVerwendungszweckTara()
-        FillControlsBeschaffenheitspruefung()
-        FillControlsDrucker()
-
-
-    End Sub
-
     Private Sub FillControlsDrucker()
         Try
             RadCheckBoxDrucker.Checked = objEichprozess.Eichprotokoll.Verwendungszweck_Drucker
@@ -456,13 +396,246 @@ Public Class uco_7EichprotokollDaten
         End If
     End Sub
 
+    Private Sub MarkControlRed(ByVal control As Control)
+        Try
+            CType(control, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
+            System.Media.SystemSounds.Exclamation.Play()
+        Catch e As Exception
+        End Try
+
+        Try
+            CType(control, Telerik.WinControls.UI.RadDateTimePicker).DateTimePickerElement.TextBoxElement.Border.ForeColor = Color.Red
+        Catch ex As Exception
+        End Try
+    End Sub
+
+    Private Sub MarkControlNormal(ByVal control As Control)
+        Try
+            CType(control, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.FromArgb(0, 255, 255, 255)
+        Catch ex As Exception
+        End Try
+
+        Try
+            CType(control, Telerik.WinControls.UI.RadDateTimePicker).DateTimePickerElement.TextBoxElement.Border.ForeColor = Color.FromArgb(0, 255, 255, 255)
+        Catch ex As Exception
+        End Try
+    End Sub
+#End Region
+
+
+#Region "Prüfscheinnummern"
+    Private Sub BackgroundWorkerPruefscheinnummern_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorkerPruefscheinnummern.DoWork
+        If LadePruefscheinnummernAusWeb(e) = False Then
+            Exit Sub
+        End If
+        If ValidierePruefscheinnummern(e) = False Then
+            e.Result = ""
+        End If
+    End Sub
+
+    Private Sub BackgroundWorkerPruefscheinnummern_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorkerPruefscheinnummern.RunWorkerCompleted
+        ShowPruefscheinnummernFehlermeldung(e)
+    End Sub
+
+    ''' <summary>
+    ''' stößt backgroundworker an der die aktuellen Werte aus der DB lädt
+    ''' ACHTUNG  Prüfscheinnummern werden bisher  über Admin Client in die DB hochgeladen (als Excel import)
+    ''' </summary>
+    ''' <param name="sender"></param>
+    Private Sub CheckPruefscheinnummer(sender As Object)
+        Try
+            Dim txt As Telerik.WinControls.UI.RadTextBox = DirectCast(sender, Telerik.WinControls.UI.RadTextBox)
+            If txt Is RadTextBoxControlNormalienPruefscheinnummer Then
+                If AktuellerBenutzer.Instance.Lizenz.RHEWALizenz Then
+                    BackgroundWorkerPruefscheinnummern.RunWorkerAsync()
+                End If
+            End If
+        Catch ex As Exception
+        End Try
+    End Sub
+
+
+    Private Function ValidierePruefscheinnummern(ByRef e As System.ComponentModel.DoWorkEventArgs) As Boolean
+        Dim Vergleichswerte = RadTextBoxControlNormalienPruefscheinnummer.Text.Replace(",", ";").Replace(" ", "").Trim
+        Try
+            Dim ArrVergleichswerte = Vergleichswerte.Split(";")
+            Dim results = (From o In ListPruefscheinnnummernGesperrt Where ArrVergleichswerte.Contains(o.Nummer)).ToList
+            Dim negativeResults = (From o In ArrVergleichswerte Where Not ListPruefscheinnnummern.Select(Function(c) c.Nummer.ToString).Contains(o)).ToList
+
+            Dim returnString As String = ""
+
+            For Each result In results
+                If result.Gesperrt Then
+                    returnString += String.Format("Das Gewicht mit der Nummer {0} darf nicht verwendet werden und muss aussortiert werden ", result.Nummer) & vbNewLine & vbNewLine
+                ElseIf result.GesperrtDurchDatum Then
+                    returnString += String.Format("Das Gewicht mit der Nummer {0} darf nur auf Anweisung verwendet werden. Der Prüfschein ist abgelaufen ", result.Nummer) & vbNewLine & vbNewLine
+                End If
+            Next
+
+            For Each result In negativeResults
+                If result = "" Then Continue For
+                returnString += String.Format("Das Gewicht mit der Nummer {0} wurde nicht gefunden.", result) & vbNewLine & vbNewLine
+            Next
+            e.Result = returnString
+            Return True
+
+        Catch ex As Exception
+            Return False
+        End Try
+        Return False
+    End Function
+
+    Private Function LadePruefscheinnummernAusWeb(ByRef e As System.ComponentModel.DoWorkEventArgs) As Boolean
+        If ListPruefscheinnnummern Is Nothing Then
+            ListPruefscheinnnummern = clsWebserviceFunctions.GetStatusPruefscheinnummern()
+
+            'abbruch
+            If ListPruefscheinnnummern Is Nothing Then
+                e.Result = "Keine Prüfscheinnummern gefunden. Eventuell ist der Server gerade nicht erreichbar"
+                Return False
+            End If
+
+            ListPruefscheinnnummernGesperrt = (From o In ListPruefscheinnnummern Where o.Gesperrt = True Or o.GesperrtDurchDatum = True).ToList
+            ListPruefscheinnnummern = (From o In ListPruefscheinnnummern Where o.Gesperrt = False And o.GesperrtDurchDatum = False).ToList
+        End If
+        Return True
+    End Function
+
+
+
+    Private Sub ShowPruefscheinnummernFehlermeldung(e As System.ComponentModel.RunWorkerCompletedEventArgs)
+        If e.Result <> "" Then
+
+            Dim tooltip As New Telerik.WinControls.UI.RadDesktopAlert()
+            tooltip.IsPinned = True
+            tooltip.ContentText = e.Result
+            tooltip.FixedSize = New System.Drawing.Size(600, 450)
+            tooltip.SoundToPlay = Media.SystemSounds.Exclamation
+            tooltip.PlaySound = True
+            '20 - vertical margins, 70 - caption height
+            Dim graphics As Telerik.WinControls.MeasurementGraphics = Telerik.WinControls.MeasurementGraphics.CreateMeasurementGraphics()
+            Dim sizeF As SizeF = graphics.Graphics.MeasureString(tooltip.ContentText, Me.Font, tooltip.FixedSize.Width - 20)
+
+            tooltip.FixedSize = New Size(tooltip.FixedSize.Width - 20, CInt(sizeF.Height) + 80)
+            tooltip.Show()
+
+        End If
+    End Sub
+
+    Private Sub RadTextBoxControlNormalienPruefscheinnummer_Validated(sender As Object, e As EventArgs) Handles RadTextBoxControlNormalienPruefscheinnummer.Validated
+        CheckPruefscheinnummer(sender)
+    End Sub
+#End Region
+
+#Region "Inteferface Methods"
+    Protected Friend Overrides Sub LoadFromDatabase() Implements IRhewaEditingDialog.LoadFromDatabase
+        objEichprozess = ParentFormular.CurrentEichprozess
+        'events abbrechen
+        _suspendEvents = True
+        'Nur laden wenn es sich um eine Bearbeitung handelt (sonst würde das in Memory Objekt überschrieben werden)
+        If Not DialogModus = enuDialogModus.lesend And Not DialogModus = enuDialogModus.korrigierend Then
+            Using context As New Entities
+                'neu laden des Objekts, diesmal mit den lookup Objekten
+                objEichprozess = (From a In context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
+                _objEichprotokoll = objEichprozess.Eichprotokoll
+
+                Dim Coll As New AutoCompleteStringCollection
+                Coll.AddRange((From o In context.Eichprotokoll Where Not o.Verwendungszweck_Druckertyp Is Nothing And o.Verwendungszweck_Druckertyp <> String.Empty Select o.Verwendungszweck_Druckertyp).Distinct.ToArray)
+                RadTextBoxControlDruckerTyp.AutoCompleteDataSource = Coll
+                RadTextBoxControlDruckerTyp.DataSource = Coll
+            End Using
+        End If
+        'steuerelemente mit werten aus DB füllen
+        FillControls()
+        'fokus setzen auf erstes Steuerelement
+        RadTextBoxControlBenutzer.Focus()
+
+        If DialogModus = enuDialogModus.lesend Then
+            DisableControls(RadGroupBoxBeschaffenheitspruefung)
+            DisableControls(RadGroupBoxBeschaffenheitspruefungNormalien)
+            DisableControls(RadGroupBoxIdentifikationsdaten)
+            DisableControls(RadGroupBoxKomponenten)
+            DisableControls(RadGroupBoxMax1)
+            DisableControls(RadGroupBoxMax2)
+            DisableControls(RadGroupBoxMax3)
+            DisableControls(RadGroupBoxPruefverfahren)
+            DisableControls(RadGroupBoxVerwendungszweck)
+            DisableControls(RadGroupBoxVerwendungszweckArtderWaage)
+            DisableControls(RadGroupBoxVerwendungszweckEquipment)
+            DisableControls(RadGroupBoxVerwendungszweckNullstellung)
+            DisableControls(RadGroupBoxVerwendungszweckTara)
+
+        End If
+        'events abbrechen
+        _suspendEvents = False
+    End Sub
+
+    ''' <summary>
+    ''' Lädt die Werte aus dem Objekt in die Steuerlemente
+    ''' </summary>
+    ''' <remarks></remarks>
+    ''' <author></author>
+    ''' <commentauthor></commentauthor>
+    Protected Friend Overrides Sub FillControls() Implements IRhewaEditingDialog.FillControls
+        Dim dMAXHoechlast As Decimal = GetHoechstlast()
+
+        'Steuerlemente füllen
+
+        SetControlsSonderfaelleRHEWALizenz()
+        FillControlsIdentifikationsdaten()
+        FillControlsGenauigkeitsklasse()
+        FillControlsWaagenInformationen()
+        FillControlsBerechnungHoechstwert()
+        FillControlsNormallast(dMAXHoechlast)
+        FillControlsSonderfaelleNachVerfahren(dMAXHoechlast)
+        FillControlsKomponenten()
+        FillControlsWagentyp()
+        FillControlsVerwendungszweckTara()
+        FillControlsBeschaffenheitspruefung()
+        FillControlsDrucker()
+
+
+    End Sub
+    Protected Friend Overrides Sub Entsperrung() Implements IRhewaEditingDialog.Entsperrung
+        'Hiermit wird ein lesender Vorgang wieder entsperrt.
+        EnableControls(RadGroupBoxBeschaffenheitspruefung)
+        EnableControls(RadGroupBoxBeschaffenheitspruefungNormalien)
+        EnableControls(RadGroupBoxIdentifikationsdaten)
+        EnableControls(RadGroupBoxKomponenten)
+        EnableControls(RadGroupBoxMax1)
+        EnableControls(RadGroupBoxMax2)
+        EnableControls(RadGroupBoxMax3)
+        EnableControls(RadGroupBoxPruefverfahren)
+        EnableControls(RadGroupBoxVerwendungszweck)
+        EnableControls(RadGroupBoxVerwendungszweckArtderWaage)
+        EnableControls(RadGroupBoxVerwendungszweckEquipment)
+        EnableControls(RadGroupBoxVerwendungszweckNullstellung)
+        EnableControls(RadGroupBoxVerwendungszweckTara)
+
+        'ändern des Moduses
+        DialogModus = enuDialogModus.korrigierend
+        ParentFormular.DialogModus = FrmMainContainer.enuDialogModus.korrigierend
+    End Sub
+
+    Protected Friend Overrides Sub SetzeUeberschrift() Implements IRhewaEditingDialog.SetzeUeberschrift
+        If Not ParentFormular Is Nothing Then
+            Try
+                'Hilfetext setzen
+                ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_EichprotokollStammdaten)
+                'Überschrift setzen
+                ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_EichprotokollStammdaten
+            Catch ex As Exception
+            End Try
+        End If
+    End Sub
+
     ''' <summary>
     ''' Füllt das Objekt mit den Werten aus den Steuerlementen
     ''' </summary>
     ''' <remarks></remarks>
     ''' <author></author>
     ''' <commentauthor></commentauthor>
-    Private Sub UpdateObject()
+    Protected Friend Overrides Sub UpdateObjekt() Implements IRhewaEditingDialog.UpdateObjekt
         If DialogModus = enuDialogModus.normal Then objEichprozess.Bearbeitungsdatum = Date.Now
         'Bereich Identifikationsdaten
         If RadTextBoxControlDatum.Text.Equals("") = False Then
@@ -517,38 +690,96 @@ Public Class uco_7EichprotokollDaten
 
     End Sub
 
-    Private Sub MarkControlRed(ByVal control As Control)
-        Try
-            CType(control, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
-            System.Media.SystemSounds.Exclamation.Play()
-        Catch e As Exception
-        End Try
 
-        Try
-            CType(control, Telerik.WinControls.UI.RadDateTimePicker).DateTimePickerElement.TextBoxElement.Border.ForeColor = Color.Red
-        Catch ex As Exception
-        End Try
+
+
+    Protected Friend Overrides Sub AktualisiereStatus() Implements IRhewaEditingDialog.AktualisiereStatus
+        'neuen Context aufbauen
+        Using Context As New Entities
+            'prüfen ob CREATE oder UPDATE durchgeführt werden muss
+            If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
+                'prüfen ob das Objekt anhand der ID gefunden werden kann
+                Dim dobjEichprozess As Eichprozess = (From a In Context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
+                If Not dobjEichprozess Is Nothing Then
+                    'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
+                    objEichprozess = dobjEichprozess
+                    If AktuellerStatusDirty = False Then
+                        ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
+                        If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderGenauigkeitderNullstellungUndAussermittigeBelastung Then
+                            objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderGenauigkeitderNullstellungUndAussermittigeBelastung
+                        End If
+                    ElseIf AktuellerStatusDirty = True Then
+                        objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderGenauigkeitderNullstellungUndAussermittigeBelastung
+                        AktuellerStatusDirty = False
+                    End If
+
+                    'Füllt das Objekt mit den Werten aus den Steuerlementen
+                    UpdateObjekt()
+                    'Speichern in Datenbank
+                    Try
+                        Context.SaveChanges()
+                    Catch ex As Entity.Validation.DbEntityValidationException
+                        For Each e In ex.EntityValidationErrors
+                            MessageBox.Show(e.ValidationErrors(0).ErrorMessage)
+                        Next
+                    End Try
+                End If
+            End If
+        End Using
     End Sub
 
-    Private Sub MarkControlNormal(ByVal control As Control)
-        Try
-            CType(control, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.FromArgb(0, 255, 255, 255)
-        Catch ex As Exception
-        End Try
+    Protected Friend Overrides Sub SaveObjekt() Implements IRhewaEditingDialog.SaveObjekt
+        'neuen Context aufbauen
+        Using Context As New Entities
+            'prüfen ob CREATE oder UPDATE durchgeführt werden muss
+            If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
+                'prüfen ob das Objekt anhand der ID gefunden werden kann
+                Dim dobjEichprozess As Eichprozess = (From a In Context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
+                If Not dobjEichprozess Is Nothing Then
+                    'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
+                    objEichprozess = dobjEichprozess
+                    'neuen Status zuweisen
 
-        Try
-            CType(control, Telerik.WinControls.UI.RadDateTimePicker).DateTimePickerElement.TextBoxElement.Border.ForeColor = Color.FromArgb(0, 255, 255, 255)
-        Catch ex As Exception
-        End Try
+                    'Füllt das Objekt mit den Werten aus den Steuerlementen
+                    UpdateObjekt()
+                    'Speichern in Datenbank
+                    Context.SaveChanges()
+                End If
+            End If
+        End Using
     End Sub
 
-    ''' <summary>
-    ''' Gültigkeit der Eingaben überprüfen
-    ''' </summary>
-    ''' <remarks></remarks>
-    ''' <author></author>
-    ''' <commentauthor></commentauthor>
-    Protected Friend Overrides Function ValidateControls() As Boolean
+    Protected Friend Overrides Sub Lokalisiere() Implements IRhewaEditingDialog.Lokalisiere
+        Dim oldsuspendEvents = _suspendEvents
+        _suspendEvents = True
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco_7EichprotokollDaten))
+        Lokalisierung(Me, resources)
+
+        _suspendEvents = oldsuspendEvents
+    End Sub
+
+
+    Protected Friend Overrides Function CheckDialogModus() As Boolean Implements IRhewaEditingDialog.CheckDialogModus
+        If DialogModus = enuDialogModus.lesend Then
+            If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderGenauigkeitderNullstellungUndAussermittigeBelastung Then
+                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderGenauigkeitderNullstellungUndAussermittigeBelastung
+            End If
+            ParentFormular.CurrentEichprozess = objEichprozess
+            Return False
+        End If
+        If DialogModus = enuDialogModus.korrigierend Then
+            UpdateObjekt()
+            If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderGenauigkeitderNullstellungUndAussermittigeBelastung Then
+                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderGenauigkeitderNullstellungUndAussermittigeBelastung
+            End If
+            ParentFormular.CurrentEichprozess = objEichprozess
+            Return False
+        End If
+        Return True
+    End Function
+
+
+    Protected Friend Overrides Function ValidateControls() As Boolean Implements IRhewaEditingDialog.ValidateControls
         'prüfen ob alle Felder ausgefüllt sind
         Me.AbortSaving = False
         For Each GroupBox In RadScrollablePanel1.PanelContainer.Controls
@@ -636,11 +867,9 @@ Public Class uco_7EichprotokollDaten
         'fehlermeldung anzeigen bei falscher validierung
         Dim result = Me.ShowValidationErrorBox(True)
         Return ProcessResult(result)
-
-
     End Function
 
-    Protected Friend Overrides Sub OverwriteIstSoll()
+    Protected Friend Overrides Sub OverwriteIstSoll() Implements IRhewaEditingDialog.OverwriteIstSoll
         RadTextBoxControlBenutzer.Text = "Hill"
         RadTextBoxControlAufstellungsort.Text = "bitwork Halle 1"
         RadTextBoxControlBaujahr.Text = "2010"
@@ -651,293 +880,6 @@ Public Class uco_7EichprotokollDaten
         RadTextBoxControlNormalienPruefscheinnummer.Text = "1024"
     End Sub
 
-#End Region
-
-#Region "Overrides"
-    'Speicherroutine
-    Protected Overrides Sub SaveNeeded(ByVal UserControl As UserControl)
-        If Me.Equals(UserControl) Then
-
-            If DialogModus = enuDialogModus.lesend Then
-                If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderGenauigkeitderNullstellungUndAussermittigeBelastung Then
-                    objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderGenauigkeitderNullstellungUndAussermittigeBelastung
-                End If
-                ParentFormular.CurrentEichprozess = objEichprozess
-                Exit Sub
-            End If
-            If DialogModus = enuDialogModus.korrigierend Then
-                UpdateObject()
-                If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderGenauigkeitderNullstellungUndAussermittigeBelastung Then
-                    objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderGenauigkeitderNullstellungUndAussermittigeBelastung
-                End If
-                ParentFormular.CurrentEichprozess = objEichprozess
-                Exit Sub
-            End If
-
-            If ValidateControls() = True Then
-
-                'neuen Context aufbauen
-                Using Context As New Entities
-                    'prüfen ob CREATE oder UPDATE durchgeführt werden muss
-                    If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
-                        'prüfen ob das Objekt anhand der ID gefunden werden kann
-                        Dim dobjEichprozess As Eichprozess = (From a In Context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
-                        If Not dobjEichprozess Is Nothing Then
-                            'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
-                            objEichprozess = dobjEichprozess
-                            'neuen Status zuweisen
-
-                            If AktuellerStatusDirty = False Then
-                                ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
-                                If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderGenauigkeitderNullstellungUndAussermittigeBelastung Then
-                                    objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderGenauigkeitderNullstellungUndAussermittigeBelastung
-                                End If
-                            ElseIf AktuellerStatusDirty = True Then
-                                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderGenauigkeitderNullstellungUndAussermittigeBelastung
-                                AktuellerStatusDirty = False
-                            End If
-
-                            'Füllt das Objekt mit den Werten aus den Steuerlementen
-                            UpdateObject()
-                            'Speichern in Datenbank
-
-                            Try
-                                Context.SaveChanges()
-                            Catch ex As Entity.Validation.DbEntityValidationException
-                                For Each e In ex.EntityValidationErrors
-                                    MessageBox.Show(e.ValidationErrors(0).ErrorMessage)
-                                Next
-                            End Try
-                        End If
-                    End If
-                End Using
-
-                ParentFormular.CurrentEichprozess = objEichprozess
-            End If
-
-        End If
-    End Sub
-
-    Protected Overrides Sub SaveWithoutValidationNeeded(usercontrol As UserControl)
-        MyBase.SaveWithoutValidationNeeded(usercontrol)
-
-        If Me.Equals(usercontrol) Then
-            If DialogModus = enuDialogModus.lesend Then
-                UpdateObject()
-                ParentFormular.CurrentEichprozess = objEichprozess
-                Exit Sub
-            End If
-            'neuen Context aufbauen
-            Using Context As New Entities
-                'prüfen ob CREATE oder UPDATE durchgeführt werden muss
-                If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
-                    'prüfen ob das Objekt anhand der ID gefunden werden kann
-                    Dim dobjEichprozess As Eichprozess = (From a In Context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
-                    If Not dobjEichprozess Is Nothing Then
-                        'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
-                        objEichprozess = dobjEichprozess
-                        'neuen Status zuweisen
-
-                        'Füllt das Objekt mit den Werten aus den Steuerlementen
-                        UpdateObject()
-                        'Speichern in Datenbank
-                        Context.SaveChanges()
-                    End If
-                End If
-            End Using
-
-            ParentFormular.CurrentEichprozess = objEichprozess
-        End If
-    End Sub
-
-    Protected Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
-        If Me.Name.Equals(UserControl.Name) = False Then Exit Sub
-        Dim oldsuspendEvents = _suspendEvents
-        _suspendEvents = True
-        MyBase.LokalisierungNeeded(UserControl)
-
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco_7EichprotokollDaten))
-        Lokalisierung(Me, resources)
-
-
-        If Not ParentFormular Is Nothing Then
-            Try
-                'Hilfetext setzen
-                ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_EichprotokollStammdaten)
-                'Überschrift setzen
-                ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_EichprotokollStammdaten
-            Catch ex As Exception
-            End Try
-        End If
-
-
-        _suspendEvents = oldsuspendEvents
-    End Sub
-
-    ''' <summary>
-    ''' aktualisieren der Oberfläche wenn nötig
-    ''' </summary>
-    ''' <param name="UserControl"></param>
-    ''' <remarks></remarks>
-    Protected Overrides Sub UpdateNeeded(UserControl As UserControl)
-        If Me.Equals(UserControl) Then
-            MyBase.UpdateNeeded(UserControl)
-            Me.LokalisierungNeeded(UserControl)
-
-
-            LoadFromDatabase()
-        End If
-    End Sub
-
-#End Region
-
-    ''' <summary>
-    ''' Diese Checkboxen (siehe Handles) sollen nur readonly sein.
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="args"></param>
-    ''' <remarks></remarks>
-    Private Sub RadCheckBoxVollstaendigesStaffelverfahren_ToggleStateChanging(sender As Object, args As Telerik.WinControls.UI.StateChangingEventArgs) Handles RadCheckBoxVollstaendigesStaffelverfahren.ToggleStateChanging, RadCheckBoxNichtselbsteinspielend.ToggleStateChanging, RadCheckBoxMehrteilungswaage.ToggleStateChanging, RadCheckBoxMehrbereichswaage.ToggleStateChanging, RadCheckBoxHalbSelbsteinspielend.ToggleStateChanging
-        If _suspendEvents = False Then
-
-            args.Cancel = True
-        End If
-    End Sub
-
-    Private Sub RadCheckBoxDrucker_ToggleStateChanged(sender As Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RadCheckBoxDrucker.ToggleStateChanged
-        If _suspendEvents Then Exit Sub
-        RadTextBoxControlDruckerTyp.Enabled = RadCheckBoxDrucker.Checked
-        AktuellerStatusDirty = True
-        If RadTextBoxControlDruckerTyp.Enabled = False Then
-            RadTextBoxControlDruckerTyp.Text = ""
-        End If
-    End Sub
-
-    Private Sub RadButton1_Click(sender As Object, e As EventArgs)
-        Dim f As New frmEichfehlergrenzen(objEichprozess)
-        f.Show()
-
-    End Sub
-
-    'Entsperrroutine
-    Protected Overrides Sub EntsperrungNeeded()
-        MyBase.EntsperrungNeeded()
-
-        'Hiermit wird ein lesender Vorgang wieder entsperrt.
-        EnableControls(RadGroupBoxBeschaffenheitspruefung)
-        EnableControls(RadGroupBoxBeschaffenheitspruefungNormalien)
-        EnableControls(RadGroupBoxIdentifikationsdaten)
-        EnableControls(RadGroupBoxKomponenten)
-        EnableControls(RadGroupBoxMax1)
-        EnableControls(RadGroupBoxMax2)
-        EnableControls(RadGroupBoxMax3)
-        EnableControls(RadGroupBoxPruefverfahren)
-        EnableControls(RadGroupBoxVerwendungszweck)
-        EnableControls(RadGroupBoxVerwendungszweckArtderWaage)
-        EnableControls(RadGroupBoxVerwendungszweckEquipment)
-        EnableControls(RadGroupBoxVerwendungszweckNullstellung)
-        EnableControls(RadGroupBoxVerwendungszweckTara)
-
-        'ändern des Moduses
-        DialogModus = enuDialogModus.korrigierend
-        ParentFormular.DialogModus = FrmMainContainer.enuDialogModus.korrigierend
-    End Sub
-
-    Protected Overrides Sub VersendenNeeded(TargetUserControl As UserControl)
-
-        If Me.Equals(TargetUserControl) Then
-            MyBase.VersendenNeeded(TargetUserControl)
-
-            UpdateObject()
-            'Erzeugen eines Server Objektes auf basis des aktuellen DS. Setzt es auf es ausserdem auf Fehlerhaft
-            CloneAndSendServerObjekt()
-        End If
-    End Sub
-
-#Region "Prüfscheinnummern"
-    Private ListPruefscheinnnummernGesperrt As List(Of StatusPrüfscheinnummer)
-    Private ListPruefscheinnnummern As List(Of StatusPrüfscheinnummer)
-
-    Private Sub CheckPruefscheinnummer(sender As Object)
-        Try
-            Dim txt As Telerik.WinControls.UI.RadTextBox = DirectCast(sender, Telerik.WinControls.UI.RadTextBox)
-            If txt Is RadTextBoxControlNormalienPruefscheinnummer Then
-                If AktuellerBenutzer.Instance.Lizenz.RHEWALizenz Then
-                    BackgroundWorkerPruefscheinnummern.RunWorkerAsync()
-                End If
-            End If
-        Catch ex As Exception
-        End Try
-    End Sub
-    Private Sub BackgroundWorkerPruefscheinnummern_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorkerPruefscheinnummern.DoWork
-
-
-        If ListPruefscheinnnummern Is Nothing Then
-            ListPruefscheinnnummern = clsWebserviceFunctions.GetStatusPruefscheinnummern()
-
-            'abbruch
-            If ListPruefscheinnnummern Is Nothing Then
-                e.Result = "Keine Prüfscheinnummern gefunden. Eventuell ist der Server gerade nicht erreichbar"
-                Exit Sub
-            End If
-
-            ListPruefscheinnnummernGesperrt = (From o In ListPruefscheinnnummern Where o.Gesperrt = True Or o.GesperrtDurchDatum = True).ToList
-            ListPruefscheinnnummern = (From o In ListPruefscheinnnummern Where o.Gesperrt = False And o.GesperrtDurchDatum = False).ToList
-        End If
-        Dim Vergleichswerte = RadTextBoxControlNormalienPruefscheinnummer.Text.Replace(",", ";").Replace(" ", "").Trim
-        Try
-            Dim ArrVergleichswerte = Vergleichswerte.Split(";")
-            Dim results = (From o In ListPruefscheinnnummernGesperrt Where ArrVergleichswerte.Contains(o.Nummer)).ToList
-            Dim negativeResults = (From o In ArrVergleichswerte Where Not ListPruefscheinnnummern.Select(Function(c) c.Nummer.ToString).Contains(o)).ToList
-
-            'e.Result = results
-            'Return
-
-            Dim returnString As String = ""
-
-            For Each result In results
-                If result.Gesperrt Then
-                    returnString += String.Format("Das Gewicht mit der Nummer {0} darf nicht verwendet werden und muss aussortiert werden ", result.Nummer) & vbNewLine & vbNewLine
-                ElseIf result.GesperrtDurchDatum Then
-                    returnString += String.Format("Das Gewicht mit der Nummer {0} darf nur auf Anweisung verwendet werden. Der Prüfschein ist abgelaufen ", result.Nummer) & vbNewLine & vbNewLine
-                End If
-            Next
-
-            For Each result In negativeResults
-                If result = "" Then Continue For
-                returnString += String.Format("Das Gewicht mit der Nummer {0} wurde nicht gefunden.", result) & vbNewLine & vbNewLine
-            Next
-            e.Result = returnString
-            Exit Sub
-
-        Catch ex As Exception
-
-        End Try
-        e.Result = ""
-    End Sub
-
-    Private Sub BackgroundWorkerPruefscheinnummern_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorkerPruefscheinnummern.RunWorkerCompleted
-        If e.Result <> "" Then
-
-            Dim tooltip As New Telerik.WinControls.UI.RadDesktopAlert()
-            tooltip.IsPinned = True
-            tooltip.ContentText = e.Result
-            tooltip.FixedSize = New System.Drawing.Size(600, 450)
-            tooltip.SoundToPlay = Media.SystemSounds.Exclamation
-            tooltip.PlaySound = True
-            '20 - vertical margins, 70 - caption height
-            Dim graphics As Telerik.WinControls.MeasurementGraphics = Telerik.WinControls.MeasurementGraphics.CreateMeasurementGraphics()
-            Dim sizeF As SizeF = graphics.Graphics.MeasureString(tooltip.ContentText, Me.Font, tooltip.FixedSize.Width - 20)
-
-            tooltip.FixedSize = New Size(tooltip.FixedSize.Width - 20, CInt(sizeF.Height) + 80)
-            tooltip.Show()
-
-        End If
-    End Sub
-
-    Private Sub RadTextBoxControlNormalienPruefscheinnummer_Validated(sender As Object, e As EventArgs) Handles RadTextBoxControlNormalienPruefscheinnummer.Validated
-        CheckPruefscheinnummer(sender)
-    End Sub
 #End Region
 
 End Class

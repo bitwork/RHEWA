@@ -4,6 +4,8 @@ Imports System.Data.Entity
 Friend Class uco_8PruefungNullstellungUndAussermittigeBelastung
 
     Inherits ucoContent
+    Implements IRhewaEditingDialog
+    Implements IRhewaPruefungDialog
 
 #Region "Member Variables"
     Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken
@@ -37,33 +39,24 @@ Friend Class uco_8PruefungNullstellungUndAussermittigeBelastung
 #End Region
 
 #Region "Events"
-    ''' <summary>
-    ''' Validations the needed.
-    ''' </summary>
-    ''' <returns></returns>
-    Protected Friend Overrides Function ValidationNeeded() As Boolean
-        LoadFromDatabase()
-        Return ValidateControls()
-    End Function
-    Private Sub uco_8PruefungNullstellungUndAussermittigeBelastung_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
-        If e.KeyData.Equals("F1") Then
-            MessageBox.Show("")
-        End If
-    End Sub
+
     Private Sub ucoBeschaffenheitspruefung_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-        If Not ParentFormular Is Nothing Then
-            Try
-                'Hilfetext setzen
-                ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungAussermittigerBelastung)
-                'Überschrift setzen
-                ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungNullstellungundAussermittigeBelastung
-            Catch ex As Exception
-            End Try
-        End If
+        SetzeUeberschrift()
         EichprozessStatusReihenfolge = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderGenauigkeitderNullstellungUndAussermittigeBelastung
 
         'daten füllen
         LoadFromDatabase()
+    End Sub
+
+
+    ''' <summary>
+    ''' Öffnen der Eichfehlergrenzen
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub RadButtonShowEFG_Click(sender As Object, e As EventArgs) Handles RadButtonShowEFG.Click, RadButtonShowEFG2.Click
+        ShowEichfehlergrenzenDialog()
     End Sub
 
     Private Sub RadTextBoxControlWeight_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles RadTextBoxControlWeight3.Validating, RadTextBoxControlWeight2.Validating, RadTextBoxControlWeight1.Validating,
@@ -84,6 +77,8 @@ RadTextBoxControlBereich1Weight12.Validating, RadTextBoxControlBereich1Weight11.
 RadTextBoxControlBereich1DisplayWeight9.Validating, RadTextBoxControlBereich1DisplayWeight8.Validating, RadTextBoxControlBereich1DisplayWeight7.Validating, RadTextBoxControlBereich1DisplayWeight6.Validating,
 RadTextBoxControlBereich1DisplayWeight5.Validating, RadTextBoxControlBereich1DisplayWeight4.Validating, RadTextBoxControlBereich1DisplayWeight3.Validating, RadTextBoxControlBereich1DisplayWeight2.Validating,
 RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1DisplayWeight11.Validating, RadTextBoxControlBereich1DisplayWeight10.Validating, RadTextBoxControlBereich1DisplayWeight1.Validating
+
+        'basis validierung
         BasicTextboxValidation(sender, e)
     End Sub
 
@@ -94,11 +89,56 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
           RadCheckBoxBereich2VEL12.MouseClick, RadCheckBoxBereich2VEL11.MouseClick, RadCheckBoxBereich2VEL10.MouseClick, RadCheckBoxBereich2VEL1.MouseClick, RadCheckBoxBereich1VELMitte.MouseClick, RadCheckBoxBereich1VEL9.MouseClick,
           RadCheckBoxBereich1VEL8.MouseClick, RadCheckBoxBereich1VEL7.MouseClick, RadCheckBoxBereich1VEL6.MouseClick, RadCheckBoxBereich1VEL5.MouseClick, RadCheckBoxBereich1VEL4.MouseClick, RadCheckBoxBereich1VEL3.MouseClick,
           RadCheckBoxBereich1VEL2.MouseClick, RadCheckBoxBereich1VEL12.MouseClick, RadCheckBoxBereich1VEL11.MouseClick, RadCheckBoxBereich1VEL10.MouseClick, RadCheckBoxBereich1VEL1.MouseClick, RadCheckBoxVEL1.Click
+
+        'negieren der checkbox
         CType(sender, Telerik.WinControls.UI.RadCheckBox).Checked = Not CType(sender, Telerik.WinControls.UI.RadCheckBox).Checked
     End Sub
 
 #Region "Wiederholbarkeit Text Changed Events"
     Private Sub RadTextBoxControlErrorLimit1_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlErrorLimit1.TextChanged
+        GetBetragNormallast()
+    End Sub
+
+    ''' <summary>
+    ''' wenn sich eine der Last Werte ändert, muss es in allen anderen Textboxen nachgezogen werden
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub RadTextBoxControl_TextChanged(sender As Object, e As EventArgs) Handles _
+    RadTextBoxControlWeight3.TextChanged, RadTextBoxControlWeight2.TextChanged, RadTextBoxControlWeight1.TextChanged
+
+        If _suspendEvents = True Then Exit Sub
+        AktuellerStatusDirty = True
+
+        'damit keine Event Kettenreaktion durchgeführt wird, werden die Events ab hier unterbrochen
+        _suspendEvents = True
+
+        FuelleLastBeiAenderungen(sender)
+
+        'neu berechnen der Fehler und EFG
+        CalculateEFGWiederholungen(RadTextBoxControlWeight1)
+        CalculateEFGWiederholungen(RadTextBoxControlWeight2)
+        CalculateEFGWiederholungen(RadTextBoxControlWeight3)
+
+        _suspendEvents = False
+    End Sub
+
+    Private Sub RadTextBoxControlDisplayWeight1_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlDisplayWeight1.TextChanged, RadTextBoxControlDisplayWeight2.TextChanged, RadTextBoxControlDisplayWeight3.TextChanged
+        CalculateEFGWiederholungen(sender)
+    End Sub
+
+#End Region
+
+#Region "Wiederholbarkeit Methoden"
+
+    Private Sub FuelleLastBeiAenderungen(sender As Object)
+        RadTextBoxControlWeight1.Text = CType(sender, Telerik.WinControls.UI.RadTextBox).Text
+        RadTextBoxControlWeight2.Text = CType(sender, Telerik.WinControls.UI.RadTextBox).Text
+        RadTextBoxControlWeight3.Text = CType(sender, Telerik.WinControls.UI.RadTextBox).Text
+    End Sub
+
+    Private Sub GetBetragNormallast()
         Try
 
             Dim MAX20 As Decimal = 0
@@ -106,19 +146,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
             Dim MAX50 As Decimal = 0
             Dim newLast As Decimal = 0
 
-            If objEichprozess.Lookup_Waagenart.Art = "Einbereichswaage" Then
-                MAX20 = CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1) * 0.2
-                MAX35 = CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1) * 0.35
-                MAX50 = CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1) * 0.5
-            ElseIf objEichprozess.Lookup_Waagenart.Art = "Zweibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Zweiteilungswaage" Then
-                MAX20 = CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2) * 0.2
-                MAX35 = CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2) * 0.35
-                MAX50 = CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2) * 0.5
-            ElseIf objEichprozess.Lookup_Waagenart.Art = "Dreibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Dreiteilungswaage" Then
-                MAX20 = CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3) * 0.2
-                MAX35 = CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3) * 0.35
-                MAX50 = CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3) * 0.5
-            End If
+            GetMaxWerte(MAX20, MAX35, MAX50)
 
             'wiederholung1
 
@@ -162,31 +190,20 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         End Try
     End Sub
 
-    ''' <summary>
-    ''' wenn sich eine der Last Werte ändert, muss es in allen anderen Textboxen nachgezogen werden
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
-    ''' <remarks></remarks>
-    Private Sub RadTextBoxControl_TextChanged(sender As Object, e As EventArgs) Handles _
-    RadTextBoxControlWeight3.TextChanged, RadTextBoxControlWeight2.TextChanged, RadTextBoxControlWeight1.TextChanged
-
-        If _suspendEvents = True Then Exit Sub
-        AktuellerStatusDirty = True
-
-        'damit keine Event Kettenreaktion durchgeführt wird, werden die Events ab hier unterbrochen
-        _suspendEvents = True
-
-        RadTextBoxControlWeight1.Text = CType(sender, Telerik.WinControls.UI.RadTextBox).Text
-        RadTextBoxControlWeight2.Text = CType(sender, Telerik.WinControls.UI.RadTextBox).Text
-        RadTextBoxControlWeight3.Text = CType(sender, Telerik.WinControls.UI.RadTextBox).Text
-
-        'neu berechnen der Fehler und EFG
-        CalculateEFGWiederholungen(RadTextBoxControlWeight1)
-        CalculateEFGWiederholungen(RadTextBoxControlWeight2)
-        CalculateEFGWiederholungen(RadTextBoxControlWeight3)
-
-        _suspendEvents = False
+    Private Sub GetMaxWerte(ByRef MAX20 As Decimal, ByRef MAX35 As Decimal, ByRef MAX50 As Decimal)
+        If objEichprozess.Lookup_Waagenart.Art = "Einbereichswaage" Then
+            MAX20 = CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1) * 0.2
+            MAX35 = CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1) * 0.35
+            MAX50 = CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1) * 0.5
+        ElseIf objEichprozess.Lookup_Waagenart.Art = "Zweibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Zweiteilungswaage" Then
+            MAX20 = CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2) * 0.2
+            MAX35 = CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2) * 0.35
+            MAX50 = CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2) * 0.5
+        ElseIf objEichprozess.Lookup_Waagenart.Art = "Dreibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Dreiteilungswaage" Then
+            MAX20 = CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3) * 0.2
+            MAX35 = CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3) * 0.35
+            MAX50 = CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3) * 0.5
+        End If
     End Sub
 
     ''' <summary>
@@ -263,10 +280,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
 
         Catch ex As Exception
         End Try
-    End Sub
-
-    Private Sub RadTextBoxControlDisplayWeight1_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlDisplayWeight1.TextChanged, RadTextBoxControlDisplayWeight2.TextChanged, RadTextBoxControlDisplayWeight3.TextChanged
-        CalculateEFGWiederholungen(sender)
     End Sub
 
 #End Region
@@ -462,6 +475,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         Try
 
             If _suspendEvents = True Then Exit Sub
+              AktuellerStatusDirty = True
             Dim Bereich = GetBereich(sender)
             Dim Belastungsort = GetBelastungsort(sender)
 
@@ -474,23 +488,67 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
 
 #End Region
 
-    ''' <summary>
-    ''' Öffnen der Eichfehlergrenzen
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
-    ''' <remarks></remarks>
-    Private Sub RadButtonShowEFG_Click(sender As Object, e As EventArgs) Handles RadButtonShowEFG.Click, RadButtonShowEFG2.Click
-        Dim f As New frmEichfehlergrenzen(objEichprozess)
-        f.Show()
-    End Sub
-
 #End Region
 
 #Region "Methods"
-    Protected Friend Overrides Sub LoadFromDatabase()
-        Me.SuspendLayout()
-        'zurücksetzten der Groupboxen größen auf default (designer) werte. Sonst würden die Groupboxen immer kleiner gerechnet
+
+    Private Sub LadePruefungen() Implements IRhewaPruefungDialog.LadePruefungen
+        'Nur laden wenn es sich um eine Bearbeitung handelt (sonst würde das in Memory Objekt überschrieben werden)
+        If Not DialogModus = enuDialogModus.lesend And Not DialogModus = enuDialogModus.korrigierend Then
+            LadePruefungenLeseModus()
+        Else
+            LadePruefungenBearbeitungsModus()
+        End If
+    End Sub
+
+    Private Sub LadePruefungenBearbeitungsModus() Implements IRhewaPruefungDialog.LadePruefungenBearbeitungsModus
+        _ListPruefungWiederholbarkeit.Clear()
+        _ListPruefungAussermittigeBelastung.Clear()
+        Try
+            'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
+            For Each obj In objEichprozess.Eichprotokoll.PruefungAussermittigeBelastung
+                obj.Eichprotokoll = objEichprozess.Eichprotokoll
+                _ListPruefungAussermittigeBelastung.Add(obj)
+            Next
+
+            For Each obj In objEichprozess.Eichprotokoll.PruefungWiederholbarkeit
+                obj.Eichprotokoll = objEichprozess.Eichprotokoll
+                _ListPruefungWiederholbarkeit.Add(obj)
+            Next
+        Catch ex As System.ObjectDisposedException 'fehler im Clientseitigen Lesemodus (bei bereits abegschickter Eichung)
+            Using context As New Entities
+                Dim query = From a In context.PruefungAussermittigeBelastung Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
+                _ListPruefungAussermittigeBelastung = query.ToList
+
+                Dim query2 = From a In context.PruefungWiederholbarkeit Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
+                _ListPruefungWiederholbarkeit = query2.ToList
+            End Using
+        End Try
+
+        _currentObjVerfahren = objEichprozess.Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren
+    End Sub
+
+    Private Sub LadePruefungenLeseModus() Implements IRhewaPruefungDialog.LadePruefungenLeseModus
+        Using context As New Entities
+
+            'neu laden des Objekts, diesmal mit den lookup Objekten
+            objEichprozess = (From a In context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
+
+            'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
+            Dim query = From a In context.PruefungAussermittigeBelastung Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
+            _ListPruefungAussermittigeBelastung = query.ToList
+
+            Dim query2 = From a In context.PruefungWiederholbarkeit Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
+            _ListPruefungWiederholbarkeit = query2.ToList
+
+            _currentObjVerfahren = (From a In context.Lookup_Konformitaetsbewertungsverfahren Where a.ID = objEichprozess.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren).FirstOrDefault
+        End Using
+    End Sub
+
+    ''' <summary>
+    ''' 'zurücksetzten der Groupboxen größen auf default (designer) werte. Sonst würden die Groupboxen immer kleiner gerechnet
+    ''' </summary>
+    Private Sub ResetGroupboxSizes()
         RadGroupBoxBereich1.Size = New Size(503, 489)
         RadGroupBoxBereich2.Size = New Size(503, 489)
         RadGroupBoxBereich3.Size = New Size(503, 489)
@@ -498,105 +556,21 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         RadGroupBoxBereich1.Location = New Size(21, 149)
         RadGroupBoxBereich2.Location = New Size(21, 644)
         RadGroupBoxBereich3.Location = New Size(21, 1139)
-
-        objEichprozess = ParentFormular.CurrentEichprozess
-        'events abbrechen
-        _suspendEvents = True
-
-        'Nur laden wenn es sich um eine Bearbeitung handelt (sonst würde das in Memory Objekt überschrieben werden)
-        If Not DialogModus = enuDialogModus.lesend And Not DialogModus = enuDialogModus.korrigierend Then
-            Using context As New Entities
-
-                'neu laden des Objekts, diesmal mit den lookup Objekten
-                objEichprozess = (From a In context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
-
-                'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
-                Dim query = From a In context.PruefungAussermittigeBelastung Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
-                _ListPruefungAussermittigeBelastung = query.ToList
-
-                Dim query2 = From a In context.PruefungWiederholbarkeit Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
-                _ListPruefungWiederholbarkeit = query2.ToList
-
-                _currentObjVerfahren = (From a In context.Lookup_Konformitaetsbewertungsverfahren Where a.ID = objEichprozess.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren).FirstOrDefault
-            End Using
-        Else
-            _ListPruefungWiederholbarkeit.Clear()
-            _ListPruefungAussermittigeBelastung.Clear()
-            Try
-                'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
-                For Each obj In objEichprozess.Eichprotokoll.PruefungAussermittigeBelastung
-                    obj.Eichprotokoll = objEichprozess.Eichprotokoll
-                    _ListPruefungAussermittigeBelastung.Add(obj)
-                Next
-
-                For Each obj In objEichprozess.Eichprotokoll.PruefungWiederholbarkeit
-                    obj.Eichprotokoll = objEichprozess.Eichprotokoll
-                    _ListPruefungWiederholbarkeit.Add(obj)
-                Next
-            Catch ex As System.ObjectDisposedException 'fehler im Clientseitigen Lesemodus (bei bereits abegschickter Eichung)
-                Using context As New Entities
-                    Dim query = From a In context.PruefungAussermittigeBelastung Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
-                    _ListPruefungAussermittigeBelastung = query.ToList
-
-                    Dim query2 = From a In context.PruefungWiederholbarkeit Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
-                    _ListPruefungWiederholbarkeit = query2.ToList
-                End Using
-            End Try
-
-            _currentObjVerfahren = objEichprozess.Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren
-        End If
-
-        'steuerelemente mit werten aus DB füllen
-        FillControls()
-
-        If DialogModus = enuDialogModus.lesend Then
-            'falls der Konformitätsbewertungsvorgang nur lesend betrchtet werden soll, wird versucht alle Steuerlemente auf REadonly zu setzen. Wenn das nicht klappt,werden sie disabled
-            DisableControls(RadGroupBoxBereich1)
-            DisableControls(RadGroupBoxBereich2)
-            DisableControls(RadGroupBoxBereich3)
-            DisableControls(RadGroupBoxPruefungAussermittigeBelastung)
-            DisableControls(RadGroupBoxPruefungGenaugikeit)
-            DisableControls(RadGroupBoxWiederholungen)
-
-        End If
-        'events abbrechen
-        _suspendEvents = False
-        Me.ResumeLayout()
     End Sub
 
 #Region "FillControls"
-    ''' <summary>
-    ''' Lädt die Werte aus dem Objekt in die Steuerlemente
-    ''' </summary>
-    ''' <remarks></remarks>
-    ''' <author></author>
-    ''' <commentauthor></commentauthor>
-    '''
-    Private Sub FillControls()
-        'Steuerlemente füllen
-        FillControlsNullstellung()
-        'dynamisches laden der Nullstellen:
-        HoleNullstellen()
-        LadeBilder()
-        BereichsgruppenAusblenden()
-        'ein ausblenden von WZ Bereichenen
-        EinAusblendenVonWZBereichenen()
-        BerechneNeueHoehe()
-        FillControlsAussermittigeBelastung()
-
-        'Nur wenn es sich um das Staffel oder Fahrzeugwaagen verfahren handelt wird an dieser Stelle die Wiederholbarkeit geprüft. sonst erfolgt dies an einer anderen Stelle
-        Select Case objEichprozess.Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren.Verfahren
-            Case Is = "über 60kg mit Normalien"
-                RadGroupBoxWiederholungen.Visible = False
-
-            Case Is = "Fahrzeugwaagen", "über 60kg im Staffelverfahren"
-                RadGroupBoxWiederholungen.Visible = True
-                FillControlsWiederholbarkeit()
-        End Select
-
-        'fokus setzen auf erstes Steuerelement
-        RadCheckBoxNullstellungOK.Focus()
+    Protected Friend Overrides Sub SetzeUeberschrift() Implements IRhewaEditingDialog.SetzeUeberschrift
+        If Not ParentFormular Is Nothing Then
+            Try
+                'Hilfetext setzen
+                ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungAussermittigerBelastung)
+                'Überschrift setzen
+                ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungNullstellungundAussermittigeBelastung
+            Catch ex As Exception
+            End Try
+        End If
     End Sub
+
 
     Private Sub FillControlsNullstellung()
         If Not objEichprozess.Eichprotokoll.GenauigkeitNullstellung_InOrdnung Is Nothing Then
@@ -606,14 +580,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
 
     Private Sub SaveAussermittigeBelastung(ByRef Context As Entities)
         'anzahl Bereiche auslesen um damit die anzahl der benötigten Iterationen und Objekt Erzeugungen zu erfahren
-        Dim intBereiche As Integer = 0
-        If objEichprozess.Lookup_Waagenart.Art = "Einbereichswaage" Then
-            intBereiche = 1
-        ElseIf objEichprozess.Lookup_Waagenart.Art = "Zweibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Zweiteilungswaage" Then
-            intBereiche = 2
-        ElseIf objEichprozess.Lookup_Waagenart.Art = "Dreibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Dreiteilungswaage" Then
-            intBereiche = 3
-        End If
+        Dim intBereiche As Integer = GetAnzahlBereiche()
 
         'alte löschen
 
@@ -706,160 +673,10 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
                     _ListPruefungAussermittigeBelastung.Add(objPruefung)
                 Next
             End If
-
         Next
-        ' End If
-        'Else
-        '    'prüfen ob nun mehr belastungsstellen geladen werden müssen
-        '    Try
-        '        'Dim differenz As Integer = 0
-        '        'If _ListPruefungAussermittigeBelastung.Count < objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen * 2 Then
-        '        '    'hinzufügen der neuen elemente
-        '        '    differenz = (objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen * 2) - _ListPruefungAussermittigeBelastung.Count
-        '        'ElseIf _ListPruefungAussermittigeBelastung.Count > objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen * 2 Then
-        '        '    'entfernen der elemente
-        '        '    differenz = _ListPruefungAussermittigeBelastung.Count - (objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen * 2)
-        '        '    'durch die Differenz kenne ich die neuen Werte
-        '        'End If
-
-        '        Dim differenz As Integer = 0
-        '        If _ListPruefungAussermittigeBelastung.Count < (objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen + 1) * intBereiche Then
-        '            'hinzufügen der neuen elemente
-        '            differenz = ((objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen + 1) * intBereiche) - _ListPruefungAussermittigeBelastung.Count
-        '        ElseIf _ListPruefungAussermittigeBelastung.Count > (objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen + 1) * intBereiche + 1 Then
-        '            'entfernen der elemente
-        '            differenz = _ListPruefungAussermittigeBelastung.Count - (objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen + 1) * intBereiche
-        '            'durch die Differenz kenne ich die neuen Werte
-        '        End If
-
-        '        If differenz = 0 Then
-        '            'jedes objekt initialisieren und aus context laden und updaten
-        '            For Each objPruefung In _ListPruefungAussermittigeBelastung
-        '                objPruefung = Context.PruefungAussermittigeBelastung.FirstOrDefault(Function(value) value.ID = objPruefung.ID)
-        '                UpdatePruefungsObject(objPruefung)
-        '                Context.SaveChanges()
-        '            Next
-        '        Else
-        '            _ListPruefungAussermittigeBelastung.Clear()
-
-        '            'alle iterieren und ggfs neu anlegen
-        '            Dim bolNeu As Boolean = False
-        '            Dim Bereich As Integer 'LINQ kann bei verwendung von iterationsvariablen (j und i) fehler durch Tread Parallelität erzeugen. Deswegen zuweisen des Wertes
-        '            For j = 1 To intBereiche
-        '                Bereich = j 'LINQ kann bei verwendung von iterationsvariablen (j und i) fehler durch Tread Parallelität erzeugen. Deswegen zuweisen des Wertes
-        '                'sonderfall eine Wägezelle
-        '                If objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen = 1 Then
-        '                    Dim intBelastungsort As Integer 'LINQ kann bei verwendung von iterationsvariablen (j und i) fehler durch Tread Parallelität erzeugen. Deswegen zuweisen des Wertes
-        '                    For i As Integer = 1 To 5 'eine Mehr für Mitte
-        '                        bolNeu = False
-        '                        intBelastungsort = i 'LINQ kann bei verwendung von iterationsvariablen (j und i) fehler durch Tread Parallelität erzeugen. Deswegen zuweisen des Wertes
-
-        '                        'bei mehrbereichswagen gibt es die Mitte nur im ersten Durchlauf
-        '                        If j > 1 And intBelastungsort = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen + 1 Then
-        '                            Continue For
-        '                        End If
-        '                        Dim objPruefung = (From pruefungen In Context.PruefungAussermittigeBelastung Where pruefungen.Belastungsort = CStr(intBelastungsort) And pruefungen.Bereich = Bereich).FirstOrDefault
-        '                        If objPruefung Is Nothing Then
-        '                            objPruefung = Context.PruefungAussermittigeBelastung.Create
-        '                            bolNeu = True
-        '                        End If
-
-        '                        'wenn es die eine itereation mehr ist:
-        '                        If intBelastungsort = 5 Then
-        '                            'mitte anlegen
-        '                            objPruefung.Belastungsort = "M"
-        '                        Else 'sonst bereich zuweisen
-        '                            objPruefung.Belastungsort = intBelastungsort
-        '                        End If
-
-        '                        objPruefung.Bereich = j
-
-        '                        UpdatePruefungsObject(objPruefung)
-        '                        Try
-        '                            Context.SaveChanges()
-        '                        Catch ex As Validation.DbEntityValidationException
-        '                            For Each e In ex.EntityValidationErrors
-        '                                MessageBox.Show(e.ValidationErrors(0).ErrorMessage)
-        '                            Next
-        '                        End Try
-
-        '                        If bolNeu Then
-
-        '                            objEichprozess.Eichprotokoll.PruefungAussermittigeBelastung.Add(objPruefung)
-        '                            Try
-        '                                Context.SaveChanges()
-        '                            Catch ex As Validation.DbEntityValidationException
-        '                                For Each e In ex.EntityValidationErrors
-        '                                    MessageBox.Show(e.ValidationErrors(0).ErrorMessage)
-        '                                Next
-        '                            End Try
-
-        '                            _ListPruefungAussermittigeBelastung.Add(objPruefung)
-        '                        End If
-        '                    Next
-        '                Else
-        '                    Dim intbelastungsort As Integer = 1
-        '                    For i As Integer = 1 To (objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen + 1) 'eine Mehr für Mitte
-
-        '                        intbelastungsort = i
-        '                        'bei mehrbereichswagen gibt es die Mitte nur im ersten Durchlauf
-        '                        If j > 1 And intbelastungsort = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen + 1 Then
-        '                            Continue For
-        '                        End If
-
-        '                        bolNeu = False
-        '                        Dim objPruefung = (From pruefungen In Context.PruefungAussermittigeBelastung Where pruefungen.Belastungsort = CStr(intbelastungsort) And pruefungen.Bereich = Bereich).FirstOrDefault
-        '                        If objPruefung Is Nothing Then
-        '                            objPruefung = Context.PruefungAussermittigeBelastung.Create
-        '                            bolNeu = True
-        '                        End If
-
-        '                        'wenn es die eine itereation mehr ist:
-        '                        If intbelastungsort = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen + 1 Then
-        '                            'mitte anlegen
-        '                            objPruefung.Belastungsort = "M"
-        '                        Else 'sonst bereich zuweisen
-        '                            objPruefung.Belastungsort = intbelastungsort
-        '                        End If
-        '                        objPruefung.Bereich = j
-        '                        UpdatePruefungsObject(objPruefung)
-
-        '                        Try
-        '                            Context.SaveChanges()
-
-        '                        Catch ex As Validation.DbEntityValidationException
-        '                            For Each e In ex.EntityValidationErrors
-        '                                MessageBox.Show(e.ValidationErrors(0).ErrorMessage)
-        '                            Next
-        '                        End Try
-
-        '                        If bolNeu Then
-
-        '                            objEichprozess.Eichprotokoll.PruefungAussermittigeBelastung.Add(objPruefung)
-        '                            Try
-        '                                Context.SaveChanges()
-
-        '                            Catch ex As Validation.DbEntityValidationException
-        '                                For Each e In ex.EntityValidationErrors
-        '                                    MessageBox.Show(e.ValidationErrors(0).ErrorMessage)
-        '                                Next
-        '                            End Try
-
-        '                            _ListPruefungAussermittigeBelastung.Add(objPruefung)
-        '                        End If
-        '                    Next
-        '                End If
-
-        '            Next
-
-        'End If
-
-        'Catch ex As Exception
-        '    MessageBox.Show(ex.StackTrace, ex.Message)
-        '    End Try
-        'End If
-
     End Sub
+
+
 
     Private Sub SaveWiederholungen(ByRef Context As Entities)
         If RadGroupBoxWiederholungen.Visible = True Then
@@ -1128,7 +945,9 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
                 RadTextBoxControlBetragNormallast.Text = 0
             End If
         Catch ex As Exception
-
+            If RadTextBoxControlBetragNormallast.Text.Equals("") Then
+                RadTextBoxControlBetragNormallast.Text = 0
+            End If
         End Try
 
         'bereich 1
@@ -1189,20 +1008,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
             RadTextBoxControlDisplayWeight3.Text = _currentObjPruefungWiederholbarkeit.Anzeige
         End If
 
-    End Sub
-
-#End Region
-
-    ''' <summary>
-    ''' Füllt das Objekt mit den Werten aus den Steuerlementen
-    ''' </summary>
-    ''' <remarks></remarks>
-    ''' <author></author>
-    ''' <commentauthor></commentauthor>
-    Private Sub UpdateObject()
-        If DialogModus = enuDialogModus.normal Then objEichprozess.Bearbeitungsdatum = Date.Now
-        objEichprozess.Eichprotokoll.GenauigkeitNullstellung_InOrdnung = RadCheckBoxNullstellungOK.Checked
-        objEichprozess.Eichprotokoll.Wiederholbarkeit_Staffelverfahren_MINNormalien = RadTextBoxControlBetragNormallast.Text
     End Sub
 
     Private Sub UeberschreibePruefungsobjekte()
@@ -1271,6 +1076,10 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
 
         End If
     End Sub
+#End Region
+
+
+
 
 #Region "validate Controls"
 #Region "Nullstellung"
@@ -1278,7 +1087,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         If RadCheckBoxNullstellungOK.Checked = False Then
             RadCheckBoxNullstellungOK.Focus()
             AbortSaving = True
-            '   MessageBox.Show(My.Resources.GlobaleLokalisierung.PflichtfelderAusfuellen, "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             RadCheckBoxNullstellungOK.Focus()
             Return False
         End If
@@ -1292,7 +1100,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
             If RadCheckBoxVEL1.Checked = False And RadCheckBoxVEL1.Visible = True Then
                 AbortSaving = True
                 Return False
-
             End If
         End If
         Return True
@@ -1387,13 +1194,255 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
 #End Region
 #End Region
 
+
+
+#End Region
+
+#Region "Hilfetexte"
+    Private Sub RadGroupBoxPruefungGenaugikeit_MouseHover(sender As Object, e As EventArgs) Handles RadGroupBoxPruefungGenaugikeit.MouseEnter
+        ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_Nullstellung)
+    End Sub
+
+    Private Sub RadGroupBoxPruefungAussermittigeBelastung_MouseHover(sender As Object, e As EventArgs) Handles RadGroupBoxPruefungAussermittigeBelastung.MouseEnter
+        ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungAussermittigerBelastung)
+    End Sub
+
+    Private Sub RadGroupBoxWiederholungen_MouseEnter(sender As Object, e As EventArgs) Handles RadGroupBoxWiederholungen.MouseEnter
+        ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungWiederholbarkeitStaffelverfahren)
+
+    End Sub
+
+#End Region
+
+#Region "Interface Methods"
+
+    Protected Friend Overrides Sub LoadFromDatabase() Implements IRhewaEditingDialog.LoadFromDatabase
+        Me.SuspendLayout()
+        'zurücksetzten der Groupboxen größen auf default (designer) werte. Sonst würden die Groupboxen immer kleiner gerechnet
+        ResetGroupboxSizes()
+
+        objEichprozess = ParentFormular.CurrentEichprozess
+        'events abbrechen
+        _suspendEvents = True
+
+        LadePruefungen()
+
+        'steuerelemente mit werten aus DB füllen
+        FillControls()
+
+        If DialogModus = enuDialogModus.lesend Then
+            'falls der Konformitätsbewertungsvorgang nur lesend betrchtet werden soll, wird versucht alle Steuerlemente auf REadonly zu setzen. Wenn das nicht klappt,werden sie disabled
+            DisableControls(RadGroupBoxBereich1)
+            DisableControls(RadGroupBoxBereich2)
+            DisableControls(RadGroupBoxBereich3)
+            DisableControls(RadGroupBoxPruefungAussermittigeBelastung)
+            DisableControls(RadGroupBoxPruefungGenaugikeit)
+            DisableControls(RadGroupBoxWiederholungen)
+
+        End If
+        'events abbrechen
+        _suspendEvents = False
+        Me.ResumeLayout()
+    End Sub
+    ''' <summary>
+    ''' Lädt die Werte aus dem Objekt in die Steuerlemente
+    ''' </summary>
+    ''' <remarks></remarks>
+    ''' <author></author>
+    ''' <commentauthor></commentauthor>
+    '''
+    Protected Friend Overrides Sub FillControls() Implements IRhewaEditingDialog.FillControls
+        'Steuerlemente füllen
+        FillControlsNullstellung()
+        'dynamisches laden der Nullstellen:
+        HoleNullstellen()
+        LadeBilder()
+        BereichsgruppenAusblenden()
+        'ein ausblenden von WZ Bereichenen
+        EinAusblendenVonWZBereichenen()
+        BerechneNeueHoehe()
+        FillControlsAussermittigeBelastung()
+
+        'Nur wenn es sich um das Staffel oder Fahrzeugwaagen verfahren handelt wird an dieser Stelle die Wiederholbarkeit geprüft. sonst erfolgt dies an einer anderen Stelle
+        Select Case objEichprozess.Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren.Verfahren
+            Case Is = "über 60kg mit Normalien"
+                RadGroupBoxWiederholungen.Visible = False
+
+            Case Is = "Fahrzeugwaagen", "über 60kg im Staffelverfahren"
+                RadGroupBoxWiederholungen.Visible = True
+                FillControlsWiederholbarkeit()
+        End Select
+
+        'fokus setzen auf erstes Steuerelement
+        RadCheckBoxNullstellungOK.Focus()
+    End Sub
+    ''' <summary>
+    ''' Füllt das Objekt mit den Werten aus den Steuerlementen
+    ''' </summary>
+    ''' <remarks></remarks>
+    ''' <author></author>
+    ''' <commentauthor></commentauthor>
+    Protected Friend Overrides Sub UpdateObjekt() Implements IRhewaEditingDialog.UpdateObjekt
+        If DialogModus = enuDialogModus.normal Then objEichprozess.Bearbeitungsdatum = Date.Now
+        objEichprozess.Eichprotokoll.GenauigkeitNullstellung_InOrdnung = RadCheckBoxNullstellungOK.Checked
+        If RadTextBoxControlBetragNormallast.Visible = True Then
+            objEichprozess.Eichprotokoll.Wiederholbarkeit_Staffelverfahren_MINNormalien = RadTextBoxControlBetragNormallast.Text
+        Else
+            objEichprozess.Eichprotokoll.Wiederholbarkeit_Staffelverfahren_MINNormalien = 0
+        End If
+    End Sub
+
+
+
+
+    Protected Friend Overrides Function CheckDialogModus() As Boolean Implements IRhewaEditingDialog.CheckDialogModus
+        If DialogModus = enuDialogModus.korrigierend Or DialogModus = enuDialogModus.lesend Then
+            If DialogModus = enuDialogModus.korrigierend Then
+                UpdateObjekt()
+            End If
+            Select Case objEichprozess.Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren.Verfahren
+                Case Is = "über 60kg mit Normalien"
+                    ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
+                    If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitNormallastLinearitaet Then
+                        objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitNormallastLinearitaet
+                    End If
+                Case Is = "Fahrzeugwaagen", "über 60kg im Staffelverfahren"
+                    ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
+                    If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitErsatzlast Then
+                        objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitErsatzlast
+                    End If
+            End Select
+            ParentFormular.CurrentEichprozess = objEichprozess
+            Return False
+        End If
+        Return True
+    End Function
+
+
+
+
+    Protected Friend Overrides Sub SaveObjekt() Implements IRhewaEditingDialog.SaveObjekt
+        'neuen Context aufbauen
+        Using Context As New Entities
+            'prüfen ob CREATE oder UPDATE durchgeführt werden muss
+            If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
+                'prüfen ob das Objekt anhand der ID gefunden werden kann
+                Dim dobjEichprozess As Eichprozess = Context.Eichprozess.Include("Lookup_Waagenart").FirstOrDefault(Function(value) value.Vorgangsnummer = objEichprozess.Vorgangsnummer)
+                If Not dobjEichprozess Is Nothing Then
+                    'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
+                    objEichprozess = dobjEichprozess
+                    'neuen Status zuweisen
+
+                    SaveAussermittigeBelastung(Context)
+                    SaveWiederholungen(Context)
+
+                    'Füllt das Objekt mit den Werten aus den Steuerlementen
+                    UpdateObjekt()
+                    'Speichern in Datenbank
+                    Context.SaveChanges()
+                End If
+
+            End If
+        End Using
+    End Sub
+
+    Protected Friend Overrides Sub AktualisiereStatus() Implements IRhewaEditingDialog.AktualisiereStatus
+        Using Context As New Entities
+            'prüfen ob CREATE oder UPDATE durchgeführt werden muss
+            If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
+                'prüfen ob das Objekt anhand der ID gefunden werden kann
+                Dim dobjEichprozess As Eichprozess = Context.Eichprozess.Include("Lookup_Waagenart").FirstOrDefault(Function(value) value.Vorgangsnummer = objEichprozess.Vorgangsnummer)
+                If Not dobjEichprozess Is Nothing Then
+                    'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
+                    objEichprozess = dobjEichprozess
+                    'neuen Status zuweisen
+                    'die reihenfolge wird hier je nach Verfahren verändert
+                    Select Case objEichprozess.Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren.Verfahren
+                        Case Is = "über 60kg mit Normalien"
+                            If AktuellerStatusDirty = False Then
+                                ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
+                                If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitNormallastLinearitaet Then
+                                    objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitNormallastLinearitaet
+                                End If
+                            ElseIf AktuellerStatusDirty = True Then
+                                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitNormallastLinearitaet
+                                AktuellerStatusDirty = False
+                            End If
+                        Case Is = "Fahrzeugwaagen", "über 60kg im Staffelverfahren"
+                            If AktuellerStatusDirty = False Then
+                                ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
+                                If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitErsatzlast Then
+                                    objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitErsatzlast
+                                End If
+                            ElseIf AktuellerStatusDirty = True Then
+                                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitErsatzlast
+                                AktuellerStatusDirty = False
+                            End If
+                    End Select
+
+                    'Füllt das Objekt mit den Werten aus den Steuerlementen
+                    UpdateObjekt()
+                    'Speichern in Datenbank
+                    Context.SaveChanges()
+                End If
+            End If
+        End Using
+    End Sub
+
+    Protected Friend Overrides Sub Lokalisiere() Implements IRhewaEditingDialog.Lokalisiere
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco_8PruefungNullstellungUndAussermittigeBelastung))
+        Lokalisierung(Me, resources)
+
+        If Not ParentFormular Is Nothing Then
+            Try
+                'Hilfetext setzen
+
+                ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungAussermittigerBelastung)
+                'Überschrift setzen
+
+                ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungNullstellungundAussermittigeBelastung
+            Catch ex As Exception
+            End Try
+        End If
+
+        ''dynamisches laden der Nullstellen:
+        'LadeBilder()
+        'BereichsgruppenAusblenden()
+        'EinAusblendenVonWZBereichenen()
+        'BerechneNeueHoehe()
+    End Sub
+
+
+
+
+    Protected Friend Overrides Sub Entsperrung() Implements IRhewaEditingDialog.Entsperrung
+        'Hiermit wird ein lesender Vorgang wieder entsperrt.
+        EnableControls(RadGroupBoxBereich1)
+        EnableControls(RadGroupBoxBereich2)
+        EnableControls(RadGroupBoxBereich3)
+        EnableControls(RadGroupBoxPruefungAussermittigeBelastung)
+        EnableControls(RadGroupBoxPruefungGenaugikeit)
+        EnableControls(RadGroupBoxWiederholungen)
+
+        'ändern des Moduses
+        DialogModus = enuDialogModus.korrigierend
+        ParentFormular.DialogModus = FrmMainContainer.enuDialogModus.korrigierend
+    End Sub
+
+
+    Protected Friend Overrides Sub Versenden() Implements IRhewaEditingDialog.Versenden
+        UeberschreibePruefungsobjekte()
+        UpdateObjekt()
+        'Erzeugen eines Server Objektes auf basis des aktuellen DS. Setzt es auf es ausserdem auf Fehlerhaft
+        CloneAndSendServerObjekt()
+    End Sub
     ''' <summary>
     ''' Gültigkeit der Eingaben überprüfen
     ''' </summary>
     ''' <remarks></remarks>
     ''' <author></author>
     ''' <commentauthor></commentauthor>
-    Protected Friend Overrides Function ValidateControls() As Boolean
+    Protected Friend Overrides Function ValidateControls() As Boolean Implements IRhewaEditingDialog.ValidateControls
         'prüfen ob alle Felder ausgefüllt sind
         AbortSaving = False
 
@@ -1421,7 +1470,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
 
     End Function
 
-     Protected Friend Overrides Sub OverwriteIstSoll()
+    Protected Friend Overrides Sub OverwriteIstSoll() Implements IRhewaEditingDialog.OverwriteIstSoll
         RadCheckBoxNullstellungOK.Checked = True
         RadTextBoxControlDisplayWeight1.Text = RadTextBoxControlWeight1.Text
         RadTextBoxControlDisplayWeight2.Text = RadTextBoxControlWeight2.Text
@@ -1468,214 +1517,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         RadTextBoxControlBereich3DisplayWeight12.Text = RadTextBoxControlBereich3Weight12.Text
 
     End Sub
-
-#End Region
-
-#Region "Overrides"
-    'Speicherroutine
-    Protected Overrides Sub SaveNeeded(ByVal UserControl As UserControl)
-        If Me.Equals(UserControl) Then
-
-            If DialogModus = enuDialogModus.korrigierend Or DialogModus = enuDialogModus.lesend Then
-                If DialogModus = enuDialogModus.korrigierend Then
-                    UpdateObject()
-                End If
-                Select Case objEichprozess.Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren.Verfahren
-                    Case Is = "über 60kg mit Normalien"
-                        ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
-                        If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitNormallastLinearitaet Then
-                            objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitNormallastLinearitaet
-                        End If
-                    Case Is = "Fahrzeugwaagen", "über 60kg im Staffelverfahren"
-                        ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
-                        If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitErsatzlast Then
-                            objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitErsatzlast
-                        End If
-                End Select
-                ParentFormular.CurrentEichprozess = objEichprozess
-                Exit Sub
-            End If
-
-            If ValidateControls() = True Then
-
-                'neuen Context aufbauen
-                Using Context As New Entities
-
-                    'prüfen ob CREATE oder UPDATE durchgeführt werden muss
-                    If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
-                        'prüfen ob das Objekt anhand der ID gefunden werden kann
-                        Dim dobjEichprozess As Eichprozess = (From a In Context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
-                        If Not dobjEichprozess Is Nothing Then
-                            'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
-                            objEichprozess = dobjEichprozess
-
-                            SaveAussermittigeBelastung(Context)
-                            SaveWiederholungen(Context)
-
-                            'neuen Status zuweisen
-                            'die reihenfolge wird hier je nach Verfahren verändert
-                            Select Case objEichprozess.Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren.Verfahren
-                                Case Is = "über 60kg mit Normalien"
-                                    If AktuellerStatusDirty = False Then
-                                        ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
-                                        If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitNormallastLinearitaet Then
-                                            objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitNormallastLinearitaet
-                                        End If
-                                    ElseIf AktuellerStatusDirty = True Then
-                                        objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitNormallastLinearitaet
-                                        AktuellerStatusDirty = False
-                                    End If
-                                Case Is = "Fahrzeugwaagen", "über 60kg im Staffelverfahren"
-                                    If AktuellerStatusDirty = False Then
-                                        ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
-                                        If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitErsatzlast Then
-                                            objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitErsatzlast
-                                        End If
-                                    ElseIf AktuellerStatusDirty = True Then
-                                        objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitErsatzlast
-                                        AktuellerStatusDirty = False
-                                    End If
-                            End Select
-
-                            'Füllt das Objekt mit den Werten aus den Steuerlementen
-                            UpdateObject()
-                            'Speichern in Datenbank
-                            Context.SaveChanges()
-                        End If
-                    End If
-                End Using
-
-                ParentFormular.CurrentEichprozess = objEichprozess
-            End If
-
-        End If
-    End Sub
-
-    Protected Overrides Sub SaveWithoutValidationNeeded(usercontrol As UserControl)
-
-        If Me.Equals(usercontrol) Then
-            MyBase.SaveWithoutValidationNeeded(usercontrol)
-
-            If DialogModus = enuDialogModus.lesend Then
-                UpdateObject()
-                ParentFormular.CurrentEichprozess = objEichprozess
-                Exit Sub
-            End If
-            'neuen Context aufbauen
-            Using Context As New Entities
-                'prüfen ob CREATE oder UPDATE durchgeführt werden muss
-                If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
-                    'prüfen ob das Objekt anhand der ID gefunden werden kann
-                    Dim dobjEichprozess As Eichprozess = Context.Eichprozess.Include("Lookup_Waagenart").FirstOrDefault(Function(value) value.Vorgangsnummer = objEichprozess.Vorgangsnummer)
-                    If Not dobjEichprozess Is Nothing Then
-                        'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
-                        objEichprozess = dobjEichprozess
-                        'neuen Status zuweisen
-
-                        SaveAussermittigeBelastung(Context)
-                        SaveWiederholungen(Context)
-
-                        'Füllt das Objekt mit den Werten aus den Steuerlementen
-                        UpdateObject()
-                        'Speichern in Datenbank
-                        Context.SaveChanges()
-                    End If
-
-                End If
-            End Using
-
-            ParentFormular.CurrentEichprozess = objEichprozess
-        End If
-    End Sub
-
-    Protected Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
-        If Me.Name.Equals(UserControl.Name) = False Then Exit Sub
-
-        MyBase.LokalisierungNeeded(UserControl)
-
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco_8PruefungNullstellungUndAussermittigeBelastung))
-        Lokalisierung(Me, resources)
-
-        If Not ParentFormular Is Nothing Then
-            Try
-                'Hilfetext setzen
-
-                ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungAussermittigerBelastung)
-                'Überschrift setzen
-
-                ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungNullstellungundAussermittigeBelastung
-            Catch ex As Exception
-            End Try
-        End If
-
-        'dynamisches laden der Nullstellen:
-        LadeBilder()
-        BereichsgruppenAusblenden()
-        EinAusblendenVonWZBereichenen()
-        BerechneNeueHoehe()
-
-    End Sub
-
-    ''' <summary>
-    ''' aktualisieren der Oberfläche wenn nötig
-    ''' </summary>
-    ''' <param name="UserControl"></param>
-    ''' <remarks></remarks>
-    Protected Overrides Sub UpdateNeeded(UserControl As UserControl)
-        If Me.Equals(UserControl) Then
-            MyBase.UpdateNeeded(UserControl)
-            Me.LokalisierungNeeded(UserControl)
-
-
-            LoadFromDatabase()
-        End If
-    End Sub
-
-    'Entsperrroutine
-    Protected Overrides Sub EntsperrungNeeded()
-        MyBase.EntsperrungNeeded()
-
-        'Hiermit wird ein lesender Vorgang wieder entsperrt.
-        EnableControls(RadGroupBoxBereich1)
-        EnableControls(RadGroupBoxBereich2)
-        EnableControls(RadGroupBoxBereich3)
-        EnableControls(RadGroupBoxPruefungAussermittigeBelastung)
-        EnableControls(RadGroupBoxPruefungGenaugikeit)
-        EnableControls(RadGroupBoxWiederholungen)
-
-        'ändern des Moduses
-        DialogModus = enuDialogModus.korrigierend
-        ParentFormular.DialogModus = FrmMainContainer.enuDialogModus.korrigierend
-    End Sub
-    Protected Overrides Sub VersendenNeeded(TargetUserControl As UserControl)
-
-        If Me.Equals(TargetUserControl) Then
-            MyBase.VersendenNeeded(TargetUserControl)
-
-            UeberschreibePruefungsobjekte()
-            UpdateObject()
-            'Erzeugen eines Server Objektes auf basis des aktuellen DS. Setzt es auf es ausserdem auf Fehlerhaft
-            CloneAndSendServerObjekt()
-
-        End If
-    End Sub
-
-#End Region
-
-#Region "Hilfetexte"
-    Private Sub RadGroupBoxPruefungGenaugikeit_MouseHover(sender As Object, e As EventArgs) Handles RadGroupBoxPruefungGenaugikeit.MouseEnter
-        ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_Nullstellung)
-    End Sub
-
-    Private Sub RadGroupBoxPruefungAussermittigeBelastung_MouseHover(sender As Object, e As EventArgs) Handles RadGroupBoxPruefungAussermittigeBelastung.MouseEnter
-        ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungAussermittigerBelastung)
-    End Sub
-
-    Private Sub RadGroupBoxWiederholungen_MouseEnter(sender As Object, e As EventArgs) Handles RadGroupBoxWiederholungen.MouseEnter
-        ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungWiederholbarkeitStaffelverfahren)
-
-    End Sub
-
 #End Region
 
 End Class

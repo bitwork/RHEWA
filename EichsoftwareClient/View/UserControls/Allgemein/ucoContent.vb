@@ -1,10 +1,13 @@
 Imports System.ComponentModel
+Imports EichsoftwareClient
 ''' <summary>
 ''' Das UcoContent bietet die Basisklasse für alle im Eichprozess genutzten Ucos. Es enthält allgemein gültige Methoden und Eigenschaften
 ''' </summary>
 ''' <remarks></remarks>
 Public Class ucoContent
     Implements INotifyPropertyChanged
+    Implements IRhewaEditingDialog
+
 
 #Region "Member Variables"
     Private WithEvents _ParentForm As FrmMainContainer 'Bezug zum Parentcontrol.
@@ -19,6 +22,7 @@ Public Class ucoContent
     Protected Friend _intNullstellenE As Integer = 0
 
     Protected Friend _bolValidierungsmodus As Boolean = False 'wenn dieser Wert auf True steht, dürfen validierungen nicht mehr übersprungen werden
+    Protected Friend calculationCulture As Globalization.CultureInfo = New Globalization.CultureInfo("de-DE")
 
     ''' <summary>
     ''' sobald gravierende Änderungen im aktuellen Status vorgenommen werden, wird das Dirty Flag gesetzt. So kann überprüft werden ob Updates durchgeführt werden müssen und ob der aktuelle Vorgangsstatus zurückgesetzt werden muss
@@ -175,26 +179,165 @@ Public Class ucoContent
     End Sub
 
 #End Region
-#Region "Must Override"
-    Protected Friend Overridable Function ValidationNeeded() As Boolean
-        Return False
+
+#Region "Globale Events" 'als UCO kann diese Klasse nicht als Mustinherited deklariert werden, somit klappt technisch kein Mustoverride. Wurde durch die Interface implementiert
+    Private Sub ShowEFG(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+        If e.KeyData.Equals("F1") Then
+            ShowEichfehlergrenzenDialog()
+        End If
+    End Sub
+
+    ''' <summary>
+    ''' Validations the needed.
+    ''' </summary>
+    ''' <returns></returns>
+    Protected Friend Function ValidationNeeded() As Boolean Implements IRhewaEditingDialog.ValidationNeeded
+        LoadFromDatabase()
+        Return ValidateControls()
     End Function
 
-    Protected Friend Overridable Sub LoadFromDatabase()
 
+
+    ''' <summary>
+    ''' SaveNeeded wird vom Container ParentForm abgefeuert und gibt dem Usercontrol an das es zu speichern hat
+    ''' Die Überladene Methode muss sich dann um die Speicherlogik kümmern, sofern das übergebende Usercontrol dem eigenem entspricht
+    ''' </summary>
+    ''' <param name="UserControl">Das Usercontrol welches zu Speichern hat</param>
+    ''' <remarks></remarks>
+    ''' <author>TH</author>
+    ''' <commentauthor>Die Überladene Routine sollte überprüfen ob me.equals(Usercontrol) = true ist, um nicht unnötig oft alles zu speichern</commentauthor>
+    Protected Sub SaveNeeded(ByVal UserControl As UserControl) Handles _ParentForm.SaveNeeded
+        If Me.Equals(UserControl) Then
+
+            If CheckDialogModus() = False Then
+                Exit Sub
+            End If
+
+            If ValidateControls() Then
+                SaveObjekt()
+                AktualisiereStatus()
+                ParentFormular.CurrentEichprozess = objEichprozess
+            End If
+        End If
     End Sub
 
-    Protected Friend Overridable Sub OverwriteIstSoll()
+    ''' <summary>
+    ''' SaveWithoutValidationNeeded wird vom Container ParentForm abgefeuert und gibt dem Usercontrol an das es zu speichern hat, dabei muss nicht auf vollständigkeit geachtet werden. Z.b. beim Rückwärts blättern
+    ''' Die Überladene Methode muss sich dann um die Speicherlogik kümmern, sofern das übergebende Usercontrol dem eigenem entspricht
+    ''' </summary>
+    ''' <param name="UserControl">Das Usercontrol welches zu Speichern hat</param>
+    ''' <remarks></remarks>
+    ''' <author>TH</author>
+    ''' <commentauthor>Die Überladene Routine sollte überprüfen ob me.equals(Usercontrol) = true ist, um nicht unnötig oft alles zu speichern</commentauthor>
+    Protected Sub SaveWithoutValidationNeeded(ByVal usercontrol As UserControl) Handles _ParentForm.SaveWithoutValidationNeeded
+        If Me.Equals(usercontrol) Then
+            If DialogModus = enuDialogModus.lesend Then
+                UpdateObjekt()
+                ParentFormular.CurrentEichprozess = objEichprozess
+                Exit Sub
+            End If
 
+            'SaveWithoutValidation()
+            SaveObjekt()
+            ParentFormular.CurrentEichprozess = objEichprozess
+
+        End If
     End Sub
-    Protected Friend Overridable Function ValidateControls() As Boolean
+
+    Protected Friend Overridable Sub AktualisiereStatus() Implements IRhewaEditingDialog.AktualisiereStatus
+    End Sub
+
+
+
+    ''' <summary>
+    ''' Ermöglicht das aufrufen von UCO bezogenden Code zur lokalisierung
+    ''' </summary>
+    ''' <param name="UserControl"></param>
+    ''' <remarks></remarks>
+    Protected Sub LokalisierungNeeded(ByVal UserControl As UserControl) Handles _ParentForm.LokalisierungNeeded
+        If Me.Name.Equals(UserControl.Name) = False Then Exit Sub
+        Lokalisiere()
+        SetzeUeberschrift()
+    End Sub
+
+    ''' <summary>
+    ''' ermöglicht das das UCO noch einmal die Daten aktualisiert (z.b. wenn in den Stammdaten die Art der waage geändert wurde, muss der Kompatiblitätsnachweis darauf reagieren können
+    ''' </summary>
+    ''' <param name="UserControl"></param>
+    ''' <remarks></remarks>
+    Protected Sub UpdateNeeded(ByVal UserControl As UserControl) Handles _ParentForm.UpdateNeeded
+        If Me.Equals(UserControl) Then
+            Me.LokalisierungNeeded(UserControl)
+
+            LoadFromDatabase()
+        End If
+    End Sub
+
+    ''' <summary>
+    ''' Entsperren des Eichprozesses durch RHEWA seitige Korrektur
+    ''' </summary>
+    ''' <remarks></remarks>
+    Protected Sub EntsperrungNeeded() Handles _ParentForm.EntsperrungNeeded
+        Entsperrung()
+    End Sub
+
+    ''' <summary>
+    ''' Zurücksenden an den Eichbevollmächtigten durch RHEWA
+    ''' </summary>
+    ''' <param name="TargetUserControl"></param>
+    ''' <remarks></remarks>
+    Protected Sub VersendenNeeded(ByVal TargetUserControl As UserControl) Handles _ParentForm.VersendenNeeded
+        If Me.Equals(TargetUserControl) Then
+            Versenden()
+        End If
+    End Sub
+
+#End Region
+
+#Region "Interface Must Overrides"
+    Protected Friend Overridable Sub LoadFromDatabase() Implements IRhewaEditingDialog.LoadFromDatabase
+    End Sub
+
+    Protected Friend Overridable Sub OverwriteIstSoll() Implements IRhewaEditingDialog.OverwriteIstSoll
+    End Sub
+    Protected Friend Overridable Function ValidateControls() As Boolean Implements IRhewaEditingDialog.ValidateControls
         Return True
     End Function
+    Protected Friend Overridable Sub SaveObjekt() Implements IRhewaEditingDialog.SaveObjekt
+    End Sub
 
+    'Protected Friend Overridable Sub SaveWithoutValidation() Implements IRhewaEditingDialog.SaveWithoutValidation
+    'End Sub
+
+    Protected Friend Overridable Sub Lokalisiere() Implements IRhewaEditingDialog.Lokalisiere
+    End Sub
+
+    Protected Friend Overridable Sub UpdateObjekt() Implements IRhewaEditingDialog.UpdateObjekt
+    End Sub
+
+    Protected Friend Overridable Sub Entsperrung() Implements IRhewaEditingDialog.Entsperrung
+    End Sub
+
+    Protected Friend Overridable Sub Versenden() Implements IRhewaEditingDialog.Versenden
+    End Sub
+
+    Protected Friend Overridable Sub FillControls() Implements IRhewaEditingDialog.FillControls
+    End Sub
+
+    Protected Friend Overridable Function CheckDialogModus() As Boolean Implements IRhewaEditingDialog.CheckDialogModus
+        Return Nothing
+    End Function
+
+    Protected Friend Overridable Sub SetzeUeberschrift() Implements IRhewaEditingDialog.SetzeUeberschrift
+    End Sub
 
 
 #End Region
-#Region "Overidables"
+
+
+
+#Region "Hilfsfunktionen"
+
     ''' <summary>
     ''' holt Steuerelement Objekt anhand von Namen als String
     ''' </summary>
@@ -202,7 +345,7 @@ Public Class ucoContent
     ''' <returns></returns>
     ''' <remarks></remarks>
     <DebuggerStepThroughAttribute()>
-    Protected Overridable Function FindControl(ByVal Name As String) As Control
+    Protected Function FindControl(ByVal Name As String) As Control
         Dim myControl As Control()
         myControl = Me.Controls.Find(Name, True)
 
@@ -217,7 +360,7 @@ Public Class ucoContent
     ''' Nullstellen Berechnung. Anzahl der Nullstellen ist abhängig vom Eichwert
     ''' </summary>
     ''' <remarks></remarks>
-    Protected Overridable Sub HoleNullstellen()
+    Protected Sub HoleNullstellen()
         'Steuerlemente füllen
         'dynamisches laden der Nullstellen:
         Try
@@ -244,34 +387,7 @@ Public Class ucoContent
         End If
     End Sub
 
-    ''' <summary>
-    ''' SaveNeeded wird vom Container ParentForm abgefeuert und gibt dem Usercontrol an das es zu speichern hat
-    ''' Die Überladene Methode muss sich dann um die Speicherlogik kümmern, sofern das übergebende Usercontrol dem eigenem entspricht
-    ''' </summary>
-    ''' <param name="UserControl">Das Usercontrol welches zu Speichern hat</param>
-    ''' <remarks></remarks>
-    ''' <author>TH</author>
-    ''' <commentauthor>Die Überladene Routine sollte überprüfen ob me.equals(Usercontrol) = true ist, um nicht unnötig oft alles zu speichern</commentauthor>
-    Protected Overridable Sub SaveNeeded(ByVal UserControl As UserControl) Handles _ParentForm.SaveNeeded
-    End Sub
-    ''' <summary>
-    ''' SaveWithoutValidationNeeded wird vom Container ParentForm abgefeuert und gibt dem Usercontrol an das es zu speichern hat, dabei muss nicht auf vollständigkeit geachtet werden. Z.b. beim Rückwärts blättern
-    ''' Die Überladene Methode muss sich dann um die Speicherlogik kümmern, sofern das übergebende Usercontrol dem eigenem entspricht
-    ''' </summary>
-    ''' <param name="UserControl">Das Usercontrol welches zu Speichern hat</param>
-    ''' <remarks></remarks>
-    ''' <author>TH</author>
-    ''' <commentauthor>Die Überladene Routine sollte überprüfen ob me.equals(Usercontrol) = true ist, um nicht unnötig oft alles zu speichern</commentauthor>
-    Protected Overridable Sub SaveWithoutValidationNeeded(ByVal usercontrol As UserControl) Handles _ParentForm.SaveWithoutValidationNeeded
-    End Sub
 
-    ''' <summary>
-    ''' Ermöglicht das aufrufen von UCO bezogenden Code zur lokalisierung
-    ''' </summary>
-    ''' <param name="UserControl"></param>
-    ''' <remarks></remarks>
-    Protected Overridable Sub LokalisierungNeeded(ByVal UserControl As UserControl) Handles _ParentForm.LokalisierungNeeded
-    End Sub
 
     Protected Sub Lokalisierung(ByVal container As Control, ByVal ressourcemanager As System.ComponentModel.ComponentResourceManager)
         ressourcemanager.ApplyResources(container, container.Name, New Globalization.CultureInfo(AktuellerBenutzer.Instance.AktuelleSprache))
@@ -284,29 +400,6 @@ Public Class ucoContent
         Next c
     End Sub
 
-    ''' <summary>
-    ''' ermöglicht das das UCO noch einmal die Daten aktualisiert (z.b. wenn in den Stammdaten die Art der waage geändert wurde, muss der Kompatiblitätsnachweis darauf reagieren können
-    ''' </summary>
-    ''' <param name="UserControl"></param>
-    ''' <remarks></remarks>
-    Protected Overridable Sub UpdateNeeded(ByVal UserControl As UserControl) Handles _ParentForm.UpdateNeeded
-    End Sub
-
-    ''' <summary>
-    ''' Entsperren des Eichprozesses durch RHEWA seitige Korrektur
-    ''' </summary>
-    ''' <remarks></remarks>
-    Protected Overridable Sub EntsperrungNeeded() Handles _ParentForm.EntsperrungNeeded
-    End Sub
-
-    ''' <summary>
-    ''' Zurücksenden an den Eichbevollmächtigten durch RHEWA
-    ''' </summary>
-    ''' <param name="TargetUserControl"></param>
-    ''' <remarks></remarks>
-    Protected Overridable Sub VersendenNeeded(ByVal TargetUserControl As UserControl) Handles _ParentForm.VersendenNeeded
-    End Sub
-#End Region
     ''' <summary>
     ''' Bietet die Option an validierungen zu überspringen wenn AbortSaving auf true steht.
     ''' </summary>
@@ -554,8 +647,6 @@ Public Class ucoContent
             End If
         End If
     End Sub
-
-#Region "Hilfsfunktionen"
     ''' <summary>
     ''' Methode zum ermitteln der anzahl der benötigten Nullstellen nach dem RHEWA System
     ''' </summary>
@@ -627,7 +718,12 @@ Public Class ucoContent
             Return -1
         End Try
     End Function
-
+    Friend Sub ShowEichfehlergrenzenDialog()
+        If Not objEichprozess Is Nothing Then
+            Dim f As New frmEichfehlergrenzen(objEichprozess)
+            f.Show()
+        End If
+    End Sub
     ''' <summary>
     ''' Erwartet z.b. ein Steuerelement, prüft den Namen und gibt zurück um welchen Bereich es sich handelt
     ''' </summary>
@@ -650,6 +746,22 @@ Public Class ucoContent
         Catch ex As Exception
             Return Nothing
         End Try
+    End Function
+    ''' <summary>
+    ''' Gibt die anzahl der Bereiche zurück je nach Waagenart
+    ''' </summary>
+    ''' <returns></returns>
+    Protected Friend Function GetAnzahlBereiche() As Integer
+        Dim intBereiche As Integer = 0
+        If objEichprozess.Lookup_Waagenart.Art = "Einbereichswaage" Then
+            intBereiche = 1
+        ElseIf objEichprozess.Lookup_Waagenart.Art = "Zweibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Zweiteilungswaage" Then
+            intBereiche = 2
+        ElseIf objEichprozess.Lookup_Waagenart.Art = "Dreibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Dreiteilungswaage" Then
+            intBereiche = 3
+        End If
+
+        Return intBereiche
     End Function
 
     ''' <summary>
@@ -766,14 +878,16 @@ Public Class ucoContent
     End Function
 
 
-
+    ''' <summary>
+    ''' Abbruch der Validierung durch Admin Rechte oder bewusstes ignorieren
+    ''' </summary>
+    ''' <param name="result"></param>
+    ''' <returns></returns>
     Protected Function ProcessResult(result As DialogResult) As Boolean
         If result = DialogResult.Yes Or result = DialogResult.Ignore Then
             Return True
         ElseIf result = DialogResult.Retry Then
-            ' Ist = soll
             OverwriteIstSoll()
-            'rekursiver Aufruf
             Return ValidateControls()
         Else
             Return False
@@ -813,6 +927,18 @@ Public Class ucoContent
             End Using
         End Using
     End Sub
+
+    <DebuggerStepThrough>
+    Protected Friend Function GetDecimal(value As String) As Decimal
+        Try
+            Dim returnvalue = Double.Parse(value, calculationCulture.NumberFormat)
+            Return returnvalue
+        Catch ex As Exception
+            Return -9999
+        End Try
+    End Function
+
+
 #End Region
 
 End Class
