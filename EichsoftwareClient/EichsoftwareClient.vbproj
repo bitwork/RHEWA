@@ -381,6 +381,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\UserControls\Allgemein\CustomVisualItem.vb" />
+    <Compile Include="View\UserControls\Allgemein\iRhewaEditingDialog.vb" />
     <Compile Include="View\UserControls\Allgemein\ucoAmpel.Designer.vb">
       <DependentUpon>ucoAmpel.vb</DependentUpon>
     </Compile>
@@ -1160,6 +1161,7 @@
       <DependentUpon>EntityModel.edmx</DependentUpon>
       <LastGenOutput>EntityModel.vb</LastGenOutput>
     </Content>
+    <Content Include="README\README.txt" />
     <Content Include="Resources\TenLCs.PNG" />
     <None Include="DLLs\System.Net.FtpClient.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
