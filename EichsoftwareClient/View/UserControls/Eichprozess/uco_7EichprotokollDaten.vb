@@ -222,7 +222,11 @@ Public Class uco_7EichprotokollDaten
                 PictureBox13.Visible = True
         End Select
     End Sub
-
+    ''' <summary>
+    '''  volle normallast: wenn höchster MAX Wert unter 1000 dann "ja". darüber auswählbar
+    '''  betrag normallast: Höchster MAX Wert. Wenn über 1000 dann eingebbar
+    ''' </summary>
+    ''' <param name="dMAXHoechlast"></param>
     Private Sub FillControlsNormallast(dMAXHoechlast As Decimal)
         'volle normallast: wenn höchster MAX Wert unter 1000 dann "ja". darüber auswählbar
         'betrag normallast: Höchster MAX Wert. Wenn über 1000 dann eingebbar

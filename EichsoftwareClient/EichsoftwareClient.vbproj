@@ -981,6 +981,67 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="README\RHEWA HKB-V144.onepkg" />
+    <None Include="README\RHEWA HKB-V146.onepkg" />
+    <None Include="README\RHEWA Waagen.onepkg" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\Benötigte Übersetzungen.xlsx" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\original Dokumente\DE Dokumente\Eichprotokoll DE.xls" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\original Dokumente\DE Dokumente\Ersteichung DE.doc" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\original Dokumente\DE Dokumente\Kompatibilitätsnachweis DE.xls" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\original Dokumente\DE Dokumente\Konformitätserklärung DE.xls" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\original Dokumente\DE Dokumente\Typenschilder\AA-03-02-04_Beschilderung_Auswertegeräte extern.pdf" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\original Dokumente\DE Dokumente\Typenschilder\bisher nicht benötigt\82alpha Typenschilder Druckformular.pdf" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\original Dokumente\DE Dokumente\Typenschilder\bisher nicht benötigt\82basic Typenschilder Druckformular.pdf" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\original Dokumente\DE Dokumente\Typenschilder\bisher nicht benötigt\82comfort Typenschilder Druckformular.pdf" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\original Dokumente\DE Dokumente\Typenschilder\bisher nicht benötigt\82edition Typenschilder Druckformular.pdf" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\original Dokumente\DE Dokumente\Typenschilder\bisher nicht benötigt\83Z Typenschilder Druckformular.pdf" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\original Dokumente\DE Dokumente\Typenschilder\bisher nicht benötigt\84evo Typenschilder Druckformular.pdf" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\original Dokumente\DE Dokumente\Typenschilder\bisher nicht benötigt\GM-P9.pdf" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\original Dokumente\GB Dokumente\Eichprotokoll EN.xls" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\original Dokumente\GB Dokumente\Ersteichung EN.doc" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\original Dokumente\GB Dokumente\Kompatibilitätsnachweis EN.xls" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\original Dokumente\Pelster\DE Dokumente\Ersteichung DE.doc" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\original Dokumente\Pelster\DE Dokumente\Kompatibilitätsnachweis DE.xls" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\original Dokumente\Pelster\DE Dokumente\Konformitätserklärung DE.xls" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\original Dokumente\Pelster\GB Dokumente\Ersteichung EN.doc" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\original Dokumente\Pelster\GB Dokumente\Kompatibilitätsnachweis EN.xls" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\original Dokumente\Pelster\Pelster.7z" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\original Dokumente\Pelster\PL Dokumente\Ersteichung PL.doc" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\original Dokumente\Pelster\PL Dokumente\Konformitätserklärung PL.xls" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\original Dokumente\Pelster\RO Dokumente\Konformitätserklärung RO.xls" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\original Dokumente\PL Dokumente\Eichprotokoll PL.xls" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\original Dokumente\PL Dokumente\Ersteichung PL.doc" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\original Dokumente\PL Dokumente\Konformitätserklärung PL.xls" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\original Dokumente\RO Dokumente\Konformitätserklärung RO.xls" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\Spaltenüberschriften.xls" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\_Angepasste Dokumente\Datenbank Eichprotokoll.xls" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\_Angepasste Dokumente\Datenbank Kompatibilitätsnachweis.xlsx" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\_Angepasste Dokumente\Kommentierter Kompatibilitätsnachweis.xlsx" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\_Angepasste Dokumente\Kommentiertes Eichprotokoll_ext. Bevollmächtigte.xls" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\_Angepasste Dokumente\ohne blattschutz\DE Dokumente\82alpha Typenschilder Druckformular.pdf" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\_Angepasste Dokumente\ohne blattschutz\DE Dokumente\82basic Typenschilder Druckformular.pdf" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\_Angepasste Dokumente\ohne blattschutz\DE Dokumente\82comfort Typenschilder Druckformular.pdf" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\_Angepasste Dokumente\ohne blattschutz\DE Dokumente\82edition Typenschilder Druckformular.pdf" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\_Angepasste Dokumente\ohne blattschutz\DE Dokumente\83Z Typenschilder Druckformular.pdf" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\_Angepasste Dokumente\ohne blattschutz\DE Dokumente\84evo Typenschilder Druckformular.pdf" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\_Angepasste Dokumente\ohne blattschutz\DE Dokumente\AA-03-02-04_Beschilderung_Auswertegeräte extern.pdf" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\_Angepasste Dokumente\ohne blattschutz\DE Dokumente\FB-03-02-14_Erklärung zur Ersteichung.doc" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\_Angepasste Dokumente\ohne blattschutz\DE Dokumente\FB-03-02-17_Eichprotokoll_ext. Bevollmächtigte.xls" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\_Angepasste Dokumente\ohne blattschutz\DE Dokumente\FB-03-02-18_Konformitätserklärung.xls" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\_Angepasste Dokumente\ohne blattschutz\DE Dokumente\FB-03-02-19_Kompatibilitätsnachweis.xls" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\_Angepasste Dokumente\ohne blattschutz\DE Dokumente\GM-P9.pdf" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\_Angepasste Dokumente\ohne blattschutz\DE Dokumente\PTB_Original_Kompatibilitätsnachweis.xls" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\_Angepasste Dokumente\ohne blattschutz\GB Dokumente\FB-03-02-24_Verification of compatibility.xls" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\_Angepasste Dokumente\ohne blattschutz\GB Dokumente\FB-03-02-25_verification certificat authorized employees.xls" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\_Angepasste Dokumente\ohne blattschutz\GB Dokumente\FB-03-02-28_Declaration for first verification.doc" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\_Angepasste Dokumente\ohne blattschutz\PL Dokumente\ce.xls" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\_Angepasste Dokumente\ohne blattschutz\PL Dokumente\eichprotokoll.xls" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\_Angepasste Dokumente\ohne blattschutz\PL Dokumente\FB-03-02-26_certificate_swiadectwo zgodnosci.doc" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\_Ausgefüllte Dokumente\Beispiel Eichprotokoll F135108.xls" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\_Ausgefüllte Dokumente\Beispiel Eichprotokoll Staffelverfahren %28Fahrzeug%29.xls" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\_Ausgefüllte Dokumente\Beispiel Erklärung zur Ersteichung F135108.doc" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\_Ausgefüllte Dokumente\Beispiel Kompatibilitätsnachweis F135108.xls" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\_Ausgefüllte Dokumente\Beispiel Konformitätserklärung F135108.xls" />
     <None Include="Web Config Templates\App - debug.config">
       <SubType>Designer</SubType>
     </None>
@@ -1163,6 +1224,15 @@
     </Content>
     <Content Include="README\README.txt" />
     <Content Include="Resources\TenLCs.PNG" />
+    <Content Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\mitgeltende Software\Konfig82_2.0.0.exe" />
+    <Content Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\mitgeltende Software\Konfig83N_V1-0-2.exe" />
+    <Content Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\mitgeltende Software\Konfig83plus_V4-0-0.exe" />
+    <Content Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\mitgeltende Software\Konfig83Z_2.6.0.exe" />
+    <Content Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\mitgeltende Software\Konfig84_2.3.2.exe" />
+    <Content Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\_Angepasste Dokumente\ohne blattschutz\code.txt" />
+    <Content Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\_Ausgefüllte Dokumente\Transfer_Konfig82.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="DLLs\System.Net.FtpClient.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
