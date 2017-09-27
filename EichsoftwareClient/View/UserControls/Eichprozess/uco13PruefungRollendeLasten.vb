@@ -23,8 +23,6 @@ Public Class uco13PruefungRollendeLasten
     End Sub
 #End Region
 
-
-
 #Region "Events"
 
     Private Sub ucoBeschaffenheitspruefung_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
@@ -101,10 +99,15 @@ Public Class uco13PruefungRollendeLasten
     Private Sub RadButtonShowEFG_Click(sender As Object, e As EventArgs) Handles RadButtonShowEFG.Click
         ShowEichfehlergrenzenDialog()
     End Sub
+
+    Private Sub RadCheckBoxAuffahrtLinks1_MouseClick(sender As Object, e As MouseEventArgs) Handles RadCheckBoxAuffahrtRechts3.MouseClick, RadCheckBoxAuffahrtRechts2.MouseClick, RadCheckBoxAuffahrtRechts1.MouseClick, RadCheckBoxAuffahrtLinks3.MouseClick, RadCheckBoxAuffahrtLinks2.MouseClick, RadCheckBoxAuffahrtLinks1.MouseClick
+        CType(sender, Telerik.WinControls.UI.RadCheckBox).Checked = Not CType(sender, Telerik.WinControls.UI.RadCheckBox).Checked
+    End Sub
+
+    Private Sub RadButton1_Click(sender As Object, e As EventArgs) Handles RadButton1.Click
+        ShowEichfehlergrenzenDialog()
+    End Sub
 #End Region
-
-
-
 
 #Region "Methods"
     Private Sub LadeBilder()
@@ -280,13 +283,13 @@ Public Class uco13PruefungRollendeLasten
     Private Sub LadePruefungen() Implements IRhewaPruefungDialog.LadePruefungen
         'Nur laden wenn es sich um eine Bearbeitung handelt (sonst würde das in Memory Objekt überschrieben werden)
         If Not DialogModus = enuDialogModus.lesend And Not DialogModus = enuDialogModus.korrigierend Then
-            LadePruefungenLeseModus()
-        Else
             LadePruefungenBearbeitungsModus()
+        Else
+            LadePruefungenRHEWAKorrekturModus()
         End If
     End Sub
 
-    Private Sub LadePruefungenBearbeitungsModus() Implements IRhewaPruefungDialog.LadePruefungenBearbeitungsModus
+    Private Sub LadePruefungenRHEWAKorrekturModus() Implements IRhewaPruefungDialog.LadePruefungenRHEWAKorrekturModus
         _ListPruefungRollendeLasten.Clear()
 
         Try
@@ -305,7 +308,7 @@ Public Class uco13PruefungRollendeLasten
         End Try
     End Sub
 
-    Private Sub LadePruefungenLeseModus() Implements IRhewaPruefungDialog.LadePruefungenLeseModus
+    Private Sub LadePruefungenBearbeitungsModus() Implements IRhewaPruefungDialog.LadePruefungenBearbeitungsModus
         Using context As New Entities
             'neu laden des Objekts, diesmal mit den lookup Objekten
             objEichprozess = (From a In context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
@@ -644,18 +647,6 @@ Public Class uco13PruefungRollendeLasten
 
 
 
-#End Region
-
-
-    Private Sub RadCheckBoxAuffahrtLinks1_MouseClick(sender As Object, e As MouseEventArgs) Handles RadCheckBoxAuffahrtRechts3.MouseClick, RadCheckBoxAuffahrtRechts2.MouseClick, RadCheckBoxAuffahrtRechts1.MouseClick, RadCheckBoxAuffahrtLinks3.MouseClick, RadCheckBoxAuffahrtLinks2.MouseClick, RadCheckBoxAuffahrtLinks1.MouseClick
-        CType(sender, Telerik.WinControls.UI.RadCheckBox).Checked = Not CType(sender, Telerik.WinControls.UI.RadCheckBox).Checked
-    End Sub
-
-    Private Sub RadButton1_Click(sender As Object, e As EventArgs) Handles RadButton1.Click
-        ShowEichfehlergrenzenDialog()
-    End Sub
-
-
     Protected Friend Overrides Sub Entsperrung() Implements IRhewaEditingDialog.Entsperrung
         'Hiermit wird ein lesender Vorgang wieder entsperrt.
         EnableControls(RadScrollablePanel1.PanelContainer)
@@ -671,4 +662,9 @@ Public Class uco13PruefungRollendeLasten
         'Erzeugen eines Server Objektes auf basis des aktuellen DS. Setzt es auf es ausserdem auf Fehlerhaft
         CloneAndSendServerObjekt()
     End Sub
+
+
+#End Region
+
+
 End Class

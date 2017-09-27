@@ -171,13 +171,13 @@ Public Class uco_9PruefungLinearitaet
 
     Private Sub LadePruefungen() Implements IRhewaPruefungDialog.LadePruefungen
         If Not DialogModus = enuDialogModus.lesend And Not DialogModus = enuDialogModus.korrigierend Then
-            LadePruefungenLeseModus()
-        Else
             LadePruefungenBearbeitungsModus()
+        Else
+            LadePruefungenRHEWAKorrekturModus()
         End If
     End Sub
 
-    Private Sub LadePruefungenBearbeitungsModus() Implements IRhewaPruefungDialog.LadePruefungenBearbeitungsModus
+    Private Sub LadePruefungenRHEWAKorrekturModus() Implements IRhewaPruefungDialog.LadePruefungenRHEWAKorrekturModus
         Try
             _ListPruefungPruefungLinearitaetSteigend.Clear()
             _ListPruefungPruefungLinearitaetFallend.Clear()
@@ -204,7 +204,7 @@ Public Class uco_9PruefungLinearitaet
         End Try
     End Sub
 
-    Private Sub LadePruefungenLeseModus() Implements IRhewaPruefungDialog.LadePruefungenLeseModus
+    Private Sub LadePruefungenBearbeitungsModus() Implements IRhewaPruefungDialog.LadePruefungenBearbeitungsModus
         Using context As New Entities
             'neu laden des Objekts, diesmal mit den lookup Objekten
             objEichprozess = (From a In context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
@@ -492,113 +492,6 @@ Public Class uco_9PruefungLinearitaet
 
     End Sub
 
-#Region "Berechnung Fehler und EFG"
-
-
-    ''' <summary>
-    ''' Führt Berechnung auf den Steuerelementen auf Basis von Steigender oder Fallender Prüfung durch und dem übergebenen Bereich und dem spezifierten Messpunkt
-    ''' </summary>
-    ''' <param name="Pruefung"></param>
-    ''' <remarks></remarks>
-    Private Sub Berechne(ByVal Pruefung As String, ByVal Bereich As String, ByVal Messpunkt As String)
-        Dim FehlerGrenzeTextbox As Telerik.WinControls.UI.RadTextBox
-        Dim AnzeigeGewichtTextbox As Telerik.WinControls.UI.RadTextBox
-        Dim GewichtTextbox As Telerik.WinControls.UI.RadTextBox
-        Dim Checkbox As Telerik.WinControls.UI.RadCheckBox
-
-        Dim SuchstringFehlerGrenzeTextbox As String = String.Format("RadTextBoxControlBereich{0}{1}ErrorLimit{2}", CInt(Bereich), Pruefung, CInt(Messpunkt))
-        Dim SuchstringAnzeigeGewichtTextbox As String = String.Format("RadTextBoxControlBereich{0}{1}DisplayWeight{2}", CInt(Bereich), Pruefung, CInt(Messpunkt))
-        Dim SuchstringGewichtTextbox As String = String.Format("RadTextBoxControlBereich{0}{1}Weight{2}", CInt(Bereich), Pruefung, CInt(Messpunkt))
-        Dim SuchstringCheckbox As String = String.Format("RadCheckBoxBereich{0}{1}VEL{2}", CInt(Bereich), Pruefung, CInt(Messpunkt))
-
-        FehlerGrenzeTextbox = FindControl(SuchstringFehlerGrenzeTextbox)
-        AnzeigeGewichtTextbox = FindControl(SuchstringAnzeigeGewichtTextbox)
-        GewichtTextbox = FindControl(SuchstringGewichtTextbox)
-        Checkbox = FindControl(SuchstringCheckbox)
-
-        If Not FehlerGrenzeTextbox Is Nothing AndAlso
-            Not AnzeigeGewichtTextbox Is Nothing AndAlso
-            Not GewichtTextbox Is Nothing AndAlso
-            Not Checkbox Is Nothing Then
-
-            BerechneUndWeiseZu(FehlerGrenzeTextbox, AnzeigeGewichtTextbox, GewichtTextbox, Checkbox, Bereich)
-        End If
-
-    End Sub
-    ''' <summary>
-    ''' Führt Berechnung auf allen Steuerelementen auf Basis von Steigender oder Fallender Prüfung durch und dem übergebenen Bereich (alle Messpunkte)
-    ''' </summary>
-    ''' <param name="Pruefung"></param>
-    ''' <remarks></remarks>
-    Private Sub Berechne(ByVal Pruefung As String, ByVal Bereich As String)
-        Dim FehlerGrenzeTextbox As Telerik.WinControls.UI.RadTextBox
-        Dim AnzeigeGewichtTextbox As Telerik.WinControls.UI.RadTextBox
-        Dim GewichtTextbox As Telerik.WinControls.UI.RadTextBox
-        Dim Checkbox As Telerik.WinControls.UI.RadCheckBox
-
-        For Messpunkt As Integer = 1 To 8 Step 1
-            Dim SuchstringFehlerGrenzeTextbox As String = String.Format("RadTextBoxControlBereich{0}{1}ErrorLimit{2}", CInt(Bereich), Pruefung, CInt(Messpunkt))
-            Dim SuchstringAnzeigeGewichtTextbox As String = String.Format("RadTextBoxControlBereich{0}{1}DisplayWeight{2}", CInt(Bereich), Pruefung, CInt(Messpunkt))
-            Dim SuchstringGewichtTextbox As String = String.Format("RadTextBoxControlBereich{0}{1}Weight{2}", CInt(Bereich), Pruefung, CInt(Messpunkt))
-            Dim SuchstringCheckbox As String = String.Format("RadCheckBoxBereich{0}{1}VEL{2}", CInt(Bereich), Pruefung, CInt(Messpunkt))
-
-            FehlerGrenzeTextbox = FindControl(SuchstringFehlerGrenzeTextbox)
-            AnzeigeGewichtTextbox = FindControl(SuchstringAnzeigeGewichtTextbox)
-            GewichtTextbox = FindControl(SuchstringGewichtTextbox)
-            Checkbox = FindControl(SuchstringCheckbox)
-
-            If Not FehlerGrenzeTextbox Is Nothing AndAlso
-                Not AnzeigeGewichtTextbox Is Nothing AndAlso
-                Not GewichtTextbox Is Nothing AndAlso
-                Not Checkbox Is Nothing Then
-
-                BerechneUndWeiseZu(FehlerGrenzeTextbox, AnzeigeGewichtTextbox, GewichtTextbox, Checkbox, Bereich)
-            End If
-        Next
-
-    End Sub
-
-    ''' <summary>
-    ''' Führt Berechnung auf allen Steuerelementen auf Basis von Steigender oder Fallender Prüfung durch (alle bereiche und alle Messpunkte)
-    ''' </summary>
-    ''' <param name="Pruefung"></param>
-    ''' <remarks></remarks>
-    Private Sub Berechne(ByVal Pruefung As String)
-        Dim FehlerGrenzeTextbox As Telerik.WinControls.UI.RadTextBox
-        Dim AnzeigeGewichtTextbox As Telerik.WinControls.UI.RadTextBox
-        Dim GewichtTextbox As Telerik.WinControls.UI.RadTextBox
-        Dim Checkbox As Telerik.WinControls.UI.RadCheckBox
-
-        For Bereich As Integer = 1 To 3 Step 1
-            For Messpunkt As Integer = 1 To 8 Step 1
-                Dim SuchstringFehlerGrenzeTextbox As String = String.Format("RadTextBoxControlBereich{0}{1}ErrorLimit{2}", CInt(Bereich), Pruefung, CInt(Messpunkt))
-                Dim SuchstringAnzeigeGewichtTextbox As String = String.Format("RadTextBoxControlBereich{0}{1}DisplayWeight{2}", CInt(Bereich), Pruefung, CInt(Messpunkt))
-                Dim SuchstringGewichtTextbox As String = String.Format("RadTextBoxControlBereich{0}{1}Weight{2}", CInt(Bereich), Pruefung, CInt(Messpunkt))
-                Dim SuchstringCheckbox As String = String.Format("RadCheckBoxBereich{0}{1}VEL{2}", CInt(Bereich), Pruefung, CInt(Messpunkt))
-
-                FehlerGrenzeTextbox = FindControl(SuchstringFehlerGrenzeTextbox)
-                AnzeigeGewichtTextbox = FindControl(SuchstringAnzeigeGewichtTextbox)
-                GewichtTextbox = FindControl(SuchstringGewichtTextbox)
-                Checkbox = FindControl(SuchstringCheckbox)
-
-                If Not FehlerGrenzeTextbox Is Nothing AndAlso
-                    Not AnzeigeGewichtTextbox Is Nothing AndAlso
-                    Not GewichtTextbox Is Nothing AndAlso
-                    Not Checkbox Is Nothing Then
-
-                    BerechneUndWeiseZu(FehlerGrenzeTextbox, AnzeigeGewichtTextbox, GewichtTextbox, Checkbox, Bereich)
-                Else
-                    Exit For 'überspringen der folgenden Messpunkte
-                End If
-            Next
-        Next
-
-    End Sub
-
-
-#End Region
-#End Region
-
 
     Private Sub UeberschreibePruefungsobjekte()
         objEichprozess.Eichprotokoll.PruefungLinearitaetFallend.Clear()
@@ -764,6 +657,115 @@ Public Class uco_9PruefungLinearitaet
 
         End If
     End Sub
+
+#Region "Berechnung Fehler und EFG"
+
+
+    ''' <summary>
+    ''' Führt Berechnung auf den Steuerelementen auf Basis von Steigender oder Fallender Prüfung durch und dem übergebenen Bereich und dem spezifierten Messpunkt
+    ''' </summary>
+    ''' <param name="Pruefung"></param>
+    ''' <remarks></remarks>
+    Private Sub Berechne(ByVal Pruefung As String, ByVal Bereich As String, ByVal Messpunkt As String)
+        Dim FehlerGrenzeTextbox As Telerik.WinControls.UI.RadTextBox
+        Dim AnzeigeGewichtTextbox As Telerik.WinControls.UI.RadTextBox
+        Dim GewichtTextbox As Telerik.WinControls.UI.RadTextBox
+        Dim Checkbox As Telerik.WinControls.UI.RadCheckBox
+
+        Dim SuchstringFehlerGrenzeTextbox As String = String.Format("RadTextBoxControlBereich{0}{1}ErrorLimit{2}", CInt(Bereich), Pruefung, CInt(Messpunkt))
+        Dim SuchstringAnzeigeGewichtTextbox As String = String.Format("RadTextBoxControlBereich{0}{1}DisplayWeight{2}", CInt(Bereich), Pruefung, CInt(Messpunkt))
+        Dim SuchstringGewichtTextbox As String = String.Format("RadTextBoxControlBereich{0}{1}Weight{2}", CInt(Bereich), Pruefung, CInt(Messpunkt))
+        Dim SuchstringCheckbox As String = String.Format("RadCheckBoxBereich{0}{1}VEL{2}", CInt(Bereich), Pruefung, CInt(Messpunkt))
+
+        FehlerGrenzeTextbox = FindControl(SuchstringFehlerGrenzeTextbox)
+        AnzeigeGewichtTextbox = FindControl(SuchstringAnzeigeGewichtTextbox)
+        GewichtTextbox = FindControl(SuchstringGewichtTextbox)
+        Checkbox = FindControl(SuchstringCheckbox)
+
+        If Not FehlerGrenzeTextbox Is Nothing AndAlso
+            Not AnzeigeGewichtTextbox Is Nothing AndAlso
+            Not GewichtTextbox Is Nothing AndAlso
+            Not Checkbox Is Nothing Then
+
+            BerechneUndWeiseZu(FehlerGrenzeTextbox, AnzeigeGewichtTextbox, GewichtTextbox, Checkbox, Bereich)
+        End If
+
+    End Sub
+    ''' <summary>
+    ''' Führt Berechnung auf allen Steuerelementen auf Basis von Steigender oder Fallender Prüfung durch und dem übergebenen Bereich (alle Messpunkte)
+    ''' </summary>
+    ''' <param name="Pruefung"></param>
+    ''' <remarks></remarks>
+    Private Sub Berechne(ByVal Pruefung As String, ByVal Bereich As String)
+        Dim FehlerGrenzeTextbox As Telerik.WinControls.UI.RadTextBox
+        Dim AnzeigeGewichtTextbox As Telerik.WinControls.UI.RadTextBox
+        Dim GewichtTextbox As Telerik.WinControls.UI.RadTextBox
+        Dim Checkbox As Telerik.WinControls.UI.RadCheckBox
+
+        For Messpunkt As Integer = 1 To 8 Step 1
+            Dim SuchstringFehlerGrenzeTextbox As String = String.Format("RadTextBoxControlBereich{0}{1}ErrorLimit{2}", CInt(Bereich), Pruefung, CInt(Messpunkt))
+            Dim SuchstringAnzeigeGewichtTextbox As String = String.Format("RadTextBoxControlBereich{0}{1}DisplayWeight{2}", CInt(Bereich), Pruefung, CInt(Messpunkt))
+            Dim SuchstringGewichtTextbox As String = String.Format("RadTextBoxControlBereich{0}{1}Weight{2}", CInt(Bereich), Pruefung, CInt(Messpunkt))
+            Dim SuchstringCheckbox As String = String.Format("RadCheckBoxBereich{0}{1}VEL{2}", CInt(Bereich), Pruefung, CInt(Messpunkt))
+
+            FehlerGrenzeTextbox = FindControl(SuchstringFehlerGrenzeTextbox)
+            AnzeigeGewichtTextbox = FindControl(SuchstringAnzeigeGewichtTextbox)
+            GewichtTextbox = FindControl(SuchstringGewichtTextbox)
+            Checkbox = FindControl(SuchstringCheckbox)
+
+            If Not FehlerGrenzeTextbox Is Nothing AndAlso
+                Not AnzeigeGewichtTextbox Is Nothing AndAlso
+                Not GewichtTextbox Is Nothing AndAlso
+                Not Checkbox Is Nothing Then
+
+                BerechneUndWeiseZu(FehlerGrenzeTextbox, AnzeigeGewichtTextbox, GewichtTextbox, Checkbox, Bereich)
+            End If
+        Next
+
+    End Sub
+
+    ''' <summary>
+    ''' Führt Berechnung auf allen Steuerelementen auf Basis von Steigender oder Fallender Prüfung durch (alle bereiche und alle Messpunkte)
+    ''' </summary>
+    ''' <param name="Pruefung"></param>
+    ''' <remarks></remarks>
+    Private Sub Berechne(ByVal Pruefung As String)
+        Dim FehlerGrenzeTextbox As Telerik.WinControls.UI.RadTextBox
+        Dim AnzeigeGewichtTextbox As Telerik.WinControls.UI.RadTextBox
+        Dim GewichtTextbox As Telerik.WinControls.UI.RadTextBox
+        Dim Checkbox As Telerik.WinControls.UI.RadCheckBox
+
+        For Bereich As Integer = 1 To 3 Step 1
+            For Messpunkt As Integer = 1 To 8 Step 1
+                Dim SuchstringFehlerGrenzeTextbox As String = String.Format("RadTextBoxControlBereich{0}{1}ErrorLimit{2}", CInt(Bereich), Pruefung, CInt(Messpunkt))
+                Dim SuchstringAnzeigeGewichtTextbox As String = String.Format("RadTextBoxControlBereich{0}{1}DisplayWeight{2}", CInt(Bereich), Pruefung, CInt(Messpunkt))
+                Dim SuchstringGewichtTextbox As String = String.Format("RadTextBoxControlBereich{0}{1}Weight{2}", CInt(Bereich), Pruefung, CInt(Messpunkt))
+                Dim SuchstringCheckbox As String = String.Format("RadCheckBoxBereich{0}{1}VEL{2}", CInt(Bereich), Pruefung, CInt(Messpunkt))
+
+                FehlerGrenzeTextbox = FindControl(SuchstringFehlerGrenzeTextbox)
+                AnzeigeGewichtTextbox = FindControl(SuchstringAnzeigeGewichtTextbox)
+                GewichtTextbox = FindControl(SuchstringGewichtTextbox)
+                Checkbox = FindControl(SuchstringCheckbox)
+
+                If Not FehlerGrenzeTextbox Is Nothing AndAlso
+                    Not AnzeigeGewichtTextbox Is Nothing AndAlso
+                    Not GewichtTextbox Is Nothing AndAlso
+                    Not Checkbox Is Nothing Then
+
+                    BerechneUndWeiseZu(FehlerGrenzeTextbox, AnzeigeGewichtTextbox, GewichtTextbox, Checkbox, Bereich)
+                Else
+                    Exit For 'überspringen der folgenden Messpunkte
+                End If
+            Next
+        Next
+
+    End Sub
+
+
+#End Region
+#End Region
+
+
 
 #Region "Interface Methods"
 

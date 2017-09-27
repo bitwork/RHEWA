@@ -62,19 +62,17 @@ Public Class uco15PruefungStabilitaet
 #End Region
 
 #Region "Methods"
-
-
     Private Sub LadePruefungen() Implements IRhewaPruefungDialog.LadePruefungen
         'Nur laden wenn es sich um eine Bearbeitung handelt (sonst würde das in Memory Objekt überschrieben werden)
         If Not DialogModus = enuDialogModus.lesend And Not DialogModus = enuDialogModus.korrigierend Then
-            LadePruefungenLeseModus()
-        Else
             LadePruefungenBearbeitungsModus()
+        Else
+            LadePruefungenRHEWAKorrekturModus()
 
         End If
     End Sub
 
-    Private Sub LadePruefungenBearbeitungsModus() Implements IRhewaPruefungDialog.LadePruefungenBearbeitungsModus
+    Private Sub LadePruefungenRHEWAKorrekturModus() Implements IRhewaPruefungDialog.LadePruefungenRHEWAKorrekturModus
         Try
             'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
 
@@ -92,7 +90,7 @@ Public Class uco15PruefungStabilitaet
         End Try
     End Sub
 
-    Private Sub LadePruefungenLeseModus() Implements IRhewaPruefungDialog.LadePruefungenLeseModus
+    Private Sub LadePruefungenBearbeitungsModus() Implements IRhewaPruefungDialog.LadePruefungenBearbeitungsModus
         Using context As New Entities
             'neu laden des Objekts, diesmal mit den lookup Objekten
             objEichprozess = (From a In context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
@@ -103,7 +101,6 @@ Public Class uco15PruefungStabilitaet
 
         End Using
     End Sub
-
 
 
     Private Sub UpdatePruefungsObject(ByVal PObjPruefung As PruefungStabilitaetGleichgewichtslage)
@@ -151,7 +148,6 @@ Public Class uco15PruefungStabilitaet
         Next
     End Sub
 
-
     Private Sub UeberschreibeLast(sender As Object)
         'damit keine Event Kettenreaktion durchgeführt wird, werden die Events ab hier unterbrochen
         _suspendEvents = True
@@ -190,6 +186,7 @@ Public Class uco15PruefungStabilitaet
     End Sub
 
 #End Region
+
 #Region "Interface Methods"
 
     Protected Friend Overrides Sub LoadFromDatabase() Implements IRhewaEditingDialog.LoadFromDatabase
@@ -488,8 +485,5 @@ Public Class uco15PruefungStabilitaet
     End Sub
 
 #End Region
-
-
-
 
 End Class

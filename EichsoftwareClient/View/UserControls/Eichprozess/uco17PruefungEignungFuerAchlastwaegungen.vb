@@ -29,7 +29,6 @@ Public Class uco17PruefungEignungFuerAchlastwaegungen
 
 #Region "Events"
 
-
     Private Sub ucoBeschaffenheitspruefung_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         SetzeUeberschrift()
         EichprozessStatusReihenfolge = GlobaleEnumeratoren.enuEichprozessStatus.EignungfürAchslastwägungen
@@ -43,7 +42,6 @@ Public Class uco17PruefungEignungFuerAchlastwaegungen
         If _suspendEvents = True Then Exit Sub
         AktuellerStatusDirty = True
     End Sub
-
 
 
 #End Region

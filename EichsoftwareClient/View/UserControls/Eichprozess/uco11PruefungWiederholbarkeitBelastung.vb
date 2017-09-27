@@ -32,7 +32,6 @@ Public Class uco11PruefungWiederholbarkeitBelastung
 
 #End Region
 
-
 #Region "Events"
 
     Private Sub ucoBeschaffenheitspruefung_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
@@ -128,6 +127,7 @@ Public Class uco11PruefungWiederholbarkeitBelastung
     End Sub
 
 #End Region
+
 #Region "Methods"
     Private Sub CalculateEFG(bereich As String, Wiederholung As String)
         Dim Fehler As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlBereich{0}ErrorLimit{1}", bereich, 1)) 'gibt nur ein control
@@ -136,17 +136,9 @@ Public Class uco11PruefungWiederholbarkeitBelastung
         Dim Spezial As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblBereich{0}EFGSpeziallBerechnung", bereich))
         Dim min As Decimal
         Dim max As Decimal
-        Dim EichwertBereich As Integer = 0
 
         'Eichwert holen
-        Select Case objEichprozess.Lookup_Waagenart.Art
-            Case Is = "Einbereichswaage"
-                EichwertBereich = 1
-            Case Is = "Zweibereichswaage", "Zweiteilungswaage"
-                EichwertBereich = 2
-            Case Is = "Dreibereichswaage", "Dreiteilungswaage"
-                EichwertBereich = 3
-        End Select
+        Dim eichwertBereich As Integer = GetEichwertBereich()
 
         'EFG Wert Berechnen
         Try
@@ -156,41 +148,11 @@ Public Class uco11PruefungWiederholbarkeitBelastung
         End Try
 
         'EFG durch die Differenz zwischen den 3 Belastungen. Mit anderen Worten: Die Differenz der Wägeergebnisse bei der 3maligen Belastung darf nicht größer sein, als der Absolutwert der für diese Belastung geltenden Fehlergrenze der Waage.
-
         Dim AnzeigeMax1 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlBereich{0}DisplayWeight{1}", bereich, 1))
         Dim AnzeigeMax2 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlBereich{0}DisplayWeight{1}", bereich, 2))
         Dim AnzeigeMax3 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlBereich{0}DisplayWeight{1}", bereich, 3))
 
-        Dim listdecimals As New List(Of Decimal)
-        If IsNumeric(AnzeigeMax1.Text) Then
-            listdecimals.Add(AnzeigeMax1.Text)
-        End If
-        If IsNumeric(AnzeigeMax2.Text) Then
-            listdecimals.Add(AnzeigeMax2.Text)
-        End If
-        If IsNumeric(AnzeigeMax3.Text) Then
-            listdecimals.Add(AnzeigeMax3.Text)
-        End If
-
-        If listdecimals.Count = 3 Then
-            max = listdecimals.Max
-            min = listdecimals.Min
-
-            Dim differenz As Decimal = max - min
-            Fehler.Text = differenz
-            Try
-
-                If differenz <= CDec(Spezial.Text) And differenz >= -CDec(Spezial.Text) Then
-                    EFG.Checked = True
-                Else
-                    EFG.Checked = False
-                End If
-            Catch ex As Exception
-            End Try
-        Else
-            Fehler.Text = ""
-            EFG.Checked = False
-        End If
+        getEFGDifferenz(Fehler, EFG, Spezial, min, max, AnzeigeMax1, AnzeigeMax2, AnzeigeMax3)
 
     End Sub
 
@@ -198,13 +160,13 @@ Public Class uco11PruefungWiederholbarkeitBelastung
     Private Sub LadePruefungen() Implements IRhewaPruefungDialog.LadePruefungen
         'Nur laden wenn es sich um eine Bearbeitung handelt (sonst würde das in Memory Objekt überschrieben werden)
         If Not DialogModus = enuDialogModus.lesend And Not DialogModus = enuDialogModus.korrigierend Then
-            LadePruefungenLeseModus()
-        Else
             LadePruefungenBearbeitungsModus()
+        Else
+            LadePruefungenRHEWAKorrekturModus()
         End If
     End Sub
 
-    Private Sub LadePruefungenBearbeitungsModus() Implements IRhewaPruefungDialog.LadePruefungenBearbeitungsModus
+    Private Sub LadePruefungenRHEWAKorrekturModus() Implements IRhewaPruefungDialog.LadePruefungenRHEWAKorrekturModus
         'je nach verwahrenswahl (über 60 kg mit normalien) wurde noch keine Wiederholbarkeit geprueft. Wenn eni anderes verfahren gewählt wurde, gibt es an dieser stelle aber schon die halbe wiederholbarkeit
         Select Case objEichprozess.Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren.Verfahren
             Case Is = "über 60kg mit Normalien"
@@ -244,7 +206,7 @@ Public Class uco11PruefungWiederholbarkeitBelastung
         End Select
     End Sub
 
-    Private Sub LadePruefungenLeseModus() Implements IRhewaPruefungDialog.LadePruefungenLeseModus
+    Private Sub LadePruefungenBearbeitungsModus() Implements IRhewaPruefungDialog.LadePruefungenBearbeitungsModus
         Using context As New Entities
             'neu laden des Objekts, diesmal mit den lookup Objekten
             objEichprozess = (From a In context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
@@ -354,8 +316,6 @@ Public Class uco11PruefungWiederholbarkeitBelastung
         PObjPruefung.EFG = EFG.Checked
         PObjPruefung.EFG_Extra = Spezial.Text
     End Sub
-
-
 
 
 #End Region

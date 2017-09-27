@@ -36,8 +36,6 @@ Public Class uco10PruefungStaffelverfahren
 
 #End Region
 
-
-
 #Region "Events"
 
     Private Sub ucoBeschaffenheitspruefung_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
@@ -590,27 +588,6 @@ Public Class uco10PruefungStaffelverfahren
             Next
         End If
         Return returnvalue
-        'For Each BereichGroupBox In StaffelGroupBox.Controls
-        '    If CType(BereichGroupBox, Telerik.WinControls.UI.RadGroupBox).Visible = True Then 'Nur wenn der Bereich auch sichtbar ist
-        '        For Each Control In BereichGroupBox.controls
-        '            Try
-        '                If CType(Control, Telerik.WinControls.UI.RadTextBox).ReadOnly = False And CType(Control, Telerik.WinControls.UI.RadTextBox).Enabled = True Then
-        '                    If CType(Control, Telerik.WinControls.UI.RadTextBox).Text.Trim = "" Then
-        '                        returnvalue = False
-        '                        If einFeldGefuellt = True Then
-        '                            CType(Control, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
-        '                        End If
-        '                    Else
-        '                        CType(Control, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Transparent
-        '                        einFeldGefuellt = True
-        '                    End If
-        '                End If
-        '            Catch ex As Exception
-        '            End Try
-        '        Next
-        '    End If
-        'Next
-        '  Return returnvalue
     End Function
 
     Private Sub ValidateStaffelEFG(staffel As Integer, bereich As Integer)
@@ -960,10 +937,6 @@ Public Class uco10PruefungStaffelverfahren
 
 #End Region
 #End Region
-
-
-
-
 
 
 #Region "Interface Methods"

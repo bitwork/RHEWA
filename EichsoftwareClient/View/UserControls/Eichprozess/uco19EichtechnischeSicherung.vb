@@ -506,8 +506,6 @@ Public Class uco19EichtechnischeSicherung
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco19EichtechnischeSicherung))
         Lokalisierung(Me, resources)
     End Sub
-#End Region
-
 
 
     Protected Friend Overrides Sub Entsperrung() Implements IRhewaEditingDialog.Entsperrung
@@ -524,5 +522,9 @@ Public Class uco19EichtechnischeSicherung
         'Erzeugen eines Server Objektes auf basis des aktuellen DS. Setzt es auf es ausserdem auf Fehlerhaft
         CloneAndSendServerObjekt()
     End Sub
+#End Region
+
+
+
 
 End Class

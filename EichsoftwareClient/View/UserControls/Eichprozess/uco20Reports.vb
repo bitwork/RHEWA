@@ -138,7 +138,6 @@ Public Class uco20Reports
 #End Region
 #End Region
 
-
 #Region "Interface Methods"
     Protected Friend Overrides Sub SetzeUeberschrift() Implements IRhewaEditingDialog.SetzeUeberschrift
         If Not ParentFormular Is Nothing Then
@@ -170,8 +169,6 @@ Public Class uco20Reports
         End Try
 
     End Sub
-
-
 
     Protected Friend Overrides Sub SaveObjekt() Implements IRhewaEditingDialog.SaveObjekt
         'nichts hier

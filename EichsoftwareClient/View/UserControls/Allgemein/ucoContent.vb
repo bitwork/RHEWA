@@ -387,8 +387,63 @@ Public Class ucoContent
         End If
     End Sub
 
+    ''' <summary>
+    ''' Gibt Anzahl der Bereiche nach Waagenart zurück
+    ''' </summary>
+    ''' <returns></returns>
+    Protected Friend Function GetEichwertBereich() As Integer
+        Dim eichwertBereich As Integer
+        Select Case objEichprozess.Lookup_Waagenart.Art
+            Case Is = "Einbereichswaage"
+                EichwertBereich = 1
+            Case Is = "Zweibereichswaage", "Zweiteilungswaage"
+                EichwertBereich = 2
+            Case Is = "Dreibereichswaage", "Dreiteilungswaage"
+                EichwertBereich = 3
+        End Select
 
+        Return EichwertBereich
+    End Function
 
+    Protected Friend Sub getEFGDifferenz(ByRef Fehler As Telerik.WinControls.UI.RadTextBox, ByRef EFG As Telerik.WinControls.UI.RadCheckBox, Spezial As Telerik.WinControls.UI.RadMaskedEditBox, ByRef min As Decimal, ByRef max As Decimal, AnzeigeMax1 As Telerik.WinControls.UI.RadTextBox, AnzeigeMax2 As Telerik.WinControls.UI.RadTextBox, AnzeigeMax3 As Telerik.WinControls.UI.RadTextBox)
+        Dim listdecimals As New List(Of Decimal)
+        If IsNumeric(AnzeigeMax1.Text) Then
+            listdecimals.Add(AnzeigeMax1.Text)
+        End If
+        If IsNumeric(AnzeigeMax2.Text) Then
+            listdecimals.Add(AnzeigeMax2.Text)
+        End If
+        If IsNumeric(AnzeigeMax3.Text) Then
+            listdecimals.Add(AnzeigeMax3.Text)
+        End If
+
+        If listdecimals.Count = 3 Then
+            max = listdecimals.Max
+            min = listdecimals.Min
+
+            Dim differenz As Decimal = max - min
+            Fehler.Text = differenz
+            Try
+
+                If differenz <= CDec(Spezial.Text) And differenz >= -CDec(Spezial.Text) Then
+                    EFG.Checked = True
+                Else
+                    EFG.Checked = False
+                End If
+            Catch ex As Exception
+            End Try
+
+        Else
+            EFG.Checked = False
+            Fehler.Text = ""
+        End If
+    End Sub
+
+    ''' <summary>
+    ''' Basis lokalisierung
+    ''' </summary>
+    ''' <param name="container"></param>
+    ''' <param name="ressourcemanager"></param>
     Protected Sub Lokalisierung(ByVal container As Control, ByVal ressourcemanager As System.ComponentModel.ComponentResourceManager)
         ressourcemanager.ApplyResources(container, container.Name, New Globalization.CultureInfo(AktuellerBenutzer.Instance.AktuelleSprache))
 
@@ -596,7 +651,11 @@ Public Class ucoContent
         End If
 
     End Function
-
+    ''' <summary>
+    ''' Validierung ob in ein Text oder eine Zahl eingetragen wurde in Textbox
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Friend Sub BasicTextboxValidation(sender As Object, e As System.ComponentModel.CancelEventArgs)
         Dim result As Decimal
         If Not sender.readonly = True Then
@@ -619,6 +678,11 @@ Public Class ucoContent
         End If
     End Sub
 
+    ''' <summary>
+    ''' validierung ob eine Zahl eingegeben wurde
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Friend Sub BasicTextboxNumberValidation(sender As Object, e As System.ComponentModel.CancelEventArgs)
         Dim result As Decimal
         If Not sender.readonly = True Then

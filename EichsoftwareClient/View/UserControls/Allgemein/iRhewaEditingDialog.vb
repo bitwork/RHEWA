@@ -16,8 +16,8 @@
 End Interface
 Public Interface IRhewaPruefungDialog
     Sub LadePruefungen()
+    Sub LadePruefungenRHEWAKorrekturModus()
     Sub LadePruefungenBearbeitungsModus()
-    Sub LadePruefungenLeseModus()
 End Interface
 
 Public Interface IRhewaEditingDialogEvents

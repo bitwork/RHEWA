@@ -124,13 +124,13 @@ Public Class uco14PruefungAnsprechvermoegen
     Protected Friend Sub LadePruefungen() Implements IRhewaPruefungDialog.LadePruefungen
         'Nur laden wenn es sich um eine Bearbeitung handelt (sonst würde das in Memory Objekt überschrieben werden)
         If Not DialogModus = enuDialogModus.lesend And Not DialogModus = enuDialogModus.korrigierend Then
-            LadePruefungenLeseModus()
-        Else
             LadePruefungenBearbeitungsModus()
+        Else
+            LadePruefungenRHEWAKorrekturModus()
         End If
     End Sub
 
-    Private Sub LadePruefungenBearbeitungsModus() Implements IRhewaPruefungDialog.LadePruefungenBearbeitungsModus
+    Private Sub LadePruefungenRHEWAKorrekturModus() Implements IRhewaPruefungDialog.LadePruefungenRHEWAKorrekturModus
         _objEichprotokoll = objEichprozess.Eichprotokoll
         _ListPruefungAnsprechvermoegen.Clear()
         Try
@@ -150,7 +150,7 @@ Public Class uco14PruefungAnsprechvermoegen
         End Try
     End Sub
 
-    Private Sub LadePruefungenLeseModus() Implements IRhewaPruefungDialog.LadePruefungenLeseModus
+    Private Sub LadePruefungenBearbeitungsModus() Implements IRhewaPruefungDialog.LadePruefungenBearbeitungsModus
         Using context As New Entities
             'neu laden des Objekts, diesmal mit den lookup Objekten
             objEichprozess = (From a In context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
@@ -526,11 +526,6 @@ RadTextBoxControlLast2.Text.Trim = "" Or
         Return True
     End Function
 
-
-
-
-#End Region
-
     Protected Friend Overrides Sub SetzeUeberschrift() Implements IRhewaEditingDialog.SetzeUeberschrift
         If Not ParentFormular Is Nothing Then
             Try
@@ -543,15 +538,10 @@ RadTextBoxControlLast2.Text.Trim = "" Or
         End If
     End Sub
 
-
-
     Protected Friend Overrides Sub Lokalisiere() Implements IRhewaEditingDialog.Lokalisiere
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco14PruefungAnsprechvermoegen))
         Lokalisierung(Me, resources)
     End Sub
-
-
-
 
     Protected Friend Overrides Sub Entsperrung() Implements IRhewaEditingDialog.Entsperrung
         'Hiermit wird ein lesender Vorgang wieder entsperrt.
@@ -561,5 +551,11 @@ RadTextBoxControlLast2.Text.Trim = "" Or
         DialogModus = enuDialogModus.korrigierend
         ParentFormular.DialogModus = FrmMainContainer.enuDialogModus.korrigierend
     End Sub
+
+
+
+#End Region
+
+
 
 End Class

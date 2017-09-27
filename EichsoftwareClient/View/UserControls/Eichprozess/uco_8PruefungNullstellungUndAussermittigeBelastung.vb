@@ -221,20 +221,12 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
             Dim Spezial As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblEFGSpeziallBerechnung"))
             Dim min As Decimal
             Dim max As Decimal
-            Dim EichwertBereich As Integer = 0
-            'EFG Wert Berechnen
             'Eichwert holen
-            Select Case objEichprozess.Lookup_Waagenart.Art
-                Case Is = "Einbereichswaage"
-                    EichwertBereich = 1
-                Case Is = "Zweibereichswaage", "Zweiteilungswaage"
-                    EichwertBereich = 2
-                Case Is = "Dreibereichswaage", "Dreiteilungswaage"
-                    EichwertBereich = 3
-            End Select
+            Dim eichwertBereich As Integer = GetEichwertBereich()
+            'EFG Wert Berechnen
 
             Try
-                Spezial.Text = GetEFG(Last.Text, EichwertBereich)
+                Spezial.Text = GetEFG(Last.Text, eichwertBereich)
             Catch ex As InvalidCastException
                 Exit Sub
             End Try
@@ -245,42 +237,15 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
             Dim AnzeigeMax2 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlDisplayWeight{0}", 2))
             Dim AnzeigeMax3 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlDisplayWeight{0}", 3))
 
-            Dim listdecimals As New List(Of Decimal)
-            If IsNumeric(AnzeigeMax1.Text) Then
-                listdecimals.Add(AnzeigeMax1.Text)
-            End If
-            If IsNumeric(AnzeigeMax2.Text) Then
-                listdecimals.Add(AnzeigeMax2.Text)
-            End If
-            If IsNumeric(AnzeigeMax3.Text) Then
-                listdecimals.Add(AnzeigeMax3.Text)
-            End If
-
-            If listdecimals.Count = 3 Then
-                max = listdecimals.Max
-                min = listdecimals.Min
-
-                Dim differenz As Decimal = max - min
-                Fehler.Text = differenz
-                Try
-
-                    If differenz <= CDec(Spezial.Text) And differenz >= -CDec(Spezial.Text) Then
-                        EFG.Checked = True
-                    Else
-                        EFG.Checked = False
-                    End If
-                Catch ex As Exception
-                End Try
-
-                'If CDec(Last.Text) - differenz Then
-            Else
-                EFG.Checked = False
-                Fehler.Text = ""
-            End If
+            GetEFGDifferenz(Fehler, EFG, Spezial, min, max, AnzeigeMax1, AnzeigeMax2, AnzeigeMax3)
 
         Catch ex As Exception
         End Try
     End Sub
+
+
+
+
 
 #End Region
 
@@ -475,7 +440,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         Try
 
             If _suspendEvents = True Then Exit Sub
-              AktuellerStatusDirty = True
+            AktuellerStatusDirty = True
             Dim Bereich = GetBereich(sender)
             Dim Belastungsort = GetBelastungsort(sender)
 
@@ -488,339 +453,30 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
 
 #End Region
 
+
+#Region "Hilfetexte"
+    Private Sub RadGroupBoxPruefungGenaugikeit_MouseHover(sender As Object, e As EventArgs) Handles RadGroupBoxPruefungGenaugikeit.MouseEnter
+        ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_Nullstellung)
+    End Sub
+
+    Private Sub RadGroupBoxPruefungAussermittigeBelastung_MouseHover(sender As Object, e As EventArgs) Handles RadGroupBoxPruefungAussermittigeBelastung.MouseEnter
+        ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungAussermittigerBelastung)
+    End Sub
+
+    Private Sub RadGroupBoxWiederholungen_MouseEnter(sender As Object, e As EventArgs) Handles RadGroupBoxWiederholungen.MouseEnter
+        ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungWiederholbarkeitStaffelverfahren)
+
+    End Sub
+
+#End Region
 #End Region
 
 #Region "Methods"
-
-    Private Sub LadePruefungen() Implements IRhewaPruefungDialog.LadePruefungen
-        'Nur laden wenn es sich um eine Bearbeitung handelt (sonst würde das in Memory Objekt überschrieben werden)
-        If Not DialogModus = enuDialogModus.lesend And Not DialogModus = enuDialogModus.korrigierend Then
-            LadePruefungenLeseModus()
-        Else
-            LadePruefungenBearbeitungsModus()
-        End If
-    End Sub
-
-    Private Sub LadePruefungenBearbeitungsModus() Implements IRhewaPruefungDialog.LadePruefungenBearbeitungsModus
-        _ListPruefungWiederholbarkeit.Clear()
-        _ListPruefungAussermittigeBelastung.Clear()
-        Try
-            'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
-            For Each obj In objEichprozess.Eichprotokoll.PruefungAussermittigeBelastung
-                obj.Eichprotokoll = objEichprozess.Eichprotokoll
-                _ListPruefungAussermittigeBelastung.Add(obj)
-            Next
-
-            For Each obj In objEichprozess.Eichprotokoll.PruefungWiederholbarkeit
-                obj.Eichprotokoll = objEichprozess.Eichprotokoll
-                _ListPruefungWiederholbarkeit.Add(obj)
-            Next
-        Catch ex As System.ObjectDisposedException 'fehler im Clientseitigen Lesemodus (bei bereits abegschickter Eichung)
-            Using context As New Entities
-                Dim query = From a In context.PruefungAussermittigeBelastung Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
-                _ListPruefungAussermittigeBelastung = query.ToList
-
-                Dim query2 = From a In context.PruefungWiederholbarkeit Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
-                _ListPruefungWiederholbarkeit = query2.ToList
-            End Using
-        End Try
-
-        _currentObjVerfahren = objEichprozess.Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren
-    End Sub
-
-    Private Sub LadePruefungenLeseModus() Implements IRhewaPruefungDialog.LadePruefungenLeseModus
-        Using context As New Entities
-
-            'neu laden des Objekts, diesmal mit den lookup Objekten
-            objEichprozess = (From a In context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
-
-            'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
-            Dim query = From a In context.PruefungAussermittigeBelastung Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
-            _ListPruefungAussermittigeBelastung = query.ToList
-
-            Dim query2 = From a In context.PruefungWiederholbarkeit Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
-            _ListPruefungWiederholbarkeit = query2.ToList
-
-            _currentObjVerfahren = (From a In context.Lookup_Konformitaetsbewertungsverfahren Where a.ID = objEichprozess.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren).FirstOrDefault
-        End Using
-    End Sub
-
-    ''' <summary>
-    ''' 'zurücksetzten der Groupboxen größen auf default (designer) werte. Sonst würden die Groupboxen immer kleiner gerechnet
-    ''' </summary>
-    Private Sub ResetGroupboxSizes()
-        RadGroupBoxBereich1.Size = New Size(503, 489)
-        RadGroupBoxBereich2.Size = New Size(503, 489)
-        RadGroupBoxBereich3.Size = New Size(503, 489)
-
-        RadGroupBoxBereich1.Location = New Size(21, 149)
-        RadGroupBoxBereich2.Location = New Size(21, 644)
-        RadGroupBoxBereich3.Location = New Size(21, 1139)
-    End Sub
-
-#Region "FillControls"
-    Protected Friend Overrides Sub SetzeUeberschrift() Implements IRhewaEditingDialog.SetzeUeberschrift
-        If Not ParentFormular Is Nothing Then
-            Try
-                'Hilfetext setzen
-                ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungAussermittigerBelastung)
-                'Überschrift setzen
-                ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungNullstellungundAussermittigeBelastung
-            Catch ex As Exception
-            End Try
-        End If
-    End Sub
-
 
     Private Sub FillControlsNullstellung()
         If Not objEichprozess.Eichprotokoll.GenauigkeitNullstellung_InOrdnung Is Nothing Then
             RadCheckBoxNullstellungOK.Checked = objEichprozess.Eichprotokoll.GenauigkeitNullstellung_InOrdnung
         End If
-    End Sub
-
-    Private Sub SaveAussermittigeBelastung(ByRef Context As Entities)
-        'anzahl Bereiche auslesen um damit die anzahl der benötigten Iterationen und Objekt Erzeugungen zu erfahren
-        Dim intBereiche As Integer = GetAnzahlBereiche()
-
-        'alte löschen
-
-        Dim query = From a In Context.PruefungAussermittigeBelastung Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
-        For Each pruefung In query
-            Context.PruefungAussermittigeBelastung.Remove(pruefung)
-        Next
-        Context.SaveChanges()
-
-        _ListPruefungAussermittigeBelastung.Clear()
-
-        'wenn es defintiv noch keine pruefungen gibt, neue Anlegen
-        '  If _ListPruefungAussermittigeBelastung.Count = 0 Then
-
-        For j = 1 To intBereiche
-            'sonderfall eine Wägezelle
-            If objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen = 1 Then
-                For intBelastungsort As Integer = 1 To 5 'eine Mehr für Mitte
-                    If j > 1 And intBelastungsort = 5 Then
-                        Continue For
-                    End If
-                    Dim objPruefung = Context.PruefungAussermittigeBelastung.Create
-                    'wenn es die eine itereation mehr ist:
-                    If intBelastungsort = 5 Then
-                        'mitte anlegen
-                        objPruefung.Belastungsort = "M"
-                    Else 'sonst bereich zuweisen
-                        objPruefung.Belastungsort = intBelastungsort
-                    End If
-                    objPruefung.Bereich = j
-                    UpdatePruefungsObject(objPruefung)
-                    Try
-                        Context.SaveChanges()
-
-                    Catch ex As Validation.DbEntityValidationException
-                        For Each e In ex.EntityValidationErrors
-                            MessageBox.Show(e.ValidationErrors(0).ErrorMessage)
-                        Next
-                    End Try
-
-                    objEichprozess.Eichprotokoll.PruefungAussermittigeBelastung.Add(objPruefung)
-                    Try
-                        Context.SaveChanges()
-
-                    Catch ex As Validation.DbEntityValidationException
-                        For Each e In ex.EntityValidationErrors
-                            MessageBox.Show(e.ValidationErrors(0).ErrorMessage)
-                        Next
-                    End Try
-
-                    _ListPruefungAussermittigeBelastung.Add(objPruefung)
-                Next
-            Else
-                For intBelastungsort As Integer = 1 To (objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen + 1) 'eine Mehr für Mitte
-                    'bei mehrbereichswagen gibt es die Mitte nur im ersten Durchlauf
-                    If j > 1 And intBelastungsort = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen + 1 Then
-                        Continue For
-                    End If
-
-                    Dim objPruefung = Context.PruefungAussermittigeBelastung.Create
-                    'wenn es die eine itereation mehr ist:
-                    If intBelastungsort = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen + 1 Then
-                        'mitte anlegen
-                        objPruefung.Belastungsort = "M"
-                    Else 'sonst bereich zuweisen
-                        objPruefung.Belastungsort = intBelastungsort
-                    End If
-                    objPruefung.Bereich = j
-                    UpdatePruefungsObject(objPruefung)
-
-                    Try
-                        Context.SaveChanges()
-
-                    Catch ex As Validation.DbEntityValidationException
-                        For Each e In ex.EntityValidationErrors
-                            MessageBox.Show(e.ValidationErrors(0).ErrorMessage)
-                        Next
-                    End Try
-
-                    objEichprozess.Eichprotokoll.PruefungAussermittigeBelastung.Add(objPruefung)
-                    Try
-                        Context.SaveChanges()
-
-                    Catch ex As Validation.DbEntityValidationException
-                        For Each e In ex.EntityValidationErrors
-                            MessageBox.Show(e.ValidationErrors(0).ErrorMessage)
-                        Next
-                    End Try
-
-                    _ListPruefungAussermittigeBelastung.Add(objPruefung)
-                Next
-            End If
-        Next
-    End Sub
-
-
-
-    Private Sub SaveWiederholungen(ByRef Context As Entities)
-        If RadGroupBoxWiederholungen.Visible = True Then
-
-            'wenn es defintiv noch keine pruefungen gibt, neue Anlegen
-            If _ListPruefungWiederholbarkeit.Count = 0 Then
-                'anzahl Wiederholungen beträgt 3 um damit die anzahl der benötigten Iterationen und Objekt Erzeugungen zu erfahren
-                For i As Integer = 1 To 3
-
-                    'halbe Last
-                    Dim objPruefung = Context.PruefungWiederholbarkeit.Create
-                    'wenn es die eine itereation mehr ist:
-                    objPruefung.Wiederholung = i
-                    objPruefung.Belastung = "halb"
-                    UpdatePruefungsObject(objPruefung)
-
-                    Try
-                        Context.SaveChanges()
-
-                    Catch ex As Validation.DbEntityValidationException
-                        For Each e In ex.EntityValidationErrors
-                            MessageBox.Show(e.ValidationErrors(0).ErrorMessage)
-                        Next
-                    End Try
-
-                    objEichprozess.Eichprotokoll.PruefungWiederholbarkeit.Add(objPruefung)
-                    Try
-                        Context.SaveChanges()
-
-                    Catch ex As Validation.DbEntityValidationException
-                        For Each e In ex.EntityValidationErrors
-                            MessageBox.Show(e.ValidationErrors(0).ErrorMessage)
-                        Next
-                    End Try
-
-                    _ListPruefungWiederholbarkeit.Add(objPruefung)
-
-                Next
-            Else ' es gibt bereits welche
-                'jedes objekt initialisieren und aus context laden und updaten
-                For Each objPruefung In _ListPruefungWiederholbarkeit
-                    objPruefung = Context.PruefungWiederholbarkeit.FirstOrDefault(Function(value) value.ID = objPruefung.ID)
-                    UpdatePruefungsObject(objPruefung)
-                    Context.SaveChanges()
-                Next
-            End If
-
-        End If
-
-    End Sub
-
-    Private Sub LadeBilder()
-        'je nach anzahl der WZ entsprechendes Bild laden
-        If objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen <= 12 Then
-            PictureBox4LC.Visible = False
-            PictureBox6LC.Visible = False
-            PictureBox8LC.Visible = False
-            PictureBox10LC.Visible = False
-            PictureBox12LC.Visible = True
-        End If
-        If objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen <= 10 Then
-            PictureBox4LC.Visible = False
-            PictureBox6LC.Visible = False
-            PictureBox8LC.Visible = False
-            PictureBox10LC.Visible = True
-            PictureBox12LC.Visible = False
-        End If
-        If objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen <= 8 Then
-            PictureBox4LC.Visible = False
-            PictureBox6LC.Visible = False
-            PictureBox8LC.Visible = True
-            PictureBox10LC.Visible = False
-            PictureBox12LC.Visible = False
-        End If
-        If objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen <= 6 Then
-            PictureBox4LC.Visible = False
-            PictureBox6LC.Visible = True
-            PictureBox8LC.Visible = False
-            PictureBox10LC.Visible = False
-            PictureBox12LC.Visible = False
-        End If
-        If objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen <= 4 Then
-            PictureBox4LC.Visible = True
-            PictureBox6LC.Visible = False
-            PictureBox8LC.Visible = False
-            PictureBox10LC.Visible = False
-            PictureBox12LC.Visible = False
-        End If
-    End Sub
-    Private Sub BereichsgruppenAusblenden()
-        'je nach Art der Waage andere Bereichsgruppen ausblenden
-        If objEichprozess.Lookup_Waagenart.Art = "Einbereichswaage" Then
-            RadGroupBoxBereich2.Visible = False
-            RadGroupBoxBereich3.Visible = False
-
-        ElseIf objEichprozess.Lookup_Waagenart.Art = "Zweibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Zweiteilungswaage" Then
-            RadGroupBoxBereich2.Visible = True
-            RadGroupBoxBereich3.Visible = False
-        ElseIf objEichprozess.Lookup_Waagenart.Art = "Dreibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Dreiteilungswaage" Then
-            RadGroupBoxBereich2.Visible = True
-            RadGroupBoxBereich3.Visible = True
-
-        End If
-
-    End Sub
-    Private Sub BerechneHoechstlast()
-
-        Dim Teilungsfaktor As Integer = 3
-        Dim wert As String = "" 'hilfsvariable zum zuweisen des Textwertes
-        'je nach Zahl der Wägezellen ändert sich die Berechnung. Bei mehr als 4 WZ ändert sich die Formel von Hoechstlast / 3 auf Hoechstlast/(Anzahl WZ-1)
-        If objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen > 4 Then
-            Teilungsfaktor = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen - 1
-        End If
-
-        'alle textboxen den entsprechenden Wert zuordnen
-        For Bereich As Integer = 1 To 3
-
-            'neue Werte berechnen ab Bereich 2 und 3
-            If Bereich = 1 Then
-                wert = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1 / Teilungsfaktor
-            ElseIf Bereich = 2 Then
-                If Not objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2.Equals("") Then
-                    wert = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 / Teilungsfaktor
-                End If
-            ElseIf Bereich = 3 Then
-                If Not objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3.Equals("") Then
-                    wert = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 / Teilungsfaktor
-                End If
-            End If
-
-            If Not wert = "-1" Then 'abbruch bei nicht zutreffenden Bereichen
-                For Belastungsort As Integer = 1 To 13
-                    Dim sBelastungsOrt As String = Belastungsort
-                    If Belastungsort = 13 Then sBelastungsOrt = "Mitte" 'sonderfall
-
-                    Dim Last As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlBereich{0}Weight{1}", CInt(Bereich), sBelastungsOrt))
-                    If Not Last Is Nothing Then
-                        Last.Text = wert
-                    End If
-
-                Next
-            End If
-            wert = "-1"
-        Next
     End Sub
 
     Private Sub FillControlsAussermittigeBelastung()
@@ -829,24 +485,27 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         lblBereich2EFGSpeziallBerechnung.Mask = String.Format("F{0}", _intNullstellenE) 'anzahl nullstellen für Textcontrol definieren
         lblBereich3EFGSpeziallBerechnung.Mask = String.Format("F{0}", _intNullstellenE) 'anzahl nullstellen für Textcontrol definieren
 
+        'hoechstlast berechnen
         BerechneHoechstlast()
 
-        For Bereich As Integer = 1 To 3
-            Dim sBereich As String = Bereich 'wegen LINQ eigenart
-            For Belastungsort As Integer = 1 To 13
-                Dim sBelastungsortControl As String = Belastungsort
-                Dim sBelastungsortDB As String = Belastungsort
 
-                If Belastungsort = 13 Then
+        For bereich As Integer = 1 To 3
+            Dim sBereich As String = bereich 'wegen LINQ eigenart
+            For belastungsort As Integer = 1 To 13
+                Dim sBelastungsortControl As String = belastungsort
+                Dim sBelastungsortDB As String = belastungsort
+
+                If belastungsort = 13 Then
                     sBelastungsortDB = "M" 'sonderfall mitte
                     sBelastungsortControl = "Mitte"
                 End If
 
-                Dim Last As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlBereich{0}Weight{1}", CInt(Bereich), sBelastungsortControl))
-                Dim Anzeige As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlBereich{0}DisplayWeight{1}", CInt(Bereich), sBelastungsortControl))
-                Dim Fehler As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlBereich{0}ErrorLimit{1}", CInt(Bereich), sBelastungsortControl))
-                Dim EFG As Telerik.WinControls.UI.RadCheckBox = FindControl(String.Format("RadCheckBoxBereich{0}VEL{1}", CInt(Bereich), sBelastungsortControl))
+                Dim Last As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlBereich{0}Weight{1}", CInt(bereich), sBelastungsortControl))
+                Dim Anzeige As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlBereich{0}DisplayWeight{1}", CInt(bereich), sBelastungsortControl))
+                Dim Fehler As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlBereich{0}ErrorLimit{1}", CInt(bereich), sBelastungsortControl))
+                Dim EFG As Telerik.WinControls.UI.RadCheckBox = FindControl(String.Format("RadCheckBoxBereich{0}VEL{1}", CInt(bereich), sBelastungsortControl))
 
+                'TODO prüfen wieso Bereich als Byte deklariert ist in SQL Kompakt Entity Framework
                 _currentObjPruefungAussermittigeBelastung = Nothing
                 _currentObjPruefungAussermittigeBelastung = (From o In _ListPruefungAussermittigeBelastung Where o.Belastungsort = sBelastungsortDB And o.Bereich = sBereich).FirstOrDefault
 
@@ -870,66 +529,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         Catch ex As Exception
 
         End Try
-
-    End Sub
-
-    Private Sub EinAusblendenVonWZBereichenen()
-        Dim AnzlWZ As Integer = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen
-
-        'sonderfall 1 WZ = dann trotzdem 4 Belastungsorte
-        If AnzlWZ = 1 Then AnzlWZ = 4
-
-        'aus dem Designer sind alle panel bis auf 1 und Mitte visible = false und werden heir auf sichtbar geschaltet
-        For i As Integer = 1 To AnzlWZ Step 1
-            For bereich As Integer = 1 To 3
-                Dim PanelWZ As Telerik.WinControls.UI.RadPanel = FindControl(String.Format("PanelBereich{0}WZ{1}", CInt(bereich), i))
-                PanelWZ.Visible = True
-            Next
-        Next
-        Dim PanelWZMAX As Telerik.WinControls.UI.RadPanel = FindControl(String.Format("PanelBereich{0}WZ{1}", 1, AnzlWZ))
-        PanelBereich1WZMitte.Location = New Size(PanelWZMAX.Location.X, PanelWZMAX.Location.Y + 30)
-    End Sub
-
-    Private Sub BerechneNeueHoehe()
-        Try
-            'berechnen der neuen höhe für Groupboxen
-
-            'höhe = höhe - ((max WZ - Anzahl WZ)*Höhe VoN WZ Panel - Abstand zwischen den Panels (etwa 10))
-            Dim NeueHoehe As Integer
-
-            'sonderfall bei 1 WZ werden trotzdem 4 Bereiche und mitte angezeigt
-            If objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen = 1 Then
-                NeueHoehe = RadGroupBoxBereich1.Height - ((12 - 4) * PanelBereich1WZ1.Height) - ((12 - 4) * 8)
-
-            Else
-                NeueHoehe = RadGroupBoxBereich1.Height - ((12 - objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen) * PanelBereich1WZ1.Height) - ((12 - objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen) * 8)
-
-            End If
-
-            RadGroupBoxBereich1.Height = NeueHoehe + 20
-            RadGroupBoxBereich2.Height = NeueHoehe
-            RadGroupBoxBereich3.Height = NeueHoehe
-
-            'nicht nur werden die Groupboxen kleiner, sie müssen auch verschoben werden . (Passiert in Relation zur Vorherigen Groupbox)
-            RadGroupBoxBereich2.Location = New Size(RadGroupBoxBereich2.Location.X, RadGroupBoxBereich1.Location.Y + NeueHoehe + 40)
-            'dritte Groupbox muss sogar doppelt so hoch verschoben werden
-            RadGroupBoxBereich3.Location = New Size(RadGroupBoxBereich3.Location.X, RadGroupBoxBereich1.Location.Y + (NeueHoehe * 2) + 60)
-
-            'berechnen der äußeren Group Box Hoehe.
-            'Der wert ergibt sich aus der neuen Position der letzten sichtbaren Groupbox + deren neuer höher+ einige Pixel Puffer
-
-            If RadGroupBoxBereich3.Visible = True Then
-                RadGroupBoxPruefungAussermittigeBelastung.Size = New Size(RadGroupBoxPruefungAussermittigeBelastung.Size.Width, RadGroupBoxBereich3.Location.Y + RadGroupBoxBereich3.Size.Height + 30)
-            ElseIf RadGroupBoxBereich2.Visible = True Then
-                RadGroupBoxPruefungAussermittigeBelastung.Size = New Size(RadGroupBoxPruefungAussermittigeBelastung.Size.Width, RadGroupBoxBereich2.Location.Y + RadGroupBoxBereich2.Size.Height + 30)
-            ElseIf RadGroupBoxBereich1.Visible = True Then
-                RadGroupBoxPruefungAussermittigeBelastung.Size = New Size(RadGroupBoxPruefungAussermittigeBelastung.Size.Width, RadGroupBoxBereich1.Location.Y + RadGroupBoxBereich1.Size.Height + 30)
-            End If
-
-        Catch ex As Exception
-
-        End Try
-
     End Sub
     Private Sub FillControlsWiederholbarkeit()
         'füllen der berechnenten Steuerelemente
@@ -1010,6 +609,397 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
 
     End Sub
 
+    Private Sub SaveAussermittigeBelastung(ByRef Context As Entities)
+        'anzahl Bereiche auslesen um damit die anzahl der benötigten Iterationen und Objekt Erzeugungen zu erfahren
+        Dim intBereiche As Integer = GetAnzahlBereiche()
+
+        'alte löschen
+
+        Dim query = From a In Context.PruefungAussermittigeBelastung Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
+        For Each pruefung In query
+            Context.PruefungAussermittigeBelastung.Remove(pruefung)
+        Next
+        Context.SaveChanges()
+
+        _ListPruefungAussermittigeBelastung.Clear()
+
+        'wenn es defintiv noch keine pruefungen gibt, neue Anlegen
+        '  If _ListPruefungAussermittigeBelastung.Count = 0 Then
+
+        For j = 1 To intBereiche
+            'sonderfall eine Wägezelle
+            If objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen = 1 Then
+                SaveAussermittigeBelastungEinwaegezelle(Context, j)
+            Else
+                SaveAussermittigeBelastungMehrwaegezelle(Context, j)
+            End If
+        Next
+    End Sub
+
+    ''' <summary>
+    ''' prüfungstabellen laden
+    ''' </summary>
+    Private Sub LadePruefungen() Implements IRhewaPruefungDialog.LadePruefungen
+        'Nur laden wenn es sich um eine Bearbeitung handelt (sonst würde das in Memory Objekt überschrieben werden)
+        If Not DialogModus = enuDialogModus.lesend And Not DialogModus = enuDialogModus.korrigierend Then
+            LadePruefungenBearbeitungsModus()
+        Else
+            LadePruefungenRHEWAKorrekturModus()
+        End If
+    End Sub
+
+    Private Sub LadePruefungenRHEWAKorrekturModus() Implements IRhewaPruefungDialog.LadePruefungenRHEWAKorrekturModus
+        _ListPruefungWiederholbarkeit.Clear()
+        _ListPruefungAussermittigeBelastung.Clear()
+        Try
+            'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
+            For Each obj In objEichprozess.Eichprotokoll.PruefungAussermittigeBelastung
+                obj.Eichprotokoll = objEichprozess.Eichprotokoll
+                _ListPruefungAussermittigeBelastung.Add(obj)
+            Next
+
+            For Each obj In objEichprozess.Eichprotokoll.PruefungWiederholbarkeit
+                obj.Eichprotokoll = objEichprozess.Eichprotokoll
+                _ListPruefungWiederholbarkeit.Add(obj)
+            Next
+        Catch ex As System.ObjectDisposedException 'fehler im Clientseitigen Lesemodus (bei bereits abegschickter Eichung)
+            Using context As New Entities
+                Dim query = From a In context.PruefungAussermittigeBelastung Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
+                _ListPruefungAussermittigeBelastung = query.ToList
+
+                Dim query2 = From a In context.PruefungWiederholbarkeit Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
+                _ListPruefungWiederholbarkeit = query2.ToList
+            End Using
+        End Try
+
+        _currentObjVerfahren = objEichprozess.Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren
+    End Sub
+
+    Private Sub LadePruefungenBearbeitungsModus() Implements IRhewaPruefungDialog.LadePruefungenBearbeitungsModus
+        Using context As New Entities
+
+            'neu laden des Objekts, diesmal mit den lookup Objekten
+            objEichprozess = (From a In context.Eichprozess.Include("Eichprotokoll").Include("Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren").Include("Lookup_Bearbeitungsstatus").Include("Lookup_Vorgangsstatus").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
+
+            'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
+            Dim query = From a In context.PruefungAussermittigeBelastung Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
+            _ListPruefungAussermittigeBelastung = query.ToList
+
+            Dim query2 = From a In context.PruefungWiederholbarkeit Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
+            _ListPruefungWiederholbarkeit = query2.ToList
+
+            _currentObjVerfahren = (From a In context.Lookup_Konformitaetsbewertungsverfahren Where a.ID = objEichprozess.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren).FirstOrDefault
+        End Using
+    End Sub
+
+    ''' <summary>
+    ''' 'zurücksetzten der Groupboxen größen auf default (designer) werte. Sonst würden die Groupboxen immer kleiner gerechnet
+    ''' </summary>
+    Private Sub ResetGroupboxSizes()
+        RadGroupBoxBereich1.Size = New Size(503, 489)
+        RadGroupBoxBereich2.Size = New Size(503, 489)
+        RadGroupBoxBereich3.Size = New Size(503, 489)
+
+        RadGroupBoxBereich1.Location = New Size(21, 149)
+        RadGroupBoxBereich2.Location = New Size(21, 644)
+        RadGroupBoxBereich3.Location = New Size(21, 1139)
+    End Sub
+
+
+
+    Private Sub SaveAussermittigeBelastungMehrwaegezelle(Context As Entities, j As Integer)
+        For intBelastungsort As Integer = 1 To (objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen + 1) 'eine Mehr für Mitte
+            'bei mehrbereichswagen gibt es die Mitte nur im ersten Durchlauf
+            If j > 1 And intBelastungsort = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen + 1 Then
+                Continue For
+            End If
+
+            Dim objPruefung = Context.PruefungAussermittigeBelastung.Create
+            'wenn es die eine itereation mehr ist:
+            If intBelastungsort = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen + 1 Then
+                'mitte anlegen
+                objPruefung.Belastungsort = "M"
+            Else 'sonst bereich zuweisen
+                objPruefung.Belastungsort = intBelastungsort
+            End If
+            objPruefung.Bereich = j
+            UpdatePruefungsObject(objPruefung)
+
+            Try
+                Context.SaveChanges()
+
+            Catch ex As Validation.DbEntityValidationException
+                For Each e In ex.EntityValidationErrors
+                    MessageBox.Show(e.ValidationErrors(0).ErrorMessage)
+                Next
+            End Try
+
+            objEichprozess.Eichprotokoll.PruefungAussermittigeBelastung.Add(objPruefung)
+            Try
+                Context.SaveChanges()
+
+            Catch ex As Validation.DbEntityValidationException
+                For Each e In ex.EntityValidationErrors
+                    MessageBox.Show(e.ValidationErrors(0).ErrorMessage)
+                Next
+            End Try
+
+            _ListPruefungAussermittigeBelastung.Add(objPruefung)
+        Next
+    End Sub
+
+    Private Sub SaveAussermittigeBelastungEinwaegezelle(Context As Entities, j As Integer)
+        For intBelastungsort As Integer = 1 To 5 'eine Mehr für Mitte
+            If j > 1 And intBelastungsort = 5 Then
+                Continue For
+            End If
+            Dim objPruefung = Context.PruefungAussermittigeBelastung.Create
+            'wenn es die eine itereation mehr ist:
+            If intBelastungsort = 5 Then
+                'mitte anlegen
+                objPruefung.Belastungsort = "M"
+            Else 'sonst bereich zuweisen
+                objPruefung.Belastungsort = intBelastungsort
+            End If
+            objPruefung.Bereich = j
+            UpdatePruefungsObject(objPruefung)
+            Try
+                Context.SaveChanges()
+
+            Catch ex As Validation.DbEntityValidationException
+                For Each e In ex.EntityValidationErrors
+                    MessageBox.Show(e.ValidationErrors(0).ErrorMessage)
+                Next
+            End Try
+
+            objEichprozess.Eichprotokoll.PruefungAussermittigeBelastung.Add(objPruefung)
+            Try
+                Context.SaveChanges()
+
+            Catch ex As Validation.DbEntityValidationException
+                For Each e In ex.EntityValidationErrors
+                    MessageBox.Show(e.ValidationErrors(0).ErrorMessage)
+                Next
+            End Try
+
+            _ListPruefungAussermittigeBelastung.Add(objPruefung)
+        Next
+    End Sub
+
+    Private Sub SaveWiederholungen(ByRef Context As Entities)
+        If RadGroupBoxWiederholungen.Visible = True Then
+
+            'wenn es defintiv noch keine pruefungen gibt, neue Anlegen
+            If _ListPruefungWiederholbarkeit.Count = 0 Then
+                'anzahl Wiederholungen beträgt 3 um damit die anzahl der benötigten Iterationen und Objekt Erzeugungen zu erfahren
+                For i As Integer = 1 To 3
+
+                    'halbe Last
+                    Dim objPruefung = Context.PruefungWiederholbarkeit.Create
+                    'wenn es die eine itereation mehr ist:
+                    objPruefung.Wiederholung = i
+                    objPruefung.Belastung = "halb"
+                    UpdatePruefungsObject(objPruefung)
+
+                    Try
+                        Context.SaveChanges()
+
+                    Catch ex As Validation.DbEntityValidationException
+                        For Each e In ex.EntityValidationErrors
+                            MessageBox.Show(e.ValidationErrors(0).ErrorMessage)
+                        Next
+                    End Try
+
+                    objEichprozess.Eichprotokoll.PruefungWiederholbarkeit.Add(objPruefung)
+                    Try
+                        Context.SaveChanges()
+
+                    Catch ex As Validation.DbEntityValidationException
+                        For Each e In ex.EntityValidationErrors
+                            MessageBox.Show(e.ValidationErrors(0).ErrorMessage)
+                        Next
+                    End Try
+
+                    _ListPruefungWiederholbarkeit.Add(objPruefung)
+
+                Next
+            Else ' es gibt bereits welche
+                'jedes objekt initialisieren und aus context laden und updaten
+                For Each objPruefung In _ListPruefungWiederholbarkeit
+                    objPruefung = Context.PruefungWiederholbarkeit.FirstOrDefault(Function(value) value.ID = objPruefung.ID)
+                    UpdatePruefungsObject(objPruefung)
+                    Context.SaveChanges()
+                Next
+            End If
+
+        End If
+
+    End Sub
+
+    ''' <summary>
+    ''' je nach anzahl der WZ entsprechendes Bild laden
+    ''' </summary>
+    Private Sub LadeBilder()
+        'je nach anzahl der WZ entsprechendes Bild laden
+        If objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen <= 12 Then
+            PictureBox4LC.Visible = False
+            PictureBox6LC.Visible = False
+            PictureBox8LC.Visible = False
+            PictureBox10LC.Visible = False
+            PictureBox12LC.Visible = True
+        End If
+        If objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen <= 10 Then
+            PictureBox4LC.Visible = False
+            PictureBox6LC.Visible = False
+            PictureBox8LC.Visible = False
+            PictureBox10LC.Visible = True
+            PictureBox12LC.Visible = False
+        End If
+        If objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen <= 8 Then
+            PictureBox4LC.Visible = False
+            PictureBox6LC.Visible = False
+            PictureBox8LC.Visible = True
+            PictureBox10LC.Visible = False
+            PictureBox12LC.Visible = False
+        End If
+        If objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen <= 6 Then
+            PictureBox4LC.Visible = False
+            PictureBox6LC.Visible = True
+            PictureBox8LC.Visible = False
+            PictureBox10LC.Visible = False
+            PictureBox12LC.Visible = False
+        End If
+        If objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen <= 4 Then
+            PictureBox4LC.Visible = True
+            PictureBox6LC.Visible = False
+            PictureBox8LC.Visible = False
+            PictureBox10LC.Visible = False
+            PictureBox12LC.Visible = False
+        End If
+    End Sub
+
+    Private Sub BereichsgruppenAusblenden()
+        'je nach Art der Waage andere Bereichsgruppen ausblenden
+        If objEichprozess.Lookup_Waagenart.Art = "Einbereichswaage" Then
+            RadGroupBoxBereich2.Visible = False
+            RadGroupBoxBereich3.Visible = False
+
+        ElseIf objEichprozess.Lookup_Waagenart.Art = "Zweibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Zweiteilungswaage" Then
+            RadGroupBoxBereich2.Visible = True
+            RadGroupBoxBereich3.Visible = False
+        ElseIf objEichprozess.Lookup_Waagenart.Art = "Dreibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Dreiteilungswaage" Then
+            RadGroupBoxBereich2.Visible = True
+            RadGroupBoxBereich3.Visible = True
+        End If
+    End Sub
+
+    ''' <summary>
+    ''' Hoechstlast berechnen
+    ''' </summary>
+    Private Sub BerechneHoechstlast()
+
+        Dim teilungsfaktor As Integer = 3
+        Dim wert As String = "" 'hilfsvariable zum zuweisen des Textwertes
+        'je nach Zahl der Wägezellen ändert sich die Berechnung. Bei mehr als 4 WZ ändert sich die Formel von Hoechstlast / 3 auf Hoechstlast/(Anzahl WZ-1)
+        If objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen > 4 Then
+            teilungsfaktor = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen - 1
+        End If
+
+        'alle textboxen den entsprechenden Wert zuordnen
+        For bereich As Integer = 1 To 3
+
+            'neue Werte berechnen ab Bereich 2 und 3
+            If bereich = 1 Then
+                wert = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1 / teilungsfaktor
+            ElseIf bereich = 2 Then
+                If Not objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2.Equals("") Then
+                    wert = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 / teilungsfaktor
+                End If
+            ElseIf bereich = 3 Then
+                If Not objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3.Equals("") Then
+                    wert = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 / teilungsfaktor
+                End If
+            End If
+
+            If Not wert = "-1" Then 'abbruch bei nicht zutreffenden Bereichen
+                For belastungsort As Integer = 1 To 13
+                    Dim sBelastungsOrt As String = belastungsort
+                    If belastungsort = 13 Then sBelastungsOrt = "Mitte" 'sonderfall
+
+                    Dim last As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlBereich{0}Weight{1}", CInt(bereich), sBelastungsOrt))
+                    If Not last Is Nothing Then
+                        last.Text = wert
+                    End If
+
+                Next
+            End If
+            wert = "-1"
+        Next
+    End Sub
+
+
+
+    Private Sub EinAusblendenVonWZBereichenen()
+        Dim AnzlWZ As Integer = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen
+
+        'sonderfall 1 WZ = dann trotzdem 4 Belastungsorte
+        If AnzlWZ = 1 Then AnzlWZ = 4
+
+        'aus dem Designer sind alle panel bis auf 1 und Mitte visible = false und werden heir auf sichtbar geschaltet
+        For i As Integer = 1 To AnzlWZ Step 1
+            For bereich As Integer = 1 To 3
+                Dim PanelWZ As Telerik.WinControls.UI.RadPanel = FindControl(String.Format("PanelBereich{0}WZ{1}", CInt(bereich), i))
+                PanelWZ.Visible = True
+            Next
+        Next
+        Dim PanelWZMAX As Telerik.WinControls.UI.RadPanel = FindControl(String.Format("PanelBereich{0}WZ{1}", 1, AnzlWZ))
+        PanelBereich1WZMitte.Location = New Size(PanelWZMAX.Location.X, PanelWZMAX.Location.Y + 30)
+    End Sub
+
+    Private Sub BerechneNeueHoehe()
+        Try
+            'berechnen der neuen höhe für Groupboxen
+
+            'höhe = höhe - ((max WZ - Anzahl WZ)*Höhe VoN WZ Panel - Abstand zwischen den Panels (etwa 10))
+            Dim NeueHoehe As Integer
+
+            'sonderfall bei 1 WZ werden trotzdem 4 Bereiche und mitte angezeigt
+            If objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen = 1 Then
+                NeueHoehe = RadGroupBoxBereich1.Height - ((12 - 4) * PanelBereich1WZ1.Height) - ((12 - 4) * 8)
+
+            Else
+                NeueHoehe = RadGroupBoxBereich1.Height - ((12 - objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen) * PanelBereich1WZ1.Height) - ((12 - objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen) * 8)
+
+            End If
+
+            RadGroupBoxBereich1.Height = NeueHoehe + 20
+            RadGroupBoxBereich2.Height = NeueHoehe
+            RadGroupBoxBereich3.Height = NeueHoehe
+
+            'nicht nur werden die Groupboxen kleiner, sie müssen auch verschoben werden . (Passiert in Relation zur Vorherigen Groupbox)
+            RadGroupBoxBereich2.Location = New Size(RadGroupBoxBereich2.Location.X, RadGroupBoxBereich1.Location.Y + NeueHoehe + 40)
+            'dritte Groupbox muss sogar doppelt so hoch verschoben werden
+            RadGroupBoxBereich3.Location = New Size(RadGroupBoxBereich3.Location.X, RadGroupBoxBereich1.Location.Y + (NeueHoehe * 2) + 60)
+
+            'berechnen der äußeren Group Box Hoehe.
+            'Der wert ergibt sich aus der neuen Position der letzten sichtbaren Groupbox + deren neuer höher+ einige Pixel Puffer
+
+            If RadGroupBoxBereich3.Visible = True Then
+                RadGroupBoxPruefungAussermittigeBelastung.Size = New Size(RadGroupBoxPruefungAussermittigeBelastung.Size.Width, RadGroupBoxBereich3.Location.Y + RadGroupBoxBereich3.Size.Height + 30)
+            ElseIf RadGroupBoxBereich2.Visible = True Then
+                RadGroupBoxPruefungAussermittigeBelastung.Size = New Size(RadGroupBoxPruefungAussermittigeBelastung.Size.Width, RadGroupBoxBereich2.Location.Y + RadGroupBoxBereich2.Size.Height + 30)
+            ElseIf RadGroupBoxBereich1.Visible = True Then
+                RadGroupBoxPruefungAussermittigeBelastung.Size = New Size(RadGroupBoxPruefungAussermittigeBelastung.Size.Width, RadGroupBoxBereich1.Location.Y + RadGroupBoxBereich1.Size.Height + 30)
+            End If
+
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+
+
+
     Private Sub UeberschreibePruefungsobjekte()
         objEichprozess.Eichprotokoll.PruefungAussermittigeBelastung.Clear()
         For Each obj In _ListPruefungAussermittigeBelastung
@@ -1076,7 +1066,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
 
         End If
     End Sub
-#End Region
 
 
 
@@ -1198,23 +1187,21 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
 
 #End Region
 
-#Region "Hilfetexte"
-    Private Sub RadGroupBoxPruefungGenaugikeit_MouseHover(sender As Object, e As EventArgs) Handles RadGroupBoxPruefungGenaugikeit.MouseEnter
-        ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_Nullstellung)
-    End Sub
-
-    Private Sub RadGroupBoxPruefungAussermittigeBelastung_MouseHover(sender As Object, e As EventArgs) Handles RadGroupBoxPruefungAussermittigeBelastung.MouseEnter
-        ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungAussermittigerBelastung)
-    End Sub
-
-    Private Sub RadGroupBoxWiederholungen_MouseEnter(sender As Object, e As EventArgs) Handles RadGroupBoxWiederholungen.MouseEnter
-        ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungWiederholbarkeitStaffelverfahren)
-
-    End Sub
-
-#End Region
 
 #Region "Interface Methods"
+
+    Protected Friend Overrides Sub SetzeUeberschrift() Implements IRhewaEditingDialog.SetzeUeberschrift
+        If Not ParentFormular Is Nothing Then
+            Try
+                'Hilfetext setzen
+                ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungAussermittigerBelastung)
+                'Überschrift setzen
+                ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_PruefungNullstellungundAussermittigeBelastung
+            Catch ex As Exception
+            End Try
+        End If
+    End Sub
+
 
     Protected Friend Overrides Sub LoadFromDatabase() Implements IRhewaEditingDialog.LoadFromDatabase
         Me.SuspendLayout()
