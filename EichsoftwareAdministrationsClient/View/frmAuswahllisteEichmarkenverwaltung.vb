@@ -377,6 +377,8 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
 
             Using context As New HerstellerersteichungEntities
                 For Each row In RadGridView1.Rows
+                    If row.Cells("ZurBearbeitungGesperrtDurch").Value Is Nothing Then Continue For
+
                     If row.Cells("ZurBearbeitungGesperrtDurch").Value.Equals(System.Environment.UserName) Then
                         SelectedId = row.Cells("ID").Value
                         Dim objEichmarke As ServerEichmarkenverwaltung = (From Eichmarkenverwaltung In context.ServerEichmarkenverwaltung Where Eichmarkenverwaltung.ID = SelectedId Select Eichmarkenverwaltung).FirstOrDefault
@@ -399,7 +401,7 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
             End Using
 
         Catch ex As Exception
-            Debug.WriteLine(ex.Message)
+            MessageBox.Show(ex.Message)
         End Try
     End Sub
 
