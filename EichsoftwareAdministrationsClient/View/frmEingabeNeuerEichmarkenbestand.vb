@@ -48,10 +48,31 @@ Public Class frmEingabeNeuerEichmarkenbestand
 
 
     Private Sub UpdateObject()
-        _objEichmarkenverwaltung.BenannteStelleAnzahlAusgeteilt += RadTextBoxControl1.Text
-        _objEichmarkenverwaltung.SicherungsmarkeKleinAnzahlAusgeteilt += RadTextBoxControl2.Text
-        _objEichmarkenverwaltung.SicherungsmarkeGrossAnzahlAusgeteilt += RadTextBoxControl3.Text
-        _objEichmarkenverwaltung.HinweismarkeAnzahlAusgeteilt += RadTextBoxControl4.Text
+        If IsNumeric(_objEichmarkenverwaltung.BenannteStelleAnzahlAusgeteilt) Then
+            _objEichmarkenverwaltung.BenannteStelleAnzahlAusgeteilt += RadTextBoxControl1.Text
+        Else
+            _objEichmarkenverwaltung.BenannteStelleAnzahlAusgeteilt = RadTextBoxControl1.Text
+        End If
+        If IsNumeric(_objEichmarkenverwaltung.SicherungsmarkeKleinAnzahlAusgeteilt) Then
+            _objEichmarkenverwaltung.SicherungsmarkeKleinAnzahlAusgeteilt += RadTextBoxControl2.Text
+        Else
+            _objEichmarkenverwaltung.SicherungsmarkeKleinAnzahlAusgeteilt = RadTextBoxControl2.Text
+
+        End If
+        If IsNumeric(_objEichmarkenverwaltung.SicherungsmarkeGrossAnzahlAusgeteilt) Then
+            _objEichmarkenverwaltung.SicherungsmarkeGrossAnzahlAusgeteilt += RadTextBoxControl3.Text
+        Else
+            _objEichmarkenverwaltung.SicherungsmarkeGrossAnzahlAusgeteilt = RadTextBoxControl3.Text
+
+        End If
+        If IsNumeric(_objEichmarkenverwaltung.HinweismarkeAnzahlAusgeteilt) Then
+            _objEichmarkenverwaltung.HinweismarkeAnzahlAusgeteilt += RadTextBoxControl4.Text
+        Else
+            _objEichmarkenverwaltung.HinweismarkeAnzahlAusgeteilt = RadTextBoxControl4.Text
+
+        End If
+
+
     End Sub
 
     Private Sub RadButtonSpeichern_Click(sender As Object, e As EventArgs) Handles RadButton1.Click
@@ -81,6 +102,8 @@ Public Class frmEingabeNeuerEichmarkenbestand
                 End If
             End Using
             Me.Close()
+        Else
+            MessageBox.Show("Ungültige Werte eingetragen")
         End If
     End Sub
 
@@ -91,6 +114,11 @@ Public Class frmEingabeNeuerEichmarkenbestand
     ''' <author></author>
     ''' <commentauthor></commentauthor>
     Private Function ValidateControls() As Boolean
+        If Not IsNumeric(RadTextBoxControl1.Text) Then Return False
+        If Not IsNumeric(RadTextBoxControl2.Text) Then Return False
+        If Not IsNumeric(RadTextBoxControl3.Text) Then Return False
+        If Not IsNumeric(RadTextBoxControl4.Text) Then Return False
+
         Return True
     End Function
 

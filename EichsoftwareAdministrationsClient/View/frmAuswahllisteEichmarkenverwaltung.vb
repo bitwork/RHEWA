@@ -7,6 +7,7 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
 
 #Region "Deklaration"
     Private EditMode As Boolean = False 'gibt an ob ich im Editierungsmodus bin (beim Klick auf bearbeiten)
+    Private selectedRowIndex As Integer = 0 'aktuell ausgewählte Row
 #End Region
 
 #Region "Methoden"
@@ -147,7 +148,6 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
 
     Private Sub LoadFromDatabase()
         Try
-
             SuspendLayout()
             'Eichmarken Grid
             Using Context As New HerstellerersteichungEntities
@@ -185,161 +185,186 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
                            }
 
                 'databinding
-                RadGridView1.DataSource = Data.ToList
+                RadGridView1.DataSource = Data.OrderBy(Function(x) x.Nachname).ToList
+
                 '##################################################################
 
                 'Kindtabelle Firmendaten
 
                 '##################################################################
 
-                'alle Firmen auslesen
-
-                'Das entityframework machte hier Probleme mit dem doppelten left outer join. deswegen ein umweg.
-                'es werden erst alle Firmendaten geladen, dann alle Zuordnungsdaten und dann diese Daten in einer Datatable zusammengeführt. Alles in einem Schritt wäre natürlich schöner gewesen
-                Dim Firmen = From firma In Context.Firmen
-                             From firmenzusatzdaten In firma.ServerFirmenZusatzdaten.DefaultIfEmpty
-                             Select New With {
-                                 .id = firma.ID,
-                                 firma.Name,
-                                 firma.Telefon,
-                                 firma.Strasse,
-                                 firma.Ort,
-                                 firma.PLZ,
-                                 firma.Land,
-                                 firmenzusatzdaten.Abrechnungsmodell,
-                                 firmenzusatzdaten.BeginnVertrag,
-                                 firmenzusatzdaten.EndeVertrag,
-                                 firmenzusatzdaten.Erstschulung,
-                                 firmenzusatzdaten.LetztesAudit,
-                                 firmenzusatzdaten.MonatJahrZertifikat,
-                                 firmenzusatzdaten.Nachschulung,
-                                 firmenzusatzdaten.Qualifizierungspauschale
-                             }
-
-                'es gibt DB Seitig eine Abhängigkeit zwischen Firmen und Firmenzusatzdaten. Deswegen wurde hier kein JOIN gewählt. WICHTIG: die Firmen zusatzdaten werden nicht aus dem Context geladen, sondern von "firma". Dies klappt nur weil durch die Beziehung eine Navigation property existiert
-
-                Dim FirmenZuordnung = (From Zuordnung In Context.ServerLookupVertragspartnerFirma).ToList
-
-                Dim dtFirmenKomplett As New DataTable("Firmen")
-                dtFirmenKomplett.Columns.Add("ID")
-                dtFirmenKomplett.Columns.Add("Name")
-                dtFirmenKomplett.Columns.Add("Telefon")
-                dtFirmenKomplett.Columns.Add("Strasse")
-                dtFirmenKomplett.Columns.Add("Ort")
-                dtFirmenKomplett.Columns.Add("PLZ")
-                dtFirmenKomplett.Columns.Add("Land")
-                dtFirmenKomplett.Columns.Add("Abrechnungsmodell")
-                dtFirmenKomplett.Columns.Add("BeginnVertrag")
-                dtFirmenKomplett.Columns.Add("EndeVertrag")
-                dtFirmenKomplett.Columns.Add("Erstschulung")
-                dtFirmenKomplett.Columns.Add("LetztesAudit")
-                dtFirmenKomplett.Columns.Add("MonatJahrZertifikat")
-                dtFirmenKomplett.Columns.Add("Nachschulung")
-                dtFirmenKomplett.Columns.Add("Qualifizierungspauschale")
-
-                dtFirmenKomplett.Columns.Add("Hauptfirma_FK") 'falls die aktuelle Firma eine Vertragsfirma ist, steht hier drin der Verweis zur Hauptfirma
-
-                'umwandeln von entität zu DT. Leider notwendig.
-                For Each Firma In Firmen
-                    Dim nrow As DataRow = dtFirmenKomplett.NewRow
-                    nrow.Item("ID") = Firma.id
-                    nrow.Item("Name") = Firma.Name
-                    nrow.Item("Telefon") = Firma.Telefon
-                    nrow.Item("Strasse") = Firma.Strasse
-                    nrow.Item("Ort") = Firma.Ort
-                    nrow.Item("PLZ") = Firma.PLZ
-                    nrow.Item("Land") = Firma.Land
-
-                    nrow.Item("Abrechnungsmodell") = Firma.Abrechnungsmodell
-
-                    If Firma.BeginnVertrag.HasValue Then nrow.Item("BeginnVertrag") = Firma.BeginnVertrag.Value.ToShortDateString
-                    If Firma.EndeVertrag.HasValue Then nrow.Item("EndeVertrag") = Firma.EndeVertrag.Value.ToShortDateString
-                    If Firma.Erstschulung.HasValue Then nrow.Item("Erstschulung") = Firma.Erstschulung.Value.ToShortDateString
-                    If Firma.LetztesAudit.HasValue Then nrow.Item("LetztesAudit") = Firma.LetztesAudit.Value.ToShortDateString
-                    If Firma.Nachschulung.HasValue Then nrow.Item("Nachschulung") = Firma.Nachschulung.Value.ToShortDateString
-                    nrow.Item("MonatJahrZertifikat") = Firma.MonatJahrZertifikat
-                    nrow.Item("Qualifizierungspauschale") = Firma.Qualifizierungspauschale
-
-                    'Über Firma prüfen ob es eine Hauptfirma gibt
-                    If FirmenZuordnung.Contains((From firm In FirmenZuordnung Where firm.Vertragspartner_FK = Firma.id).FirstOrDefault) Then
-                        'laut Herrn Strack, kann eine Firma immer nur eine Hauptfirma haben. Eine Hauptfirma aber n Firmen
-                        Dim hauptfirmaID = (From firm In FirmenZuordnung Where firm.Vertragspartner_FK = Firma.id Select firm.Firma_FK).FirstOrDefault
-                        nrow.Item("Hauptfirma_FK") = hauptfirmaID 'falls die aktuelle Firma eine Vertragsfirma ist, steht hier drin der Verweis zur Hauptfirma
-
-                    End If
-
-                    dtFirmenKomplett.Rows.Add(nrow)
-                Next
+                Dim dtFirmenKomplett As DataTable = GetFirmenKomplett(Context)
 
                 '###########################################
                 'MAPPING über Benutzer die Firmen Hierarisch zuordnen
                 '##########################################
 
-                'Mapping zur Firmentabelle
-                Dim SecondLevelTemplateFirmen As New GridViewTemplate()
-                SecondLevelTemplateFirmen.DataSource = dtFirmenKomplett.DefaultView
-                SecondLevelTemplateFirmen.AllowAddNewRow = False
-                SecondLevelTemplateFirmen.AllowColumnChooser = False
-                SecondLevelTemplateFirmen.AllowColumnHeaderContextMenu = False
-                SecondLevelTemplateFirmen.AllowColumnReorder = False
-                SecondLevelTemplateFirmen.AllowDeleteRow = False
-                SecondLevelTemplateFirmen.AllowDragToGroup = False
-                SecondLevelTemplateFirmen.AllowEditRow = False
-                SecondLevelTemplateFirmen.BestFitColumns()
-
-                'Relation aufbauen zwischen Parent und Child über Firma des Benutzers
-                RadGridView1.MasterTemplate.Templates.Add(SecondLevelTemplateFirmen)
-
-                Dim relation As New GridViewRelation(RadGridView1.MasterTemplate)
-                relation.ChildTemplate = SecondLevelTemplateFirmen
-                relation.RelationName = "BenutzerFirma"
-                relation.ParentColumnNames.Add("Firma_FK")
-                relation.ChildColumnNames.Add("ID")
-
-                RadGridView1.Relations.Add(relation)
-
-                '#########################################################
-                ' MAPPING Selbstreferenz des Templates erzeugen um Hauptfirma zum Vertragspartner zuzuordnen
-                '#########################################################
-                '      Me.RadGridView1.Relations.AddSelfReference(template, "Hauptfirma_FK", "ID")
-
-                Dim dtHauptfirmenView As New DataView(dtFirmenKomplett)
-                dtHauptfirmenView.RowFilter = "Hauptfirma_FK is NULL"
-
-                'Mapping zur Firmentabelle
-                Dim ThirdLevelTemplateHauptfirmen = New GridViewTemplate()
-                ThirdLevelTemplateHauptfirmen.DataSource = dtHauptfirmenView.ToTable
-                ThirdLevelTemplateHauptfirmen.AllowAddNewRow = False
-                ThirdLevelTemplateHauptfirmen.AllowColumnChooser = False
-                ThirdLevelTemplateHauptfirmen.AllowColumnHeaderContextMenu = False
-                ThirdLevelTemplateHauptfirmen.AllowColumnReorder = False
-                ThirdLevelTemplateHauptfirmen.AllowDeleteRow = False
-                ThirdLevelTemplateHauptfirmen.AllowDragToGroup = False
-                ThirdLevelTemplateHauptfirmen.AllowEditRow = False
-                ThirdLevelTemplateHauptfirmen.BestFitColumns()
-
-                'Relation aufbauen zwischen Parent und Child über Firma und Hauptfirma
-                SecondLevelTemplateFirmen.Templates.Add(ThirdLevelTemplateHauptfirmen)
-
-                Dim relation2 As New GridViewRelation(SecondLevelTemplateFirmen)
-                relation2.ChildTemplate = ThirdLevelTemplateHauptfirmen
-                relation2.RelationName = "FirmaHauptfirma"
-                relation2.ParentColumnNames.Add("Hauptfirma_FK")
-                relation2.ChildColumnNames.Add("ID")
-
-                RadGridView1.Relations.Add(relation2)
+                SetGridChildRelations(dtFirmenKomplett)
 
                 'Grid Formatieren
                 FormatGrid()
             End Using
 
             ResumeLayout()
+
+            SetSelectedGridIndex()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
             MessageBox.Show(ex.StackTrace)
         End Try
     End Sub
 
+    ''' <summary>
+    '''  'Mapping zur Firmentabelle
+    ''' </summary>
+    ''' <param name="dtFirmenKomplett"></param>
+    Private Sub SetGridChildRelations(dtFirmenKomplett As DataTable)
+        'Mapping zur Firmentabelle
+        Dim SecondLevelTemplateFirmen As New GridViewTemplate()
+        SecondLevelTemplateFirmen.DataSource = dtFirmenKomplett.DefaultView
+        SecondLevelTemplateFirmen.AllowAddNewRow = False
+        SecondLevelTemplateFirmen.AllowColumnChooser = False
+        SecondLevelTemplateFirmen.AllowColumnHeaderContextMenu = False
+        SecondLevelTemplateFirmen.AllowColumnReorder = False
+        SecondLevelTemplateFirmen.AllowDeleteRow = False
+        SecondLevelTemplateFirmen.AllowDragToGroup = False
+        SecondLevelTemplateFirmen.AllowEditRow = False
+        SecondLevelTemplateFirmen.BestFitColumns()
+
+        'Relation aufbauen zwischen Parent und Child über Firma des Benutzers
+        RadGridView1.MasterTemplate.Templates.Add(SecondLevelTemplateFirmen)
+
+        Dim relation As New GridViewRelation(RadGridView1.MasterTemplate)
+        relation.ChildTemplate = SecondLevelTemplateFirmen
+        relation.RelationName = "BenutzerFirma"
+        relation.ParentColumnNames.Add("Firma_FK")
+        relation.ChildColumnNames.Add("ID")
+
+        RadGridView1.Relations.Add(relation)
+
+        '#########################################################
+        ' MAPPING Selbstreferenz des Templates erzeugen um Hauptfirma zum Vertragspartner zuzuordnen
+        '#########################################################
+        '      Me.RadGridView1.Relations.AddSelfReference(template, "Hauptfirma_FK", "ID")
+
+        Dim dtHauptfirmenView As New DataView(dtFirmenKomplett)
+        dtHauptfirmenView.RowFilter = "Hauptfirma_FK is NULL"
+
+        'Mapping zur Firmentabelle
+        Dim ThirdLevelTemplateHauptfirmen = New GridViewTemplate()
+        ThirdLevelTemplateHauptfirmen.DataSource = dtHauptfirmenView.ToTable
+        ThirdLevelTemplateHauptfirmen.AllowAddNewRow = False
+        ThirdLevelTemplateHauptfirmen.AllowColumnChooser = False
+        ThirdLevelTemplateHauptfirmen.AllowColumnHeaderContextMenu = False
+        ThirdLevelTemplateHauptfirmen.AllowColumnReorder = False
+        ThirdLevelTemplateHauptfirmen.AllowDeleteRow = False
+        ThirdLevelTemplateHauptfirmen.AllowDragToGroup = False
+        ThirdLevelTemplateHauptfirmen.AllowEditRow = False
+        ThirdLevelTemplateHauptfirmen.BestFitColumns()
+
+        'Relation aufbauen zwischen Parent und Child über Firma und Hauptfirma
+        SecondLevelTemplateFirmen.Templates.Add(ThirdLevelTemplateHauptfirmen)
+
+        Dim relation2 As New GridViewRelation(SecondLevelTemplateFirmen)
+        relation2.ChildTemplate = ThirdLevelTemplateHauptfirmen
+        relation2.RelationName = "FirmaHauptfirma"
+        relation2.ParentColumnNames.Add("Hauptfirma_FK")
+        relation2.ChildColumnNames.Add("ID")
+
+        RadGridView1.Relations.Add(relation2)
+    End Sub
+
+    Private Shared Function GetFirmenKomplett(Context As HerstellerersteichungEntities) As DataTable
+        'alle Firmen auslesen
+
+        'Das entityframework machte hier Probleme mit dem doppelten left outer join. deswegen ein umweg.
+        'es werden erst alle Firmendaten geladen, dann alle Zuordnungsdaten und dann diese Daten in einer Datatable zusammengeführt. Alles in einem Schritt wäre natürlich schöner gewesen
+        Dim Firmen = (From firma In Context.Firmen
+                      From firmenzusatzdaten In firma.ServerFirmenZusatzdaten.DefaultIfEmpty
+                      Select New DTOFirmenEichmarkenverwaltung() With {
+                       .ID = firma.ID,
+                       .Name = firma.Name,
+                       .Telefon = firma.Telefon,
+                       .Strasse = firma.Strasse,
+                       .Ort = firma.Ort,
+                       .PLZ = firma.PLZ,
+                       .Land = firma.Land,
+                       .Abrechnungsmodell = firmenzusatzdaten.Abrechnungsmodell,
+                       .BeginnVertrag = firmenzusatzdaten.BeginnVertrag,
+                       .EndeVertrag = firmenzusatzdaten.EndeVertrag,
+                       .Erstschulung = firmenzusatzdaten.Erstschulung,
+                       .LetztesAudit = firmenzusatzdaten.LetztesAudit,
+                       .MonatJahrZertifikat = firmenzusatzdaten.MonatJahrZertifikat,
+                       .Nachschulung = firmenzusatzdaten.Nachschulung,
+                       .Qualifizierungspauschale = firmenzusatzdaten.Qualifizierungspauschale
+                     }).ToList
+
+        'es gibt DB Seitig eine Abhängigkeit zwischen Firmen und Firmenzusatzdaten. Deswegen wurde hier kein JOIN gewählt. WICHTIG: die Firmen zusatzdaten werden nicht aus dem Context geladen, sondern von "firma". Dies klappt nur weil durch die Beziehung eine Navigation property existiert
+        Dim FirmenZuordnung = (From Zuordnung In Context.ServerLookupVertragspartnerFirma).ToList
+
+        Dim dtFirmenKomplett As DataTable = GetFirmenDatatable()
+        FillFirmenDatatable(Firmen, FirmenZuordnung, dtFirmenKomplett)
+
+        Return dtFirmenKomplett
+    End Function
+
+    Private Shared Sub FillFirmenDatatable(Firmen As List(Of DTOFirmenEichmarkenverwaltung), FirmenZuordnung As List(Of ServerLookupVertragspartnerFirma), dtFirmenKomplett As DataTable)
+        'umwandeln von entität zu DT. Leider notwendig.
+        For Each Firma In Firmen
+            Dim nrow As DataRow = dtFirmenKomplett.NewRow
+            nrow.Item("ID") = Firma.ID
+            nrow.Item("Name") = Firma.Name
+            nrow.Item("Telefon") = Firma.Telefon
+            nrow.Item("Strasse") = Firma.Strasse
+            nrow.Item("Ort") = Firma.Ort
+            nrow.Item("PLZ") = Firma.PLZ
+            nrow.Item("Land") = Firma.Land
+
+            nrow.Item("Abrechnungsmodell") = Firma.Abrechnungsmodell
+
+            If Firma.BeginnVertrag.HasValue Then nrow.Item("BeginnVertrag") = Firma.BeginnVertrag.Value.ToShortDateString
+            If Firma.EndeVertrag.HasValue Then nrow.Item("EndeVertrag") = Firma.EndeVertrag.Value.ToShortDateString
+            If Firma.Erstschulung.HasValue Then nrow.Item("Erstschulung") = Firma.Erstschulung.Value.ToShortDateString
+            If Firma.LetztesAudit.HasValue Then nrow.Item("LetztesAudit") = Firma.LetztesAudit.Value.ToShortDateString
+            If Firma.Nachschulung.HasValue Then nrow.Item("Nachschulung") = Firma.Nachschulung.Value.ToShortDateString
+            nrow.Item("MonatJahrZertifikat") = Firma.MonatJahrZertifikat
+            nrow.Item("Qualifizierungspauschale") = Firma.Qualifizierungspauschale
+
+            'Über Firma prüfen ob es eine Hauptfirma gibt
+            If FirmenZuordnung.Contains((From firm In FirmenZuordnung Where firm.Vertragspartner_FK = Firma.ID).FirstOrDefault) Then
+                'laut Herrn Strack, kann eine Firma immer nur eine Hauptfirma haben. Eine Hauptfirma aber n Firmen
+                Dim hauptfirmaID = (From firm In FirmenZuordnung Where firm.Vertragspartner_FK = Firma.ID Select firm.Firma_FK).FirstOrDefault
+                nrow.Item("Hauptfirma_FK") = hauptfirmaID 'falls die aktuelle Firma eine Vertragsfirma ist, steht hier drin der Verweis zur Hauptfirma
+
+            End If
+
+            dtFirmenKomplett.Rows.Add(nrow)
+        Next
+    End Sub
+
+
+
+    Private Shared Function GetFirmenDatatable() As DataTable
+        Dim dtFirmenKomplett As New DataTable("Firmen")
+        dtFirmenKomplett.Columns.Add("ID")
+        dtFirmenKomplett.Columns.Add("Name")
+        dtFirmenKomplett.Columns.Add("Telefon")
+        dtFirmenKomplett.Columns.Add("Strasse")
+        dtFirmenKomplett.Columns.Add("Ort")
+        dtFirmenKomplett.Columns.Add("PLZ")
+        dtFirmenKomplett.Columns.Add("Land")
+        dtFirmenKomplett.Columns.Add("Abrechnungsmodell")
+        dtFirmenKomplett.Columns.Add("BeginnVertrag")
+        dtFirmenKomplett.Columns.Add("EndeVertrag")
+        dtFirmenKomplett.Columns.Add("Erstschulung")
+        dtFirmenKomplett.Columns.Add("LetztesAudit")
+        dtFirmenKomplett.Columns.Add("MonatJahrZertifikat")
+        dtFirmenKomplett.Columns.Add("Nachschulung")
+        dtFirmenKomplett.Columns.Add("Qualifizierungspauschale")
+
+        dtFirmenKomplett.Columns.Add("Hauptfirma_FK") 'falls die aktuelle Firma eine Vertragsfirma ist, steht hier drin der Verweis zur Hauptfirma
+        Return dtFirmenKomplett
+    End Function
 
 
     ''' <summary>
@@ -441,6 +466,7 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
 
     End Sub
 
+#Region "Grid Layout"
     ''' <summary>
     ''' Lädt Gridlayout aus settings
     ''' </summary>
@@ -478,6 +504,35 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
 
         End Try
     End Sub
+#End Region
+
+
+    ''' <summary>
+    ''' Markiert die Row rot, wenn der Meldestand erreicht ist
+    ''' </summary>
+    ''' <param name="e"></param>
+    ''' <param name="ColumnNameAnzahl"></param>
+    ''' <param name="ColumnNameAusgeteilte"></param>
+    ''' <param name="columnNameMeldestand"></param>
+    ''' <param name="ColumnNameFehler"></param>
+    ''' <returns></returns>
+    Private Function GetMeldestandErreicht(e As Telerik.WinControls.UI.CellFormattingEventArgs, ByVal ColumnNameAnzahl As String, ByVal ColumnNameAusgeteilte As String, ByVal columnNameMeldestand As String, ByVal ColumnNameFehler As String) As Boolean
+        Try
+            'Ausgeteilte - (istAnzahl + Fehlanzahl) <= Meldestand      dann rot
+            Dim ValueAnzahl As Decimal = CDec(e.Row.Cells(ColumnNameAnzahl).Value)
+            Dim ValueAusgeteilt As Decimal = CDec(e.Row.Cells(ColumnNameAusgeteilte).Value)
+            Dim ValueMeldestand As Decimal = CDec(e.Row.Cells(columnNameMeldestand).Value)
+            Dim ValueFehler As Decimal = CDec(e.Row.Cells(ColumnNameFehler).Value)
+
+            If ValueAusgeteilt - (ValueAnzahl + ValueFehler) <= ValueMeldestand Then
+                Return True
+            End If
+        Catch ex As Exception
+            Return False
+        End Try
+        Return False
+
+    End Function
 
 #End Region
 
@@ -485,12 +540,6 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
 
     Private Sub FrmAuswahllisteWZ_Load(sender As Object, e As EventArgs) Handles Me.Load
         LoadFromDatabase()
-
-        '' laden des Grid Layouts
-        'If Debugger.IsAttached = False Then
-        '    LadeGridLayout()
-
-        'End If
     End Sub
 
     Private Sub FrmEichmarkenverwaltung_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
@@ -505,7 +554,6 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
 
         'gesperrte DS des aktuellen Nutzers entsperren
         EntsperreDS()
-
     End Sub
 
 #Region "Bearbeitungs / Speicheroutine"
@@ -542,28 +590,21 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
         LoadFromDatabase()
     End Sub
 
-#End Region
-
-#End Region
-
-
-    Private Function GetNeedFill(e As Telerik.WinControls.UI.CellFormattingEventArgs, ByVal ColumnNameAnzahl As String, ByVal ColumnNameAusgeteilte As String, ByVal columnNameMeldestand As String, ByVal ColumnNameFehler As String) As Boolean
+    Sub SetSelectedGridIndex()
         Try
-            'Ausgeteilte - (istAnzahl + Fehlanzahl) <= Meldestand      dann rot
-            Dim ValueAnzahl As Decimal = CDec(e.Row.Cells(ColumnNameAnzahl).Value)
-            Dim ValueAusgeteilt As Decimal = CDec(e.Row.Cells(ColumnNameAusgeteilte).Value)
-            Dim ValueMeldestand As Decimal = CDec(e.Row.Cells(columnNameMeldestand).Value)
-            Dim ValueFehler As Decimal = CDec(e.Row.Cells(ColumnNameFehler).Value)
+            RadGridView1.Rows(selectedRowIndex).IsSelected = True
+            RadGridView1.Rows(selectedRowIndex).EnsureVisible()
 
-            If ValueAusgeteilt - (ValueAnzahl + ValueFehler) <= ValueMeldestand Then
-                Return True
-            End If
+            RadGridView1.MasterView.Rows(selectedRowIndex).IsSelected = True
         Catch ex As Exception
-            Return False
         End Try
-        Return False
+    End Sub
 
-    End Function
+#End Region
+
+#End Region
+
+
 
 #Region "Grid Events"
     Private Sub RadGridView1_CellFormatting(sender As Object, e As Telerik.WinControls.UI.CellFormattingEventArgs) Handles RadGridView1.CellFormatting
@@ -576,26 +617,26 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
                 'Ausgeteilte - (istAnzahl + Fehlanzahl) <= Meldestand      dann rot
 
                 If (e.Column.Name = "BenannteStelleAnzahl") Then
-                    If GetNeedFill(e, "BenannteStelleAnzahl", "BenannteStelleAnzahlAusgeteilt", "BenannteStelleAnzahlMeldestand", "BenannteStelleFehlmenge") Then 'e.Row.Cells("BenannteStelleAnzahl").Value <= e.Row.Cells("BenannteStelleAnzahlMeldestand").Value) Then
-                        e = fillRed(e)
+                    If GetMeldestandErreicht(e, "BenannteStelleAnzahl", "BenannteStelleAnzahlAusgeteilt", "BenannteStelleAnzahlMeldestand", "BenannteStelleFehlmenge") Then 'e.Row.Cells("BenannteStelleAnzahl").Value <= e.Row.Cells("BenannteStelleAnzahlMeldestand").Value) Then
+                        e = MarkGridRowRed(e)
                     End If
                 ElseIf (e.Column.Name = "SicherungsmarkeKleinAnzahl") Then
-                    If GetNeedFill(e, "SicherungsmarkeKleinAnzahl", "SicherungsmarkeKleinAnzahlAusgeteilt", "SicherungsmarkeKleinAnzahlMeldestand", "SicherungsmarkeKleinFehlmenge") Then ' And e.Row.Cells("SicherungsmarkeKleinAnzahl").Value <= e.Row.Cells("SicherungsmarkeKleinAnzahlMeldestand").Value) Then
-                        e = fillRed(e)
+                    If GetMeldestandErreicht(e, "SicherungsmarkeKleinAnzahl", "SicherungsmarkeKleinAnzahlAusgeteilt", "SicherungsmarkeKleinAnzahlMeldestand", "SicherungsmarkeKleinFehlmenge") Then ' And e.Row.Cells("SicherungsmarkeKleinAnzahl").Value <= e.Row.Cells("SicherungsmarkeKleinAnzahlMeldestand").Value) Then
+                        e = MarkGridRowRed(e)
                     End If
 
                 ElseIf (e.Column.Name = "SicherungsmarkeGrossAnzahl") Then
-                    If GetNeedFill(e, "SicherungsmarkeGrossAnzahl", "SicherungsmarkeGrossAnzahlAusgeteilt", "SicherungsmarkeGrossAnzahlMeldestand", "SicherungsmarkeGrossFehlmenge") Then ' And e.Row.Cells("SicherungsmarkeGrossAnzahl").Value <= e.Row.Cells("SicherungsmarkeGrossAnzahlMeldestand").Value) Then
-                        e = fillRed(e)
+                    If GetMeldestandErreicht(e, "SicherungsmarkeGrossAnzahl", "SicherungsmarkeGrossAnzahlAusgeteilt", "SicherungsmarkeGrossAnzahlMeldestand", "SicherungsmarkeGrossFehlmenge") Then ' And e.Row.Cells("SicherungsmarkeGrossAnzahl").Value <= e.Row.Cells("SicherungsmarkeGrossAnzahlMeldestand").Value) Then
+                        e = MarkGridRowRed(e)
                     End If
 
                 ElseIf (e.Column.Name = "HinweismarkeAnzahl") Then
-                    If GetNeedFill(e, "HinweismarkeAnzahl", "HinweismarkeAnzahlAusgeteilt", "HinweismarkeAnzahlMeldestand", "HinweismarkeFehlmenge") Then 'And e.Row.Cells("HinweismarkeAnzahl").Value <= e.Row.Cells("HinweismarkeAnzahlMeldestand").Value) Then
-                        e = fillRed(e)
+                    If GetMeldestandErreicht(e, "HinweismarkeAnzahl", "HinweismarkeAnzahlAusgeteilt", "HinweismarkeAnzahlMeldestand", "HinweismarkeFehlmenge") Then 'And e.Row.Cells("HinweismarkeAnzahl").Value <= e.Row.Cells("HinweismarkeAnzahlMeldestand").Value) Then
+                        e = MarkGridRowRed(e)
                     End If
 
                 Else
-                    e = fillWhite(e)
+                    e = MarkGridRowWhite(e)
                 End If
 
                 'Formatieren der Kind und Kindskind Tabelle
@@ -615,20 +656,21 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
         End Try
     End Sub
 
-    Private Shared Function fillWhite(e As CellFormattingEventArgs) As CellFormattingEventArgs
+    Private Shared Function MarkGridRowWhite(e As CellFormattingEventArgs) As CellFormattingEventArgs
         e.CellElement.DrawFill = False
         e.CellElement.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         e.CellElement.BackColor = Color.White
         Return e
     End Function
 
-    Private Shared Function fillRed(e As CellFormattingEventArgs) As CellFormattingEventArgs
+    Private Shared Function MarkGridRowRed(e As CellFormattingEventArgs) As CellFormattingEventArgs
         e.CellElement.DrawFill = True
         e.CellElement.GradientStyle = Telerik.WinControls.GradientStyles.Solid
         e.CellElement.BackColor = Color.FromArgb(255, 209, 140)
         Return e
     End Function
 
+#Region "ChildRows"
     ''' <summary>
     ''' Durch dieses Event wird dafür gesorgt, das nur, sofern auch Kindelemente existieren, der EXPAND Button angezeigt wird. Standardmäßig ist dieser nämlich bei jedem DS. Es hat aber nicht jede Firma eine Hauptfirma
     ''' </summary>
@@ -654,6 +696,8 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
     Private Sub radGridView1_ChildViewExpanding(sender As Object, e As ChildViewExpandingEventArgs) Handles RadGridView1.ChildViewExpanding
         e.Cancel = Not clsTelerikHelper.IsExpandable(e.ParentRow)
     End Sub
+#End Region
+
 
     Private Sub RadGridView1_CellBeginEdit(sender As Object, e As Telerik.WinControls.UI.GridViewCellCancelEventArgs) Handles RadGridView1.CellBeginEdit
         Dim SelectedId As String
@@ -713,6 +757,17 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
             End If
         Next
 
+    End Sub
+
+    Private Sub RadGridView1_SelectionChanged(sender As Object, e As EventArgs) Handles RadGridView1.SelectionChanged
+        Try
+            If RadGridView1.SelectedRows.First.Index > 0 Then
+                selectedRowIndex = RadGridView1.SelectedRows.First.Index
+
+            End If
+        Catch ex As Exception
+
+        End Try
     End Sub
 
 

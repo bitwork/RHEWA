@@ -173,6 +173,7 @@
     <Compile Include="Firmen.vb">
       <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\DTOFirmenEichmarkenverwaltung.vb" />
     <Compile Include="ServerAblageEichprozesse.vb">
       <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
     </Compile>

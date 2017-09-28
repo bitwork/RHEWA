@@ -23,7 +23,7 @@ Partial Class FrmAuswahllisteEichmarkenverwaltung
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim TableViewDefinition3 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim TableViewDefinition2 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Me.RadGridView1 = New Telerik.WinControls.UI.RadGridView()
         Me.RadButtonBearbeiten = New Telerik.WinControls.UI.RadButton()
         Me.RadButtonAbbrechen = New Telerik.WinControls.UI.RadButton()
@@ -45,7 +45,6 @@ Partial Class FrmAuswahllisteEichmarkenverwaltung
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.RadGridView1.AutoGenerateHierarchy = True
-        Me.RadGridView1.EnableCustomFiltering = True
         Me.RadGridView1.Location = New System.Drawing.Point(12, 12)
         '
         '
@@ -54,10 +53,9 @@ Partial Class FrmAuswahllisteEichmarkenverwaltung
         Me.RadGridView1.MasterTemplate.AllowDeleteRow = False
         Me.RadGridView1.MasterTemplate.AllowEditRow = False
         Me.RadGridView1.MasterTemplate.AutoExpandGroups = True
-        Me.RadGridView1.MasterTemplate.EnableCustomFiltering = True
         Me.RadGridView1.MasterTemplate.EnableFiltering = True
         Me.RadGridView1.MasterTemplate.ShowHeaderCellButtons = True
-        Me.RadGridView1.MasterTemplate.ViewDefinition = TableViewDefinition3
+        Me.RadGridView1.MasterTemplate.ViewDefinition = TableViewDefinition2
         Me.RadGridView1.Name = "RadGridView1"
         Me.RadGridView1.ShowHeaderCellButtons = True
         Me.RadGridView1.Size = New System.Drawing.Size(950, 489)
@@ -66,16 +64,11 @@ Partial Class FrmAuswahllisteEichmarkenverwaltung
         'RadButtonBearbeiten
         '
         Me.RadButtonBearbeiten.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RadButtonBearbeiten.Location = New System.Drawing.Point(852, 507)
+        Me.RadButtonBearbeiten.Location = New System.Drawing.Point(736, 507)
         Me.RadButtonBearbeiten.Name = "RadButtonBearbeiten"
-        '
-        '
-        '
-        Me.RadButtonBearbeiten.RootElement.AccessibleDescription = Nothing
-        Me.RadButtonBearbeiten.RootElement.AccessibleName = Nothing
-        Me.RadButtonBearbeiten.Size = New System.Drawing.Size(110, 42)
+        Me.RadButtonBearbeiten.Size = New System.Drawing.Size(226, 42)
         Me.RadButtonBearbeiten.TabIndex = 7
-        Me.RadButtonBearbeiten.Text = "Bearbeiten"
+        Me.RadButtonBearbeiten.Text = "Bearbeitungsmodus"
         Me.RadButtonBearbeiten.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         '
         'RadButtonAbbrechen
@@ -83,11 +76,6 @@ Partial Class FrmAuswahllisteEichmarkenverwaltung
         Me.RadButtonAbbrechen.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.RadButtonAbbrechen.Location = New System.Drawing.Point(736, 507)
         Me.RadButtonAbbrechen.Name = "RadButtonAbbrechen"
-        '
-        '
-        '
-        Me.RadButtonAbbrechen.RootElement.AccessibleDescription = Nothing
-        Me.RadButtonAbbrechen.RootElement.AccessibleName = Nothing
         Me.RadButtonAbbrechen.Size = New System.Drawing.Size(110, 42)
         Me.RadButtonAbbrechen.TabIndex = 8
         Me.RadButtonAbbrechen.Text = "Abbrechen"
@@ -99,11 +87,6 @@ Partial Class FrmAuswahllisteEichmarkenverwaltung
         Me.RadButtonSpeichern.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.RadButtonSpeichern.Location = New System.Drawing.Point(851, 507)
         Me.RadButtonSpeichern.Name = "RadButtonSpeichern"
-        '
-        '
-        '
-        Me.RadButtonSpeichern.RootElement.AccessibleDescription = Nothing
-        Me.RadButtonSpeichern.RootElement.AccessibleName = Nothing
         Me.RadButtonSpeichern.Size = New System.Drawing.Size(110, 42)
         Me.RadButtonSpeichern.TabIndex = 9
         Me.RadButtonSpeichern.Text = "Speichern"
