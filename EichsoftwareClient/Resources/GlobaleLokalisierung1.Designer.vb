@@ -1177,6 +1177,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to MCA Date.
+        '''</summary>
+        Friend Shared ReadOnly Property HKBDatum() As String
+            Get
+                Return ResourceManager.GetString("HKBDatum", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Cannot establish connection to RHEWA Server. Make sure you are connected to the internet and try again..
         '''</summary>
         Friend Shared ReadOnly Property KeineVerbindung() As String

@@ -782,4 +782,7 @@ Czujnik tensometryczny z oznaczeniem NH jest tylko wtedy dozwolony, gdy dla tego
   <data name="Bearbeitungsdatum" xml:space="preserve">
     <value>Data opracowania</value>
   </data>
+  <data name="HKBDatum" xml:space="preserve">
+    <value>Data POZ</value>
+  </data>
 </root>

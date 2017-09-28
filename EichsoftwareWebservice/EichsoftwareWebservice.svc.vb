@@ -694,7 +694,8 @@ Public Class EichsoftwareWebservice
                                 .Bearbeitungsstatus = Lookup2.Status,
                                 .Uploaddatum = Eichprozess.UploadDatum,
                                 .Bemerkung = Eichprozess.ServerEichprotokoll.Sicherung_Bemerkungen,
-                                .NeueWZ = Eichprozess.ServerLookup_Waegezelle.Neu
+                                .NeueWZ = Eichprozess.ServerLookup_Waegezelle.Neu,
+                                .HKBDatum = Eichprozess.ServerEichprotokoll.Identifikationsdaten_Datum
                                 }
                                      ).ToList
 
@@ -790,7 +791,8 @@ Public Class EichsoftwareWebservice
                                   .Bearbeitungsstatus = Lookup2.Status,
                                   .Uploaddatum = Eichprozess.UploadDatum,
                                   .Bemerkung = Eichprozess.ServerEichprotokoll.Sicherung_Bemerkungen,
-                                  .NeueWZ = Eichprozess.ServerLookup_Waegezelle.Neu
+                                  .NeueWZ = Eichprozess.ServerLookup_Waegezelle.Neu,
+                                .HKBDatum = Eichprozess.ServerEichprotokoll.Identifikationsdaten_Datum
                                 }
                                      ).ToList
 
@@ -878,7 +880,8 @@ Public Class EichsoftwareWebservice
                                             .Bearbeitungsstatus = Lookup2.Status,
                                             .Uploaddatum = Eichprozess.UploadDatum,
                                             .Bemerkung = Eichprozess.ServerEichprotokoll.Sicherung_Bemerkungen,
-                                            .NeueWZ = Eichprozess.ServerLookup_Waegezelle.Neu
+                                            .NeueWZ = Eichprozess.ServerLookup_Waegezelle.Neu,
+                                            .HKBDatum = Eichprozess.ServerEichprotokoll.Identifikationsdaten_Datum
                                             }
                                      ).ToList
 
@@ -909,7 +912,7 @@ Public Class EichsoftwareWebservice
 
 #Region "Anhänge"
     Private Sub BuildAnhangPfad(lokalerPfadFuerAnhaenge As String, ReturnList As List(Of clsEichprozessFuerAuswahlliste))
-        For Each objeichprozess In ReturnList
+        For Each objeichprozess In ReturnList 'TODO  Pfad über .io.path kontrollieren
             'dateipfad zusammenbauen
             If Not objeichprozess.AnhangPfad Is Nothing Then
                 If Not objeichprozess.AnhangPfad.Trim.Equals("") Then
@@ -1115,7 +1118,6 @@ Public Class EichsoftwareWebservice
         ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
         If GetLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
         SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Aktualisiere Eichmarkenverwaltung")
-        'FK_Benutzer und HEKennung sind eigentlich doppelt. Es stört aber auch nicht.
         Try
             Using DbContext As New HerstellerersteichungEntities
                 DbContext.Configuration.LazyLoadingEnabled = False
@@ -1139,19 +1141,39 @@ Public Class EichsoftwareWebservice
                 Else
 
                     Try
-                        Element.BenannteStelleAnzahl += AnzahlBenannteStelle
+                        If Element.BenannteStelleAnzahl Is Nothing Then
+                            Element.BenannteStelleAnzahl = AnzahlBenannteStelle
+                        Else
+                            Element.BenannteStelleAnzahl += AnzahlBenannteStelle
+                        End If
                     Catch e As Exception
                     End Try
                     Try
-                        Element.SicherungsmarkeKleinAnzahl += AnzahlSicherungsmarkeKlein
+                        If Element.SicherungsmarkeKleinAnzahl Is Nothing Then
+                            Element.SicherungsmarkeKleinAnzahl = AnzahlSicherungsmarkeKlein
+
+                        Else
+                            Element.SicherungsmarkeKleinAnzahl += AnzahlSicherungsmarkeKlein
+
+                        End If
                     Catch e As Exception
                     End Try
                     Try
-                        Element.SicherungsmarkeGrossAnzahl += AnzahlSicherungsmarkeGross
+                        If Element.SicherungsmarkeGrossAnzahl Is Nothing Then
+                            Element.SicherungsmarkeGrossAnzahl = AnzahlSicherungsmarkeGross
+
+                        Else
+                            Element.SicherungsmarkeGrossAnzahl += AnzahlSicherungsmarkeGross
+
+                        End If
                     Catch e As Exception
                     End Try
                     Try
-                        Element.HinweismarkeAnzahl += AnzahlHinweismarke
+                        If Element.HinweismarkeAnzahl Is Nothing Then
+                            Element.HinweismarkeAnzahl = AnzahlHinweismarke
+                        Else
+                            Element.HinweismarkeAnzahl += AnzahlHinweismarke
+                        End If
                     Catch e As Exception
                     End Try
 

@@ -706,4 +706,7 @@ A load cell marked NH is allowed only if humidity testing to EN45501 has been co
   <data name="Bearbeitungsdatum" xml:space="preserve">
     <value>Edit date</value>
   </data>
+  <data name="HKBDatum" xml:space="preserve">
+    <value>MCA Date</value>
+  </data>
 </root>

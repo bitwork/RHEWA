@@ -664,7 +664,8 @@ Public Class clsDBFunctions
                          .Lookup_Auswertegeraet = Eichprozess.Lookup_Auswertegeraet.Typ,
                          Eichprozess.Ausgeblendet,
                          Eichprozess.Bearbeitungsdatum,
-                           .Bemerkung = Eichprozess.Eichprotokoll.Sicherung_Bemerkungen
+                           .Bemerkung = Eichprozess.Eichprotokoll.Sicherung_Bemerkungen,
+                                 Eichprozess.Eichprotokoll.Identifikationsdaten_Datum
                                                                       }
 
                     'zuweisen der Ergebnismenge als Datenquelle für das Grid
@@ -688,7 +689,8 @@ Public Class clsDBFunctions
                                                         .Lookup_Auswertegeraet = Eichprozess.Lookup_Auswertegeraet.Typ,
                                                         Eichprozess.Ausgeblendet,
                                                          Eichprozess.Bearbeitungsdatum,
-                                                           .Bemerkung = Eichprozess.Eichprotokoll.Sicherung_Bemerkungen
+                                                           .Bemerkung = Eichprozess.Eichprotokoll.Sicherung_Bemerkungen,
+                                  Eichprozess.Eichprotokoll.Identifikationsdaten_Datum
                                                 }
 
                     'zuweisen der Ergebnismenge als Datenquelle für das Grid
@@ -712,7 +714,8 @@ Public Class clsDBFunctions
                                                         .Lookup_Auswertegeraet = Eichprozess.Lookup_Auswertegeraet.Typ,
                                                         Eichprozess.Ausgeblendet,
                                                          Eichprozess.Bearbeitungsdatum,
-                                                         .Bemerkung = Eichprozess.Eichprotokoll.Sicherung_Bemerkungen
+                                                         .Bemerkung = Eichprozess.Eichprotokoll.Sicherung_Bemerkungen,
+                                  Eichprozess.Eichprotokoll.Identifikationsdaten_Datum
                                                 }
 
                     'zuweisen der Ergebnismenge als Datenquelle für das Grid
@@ -735,7 +738,8 @@ Public Class clsDBFunctions
                                                         .Lookup_Auswertegeraet = Eichprozess.Lookup_Auswertegeraet.Typ,
                                                         Eichprozess.Ausgeblendet,
                                                          Eichprozess.Bearbeitungsdatum,
-                                                    .Bemerkung = Eichprozess.Eichprotokoll.Sicherung_Bemerkungen
+                                                    .Bemerkung = Eichprozess.Eichprotokoll.Sicherung_Bemerkungen,
+                                    Eichprozess.Eichprotokoll.Identifikationsdaten_Datum
                                                 }
 
                     'zuweisen der Ergebnismenge als Datenquelle für das Grid

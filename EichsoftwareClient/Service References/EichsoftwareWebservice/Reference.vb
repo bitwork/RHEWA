@@ -6172,6 +6172,9 @@ Namespace EichsoftwareWebservice
         Private GesperrtDurchField As String
         
         <System.Runtime.Serialization.OptionalFieldAttribute()>  _
+        Private HKBDatumField As String
+        
+        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private IDField As String
         
         <System.Runtime.Serialization.OptionalFieldAttribute()>  _
@@ -6292,6 +6295,19 @@ Namespace EichsoftwareWebservice
                 If (Object.ReferenceEquals(Me.GesperrtDurchField, value) <> true) Then
                     Me.GesperrtDurchField = value
                     Me.RaisePropertyChanged("GesperrtDurch")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
+        Public Property HKBDatum() As String
+            Get
+                Return Me.HKBDatumField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me.HKBDatumField, value) <> true) Then
+                    Me.HKBDatumField = value
+                    Me.RaisePropertyChanged("HKBDatum")
                 End If
             End Set
         End Property

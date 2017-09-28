@@ -200,7 +200,7 @@ Public Class ucoEichprozessauswahlliste
         RadGridViewAuswahlliste.Columns("Lookup_Waagentyp").HeaderText = My.Resources.GlobaleLokalisierung.Waagentyp
         RadGridViewAuswahlliste.Columns("Lookup_Waagenart").HeaderText = My.Resources.GlobaleLokalisierung.Waagenart
         RadGridViewAuswahlliste.Columns("Fabriknummer").HeaderText = My.Resources.GlobaleLokalisierung.Fabriknummer
-
+        RadGridViewAuswahlliste.Columns("Identifikationsdaten_Datum").HeaderText = My.Resources.GlobaleLokalisierung.HKBDatum
         RadGridViewAuswahlliste.Columns("Bearbeitungsdatum").HeaderText = My.Resources.GlobaleLokalisierung.Bearbeitungsdatum
         RadGridViewAuswahlliste.Columns("Bemerkung").HeaderText = My.Resources.GlobaleLokalisierung.Bemerkung
 
@@ -548,10 +548,13 @@ Public Class ucoEichprozessauswahlliste
         RadGridViewAuswahlliste.MasterView.Refresh()
 
         Me.Visible = True
+
+        'laden des Grid Layouts aus User Settings
+        AktuellerBenutzer.LadeGridLayout(Me)
     End Sub
 #End Region
 
-#Region "Eichprozses Routinen Server"
+#Region "Eichprozses Routinen Server / RHEWA Funktionen"
 
     Private Sub RadButtonNeuStandardwaage_Click(sender As Object, e As EventArgs) Handles RadButtonNeuStandardwaage.Click
         Dim f As New FrmAuswahlStandardwaage
@@ -614,7 +617,7 @@ Public Class ucoEichprozessauswahlliste
                 RadGridViewRHEWAAlle.Columns("Eichbevollmaechtigter").HeaderText = "Konformitätsbewertungsbevollmächtigter"
                 RadGridViewRHEWAAlle.Columns("NeueWZ").HeaderText = "Neue WZ"
                 RadGridViewRHEWAAlle.Columns("Gesperrtdurch").HeaderText = "Gesperrt durch"
-
+                RadGridViewRHEWAAlle.Columns("HKBDatum").HeaderText = "HKB Datum"
             Catch ex As Exception
             End Try
 
@@ -678,6 +681,9 @@ Public Class ucoEichprozessauswahlliste
             Me.Visible = True
         Catch ex As Exception
         End Try
+
+        'laden des Grid Layouts aus User Settings
+        AktuellerBenutzer.LadeGridLayout(Me)
     End Sub
 
     ''' <summary>

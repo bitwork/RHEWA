@@ -365,7 +365,9 @@ Public Class AktuellerBenutzer
         Try
             If Not AktuellerBenutzer.Instance.GridSettings.ToString.Equals("") Then
                 Using stream As New IO.MemoryStream(Convert.FromBase64String(AktuellerBenutzer.Instance.GridSettings))
-                    uco.RadGridViewAuswahlliste.LoadLayout(stream)
+                    If uco.RadGridViewAuswahlliste.Rows.Count > 0 Then
+                        uco.RadGridViewAuswahlliste.LoadLayout(stream)
+                    End If
 
                 End Using
             End If
@@ -378,7 +380,9 @@ Public Class AktuellerBenutzer
         Try
             If Not AktuellerBenutzer.Instance.GridSettingsRhewa.ToString.Equals("") Then
                 Using stream As New IO.MemoryStream(Convert.FromBase64String(AktuellerBenutzer.Instance.GridSettingsRhewa))
-                    uco.RadGridViewRHEWAAlle.LoadLayout(stream)
+                    If uco.RadGridViewRHEWAAlle.Rows.Count > 0 Then
+                        uco.RadGridViewRHEWAAlle.LoadLayout(stream)
+                    End If
                 End Using
             End If
         Catch ex As Exception

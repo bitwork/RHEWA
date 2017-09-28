@@ -561,6 +561,7 @@
       <xs:element minOccurs="0" name="Eichbevollmaechtigter" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Fabriknummer" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="GesperrtDurch" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HKBDatum" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="NeueWZ" type="xs:boolean" />
       <xs:element minOccurs="0" name="Pruefscheinnummer" nillable="true" type="xs:string" />

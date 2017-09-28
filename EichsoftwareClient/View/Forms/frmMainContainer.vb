@@ -400,8 +400,8 @@ Public Class FrmMainContainer
 
         RadButtonNavigateBackwards.Visible = False
         RadButtonNavigateForwards.Visible = False
-        'laden des Grid Layouts aus User Settings
-        AktuellerBenutzer.LadeGridLayout(uco)
+        ''laden des Grid Layouts aus User Settings
+        'AktuellerBenutzer.LadeGridLayout(uco)
     End Sub
 
     ''' <summary>
