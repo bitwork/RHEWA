@@ -154,12 +154,18 @@ Partial Class FrmMainContainer
         '
         '
         Me.RadButtonPlausibilitaet.RootElement.MaxSize = New System.Drawing.Size(181, 72)
+        Me.RadButtonPlausibilitaet.RootElement.MinSize = New System.Drawing.Size(181, 72)
         Me.RadButtonPlausibilitaet.TextWrap = True
         '
         'RadButtonNavigateForwards
         '
         resources.ApplyResources(Me.RadButtonNavigateForwards, "RadButtonNavigateForwards")
         Me.RadButtonNavigateForwards.Name = "RadButtonNavigateForwards"
+        '
+        '
+        '
+        Me.RadButtonNavigateForwards.RootElement.MaxSize = New System.Drawing.Size(181, 72)
+        Me.RadButtonNavigateForwards.RootElement.MinSize = New System.Drawing.Size(181, 72)
         CType(Me.RadButtonNavigateForwards.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
         CType(Me.RadButtonNavigateForwards.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
         CType(Me.RadButtonNavigateForwards.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
@@ -171,6 +177,11 @@ Partial Class FrmMainContainer
         resources.ApplyResources(Me.RadButtonNavigateBackwards, "RadButtonNavigateBackwards")
         Me.RadButtonNavigateBackwards.BackColor = System.Drawing.Color.Transparent
         Me.RadButtonNavigateBackwards.Name = "RadButtonNavigateBackwards"
+        '
+        '
+        '
+        Me.RadButtonNavigateBackwards.RootElement.MaxSize = New System.Drawing.Size(181, 72)
+        Me.RadButtonNavigateBackwards.RootElement.MinSize = New System.Drawing.Size(181, 72)
         CType(Me.RadButtonNavigateBackwards.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = CType(resources.GetObject("resource.Image1"), System.Drawing.Image)
         CType(Me.RadButtonNavigateBackwards.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
         CType(Me.RadButtonNavigateBackwards.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
@@ -186,6 +197,7 @@ Partial Class FrmMainContainer
         '
         '
         Me.RadButtonVersenden.RootElement.MaxSize = New System.Drawing.Size(188, 74)
+        Me.RadButtonVersenden.RootElement.MinSize = New System.Drawing.Size(181, 72)
         Me.RadButtonVersenden.TextWrap = True
         '
         'RadButtonEntsperren
@@ -197,6 +209,7 @@ Partial Class FrmMainContainer
         '
         '
         Me.RadButtonEntsperren.RootElement.MaxSize = New System.Drawing.Size(166, 72)
+        Me.RadButtonEntsperren.RootElement.MinSize = New System.Drawing.Size(181, 72)
         '
         'RadPanel1
         '
@@ -238,7 +251,8 @@ Partial Class FrmMainContainer
         'LayoutControlItem8
         '
         Me.LayoutControlItem8.AssociatedControl = Me.RadButtonPlausibilitaet
-        Me.LayoutControlItem8.Bounds = New System.Drawing.Rectangle(743, 620, 120, 78)
+        Me.LayoutControlItem8.Bounds = New System.Drawing.Rectangle(730, 620, 126, 72)
+        Me.LayoutControlItem8.MaxSize = New System.Drawing.Size(181, 72)
         Me.LayoutControlItem8.Name = "LayoutControlItem8"
         resources.ApplyResources(Me.LayoutControlItem8, "LayoutControlItem8")
         Me.LayoutControlItem8.Visibility = Telerik.WinControls.ElementVisibility.Hidden
@@ -246,22 +260,24 @@ Partial Class FrmMainContainer
         'LayoutControlItem9
         '
         Me.LayoutControlItem9.AssociatedControl = Me.RadButtonNavigateForwards
-        Me.LayoutControlItem9.Bounds = New System.Drawing.Rectangle(945, 620, 71, 78)
+        Me.LayoutControlItem9.Bounds = New System.Drawing.Rectangle(942, 620, 74, 72)
+        Me.LayoutControlItem9.MaxSize = New System.Drawing.Size(181, 72)
         Me.LayoutControlItem9.Name = "LayoutControlItem9"
         resources.ApplyResources(Me.LayoutControlItem9, "LayoutControlItem9")
         '
         'LayoutControlItem10
         '
         Me.LayoutControlItem10.AssociatedControl = Me.RadButtonNavigateBackwards
-        Me.LayoutControlItem10.Bounds = New System.Drawing.Rectangle(863, 620, 82, 78)
+        Me.LayoutControlItem10.Bounds = New System.Drawing.Rectangle(856, 620, 86, 72)
+        Me.LayoutControlItem10.MaxSize = New System.Drawing.Size(181, 72)
         Me.LayoutControlItem10.Name = "LayoutControlItem10"
         resources.ApplyResources(Me.LayoutControlItem10, "LayoutControlItem10")
         '
         'LayoutControlItem11
         '
         Me.LayoutControlItem11.AssociatedControl = Me.RadButtonVersenden
-        Me.LayoutControlItem11.Bounds = New System.Drawing.Rectangle(368, 620, 172, 78)
-        Me.LayoutControlItem11.MaxSize = New System.Drawing.Size(311, 78)
+        Me.LayoutControlItem11.Bounds = New System.Drawing.Rectangle(368, 620, 181, 72)
+        Me.LayoutControlItem11.MaxSize = New System.Drawing.Size(181, 72)
         Me.LayoutControlItem11.Name = "LayoutControlItem11"
         resources.ApplyResources(Me.LayoutControlItem11, "LayoutControlItem11")
         Me.LayoutControlItem11.Visibility = Telerik.WinControls.ElementVisibility.Hidden
@@ -283,7 +299,8 @@ Partial Class FrmMainContainer
         'LayoutControlItem12
         '
         Me.LayoutControlItem12.AssociatedControl = Me.RadButtonEntsperren
-        Me.LayoutControlItem12.Bounds = New System.Drawing.Rectangle(540, 620, 203, 78)
+        Me.LayoutControlItem12.Bounds = New System.Drawing.Rectangle(549, 620, 181, 72)
+        Me.LayoutControlItem12.MaxSize = New System.Drawing.Size(181, 72)
         Me.LayoutControlItem12.Name = "LayoutControlItem12"
         resources.ApplyResources(Me.LayoutControlItem12, "LayoutControlItem12")
         Me.LayoutControlItem12.Visibility = Telerik.WinControls.ElementVisibility.Hidden

@@ -295,13 +295,16 @@
     <value>Bottom, Right</value>
   </data>
   <data name="RadButtonPlausibilitaet.Location" type="System.Drawing.Point, System.Drawing">
-    <value>746, 623</value>
+    <value>733, 623</value>
   </data>
   <data name="RadButtonPlausibilitaet.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>181, 72</value>
   </data>
+  <data name="RadButtonPlausibilitaet.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>181, 72</value>
+  </data>
   <data name="RadButtonPlausibilitaet.Size" type="System.Drawing.Size, System.Drawing">
-    <value>114, 72</value>
+    <value>181, 72</value>
   </data>
   <data name="RadButtonPlausibilitaet.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -327,14 +330,23 @@
   <data name="&gt;&gt;RadButtonPlausibilitaet.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="RadButtonNavigateForwards.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
   <data name="RadButtonNavigateForwards.ImageAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
   <data name="RadButtonNavigateForwards.Location" type="System.Drawing.Point, System.Drawing">
-    <value>948, 623</value>
+    <value>945, 623</value>
+  </data>
+  <data name="RadButtonNavigateForwards.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>181, 72</value>
+  </data>
+  <data name="RadButtonNavigateForwards.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>181, 72</value>
   </data>
   <data name="RadButtonNavigateForwards.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 72</value>
+    <value>181, 72</value>
   </data>
   <data name="RadButtonNavigateForwards.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -373,10 +385,16 @@
     <value>MiddleCenter</value>
   </data>
   <data name="RadButtonNavigateBackwards.Location" type="System.Drawing.Point, System.Drawing">
-    <value>866, 623</value>
+    <value>859, 623</value>
+  </data>
+  <data name="RadButtonNavigateBackwards.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>181, 72</value>
+  </data>
+  <data name="RadButtonNavigateBackwards.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>181, 72</value>
   </data>
   <data name="RadButtonNavigateBackwards.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 72</value>
+    <value>181, 72</value>
   </data>
   <data name="RadButtonNavigateBackwards.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -414,8 +432,11 @@
   <data name="RadButtonVersenden.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>188, 74</value>
   </data>
+  <data name="RadButtonVersenden.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>181, 72</value>
+  </data>
   <data name="RadButtonVersenden.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 72</value>
+    <value>181, 72</value>
   </data>
   <data name="RadButtonVersenden.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -445,13 +466,16 @@
     <value>Bottom, Right</value>
   </data>
   <data name="RadButtonEntsperren.Location" type="System.Drawing.Point, System.Drawing">
-    <value>543, 623</value>
+    <value>552, 623</value>
   </data>
   <data name="RadButtonEntsperren.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>166, 72</value>
   </data>
+  <data name="RadButtonEntsperren.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>181, 72</value>
+  </data>
   <data name="RadButtonEntsperren.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 72</value>
+    <value>181, 72</value>
   </data>
   <data name="RadButtonEntsperren.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -578,7 +602,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAB6
-        EgAAAk1TRnQBSQFMAgEBAwEAAYwBBQGMAQUBIAEAASABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAGA
+        EgAAAk1TRnQBSQFMAgEBAwEAAaQBBQGkAQUBIAEAASABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAGA
         AwABIAMAAQEBAAEgBgABQP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wBPAAEBAwQBBgMLAQ8DEAEV
         AxABFgMQARYDEAEVAwsBDwMEAQYDAAEBWwABAQMEAQYDCwEPAxABFQMQARYDEAEWAxABFQMLAQ8DBAEG
         AwABAVsAAQEDBAEGAwsBDwMQARUDEAEWAxABFgMQARUDCwEPAwQBBgMAAQHUAAMCAQMDCgEOAxcBIAMj
