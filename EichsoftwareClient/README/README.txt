@@ -15,3 +15,8 @@ Es gibt einen SQL Replikationsserver. Dieser ist nur von Rhewa Intern zu erreich
 TODO
 Kontrolle Lesemodus Erfolgreiche Eichung RHEWA Alle
 Kontrolle Dateianhang
+
+
+
+Proxy
+192.168.150.26:8080
