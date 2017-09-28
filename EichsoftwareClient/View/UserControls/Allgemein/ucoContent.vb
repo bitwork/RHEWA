@@ -289,6 +289,7 @@ Public Class ucoContent
     Protected Sub VersendenNeeded(ByVal TargetUserControl As UserControl) Handles _ParentForm.VersendenNeeded
         If Me.Equals(TargetUserControl) Then
             Versenden()
+
         End If
     End Sub
 
@@ -960,9 +961,22 @@ Public Class ucoContent
 
     Protected Sub CloneAndSendServerObjekt()
         Using dbcontext As New Entities
-            'auf fehlerhaft Status setzen
-            objEichprozess.FK_Bearbeitungsstatus = 2
-            objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit Konformitätsbewertungsbevollmächtigter sich den DS von Anfang angucken muss
+            Dim result = MessageBox.Show("Wählen Sie ""Ja"" um den Datensatz zu speichern und genehmigen, wählen Sie ""Nein"" um ihn zu speichern und abzulehnen oder abbrechen um den Datensatz weiter zu bearbeiten", "Frage", MessageBoxButtons.YesNoCancel)
+            If result = DialogResult.Yes Then
+
+                'auf fehlerhaft Status setzen
+                objEichprozess.FK_Bearbeitungsstatus = GlobaleEnumeratoren.enuBearbeitungsstatus.Genehmigt
+                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Versenden 'auf die erste Seite "zurückblättern" damit Konformitätsbewertungsbevollmächtigter sich den DS von Anfang angucken muss
+
+            ElseIf result = DialogResult.No Then
+
+                'auf fehlerhaft Status setzen
+                objEichprozess.FK_Bearbeitungsstatus = GlobaleEnumeratoren.enuBearbeitungsstatus.Fehlerhaft
+                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit Konformitätsbewertungsbevollmächtigter sich den DS von Anfang angucken muss
+            Else
+                Exit Sub
+
+            End If
 
 
             Dim objServerEichprozess As New EichsoftwareWebservice.ServerEichprozess
@@ -988,6 +1002,9 @@ Public Class ucoContent
                     ' Status zurück setzen
                     Exit Sub
                 End Try
+
+                'datensatz entsperren
+                clsWebserviceFunctions.SetzeSperrung(False, objEichprozess.Vorgangsnummer)
             End Using
         End Using
     End Sub

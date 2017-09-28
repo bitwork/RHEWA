@@ -552,6 +552,10 @@ RadTextBoxControlLast2.Text.Trim = "" Or
         ParentFormular.DialogModus = FrmMainContainer.enuDialogModus.korrigierend
     End Sub
 
+    Protected Friend Overrides Sub Versenden() Implements IRhewaEditingDialog.Versenden
+        UpdateObjekt()
+        CloneAndSendServerObjekt()
+    End Sub
 
 
 #End Region

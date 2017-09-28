@@ -266,6 +266,12 @@ Public Class uco12PruefungUeberlastanzeige
         DialogModus = enuDialogModus.korrigierend
         ParentFormular.DialogModus = FrmMainContainer.enuDialogModus.korrigierend
     End Sub
+
+    Protected Friend Overrides Sub Versenden() Implements IRhewaEditingDialog.Versenden
+        UpdateObjekt()
+        CloneAndSendServerObjekt()
+    End Sub
+
 #End Region
 
 

@@ -1102,15 +1102,15 @@ Public Class FrmMainContainer
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub RadButtonVersenden_Click(sender As Object, e As EventArgs) Handles RadButtonVersenden.Click
-        If MessageBox.Show(GlobaleLokalisierung.Frage_EichprotokollZuruecksenden, My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo, MessageBoxIcon.Question) = System.Windows.Forms.DialogResult.Yes Then
+        '    If MessageBox.Show(GlobaleLokalisierung.Frage_EichprotokollZuruecksenden, My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo, MessageBoxIcon.Question) = System.Windows.Forms.DialogResult.Yes Then
 
-            'entsperren des DS
-            If Not CurrentEichprozess Is Nothing Then
-                If clsWebserviceFunctions.SetzeSperrung(False, CurrentEichprozess.Vorgangsnummer) Then
-                    RaiseEvent VersendenNeeded(_CurrentUco)
-                End If
-            End If
+        'entsperren des DS
+        If Not CurrentEichprozess Is Nothing Then
+
+            RaiseEvent VersendenNeeded(_CurrentUco)
+
         End If
+        'End If
     End Sub
 
     ''' <summary>

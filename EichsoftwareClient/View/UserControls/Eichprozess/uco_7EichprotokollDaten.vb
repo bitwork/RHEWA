@@ -884,6 +884,11 @@ Public Class uco_7EichprotokollDaten
         RadTextBoxControlNormalienPruefscheinnummer.Text = "1024"
     End Sub
 
+    Protected Friend Overrides Sub Versenden() Implements IRhewaEditingDialog.Versenden
+        UpdateObjekt()
+        CloneAndSendServerObjekt()
+    End Sub
+
 #End Region
 
 End Class
