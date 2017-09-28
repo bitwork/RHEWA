@@ -47,7 +47,7 @@ Public Class frmDBSync
             conn.ConnectionString = "Data Source=h2223265.stratoserver.net;Initial Catalog=Herstellerersteichung;Persist Security Info=True;User ID=Eichen;Password=Eichen2013"
             PathScript = AppDomain.CurrentDomain.BaseDirectory & "Repository\Call_DTS RHEWA STRATO.bat"
         ElseIf RadioButtonSyncStratoDEV.IsChecked Then
-            conn.ConnectionString = "Data Source=WIN7MOBDEV01;Initial Catalog=Herstellerersteichung;Persist Security Info=True;User ID=sa;Password=Test1234"
+            conn.ConnectionString = "Data Source=(local);Initial Catalog=Herstellerersteichung;Persist Security Info=True;User ID=sa;Password=Test1234"
             PathScript = AppDomain.CurrentDomain.BaseDirectory & "Repository\Call_DTS STRATO DEV.bat"
         End If
 

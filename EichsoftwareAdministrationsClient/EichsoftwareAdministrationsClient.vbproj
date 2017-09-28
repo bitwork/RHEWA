@@ -464,13 +464,13 @@
       <DependentUpon>frmAuswahllisteEichmarkenverwaltung.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <None Include="App %28RHEWA%29.config">
+    <None Include="Web Config Templates\App %28RHEWA%29.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="App %28DEBUG%29.config">
+    <None Include="Web Config Templates\App %28DEBUG%29.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="App %28STRATO%29.config">
+    <None Include="Web Config Templates\App %28STRATO%29.config">
       <SubType>Designer</SubType>
     </None>
     <None Include="EichsoftwareAdministrationsClient_TemporaryKey.pfx" />
@@ -532,6 +532,7 @@
       <DependentUpon>EntityModelDatabaseAdminClient.edmx</DependentUpon>
       <LastGenOutput>EntityModelDatabaseAdminClient.vb</LastGenOutput>
     </Content>
+    <Content Include="README\README.txt" />
     <Content Include="Repository\Call_DTS RHEWA STRATO.bat">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

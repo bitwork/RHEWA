@@ -1048,9 +1048,6 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Web Config Templates\APP - RHEWA.config">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Web Config Templates\APP - Strato.config">
       <SubType>Designer</SubType>
     </None>
