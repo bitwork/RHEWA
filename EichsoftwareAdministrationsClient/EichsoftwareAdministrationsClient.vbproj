@@ -37,7 +37,7 @@
     <UpdateUrl>\\ntserver\Server\HKB\Software\Aktuelle Eichsoftware\Admin\</UpdateUrl>
     <ProductName>RHEWA Konformitätsbewertungssoftware Administration</ProductName>
     <PublisherName>RHEWA</PublisherName>
-    <ApplicationRevision>41</ApplicationRevision>
+    <ApplicationRevision>42</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
