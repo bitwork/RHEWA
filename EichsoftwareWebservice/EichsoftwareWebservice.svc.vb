@@ -916,11 +916,15 @@ Public Class EichsoftwareWebservice
             'dateipfad zusammenbauen
             If Not objeichprozess.AnhangPfad Is Nothing Then
                 If Not objeichprozess.AnhangPfad.Trim.Equals("") Then
+
+                    objeichprozess.AnhangPfad = objeichprozess.AnhangPfad.Split("\").LastOrDefault 'ungültige Zeichen entfernen
+                    If objeichprozess.AnhangPfad.Equals("") Then objeichprozess.AnhangPfad = "tmp.zip" 'wenn nach entfernen der Zeichen leer, dann tmpnamen
                     If lokalerPfadFuerAnhaenge.EndsWith("\") Then
                         objeichprozess.AnhangPfad = lokalerPfadFuerAnhaenge & objeichprozess.AnhangPfad
                     Else
                         objeichprozess.AnhangPfad = lokalerPfadFuerAnhaenge & "\" & objeichprozess.AnhangPfad
                     End If
+
                 End If
             End If
         Next
