@@ -984,6 +984,19 @@
     <None Include="README\RHEWA HKB-V144.onepkg" />
     <None Include="README\RHEWA HKB-V146.onepkg" />
     <None Include="README\RHEWA Waagen.onepkg" />
+    <None Include="Service References\EichsoftwareWebservice\EichsoftwareWebservice1.wsdl" />
+    <None Include="Service References\EichsoftwareWebservice\EichsoftwareWebservice4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EichsoftwareWebservice\EichsoftwareWebservice41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EichsoftwareWebservice\EichsoftwareWebservice42.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EichsoftwareWebservice\EichsoftwareWebservice43.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\Benötigte Übersetzungen.xlsx" />
     <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\original Dokumente\DE Dokumente\Eichprotokoll DE.xls" />
     <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\original Dokumente\DE Dokumente\Ersteichung DE.doc" />
@@ -1124,16 +1137,6 @@
     <None Include="Service References\EichsoftwareWebservice\EichsoftwareClient.EichsoftwareWebservice.StatusPrüfscheinnummer.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\EichsoftwareWebservice\EichsoftwareWebservice.wsdl" />
-    <None Include="Service References\EichsoftwareWebservice\EichsoftwareWebservice.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\EichsoftwareWebservice\EichsoftwareWebservice1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\EichsoftwareWebservice\EichsoftwareWebservice2.xsd">
-      <SubType>Designer</SubType>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config">
@@ -1221,6 +1224,7 @@
     </Content>
     <Content Include="README\README.txt" />
     <Content Include="Resources\TenLCs.PNG" />
+    <None Include="Service References\EichsoftwareWebservice\EichsoftwareWebservice1.disco" />
     <Content Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\mitgeltende Software\Konfig82_2.0.0.exe" />
     <Content Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\mitgeltende Software\Konfig83N_V1-0-2.exe" />
     <Content Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\mitgeltende Software\Konfig83plus_V4-0-0.exe" />
@@ -1252,9 +1256,6 @@
     <None Include="Resources\user_add.png" />
     <None Include="Resources\user_delete.png" />
     <None Include="Resources\user_edit.png" />
-    <None Include="Service References\EichsoftwareWebservice\EichsoftwareWebservice3.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Service References\EichsoftwareWebservice\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.vb</LastGenOutput>
@@ -1263,7 +1264,6 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\EichsoftwareWebservice\configuration91.svcinfo" />
-    <None Include="Service References\EichsoftwareWebservice\EichsoftwareWebservice.disco" />
     <None Include="Resources\Verschiebeweg_PL.PNG" />
     <None Include="Resources\Verschiebeweg_GB.PNG" />
     <None Include="Resources\Verschiebeweg_DE.PNG" />

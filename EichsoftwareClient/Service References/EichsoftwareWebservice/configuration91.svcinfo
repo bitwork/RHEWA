@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="EZBVKWxFT2oic/TcLqJ3LeLnj7k=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="8UAwafHHjh9iKYTxaHFR2sZqQok=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="basicHttpBinding">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="basicHttpBinding" contract="EichsoftwareWebservice.IEichsoftwareWebservice" bindingType="basicHttpBinding" address="http://win7mobdev01.bitworkgmbh.local:12000/RhewaHerstellerersteichung/EichsoftwareWebservice.svc" bindingConfiguration="basicHttpBinding">
+    <endpoint name="basicHttpBinding" contract="EichsoftwareWebservice.IEichsoftwareWebservice" bindingType="basicHttpBinding" address="http://localhost:12000/RhewaHerstellerersteichung/EichsoftwareWebservice.svc" bindingConfiguration="basicHttpBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://win7mobdev01.bitworkgmbh.local:12000/RhewaHerstellerersteichung/EichsoftwareWebservice.svc</serializedValue>
+          <serializedValue>http://localhost:12000/RhewaHerstellerersteichung/EichsoftwareWebservice.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
