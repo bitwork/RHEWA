@@ -381,9 +381,12 @@ Public Class uco_7EichprotokollDaten
         Else
             RadTextBoxControlDatum.Text = objEichprozess.Eichprotokoll.Identifikationsdaten_Datum
         End If
-
-        'Stammdaten aus lokaler Lizenz laden
-        RadTextBoxControlPruefer.Text = AktuellerBenutzer.Instance.Lizenz.Name & ", " & AktuellerBenutzer.Instance.Lizenz.Vorname & " (" + AktuellerBenutzer.Instance.Lizenz.HEKennung & ")"
+        If Not objEichprozess.Eichprotokoll.Identifikationsdaten_Pruefer Is Nothing Then
+            RadTextBoxControlPruefer.Text = objEichprozess.Eichprotokoll.Identifikationsdaten_Pruefer
+        Else
+            'Stammdaten aus lokaler Lizenz laden
+            RadTextBoxControlPruefer.Text = AktuellerBenutzer.Instance.Lizenz.Name & ", " & AktuellerBenutzer.Instance.Lizenz.Vorname & " (" + AktuellerBenutzer.Instance.Lizenz.HEKennung & ")"
+        End If
         RadTextBoxControlFabriknummer.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer
     End Sub
 
