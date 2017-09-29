@@ -377,7 +377,7 @@ Public Class clsPlausibilitaetspruefung
                         If IsNumeric(row(column)) AndAlso CDec(row(column)) < minAnalog AndAlso CDec(row(column)) <> 0 Then
                             minAnalog = CDec(row(column))
                         End If
-                        If IsNumeric(row(column)) AndAlso CDec(row(column)) > maxAnalog Then
+                        If IsNumeric(row(column)) AndAlso CDec(row(column)) > maxAnalog AndAlso CDec(row(column)) <> 10000000 Then
                             maxAnalog = CDec(row(column))
                         End If
 
