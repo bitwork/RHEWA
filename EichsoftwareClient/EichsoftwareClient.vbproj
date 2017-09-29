@@ -45,7 +45,7 @@
     <PublisherName>RHEWA</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>164</ApplicationRevision>
+    <ApplicationRevision>166</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -1225,15 +1225,15 @@
     <Content Include="README\README.txt" />
     <Content Include="Resources\TenLCs.PNG" />
     <None Include="Service References\EichsoftwareWebservice\EichsoftwareWebservice1.disco" />
-    <Content Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\mitgeltende Software\Konfig82_2.0.0.exe" />
-    <Content Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\mitgeltende Software\Konfig83N_V1-0-2.exe" />
-    <Content Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\mitgeltende Software\Konfig83plus_V4-0-0.exe" />
-    <Content Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\mitgeltende Software\Konfig83Z_2.6.0.exe" />
-    <Content Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\mitgeltende Software\Konfig84_2.3.2.exe" />
-    <Content Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\_Angepasste Dokumente\ohne blattschutz\code.txt" />
-    <Content Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\_Ausgefüllte Dokumente\Transfer_Konfig82.mdb">
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\mitgeltende Software\Konfig82_2.0.0.exe" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\mitgeltende Software\Konfig83N_V1-0-2.exe" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\mitgeltende Software\Konfig83plus_V4-0-0.exe" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\mitgeltende Software\Konfig83Z_2.6.0.exe" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\mitgeltende Software\Konfig84_2.3.2.exe" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\_Angepasste Dokumente\ohne blattschutz\code.txt" />
+    <None Include="UrspruenglicheDokumente\RHEWA DOKUMENTE\_Ausgefüllte Dokumente\Transfer_Konfig82.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </None>
     <None Include="DLLs\System.Net.FtpClient.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
