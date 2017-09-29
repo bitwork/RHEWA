@@ -8,7 +8,7 @@ Imports System.IO
 ''' <remarks></remarks>
 Public Class FrmMainContainer
 
-#Region "Membervariables"
+#Region "Member Variablen"
     ' auflistung aller aktuellen UCOs, damit diese nicht immer neu erzeugt werden müssen
     Private _ListofUcos As New List(Of ucoContent)
     Private _StandardWaagePopupShown As Boolean = False
@@ -146,7 +146,6 @@ Public Class FrmMainContainer
     Protected Friend Sub SETContextHelpText(ByVal Helptext As String)
         'Formatierten Text dem Steuerelement zuweisen
         radlabelContextHelp.Text = Helptext
-
     End Sub
 
     ''' <summary>
@@ -194,15 +193,10 @@ Public Class FrmMainContainer
     ''' <commentauthor></commentauthor>
     Protected Friend Sub NavigiereZuUco(ByVal Status As GlobaleEnumeratoren.enuEichprozessStatus) Handles BreadCrumb.Navigieren
         Try
-            ''im debugger zur einfachheit, kann per click auf jeden Status gesprungen werden
-            'If Debugger.IsAttached Then
-            '    SpringeZuUCO(Status)
-            'Else
             'prüfen ob zu hoher Status gewählt wurde
             If Status > CurrentEichprozess.FK_Vorgangsstatus Then
                 Exit Sub
             Else
-
                 'schnelles blättern im lese modus
                 If AbortBreadCrumbNavigation = False Then
                     If Not _CurrentUco Is Nothing Then
@@ -214,87 +208,15 @@ Public Class FrmMainContainer
 
                 End If
             End If
-            'End If
         Catch e As Exception
         End Try
     End Sub
 
-#Region "Localization"
-
     ''' <summary>
-    ''' ändert die Kultur des Anwendungsthreads. Alle neuen Dialoge werden dann entsprechend in der neuen Sprache geladen
+    ''' F1 für EFG Shift Enter für weiter Strg Enter für zurück
     ''' </summary>
-    ''' <param name="Code"></param>
-    ''' <remarks></remarks>
-    Friend Sub changeCulture(ByVal Code As String)
-        Dim culture As CultureInfo = CultureInfo.GetCultureInfo(Code).Clone
-        'Es gibt viele Berechnungen, diese sollen ausschließlich im deutschen Zahlenformat durchgeführt werden
-        culture.NumberFormat.NumberDecimalSeparator = ","
-        culture.NumberFormat.NumberGroupSeparator = "."
-
-        Threading.Thread.CurrentThread.CurrentCulture = culture
-        Threading.Thread.CurrentThread.CurrentUICulture = culture
-        Application.CurrentCulture = culture
-        AktuellerBenutzer.Instance.AktuelleSprache = Code
-        AktuellerBenutzer.SaveSettings()
-
-        'übersetzung der Formular elemente von frmMainContainer
-
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMainContainer))
-        Lokalisierung(Me, resources)
-
-        'speichern der aktuellen Eingaben ins Objekt
-        RaiseEvent LokalisierungNeeded(_CurrentUco)
-        If Not objUCOBenutzerwechsel Is Nothing Then
-            objUCOBenutzerwechsel.TriggerLokalisierung()
-        End If
-
-    End Sub
-
-    Protected Sub Lokalisierung(ByVal container As Control, ByVal ressourcemanager As System.ComponentModel.ComponentResourceManager)
-        ressourcemanager.ApplyResources(container, container.Name, New Globalization.CultureInfo(AktuellerBenutzer.Instance.AktuelleSprache))
-
-        For Each c As Control In container.Controls
-            For Each childControl In c.Controls
-                Lokalisierung(childControl, ressourcemanager)
-            Next
-            ressourcemanager.ApplyResources(c, c.Name, New Globalization.CultureInfo(AktuellerBenutzer.Instance.AktuelleSprache))
-        Next c
-    End Sub
-
-    ''' <summary>
-    ''' zuweiseung der Sprache für den Hauptthread bei Klick auf die Flaggen
-    ''' </summary>
-    ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    ''' <remarks></remarks>
-    Private Sub RadButtonChangeLanguage_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonChangeLanguageToGerman.Click, RadButtonChangeLanguageToEnglish.Click, RadButtonChangeLanguageToPolish.Click
-        If sender.Equals(RadButtonChangeLanguageToEnglish) Then
-            changeCulture("en")
-
-            'changeCulture("en")
-        ElseIf sender.Equals(RadButtonChangeLanguageToGerman) Then
-            changeCulture("de")
-            '  changeCulture("de")
-
-        ElseIf sender.Equals(RadButtonChangeLanguageToPolish) Then
-            changeCulture("pl")
-            'changeCulture("pl")
-        End If
-    End Sub
-
-#End Region
-#End Region
-
-#Region "Formular Events"
-
-    ''' <summary>
-    ''' abfangen von Sondertasten. F1 für EFG Dialog, sofern anzeigbar, shift + enter für schnelles navigieren, strg + enter für schnelles zurück navigieren
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
-    ''' <remarks></remarks>
-    Private Sub FrmMainContainer_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+    Private Sub KeyDownEventHandler(e As KeyEventArgs)
         'F1 für EFG Dialog
         If e.KeyData.ToString.Equals("F1") Then
             If Not _CurrentUco Is Nothing Then
@@ -318,13 +240,8 @@ Public Class FrmMainContainer
         End If
     End Sub
 
-    ''' <summary>
-    '''   Laderoutine
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
-    ''' <remarks></remarks>
-    Private Sub FrmMainContainer_Load(sender As Object, e As System.EventArgs) Handles Me.Load
+
+    Private Sub LadeRoutine()
         Try
             clsDBFunctions.prepareDatabase()
 
@@ -400,8 +317,6 @@ Public Class FrmMainContainer
 
         RadButtonNavigateBackwards.Visible = False
         RadButtonNavigateForwards.Visible = False
-        ''laden des Grid Layouts aus User Settings
-        'AktuellerBenutzer.LadeGridLayout(uco)
     End Sub
 
     ''' <summary>
@@ -426,19 +341,14 @@ Public Class FrmMainContainer
             End Try
 
             Dim uco As Object = Nothing
+
             'aktuelen Status zur Ampel zuweisen
 
-            'If CurrentEichprozess.FK_Bearbeitungsstatus = GlobaleEnumeratoren.enuBearbeitungsstatus.Fehlerhaft AndAlso Me.DialogModus <> enuDialogModus.lesend Then
-            '    BreadCrumb.AktuellerGewaehlterVorgang = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe
-            'Else
-            '    BreadCrumb.AktuellerGewaehlterVorgang = CurrentEichprozess.FK_Vorgangsstatus
-            'End If
             If Me.DialogModus = enuDialogModus.lesend Then 'falls RHEWA seitig ein DS angeguckt wird, ist dieser bereits fertig, soll aber dennoch von anfang an angeguckt werden
                 uco = New uco_2StammdatenEingabe(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
                 'auf erste seite Blättern
                 BreadCrumb.AktuellerGewaehlterVorgang = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe
                 BreadCrumb.FindeElementUndSelektiere(GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe)
-
             Else
                 BreadCrumb.AktuellerGewaehlterVorgang = CurrentEichprozess.FK_Vorgangsstatus
                 Select Case CurrentEichprozess.FK_Vorgangsstatus
@@ -448,7 +358,7 @@ Public Class FrmMainContainer
                         uco = New uco_3Kompatiblititaetsnachweis(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
                     Case Is = GlobaleEnumeratoren.enuEichprozessStatus.KompatbilitaetsnachweisErgebnis
                         uco = New uco_4KompatiblititaetsnachweisErgebnis(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
-                    Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Beschaffenheitspruefung '"  Beschaffenheitsprüfung"
+                    Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Beschaffenheitspruefung
                         uco = New uco_5Beschaffenheitspruefung(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
                     Case Is = GlobaleEnumeratoren.enuEichprozessStatus.AuswahlKonformitätsverfahren
                         uco = New uco_6EichprotokollVerfahrenswahl(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
@@ -482,7 +392,7 @@ Public Class FrmMainContainer
                         uco = New uco20Reports(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
                     Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Versenden
                         uco = New Uco21Versenden(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
-                    Case Else
+                    Case Else 'sonderfall der nicht eintreten sollte
                         Me.Close()
                         Exit Sub
                 End Select
@@ -591,30 +501,6 @@ Public Class FrmMainContainer
             ChangeActiveContentUserControl(uco)
 
         End If
-    End Sub
-
-    ''' <summary>
-    ''' Navigiere  vorwärts inklusive speichern und laden des neuen UCOs
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
-    ''' <remarks></remarks>
-    ''' <author></author>
-    ''' <commentauthor></commentauthor>
-    Private Sub RadButtonNavigateForwards_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonNavigateForwards.Click
-        BlaettereVorwaerts()
-    End Sub
-
-    ''' <summary>
-    ''' Navigiere rückwärts inklusive speichern und laden des UCOs
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
-    ''' <remarks></remarks>
-    ''' <author></author>
-    ''' <commentauthor></commentauthor>
-    Private Sub RadButtonNavigateBackwards_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonNavigateBackwards.Click
-        BlaettereRueckwaerts()
     End Sub
 
     ''' <summary>
@@ -910,12 +796,6 @@ Public Class FrmMainContainer
                 uco._bolValidierungsmodus = True
                 If uco.ValidationNeeded() = False Then
                     pErrorList += uco.Name & vbNewLine
-                    'uco = New uco_7EichprotokollDaten(Me, CurrentEichprozess, Nothing, pUcoToCheck, DialogModus)
-                    'BreadCrumb.FindeElementUndSelektiere(uco.EichprozessStatusReihenfolge)
-
-                    ''vorheriges Uco zu anzeige bringen
-                    'RaiseEvent UpdateNeeded(uco)
-                    'ChangeActiveContentUserControl(uco)
                     AbortBreadCrumbNavigation = False 'SpringeZuMethode aus ucoAmpel aktivieren
                     uco = Nothing
 
@@ -932,13 +812,6 @@ Public Class FrmMainContainer
                 uco._bolValidierungsmodus = True
                 If uco.ValidationNeeded() = False Then
                     pErrorList += uco.Name & vbNewLine
-                    'uco = New uco_7EichprotokollDaten(Me, CurrentEichprozess, Nothing, pUcoToCheck, DialogModus)
-
-                    'BreadCrumb.FindeElementUndSelektiere(uco.EichprozessStatusReihenfolge)
-
-                    ''vorheriges Uco zu anzeige bringen
-                    'RaiseEvent UpdateNeeded(uco)
-                    'ChangeActiveContentUserControl(uco)
                     AbortBreadCrumbNavigation = False 'SpringeZuMethode aus ucoAmpel aktivieren
                     uco = Nothing
 
@@ -1072,13 +945,7 @@ Public Class FrmMainContainer
         AbortBreadCrumbNavigation = False 'SpringeZuMethode aus ucoAmpel aktivieren
     End Sub
 
-    ''' <summary>
-    ''' in diesem Event wird gesperrt status zurückgesetzt, falls ein Bearbeiter gerade sperrt
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
-    ''' <remarks></remarks>
-    Private Sub FrmMainContainer_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+    Private Sub FormClosingHandler()
         If DialogModus = enuDialogModus.korrigierend Or DialogModus = enuDialogModus.lesend Then
             If AktuellerBenutzer.Instance.Lizenz.RHEWALizenz = True Then
                 If Not CurrentEichprozess Is Nothing Then
@@ -1093,42 +960,17 @@ Public Class FrmMainContainer
         End If
     End Sub
 
-#End Region
 
-    ''' <summary>
-    ''' Triggered Event im UCO, welches den Versendenprozess startet
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
-    ''' <remarks></remarks>
-    Private Sub RadButtonVersenden_Click(sender As Object, e As EventArgs) Handles RadButtonVersenden.Click
-        '    If MessageBox.Show(GlobaleLokalisierung.Frage_EichprotokollZuruecksenden, My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo, MessageBoxIcon.Question) = System.Windows.Forms.DialogResult.Yes Then
-
-        'entsperren des DS
-        If Not CurrentEichprozess Is Nothing Then
-
-            RaiseEvent VersendenNeeded(_CurrentUco)
-
-        End If
-        'End If
-    End Sub
-
-    ''' <summary>
-    ''' triggerd event im UCO, welches den Entsperrprozess startet
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
-    ''' <remarks></remarks>
-    Private Sub RadButtonEntsperren_Click(sender As Object, e As EventArgs) Handles RadButtonEntsperren.Click
+    Private Sub Entsperre()
         'wenn der status des aktuellen elementes eh schon auf fehlerhaft steht oder auf abgeschlossen, darf keine Änderung verschickt werden
         If CurrentEichprozess.FK_Bearbeitungsstatus = 3 Then
             MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_EichprotokollBereitsGenehmigt)
-            Exit Sub
+            Return
         End If
 
         If CurrentEichprozess.FK_Bearbeitungsstatus = 2 Then
             MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_EichprotokollBereitsAbgelehnt)
-            Exit Sub
+            Return
         End If
 
         'prüfen ob eine Sperrung des DS vorliegt und DS sperren wenn nicht
@@ -1139,21 +981,9 @@ Public Class FrmMainContainer
                 RadButtonEntsperren.Enabled = False
             End If
         End If
-
     End Sub
 
-    ''' <summary>
-    ''' Eventhandler für UCO Event. Wenn dort eine Eigenschaft geändert wird, wird ein Dirty Flag gesetzt. Durch das Dirty flag wird hier der Status des aktuellen Vorgangs angepasst.
-    ''' Beispiel: Der Eichprozess befindet sich im 10. Schritt. im 8 wird aber etwas geändert. Dies kann folgen haben für die kommenden Schritte. Deswegen wird dann der aktuelle Schritt auf 8 zurückgesetzt
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
-    ''' <remarks></remarks>
-    Private Sub _CurrentUco_PropertyChanged(sender As Object, e As System.ComponentModel.PropertyChangedEventArgs) Handles _CurrentUco.PropertyChanged
-        If e.PropertyName.Equals("AktuellerStatusDirty") Then
-            BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.EichprozessStatusReihenfolge
-        End If
-    End Sub
+
 
     ''' <summary>
     ''' Zeigt Popup beim Blättern durch eine Standardwaage
@@ -1177,13 +1007,183 @@ Public Class FrmMainContainer
 
     End Sub
 
-    Private Sub RadButtonPlausibilitaet_Click(sender As Object, e As EventArgs) Handles RadButtonPlausibilitaet.Click
+    ''' <summary>
+    ''' öffne Plausiblitätserklärung
+    ''' </summary>
+    Private Sub ShowPlausibilitaet()
         If Not CurrentEichprozess Is Nothing Then
-
             Dim f As New frmPlausibiltaetspruefung(objEichProzess:=CurrentEichprozess)
             f.Show()
         End If
+    End Sub
+
+#Region "Lokalisierung"
+
+    ''' <summary>
+    ''' ändert die Kultur des Anwendungsthreads. Alle neuen Dialoge werden dann entsprechend in der neuen Sprache geladen
+    ''' </summary>
+    ''' <param name="Code"></param>
+    ''' <remarks></remarks>
+    Friend Sub ChangeCulture(ByVal Code As String)
+        Dim culture As CultureInfo = CultureInfo.GetCultureInfo(Code).Clone
+        'Es gibt viele Berechnungen, diese sollen ausschließlich im deutschen Zahlenformat durchgeführt werden
+        culture.NumberFormat.NumberDecimalSeparator = ","
+        culture.NumberFormat.NumberGroupSeparator = "."
+
+        Threading.Thread.CurrentThread.CurrentCulture = culture
+        Threading.Thread.CurrentThread.CurrentUICulture = culture
+        Application.CurrentCulture = culture
+        AktuellerBenutzer.Instance.AktuelleSprache = Code
+        AktuellerBenutzer.SaveSettings()
+
+        'übersetzung der Formular elemente von frmMainContainer
+
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMainContainer))
+        Lokalisierung(Me, resources)
+
+        'speichern der aktuellen Eingaben ins Objekt
+        RaiseEvent LokalisierungNeeded(_CurrentUco)
+        If Not objUCOBenutzerwechsel Is Nothing Then
+            objUCOBenutzerwechsel.TriggerLokalisierung()
+        End If
 
     End Sub
+
+    Protected Sub Lokalisierung(ByVal container As Control, ByVal ressourcemanager As System.ComponentModel.ComponentResourceManager)
+        ressourcemanager.ApplyResources(container, container.Name, New Globalization.CultureInfo(AktuellerBenutzer.Instance.AktuelleSprache))
+
+        For Each c As Control In container.Controls
+            For Each childControl In c.Controls
+                Lokalisierung(childControl, ressourcemanager)
+            Next
+            ressourcemanager.ApplyResources(c, c.Name, New Globalization.CultureInfo(AktuellerBenutzer.Instance.AktuelleSprache))
+        Next c
+    End Sub
+
+
+
+    Private Sub ChangeCultureClickHandler(sender As Object)
+        If sender.Equals(RadButtonChangeLanguageToEnglish) Then
+            ChangeCulture("en")
+        ElseIf sender.Equals(RadButtonChangeLanguageToGerman) Then
+            ChangeCulture("de")
+        ElseIf sender.Equals(RadButtonChangeLanguageToPolish) Then
+            ChangeCulture("pl")
+        End If
+    End Sub
+
+#End Region
+#End Region
+
+#Region "Formular Events"
+    ''' <summary>
+    ''' zuweiseung der Sprache für den Hauptthread bei Klick auf die Flaggen
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub RadButtonChangeLanguage_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonChangeLanguageToGerman.Click, RadButtonChangeLanguageToEnglish.Click, RadButtonChangeLanguageToPolish.Click
+        ChangeCultureClickHandler(sender)
+    End Sub
+
+    ''' <summary>
+    ''' abfangen von Sondertasten. F1 für EFG Dialog, sofern anzeigbar, shift + enter für schnelles navigieren, strg + enter für schnelles zurück navigieren
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub FrmMainContainer_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+        KeyDownEventHandler(e)
+    End Sub
+
+
+    ''' <summary>
+    '''   Laderoutine
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub FrmMainContainer_Load(sender As Object, e As System.EventArgs) Handles Me.Load
+        LadeRoutine()
+    End Sub
+
+
+    ''' <summary>
+    ''' Navigiere  vorwärts inklusive speichern und laden des neuen UCOs
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    ''' <author></author>
+    ''' <commentauthor></commentauthor>
+    Private Sub RadButtonNavigateForwards_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonNavigateForwards.Click
+        BlaettereVorwaerts()
+    End Sub
+
+    ''' <summary>
+    ''' Navigiere rückwärts inklusive speichern und laden des UCOs
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    ''' <author></author>
+    ''' <commentauthor></commentauthor>
+    Private Sub RadButtonNavigateBackwards_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonNavigateBackwards.Click
+        BlaettereRueckwaerts()
+    End Sub
+
+    ''' <summary>
+    ''' in diesem Event wird gesperrt status zurückgesetzt, falls ein Bearbeiter gerade sperrt
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub FrmMainContainer_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        FormClosingHandler()
+    End Sub
+
+    ''' <summary>
+    ''' Triggered Event im UCO, welches den Versendenprozess startet
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub RadButtonVersenden_Click(sender As Object, e As EventArgs) Handles RadButtonVersenden.Click
+        'entsperren des DS
+        If Not CurrentEichprozess Is Nothing Then
+            RaiseEvent VersendenNeeded(_CurrentUco)
+        End If
+    End Sub
+
+    ''' <summary>
+    ''' triggerd event im UCO, welches den Entsperrprozess startet
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub RadButtonEntsperren_Click(sender As Object, e As EventArgs) Handles RadButtonEntsperren.Click
+        Entsperre()
+    End Sub
+
+    ''' <summary>
+    ''' Eventhandler für UCO Event. Wenn dort eine Eigenschaft geändert wird, wird ein Dirty Flag gesetzt. Durch das Dirty flag wird hier der Status des aktuellen Vorgangs angepasst.
+    ''' Beispiel: Der Eichprozess befindet sich im 10. Schritt. im 8 wird aber etwas geändert. Dies kann folgen haben für die kommenden Schritte. Deswegen wird dann der aktuelle Schritt auf 8 zurückgesetzt
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub _CurrentUco_PropertyChanged(sender As Object, e As System.ComponentModel.PropertyChangedEventArgs) Handles _CurrentUco.PropertyChanged
+        If e.PropertyName.Equals("AktuellerStatusDirty") Then
+            BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.EichprozessStatusReihenfolge
+        End If
+    End Sub
+
+
+    Private Sub RadButtonPlausibilitaet_Click(sender As Object, e As EventArgs) Handles RadButtonPlausibilitaet.Click
+        ShowPlausibilitaet()
+    End Sub
+
+#End Region
+
 
 End Class
