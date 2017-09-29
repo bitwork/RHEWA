@@ -15,5 +15,5 @@ Public Class clsEichprozessFuerAuswahlliste
     Public Property Uploaddatum As DateTime
     Public Property Pruefscheinnummer As String
     Public Property Bemerkung As String
-    Public Property HKBDatum As String
+    Public Property HKBDatum As DateTime
 End Class

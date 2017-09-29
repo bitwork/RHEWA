@@ -30,12 +30,13 @@
     End Sub
 
     Private Sub RadButtonGridSettingsZuruecksetzen_Click(sender As Object, e As EventArgs) Handles RadButtonGridSettingsZuruecksetzen.Click
-        AktuellerBenutzer.Instance.GridSettings = AktuellerBenutzer.Instance.GridDefaultSettings
-        AktuellerBenutzer.Instance.GridSettingsRhewa = AktuellerBenutzer.Instance.GridDefaultSettingsRhewa
-        AktuellerBenutzer.SaveSettings()
+        AktuellerBenutzer.ResetGridSettings()
+
         Me.DialogResult = DialogResult.Retry
         Me.Close()
     End Sub
+
+
 
     ''' <summary>
     ''' setzen der Radioboxen und de/aktivieren der Steuerelemente
