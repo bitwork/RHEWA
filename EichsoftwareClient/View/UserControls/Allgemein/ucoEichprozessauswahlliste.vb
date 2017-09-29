@@ -8,7 +8,6 @@ Public Class ucoEichprozessauswahlliste
 #Region "Member Variables"
     Private WithEvents _ParentForm As FrmMainContainer
     Private objWebserviceFunctions As New clsWebserviceFunctions
-    'Private objDBFunctions As New clsDBFunctions
     Private WithEvents objFTP As New clsFTP
     Private objPage As Telerik.WinControls.UI.RadPageViewPage
 #End Region
@@ -66,7 +65,7 @@ Public Class ucoEichprozessauswahlliste
     End Property
 #End Region
 
-#Region "Formular Logiken"
+#Region "Events"
     Private Sub ucoEichprozessauswahlliste_Load(sender As Object, e As System.EventArgs) Handles Me.Load
         Me.SuspendLayout()
         Me.Visible = False
@@ -76,25 +75,25 @@ Public Class ucoEichprozessauswahlliste
     End Sub
 
     ''' <summary>
-    '''  laden des eingestellten Moants für den nächsten Programmstart
+    ''' aktivieren und deaktiveren der Schalter zum Genehmigen und Ablehnen
     ''' </summary>
-    Private Sub LadeDateTimePickerRHEWAListe()
-        Try
-            If My.Settings.RHEWAFilterMonatBis.Equals(New Date) Then
-                My.Settings.RHEWAFilterMonatBis = New Date(Now.Year, Now.Month, 1).AddMonths(1).AddDays(-1)
-                My.Settings.Save()
-            End If
-            If My.Settings.RHEWAFilterMonatVon.Equals(New Date) Then
-                My.Settings.RHEWAFilterMonatVon = New Date(Now.Year, Now.Month, 1).AddMonths(-1)
-                My.Settings.Save()
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    ''' <author></author>
+    ''' <commentauthor></commentauthor>
+    Private Sub RadGridView1_SelectionChanged(sender As System.Object, e As System.EventArgs) Handles RadGridViewRHEWAAlle.SelectionChanged
+        TriggerEnabledStateGenehmigungsButtonns()
+    End Sub
 
-            End If
-            RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.Value = My.Settings.RHEWAFilterMonatBis
-
-            RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.Value = My.Settings.RHEWAFilterMonatVon
-        Catch ex As Exception
-            RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.Value = Date.Now.Date
-        End Try
+    ''' <summary>
+    ''' Konfigurationsdialog anzeigen
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub RadButtonEinstellungen_Click(sender As Object, e As EventArgs) Handles RadButtonEinstellungen.Click
+        ZeigeKonfigurationsDialog()
     End Sub
 
     Private Sub RadButtonRefresh_Click(sender As Object, e As EventArgs) Handles RadButtonRefresh.Click
@@ -103,15 +102,297 @@ Public Class ucoEichprozessauswahlliste
         'speichern des eingestellen Monats für den nächsten Programmstart
         SpeichereRhewaDatumsfilterEinstellung()
     End Sub
-    ''' <summary>
-    '''  speichern des eingestellen Monats für den nächsten Programmstart
-    ''' </summary>
-    Private Sub SpeichereRhewaDatumsfilterEinstellung()
-        My.Settings.RHEWAFilterMonatVon = RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.Value
-        My.Settings.RHEWAFilterMonatBis = RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.Value
 
-        My.Settings.Save()
+    ''' <summary>
+    ''' Neuen Eichprozess anlegen
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub RadButtonNeu_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonClientNeu.Click
+        OeffneNeuenEichprozess()
     End Sub
+
+    ''' <summary>
+    ''' Eichprozess bearbeiten
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub RadButtonBearbeiten_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonClientBearbeiten.Click
+        BearbeiteEichprozess()
+    End Sub
+
+    ''' <summary>
+    ''' Eichprozess bearbeiten
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub RadGridViewAuswahlliste_DoubleClick(sender As Object, e As Telerik.WinControls.UI.GridViewCellEventArgs) Handles RadGridViewAuswahlliste.CellDoubleClick
+        If RadGridViewAuswahlliste.SelectedRows.Count = 0 Then Exit Sub
+        If Not TypeOf e.Row Is Telerik.WinControls.UI.GridViewDataRowInfo Then Exit Sub
+
+        BearbeiteEichprozess()
+    End Sub
+
+    ''' <summary>
+    ''' ausblenden bzw wieder einblenden des aktuellen Konformitätsbewertungsvorgangs
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    ''' <author></author>
+    ''' <commentauthor></commentauthor>
+    Private Sub RadButtonAusblenden_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonClientAusblenden.Click
+        EichprozessAusblendenEinblenden()
+    End Sub
+
+    ''' <summary>
+    ''' ein und ausblenden der als gelöscht markierten Elementen
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="args"></param>
+    ''' <remarks></remarks>
+    ''' <author></author>
+    ''' <commentauthor></commentauthor>
+    Private Sub RadCheckBoxAusblendenGeloeschterDokumente_ToggleStateChanged(sender As System.Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RadCheckBoxAusblendenClientGeloeschterDokumente.ToggleStateChanged
+        'laden der benötigten Liste mit nur den benötigten Spalten
+        LoadFromDatabase()
+    End Sub
+
+    ''' <summary>
+    ''' Lokale Eichprozesse für Gridview laden
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub BackgroundWorkerLoadFromDatabase_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorkerLoadFromDatabase.DoWork
+        'background worker result enthält anschließend alle lokalen Eichprozesse
+        e.Result = clsDBFunctions.LadeLokaleEichprozessListe(RadCheckBoxAusblendenClientGeloeschterDokumente.Checked)
+    End Sub
+
+    ''' <summary>
+    '''
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub BackgroundWorkerLoadFromDatabase_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorkerLoadFromDatabase.RunWorkerCompleted
+        LoadFromDatabaseCompleted(e)
+    End Sub
+
+    Private Sub BackgroundWorkerSyncAlles_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorkerSyncAlles.DoWork
+        e = SyncAlles(e)
+    End Sub
+
+
+
+    Private Sub BackgroundWorkerSyncAlles_ProgressChanged(sender As Object, e As System.ComponentModel.ProgressChangedEventArgs) Handles BackgroundWorkerSyncAlles.ProgressChanged
+        RadProgressBar1.Value1 = e.ProgressPercentage
+        Me.Enabled = False
+        Me.Parent.Enabled = False
+    End Sub
+
+    Private Sub BackgroundWorkerSyncAlles_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorkerSyncAlles.RunWorkerCompleted
+        RadProgressBar1.Value1 = 100
+        If Not e.Result Is Nothing Then
+            MessageBox.Show(e.Result)
+        End If
+
+        FlowLayoutPanel2.Visible = False
+        RadProgressBar1.Visible = False
+        Me.Enabled = True
+        Me.Parent.Enabled = True
+
+        'aktualisieren des Grids
+        LoadFromDatabase()
+    End Sub
+
+    ''' <summary>
+    ''' Methode welche sich mit dem Webservice verbinduet und nach aktualisierungen für WZ, AWGs und eigenen Eichungen guckt
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub RadButtonClientUpdateDatabase_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonClientUpdateDatabase.Click
+        VerbindeMitWebServiceUndAktualisiere()
+    End Sub
+
+
+    Private Sub RadButtonProtokollAblegen_Click(sender As Object, e As EventArgs) Handles RadButtonProtokollAblegen.Click
+        VorgangAblegen()
+    End Sub
+
+
+
+
+#Region "Rhewa Funktionen"
+
+    Private Sub RadButtonNeuStandardwaage_Click(sender As Object, e As EventArgs) Handles RadButtonNeuStandardwaage.Click
+        Dim f As New FrmAuswahlStandardwaage
+        f.Show()
+        AddHandler f.FormClosed, AddressOf LoadFromDatabase
+    End Sub
+
+    'limitieren der Min MAx Werte des Datetime Pcikers
+    Private Sub RadDateTimePickerFilterMonatLadeAlleEichprozesseVon_ValueChanged(sender As Object, e As EventArgs) Handles RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.ValueChanged
+        RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.MinDate = RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.Value
+    End Sub
+
+    Private Sub RadDateTimePickerFilterMonatLadeAlleEichprozesseBis_ValueChanged(sender As Object, e As EventArgs) Handles RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.ValueChanged
+        RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.MaxDate = RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.Value
+    End Sub
+    ''' <summary>
+    ''' Lade eichprozessliste vom Server
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub BackgroundWorkerLoadFromDatabaseRHEWA_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorkerLoadFromDatabaseRHEWA.DoWork
+        'background worker result enthält anschließend alle serverseitigen Eichprozesse
+        If RadCheckBoxLadeAlleEichprozesse.Checked Then
+            e.Result = clsWebserviceFunctions.GetServerEichprotokollListe()
+        Else
+            e.Result = clsWebserviceFunctions.GetServerEichprotokollListe(RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.Value.Year, RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.Value.Month, RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.Value.Year, RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.Value.Month)
+        End If
+    End Sub
+
+    ''' <summary>
+    ''' Databinding und Formatierung
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub BackgroundWorkerLoadFromDatabaseRHEWA_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs, Optional invalid As String = "Invalid") Handles BackgroundWorkerLoadFromDatabaseRHEWA.RunWorkerCompleted
+        LoadFromDatabaseRHEWACompleted(e)
+    End Sub
+
+
+    ''' <summary>
+    ''' Einblenden eines Anhang Symbols für Anträge mit Dateianhang
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub RadGridViewRHEWAAlle_CellFormatting(sender As Object, e As Telerik.WinControls.UI.CellFormattingEventArgs) Handles RadGridViewRHEWAAlle.CellFormatting
+        e = FormatCellRHEWA(e)
+    End Sub
+
+
+    Private Sub RadGridView_ViewCellFormatting(sender As Object, e As CellFormattingEventArgs) Handles RadGridViewAuswahlliste.ViewCellFormatting, RadGridViewRHEWAAlle.ViewCellFormatting
+        If (TypeOf e.CellElement Is GridHeaderCellElement) Then
+            e.CellElement.TextWrap = True
+        End If
+    End Sub
+
+    ''' <summary>
+    ''' öffnen des Dateianhangs
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub RadGridViewRHEWAAlle_CellDoubleClick(sender As Object, e As Telerik.WinControls.UI.GridViewCellEventArgs) Handles RadGridViewRHEWAAlle.CellDoubleClick
+        If RadGridViewRHEWAAlle.SelectedRows.Count = 0 Then Exit Sub
+        If Not TypeOf e.Row Is Telerik.WinControls.UI.GridViewDataRowInfo Then Exit Sub
+
+        Try
+            If (RadGridViewRHEWAAlle.Columns(e.ColumnIndex).Name = "AnhangPfad") Then
+
+                If e.Value.Trim.Equals("") = False Then
+                    Dim Vorgangsnummer As String
+                    Vorgangsnummer = e.Row.Cells("Vorgangsnummer").Value
+                    Try
+                        OeffneDateiVonFTP(e.Value, Vorgangsnummer)
+                    Catch ex As Exception
+                        Debug.WriteLine(ex.ToString)
+                    End Try
+                Else
+                    ZeigeServerEichprozess()
+                End If
+            Else
+                ZeigeServerEichprozess()
+            End If
+        Catch ex As Exception
+            Debug.WriteLine(ex.ToString)
+        End Try
+    End Sub
+
+    Private Sub BackgroundWorkerDownloadFromFTP_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorkerDownloadFromFTP.DoWork
+        Dim vorgangsnummer As String = e.Argument
+        e.Result = clsWebserviceFunctions.GetFTPFile(vorgangsnummer, objFTP, Me.BackgroundWorkerDownloadFromFTP)
+    End Sub
+
+#Region "Events FTP"
+
+    Private Sub BackgroundWorkerDownloadFromFTP_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorkerDownloadFromFTP.RunWorkerCompleted
+        Me.Enabled = True
+        Me.RadProgressBar.Visible = False
+        Me.RadProgressBar.Value1 = 0
+        RadProgressBar.Text = ""
+
+        Dim filepath As String = e.Result
+        If filepath.Equals("") = False Then
+            Dim proc As Process = New Process()
+            proc.StartInfo.FileName = filepath
+            proc.StartInfo.UseShellExecute = True
+            proc.Start()
+        Else
+            MessageBox.Show("Konnte Datei am Pfad nicht finden. Sie konnte auch nicht heruntergeladen werden.")
+        End If
+    End Sub
+
+    Private Sub BackgroundWorkerDownloadFromFTP_ProgressChanged(sender As Object, e As System.ComponentModel.ProgressChangedEventArgs) Handles BackgroundWorkerDownloadFromFTP.ProgressChanged
+        Try
+            If e.ProgressPercentage = 0 Then
+                RadProgressBar.Value1 = e.UserState
+                RadProgressBar.Text = CInt(CInt(e.UserState) / 1024) & " KB/ " & CInt(CInt(RadProgressBar.Maximum) / 1024) & " KB"
+                Me.Refresh()
+            Else
+                RadProgressBar.Maximum = e.ProgressPercentage
+            End If
+        Catch ex As Exception
+            Debug.WriteLine(ex.ToString)
+        End Try
+    End Sub
+
+    Private Sub objFTP_ReportFTPProgress(Progress As Integer) Handles objFTP.ReportFTPProgress
+        Try
+            BackgroundWorkerDownloadFromFTP.ReportProgress(0, Progress)
+        Catch ex As Exception
+        End Try
+    End Sub
+
+#End Region
+    ''' <summary>
+    ''' Eichprozess genehmigen
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub RadButtonEichprozessGenehmigen_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonEichprozessGenehmigenRHEWA.Click
+        GenehnmigeGewaehltenVorgang()
+    End Sub
+
+    ''' <summary>
+    ''' Eichprozess ablehnen
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub RadButtonEichprozessAblehnen_click(sender As System.Object, e As System.EventArgs) Handles RadButtonEichprozessAblehnenRHEWA.Click
+        AblehnenGewaehlterVorgang()
+    End Sub
+
+
+
+    ''' <summary>
+    ''' Eichprozess bearbeiten
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub RadButtonBearbeitenRHEWA_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonEichungAnsehenRHEWA.Click
+        ZeigeServerEichprozess()
+    End Sub
+
+#End Region
+#End Region
+
+#Region "Methoden"
 
     Protected Friend Sub LadeRoutine()
         SetzeUeberschrift()
@@ -133,6 +414,21 @@ Public Class ucoEichprozessauswahlliste
         RadButtonEinstellungen.Visible = True
         RadButtonEinstellungen.Enabled = True
 
+        ' nur mit RHEWA Lizenz die Seite mit allen Vorgängen anzeigen
+        GetControllsRhewaLizenz()
+
+        'für den Fall das die Anwendung gerade erst installiert wurde, oder die einstellung zur Synchronisierung geändert wurde, sollen alle Eichungen vom RHEWA Server geholt werden, die einmal angelegt wurden
+        If Not AktuellerBenutzer.Instance.Lizenz Is Nothing And AktuellerBenutzer.Instance.HoleAlleeigenenEichungenVomServer = True Then
+            VerbindeMitWebserviceUndHoleAlles()
+        Else
+            LoadFromDatabase()
+        End If
+    End Sub
+
+    ''' <summary>
+    ''' nur mit RHEWA Lizenz die Seite mit allen Vorgängen anzeigen
+    ''' </summary>
+    Private Sub GetControllsRhewaLizenz()
         'Tabelle mit Server Items ausblenden
         If AktuellerBenutzer.Instance.Lizenz.RHEWALizenz = False Then
             Try
@@ -161,27 +457,9 @@ Public Class ucoEichprozessauswahlliste
             End If
 
         End If
-
-        'für den Fall das die Anwendung gerade erst installiert wurde, oder die einstellung zur Synchronisierung geändert wurde, sollen alle Eichungen vom RHEWA Server geholt werden, die einmal angelegt wurden
-        If Not AktuellerBenutzer.Instance.Lizenz Is Nothing And AktuellerBenutzer.Instance.HoleAlleeigenenEichungenVomServer = True Then
-            VerbindeMitWebserviceUndHoleAlles()
-        Else
-            LoadFromDatabase()
-        End If
     End Sub
 
-    Protected Friend Overrides Sub SetzeUeberschrift() Implements IRhewaEditingDialog.SetzeUeberschrift
-        If Not ParentFormular Is Nothing Then
-            Try
-                'Hilfetext setzen
-                ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_Hauptmenue)
-                'Überschrift setzen
-                ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_Hauptmenue
 
-            Catch ex As Exception
-            End Try
-        End If
-    End Sub
 
     ''' <summary>
     ''' Ein und ausblenden sowie lokalisierung des Grids
@@ -212,8 +490,6 @@ Public Class ucoEichprozessauswahlliste
             RadGridViewRHEWAAlle.ShowFilteringRow = True
 
             'spaltengrößen anpassen (so viel platz wie möglich nehmen)
-            'RadGridViewAuswahlliste.BestFitColumns()
-            'RadGridViewAuswahlliste.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
             RadGridViewAuswahlliste.BestFitColumns()
             RadGridViewAuswahlliste.EnableAlternatingRowColor = True
             RadGridViewAuswahlliste.SelectionMode = Telerik.WinControls.UI.GridViewSelectionMode.FullRowSelect
@@ -264,55 +540,6 @@ Public Class ucoEichprozessauswahlliste
     End Sub
 
 
-
-    Protected Friend Overrides Sub Lokalisiere() Implements IRhewaEditingDialog.Lokalisiere
-        'übersetzen und formatierung der Tabelle
-        If AktuellerBenutzer.Instance.AktuelleSprache = "de" Then
-            Telerik.WinControls.UI.Localization.RadGridLocalizationProvider.CurrentProvider = New telerikgridlocalizerDE
-        ElseIf AktuellerBenutzer.Instance.AktuelleSprache = "pl" Then
-            Telerik.WinControls.UI.Localization.RadGridLocalizationProvider.CurrentProvider = New telerikgridlocalizerPL
-        Else
-            Telerik.WinControls.UI.Localization.RadGridLocalizationProvider.CurrentProvider = New telerikgridlocalizerEN
-        End If
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucoEichprozessauswahlliste))
-        Lokalisierung(Me, resources)
-
-        'Hilfetext setzen
-        ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_Auswahlliste)
-        'Überschrift setzen
-        ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_Hauptmenue
-
-        LoadFromDatabase()
-    End Sub
-
-    ''' <summary>
-    ''' Initiert background threads die aus lokaler Client DB und Server Webservice die vorhandenen Eichungen abrufen
-    ''' </summary>
-    ''' <remarks></remarks>
-    Protected Friend Overrides Sub LoadFromDatabase() Implements IRhewaEditingDialog.LoadFromDatabase
-        Me.Enabled = False
-
-        If Not BackgroundWorkerLoadFromDatabase.IsBusy Then
-            BackgroundWorkerLoadFromDatabase.RunWorkerAsync()
-        End If
-
-        If AktuellerBenutzer.Instance.Lizenz.RHEWALizenz Then
-            If Not BackgroundWorkerLoadFromDatabaseRHEWA.IsBusy Then
-                BackgroundWorkerLoadFromDatabaseRHEWA.RunWorkerAsync()
-            End If
-        End If
-    End Sub
-
-    ''' <summary>
-    ''' Konfigurationsdialog anzeigen
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
-    ''' <remarks></remarks>
-    Private Sub RadButtonEinstellungen_Click(sender As Object, e As EventArgs) Handles RadButtonEinstellungen.Click
-        ZeigeKonfigurationsDialog()
-    End Sub
-
     ''' <summary>
     ''' Konfigurationsdialog anzeigen
     ''' </summary>
@@ -336,17 +563,6 @@ Public Class ucoEichprozessauswahlliste
         End If
     End Sub
 
-    ''' <summary>
-    ''' aktivieren und deaktiveren der Schalter zum Genehmigen und Ablehnen
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
-    ''' <remarks></remarks>
-    ''' <author></author>
-    ''' <commentauthor></commentauthor>
-    Private Sub RadGridView1_SelectionChanged(sender As System.Object, e As System.EventArgs) Handles RadGridViewRHEWAAlle.SelectionChanged
-        TriggerEnabledStateGenehmigungsButtonns()
-    End Sub
 
     Private Sub TriggerEnabledStateGenehmigungsButtonns()
         Try
@@ -379,143 +595,9 @@ Public Class ucoEichprozessauswahlliste
             RadButtonEichprozessGenehmigenRHEWA.Enabled = False
         End Try
     End Sub
-#End Region
-
-#Region "Konformitätsbewertungsprozess Routinen Client"
-    ''' <summary>
-    ''' Neuen Eichprozess anlegen
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
-    ''' <remarks></remarks>
-    Private Sub RadButtonNeu_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonClientNeu.Click
-        OeffneNeuenEichprozess()
-    End Sub
-
-    ''' <summary>
-    ''' Eichprozess bearbeiten
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
-    ''' <remarks></remarks>
-    Private Sub RadButtonBearbeiten_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonClientBearbeiten.Click
-        BearbeiteEichprozess()
-    End Sub
-
-    ''' <summary>
-    ''' Eichprozess bearbeiten
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
-    ''' <remarks></remarks>
-    Private Sub RadGridViewAuswahlliste_DoubleClick(sender As Object, e As Telerik.WinControls.UI.GridViewCellEventArgs) Handles RadGridViewAuswahlliste.CellDoubleClick
-        If RadGridViewAuswahlliste.SelectedRows.Count = 0 Then Exit Sub
-        If Not TypeOf e.Row Is Telerik.WinControls.UI.GridViewDataRowInfo Then Exit Sub
-
-        BearbeiteEichprozess()
-    End Sub
-
-    ''' <summary>
-    ''' Neuen Eichprozess anlegen
-    ''' </summary>
-    ''' <remarks></remarks>
-    Private Sub OeffneNeuenEichprozess()
-        Dim objEichprozess As Eichprozess = clsDBFunctions.ErzeugeNeuenEichprozess
-        If Not objEichprozess Is Nothing Then
-            'anzeigen des Dialogs zur Bearbeitung der Eichung
-            Dim f As New FrmMainContainer(objEichprozess)
-            f.Show()
-            AddHandler f.FormClosed, AddressOf LoadFromDatabase
-        End If
-    End Sub
-
-    ''' <summary>
-    ''' Eichprozess bearbeiten
-    ''' </summary>
-    ''' <remarks></remarks>
-    Private Sub BearbeiteEichprozess()
-        If Not Me.VorgangsnummerGridClient.Equals("") Then
-            Dim objEichprozess = clsDBFunctions.HoleVorhandenenEichprozess(VorgangsnummerGridClient)
-            If Not objEichprozess Is Nothing Then
-                If objEichprozess.FK_Bearbeitungsstatus = 4 Or objEichprozess.FK_Bearbeitungsstatus = 2 Then 'nur wenn neu oder fehlerhaft darf eine Änderung vorgenommen werrden
-                    'anzeigen des Dialogs zur Bearbeitung der Eichung
-                    Dim f As New FrmMainContainer(objEichprozess)
-                    f.Show()
-                    AddHandler f.FormClosed, AddressOf LoadFromDatabase
-                Else
-                    'es gibt ihn schon und er ist bereits abgeschickt und genehmigt. nur lesend öffnen
 
 
-                    objEichprozess = clsDBFunctions.HoleNachschlageListenFuerEichprozess(objEichprozess)
-                    objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Versenden 'grüne ampel auf versenden setzen, damit direkt alles betrachtet werden kann
-                    Dim f As New FrmMainContainer(objEichprozess, FrmMainContainer.enuDialogModus.lesend)
-                    f.Show()
-                    AddHandler f.FormClosed, AddressOf LoadFromDatabase
-                End If
-
-                ''nach dem schließen des Dialogs aktualisieren
-                'LoadFromDatabase()
-            End If
-        End If
-    End Sub
-
-    ''' <summary>
-    ''' ausblenden bzw wieder einblenden des aktuellen Konformitätsbewertungsvorgangs
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
-    ''' <remarks></remarks>
-    ''' <author></author>
-    ''' <commentauthor></commentauthor>
-    Private Sub RadButtonAusblenden_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonClientAusblenden.Click
-        EichprozessAusblendenEinblenden()
-    End Sub
-
-    ''' <summary>
-    ''' ausblenden bzw wieder einblenden des aktuellen eichvorgangs
-    ''' </summary>
-    ''' <remarks></remarks>
-    ''' <author></author>
-    ''' <commentauthor></commentauthor>
-    Private Sub EichprozessAusblendenEinblenden()
-        If Not Me.VorgangsnummerGridClient.Equals("") Then
-
-            clsDBFunctions.BlendeEichprozessAus(VorgangsnummerGridClient)
-            'neu laden der Liste
-            LoadFromDatabase()
-        End If
-    End Sub
-
-    ''' <summary>
-    ''' ein und ausblenden der als gelöscht markierten Elementen
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="args"></param>
-    ''' <remarks></remarks>
-    ''' <author></author>
-    ''' <commentauthor></commentauthor>
-    Private Sub RadCheckBoxAusblendenGeloeschterDokumente_ToggleStateChanged(sender As System.Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RadCheckBoxAusblendenClientGeloeschterDokumente.ToggleStateChanged
-        'laden der benötigten Liste mit nur den benötigten Spalten
-        LoadFromDatabase()
-    End Sub
-
-    ''' <summary>
-    ''' Lokale Eichprozesse für Gridview laden
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
-    ''' <remarks></remarks>
-    Private Sub BackgroundWorkerLoadFromDatabase_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorkerLoadFromDatabase.DoWork
-        'background worker result enthält anschließend alle lokalen Eichprozesse
-        e.Result = clsDBFunctions.LadeLokaleEichprozessListe(RadCheckBoxAusblendenClientGeloeschterDokumente.Checked)
-    End Sub
-
-    ''' <summary>
-    '''
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
-    Private Sub BackgroundWorkerLoadFromDatabase_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorkerLoadFromDatabase.RunWorkerCompleted
+    Private Sub LoadFromDatabaseCompleted(e As System.ComponentModel.RunWorkerCompletedEventArgs)
         'zuweisen der Ergebnismenge als Datenquelle für das Grid
         Dim index As Integer = 0
         Dim groupIndex As Integer = 0
@@ -564,62 +646,244 @@ Public Class ucoEichprozessauswahlliste
         'laden des Grid Layouts aus User Settings
         AktuellerBenutzer.LadeGridLayout(Me)
     End Sub
+    Private Function SyncAlles(e As System.ComponentModel.DoWorkEventArgs) As System.ComponentModel.DoWorkEventArgs
+        Dim bolSyncData As Boolean = True 'Wert der genutzt wird um ggfs die Synchrosierung abzubrechen, falls ein Benutzer noch ungesendete Konformitätsbewertungsvorgänge hat
+        If clsWebserviceFunctions.TesteVerbindung() Then
+            BackgroundWorkerSyncAlles.ReportProgress(10)
+            'variablen zur Ausgabe ob es änderungen gibt:
+            Dim bolNeuStammdaten As Boolean = False
+            Dim bolNeuWZ As Boolean = False
+            Dim bolNeuAWG As Boolean = False
+            Dim bolNeuGenehmigung As Boolean = False
+
+            'prüfen ob noch nicht abgeschickte Eichungen vorlieren. Wenn ja Hinweismeldung und Abbruchmöglichkeit für Benutzer
+            If clsDBFunctions.PruefeAufUngesendeteEichungen() = True Then
+                If MessageBox.Show(My.Resources.GlobaleLokalisierung.Warnung_EichungenWerdenGeloescht, My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo) = DialogResult.Yes Then
+                    bolSyncData = True
+                Else
+                    AktuellerBenutzer.Instance.HoleAlleeigenenEichungenVomServer = False
+                    AktuellerBenutzer.SaveSettings()
+                    bolSyncData = False
+                End If
+            End If
+            BackgroundWorkerSyncAlles.ReportProgress(20)
+
+            If bolSyncData Then
+
+                'für den Fall das die Anwendung gerade erst installiert wurde, oder die einstellung zur Synchronisierung geändert wurde, sollen alle Eichungen vom RHEWA Server geholt werden, die einmal angelegt wurden
+                If clsDBFunctions.LoescheLokaleDatenbank() Then
+                    BackgroundWorkerSyncAlles.ReportProgress(30)
+
+                    AktuellerBenutzer.Instance.LetztesUpdate = "01.01.2000"
+                    AktuellerBenutzer.SaveSettings()
+                    'neue Stammdaten zum Benutzer holen
+                    clsWebserviceFunctions.GetBenutzerStammdaten(bolNeuStammdaten)
+                    BackgroundWorkerSyncAlles.ReportProgress(40)
+
+                    'hole alle WZ
+                    clsWebserviceFunctions.GetNeueWZ(bolNeuWZ)
+                    BackgroundWorkerSyncAlles.ReportProgress(50)
+
+                    'prüfen ob es neue AWG gibt
+                    clsWebserviceFunctions.GetNeuesAWG(bolNeuAWG)
+                    BackgroundWorkerSyncAlles.ReportProgress(60)
+
+                    'prüfen ob Eichprozesse die versendet wurden genehmigt oder abgelehnt wurden
+                    clsWebserviceFunctions.GetGenehmigungsstatus(bolNeuGenehmigung)
+                    BackgroundWorkerSyncAlles.ReportProgress(70)
+
+                    AktuellerBenutzer.Instance.LetztesUpdate = Date.Now
+                    AktuellerBenutzer.SaveSettings()
+                    BackgroundWorkerSyncAlles.ReportProgress(80)
+
+                    clsWebserviceFunctions.GetEichprotokolleVomServer()
+                    BackgroundWorkerSyncAlles.ReportProgress(90)
+
+                    AktuellerBenutzer.Instance.HoleAlleeigenenEichungenVomServer = False
+                    AktuellerBenutzer.SaveSettings()
+
+                    Dim returnMessage As String = My.Resources.GlobaleLokalisierung.Aktualisierung_Erfolgreich
+                    If bolNeuWZ Then
+                        returnMessage += vbNewLine & vbNewLine & My.Resources.GlobaleLokalisierung.Aktualisierung_NeuWZ & " "
+                    End If
+                    If bolNeuAWG Then
+                        returnMessage += vbNewLine & vbNewLine & My.Resources.GlobaleLokalisierung.Aktualisierung_NeuAWG & " "
+                    End If
+
+                    If bolNeuGenehmigung Then
+                        returnMessage += vbNewLine & vbNewLine & My.Resources.GlobaleLokalisierung.Aktualisierung_NeuEichung & " "
+                    End If
+
+                    If bolNeuStammdaten Then
+
+                    End If
+                End If
+            End If
+        Else
+            e.Result = My.Resources.GlobaleLokalisierung.KeineVerbindung
+        End If
+
+        BackgroundWorkerSyncAlles.ReportProgress(100)
+        Return e
+    End Function
+
+
+
+#Region "Datetime Picker"
+
+
+    ''' <summary>
+    '''  laden des eingestellten Moants für den nächsten Programmstart
+    ''' </summary>
+    Private Sub LadeDateTimePickerRHEWAListe()
+        Try
+            If My.Settings.RHEWAFilterMonatBis.Equals(New Date) Then
+                My.Settings.RHEWAFilterMonatBis = New Date(Now.Year, Now.Month, 1).AddMonths(1).AddDays(-1)
+                My.Settings.Save()
+            End If
+            If My.Settings.RHEWAFilterMonatVon.Equals(New Date) Then
+                My.Settings.RHEWAFilterMonatVon = New Date(Now.Year, Now.Month, 1).AddMonths(-1)
+                My.Settings.Save()
+
+            End If
+            RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.Value = My.Settings.RHEWAFilterMonatBis
+
+            RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.Value = My.Settings.RHEWAFilterMonatVon
+        Catch ex As Exception
+            RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.Value = Date.Now.Date
+        End Try
+    End Sub
+
+
+    ''' <summary>
+    '''  speichern des eingestellen Monats für den nächsten Programmstart
+    ''' </summary>
+    Private Sub SpeichereRhewaDatumsfilterEinstellung()
+        My.Settings.RHEWAFilterMonatVon = RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.Value
+        My.Settings.RHEWAFilterMonatBis = RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.Value
+
+        My.Settings.Save()
+    End Sub
+
 #End Region
 
-#Region "Eichprozses Routinen Server / RHEWA Funktionen"
 
-    Private Sub RadButtonNeuStandardwaage_Click(sender As Object, e As EventArgs) Handles RadButtonNeuStandardwaage.Click
-        Dim f As New FrmAuswahlStandardwaage
-        f.Show()
-        AddHandler f.FormClosed, AddressOf LoadFromDatabase
+#Region "Interface Methoden"
+    Protected Friend Overrides Sub SetzeUeberschrift() Implements IRhewaEditingDialog.SetzeUeberschrift
+        If Not ParentFormular Is Nothing Then
+            Try
+                'Hilfetext setzen
+                ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_Hauptmenue)
+                'Überschrift setzen
+                ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_Hauptmenue
+
+            Catch ex As Exception
+            End Try
+        End If
     End Sub
 
-    'limitieren der Min MAx Werte des Datetime Pcikers
-    Private Sub RadDateTimePickerFilterMonatLadeAlleEichprozesseVon_ValueChanged(sender As Object, e As EventArgs) Handles RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.ValueChanged
-        RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.MinDate = RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.Value
-    End Sub
-
-    Private Sub RadDateTimePickerFilterMonatLadeAlleEichprozesseBis_ValueChanged(sender As Object, e As EventArgs) Handles RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.ValueChanged
-        RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.MaxDate = RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.Value
-
-    End Sub
-    ''' <summary>
-    ''' Lade eichprozessliste vom Server
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
-    ''' <remarks></remarks>
-    Private Sub BackgroundWorkerLoadFromDatabaseRHEWA_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorkerLoadFromDatabaseRHEWA.DoWork
-        'background worker result enthält anschließend alle serverseitigen Eichprozesse
-        If RadCheckBoxLadeAlleEichprozesse.Checked Then
-            e.Result = clsWebserviceFunctions.GetServerEichprotokollListe()
+    Protected Friend Overrides Sub Lokalisiere() Implements IRhewaEditingDialog.Lokalisiere
+        'übersetzen und formatierung der Tabelle
+        If AktuellerBenutzer.Instance.AktuelleSprache = "de" Then
+            Telerik.WinControls.UI.Localization.RadGridLocalizationProvider.CurrentProvider = New telerikgridlocalizerDE
+        ElseIf AktuellerBenutzer.Instance.AktuelleSprache = "pl" Then
+            Telerik.WinControls.UI.Localization.RadGridLocalizationProvider.CurrentProvider = New telerikgridlocalizerPL
         Else
-            e.Result = clsWebserviceFunctions.GetServerEichprotokollListe(RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.Value.Year, RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.Value.Month, RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.Value.Year, RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.Value.Month)
+            Telerik.WinControls.UI.Localization.RadGridLocalizationProvider.CurrentProvider = New telerikgridlocalizerEN
+        End If
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucoEichprozessauswahlliste))
+        Lokalisierung(Me, resources)
+
+        'Hilfetext setzen
+        ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_Auswahlliste)
+        'Überschrift setzen
+        ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_Hauptmenue
+
+        LoadFromDatabase()
+    End Sub
+
+    ''' <summary>
+    ''' Initiert background threads die aus lokaler Client DB und Server Webservice die vorhandenen Eichungen abrufen
+    ''' </summary>
+    ''' <remarks></remarks>
+    Protected Friend Overrides Sub LoadFromDatabase() Implements IRhewaEditingDialog.LoadFromDatabase
+        Me.Enabled = False
+
+        If Not BackgroundWorkerLoadFromDatabase.IsBusy Then
+            BackgroundWorkerLoadFromDatabase.RunWorkerAsync()
+        End If
+
+        If AktuellerBenutzer.Instance.Lizenz.RHEWALizenz Then
+            If Not BackgroundWorkerLoadFromDatabaseRHEWA.IsBusy Then
+                BackgroundWorkerLoadFromDatabaseRHEWA.RunWorkerAsync()
+            End If
+        End If
+    End Sub
+#End Region
+
+
+#Region "RHEWA Methoden"
+    ''' <summary>
+    ''' Neuen Eichprozess anlegen
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub OeffneNeuenEichprozess()
+        Dim objEichprozess As Eichprozess = clsDBFunctions.ErzeugeNeuenEichprozess
+        If Not objEichprozess Is Nothing Then
+            'anzeigen des Dialogs zur Bearbeitung der Eichung
+            Dim f As New FrmMainContainer(objEichprozess)
+            f.Show()
+            AddHandler f.FormClosed, AddressOf LoadFromDatabase
         End If
     End Sub
 
     ''' <summary>
-    ''' Databinding und Formatierung
+    ''' Eichprozess bearbeiten
     ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
     ''' <remarks></remarks>
-    Private Sub BackgroundWorkerLoadFromDatabaseRHEWA_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs, Optional invalid As String = "Invalid") Handles BackgroundWorkerLoadFromDatabaseRHEWA.RunWorkerCompleted
-        'zuweisen der Ergebnismenge als Datenquelle für das Grid
-        Dim index As Integer = 0
-        Dim groupIndex As Integer = 0
-        Try
-            If RadGridViewRHEWAAlle.SelectedRows.Count > 0 Then
-                index = RadGridViewRHEWAAlle.SelectedRows(0).Index
-                groupIndex = RadGridViewRHEWAAlle.SelectedRows(0).Group.GroupRow.Index
+    Private Sub BearbeiteEichprozess()
+        If Not Me.VorgangsnummerGridClient.Equals("") Then
+            Dim objEichprozess = clsDBFunctions.HoleVorhandenenEichprozess(VorgangsnummerGridClient)
+            If Not objEichprozess Is Nothing Then
+                If objEichprozess.FK_Bearbeitungsstatus = 4 Or objEichprozess.FK_Bearbeitungsstatus = 2 Then 'nur wenn neu oder fehlerhaft darf eine Änderung vorgenommen werrden
+                    'anzeigen des Dialogs zur Bearbeitung der Eichung
+                    Dim f As New FrmMainContainer(objEichprozess)
+                    f.Show()
+                    AddHandler f.FormClosed, AddressOf LoadFromDatabase
+                Else
+                    'es gibt ihn schon und er ist bereits abgeschickt und genehmigt. nur lesend öffnen
+
+
+                    objEichprozess = clsDBFunctions.HoleNachschlageListenFuerEichprozess(objEichprozess)
+                    objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Versenden 'grüne ampel auf versenden setzen, damit direkt alles betrachtet werden kann
+                    Dim f As New FrmMainContainer(objEichprozess, FrmMainContainer.enuDialogModus.lesend)
+                    f.Show()
+                    AddHandler f.FormClosed, AddressOf LoadFromDatabase
+                End If
+
+                ''nach dem schließen des Dialogs aktualisieren
+                'LoadFromDatabase()
             End If
-        Catch ex As Exception
-        End Try
-
-        RadGridViewRHEWAAlle.DataSource = e.Result
-        FormatTableRhewa(index, groupIndex)
-
+        End If
     End Sub
+
+
+
+    ''' <summary>
+    ''' ausblenden bzw wieder einblenden des aktuellen eichvorgangs
+    ''' </summary>
+    ''' <remarks></remarks>
+    ''' <author></author>
+    ''' <commentauthor></commentauthor>
+    Private Sub EichprozessAusblendenEinblenden()
+        If Not Me.VorgangsnummerGridClient.Equals("") Then
+
+            clsDBFunctions.BlendeEichprozessAus(VorgangsnummerGridClient)
+            'neu laden der Liste
+            LoadFromDatabase()
+        End If
+    End Sub
+
 
     Private Sub FormatTableRhewa(index As Integer, groupIndex As Integer)
         Try
@@ -722,13 +986,24 @@ Public Class ucoEichprozessauswahlliste
         End If
     End Sub
 
-    ''' <summary>
-    ''' Einblenden eines Anhang Symbols für Anträge mit Dateianhang
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
-    ''' <remarks></remarks>
-    Private Sub RadGridViewRHEWAAlle_CellFormatting(sender As Object, e As Telerik.WinControls.UI.CellFormattingEventArgs) Handles RadGridViewRHEWAAlle.CellFormatting
+
+    Private Sub LoadFromDatabaseRHEWACompleted(e As System.ComponentModel.RunWorkerCompletedEventArgs)
+        'zuweisen der Ergebnismenge als Datenquelle für das Grid
+        Dim index As Integer = 0
+        Dim groupIndex As Integer = 0
+        Try
+            If RadGridViewRHEWAAlle.SelectedRows.Count > 0 Then
+                index = RadGridViewRHEWAAlle.SelectedRows(0).Index
+                groupIndex = RadGridViewRHEWAAlle.SelectedRows(0).Group.GroupRow.Index
+            End If
+        Catch ex As Exception
+        End Try
+
+        RadGridViewRHEWAAlle.DataSource = e.Result
+        FormatTableRhewa(index, groupIndex)
+    End Sub
+
+    Private Function FormatCellRHEWA(e As CellFormattingEventArgs) As CellFormattingEventArgs
         Try
             If (RadGridViewRHEWAAlle.Columns(e.ColumnIndex).Name = "AnhangPfad") Then
                 'einblenden des symbols
@@ -744,20 +1019,15 @@ Public Class ucoEichprozessauswahlliste
             End If
         Catch ex As Exception
         End Try
-    End Sub
+
+        Return e
+    End Function
+#End Region
+
+
 
 
 #Region "Genehmigen / Ablehnen"
-    ''' <summary>
-    ''' Eichprozess genehmigen
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
-    ''' <remarks></remarks>
-    Private Sub RadButtonEichprozessGenehmigen_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonEichprozessGenehmigenRHEWA.Click
-        GenehnmigeGewaehltenVorgang()
-    End Sub
-
     ''' <summary>
     ''' Eichprozess genehmigen
     ''' </summary>
@@ -773,11 +1043,7 @@ Public Class ucoEichprozessauswahlliste
         End If
     End Sub
 
-    ''' <summary>
-    ''' Eichprozess ablehnen
-    ''' </summary>
-    ''' <remarks></remarks>
-    Private Sub RadButtonEichprozessAblehnen_click(sender As System.Object, e As System.EventArgs) Handles RadButtonEichprozessAblehnenRHEWA.Click
+    Private Sub AblehnenGewaehlterVorgang()
         If Not Me.VorgangsnummerGridServer.Equals("") Then
             If MessageBox.Show(My.Resources.GlobaleLokalisierung.Frage_Ablehnen, My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
                 If clsWebserviceFunctions.SetEichprozessAbgelehnt(VorgangsnummerGridServer) Then
@@ -788,48 +1054,10 @@ Public Class ucoEichprozessauswahlliste
         End If
     End Sub
 
-    ''' <summary>
-    ''' Eichprozess ablehnen
-    ''' </summary>
-    ''' <remarks></remarks>
-    Private Sub RadButtonBearbeitenRHEWA_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonEichungAnsehenRHEWA.Click
-        ZeigeServerEichprozess()
-    End Sub
+
 #End Region
 
 #Region "FTP Download"
-    ''' <summary>
-    ''' öffnen des Dateianhangs
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
-    ''' <remarks></remarks>
-    Private Sub RadGridViewRHEWAAlle_CellDoubleClick(sender As Object, e As Telerik.WinControls.UI.GridViewCellEventArgs) Handles RadGridViewRHEWAAlle.CellDoubleClick
-        If RadGridViewRHEWAAlle.SelectedRows.Count = 0 Then Exit Sub
-        If Not TypeOf e.Row Is Telerik.WinControls.UI.GridViewDataRowInfo Then Exit Sub
-
-        Try
-            If (RadGridViewRHEWAAlle.Columns(e.ColumnIndex).Name = "AnhangPfad") Then
-
-                If e.Value.Trim.Equals("") = False Then
-                    Dim Vorgangsnummer As String
-                    Vorgangsnummer = e.Row.Cells("Vorgangsnummer").Value
-                    Try
-                        OeffneDateiVonFTP(e.Value, Vorgangsnummer)
-                    Catch ex As Exception
-                        Debug.WriteLine(ex.ToString)
-                    End Try
-                Else
-                    ZeigeServerEichprozess()
-                End If
-            Else
-                ZeigeServerEichprozess()
-            End If
-        Catch ex As Exception
-            Debug.WriteLine(ex.ToString)
-        End Try
-    End Sub
-
     Private Sub OeffneDateiVonFTP(ByVal LokalerPfad As String, ByVal vorgangsnummer As String)
         If IO.File.Exists(LokalerPfad) Then
             Dim proc As Process = New Process()
@@ -847,59 +1075,8 @@ Public Class ucoEichprozessauswahlliste
         End If
 
     End Sub
-
-    Private Sub BackgroundWorkerDownloadFromFTP_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorkerDownloadFromFTP.DoWork
-        Dim vorgangsnummer As String = e.Argument
-        e.Result = clsWebserviceFunctions.GetFTPFile(vorgangsnummer, objFTP, Me.BackgroundWorkerDownloadFromFTP)
-    End Sub
-
-    Private Sub BackgroundWorkerDownloadFromFTP_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorkerDownloadFromFTP.RunWorkerCompleted
-        Me.Enabled = True
-        Me.RadProgressBar.Visible = False
-        Me.RadProgressBar.Value1 = 0
-        RadProgressBar.Text = ""
-
-        Dim filepath As String = e.Result
-        If filepath.Equals("") = False Then
-            Dim proc As Process = New Process()
-            proc.StartInfo.FileName = filepath
-            proc.StartInfo.UseShellExecute = True
-            proc.Start()
-        Else
-            MessageBox.Show("Konnte Datei am Pfad nicht finden. Sie konnte auch nicht heruntergeladen werden.")
-        End If
-    End Sub
-
-    Private Sub BackgroundWorkerDownloadFromFTP_ProgressChanged(sender As Object, e As System.ComponentModel.ProgressChangedEventArgs) Handles BackgroundWorkerDownloadFromFTP.ProgressChanged
-        Try
-            If e.ProgressPercentage = 0 Then
-                RadProgressBar.Value1 = e.UserState
-                RadProgressBar.Text = CInt(CInt(e.UserState) / 1024) & " KB/ " & CInt(CInt(RadProgressBar.Maximum) / 1024) & " KB"
-                Me.Refresh()
-            Else
-                RadProgressBar.Maximum = e.ProgressPercentage
-            End If
-        Catch ex As Exception
-            Debug.WriteLine(ex.ToString)
-        End Try
-    End Sub
-
-    Private Sub objFTP_ReportFTPProgress(Progress As Integer) Handles objFTP.ReportFTPProgress
-        Try
-            BackgroundWorkerDownloadFromFTP.ReportProgress(0, Progress)
-        Catch ex As Exception
-        End Try
-    End Sub
 #End Region
 
-#End Region
-
-
-    Private Sub RadGridView_ViewCellFormatting(sender As Object, e As CellFormattingEventArgs) Handles RadGridViewAuswahlliste.ViewCellFormatting, RadGridViewRHEWAAlle.ViewCellFormatting
-        If (TypeOf e.CellElement Is GridHeaderCellElement) Then
-            e.CellElement.TextWrap = True
-        End If
-    End Sub
 
 #Region "Updates aus Webservice"
 
@@ -971,120 +1148,11 @@ Public Class ucoEichprozessauswahlliste
         End If
     End Sub
 
-    Private Sub BackgroundWorkerSyncAlles_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorkerSyncAlles.DoWork
-        Dim bolSyncData As Boolean = True 'Wert der genutzt wird um ggfs die Synchrosierung abzubrechen, falls ein Benutzer noch ungesendete Konformitätsbewertungsvorgänge hat
-        If clsWebserviceFunctions.TesteVerbindung() Then
-            BackgroundWorkerSyncAlles.ReportProgress(10)
-            'variablen zur Ausgabe ob es änderungen gibt:
-            Dim bolNeuStammdaten As Boolean = False
-            Dim bolNeuWZ As Boolean = False
-            Dim bolNeuAWG As Boolean = False
-            Dim bolNeuGenehmigung As Boolean = False
 
-            'prüfen ob noch nicht abgeschickte Eichungen vorlieren. Wenn ja Hinweismeldung und Abbruchmöglichkeit für Benutzer
-            If clsDBFunctions.PruefeAufUngesendeteEichungen() = True Then
-                If MessageBox.Show(My.Resources.GlobaleLokalisierung.Warnung_EichungenWerdenGeloescht, My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo) = DialogResult.Yes Then
-                    bolSyncData = True
-                Else
-                    AktuellerBenutzer.Instance.HoleAlleeigenenEichungenVomServer = False
-                    AktuellerBenutzer.SaveSettings()
-                    bolSyncData = False
-                End If
-            End If
-            BackgroundWorkerSyncAlles.ReportProgress(20)
-
-            If bolSyncData Then
-
-                'für den Fall das die Anwendung gerade erst installiert wurde, oder die einstellung zur Synchronisierung geändert wurde, sollen alle Eichungen vom RHEWA Server geholt werden, die einmal angelegt wurden
-                If clsDBFunctions.LoescheLokaleDatenbank() Then
-                    BackgroundWorkerSyncAlles.ReportProgress(30)
-
-                    AktuellerBenutzer.Instance.LetztesUpdate = "01.01.2000"
-                    AktuellerBenutzer.SaveSettings()
-                    'neue Stammdaten zum Benutzer holen
-                    clsWebserviceFunctions.GetBenutzerStammdaten(bolNeuStammdaten)
-                    BackgroundWorkerSyncAlles.ReportProgress(40)
-
-                    'hole alle WZ
-                    clsWebserviceFunctions.GetNeueWZ(bolNeuWZ)
-                    BackgroundWorkerSyncAlles.ReportProgress(50)
-
-                    'prüfen ob es neue AWG gibt
-                    clsWebserviceFunctions.GetNeuesAWG(bolNeuAWG)
-                    BackgroundWorkerSyncAlles.ReportProgress(60)
-
-                    'prüfen ob Eichprozesse die versendet wurden genehmigt oder abgelehnt wurden
-                    clsWebserviceFunctions.GetGenehmigungsstatus(bolNeuGenehmigung)
-                    BackgroundWorkerSyncAlles.ReportProgress(70)
-
-                    AktuellerBenutzer.Instance.LetztesUpdate = Date.Now
-                    AktuellerBenutzer.SaveSettings()
-                    BackgroundWorkerSyncAlles.ReportProgress(80)
-
-                    clsWebserviceFunctions.GetEichprotokolleVomServer()
-                    BackgroundWorkerSyncAlles.ReportProgress(90)
-
-                    AktuellerBenutzer.Instance.HoleAlleeigenenEichungenVomServer = False
-                    AktuellerBenutzer.SaveSettings()
-
-                    Dim returnMessage As String = My.Resources.GlobaleLokalisierung.Aktualisierung_Erfolgreich
-                    If bolNeuWZ Then
-                        returnMessage += vbNewLine & vbNewLine & My.Resources.GlobaleLokalisierung.Aktualisierung_NeuWZ & " "
-                    End If
-                    If bolNeuAWG Then
-                        returnMessage += vbNewLine & vbNewLine & My.Resources.GlobaleLokalisierung.Aktualisierung_NeuAWG & " "
-                    End If
-
-                    If bolNeuGenehmigung Then
-                        returnMessage += vbNewLine & vbNewLine & My.Resources.GlobaleLokalisierung.Aktualisierung_NeuEichung & " "
-                    End If
-
-                    If bolNeuStammdaten Then
-
-                    End If
-                End If
-            End If
-        Else
-            e.Result = My.Resources.GlobaleLokalisierung.KeineVerbindung
-        End If
-
-        BackgroundWorkerSyncAlles.ReportProgress(100)
-
-    End Sub
-
-    Private Sub BackgroundWorkerSyncAlles_ProgressChanged(sender As Object, e As System.ComponentModel.ProgressChangedEventArgs) Handles BackgroundWorkerSyncAlles.ProgressChanged
-        RadProgressBar1.Value1 = e.ProgressPercentage
-        Me.Enabled = False
-        Me.Parent.Enabled = False
-    End Sub
-
-    Private Sub BackgroundWorkerSyncAlles_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorkerSyncAlles.RunWorkerCompleted
-        RadProgressBar1.Value1 = 100
-        If Not e.Result Is Nothing Then
-            MessageBox.Show(e.Result)
-        End If
-
-        FlowLayoutPanel2.Visible = False
-        RadProgressBar1.Visible = False
-        Me.Enabled = True
-        Me.Parent.Enabled = True
-
-        'aktualisieren des Grids
-        LoadFromDatabase()
-    End Sub
-
-    ''' <summary>
-    ''' Methode welche sich mit dem Webservice verbinduet und nach aktualisierungen für WZ, AWGs und eigenen Eichungen guckt
-    ''' </summary>
-    ''' <remarks></remarks>
-    Private Sub RadButtonClientUpdateDatabase_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonClientUpdateDatabase.Click
-        VerbindeMitWebServiceUndAktualisiere()
-    End Sub
 #End Region
 
-#Region "Protokoll ablegen"
-
-    Private Sub RadButtonProtokollAblegen_Click(sender As Object, e As EventArgs) Handles RadButtonProtokollAblegen.Click
+#Region "Protokoll in Cloud ablegen"
+    Private Sub VorgangAblegen()
         If Not Me.VorgangsnummerGridClient.Equals("") Then
             If clsWebserviceFunctions.PutEichprotokollAblage(VorgangsnummerGridClient) Then
                 'neu laden der Liste
@@ -1097,5 +1165,7 @@ Public Class ucoEichprozessauswahlliste
     End Sub
 #End Region
 
+
+#End Region
 
 End Class
