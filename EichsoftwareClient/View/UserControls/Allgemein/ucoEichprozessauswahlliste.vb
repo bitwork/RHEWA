@@ -85,7 +85,7 @@ Public Class ucoEichprozessauswahlliste
                 My.Settings.Save()
             End If
             If My.Settings.RHEWAFilterMonatVon.Equals(New Date) Then
-                My.Settings.RHEWAFilterMonatVon = New Date(Now.Year, Now.Month, 1)
+                My.Settings.RHEWAFilterMonatVon = New Date(Now.Year, Now.Month, 1).AddMonths(-1)
                 My.Settings.Save()
 
             End If
@@ -188,70 +188,77 @@ Public Class ucoEichprozessauswahlliste
     ''' </summary>
     ''' <remarks></remarks>
     Private Sub FormatTable()
-        'ausblenden von internen spalten
-        RadGridViewAuswahlliste.Columns("ID").IsVisible = False
-        RadGridViewAuswahlliste.Columns("Ausgeblendet").IsVisible = False
-        RadGridViewAuswahlliste.Columns("Vorgangsnummer").IsVisible = False
-
-        'übersetzen der Spaltenköpfe
-        RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").HeaderText = My.Resources.GlobaleLokalisierung.Bearbeitungsstatus
-        RadGridViewAuswahlliste.Columns("Lookup_Waegezelle").HeaderText = My.Resources.GlobaleLokalisierung.Waegezelle
-        RadGridViewAuswahlliste.Columns("Lookup_Auswertegeraet").HeaderText = My.Resources.GlobaleLokalisierung.AuswerteGeraet
-        RadGridViewAuswahlliste.Columns("Lookup_Waagentyp").HeaderText = My.Resources.GlobaleLokalisierung.Waagentyp
-        RadGridViewAuswahlliste.Columns("Lookup_Waagenart").HeaderText = My.Resources.GlobaleLokalisierung.Waagenart
-        RadGridViewAuswahlliste.Columns("Fabriknummer").HeaderText = My.Resources.GlobaleLokalisierung.Fabriknummer
-        RadGridViewAuswahlliste.Columns("Identifikationsdaten_Datum").HeaderText = My.Resources.GlobaleLokalisierung.HKBDatum
-        RadGridViewAuswahlliste.Columns("Bearbeitungsdatum").HeaderText = My.Resources.GlobaleLokalisierung.Bearbeitungsdatum
-        RadGridViewAuswahlliste.Columns("Bemerkung").HeaderText = My.Resources.GlobaleLokalisierung.Bemerkung
-
-        RadGridViewAuswahlliste.ShowFilteringRow = True
-
-        RadGridViewRHEWAAlle.ShowFilteringRow = True
-
-        'spaltengrößen anpassen (so viel platz wie möglich nehmen)
-        'RadGridViewAuswahlliste.BestFitColumns()
-        'RadGridViewAuswahlliste.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
-        RadGridViewAuswahlliste.BestFitColumns()
-        RadGridViewAuswahlliste.EnableAlternatingRowColor = True
-        RadGridViewAuswahlliste.SelectionMode = Telerik.WinControls.UI.GridViewSelectionMode.FullRowSelect
-        RadGridViewAuswahlliste.AutoExpandGroups = True
         Try
-            'bedingte Formatierung - nur hinzufügen, falls sie nicht schon existiert
-            Dim o = From i As Telerik.WinControls.UI.ConditionalFormattingObject In RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList
-                    Where i.Name = "Fehlerhaft"
+            'ausblenden von internen spalten
+            RadGridViewAuswahlliste.Columns("ID").IsVisible = False
+            RadGridViewAuswahlliste.Columns("Ausgeblendet").IsVisible = False
+            RadGridViewAuswahlliste.Columns("Vorgangsnummer").IsVisible = False
 
-            If o.Count = 0 Or RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Count = 4 Then 'wurde um 2 spalten ergänzt von 4 auf 6
-                RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Clear()
-                Dim objCondition As New Telerik.WinControls.UI.ConditionalFormattingObject("Fehlerhaft", Telerik.WinControls.UI.ConditionTypes.Equal, "Fehlerhaft", "", True)
-                Dim objCondition2 As New Telerik.WinControls.UI.ConditionalFormattingObject("invalid", Telerik.WinControls.UI.ConditionTypes.Equal, "Invalid", "", True)
-                Dim objCondition3 As New Telerik.WinControls.UI.ConditionalFormattingObject("invalidPl", Telerik.WinControls.UI.ConditionTypes.Equal, "Błędne", "", True)
+            'übersetzen der Spaltenköpfe
+            RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").HeaderText = My.Resources.GlobaleLokalisierung.Bearbeitungsstatus
+            RadGridViewAuswahlliste.Columns("Lookup_Waegezelle").HeaderText = My.Resources.GlobaleLokalisierung.Waegezelle
+            RadGridViewAuswahlliste.Columns("Lookup_Auswertegeraet").HeaderText = My.Resources.GlobaleLokalisierung.AuswerteGeraet
+            RadGridViewAuswahlliste.Columns("Lookup_Waagentyp").HeaderText = My.Resources.GlobaleLokalisierung.Waagentyp
+            RadGridViewAuswahlliste.Columns("Lookup_Waagenart").HeaderText = My.Resources.GlobaleLokalisierung.Waagenart
+            RadGridViewAuswahlliste.Columns("Fabriknummer").HeaderText = My.Resources.GlobaleLokalisierung.Fabriknummer
 
-                objCondition.RowBackColor = Color.FromArgb(254, 120, 110)
-                objCondition2.RowBackColor = Color.FromArgb(254, 120, 110)
-                objCondition3.RowBackColor = Color.FromArgb(254, 120, 110)
+            RadGridViewAuswahlliste.Columns("Identifikationsdaten_Datum").HeaderText = My.Resources.GlobaleLokalisierung.HKBDatum
 
-                Dim objCondition4 As New Telerik.WinControls.UI.ConditionalFormattingObject("Genehmigt", Telerik.WinControls.UI.ConditionTypes.Equal, "Genehmigt", "", True)
-                Dim objCondition5 As New Telerik.WinControls.UI.ConditionalFormattingObject("Valid", Telerik.WinControls.UI.ConditionTypes.Equal, "Valid", "", True)
-                Dim objCondition6 As New Telerik.WinControls.UI.ConditionalFormattingObject("Zatwierdzono", Telerik.WinControls.UI.ConditionTypes.Equal, "Zatwierdzono", "", True)
+            RadGridViewAuswahlliste.Columns("Bearbeitungsdatum").HeaderText = My.Resources.GlobaleLokalisierung.Bearbeitungsdatum
+            RadGridViewAuswahlliste.Columns("Bemerkung").HeaderText = My.Resources.GlobaleLokalisierung.Bemerkung
 
-                objCondition4.RowBackColor = Color.FromArgb(201, 255, 132)
-                objCondition5.RowBackColor = Color.FromArgb(201, 255, 132)
-                objCondition6.RowBackColor = Color.FromArgb(201, 255, 132)
+            RadGridViewAuswahlliste.ShowFilteringRow = True
 
-                RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Add(objCondition)
-                RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Add(objCondition2)
-                RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Add(objCondition3)
+            RadGridViewRHEWAAlle.ShowFilteringRow = True
 
-                RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Add(objCondition4)
-                RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Add(objCondition5)
-                RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Add(objCondition6)
+            'spaltengrößen anpassen (so viel platz wie möglich nehmen)
+            'RadGridViewAuswahlliste.BestFitColumns()
+            'RadGridViewAuswahlliste.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
+            RadGridViewAuswahlliste.BestFitColumns()
+            RadGridViewAuswahlliste.EnableAlternatingRowColor = True
+            RadGridViewAuswahlliste.SelectionMode = Telerik.WinControls.UI.GridViewSelectionMode.FullRowSelect
+            RadGridViewAuswahlliste.AutoExpandGroups = True
+            Try
+                'bedingte Formatierung - nur hinzufügen, falls sie nicht schon existiert
+                Dim o = From i As Telerik.WinControls.UI.ConditionalFormattingObject In RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList
+                        Where i.Name = "Fehlerhaft"
 
-                Dim descriptor As New Telerik.WinControls.Data.GroupDescriptor()
-                descriptor.GroupNames.Add("Bearbeitungsstatus", System.ComponentModel.ListSortDirection.Ascending)
-                Me.RadGridViewAuswahlliste.GroupDescriptors.Add(descriptor)
-            End If
+                If o.Count = 0 Or RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Count = 4 Then 'wurde um 2 spalten ergänzt von 4 auf 6
+                    RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Clear()
+                    Dim objCondition As New Telerik.WinControls.UI.ConditionalFormattingObject("Fehlerhaft", Telerik.WinControls.UI.ConditionTypes.Equal, "Fehlerhaft", "", True)
+                    Dim objCondition2 As New Telerik.WinControls.UI.ConditionalFormattingObject("invalid", Telerik.WinControls.UI.ConditionTypes.Equal, "Invalid", "", True)
+                    Dim objCondition3 As New Telerik.WinControls.UI.ConditionalFormattingObject("invalidPl", Telerik.WinControls.UI.ConditionTypes.Equal, "Błędne", "", True)
 
+                    objCondition.RowBackColor = Color.FromArgb(254, 120, 110)
+                    objCondition2.RowBackColor = Color.FromArgb(254, 120, 110)
+                    objCondition3.RowBackColor = Color.FromArgb(254, 120, 110)
+
+                    Dim objCondition4 As New Telerik.WinControls.UI.ConditionalFormattingObject("Genehmigt", Telerik.WinControls.UI.ConditionTypes.Equal, "Genehmigt", "", True)
+                    Dim objCondition5 As New Telerik.WinControls.UI.ConditionalFormattingObject("Valid", Telerik.WinControls.UI.ConditionTypes.Equal, "Valid", "", True)
+                    Dim objCondition6 As New Telerik.WinControls.UI.ConditionalFormattingObject("Zatwierdzono", Telerik.WinControls.UI.ConditionTypes.Equal, "Zatwierdzono", "", True)
+
+                    objCondition4.RowBackColor = Color.FromArgb(201, 255, 132)
+                    objCondition5.RowBackColor = Color.FromArgb(201, 255, 132)
+                    objCondition6.RowBackColor = Color.FromArgb(201, 255, 132)
+
+                    RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Add(objCondition)
+                    RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Add(objCondition2)
+                    RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Add(objCondition3)
+
+                    RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Add(objCondition4)
+                    RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Add(objCondition5)
+                    RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Add(objCondition6)
+
+                    Dim descriptor As New Telerik.WinControls.Data.GroupDescriptor()
+                    descriptor.GroupNames.Add("Bearbeitungsstatus", System.ComponentModel.ListSortDirection.Ascending)
+                    Me.RadGridViewAuswahlliste.GroupDescriptors.Add(descriptor)
+                End If
+
+            Catch ex As Exception
+
+            End Try
         Catch ex As Exception
+            Throw New Exception()
 
         End Try
     End Sub
@@ -523,7 +530,12 @@ Public Class ucoEichprozessauswahlliste
         RadGridViewAuswahlliste.DataSource = e.Result
 
         'Spalten ein und ausblenden und formatieren
-        FormatTable()
+        Try
+            FormatTable()
+        Catch ex As Exception
+            AktuellerBenutzer.ResetGridSettings()
+            FormatTable()
+        End Try
 
         Try
             RadGridViewAuswahlliste.Groups(groupIndex).GroupRow.ChildRows(index).IsSelected = True
@@ -605,7 +617,11 @@ Public Class ucoEichprozessauswahlliste
         End Try
 
         RadGridViewRHEWAAlle.DataSource = e.Result
+        FormatTableRhewa(index, groupIndex)
 
+    End Sub
+
+    Private Sub FormatTableRhewa(index As Integer, groupIndex As Integer)
         Try
             Try
                 'Spalten ein und ausblenden und formatieren
@@ -618,6 +634,8 @@ Public Class ucoEichprozessauswahlliste
                 RadGridViewRHEWAAlle.Columns("NeueWZ").HeaderText = "Neue WZ"
                 RadGridViewRHEWAAlle.Columns("Gesperrtdurch").HeaderText = "Gesperrt durch"
                 RadGridViewRHEWAAlle.Columns("HKBDatum").HeaderText = "HKB Datum"
+                RadGridViewRHEWAAlle.Columns("HKBDatum").FormatString = "{0:dd.MM.yyyy}"
+
             Catch ex As Exception
             End Try
 
@@ -681,9 +699,6 @@ Public Class ucoEichprozessauswahlliste
             Me.Visible = True
         Catch ex As Exception
         End Try
-
-        'laden des Grid Layouts aus User Settings
-        AktuellerBenutzer.LadeGridLayout(Me)
     End Sub
 
     ''' <summary>
