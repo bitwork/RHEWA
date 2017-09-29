@@ -85,16 +85,24 @@ Public Class FrmBenutzerauswahl
             Exit Sub
         End If
 
+        'aktuellen nutzer überschreiben
+        AktuellerBenutzer.GetNewInstance(RadListControlBenutzer.SelectedValue)
+
         If RadListControlBenutzer.SelectedItem.VisualItem.Data("Aktiv") = False Then
             'online prüfen ob die Lizenz reaktiviert wurde
-            AktuellerBenutzer.GetNewInstance(RadListControlBenutzer.SelectedValue)
-            If clsWebserviceFunctions.GetNeueStammdaten(True) = False Then
+            If clsWebserviceFunctions.GetBenutzerStammdaten(True) = False Then
                 Exit Sub
             End If
+        Else 'prüfen ob noch aktiv
+            If clsWebserviceFunctions.GetStratoEreichbar Then
+                If clsWebserviceFunctions.GetBenutzerStammdaten(True) = False Then 'GetValidLizenzAktuellerBenutzer() = False Then
+                    Exit Sub
+                End If
+            End If
+
         End If
         Try
 
-            AktuellerBenutzer.GetNewInstance(RadListControlBenutzer.SelectedValue)
 
             Dim error1 As Boolean = False
             'versuchen sonderfälle abzudecken

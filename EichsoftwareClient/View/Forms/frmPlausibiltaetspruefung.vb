@@ -154,7 +154,7 @@ Public Class frmPlausibiltaetspruefung
     End Sub
 
     Private Sub RadButtonAnhang_Click(sender As Object, e As EventArgs) Handles RadButtonAnhang.Click
-        If clsWebserviceFunctions.CanPingStrato Then
+        If clsWebserviceFunctions.GetStratoEreichbar Then
             OeffneDateiVonFTP(_objEichprozess.Vorgangsnummer)
         End If
     End Sub
@@ -173,7 +173,7 @@ Public Class frmPlausibiltaetspruefung
 
     Private Sub BackgroundWorkerDownloadFromFTP_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorkerDownloadFromFTP.DoWork
         Dim vorgangsnummer As String = e.Argument
-        e.Result = clsWebserviceFunctions.InitDownloadDateiVonFTP(vorgangsnummer, objFTP, Me.BackgroundWorkerDownloadFromFTP)
+        e.Result = clsWebserviceFunctions.GetFTPFile(vorgangsnummer, objFTP, Me.BackgroundWorkerDownloadFromFTP)
     End Sub
 
     Private Sub BackgroundWorkerDownloadFromFTP_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorkerDownloadFromFTP.RunWorkerCompleted

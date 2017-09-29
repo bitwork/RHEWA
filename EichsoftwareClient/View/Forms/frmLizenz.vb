@@ -25,7 +25,11 @@ Public Class FrmLizenz
                 createTestLizenz()
                 Exit Sub
             End If
-            createLizenz()
+            If clsWebserviceFunctions.InsertLizenz(RadTextBoxControl1.Text, RadTextBoxControl2.Text) Then
+                'abschluss des dialoges
+                Me.DialogResult = Windows.Forms.DialogResult.OK
+                Me.Close()
+            End If
         Catch ex As Exception
             MessageBox.Show(ex.Message, My.Resources.GlobaleLokalisierung.Fehler)
         Finally
@@ -34,102 +38,7 @@ Public Class FrmLizenz
 
     End Sub
 
-    Private Sub createLizenz()
-        'verbindung zum Webservice aufbauen
-        Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
-            Try
-                webContext.Open()
-            Catch ex As Exception
-                MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
 
-                Exit Sub
-            End Try
-            Using DBContext As New Entities
-
-                'prüfen ob die Lizenz gültig ist
-                Dim HEKennung As String = RadTextBoxControl1.Text
-                Dim Lizenzschluessel As String = RadTextBoxControl2.Text
-
-                'verbindung zweimal testen, falls server beim ersten mal nicht erreichbar war
-                If Not clsWebserviceFunctions.TesteVerbindung() Then
-                    clsWebserviceFunctions.TesteVerbindung()
-                End If
-
-                If webContext.AktiviereLizenz(HEKennung, Lizenzschluessel, My.User.Name, System.Environment.UserDomainName, My.Computer.Name) Then
-
-                    'prüfen ob bereits lokales Objekt existiert
-                    Dim Lics = (From Lizensen In DBContext.Lizensierung Where Lizensen.Lizenzschluessel.ToLower = Lizenzschluessel.ToLower And Lizensen.HEKennung.ToLower = HEKennung.ToLower).FirstOrDefault
-                    If Lics Is Nothing Then
-
-                        Dim objLic As New Lizensierung
-                        objLic.HEKennung = HEKennung
-                        objLic.Lizenzschluessel = Lizenzschluessel
-
-                        If webContext.PruefeObRHEWALizenz(HEKennung, Lizenzschluessel, My.User.Name, System.Environment.UserDomainName, My.Computer.Name) Then
-                            objLic.RHEWALizenz = True
-                        Else
-                            objLic.RHEWALizenz = False
-                        End If
-
-                        Try
-                            'hole zusätliche Lizenzdaten
-                            Dim objLizenzdaten As EichsoftwareWebservice.clsLizenzdaten = webContext.GetLizenzdaten(HEKennung, Lizenzschluessel, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
-
-                            objLic.Name = objLizenzdaten.Name
-                            objLic.Vorname = objLizenzdaten.Vorname
-                            objLic.Firma = objLizenzdaten.Firma
-                            objLic.FirmaOrt = objLizenzdaten.FirmaOrt
-                            objLic.FirmaPLZ = objLizenzdaten.FirmaPLZ
-                            objLic.FirmaStrasse = objLizenzdaten.FirmaStrasse
-                            objLic.FK_BenutzerID = objLizenzdaten.BenutzerID
-                            objLic.Aktiv = objLizenzdaten.Aktiv
-                            DBContext.SaveChanges()
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                        End Try
-
-                        Try
-                            'speichern in lokaler DB
-                            DBContext.Lizensierung.Add(objLic)
-                            DBContext.SaveChanges()
-
-                            'anlegen einer lokalen Konfiguration
-                            Dim objKonfig As New Konfiguration
-                            objKonfig.AktuelleSprache = Threading.Thread.CurrentThread.CurrentUICulture.ToString
-                            objKonfig.BenutzerLizenz = objLic.Lizenzschluessel
-                            objKonfig.GridSettings = ""
-                            objKonfig.GridSettingsRHEWA = ""
-                            objKonfig.HoleAlleeigenenEichungenVomServer = True
-                            objKonfig.LetztesUpdate = #1/1/2000#
-                            objKonfig.SyncAb = "01.01.2000"
-                            objKonfig.SyncBis = "31.12.2999"
-                            objKonfig.Synchronisierungsmodus = "Alles"
-
-                            'speichern in lokaler DB
-                            DBContext.Konfiguration.Add(objKonfig)
-                            DBContext.SaveChanges()
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-
-                        End Try
-
-                        'abschluss des dialoges
-                        Me.DialogResult = Windows.Forms.DialogResult.OK
-                        Me.Close()
-                    Else 'lizenz existiert bereits
-                        'abschluss des dialoges
-                        Me.DialogResult = Windows.Forms.DialogResult.OK
-                        Me.Close()
-                    End If
-                Else
-                    MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_UngueltigeLizenz, My.Resources.GlobaleLokalisierung.Fehler)
-                    My.Settings.LetzterBenutzer = ""
-                    My.Settings.Save()
-                End If
-
-            End Using
-        End Using
-    End Sub
 
     Private Sub createTestLizenz()
         Using DBContext As New Entities

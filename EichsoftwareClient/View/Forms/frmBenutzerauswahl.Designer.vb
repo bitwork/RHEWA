@@ -1,10 +1,10 @@
-<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmBenutzerauswahl
 
     Inherits Telerik.WinControls.UI.RadForm
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -21,18 +21,14 @@ Partial Class FrmBenutzerauswahl
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.RadListControlBenutzer = New Telerik.WinControls.UI.RadListControl()
         Me.RadButtonOK = New Telerik.WinControls.UI.RadButton()
         Me.RadButtonNeuerBenutzer = New Telerik.WinControls.UI.RadButton()
-        Me.RadButtonBearbeiteBenutzer = New Telerik.WinControls.UI.RadButton()
-        Me.RadButtonLoescheBenutzer = New Telerik.WinControls.UI.RadButton()
         CType(Me.RadListControlBenutzer, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonOK, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonNeuerBenutzer, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadButtonBearbeiteBenutzer, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadButtonLoescheBenutzer, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -62,31 +58,11 @@ Partial Class FrmBenutzerauswahl
         Me.RadButtonNeuerBenutzer.Text = "<html><p>Neue Lizenz</p><p>Add license</p></html>"
         Me.RadButtonNeuerBenutzer.TextWrap = True
         '
-        'RadButtonBearbeiteBenutzer
-        '
-        Me.RadButtonBearbeiteBenutzer.Image = Global.EichsoftwareClient.My.Resources.Resources.user_edit
-        Me.RadButtonBearbeiteBenutzer.Location = New System.Drawing.Point(391, 321)
-        Me.RadButtonBearbeiteBenutzer.Name = "RadButtonBearbeiteBenutzer"
-        Me.RadButtonBearbeiteBenutzer.Size = New System.Drawing.Size(40, 43)
-        Me.RadButtonBearbeiteBenutzer.TabIndex = 3
-        Me.RadButtonBearbeiteBenutzer.Visible = False
-        '
-        'RadButtonLoescheBenutzer
-        '
-        Me.RadButtonLoescheBenutzer.Image = Global.EichsoftwareClient.My.Resources.Resources.user_delete
-        Me.RadButtonLoescheBenutzer.Location = New System.Drawing.Point(437, 321)
-        Me.RadButtonLoescheBenutzer.Name = "RadButtonLoescheBenutzer"
-        Me.RadButtonLoescheBenutzer.Size = New System.Drawing.Size(40, 43)
-        Me.RadButtonLoescheBenutzer.TabIndex = 4
-        Me.RadButtonLoescheBenutzer.Visible = False
-        '
         'FrmBenutzerauswahl
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(482, 397)
-        Me.Controls.Add(Me.RadButtonLoescheBenutzer)
-        Me.Controls.Add(Me.RadButtonBearbeiteBenutzer)
         Me.Controls.Add(Me.RadButtonNeuerBenutzer)
         Me.Controls.Add(Me.RadButtonOK)
         Me.Controls.Add(Me.RadListControlBenutzer)
@@ -100,8 +76,6 @@ Partial Class FrmBenutzerauswahl
         CType(Me.RadListControlBenutzer, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonOK, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonNeuerBenutzer, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadButtonBearbeiteBenutzer, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadButtonLoescheBenutzer, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -109,7 +83,5 @@ Partial Class FrmBenutzerauswahl
     Friend WithEvents RadListControlBenutzer As Telerik.WinControls.UI.RadListControl
     Friend WithEvents RadButtonOK As Telerik.WinControls.UI.RadButton
     Friend WithEvents RadButtonNeuerBenutzer As Telerik.WinControls.UI.RadButton
-    Friend WithEvents RadButtonBearbeiteBenutzer As Telerik.WinControls.UI.RadButton
-    Friend WithEvents RadButtonLoescheBenutzer As Telerik.WinControls.UI.RadButton
 End Class
 

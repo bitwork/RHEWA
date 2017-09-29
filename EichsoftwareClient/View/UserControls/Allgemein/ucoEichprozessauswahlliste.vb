@@ -708,7 +708,7 @@ Public Class ucoEichprozessauswahlliste
     Private Sub ZeigeServerEichprozess()
         If Not Me.VorgangsnummerGridServer.Equals("") Then
 
-            Dim objClientEichprozess = clsWebserviceFunctions.LadeServerEichprozessZurReadonlyAnzeige(VorgangsnummerGridServer)
+            Dim objClientEichprozess = clsWebserviceFunctions.GetReadonlyEichprozess(VorgangsnummerGridServer)
             'anzeigen des Dialogs zur Bearbeitung der Eichung
             If Not objClientEichprozess Is Nothing Then
 
@@ -780,7 +780,7 @@ Public Class ucoEichprozessauswahlliste
     Private Sub RadButtonEichprozessAblehnen_click(sender As System.Object, e As System.EventArgs) Handles RadButtonEichprozessAblehnenRHEWA.Click
         If Not Me.VorgangsnummerGridServer.Equals("") Then
             If MessageBox.Show(My.Resources.GlobaleLokalisierung.Frage_Ablehnen, My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
-                If clsWebserviceFunctions.AblehnenEichprozess(VorgangsnummerGridServer) Then
+                If clsWebserviceFunctions.SetEichprozessAbgelehnt(VorgangsnummerGridServer) Then
                     'nach dem schließen des Dialogs aktualisieren
                     LoadFromDatabase()
                 End If
@@ -850,7 +850,7 @@ Public Class ucoEichprozessauswahlliste
 
     Private Sub BackgroundWorkerDownloadFromFTP_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorkerDownloadFromFTP.DoWork
         Dim vorgangsnummer As String = e.Argument
-        e.Result = clsWebserviceFunctions.InitDownloadDateiVonFTP(vorgangsnummer, objFTP, Me.BackgroundWorkerDownloadFromFTP)
+        e.Result = clsWebserviceFunctions.GetFTPFile(vorgangsnummer, objFTP, Me.BackgroundWorkerDownloadFromFTP)
     End Sub
 
     Private Sub BackgroundWorkerDownloadFromFTP_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorkerDownloadFromFTP.RunWorkerCompleted
@@ -931,7 +931,7 @@ Public Class ucoEichprozessauswahlliste
             Dim bolNeuGenehmigung As Boolean = False
 
             'neue Stammdaten zum Benutzer holen
-            clsWebserviceFunctions.GetNeueStammdaten(bolNeuStammdaten)
+            clsWebserviceFunctions.GetBenutzerStammdaten(bolNeuStammdaten)
 
             'prüfen ob es neue WZ gibt
             clsWebserviceFunctions.GetNeueWZ(bolNeuWZ)
@@ -945,7 +945,7 @@ Public Class ucoEichprozessauswahlliste
             clsWebserviceFunctions.GetGenehmigungsstatus(bolNeuGenehmigung)
 
             'abgelegte Datein abrufen
-            clsWebserviceFunctions.RufeAbgelegteEichprozesseab()
+            clsWebserviceFunctions.GetEichprotokollAblage()
 
             'refresh
             LoadFromDatabase()
@@ -1002,7 +1002,7 @@ Public Class ucoEichprozessauswahlliste
                     AktuellerBenutzer.Instance.LetztesUpdate = "01.01.2000"
                     AktuellerBenutzer.SaveSettings()
                     'neue Stammdaten zum Benutzer holen
-                    clsWebserviceFunctions.GetNeueStammdaten(bolNeuStammdaten)
+                    clsWebserviceFunctions.GetBenutzerStammdaten(bolNeuStammdaten)
                     BackgroundWorkerSyncAlles.ReportProgress(40)
 
                     'hole alle WZ
@@ -1086,7 +1086,7 @@ Public Class ucoEichprozessauswahlliste
 
     Private Sub RadButtonProtokollAblegen_Click(sender As Object, e As EventArgs) Handles RadButtonProtokollAblegen.Click
         If Not Me.VorgangsnummerGridClient.Equals("") Then
-            If clsWebserviceFunctions.LegeEichprotokollAb(VorgangsnummerGridClient) Then
+            If clsWebserviceFunctions.PutEichprotokollAblage(VorgangsnummerGridClient) Then
                 'neu laden der Liste
                 LoadFromDatabase()
             Else

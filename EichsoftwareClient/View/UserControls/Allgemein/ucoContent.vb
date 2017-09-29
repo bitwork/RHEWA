@@ -1004,7 +1004,7 @@ Public Class ucoContent
                 End Try
 
                 'datensatz entsperren
-                clsWebserviceFunctions.SetzeSperrung(False, objEichprozess.Vorgangsnummer)
+                clsWebserviceFunctions.SetGesperrt(False, objEichprozess.Vorgangsnummer)
             End Using
         End Using
     End Sub

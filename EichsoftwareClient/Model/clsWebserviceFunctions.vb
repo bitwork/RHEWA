@@ -37,7 +37,7 @@ Public Class clsWebserviceFunctions
     ''' </summary>
     ''' <param name="bolneuStammdaten"></param>
     ''' <remarks></remarks>
-    Public Shared Function GetNeueStammdaten(ByRef bolneuStammdaten As Boolean) As Boolean
+    Public Shared Function GetBenutzerStammdaten(ByRef bolneuStammdaten As Boolean) As Boolean
         Try
             'abrufen neuer WZ aus Server, basierend auf dem Wert des letzten erfolgreichen updates
             Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
@@ -78,6 +78,118 @@ Public Class clsWebserviceFunctions
         Catch ex As Exception
             Return False
         End Try
+    End Function
+
+    Public Shared Function InsertLizenz(HEKennung As String, Lizenzschluessel As String) As Boolean
+        'verbindung zum Webservice aufbauen
+        Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
+            Try
+                webContext.Open()
+            Catch ex As Exception
+                MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Return False
+            End Try
+            Using DBContext As New Entities
+
+
+
+                'verbindung zweimal testen, falls server beim ersten mal nicht erreichbar war
+                If Not clsWebserviceFunctions.TesteVerbindung() Then
+                    clsWebserviceFunctions.TesteVerbindung()
+                End If
+                'prüfen ob die Lizenz gültig ist
+                If webContext.AktiviereLizenz(HEKennung, Lizenzschluessel, My.User.Name, System.Environment.UserDomainName, My.Computer.Name) Then
+
+                    'prüfen ob bereits lokales Objekt existiert
+                    Dim Lics = (From Lizensen In DBContext.Lizensierung Where Lizensen.Lizenzschluessel.ToLower = Lizenzschluessel.ToLower And Lizensen.HEKennung.ToLower = HEKennung.ToLower).FirstOrDefault
+                    If Lics Is Nothing Then
+
+                        Dim objLic As New Lizensierung
+                        objLic.HEKennung = HEKennung
+                        objLic.Lizenzschluessel = Lizenzschluessel
+
+                        If webContext.PruefeObRHEWALizenz(HEKennung, Lizenzschluessel, My.User.Name, System.Environment.UserDomainName, My.Computer.Name) Then
+                            objLic.RHEWALizenz = True
+                        Else
+                            objLic.RHEWALizenz = False
+                        End If
+
+                        Try
+                            'hole zusätliche Lizenzdaten
+                            Dim objLizenzdaten As EichsoftwareWebservice.clsLizenzdaten = webContext.GetLizenzdaten(HEKennung, Lizenzschluessel, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+
+                            objLic.Name = objLizenzdaten.Name
+                            objLic.Vorname = objLizenzdaten.Vorname
+                            objLic.Firma = objLizenzdaten.Firma
+                            objLic.FirmaOrt = objLizenzdaten.FirmaOrt
+                            objLic.FirmaPLZ = objLizenzdaten.FirmaPLZ
+                            objLic.FirmaStrasse = objLizenzdaten.FirmaStrasse
+                            objLic.FK_BenutzerID = objLizenzdaten.BenutzerID
+                            objLic.Aktiv = objLizenzdaten.Aktiv
+                            DBContext.SaveChanges()
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                        End Try
+
+                        Try
+                            'speichern in lokaler DB
+                            DBContext.Lizensierung.Add(objLic)
+                            DBContext.SaveChanges()
+
+                            'anlegen einer lokalen Konfiguration
+                            Dim objKonfig As New Konfiguration
+                            objKonfig.AktuelleSprache = Threading.Thread.CurrentThread.CurrentUICulture.ToString
+                            objKonfig.BenutzerLizenz = objLic.Lizenzschluessel
+                            objKonfig.GridSettings = ""
+                            objKonfig.GridSettingsRHEWA = ""
+                            objKonfig.HoleAlleeigenenEichungenVomServer = True
+                            objKonfig.LetztesUpdate = #1/1/2000#
+                            objKonfig.SyncAb = "01.01.2000"
+                            objKonfig.SyncBis = "31.12.2999"
+                            objKonfig.Synchronisierungsmodus = "Alles"
+
+                            'speichern in lokaler DB
+                            DBContext.Konfiguration.Add(objKonfig)
+                            DBContext.SaveChanges()
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+
+                        End Try
+                        Return True
+
+                    Else 'lizenz existiert bereits
+                        Return True
+
+                    End If
+                Else
+                    MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_UngueltigeLizenz, My.Resources.GlobaleLokalisierung.Fehler)
+                    My.Settings.LetzterBenutzer = ""
+                    My.Settings.Save()
+                    Return False
+                End If
+
+            End Using
+        End Using
+    End Function
+
+    Public Shared Function GetValidLizenzAktuellerBenutzer()
+        'verbindung zum Webservice aufbauen
+        Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
+            Try
+                webContext.Open()
+            Catch ex As Exception
+                MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Return False
+            End Try
+
+            Dim result = webContext.PruefeLizenz(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+            If result = False Then
+                MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_UngueltigeLizenz, My.Resources.GlobaleLokalisierung.Fehler)
+                My.Settings.LetzterBenutzer = ""
+                My.Settings.Save()
+            End If
+            Return result
+        End Using
     End Function
 
 #Region "Wägezelle"
@@ -457,7 +569,7 @@ Public Class clsWebserviceFunctions
     ''' <param name="Vorgangsnummer"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Shared Function AblehnenEichprozess(ByVal Vorgangsnummer As String) As Boolean
+    Public Shared Function SetEichprozessAbgelehnt(ByVal Vorgangsnummer As String) As Boolean
         Dim result As String = ""
         Dim bolSetUnueltig As Boolean = True 'variable zum abbrechen des Prozesses, falls jemand anderes an dem DS arbeitet
         Dim Messagetext As String = ""
@@ -740,7 +852,7 @@ Public Class clsWebserviceFunctions
 #Region "JSON Ablage Eichprozess"
 
 
-    Friend Shared Function LegeEichprotokollAb(Vorgangsnummer As String) As Boolean
+    Friend Shared Function PutEichprotokollAblage(Vorgangsnummer As String) As Boolean
         Dim jsonSerializerSettings = New JsonSerializerSettings()
         jsonSerializerSettings.PreserveReferencesHandling = PreserveReferencesHandling.Objects
         'Eichobjekt Serialisieren
@@ -819,7 +931,7 @@ Public Class clsWebserviceFunctions
         Return True
     End Function
 
-    Friend Shared Sub RufeAbgelegteEichprozesseab()
+    Friend Shared Sub GetEichprotokollAblage()
         Dim jsonSerializerSettings = New JsonSerializerSettings()
         jsonSerializerSettings.PreserveReferencesHandling = PreserveReferencesHandling.Objects
 
@@ -884,7 +996,7 @@ Public Class clsWebserviceFunctions
     ''' <param name="Vorgangsnummer"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Shared Function LadeServerEichprozessZurReadonlyAnzeige(ByVal Vorgangsnummer As String) As Eichprozess
+    Public Shared Function GetReadonlyEichprozess(ByVal Vorgangsnummer As String) As Eichprozess
         Dim objServerEichprozess As EichsoftwareWebservice.ServerEichprozess = Nothing
         Dim objClientEichprozess As Eichprozess = Nothing
         'neue Datenbankverbindung
@@ -923,7 +1035,7 @@ Public Class clsWebserviceFunctions
     ''' <remarks></remarks>
     ''' <author></author>
     ''' <commentauthor></commentauthor>
-    Public Shared Function SetzeSperrung(ByVal bolSperren As Boolean, ByVal EichprozessVorgangsnummer As String) As Boolean
+    Public Shared Function SetGesperrt(ByVal bolSperren As Boolean, ByVal EichprozessVorgangsnummer As String) As Boolean
         Dim result As String = ""
         Dim bolSetSperrung As Boolean = True 'variable zum abbrechen des Prozesses, falls jemand anderes an dem DS arbeitet
         Dim Messagetext As String = "" 'variable bekommt Ergebniss der Sperrprüfung. Ist anschließend leer wenn keine Sperrung vorliegt
@@ -938,7 +1050,7 @@ Public Class clsWebserviceFunctions
             End Try
 
             'prüfen ob der datensatz von jemand anderem in Bearbeitung ist
-            Messagetext = PruefeSperrung(EichprozessVorgangsnummer)
+            Messagetext = GetGesperrt(EichprozessVorgangsnummer)
 
             If Messagetext.Equals("") = False Then
                 'rhewa arbeitet in deutsch und hat keine lokalisierung gewünscht
@@ -977,7 +1089,7 @@ Public Class clsWebserviceFunctions
     ''' <remarks></remarks>
     ''' <author></author>
     ''' <commentauthor></commentauthor>
-    Public Shared Function PruefeSperrung(ByVal EichprozessVorgangsnummer As String) As String
+    Public Shared Function GetGesperrt(ByVal EichprozessVorgangsnummer As String) As String
         Dim Messagetext As String = ""
 
         Try
@@ -1039,7 +1151,7 @@ Public Class clsWebserviceFunctions
         End Try
     End Function
 
-    Public Shared Function InitDownloadDateiVonFTP(ByVal vorgangsnummer As String, objFTP As clsFTP, backgroundworker As System.ComponentModel.BackgroundWorker) As String
+    Public Shared Function GetFTPFile(ByVal vorgangsnummer As String, objFTP As clsFTP, backgroundworker As System.ComponentModel.BackgroundWorker) As String
 
         Using Webcontext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
             Try
@@ -1130,7 +1242,7 @@ Public Class clsWebserviceFunctions
     ''' Konnektitätsprüfung zum Strato
     ''' </summary>
     ''' <returns></returns>
-    Public Shared Function CanPingStrato() As Boolean
+    Public Shared Function GetStratoEreichbar() As Boolean
         Const timeout As Integer = 1000
         Const host As String = "h2223265.stratoserver.net"
 

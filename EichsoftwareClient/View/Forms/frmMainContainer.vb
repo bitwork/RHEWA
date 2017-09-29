@@ -496,7 +496,7 @@ Public Class FrmMainContainer
                     RadButtonEntsperren.Visible = True
                     RadButtonPlausibilitaet.Visible = True
                     'prüfen ob eine Sperrung des DS vorliegt und DS sperren wenn nicht
-                    clsWebserviceFunctions.SetzeSperrung(True, CurrentEichprozess.Vorgangsnummer)
+                    clsWebserviceFunctions.SetGesperrt(True, CurrentEichprozess.Vorgangsnummer)
                 End If
 
             End If
@@ -1082,7 +1082,7 @@ Public Class FrmMainContainer
         If DialogModus = enuDialogModus.korrigierend Or DialogModus = enuDialogModus.lesend Then
             If AktuellerBenutzer.Instance.Lizenz.RHEWALizenz = True Then
                 If Not CurrentEichprozess Is Nothing Then
-                    clsWebserviceFunctions.SetzeSperrung(False, CurrentEichprozess.Vorgangsnummer)
+                    clsWebserviceFunctions.SetGesperrt(False, CurrentEichprozess.Vorgangsnummer)
                 End If
             End If
         End If
@@ -1133,7 +1133,7 @@ Public Class FrmMainContainer
 
         'prüfen ob eine Sperrung des DS vorliegt und DS sperren wenn nicht
         If Not CurrentEichprozess Is Nothing Then
-            If clsWebserviceFunctions.SetzeSperrung(True, CurrentEichprozess.Vorgangsnummer) Then
+            If clsWebserviceFunctions.SetGesperrt(True, CurrentEichprozess.Vorgangsnummer) Then
                 RaiseEvent EntsperrungNeeded()
                 RadButtonVersenden.Visible = True
                 RadButtonEntsperren.Enabled = False
