@@ -9,7 +9,6 @@ Public Class uco20Reports
 #End Region
 
 #Region "Konstruktoren"
-    'Private AktuellerStatusDirty As Boolean = False 'TH: Hier eigentlich obsolete. variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann
     Sub New()
         MyBase.New()
         ' Dieser Aufruf ist für den Designer erforderlich.
@@ -42,7 +41,6 @@ Public Class uco20Reports
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub RadButtonExportKompatibliaetsnachweisDE_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonExportKompatibliaetsnachweisDE.Click
-        AktuellerStatusDirty = True
         objOfficeExports.ExportKompatiblitaetsnachweis(objEichprozess, "DE")
     End Sub
 
@@ -53,7 +51,6 @@ Public Class uco20Reports
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub RadButtonExportKompatibliaetsnachweisEN_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonExportKompatibliaetsnachweisEN.Click
-        AktuellerStatusDirty = True
         objOfficeExports.ExportKompatiblitaetsnachweis(objEichprozess, "EN")
     End Sub
 
@@ -64,7 +61,6 @@ Public Class uco20Reports
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub RadButtonExportKonformitaetserklaerungDE_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonExportKonformitaetserklaerungDE.Click
-        AktuellerStatusDirty = True
         objOfficeExports.ExportKonformitaetssnachweis(objEichprozess, "DE")
     End Sub
 
@@ -75,7 +71,6 @@ Public Class uco20Reports
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub RadButtonExportKonformitaetserklaerungPL_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonExportKonformitaetserklaerungPL.Click
-        AktuellerStatusDirty = True
         objOfficeExports.ExportKonformitaetssnachweis(objEichprozess, "PL")
     End Sub
 
@@ -86,7 +81,6 @@ Public Class uco20Reports
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub RadButtonExportKonformitaetserklaerungRO_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonExportKonformitaetserklaerungRO.Click
-        AktuellerStatusDirty = True
         objOfficeExports.ExportKonformitaetssnachweis(objEichprozess, "RO")
     End Sub
 
@@ -97,7 +91,6 @@ Public Class uco20Reports
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub RadButtonExportErstEichungDE_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonExportErstEichungDE.Click
-        AktuellerStatusDirty = True
         objOfficeExports.ExportErsteichung(objEichprozess, "DE")
 
     End Sub
@@ -109,7 +102,6 @@ Public Class uco20Reports
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub RadButtonExportErstEichungEN_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonExportErstEichungEN.Click
-        AktuellerStatusDirty = True
         objOfficeExports.ExportErsteichung(objEichprozess, "EN")
     End Sub
 
@@ -120,7 +112,6 @@ Public Class uco20Reports
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub RadButtonExportErstEichungPL_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonExportErstEichungPL.Click
-        AktuellerStatusDirty = True
         objOfficeExports.ExportErsteichung(objEichprozess, "PL")
     End Sub
 
@@ -131,7 +122,6 @@ Public Class uco20Reports
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub RadButtonExportEichprozessDE_Click(sender As Object, e As EventArgs) Handles RadButtonExportEichprozessDE.Click
-        AktuellerStatusDirty = True
         objOfficeExports.ExportEichprozess(objEichprozess)
     End Sub
 
