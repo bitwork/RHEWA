@@ -531,11 +531,10 @@ Public Class ucoEichprozessauswahlliste
                 End If
 
             Catch ex As Exception
-
+                AktuellerBenutzer.ResetGridSettings()
             End Try
         Catch ex As Exception
-            Throw New Exception()
-
+            AktuellerBenutzer.ResetGridSettings()
         End Try
     End Sub
 
@@ -962,6 +961,8 @@ Public Class ucoEichprozessauswahlliste
             Me.ResumeLayout()
             Me.Visible = True
         Catch ex As Exception
+
+
         End Try
     End Sub
 
