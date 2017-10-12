@@ -427,8 +427,8 @@ Public Class clsPlausibilitaetspruefung
             Ziffernschritt2 = row("Teilung2").ToString
             Ziffernschritt3 = row("Teilung3").ToString
             Try
-                EinschalltnullstellenMax = row("konObereToleranzE")
-                EinschalltnullstellenMin = row("konUntereToleranzE")
+                EinschalltnullstellenMax = row("konObereToleranzE").ToString
+                EinschalltnullstellenMin = row("konUntereToleranzE").ToString
             Catch ex As Exception
 
             End Try
@@ -439,26 +439,30 @@ Public Class clsPlausibilitaetspruefung
 
     Private Sub VerarbeiteAllgemeineWerteACCDB(dtAllgemein As DataTable)
         For Each row As DataRow In dtAllgemein.Rows
-            Erdbeschleunigung = row("gWert")
+            Erdbeschleunigung = row("gWert").ToString
             Exit For
         Next
     End Sub
 
     Private Sub VerarbeiteKonfigurationACCDB(dtKonfiguration As DataTable)
         For Each row As DataRow In dtKonfiguration.Rows
-            OriginalStatus = row("Original")
+            OriginalStatus = row("Original").ToString
             Exit For
         Next
     End Sub
 
     Private Sub VerarbeiteInformationenACCDB(dtInformation As DataTable)
         For Each row As DataRow In dtInformation.Rows
-            Fabriknummer = row("Fabriknummer")
-            FirmwareVersion = row("Version")
-            Model = row("Typ")
-            Eichzaehlerstand = row("EichsiegelNr")
+            Fabriknummer = row("Fabriknummer").ToString
+            FirmwareVersion = row("Version").ToString
+            Model = row("Typ").ToString
             Try
-                EichsiegelOffen = row("konEichsiegel")
+                Eichzaehlerstand = row("EichsiegelNr").ToString
+            Catch ex As Exception
+                Eichzaehlerstand = "N/A"
+            End Try
+            Try
+                EichsiegelOffen = row("konEichsiegel").ToString
             Catch ex As Exception
                 EichsiegelOffen = "N/A"
             End Try
