@@ -20,7 +20,7 @@ Public Class FrmVerbindungsprotokoll
             If loadAll Then
                 Data.AddRange(Context.ServerVerbindungsprotokoll.ToList)
             Else
-                Data.AddRange(Context.ServerVerbindungsprotokoll.Take(4000).ToList)
+                Data.AddRange(Context.ServerVerbindungsprotokoll.OrderByDescending(Function(x) x.Zeitstempel).Take(4000).ToList)
             End If
             RadGridView1.DataSource = Data.ToList
         End Using
