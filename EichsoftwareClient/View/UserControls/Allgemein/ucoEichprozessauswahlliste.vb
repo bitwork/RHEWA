@@ -266,22 +266,28 @@ Public Class ucoEichprozessauswahlliste
     End Sub
 
 
-    ''' <summary>
-    ''' Einblenden eines Anhang Symbols für Anträge mit Dateianhang
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
-    ''' <remarks></remarks>
-    Private Sub RadGridViewRHEWAAlle_CellFormatting(sender As Object, e As Telerik.WinControls.UI.CellFormattingEventArgs) Handles RadGridViewRHEWAAlle.CellFormatting
-        e = FormatCellRHEWA(e)
-    End Sub
+    '''' <summary>
+    '''' Einblenden eines Anhang Symbols für Anträge mit Dateianhang
+    '''' </summary>
+    '''' <param name="sender"></param>
+    '''' <param name="e"></param>
+    '''' <remarks></remarks>
+    'Private Sub RadGridViewRHEWAAlle_CellFormatting(sender As Object, e As Telerik.WinControls.UI.CellFormattingEventArgs) Handles RadGridViewRHEWAAlle.CellFormatting
+    '    e = FormatCellRHEWA(e)
+
+    'End Sub
 
 
-    Private Sub RadGridView_ViewCellFormatting(sender As Object, e As CellFormattingEventArgs) Handles RadGridViewAuswahlliste.ViewCellFormatting, RadGridViewRHEWAAlle.ViewCellFormatting
-        If (TypeOf e.CellElement Is GridHeaderCellElement) Then
-            e.CellElement.TextWrap = True
-        End If
-    End Sub
+    'Private Sub RadGridView_ViewCellFormatting(sender As Object, e As CellFormattingEventArgs) Handles RadGridViewAuswahlliste.ViewCellFormatting, RadGridViewRHEWAAlle.ViewCellFormatting 'Handles RadGridViewAuswahlliste.ViewCellFormatting, RadGridViewRHEWAAlle.ViewCellFormatting
+    '    If (TypeOf e.CellElement Is GridHeaderCellElement) Then
+    '        e.CellElement.TextWrap = True
+    '    End If
+
+    '    If sender.Equals(RadGridViewRHEWAAlle) Then
+    '        e = FormatCellRHEWA(e)
+
+    '    End If
+    'End Sub
 
     ''' <summary>
     ''' öffnen des Dateianhangs
@@ -294,13 +300,14 @@ Public Class ucoEichprozessauswahlliste
         If Not TypeOf e.Row Is Telerik.WinControls.UI.GridViewDataRowInfo Then Exit Sub
 
         Try
-            If (RadGridViewRHEWAAlle.Columns(e.ColumnIndex).Name = "AnhangPfad") Then
+            If (RadGridViewRHEWAAlle.Columns(e.ColumnIndex).Name = "Anhang") Then
+                Dim AnhangPfad = e.Row.Cells("AnhangPfad").Value
+                Dim Vorgangsnummer As String
 
-                If e.Value.Trim.Equals("") = False Then
-                    Dim Vorgangsnummer As String
+                If AnhangPfad.Trim.Equals("") = False Then
                     Vorgangsnummer = e.Row.Cells("Vorgangsnummer").Value
                     Try
-                        OeffneDateiVonFTP(e.Value, Vorgangsnummer)
+                        OeffneDateiVonFTP(AnhangPfad, Vorgangsnummer)
                     Catch ex As Exception
                         Debug.WriteLine(ex.ToString)
                     End Try
@@ -515,9 +522,9 @@ Public Class ucoEichprozessauswahlliste
                     Dim objCondition5 As New Telerik.WinControls.UI.ConditionalFormattingObject("Valid", Telerik.WinControls.UI.ConditionTypes.Equal, "Valid", "", True)
                     Dim objCondition6 As New Telerik.WinControls.UI.ConditionalFormattingObject("Zatwierdzono", Telerik.WinControls.UI.ConditionTypes.Equal, "Zatwierdzono", "", True)
 
-                    objCondition4.RowBackColor = Color.FromArgb(201, 255, 132)
-                    objCondition5.RowBackColor = Color.FromArgb(201, 255, 132)
-                    objCondition6.RowBackColor = Color.FromArgb(201, 255, 132)
+                    objCondition4.RowBackColor = Color.FromArgb(204, 255, 153)
+                    objCondition5.RowBackColor = Color.FromArgb(204, 255, 153)
+                    objCondition6.RowBackColor = Color.FromArgb(204, 255, 153)
 
                     RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Add(objCondition)
                     RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Add(objCondition2)
@@ -893,7 +900,8 @@ Public Class ucoEichprozessauswahlliste
                 RadGridViewRHEWAAlle.Columns("ID").IsVisible = False
                 RadGridViewRHEWAAlle.Columns("Vorgangsnummer").IsVisible = False
                 RadGridViewRHEWAAlle.Columns("Gesperrtdurch").HeaderText = "Gesperrt durch"
-                RadGridViewRHEWAAlle.Columns("AnhangPfad").HeaderText = "Anhang"
+                RadGridViewRHEWAAlle.Columns("AnhangPfad").IsVisible = False
+                'RadGridViewRHEWAAlle.Columns("AnhangPfad").HeaderText = "Anhang"
                 RadGridViewRHEWAAlle.Columns("Eichbevollmaechtigter").HeaderText = "Konformitätsbewertungsbevollmächtigter"
                 RadGridViewRHEWAAlle.Columns("NeueWZ").HeaderText = "Neue WZ"
                 RadGridViewRHEWAAlle.Columns("Gesperrtdurch").HeaderText = "Gesperrt durch"
@@ -903,6 +911,8 @@ Public Class ucoEichprozessauswahlliste
             Catch ex As Exception
             End Try
 
+            'Column für Anhang Element hinzufügen, wenn nicht vorhanden
+            AddImageColumn()
 
             RadGridViewRHEWAAlle.BestFitColumns()
             RadGridViewRHEWAAlle.EnableAlternatingRowColor = False
@@ -920,7 +930,7 @@ Public Class ucoEichprozessauswahlliste
                     }
 
                     Dim objCondition2 As New ConditionalFormattingObject("Genehmigt", Telerik.WinControls.UI.ConditionTypes.Equal, "Genehmigt", "", True) With {
-                        .RowBackColor = Color.FromArgb(201, 255, 132)
+                        .RowBackColor = Color.FromArgb(204, 255, 153)
                     }
 
                     RadGridViewRHEWAAlle.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Add(objCondition)
@@ -955,7 +965,7 @@ Public Class ucoEichprozessauswahlliste
 
             Me.Enabled = True
             Try
-                RadGridViewRHEWAAlle.TableElement.ScrollToRow(RadGridViewRHEWAAlle.SelectedRows(0))
+                If RadGridViewRHEWAAlle.SelectedRows.Count > 0 Then RadGridViewRHEWAAlle.TableElement.ScrollToRow(RadGridViewRHEWAAlle.SelectedRows(0))
             Catch ex As Exception
             End Try
 
@@ -965,6 +975,26 @@ Public Class ucoEichprozessauswahlliste
 
 
         End Try
+    End Sub
+
+    Private Sub AddImageColumn()
+        Dim found As Boolean = False
+        For Each column In RadGridViewRHEWAAlle.Columns
+            If column.Name.Equals("Anhang") Then
+                found = True
+                Exit For
+            End If
+        Next
+        If found = False Then
+
+            Dim GridViewImageCol As GridViewImageColumn = New GridViewImageColumn()
+            GridViewImageCol.Name = "Anhang"
+            GridViewImageCol.HeaderText = "Anhang"
+            GridViewImageCol.IsPinned = True
+            GridViewImageCol.PinPosition = PinnedColumnPosition.Left
+
+            RadGridViewRHEWAAlle.Columns.Add(GridViewImageCol)
+        End If
     End Sub
 
     ''' <summary>
@@ -1003,27 +1033,25 @@ Public Class ucoEichprozessauswahlliste
 
         RadGridViewRHEWAAlle.DataSource = e.Result
         FormatTableRhewa(index, groupIndex)
+
+        FillImageColumn()
     End Sub
 
-    Private Function FormatCellRHEWA(e As CellFormattingEventArgs) As CellFormattingEventArgs
-        Try
-            If (RadGridViewRHEWAAlle.Columns(e.ColumnIndex).Name = "AnhangPfad") Then
-                'einblenden des symbols
-                If Not e.CellElement.Text.Trim.Equals("") Then
-                    e.CellElement.Value = e.CellElement.Text
-                    e.CellElement.DrawText = False
-                    e.CellElement.Image = My.Resources.attach
-                Else
-                    e.CellElement.Image = Nothing
-                End If
-            Else
-                e.CellElement.Image = Nothing
-            End If
-        Catch ex As Exception
-        End Try
+    Private Sub FillImageColumn()
+        For Each row In RadGridViewRHEWAAlle.Rows
+            Try
+                Dim valuecell = row.Cells("Anhangpfad")
+                Dim imagecell = row.Cells("Anhang")
 
-        Return e
-    End Function
+                If Not valuecell.Value.Trim.Equals("") Then
+                    imagecell.Value = My.Resources.attach
+                End If
+            Catch ex As Exception
+            End Try
+        Next
+    End Sub
+
+
 #End Region
 
 
