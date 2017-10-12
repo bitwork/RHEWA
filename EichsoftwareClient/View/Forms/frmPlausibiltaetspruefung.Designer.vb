@@ -99,16 +99,33 @@ Partial Class frmPlausibiltaetspruefung
         CType(Me.RadProgressBar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonAnhang, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadDropDownListWaegebruecke, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LabelOption, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.FlowLayoutPanel1.SuspendLayout()
         CType(Me.RadGridViewVergleichswerte, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGridViewVergleichswerte.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlJustagePunkt1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlJustagePunkt2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlAnalogwert2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label9, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label10, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlAnalogwert1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlWZNennlast, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlWZKennwert, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label11, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label12, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlAnzahlWZ, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label13, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label14, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label15, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label16, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlADWertBerechnung2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlADWertBerechnung1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlADWertBerechnung4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -122,16 +139,23 @@ Partial Class frmPlausibiltaetspruefung
         CType(Me.RadTextBoxControlLastWaegebrueckeBerechnung3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlLastWaegebrueckeBerechnung2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlLastWaegebrueckeBerechnung1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LabelLastWaegebruecke, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlUebersetzungsverhaeltnis, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label18, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LabelArrow1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LabelArrow2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LabelArrow3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LabelArrow4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlProzentualeAuslasungWZBerechnung1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlProzentualeAuslasungWZBerechnung2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlProzentualeAuslasungWZBerechnung3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlProzentualeAuslasungWZBerechnung4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'OpenFileDialog1
         '
-        Me.OpenFileDialog1.Filter = "XML Konfiguration|*.xml|Access|*.mdb"
+        Me.OpenFileDialog1.Filter = "Konfiguration|*.xml;*.mdb"
         '
         'RadTextBoxControlPath
         '
@@ -209,28 +233,25 @@ Partial Class frmPlausibiltaetspruefung
         '
         'Label1
         '
-        Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(11, 76)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(114, 13)
+        Me.Label1.Size = New System.Drawing.Size(117, 18)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "2. Wägebrücke prüfen"
         '
         'Label2
         '
-        Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(9, 9)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(95, 13)
+        Me.Label2.Size = New System.Drawing.Size(96, 18)
         Me.Label2.TabIndex = 14
         Me.Label2.Text = "1. Pfad auswählen"
         '
         'LabelOption
         '
-        Me.LabelOption.AutoSize = True
         Me.LabelOption.Location = New System.Drawing.Point(12, 24)
         Me.LabelOption.Name = "LabelOption"
-        Me.LabelOption.Size = New System.Drawing.Size(314, 13)
+        Me.LabelOption.Size = New System.Drawing.Size(330, 18)
         Me.LabelOption.TabIndex = 15
         Me.LabelOption.Text = "Option: Anhängte Datei öffnen, ablegen und als Datei auswählen"
         Me.LabelOption.Visible = False
@@ -286,19 +307,17 @@ Partial Class frmPlausibiltaetspruefung
         '
         'Label3
         '
-        Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(15, 382)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(80, 13)
+        Me.Label3.Size = New System.Drawing.Size(82, 18)
         Me.Label3.TabIndex = 19
         Me.Label3.Text = "Justagepunkt 1"
         '
         'Label4
         '
-        Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(15, 408)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(80, 13)
+        Me.Label4.Size = New System.Drawing.Size(82, 18)
         Me.Label4.TabIndex = 20
         Me.Label4.Text = "Justagepunkt 2"
         '
@@ -312,19 +331,17 @@ Partial Class frmPlausibiltaetspruefung
         '
         'Label5
         '
-        Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(233, 382)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(25, 13)
+        Me.Label5.Size = New System.Drawing.Size(25, 18)
         Me.Label5.TabIndex = 22
         Me.Label5.Text = "[kg]"
         '
         'Label6
         '
-        Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(233, 407)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(25, 13)
+        Me.Label6.Size = New System.Drawing.Size(25, 18)
         Me.Label6.TabIndex = 23
         Me.Label6.Text = "[kg]"
         '
@@ -338,19 +355,17 @@ Partial Class frmPlausibiltaetspruefung
         '
         'Label9
         '
-        Me.Label9.AutoSize = True
         Me.Label9.Location = New System.Drawing.Point(260, 408)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(69, 13)
+        Me.Label9.Size = New System.Drawing.Size(73, 18)
         Me.Label9.TabIndex = 26
         Me.Label9.Text = "Analogwert 2"
         '
         'Label10
         '
-        Me.Label10.AutoSize = True
         Me.Label10.Location = New System.Drawing.Point(260, 382)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(69, 13)
+        Me.Label10.Size = New System.Drawing.Size(73, 18)
         Me.Label10.TabIndex = 25
         Me.Label10.Text = "Analogwert 1"
         '
@@ -372,10 +387,9 @@ Partial Class frmPlausibiltaetspruefung
         '
         'Label7
         '
-        Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(15, 434)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(70, 13)
+        Me.Label7.Size = New System.Drawing.Size(71, 18)
         Me.Label7.TabIndex = 28
         Me.Label7.Text = "WZ Nennlast"
         '
@@ -389,28 +403,25 @@ Partial Class frmPlausibiltaetspruefung
         '
         'Label8
         '
-        Me.Label8.AutoSize = True
         Me.Label8.Location = New System.Drawing.Point(260, 434)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(73, 13)
+        Me.Label8.Size = New System.Drawing.Size(74, 18)
         Me.Label8.TabIndex = 30
         Me.Label8.Text = "WZ Kennwert"
         '
         'Label11
         '
-        Me.Label11.AutoSize = True
         Me.Label11.Location = New System.Drawing.Point(233, 434)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(25, 13)
+        Me.Label11.Size = New System.Drawing.Size(25, 18)
         Me.Label11.TabIndex = 32
         Me.Label11.Text = "[kg]"
         '
         'Label12
         '
-        Me.Label12.AutoSize = True
         Me.Label12.Location = New System.Drawing.Point(478, 434)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(34, 13)
+        Me.Label12.Size = New System.Drawing.Size(34, 18)
         Me.Label12.TabIndex = 33
         Me.Label12.Text = "mV/V"
         '
@@ -424,37 +435,33 @@ Partial Class frmPlausibiltaetspruefung
         '
         'Label13
         '
-        Me.Label13.AutoSize = True
         Me.Label13.Location = New System.Drawing.Point(15, 460)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(60, 13)
+        Me.Label13.Size = New System.Drawing.Size(60, 18)
         Me.Label13.TabIndex = 34
         Me.Label13.Text = "Anzahl WZ"
         '
         'Label14
         '
-        Me.Label14.AutoSize = True
         Me.Label14.Location = New System.Drawing.Point(15, 509)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(54, 13)
+        Me.Label14.Size = New System.Drawing.Size(56, 18)
         Me.Label14.TabIndex = 36
         Me.Label14.Text = "AD-Werte"
         '
         'Label15
         '
-        Me.Label15.AutoSize = True
         Me.Label15.Location = New System.Drawing.Point(233, 509)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(189, 13)
+        Me.Label15.Size = New System.Drawing.Size(200, 18)
         Me.Label15.TabIndex = 37
         Me.Label15.Text = "prozentuale Auslatung der Wägezellen"
         '
         'Label16
         '
-        Me.Label16.AutoSize = True
         Me.Label16.Location = New System.Drawing.Point(468, 509)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(146, 13)
+        Me.Label16.Size = New System.Drawing.Size(150, 18)
         Me.Label16.TabIndex = 38
         Me.Label16.Text = "Last auf den Wägezellen [kg]"
         Me.Label16.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
@@ -587,10 +594,9 @@ Partial Class frmPlausibiltaetspruefung
         '
         'LabelLastWaegebruecke
         '
-        Me.LabelLastWaegebruecke.AutoSize = True
         Me.LabelLastWaegebruecke.Location = New System.Drawing.Point(666, 509)
         Me.LabelLastWaegebruecke.Name = "LabelLastWaegebruecke"
-        Me.LabelLastWaegebruecke.Size = New System.Drawing.Size(149, 13)
+        Me.LabelLastWaegebruecke.Size = New System.Drawing.Size(152, 18)
         Me.LabelLastWaegebruecke.TabIndex = 52
         Me.LabelLastWaegebruecke.Text = "Last auf der Wägebrücke [kg]"
         Me.LabelLastWaegebruecke.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
@@ -605,46 +611,41 @@ Partial Class frmPlausibiltaetspruefung
         '
         'Label18
         '
-        Me.Label18.AutoSize = True
         Me.Label18.Location = New System.Drawing.Point(233, 460)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(117, 13)
+        Me.Label18.Size = New System.Drawing.Size(122, 18)
         Me.Label18.TabIndex = 57
         Me.Label18.Text = "Übersetzungsverhältnis"
         '
         'LabelArrow1
         '
-        Me.LabelArrow1.AutoSize = True
         Me.LabelArrow1.Location = New System.Drawing.Point(173, 601)
         Me.LabelArrow1.Name = "LabelArrow1"
-        Me.LabelArrow1.Size = New System.Drawing.Size(25, 13)
+        Me.LabelArrow1.Size = New System.Drawing.Size(32, 18)
         Me.LabelArrow1.TabIndex = 59
         Me.LabelArrow1.Text = "---->"
         '
         'LabelArrow2
         '
-        Me.LabelArrow2.AutoSize = True
         Me.LabelArrow2.Location = New System.Drawing.Point(397, 601)
         Me.LabelArrow2.Name = "LabelArrow2"
-        Me.LabelArrow2.Size = New System.Drawing.Size(25, 13)
+        Me.LabelArrow2.Size = New System.Drawing.Size(32, 18)
         Me.LabelArrow2.TabIndex = 60
         Me.LabelArrow2.Text = "---->"
         '
         'LabelArrow3
         '
-        Me.LabelArrow3.AutoSize = True
         Me.LabelArrow3.Location = New System.Drawing.Point(623, 601)
         Me.LabelArrow3.Name = "LabelArrow3"
-        Me.LabelArrow3.Size = New System.Drawing.Size(25, 13)
+        Me.LabelArrow3.Size = New System.Drawing.Size(32, 18)
         Me.LabelArrow3.TabIndex = 61
         Me.LabelArrow3.Text = "---->"
         '
         'LabelArrow4
         '
-        Me.LabelArrow4.AutoSize = True
         Me.LabelArrow4.Location = New System.Drawing.Point(796, 601)
         Me.LabelArrow4.Name = "LabelArrow4"
-        Me.LabelArrow4.Size = New System.Drawing.Size(25, 13)
+        Me.LabelArrow4.Size = New System.Drawing.Size(32, 18)
         Me.LabelArrow4.TabIndex = 62
         Me.LabelArrow4.Text = "---->"
         '
@@ -658,7 +659,7 @@ Partial Class frmPlausibiltaetspruefung
         Me.RadTextBoxControlProzentualeAuslasungWZBerechnung1.Size = New System.Drawing.Size(125, 20)
         Me.RadTextBoxControlProzentualeAuslasungWZBerechnung1.TabIndex = 63
         Me.RadTextBoxControlProzentualeAuslasungWZBerechnung1.TabStop = False
-        Me.RadTextBoxControlProzentualeAuslasungWZBerechnung1.Text = "0,00%"
+        Me.RadTextBoxControlProzentualeAuslasungWZBerechnung1.Text = "0,00 %"
         '
         'RadTextBoxControlProzentualeAuslasungWZBerechnung2
         '
@@ -670,7 +671,7 @@ Partial Class frmPlausibiltaetspruefung
         Me.RadTextBoxControlProzentualeAuslasungWZBerechnung2.Size = New System.Drawing.Size(125, 20)
         Me.RadTextBoxControlProzentualeAuslasungWZBerechnung2.TabIndex = 64
         Me.RadTextBoxControlProzentualeAuslasungWZBerechnung2.TabStop = False
-        Me.RadTextBoxControlProzentualeAuslasungWZBerechnung2.Text = "0,00%"
+        Me.RadTextBoxControlProzentualeAuslasungWZBerechnung2.Text = "0,00 %"
         '
         'RadTextBoxControlProzentualeAuslasungWZBerechnung3
         '
@@ -682,7 +683,7 @@ Partial Class frmPlausibiltaetspruefung
         Me.RadTextBoxControlProzentualeAuslasungWZBerechnung3.Size = New System.Drawing.Size(125, 20)
         Me.RadTextBoxControlProzentualeAuslasungWZBerechnung3.TabIndex = 65
         Me.RadTextBoxControlProzentualeAuslasungWZBerechnung3.TabStop = False
-        Me.RadTextBoxControlProzentualeAuslasungWZBerechnung3.Text = "0,00%"
+        Me.RadTextBoxControlProzentualeAuslasungWZBerechnung3.Text = "0,00 %"
         '
         'RadTextBoxControlProzentualeAuslasungWZBerechnung4
         '
@@ -694,7 +695,7 @@ Partial Class frmPlausibiltaetspruefung
         Me.RadTextBoxControlProzentualeAuslasungWZBerechnung4.Size = New System.Drawing.Size(125, 20)
         Me.RadTextBoxControlProzentualeAuslasungWZBerechnung4.TabIndex = 66
         Me.RadTextBoxControlProzentualeAuslasungWZBerechnung4.TabStop = False
-        Me.RadTextBoxControlProzentualeAuslasungWZBerechnung4.Text = "0,00%"
+        Me.RadTextBoxControlProzentualeAuslasungWZBerechnung4.Text = "0,00 %"
         '
         'frmPlausibiltaetspruefung
         '
@@ -755,6 +756,10 @@ Partial Class frmPlausibiltaetspruefung
         Me.Controls.Add(Me.RadProgressBar)
         Me.Controls.Add(Me.RadButtonPruefe)
         Me.Name = "frmPlausibiltaetspruefung"
+        '
+        '
+        '
+        Me.RootElement.ApplyShapeToControl = True
         Me.Text = "Plausbilitätsprüfung"
         CType(Me.RadTextBoxControlPath, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonOpen, System.ComponentModel.ISupportInitialize).EndInit()
@@ -762,16 +767,33 @@ Partial Class frmPlausibiltaetspruefung
         CType(Me.RadProgressBar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonAnhang, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadDropDownListWaegebruecke, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LabelOption, System.ComponentModel.ISupportInitialize).EndInit()
         Me.FlowLayoutPanel1.ResumeLayout(False)
         CType(Me.RadGridViewVergleichswerte.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGridViewVergleichswerte, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlJustagePunkt1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlJustagePunkt2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlAnalogwert2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label9, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label10, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlAnalogwert1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlWZNennlast, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlWZKennwert, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label11, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label12, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlAnzahlWZ, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label13, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label14, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label15, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label16, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlADWertBerechnung2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlADWertBerechnung1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlADWertBerechnung4, System.ComponentModel.ISupportInitialize).EndInit()
@@ -785,11 +807,18 @@ Partial Class frmPlausibiltaetspruefung
         CType(Me.RadTextBoxControlLastWaegebrueckeBerechnung3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlLastWaegebrueckeBerechnung2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlLastWaegebrueckeBerechnung1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LabelLastWaegebruecke, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlUebersetzungsverhaeltnis, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label18, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LabelArrow1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LabelArrow2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LabelArrow3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LabelArrow4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlProzentualeAuslasungWZBerechnung1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlProzentualeAuslasungWZBerechnung2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlProzentualeAuslasungWZBerechnung3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlProzentualeAuslasungWZBerechnung4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

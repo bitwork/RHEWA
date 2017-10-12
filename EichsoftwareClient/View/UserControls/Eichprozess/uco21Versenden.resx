@@ -117,65 +117,62 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="OpenFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="OpenFileDialog1.Filter" xml:space="preserve">
+    <value>ZIP files |*.zip;*.rar;*.7z</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="RadTextBoxControlUploadPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>51, 25</value>
-  </data>
-  <data name="RadButtonUploadPath.Text" xml:space="preserve">
-    <value>...</value>
-  </data>
-  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>963, 415</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlUploadPath.Name" xml:space="preserve">
-    <value>RadTextBoxControlUploadPath</value>
-  </data>
   <data name="RadLabel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 35</value>
   </data>
-  <data name="&gt;&gt;RadButtonAnRhewaSenden.Parent" xml:space="preserve">
+  <data name="RadLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 18</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="RadLabel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RadLabel1.Text" xml:space="preserve">
+    <value>Upload</value>
+  </data>
+  <data name="&gt;&gt;RadLabel1.Name" xml:space="preserve">
+    <value>RadLabel1</value>
+  </data>
+  <data name="&gt;&gt;RadLabel1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadLabel1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;RadLabel1.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="RadButtonAnRhewaSenden.Text" xml:space="preserve">
-    <value>Send to RHEWA</value>
+  <data name="RadTextBoxControlUploadPath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>51, 25</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="RadButtonUploadPath.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
+  <data name="RadTextBoxControlUploadPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>615, 20</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.6437.25593, Culture=neutral, PublicKeyToken=null</value>
+  <data name="RadTextBoxControlUploadPath.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlUploadPath.Name" xml:space="preserve">
+    <value>RadTextBoxControlUploadPath</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlUploadPath.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlUploadPath.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Uco21Versenden</value>
+  <data name="&gt;&gt;RadTextBoxControlUploadPath.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="RadButtonUploadPath.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="RadLabel1.Text" xml:space="preserve">
-    <value>Upload</value>
-  </data>
-  <data name="RadButtonAnRhewaSenden.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt, style=Bold</value>
-  </data>
-  <data name="RadButtonUploadPath.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
-    <value>ImageAboveText</value>
-  </data>
-  <data name="RadProgressBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>957, 24</value>
-  </data>
-  <data name="&gt;&gt;RadButtonAnRhewaSenden.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadProgressBar.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="RadButtonUploadPath.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
   </data>
   <data name="RadButtonUploadPath.Location" type="System.Drawing.Point, System.Drawing">
     <value>663, 25</value>
@@ -183,109 +180,112 @@
   <data name="RadButtonUploadPath.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 41</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlUploadPath.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="RadButtonUploadPath.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
-  <data name="&gt;&gt;RadLabel1.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="RadButtonUploadPath.Text" xml:space="preserve">
+    <value>...</value>
   </data>
-  <data name="&gt;&gt;RadButtonAnRhewaSenden.Name" xml:space="preserve">
-    <value>RadButtonAnRhewaSenden</value>
-  </data>
-  <data name="RadButtonAnRhewaSenden.Location" type="System.Drawing.Point, System.Drawing">
-    <value>561, 72</value>
+  <data name="RadButtonUploadPath.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
   </data>
   <data name="&gt;&gt;RadButtonUploadPath.Name" xml:space="preserve">
     <value>RadButtonUploadPath</value>
   </data>
-  <data name="OpenFileDialog1.Filter" xml:space="preserve">
-    <value>ZIP files (*.zip)|*.zip|RAR files (*.rar)|*.rar|7-ZIP files (*.7z)|*.7z</value>
-  </data>
-  <data name="&gt;&gt;OpenFileDialog1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="RadProgressBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 388</value>
-  </data>
-  <data name="RadProgressBar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left, Right</value>
-  </data>
   <data name="&gt;&gt;RadButtonUploadPath.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="RadTextBoxControlUploadPath.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
   </data>
   <data name="&gt;&gt;RadButtonUploadPath.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;RadLabel1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
   <data name="&gt;&gt;RadButtonUploadPath.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlUploadPath.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;RadLabel1.Name" xml:space="preserve">
-    <value>RadLabel1</value>
-  </data>
-  <data name="&gt;&gt;RadProgressBar.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadProgressBar, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="RadLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>42, 18</value>
-  </data>
-  <data name="&gt;&gt;BackgroundWorkerUploadFTP.Type" xml:space="preserve">
-    <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="RadLabel1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
   </data>
   <data name="RadButtonAnRhewaSenden.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <data name="&gt;&gt;OpenFileDialog1.Name" xml:space="preserve">
-    <value>OpenFileDialog1</value>
+  <data name="RadButtonAnRhewaSenden.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt, style=Bold</value>
   </data>
-  <data name="RadProgressBar.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;RadProgressBar.Name" xml:space="preserve">
-    <value>RadProgressBar</value>
-  </data>
-  <data name="&gt;&gt;RadProgressBar.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="RadButtonAnRhewaSenden.Location" type="System.Drawing.Point, System.Drawing">
+    <value>561, 72</value>
   </data>
   <data name="RadButtonAnRhewaSenden.Size" type="System.Drawing.Size, System.Drawing">
     <value>190, 101</value>
   </data>
-  <data name="RadProgressBar.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="RadButtonAnRhewaSenden.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
-  <data name="RadTextBoxControlUploadPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>615, 20</value>
+  <data name="RadButtonAnRhewaSenden.Text" xml:space="preserve">
+    <value>Send to RHEWA</value>
   </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+  <data name="&gt;&gt;RadButtonAnRhewaSenden.Name" xml:space="preserve">
+    <value>RadButtonAnRhewaSenden</value>
+  </data>
+  <data name="&gt;&gt;RadButtonAnRhewaSenden.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadButtonAnRhewaSenden.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;RadButtonAnRhewaSenden.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="RadButtonAnRhewaSenden.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <metadata name="BackgroundWorkerUploadFTP.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>159, 17</value>
+  </metadata>
+  <data name="RadProgressBar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="RadProgressBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 388</value>
+  </data>
+  <data name="RadProgressBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>957, 24</value>
+  </data>
+  <data name="RadProgressBar.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="RadProgressBar.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;RadProgressBar.Name" xml:space="preserve">
+    <value>RadProgressBar</value>
+  </data>
+  <data name="&gt;&gt;RadProgressBar.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadProgressBar, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadProgressBar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;RadProgressBar.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>963, 415</value>
+  </data>
+  <data name="&gt;&gt;OpenFileDialog1.Name" xml:space="preserve">
+    <value>OpenFileDialog1</value>
+  </data>
+  <data name="&gt;&gt;OpenFileDialog1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;BackgroundWorkerUploadFTP.Name" xml:space="preserve">
     <value>BackgroundWorkerUploadFTP</value>
   </data>
-  <metadata name="BackgroundWorkerUploadFTP.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>159, 17</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="OpenFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
+  <data name="&gt;&gt;BackgroundWorkerUploadFTP.Type" xml:space="preserve">
+    <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Uco21Versenden</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.6494.23423, Culture=neutral, PublicKeyToken=null</value>
+  </data>
 </root>
