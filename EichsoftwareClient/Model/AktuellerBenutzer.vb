@@ -361,6 +361,9 @@ Public Class AktuellerBenutzer
     ''' </summary>
     ''' <param name="uco"></param>
     Friend Shared Sub LadeGridLayout(uco As ucoEichprozessauswahlliste)
+        If AktuellerBenutzer.Instance.GridSettings.ToString.Equals("") Then
+            ResetGridSettings()
+        End If
         'laden des Grid Layouts aus User Settings
         Try
             If Not AktuellerBenutzer.Instance.GridSettings.ToString.Equals("") Then

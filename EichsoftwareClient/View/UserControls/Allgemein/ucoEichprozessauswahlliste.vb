@@ -396,6 +396,8 @@ Public Class ucoEichprozessauswahlliste
 
     Protected Friend Sub LadeRoutine()
         SetzeUeberschrift()
+        'laden des Grid Layouts aus User Settings
+        AktuellerBenutzer.LadeGridLayout(Me)
 
         If Not ParentFormular Is Nothing Then
             Try
@@ -642,8 +644,7 @@ Public Class ucoEichprozessauswahlliste
 
         Me.Visible = True
 
-        'laden des Grid Layouts aus User Settings
-        AktuellerBenutzer.LadeGridLayout(Me)
+
     End Sub
     Private Function SyncAlles(e As System.ComponentModel.DoWorkEventArgs) As System.ComponentModel.DoWorkEventArgs
         Dim bolSyncData As Boolean = True 'Wert der genutzt wird um ggfs die Synchrosierung abzubrechen, falls ein Benutzer noch ungesendete Konformitätsbewertungsvorgänge hat
