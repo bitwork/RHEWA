@@ -163,7 +163,7 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
                                Benutzer.Vorname,
                                .Firma = Firma.Name,
                                Firma.Land,
-                               Eichmarken.HEKennung,
+                               Benutzer.HEKennung,
                                Eichmarken.Bemerkung,
                                Eichmarken.BenannteStelleAnzahlAusgeteilt,
                                Eichmarken.BenannteStelleAnzahl,
