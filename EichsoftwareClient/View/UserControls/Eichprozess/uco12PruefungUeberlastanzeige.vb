@@ -91,10 +91,10 @@ Public Class uco12PruefungUeberlastanzeige
     Protected Friend Overrides Sub FillControls() Implements IRhewaEditingDialog.FillControls
         'Steuerlemente füllen
 
-        If Not objEichprozess.Eichprotokoll.Ueberlastanzeige_Max Is Nothing Then
-            RadTextBoxControlMaxE.Text = objEichprozess.Eichprotokoll.Ueberlastanzeige_Max
-        Else
-            Select Case objEichprozess.Lookup_Waagenart.Art
+        'If Not objEichprozess.Eichprotokoll.Ueberlastanzeige_Max Is Nothing Then
+        '    RadTextBoxControlMaxE.Text = objEichprozess.Eichprotokoll.Ueberlastanzeige_Max
+        'Else
+        Select Case objEichprozess.Lookup_Waagenart.Art
                 Case Is = "Einbereichswaage"
                     '=PRODUKT(B13+(B15*10))
                     RadTextBoxControlMaxE.Text = CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1) + (CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 10))
@@ -105,7 +105,7 @@ Public Class uco12PruefungUeberlastanzeige
                     '=PRODUKT(K13+(K15*10))
                     RadTextBoxControlMaxE.Text = CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3) + (CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 10))
             End Select
-        End If
+        'End If
         If Not objEichprozess.Eichprotokoll.Ueberlastanzeige_Ueberlast Is Nothing Then
             RadCheckBoxUeberlast.Checked = objEichprozess.Eichprotokoll.Ueberlastanzeige_Ueberlast
         End If
