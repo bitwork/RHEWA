@@ -528,6 +528,19 @@ Public Class uco_2StammdatenEingabe
 
         If DialogModus = enuDialogModus.normal Then objEichprozess.Bearbeitungsdatum = Date.Now
 
+        'bei korrekturen gibt es rhewa seitig das Objekt nicht in der Datenbank. Dennoch müssen die Referenzen auf die Lookups für die Folgedialoge aktualisiert werden
+        If DialogModus = enuDialogModus.korrigierend Then
+            If Not objEichprozess.Lookup_Auswertegeraet Is Nothing And Not objEichprozess.Lookup_Waagenart Is Nothing And Not objEichprozess.Lookup_Waagentyp Is Nothing And Not objEichprozess.Lookup_Waegezelle Is Nothing Then
+                Using Context As New Entities
+                    objEichprozess.Lookup_Auswertegeraet = Context.Lookup_Auswertegeraet.Where(Function(x) x.ID = objEichprozess.FK_Auswertegeraet).FirstOrDefault
+                    objEichprozess.Lookup_Waagenart = Context.Lookup_Waagenart.Where(Function(x) x.ID = objEichprozess.FK_WaagenArt).FirstOrDefault
+                    objEichprozess.Lookup_Waagentyp = Context.Lookup_Waagentyp.Where(Function(x) x.ID = objEichprozess.FK_WaagenTyp).FirstOrDefault
+                    objEichprozess.Lookup_Waegezelle = Context.Lookup_Waegezelle.Where(Function(x) x.ID = objEichprozess.FK_Waegezelle).FirstOrDefault
+                End Using
+            End If
+
+        End If
+
         'zuweisen der aktualisierten Objekt instanz an Hauptformular
         ParentFormular.CurrentEichprozess = objEichprozess
     End Sub
