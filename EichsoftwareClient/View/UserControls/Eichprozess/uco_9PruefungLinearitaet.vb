@@ -184,21 +184,28 @@ Public Class uco_9PruefungLinearitaet
             'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
             For Each obj In objEichprozess.Eichprotokoll.PruefungLinearitaetSteigend
                 obj.Eichprotokoll = objEichprozess.Eichprotokoll
-                _ListPruefungPruefungLinearitaetSteigend.Add(obj)
+                If _ListPruefungPruefungLinearitaetSteigend.Where(Function(x) x.Bereich = obj.Bereich And x.Messpunkt = obj.Messpunkt).FirstOrDefault Is Nothing Then
+                    _ListPruefungPruefungLinearitaetSteigend.Add(obj)
+                End If
             Next
+
             For Each obj In objEichprozess.Eichprotokoll.PruefungLinearitaetFallend
                 obj.Eichprotokoll = objEichprozess.Eichprotokoll
-                _ListPruefungPruefungLinearitaetFallend.Add(obj)
+                If _ListPruefungPruefungLinearitaetFallend.Where(Function(x) x.Bereich = obj.Bereich And x.Messpunkt = obj.Messpunkt).FirstOrDefault Is Nothing Then
+                    _ListPruefungPruefungLinearitaetFallend.Add(obj)
+                End If
             Next
         Catch ex As System.ObjectDisposedException 'fehler im Clientseitigen Lesemodus (bei bereits abegschickter Eichung)
             Using context As New Entities
                 'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
                 Dim query = From a In context.PruefungLinearitaetSteigend Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
                 _ListPruefungPruefungLinearitaetSteigend = query.ToList
+
                 query = Nothing
 
                 Dim query2 = From a In context.PruefungLinearitaetFallend Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
                 _ListPruefungPruefungLinearitaetFallend = query2.ToList
+
                 query2 = Nothing
             End Using
         End Try
