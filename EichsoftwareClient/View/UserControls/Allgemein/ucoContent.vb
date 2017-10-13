@@ -340,6 +340,35 @@ Public Class ucoContent
 #Region "Hilfsfunktionen"
 
     ''' <summary>
+    ''' Lokalisierte "Long Date" Strings in DateTime Objekt umwandeln
+    ''' </summary>
+    ''' <param name="datestring"></param>
+    ''' <returns></returns>
+    Protected Friend Function tryParseDateToLocal(datestring As String) As Date
+        Dim resultDate As Date
+        Dim cultureDE As IFormatProvider = New System.Globalization.CultureInfo("de", True)
+        Date.TryParse(datestring, cultureDE, System.Globalization.DateTimeStyles.AssumeLocal, resultDate)
+
+        If IsDate(resultDate) And resultDate <> Date.MinValue Then
+            Return resultDate
+        End If
+
+        Dim culturePL As IFormatProvider = New System.Globalization.CultureInfo("pl", True)
+        Date.TryParse(datestring, culturePL, System.Globalization.DateTimeStyles.AssumeLocal, resultDate)
+        If IsDate(resultDate) And resultDate <> Date.MinValue Then
+            Return resultDate
+        End If
+
+        Dim cultureEN As IFormatProvider = New System.Globalization.CultureInfo("en", True)
+        Date.TryParse(datestring, cultureEN, System.Globalization.DateTimeStyles.AssumeLocal, resultDate)
+        If IsDate(resultDate) And resultDate <> Date.MinValue Then
+            Return resultDate
+        End If
+        MessageBox.Show("Das Datum " & datestring & " konnte nicht konvertiert werden")
+        Return New Date
+    End Function
+
+    ''' <summary>
     ''' holt Steuerelement Objekt anhand von Namen als String
     ''' </summary>
     ''' <param name="Name"></param>

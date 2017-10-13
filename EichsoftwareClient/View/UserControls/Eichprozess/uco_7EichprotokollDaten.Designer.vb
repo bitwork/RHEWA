@@ -163,8 +163,8 @@ Partial Class uco_7EichprotokollDaten
         Me.RadTextBoxControlAufstellungsort = New Telerik.WinControls.UI.RadTextBox()
         Me.lblBenutzer = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlBenutzer = New Telerik.WinControls.UI.RadTextBox()
-        Me.BackgroundWorkerPruefscheinnummern = New System.ComponentModel.BackgroundWorker()
         Me.RadLabel1 = New Telerik.WinControls.UI.RadLabel()
+        Me.BackgroundWorkerPruefscheinnummern = New System.ComponentModel.BackgroundWorker()
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadScrollablePanel1.PanelContainer.SuspendLayout()
         Me.RadScrollablePanel1.SuspendLayout()
@@ -393,6 +393,7 @@ Partial Class uco_7EichprotokollDaten
         '
         'RadDateTimePickerNormalienLetztePruefung
         '
+        Me.RadDateTimePickerNormalienLetztePruefung.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         resources.ApplyResources(Me.RadDateTimePickerNormalienLetztePruefung, "RadDateTimePickerNormalienLetztePruefung")
         Me.RadDateTimePickerNormalienLetztePruefung.Name = "RadDateTimePickerNormalienLetztePruefung"
         Me.RadDateTimePickerNormalienLetztePruefung.TabStop = False
@@ -883,6 +884,7 @@ Partial Class uco_7EichprotokollDaten
         '
         'RadTextBoxControlDatum
         '
+        Me.RadTextBoxControlDatum.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         resources.ApplyResources(Me.RadTextBoxControlDatum, "RadTextBoxControlDatum")
         Me.RadTextBoxControlDatum.Name = "RadTextBoxControlDatum"
         Me.RadTextBoxControlDatum.TabStop = False
@@ -1313,14 +1315,14 @@ Partial Class uco_7EichprotokollDaten
         Me.RadTextBoxControlBenutzer.MaxLength = 250
         Me.RadTextBoxControlBenutzer.Name = "RadTextBoxControlBenutzer"
         '
-        'BackgroundWorkerPruefscheinnummern
-        '
-        '
         'RadLabel1
         '
         Me.RadLabel1.ForeColor = System.Drawing.Color.Red
         resources.ApplyResources(Me.RadLabel1, "RadLabel1")
         Me.RadLabel1.Name = "RadLabel1"
+        '
+        'BackgroundWorkerPruefscheinnummern
+        '
         '
         'uco_7EichprotokollDaten
         '
