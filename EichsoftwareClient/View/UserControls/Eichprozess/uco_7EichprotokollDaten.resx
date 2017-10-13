@@ -1925,25 +1925,25 @@
   <data name="&gt;&gt;RadGroupBoxPruefverfahren.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="RadDateTimePickerDatum.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RadTextBoxControlDatum.Location" type="System.Drawing.Point, System.Drawing">
     <value>737, 41</value>
   </data>
-  <data name="RadDateTimePickerDatum.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RadTextBoxControlDatum.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 20</value>
   </data>
-  <data name="RadDateTimePickerDatum.TabIndex" type="System.Int32, mscorlib">
+  <data name="RadTextBoxControlDatum.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;RadDateTimePickerDatum.Name" xml:space="preserve">
-    <value>RadDateTimePickerDatum</value>
+  <data name="&gt;&gt;RadTextBoxControlDatum.Name" xml:space="preserve">
+    <value>RadTextBoxControlDatum</value>
   </data>
-  <data name="&gt;&gt;RadDateTimePickerDatum.Type" xml:space="preserve">
+  <data name="&gt;&gt;RadTextBoxControlDatum.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadDateTimePicker, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;RadDateTimePickerDatum.Parent" xml:space="preserve">
+  <data name="&gt;&gt;RadTextBoxControlDatum.Parent" xml:space="preserve">
     <value>RadGroupBoxIdentifikationsdaten</value>
   </data>
-  <data name="&gt;&gt;RadDateTimePickerDatum.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;RadTextBoxControlDatum.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="Label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -3561,6 +3561,6 @@
     <value>uco_7EichprotokollDaten</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.6494.23169, Culture=neutral, PublicKeyToken=null</value>
+    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.6437.18856, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

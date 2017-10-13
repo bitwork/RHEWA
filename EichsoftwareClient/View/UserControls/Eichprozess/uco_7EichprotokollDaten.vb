@@ -107,23 +107,7 @@ Public Class uco_7EichprotokollDaten
     Private Sub FillControlsBeschaffenheitspruefung()
         If Not objEichprozess.Eichprotokoll.Beschaffenheitspruefung_Genauigkeitsklasse Is Nothing Then RadTextBoxControlNormalienGenauigkeitsklasse.Text = objEichprozess.Eichprotokoll.Beschaffenheitspruefung_Genauigkeitsklasse
         If Not objEichprozess.Eichprotokoll.Beschaffenheitspruefung_Pruefintervall Is Nothing Then RadTextBoxControlNormalienPruefintervall.Text = objEichprozess.Eichprotokoll.Beschaffenheitspruefung_Pruefintervall
-        If Not objEichprozess.Eichprotokoll.Beschaffenheitspruefung_LetztePruefung Is Nothing Then
-            Try
-                RadDateTimePickerNormalienLetztePruefung.Value = DateTime.ParseExact(objEichprozess.Eichprotokoll.Beschaffenheitspruefung_LetztePruefung, "dd/MM/yyyy", Globalization.CultureInfo.GetCultureInfo("DE"))
-            Catch ex As Exception
-                Try
-                    RadDateTimePickerNormalienLetztePruefung.Value = DateTime.ParseExact(objEichprozess.Eichprotokoll.Beschaffenheitspruefung_LetztePruefung, "MM/dd/yyyy", Globalization.CultureInfo.GetCultureInfo("PL"))
-                Catch ex2 As Exception
-                    Try
-                        RadDateTimePickerNormalienLetztePruefung.Value = DateTime.ParseExact(objEichprozess.Eichprotokoll.Beschaffenheitspruefung_LetztePruefung, "dd/MM/yyyy", Globalization.CultureInfo.GetCultureInfo("EN"))
-                    Catch ex3 As Exception
-                        MessageBox.Show(String.Format("Der Wert {0} für das Letzte Prüfdatum der Normalien konnte nicht in ein Datum umgewandelt werden. Bitte einmalig per Hand anpassen", objEichprozess.Eichprotokoll.Beschaffenheitspruefung_LetztePruefung))
-
-                    End Try
-                End Try
-            End Try
-
-        End If
+        If Not objEichprozess.Eichprotokoll.Beschaffenheitspruefung_LetztePruefung Is Nothing Then RadDateTimePickerNormalienLetztePruefung.Text = objEichprozess.Eichprotokoll.Beschaffenheitspruefung_LetztePruefung
         If Not objEichprozess.Eichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer Is Nothing Then RadTextBoxControlNormalienPruefscheinnummer.Text = objEichprozess.Eichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer
         If Not objEichprozess.Eichprotokoll.Beschaffenheitspruefung_EichfahrzeugFirma Is Nothing Then RadTextBoxControlNormalienEichfahrzeugFirma.Text = objEichprozess.Eichprotokoll.Beschaffenheitspruefung_EichfahrzeugFirma
     End Sub
@@ -393,9 +377,9 @@ Public Class uco_7EichprotokollDaten
         End If
 
         If objEichprozess.Eichprotokoll.Identifikationsdaten_Datum Is Nothing Then
-            If AktuellerBenutzer.Instance.Lizenz.RHEWALizenz Then RadDateTimePickerDatum.Text = Date.Now.Date
+            If AktuellerBenutzer.Instance.Lizenz.RHEWALizenz Then RadTextBoxControlDatum.Text = Date.Now.Date
         Else
-            RadDateTimePickerDatum.Value = objEichprozess.Eichprotokoll.Identifikationsdaten_Datum
+            RadTextBoxControlDatum.Text = objEichprozess.Eichprotokoll.Identifikationsdaten_Datum
         End If
         If Not objEichprozess.Eichprotokoll.Identifikationsdaten_Pruefer Is Nothing Then
             RadTextBoxControlPruefer.Text = objEichprozess.Eichprotokoll.Identifikationsdaten_Pruefer
@@ -412,11 +396,7 @@ Public Class uco_7EichprotokollDaten
                 lblTruck.Visible = False
                 RadTextBoxControlNormalienEichfahrzeugFirma.Visible = False
                 RadDateTimePickerNormalienLetztePruefung.Visible = False
-                If objEichprozess.Eichprotokoll.Beschaffenheitspruefung_LetztePruefung.Equals("") = False Then
-                    RadDateTimePickerNormalienLetztePruefung.Value = CDate(objEichprozess.Eichprotokoll.Beschaffenheitspruefung_LetztePruefung)
-                Else
-                    RadDateTimePickerNormalienLetztePruefung.Value = Now
-                End If
+                RadDateTimePickerNormalienLetztePruefung.Value = Now
                 lblTestzeitraum.Visible = False
                 Label10.Visible = False
             End If
@@ -665,8 +645,8 @@ Public Class uco_7EichprotokollDaten
     Protected Friend Overrides Sub UpdateObjekt() Implements IRhewaEditingDialog.UpdateObjekt
         If DialogModus = enuDialogModus.normal Then objEichprozess.Bearbeitungsdatum = Date.Now
         'Bereich Identifikationsdaten
-        If RadDateTimePickerDatum.Text.Equals("") = False Then
-            objEichprozess.Eichprotokoll.Identifikationsdaten_Datum = RadDateTimePickerDatum.Value
+        If RadTextBoxControlDatum.Text.Equals("") = False Then
+            objEichprozess.Eichprotokoll.Identifikationsdaten_Datum = RadTextBoxControlDatum.Text
         End If
 
         objEichprozess.Eichprotokoll.Identifikationsdaten_Pruefer = RadTextBoxControlPruefer.Text
@@ -706,7 +686,7 @@ Public Class uco_7EichprotokollDaten
         objEichprozess.Eichprotokoll.Beschaffenheitspruefung_Genauigkeitsklasse = RadTextBoxControlNormalienGenauigkeitsklasse.Text
         objEichprozess.Eichprotokoll.Beschaffenheitspruefung_Pruefintervall = RadTextBoxControlNormalienPruefintervall.Text
         If RadDateTimePickerNormalienLetztePruefung.Text.Equals("") = False Then
-            objEichprozess.Eichprotokoll.Beschaffenheitspruefung_LetztePruefung = RadDateTimePickerNormalienLetztePruefung.Value
+            objEichprozess.Eichprotokoll.Beschaffenheitspruefung_LetztePruefung = RadDateTimePickerNormalienLetztePruefung.Text
 
         End If
 
@@ -885,10 +865,10 @@ Public Class uco_7EichprotokollDaten
             MarkControlRed(RadTextBoxControlBetragNormallast)
         End If
 
-        If IsDate(RadDateTimePickerDatum.Text) = False Then
-            RadDateTimePickerDatum.Focus()
+        If IsDate(RadTextBoxControlDatum.Text) = False Then
+            RadTextBoxControlDatum.Focus()
             AbortSaving = True
-            MarkControlRed(RadDateTimePickerDatum)
+            MarkControlRed(RadTextBoxControlDatum)
         End If
 
         'fehlermeldung anzeigen bei falscher validierung
@@ -903,7 +883,7 @@ Public Class uco_7EichprotokollDaten
         RadTextBoxControlSoftwarestand.Text = "1024"
         RadTextBoxControlEichzaehlerstand.Text = "1024"
         RadTextBoxControlWZFabriknummer.Text = "1024"
-        RadDateTimePickerNormalienLetztePruefung.Value = DateTime.Now.Date
+        RadDateTimePickerNormalienLetztePruefung.Text = DateTime.Now
         RadTextBoxControlNormalienPruefscheinnummer.Text = "1024"
     End Sub
 
