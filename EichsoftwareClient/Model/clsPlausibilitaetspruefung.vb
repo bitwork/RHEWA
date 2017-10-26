@@ -509,12 +509,9 @@ Public Class clsPlausibilitaetspruefung
             adapter = New OleDbDataAdapter(cmd, conn)
             adapter.Fill(dtAllgemein)
         Catch ex As Exception
-
             cmd = "Select konErdbeschleunigung_gWert as gWert from tblKonfiguration_JustageAllgemein"
-                adapter = New OleDbDataAdapter(cmd, conn)
-                adapter.Fill(dtAllgemein)
-
-        End Try
+            adapter = New OleDbDataAdapter(cmd, conn)
+            adapter.Fill(dtAllgemein)
         End Try
     End Sub
 
