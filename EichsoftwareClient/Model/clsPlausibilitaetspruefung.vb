@@ -522,9 +522,14 @@ Public Class clsPlausibilitaetspruefung
             adapter = New OleDbDataAdapter(cmd, conn)
             adapter.Fill(dtInformation)
         Catch ex As Exception
-            cmd = "Select konFabrikationsnummer as Fabriknummer, konProgrammversion as Version, konAuswertegeraetetyp as Typ, konEichsiegelnr as EichsiegelNr,konEichsiegel from tblKonfiguration_Information"
-            adapter = New OleDbDataAdapter(cmd, conn)
-            adapter.Fill(dtInformation)
+            Try
+                cmd = "Select konFabrikationsnummer as Fabriknummer, konProgrammversion as Version, konAuswertegeraetetyp as Typ, konEichsiegelnr as EichsiegelNr,konEichsiegel from tblKonfiguration_Information"
+                adapter = New OleDbDataAdapter(cmd, conn)
+                adapter.Fill(dtInformation)
+            Catch ex2 As Exception
+                MessageBox.Show(ex.Message, "Ungütlige Datenbank")
+            End Try
+
         End Try
     End Sub
 #End Region
