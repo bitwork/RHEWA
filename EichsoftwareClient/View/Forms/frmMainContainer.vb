@@ -161,8 +161,12 @@ Public Class FrmMainContainer
         If ucos.Count > 0 Then
             _CurrentUco = uco
             _CurrentUco.Dock = DockStyle.Fill
-            Me.RadPanel1.Controls.Clear()
-            Me.RadPanel1.Controls.Add(_CurrentUco)
+            Try
+                Me.RadPanel1.Controls.Clear()
+                Me.RadPanel1.Controls.Add(_CurrentUco)
+            Catch ex As Exception
+
+            End Try
 
         End If
 
