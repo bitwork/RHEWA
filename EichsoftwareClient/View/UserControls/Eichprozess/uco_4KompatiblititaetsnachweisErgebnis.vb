@@ -547,10 +547,14 @@ Public Class uco_4KompatiblititaetsnachweisErgebnis
         '=WENN('Daten-Eingabe'!$G$19="";"DL fehlt";WENN('Daten-Eingabe'!$G$18="";"NUD fehlt";WENN('Daten-Eingabe'!$G$17="";"IZRS fehlt";WENN('Daten-Eingabe'!$G$14="";"";WENN('Daten-Eingabe'!$G$14=0;"";('Daten-Eingabe'!$G$14+'Daten-Eingabe'!$G$17+'Daten-Eingabe'!$G$18+'Daten-Eingabe'!$G$19+'Daten-Eingabe'!$G$20)/'Daten-Eingabe'!$G$14)))))
 
         'ist im exceldokument mit 3 nachkommastellen formatiert
-        Try
-            objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Uebersetzungsverhaeltnis = Decimal.Round(GetDecimal(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Uebersetzungsverhaeltnis), 3, MidpointRounding.AwayFromZero)
-        Catch ex As Exception
-        End Try
+        '       Try
+        'objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Uebersetzungsverhaeltnis = Decimal.Round(GetDecimal(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Uebersetzungsverhaeltnis), 3, MidpointRounding.AwayFromZero)
+
+        'anmerkung Strack: soll nicht gerundet werden
+        'objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Uebersetzungsverhaeltnis = GetDecimal(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Uebersetzungsverhaeltnis)
+
+        '     Catch ex As Exception
+        '   End Try
 
         Select Case objEichprozess.Lookup_Waagenart.Art
             Case Is = "Einbereichswaage"
