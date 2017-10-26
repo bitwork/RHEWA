@@ -36,6 +36,9 @@ Public Class ucoContent
             Return _bolEichprozessIsDirty
         End Get
         Set(value As Boolean)
+            If DialogModus = enuDialogModus.lesend Then
+                Return
+            End If
             If _bolEichprozessIsDirty <> value Then
                 _bolEichprozessIsDirty = value
                 onpropertychanged("AktuellerStatusDirty")
