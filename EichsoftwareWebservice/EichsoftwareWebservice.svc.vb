@@ -1012,6 +1012,7 @@ Public Class EichsoftwareWebservice
                 Dim ReturnList As New List(Of ServerLookup_Waegezelle)
 
                 For Each objWZ In query
+                    If objWZ.Deaktiviert = True Then Continue For
                     '   Dim ModelArtikel As New Model.clsArtikel(objArtikel.Id, objArtikel.HEKennung, objArtikel.Beschreibung, objArtikel.Preis, objArtikel.ErstellDatum)
                     ReturnList.Add(objWZ)
                 Next
