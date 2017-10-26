@@ -347,17 +347,23 @@ Public Class clsPlausibilitaetspruefung
         Dim dtWBEinstellungen As New DataTable
         Dim dtKonfiguration As New DataTable
 
-        LadeInformationenACCDB(conn, cmd, adapter, dtInformation)
-        LadeKonfigurationACCDB(conn, cmd, adapter, dtKonfiguration)
-        LadeAllgemeineWerteACCDB(conn, cmd, adapter, dtAllgemein)
-        LadeEinstellungenACCDB(conn, cmd, adapter, dtWBEinstellungen)
-        LadeJustageWerteACCDB(conn, cmd, adapter, dtJustage)
+        Try
+            LadeInformationenACCDB(conn, cmd, adapter, dtInformation)
+            LadeKonfigurationACCDB(conn, cmd, adapter, dtKonfiguration)
+            LadeAllgemeineWerteACCDB(conn, cmd, adapter, dtAllgemein)
+            LadeEinstellungenACCDB(conn, cmd, adapter, dtWBEinstellungen)
+            LadeJustageWerteACCDB(conn, cmd, adapter, dtJustage)
 
-        VerarbeiteInformationenACCDB(dtInformation)
-        VerarbeiteKonfigurationACCDB(dtKonfiguration)
-        VerarbeiteAllgemeineWerteACCDB(dtAllgemein)
-        VerarbeiteEinstellungenACCDB(dtWBEinstellungen)
-        VerarbeiteJustageWerteACCDB(dtJustage)
+            VerarbeiteInformationenACCDB(dtInformation)
+            VerarbeiteKonfigurationACCDB(dtKonfiguration)
+            VerarbeiteAllgemeineWerteACCDB(dtAllgemein)
+            VerarbeiteEinstellungenACCDB(dtWBEinstellungen)
+            VerarbeiteJustageWerteACCDB(dtJustage)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Ungütlige Datenbank")
+            Return False
+        End Try
+
         Return True
     End Function
 
@@ -478,7 +484,8 @@ Public Class clsPlausibilitaetspruefung
         Catch ex As Exception
             cmd = "Select konADWert1, konADWert2,konADWert3,konADWert4,konADWert5, konGewichtswert1, konGewichtswert2, konGewichtswert3, konGewichtswert4, konGewichtswert5 from tblKonfiguration_WBJustage"
             adapter = New OleDbDataAdapter(cmd, conn)
-            adapter.Fill(dtJustage)
+                adapter.Fill(dtJustage)
+
         End Try
     End Sub
 
@@ -488,9 +495,11 @@ Public Class clsPlausibilitaetspruefung
             adapter = New OleDbDataAdapter(cmd, conn)
             adapter.Fill(dtWBEinstellungen)
         Catch ex As Exception
+
             cmd = "Select konMehrbereich as Mehrbereich, konGewichtseinheit as Gewichtseinheit, konMax1 as Max1, konTeilung1 as Teilung1, konMax2 as Max2, konTeilung2 as Teilung2, konMax3 as Max3, konTeilung3 as Teilung3, konEinschaltnullstellen as Einschaltnullstelle, konObereToleranzE,konUntereToleranzE from tblKonfiguration_WBEinstellung"
-            adapter = New OleDbDataAdapter(cmd, conn)
-            adapter.Fill(dtWBEinstellungen)
+                adapter = New OleDbDataAdapter(cmd, conn)
+                adapter.Fill(dtWBEinstellungen)
+
         End Try
     End Sub
 
@@ -500,20 +509,21 @@ Public Class clsPlausibilitaetspruefung
             adapter = New OleDbDataAdapter(cmd, conn)
             adapter.Fill(dtAllgemein)
         Catch ex As Exception
+
             cmd = "Select konErdbeschleunigung_gWert as gWert from tblKonfiguration_JustageAllgemein"
-            adapter = New OleDbDataAdapter(cmd, conn)
-            adapter.Fill(dtAllgemein)
+                adapter = New OleDbDataAdapter(cmd, conn)
+                adapter.Fill(dtAllgemein)
+
+        End Try
         End Try
     End Sub
 
     Private Shared Sub LadeKonfigurationACCDB(conn As String, ByRef cmd As String, ByRef adapter As OleDbDataAdapter, dtKonfiguration As DataTable)
-        Try
-            cmd = "Select Original from tblKonfigurationen"
+
+        cmd = "Select Original from tblKonfigurationen"
             adapter = New OleDbDataAdapter(cmd, conn)
             adapter.Fill(dtKonfiguration)
-        Catch ex As Exception
 
-        End Try
     End Sub
 
     Private Shared Sub LadeInformationenACCDB(conn As String, ByRef cmd As String, ByRef adapter As OleDbDataAdapter, dtInformation As DataTable)
@@ -522,13 +532,11 @@ Public Class clsPlausibilitaetspruefung
             adapter = New OleDbDataAdapter(cmd, conn)
             adapter.Fill(dtInformation)
         Catch ex As Exception
-            Try
-                cmd = "Select konFabrikationsnummer as Fabriknummer, konProgrammversion as Version, konAuswertegeraetetyp as Typ, konEichsiegelnr as EichsiegelNr,konEichsiegel from tblKonfiguration_Information"
+
+            cmd = "Select konFabrikationsnummer as Fabriknummer, konProgrammversion as Version, konAuswertegeraetetyp as Typ, konEichsiegelnr as EichsiegelNr,konEichsiegel from tblKonfiguration_Information"
                 adapter = New OleDbDataAdapter(cmd, conn)
                 adapter.Fill(dtInformation)
-            Catch ex2 As Exception
-                MessageBox.Show(ex.Message, "Ungütlige Datenbank")
-            End Try
+
 
         End Try
     End Sub
