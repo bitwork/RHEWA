@@ -35,7 +35,9 @@ Partial Class FrmVerbindungsprotokoll
         '
         'RadGridView1
         '
-        Me.RadGridView1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.RadGridView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.RadGridView1.Location = New System.Drawing.Point(0, 48)
         '
         '
@@ -44,6 +46,7 @@ Partial Class FrmVerbindungsprotokoll
         Me.RadGridView1.MasterTemplate.AllowCellContextMenu = False
         Me.RadGridView1.MasterTemplate.AllowDeleteRow = False
         Me.RadGridView1.MasterTemplate.AllowEditRow = False
+        Me.RadGridView1.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
         Me.RadGridView1.MasterTemplate.EnableAlternatingRowColor = True
         Me.RadGridView1.MasterTemplate.EnableFiltering = True
         Me.RadGridView1.MasterTemplate.ViewDefinition = TableViewDefinition1
