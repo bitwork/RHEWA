@@ -1003,18 +1003,22 @@ Public Class ucoEichprozessauswahlliste
     ''' <remarks></remarks>
     Private Sub ZeigeServerEichprozess()
         If Not Me.VorgangsnummerGridServer.Equals("") Then
+            Try
+                Dim objClientEichprozess = clsWebserviceFunctions.GetReadonlyEichprozess(VorgangsnummerGridServer)
+                'anzeigen des Dialogs zur Bearbeitung der Eichung
+                If Not objClientEichprozess Is Nothing Then
 
-            Dim objClientEichprozess = clsWebserviceFunctions.GetReadonlyEichprozess(VorgangsnummerGridServer)
-            'anzeigen des Dialogs zur Bearbeitung der Eichung
-            If Not objClientEichprozess Is Nothing Then
+                    ' lese modus, dann soll beliebig im Eichprozess hin und her gewechselt werden können => Eichprozessstatus auf Versenden setzen
+                    objClientEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Versenden
 
-                ' lese modus, dann soll beliebig im Eichprozess hin und her gewechselt werden können => Eichprozessstatus auf Versenden setzen
-                objClientEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Versenden
+                    Dim f As New FrmMainContainer(objClientEichprozess, FrmMainContainer.enuDialogModus.lesend)
+                    f.Show()
+                    AddHandler f.FormClosed, AddressOf LoadFromDatabase
+                End If
 
-                Dim f As New FrmMainContainer(objClientEichprozess, FrmMainContainer.enuDialogModus.lesend)
-                f.Show()
-                AddHandler f.FormClosed, AddressOf LoadFromDatabase
-            End If
+            Catch ex As Exception
+                MessageBox.Show("Der Webservice ist gerade nicht erreichbar, versuchen Sie es später erneut")
+            End Try
         End If
     End Sub
 
