@@ -950,18 +950,25 @@ Public Class FrmMainContainer
     End Sub
 
     Private Sub FormClosingHandler()
-        If DialogModus = enuDialogModus.korrigierend Or DialogModus = enuDialogModus.lesend Then
-            If AktuellerBenutzer.Instance.Lizenz.RHEWALizenz = True Then
-                If Not CurrentEichprozess Is Nothing Then
-                    clsWebserviceFunctions.SetGesperrt(False, CurrentEichprozess.Vorgangsnummer)
+        Try
+            If DialogModus = enuDialogModus.korrigierend Or DialogModus = enuDialogModus.lesend Then
+                If AktuellerBenutzer.Instance.Lizenz.RHEWALizenz = True Then
+                    If Not CurrentEichprozess Is Nothing Then
+                        clsWebserviceFunctions.SetGesperrt(False, CurrentEichprozess.Vorgangsnummer)
+                    End If
                 End If
             End If
-        End If
-        If Not AktuellerBenutzer.Instance Is Nothing And Not Me._CurrentUco Is Nothing Then
-            If Me._CurrentUco.GetType Is GetType(ucoEichprozessauswahlliste) Then
-                AktuellerBenutzer.SpeichereGridLayout(Me._CurrentUco)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+        Try
+            If Not AktuellerBenutzer.Instance Is Nothing And Not Me._CurrentUco Is Nothing Then
+                If Me._CurrentUco.GetType Is GetType(ucoEichprozessauswahlliste) Then
+                    AktuellerBenutzer.SpeichereGridLayout(Me._CurrentUco)
+                End If
             End If
-        End If
+        Catch ex As Exception
+        End Try
     End Sub
 
 
