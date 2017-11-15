@@ -20,3 +20,6 @@ Kontrolle Dateianhang
 
 Proxy
 192.168.150.26:8080
+
+
+Wenn man das Projekt öffnet, muss man unter Client, Projekt Settings, Signing "Select From Store" auswäheln, ok clicken  - dann geht das signieren
