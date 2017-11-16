@@ -122,39 +122,39 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="RadTextBox11.Enabled" type="System.Boolean, mscorlib">
+  <data name="RadTextBoxZwischenwert2EFG.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="RadTextBox11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>961, 111</value>
+  <data name="RadTextBoxZwischenwert2EFG.Location" type="System.Drawing.Point, System.Drawing">
+    <value>918, 113</value>
   </data>
-  <data name="RadTextBox11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 18</value>
+  <data name="RadTextBoxZwischenwert2EFG.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 20</value>
   </data>
-  <data name="RadTextBox11.TabIndex" type="System.Int32, mscorlib">
+  <data name="RadTextBoxZwischenwert2EFG.TabIndex" type="System.Int32, mscorlib">
     <value>48</value>
   </data>
-  <data name="&gt;&gt;RadTextBox11.Name" xml:space="preserve">
-    <value>RadTextBox11</value>
+  <data name="&gt;&gt;RadTextBoxZwischenwert2EFG.Name" xml:space="preserve">
+    <value>RadTextBoxZwischenwert2EFG</value>
   </data>
-  <data name="&gt;&gt;RadTextBox11.Type" xml:space="preserve">
+  <data name="&gt;&gt;RadTextBoxZwischenwert2EFG.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;RadTextBox11.Parent" xml:space="preserve">
+  <data name="&gt;&gt;RadTextBoxZwischenwert2EFG.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffelBereichZwischenwerte</value>
   </data>
-  <data name="&gt;&gt;RadTextBox11.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;RadTextBoxZwischenwert2EFG.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="RadTextBox9.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="RadTextBox9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>608, 111</value>
+    <value>565, 113</value>
   </data>
   <data name="RadTextBox9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 18</value>
+    <value>169, 20</value>
   </data>
   <data name="RadTextBox9.TabIndex" type="System.Int32, mscorlib">
     <value>42</value>
@@ -171,38 +171,38 @@
   <data name="&gt;&gt;RadTextBox9.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="RadTextBox12.Enabled" type="System.Boolean, mscorlib">
+  <data name="RadTextBoxZwischenwert1EFG.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="RadTextBox12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>961, 84</value>
+  <data name="RadTextBoxZwischenwert1EFG.Location" type="System.Drawing.Point, System.Drawing">
+    <value>918, 86</value>
   </data>
-  <data name="RadTextBox12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 18</value>
+  <data name="RadTextBoxZwischenwert1EFG.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 20</value>
   </data>
-  <data name="RadTextBox12.TabIndex" type="System.Int32, mscorlib">
+  <data name="RadTextBoxZwischenwert1EFG.TabIndex" type="System.Int32, mscorlib">
     <value>47</value>
   </data>
-  <data name="&gt;&gt;RadTextBox12.Name" xml:space="preserve">
-    <value>RadTextBox12</value>
+  <data name="&gt;&gt;RadTextBoxZwischenwert1EFG.Name" xml:space="preserve">
+    <value>RadTextBoxZwischenwert1EFG</value>
   </data>
-  <data name="&gt;&gt;RadTextBox12.Type" xml:space="preserve">
+  <data name="&gt;&gt;RadTextBoxZwischenwert1EFG.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;RadTextBox12.Parent" xml:space="preserve">
+  <data name="&gt;&gt;RadTextBoxZwischenwert1EFG.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffelBereichZwischenwerte</value>
   </data>
-  <data name="&gt;&gt;RadTextBox12.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;RadTextBoxZwischenwert1EFG.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="RadTextBox10.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="RadTextBox10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>608, 84</value>
+    <value>565, 86</value>
   </data>
   <data name="RadTextBox10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 18</value>
+    <value>169, 20</value>
   </data>
   <data name="RadTextBox10.TabIndex" type="System.Int32, mscorlib">
     <value>41</value>
@@ -223,10 +223,10 @@
     <value>False</value>
   </data>
   <data name="RadTextBox13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>783, 109</value>
+    <value>740, 111</value>
   </data>
   <data name="RadTextBox13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 18</value>
+    <value>172, 20</value>
   </data>
   <data name="RadTextBox13.TabIndex" type="System.Int32, mscorlib">
     <value>45</value>
@@ -244,7 +244,7 @@
     <value>4</value>
   </data>
   <data name="RadLabel7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>961, 60</value>
+    <value>918, 62</value>
   </data>
   <data name="RadLabel7.Size" type="System.Drawing.Size, System.Drawing">
     <value>47, 18</value>
@@ -271,10 +271,10 @@
     <value>False</value>
   </data>
   <data name="RadTextBox7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>543, 109</value>
+    <value>500, 111</value>
   </data>
   <data name="RadTextBox7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 18</value>
+    <value>59, 20</value>
   </data>
   <data name="RadTextBox7.TabIndex" type="System.Int32, mscorlib">
     <value>39</value>
@@ -295,10 +295,10 @@
     <value>False</value>
   </data>
   <data name="RadTextBox14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>783, 85</value>
+    <value>740, 87</value>
   </data>
   <data name="RadTextBox14.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 18</value>
+    <value>172, 20</value>
   </data>
   <data name="RadTextBox14.TabIndex" type="System.Int32, mscorlib">
     <value>44</value>
@@ -316,7 +316,7 @@
     <value>7</value>
   </data>
   <data name="RadLabel6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>608, 60</value>
+    <value>565, 62</value>
   </data>
   <data name="RadLabel6.Size" type="System.Drawing.Size, System.Drawing">
     <value>169, 18</value>
@@ -340,7 +340,7 @@
     <value>8</value>
   </data>
   <data name="RadLabel8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>783, 60</value>
+    <value>740, 62</value>
   </data>
   <data name="RadLabel8.Size" type="System.Drawing.Size, System.Drawing">
     <value>172, 18</value>
@@ -367,10 +367,10 @@
     <value>False</value>
   </data>
   <data name="RadTextBox8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>543, 84</value>
+    <value>500, 86</value>
   </data>
   <data name="RadTextBox8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 18</value>
+    <value>59, 20</value>
   </data>
   <data name="RadTextBox8.TabIndex" type="System.Int32, mscorlib">
     <value>38</value>
@@ -388,10 +388,10 @@
     <value>10</value>
   </data>
   <data name="RadTextBox5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>387, 109</value>
+    <value>344, 111</value>
   </data>
   <data name="RadTextBox5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 18</value>
+    <value>150, 20</value>
   </data>
   <data name="RadTextBox5.TabIndex" type="System.Int32, mscorlib">
     <value>36</value>
@@ -409,7 +409,7 @@
     <value>11</value>
   </data>
   <data name="RadLabel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>543, 61</value>
+    <value>500, 63</value>
   </data>
   <data name="RadLabel3.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 18</value>
@@ -432,32 +432,32 @@
   <data name="&gt;&gt;RadLabel3.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
-  <data name="RadTextBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>281, 108</value>
+  <data name="RadTextBoxZwischenwert2Normallast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>238, 110</value>
   </data>
-  <data name="RadTextBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 18</value>
+  <data name="RadTextBoxZwischenwert2Normallast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
   </data>
-  <data name="RadTextBox3.TabIndex" type="System.Int32, mscorlib">
+  <data name="RadTextBoxZwischenwert2Normallast.TabIndex" type="System.Int32, mscorlib">
     <value>34</value>
   </data>
-  <data name="&gt;&gt;RadTextBox3.Name" xml:space="preserve">
-    <value>RadTextBox3</value>
+  <data name="&gt;&gt;RadTextBoxZwischenwert2Normallast.Name" xml:space="preserve">
+    <value>RadTextBoxZwischenwert2Normallast</value>
   </data>
-  <data name="&gt;&gt;RadTextBox3.Type" xml:space="preserve">
+  <data name="&gt;&gt;RadTextBoxZwischenwert2Normallast.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;RadTextBox3.Parent" xml:space="preserve">
+  <data name="&gt;&gt;RadTextBoxZwischenwert2Normallast.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffelBereichZwischenwerte</value>
   </data>
-  <data name="&gt;&gt;RadTextBox3.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;RadTextBoxZwischenwert2Normallast.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
   <data name="RadTextBox6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>387, 84</value>
+    <value>344, 86</value>
   </data>
   <data name="RadTextBox6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 18</value>
+    <value>150, 20</value>
   </data>
   <data name="RadTextBox6.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
@@ -474,80 +474,83 @@
   <data name="&gt;&gt;RadTextBox6.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
-  <data name="RadTextBox2.Enabled" type="System.Boolean, mscorlib">
+  <data name="RadTextBoxZwischenwert2Ersatzlast.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="RadTextBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>175, 108</value>
+  <data name="RadTextBoxZwischenwert2Ersatzlast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 110</value>
   </data>
-  <data name="RadTextBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 18</value>
-  </data>
-  <data name="RadTextBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>32</value>
-  </data>
-  <data name="&gt;&gt;RadTextBox2.Name" xml:space="preserve">
-    <value>RadTextBox2</value>
-  </data>
-  <data name="&gt;&gt;RadTextBox2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadTextBox2.Parent" xml:space="preserve">
-    <value>RadGroupBoxStaffelBereichZwischenwerte</value>
-  </data>
-  <data name="&gt;&gt;RadTextBox2.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="RadTextBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>281, 84</value>
-  </data>
-  <data name="RadTextBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 18</value>
-  </data>
-  <data name="RadTextBox4.TabIndex" type="System.Int32, mscorlib">
-    <value>33</value>
-  </data>
-  <data name="&gt;&gt;RadTextBox4.Name" xml:space="preserve">
-    <value>RadTextBox4</value>
-  </data>
-  <data name="&gt;&gt;RadTextBox4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadTextBox4.Parent" xml:space="preserve">
-    <value>RadGroupBoxStaffelBereichZwischenwerte</value>
-  </data>
-  <data name="&gt;&gt;RadTextBox4.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="RadTextBox1.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadTextBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>175, 84</value>
-  </data>
-  <data name="RadTextBox1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RadTextBoxZwischenwert2Ersatzlast.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 20</value>
   </data>
-  <data name="RadTextBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>31</value>
+  <data name="RadTextBoxZwischenwert2Ersatzlast.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
   </data>
-  <data name="&gt;&gt;RadTextBox1.Name" xml:space="preserve">
-    <value>RadTextBox1</value>
+  <data name="&gt;&gt;RadTextBoxZwischenwert2Ersatzlast.Name" xml:space="preserve">
+    <value>RadTextBoxZwischenwert2Ersatzlast</value>
   </data>
-  <data name="&gt;&gt;RadTextBox1.Type" xml:space="preserve">
+  <data name="&gt;&gt;RadTextBoxZwischenwert2Ersatzlast.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;RadTextBox1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;RadTextBoxZwischenwert2Ersatzlast.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffelBereichZwischenwerte</value>
   </data>
-  <data name="&gt;&gt;RadTextBox1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;RadTextBoxZwischenwert2Ersatzlast.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="RadTextBoxZwischenwert1Normallast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>238, 86</value>
+  </data>
+  <data name="RadTextBoxZwischenwert1Normallast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="RadTextBoxZwischenwert1Normallast.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxZwischenwert1Normallast.Name" xml:space="preserve">
+    <value>RadTextBoxZwischenwert1Normallast</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxZwischenwert1Normallast.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxZwischenwert1Normallast.Parent" xml:space="preserve">
+    <value>RadGroupBoxStaffelBereichZwischenwerte</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxZwischenwert1Normallast.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="RadTextBoxZwischenwert1Ersatzlast.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RadTextBoxZwischenwert1Ersatzlast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 86</value>
+  </data>
+  <data name="RadTextBoxZwischenwert1Ersatzlast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="RadTextBoxZwischenwert1Ersatzlast.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxZwischenwert1Ersatzlast.Name" xml:space="preserve">
+    <value>RadTextBoxZwischenwert1Ersatzlast</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxZwischenwert1Ersatzlast.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxZwischenwert1Ersatzlast.Parent" xml:space="preserve">
+    <value>RadGroupBoxStaffelBereichZwischenwerte</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxZwischenwert1Ersatzlast.ZOrder" xml:space="preserve">
     <value>17</value>
+  </data>
+  <data name="RadLabel5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt, style=Bold</value>
   </data>
   <data name="RadLabel5.Location" type="System.Drawing.Point, System.Drawing">
     <value>83, 21</value>
   </data>
   <data name="RadLabel5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 18</value>
+    <value>52, 18</value>
   </data>
   <data name="RadLabel5.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
@@ -568,7 +571,7 @@
     <value>18</value>
   </data>
   <data name="RadLabel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>281, 61</value>
+    <value>238, 63</value>
   </data>
   <data name="RadLabel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>83, 18</value>
@@ -591,11 +594,14 @@
   <data name="&gt;&gt;RadLabel2.ZOrder" xml:space="preserve">
     <value>19</value>
   </data>
+  <data name="RadLabelBereichNr.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt, style=Bold</value>
+  </data>
   <data name="RadLabelBereichNr.Location" type="System.Drawing.Point, System.Drawing">
     <value>132, 21</value>
   </data>
   <data name="RadLabelBereichNr.Size" type="System.Drawing.Size, System.Drawing">
-    <value>13, 18</value>
+    <value>14, 18</value>
   </data>
   <data name="RadLabelBereichNr.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
@@ -615,11 +621,14 @@
   <data name="&gt;&gt;RadLabelBereichNr.ZOrder" xml:space="preserve">
     <value>20</value>
   </data>
+  <data name="RadLabel4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt, style=Bold</value>
+  </data>
   <data name="RadLabel4.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 21</value>
   </data>
   <data name="RadLabel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 18</value>
+    <value>47, 18</value>
   </data>
   <data name="RadLabel4.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
@@ -639,11 +648,17 @@
   <data name="&gt;&gt;RadLabel4.ZOrder" xml:space="preserve">
     <value>21</value>
   </data>
+  <data name="RadLabelStaffelNr.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RadLabelStaffelNr.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt, style=Bold</value>
+  </data>
   <data name="RadLabelStaffelNr.Location" type="System.Drawing.Point, System.Drawing">
-    <value>64, 21</value>
+    <value>60, 21</value>
   </data>
   <data name="RadLabelStaffelNr.Size" type="System.Drawing.Size, System.Drawing">
-    <value>13, 18</value>
+    <value>25, 18</value>
   </data>
   <data name="RadLabelStaffelNr.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
@@ -664,7 +679,7 @@
     <value>22</value>
   </data>
   <data name="RadLabel17.Location" type="System.Drawing.Point, System.Drawing">
-    <value>64, 108</value>
+    <value>15, 110</value>
   </data>
   <data name="RadLabel17.Size" type="System.Drawing.Size, System.Drawing">
     <value>83, 18</value>
@@ -688,7 +703,7 @@
     <value>23</value>
   </data>
   <data name="RadLabel18.Location" type="System.Drawing.Point, System.Drawing">
-    <value>62, 84</value>
+    <value>15, 87</value>
   </data>
   <data name="RadLabel18.Size" type="System.Drawing.Size, System.Drawing">
     <value>83, 18</value>
@@ -712,7 +727,7 @@
     <value>24</value>
   </data>
   <data name="lblBis1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>387, 61</value>
+    <value>344, 63</value>
   </data>
   <data name="lblBis1.Size" type="System.Drawing.Size, System.Drawing">
     <value>150, 18</value>
@@ -736,7 +751,7 @@
     <value>25</value>
   </data>
   <data name="RadLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>175, 60</value>
+    <value>132, 62</value>
   </data>
   <data name="RadLabel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 18</value>
@@ -766,7 +781,7 @@
     <value>14, 21</value>
   </data>
   <data name="RadGroupBoxStaffelBereichZwischenwerte.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1033, 206</value>
+    <value>1033, 166</value>
   </data>
   <data name="RadGroupBoxStaffelBereichZwischenwerte.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -793,12 +808,12 @@
     <value>6, 13</value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1067, 239</value>
+    <value>1067, 223</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>ucoZwischenwerte</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.6529.23680, Culture=neutral, PublicKeyToken=896c655ed43a4274</value>
+    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.6529.26409, Culture=neutral, PublicKeyToken=896c655ed43a4274</value>
   </data>
 </root>

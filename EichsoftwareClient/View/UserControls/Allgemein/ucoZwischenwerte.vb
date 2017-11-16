@@ -7,8 +7,19 @@
 
     Private _suspendEvents As Boolean = False  'Variable zum temporären stoppen der Eventlogiken
     Private _parentForm As FrmMainContainer
-    Public StaffelNr As String
-    Public BereichNr As String
+    Private _objEichprozess As Eichprozess
+    Private StaffelNr As String
+    Private BereichNr As String
+    Private _Ersatzglast As Decimal
+
+    Private EFG_20 As Decimal
+    Private EFG_500 As Decimal
+    Private EFG_2000 As Decimal
+    Private EFG_max As Decimal
+
+    Private EFG_20_Absolut As Decimal
+    Private EFG_500_Absolut As Decimal
+    Private EFG_Max_Absolut As Decimal
 
 #End Region
 
@@ -39,9 +50,12 @@
     ''' <param name="pPreviousUco"></param>
     ''' <param name="pNextUco"></param>
     ''' <param name="pEnuModus"></param>
-    Sub New(ByRef pParentform As FrmMainContainer, pObjEichprozess As Eichprozess, pStaffel As String, pBereich As String, Optional ByRef pPreviousUco As ucoContent = Nothing, Optional ByRef pNextUco As ucoContent = Nothing, Optional ByVal pEnuModus As enuDialogModus = enuDialogModus.normal)
+    Sub New(ByRef pParentform As FrmMainContainer, pObjEichprozess As Eichprozess, pStaffel As String, pBereich As String, pErsatzgewicht As Decimal, Optional ByRef pPreviousUco As ucoContent = Nothing, Optional ByRef pNextUco As ucoContent = Nothing, Optional ByVal pEnuModus As enuDialogModus = enuDialogModus.normal)
         MyBase.New(pParentform, pObjEichprozess, pPreviousUco, pNextUco, pEnuModus)
         _parentForm = pParentform
+        _objEichprozess = pObjEichprozess
+        _Ersatzglast = pErsatzgewicht
+
         _suspendEvents = True
         Me.StaffelNr = pStaffel
         Me.BereichNr = pBereich
@@ -65,121 +79,86 @@
 
 #Region "Methods"
 
+    'Private Sub GetBereich3()
+    '    Try
+    '        'Bereiche berechnen
+    '        EFG_20 = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 20), _intNullstellenE, MidpointRounding.AwayFromZero)
 
-    Private Sub GetBereich3()
-        Try
-            'Bereiche berechnen
-            'RadTextBoxControlBereich3e20.Text = Decimal.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 20), _intNullstellenE, MidpointRounding.AwayFromZero)
-            'RadTextBoxControlBereich3e20Bis.Text = Decimal.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 500), _intNullstellenE, MidpointRounding.AwayFromZero)
-            'RadTextBoxControlBereich3e500.Text = Decimal.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 500), _intNullstellenE, MidpointRounding.AwayFromZero)
-            'RadTextBoxControlBereich3e500Bis.Text = Decimal.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 2000), _intNullstellenE, MidpointRounding.AwayFromZero)
-            'RadTextBoxControlBereich3e2000.Text = Decimal.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 2000), _intNullstellenE, MidpointRounding.AwayFromZero)
-            'RadTextBoxControlBereich3e2000Bis.Text = Decimal.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3), _intNullstellenE, MidpointRounding.AwayFromZero)
+    '        EFG_500 = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 500), _intNullstellenE, MidpointRounding.AwayFromZero)
 
-            ''EFG Berechnen
-            'RadTextBoxControlBereich3EFG20e.Mask = "F" & _intNullstellenE 'anzahl nullstellen für Textcontrol definieren
-            'RadTextBoxControlBereich3EFG500e.Mask = "F" & _intNullstellenE 'anzahl nullstellen für Textcontrol definieren
-            'RadTextBoxControlBereich3EFG2000e.Mask = "F" & _intNullstellenE 'anzahl nullstellen für Textcontrol definieren
-            'RadTextBoxControlBereich3EFG20e.Text = Decimal.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 0.5), _intNullstellenE, MidpointRounding.AwayFromZero)
-            'RadTextBoxControlBereich3EFG500e.Text = Decimal.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 1), _intNullstellenE, MidpointRounding.AwayFromZero)
-            'RadTextBoxControlBereich3EFG2000e.Text = Decimal.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 1.5), _intNullstellenE, MidpointRounding.AwayFromZero)
+    '        EFG_2000 = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 2000), _intNullstellenE, MidpointRounding.AwayFromZero)
 
-            ''VFG Berechnen
-            'RadTextBoxControlBereich3VFG20e.Mask = "F" & _intNullstellenE 'anzahl nullstellen für Textcontrol definieren
-            'RadTextBoxControlBereich3VFG500e.Mask = "F" & _intNullstellenE 'anzahl nullstellen für Textcontrol definieren
-            'RadTextBoxControlBereich3VFG2000e.Mask = "F" & _intNullstellenE 'anzahl nullstellen für Textcontrol definieren
-            'RadTextBoxControlBereich3VFG20e.Text = Decimal.Round(CDec(RadTextBoxControlBereich3EFG20e.Text * 2), _intNullstellenE, MidpointRounding.AwayFromZero)
-            'RadTextBoxControlBereich3VFG500e.Text = Decimal.Round(CDec(RadTextBoxControlBereich3EFG500e.Text * 2), _intNullstellenE, MidpointRounding.AwayFromZero)
-            'RadTextBoxControlBereich3VFG2000e.Text = Decimal.Round(CDec(RadTextBoxControlBereich3EFG2000e.Text * 2), _intNullstellenE, MidpointRounding.AwayFromZero)
-        Catch ex As Exception
-        End Try
-    End Sub
+    '        EFG_max = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3), _intNullstellenE, MidpointRounding.AwayFromZero)
 
-    Private Sub GetBereich2()
-        Try
-            'Bereiche berechnen
-            'RadTextBoxControlBereich2e20.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 20), _intNullstellenE, MidpointRounding.AwayFromZero)
-            'RadTextBoxControlBereich2e20Bis.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 500), _intNullstellenE, MidpointRounding.AwayFromZero)
-            'RadTextBoxControlBereich2e500.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 500), _intNullstellenE, MidpointRounding.AwayFromZero)
-            'RadTextBoxControlBereich2e500Bis.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 2000), _intNullstellenE, MidpointRounding.AwayFromZero)
-            'RadTextBoxControlBereich2e2000.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 2000), _intNullstellenE, MidpointRounding.AwayFromZero)
-            'RadTextBoxControlBereich2e2000Bis.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2), _intNullstellenE, MidpointRounding.AwayFromZero)
+    '        'EFG Berechnen
 
-            ''EFG Berechnen
-            'RadTextBoxControlBereich2EFG20e.Mask = "F" & _intNullstellenE 'anzahl nullstellen für Textcontrol definieren
-            'RadTextBoxControlBereich2EFG500e.Mask = "F" & _intNullstellenE 'anzahl nullstellen für Textcontrol definieren
-            'RadTextBoxControlBereich2EFG2000e.Mask = "F" & _intNullstellenE 'anzahl nullstellen für Textcontrol definieren
-
-            'RadTextBoxControlBereich2EFG20e.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 0.5), _intNullstellenE, MidpointRounding.AwayFromZero)
-            'RadTextBoxControlBereich2EFG500e.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 1), _intNullstellenE, MidpointRounding.AwayFromZero)
-            'RadTextBoxControlBereich2EFG2000e.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 1.5), _intNullstellenE, MidpointRounding.AwayFromZero)
-
-            ''VFG Berechnen
-            'RadTextBoxControlBereich2VFG20e.Mask = "F" & _intNullstellenE 'anzahl nullstellen für Textcontrol definieren
-            'RadTextBoxControlBereich2VFG500e.Mask = "F" & _intNullstellenE 'anzahl nullstellen für Textcontrol definieren
-            'RadTextBoxControlBereich2VFG2000e.Mask = "F" & _intNullstellenE 'anzahl nullstellen für Textcontrol definieren
-            'RadTextBoxControlBereich2VFG20e.Text = Math.Round(CDec(RadTextBoxControlBereich2EFG20e.Text * 2), _intNullstellenE, MidpointRounding.AwayFromZero)
-            'RadTextBoxControlBereich2VFG500e.Text = Math.Round(CDec(RadTextBoxControlBereich2EFG500e.Text * 2), _intNullstellenE, MidpointRounding.AwayFromZero)
-            'RadTextBoxControlBereich2VFG2000e.Text = Math.Round(CDec(RadTextBoxControlBereich2EFG2000e.Text * 2), _intNullstellenE, MidpointRounding.AwayFromZero)
-        Catch ex As Exception
-        End Try
-    End Sub
-
-    Private Sub GetBereich1()
-        Try
-            'Bereiche berechnen
-            'RadTextBoxControlBereich1e20.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 20), _intNullstellenE, MidpointRounding.AwayFromZero)
-            'RadTextBoxControlBereich1e20Bis.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 500), _intNullstellenE, MidpointRounding.AwayFromZero)
-            'RadTextBoxControlBereich1e500.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 500), _intNullstellenE, MidpointRounding.AwayFromZero)
-            'RadTextBoxControlBereich1e500Bis.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 2000), _intNullstellenE, MidpointRounding.AwayFromZero)
-            'RadTextBoxControlBereich1e2000.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 2000), _intNullstellenE, MidpointRounding.AwayFromZero)
-            'RadTextBoxControlBereich1e2000Bis.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1), _intNullstellenE, MidpointRounding.AwayFromZero)
-
-            ''EFG Berechnen
-
-            'RadTextBoxControlBereich1EFG20e.Mask = "F" & _intNullstellenE 'anzahl nullstellen für Textcontrol definieren
-            'RadTextBoxControlBereich1EFG500e.Mask = "F" & _intNullstellenE 'anzahl nullstellen für Textcontrol definieren
-            'RadTextBoxControlBereich1EFG2000e.Mask = "F" & _intNullstellenE 'anzahl nullstellen für Textcontrol definieren
-
-            'RadTextBoxControlBereich1EFG20e.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 0.5), _intNullstellenE, MidpointRounding.AwayFromZero)
-            'RadTextBoxControlBereich1EFG500e.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 1), _intNullstellenE, MidpointRounding.AwayFromZero)
-            'RadTextBoxControlBereich1EFG2000e.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 1.5), _intNullstellenE, MidpointRounding.AwayFromZero)
-
-            ' 'VFG Berechnen
-            ' RadTextBoxControlBereich1VFG20e.Mask = "F" & _intNullstellenE 'anzahl nullstellen für Textcontrol definieren
-            ' RadTextBoxControlBereich1VFG500e.Mask = "F" & _intNullstellenE 'anzahl nullstellen für Textcontrol definieren
-            ' RadTextBoxControlBereich1VFG2000e.Mask = "F" & _intNullstellenE 'anzahl nullstellen für Textcontrol definieren
-            ' RadTextBoxControlBereich1VFG20e.Text = Math.Round(CDec(RadTextBoxControlBereich1EFG20e.Text * 2), _intNullstellenE, MidpointRounding.AwayFromZero)
-            ' RadTextBoxControlBereich1VFG500e.Text = Math.Round(CDec(RadTextBoxControlBereich1EFG500e.Text * 2), _intNullstellenE, MidpointRounding.AwayFromZero)
-            ' RadTextBoxControlBereich1VFG2000e.Text = Math.Round(CDec(RadTextBoxControlBereich1EFG2000e.Text * 2), _intNullstellenE, MidpointRounding.AwayFromZero)
-        Catch ex As Exception
-        End Try
-    End Sub
-
-    Private Sub GetWaagenArt()
-        'Select Case objEichprozess.Lookup_Waagenart.Art
-        '    Case Is = "Einbereichswaage"
-        '        RadGroupBox2.Visible = False
-        '        RadGroupBox3.Visible = False
-        '        Me.Height = Me.Height / 3
-        '    Case Is = "Zweibereichswaage", "Zweiteilungswaage"
-        '        RadGroupBox2.Visible = True
-        '        RadGroupBox3.Visible = False
-        '        Me.Height = Me.Height / 3 * 2
-        '    Case Is = "Dreibereichswaage", "Dreieilungswaage"
-        '        RadGroupBox2.Visible = True
-        '        RadGroupBox3.Visible = True
-        '        Me.Height = Me.Height / 3 * 3
-        '    Case Else
-        '        Exit Select
-        'End Select
-    End Sub
+    '        EFG_20_Absolut = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 0.5), _intNullstellenE, MidpointRounding.AwayFromZero)
+    '        EFG_500_Absolut = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 1), _intNullstellenE, MidpointRounding.AwayFromZero)
+    '        EFG_Max_Absolut = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 1.5), _intNullstellenE, MidpointRounding.AwayFromZero)
 
 
-    Private Sub SetName()
+    '    Catch ex As Exception
+    '    End Try
+    'End Sub
+
+    'Private Sub GetBereich2()
+    '    Try
+    '        'Bereiche berechnen
+    '        EFG_20 = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 20), _intNullstellenE, MidpointRounding.AwayFromZero)
+
+    '        EFG_500 = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 500), _intNullstellenE, MidpointRounding.AwayFromZero)
+
+    '        EFG_2000 = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 2000), _intNullstellenE, MidpointRounding.AwayFromZero)
+
+    '        EFG_max = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2), _intNullstellenE, MidpointRounding.AwayFromZero)
+
+    '        'EFG Berechnen
+
+    '        EFG_20_Absolut = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 0.5), _intNullstellenE, MidpointRounding.AwayFromZero)
+    '        EFG_500_Absolut = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 1), _intNullstellenE, MidpointRounding.AwayFromZero)
+    '        EFG_Max_Absolut = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 1.5), _intNullstellenE, MidpointRounding.AwayFromZero)
+
+
+    '    Catch ex As Exception
+    '    End Try
+    'End Sub
+
+    'Private Sub GetBereich1()
+    '    Try
+    '        'Bereiche berechnen
+    '        EFG_20 = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 20), _intNullstellenE, MidpointRounding.AwayFromZero)
+
+    '        EFG_500 = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 500), _intNullstellenE, MidpointRounding.AwayFromZero)
+
+    '        EFG_2000 = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 2000), _intNullstellenE, MidpointRounding.AwayFromZero)
+
+    '        EFG_max = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1), _intNullstellenE, MidpointRounding.AwayFromZero)
+
+    '        'EFG Berechnen
+
+    '        EFG_20_Absolut = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 0.5), _intNullstellenE, MidpointRounding.AwayFromZero)
+    '        EFG_500_Absolut = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 1), _intNullstellenE, MidpointRounding.AwayFromZero)
+    '        EFG_Max_Absolut = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 1.5), _intNullstellenE, MidpointRounding.AwayFromZero)
+
+
+    '    Catch ex As Exception
+    '    End Try
+    'End Sub
+
+
+
+
+    Private Sub SetDataToFormFields()
 
         RadLabelStaffelNr.Text = Me.StaffelNr.ToString
         RadLabelBereichNr.Text = Me.BereichNr.ToString
+
+        RadTextBoxZwischenwert1Ersatzlast.Text = _Ersatzglast
+        RadTextBoxZwischenwert2Ersatzlast.Text = _Ersatzglast
+
+
+
+
 
     End Sub
 
@@ -213,21 +192,47 @@
     ''' <author></author>
     ''' <commentauthor></commentauthor>
     Protected Friend Overrides Sub FillControls() Implements IRhewaEditingDialog.FillControls
-        'dynamisches Laden der Überschrift
-        SetName()
+        'dynamisches Laden der Felder
+        SetDataToFormFields()
 
         'dynamisches laden der Nullstellen:
 
         HoleNullstellen()
 
-        'Steuerlemente füllen
-        GetWaagenArt()
+        'EFG Kategorie füllen
 
-        GetBereich1()
+        GetZwischenwert1()
+        GetZwischenwert2()
 
-        GetBereich2()
+        'Select Case BereichNr
+        '    Case 1
+        '        GetBereich1()
+        '    Case 2
+        '        GetBereich2()
+        '    Case 3
+        '        GetBereich3()
+        'End Select
 
-        GetBereich3()
+
+    End Sub
+
+
+    Private Sub GetZwischenwert1()
+        Try
+            Dim Gewicht As Decimal = _Ersatzglast + CType(RadTextBoxZwischenwert1Normallast.Text, Decimal)
+            RadTextBoxZwischenwert1EFG.Text = GetEFG(Gewicht, BereichNr)
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+    Private Sub GetZwischenwert2()
+        Try
+            Dim Gewicht As Decimal = _Ersatzglast + CType(RadTextBoxZwischenwert2Normallast.Text, Decimal)
+            RadTextBoxZwischenwert2EFG.Text = GetEFG(Gewicht, BereichNr)
+        Catch ex As Exception
+
+        End Try
     End Sub
 
 
@@ -235,6 +240,23 @@
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucoZwischenwerte))
         Lokalisierung(Me, resources)
     End Sub
+
+    Private Sub RadTextBoxZwischenwert1Normallast_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxZwischenwert1Normallast.TextChanged
+        GetZwischenwert1()
+    End Sub
+
+    Private Sub RadTextBoxZwischenwert2Normallast_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxZwischenwert2Normallast.TextChanged
+        GetZwischenwert2()
+    End Sub
+
+
+
+
+
+
+
+
+
 
 
 #End Region

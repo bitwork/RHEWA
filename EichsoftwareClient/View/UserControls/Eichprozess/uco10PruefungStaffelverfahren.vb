@@ -142,12 +142,14 @@ Public Class uco10PruefungStaffelverfahren
         _suspendEvents = False
     End Sub
 
-    Private Sub RadButtonStaffel1Bereich1Zwischenwerte_Click(sender As Object, e As EventArgs) Handles RadButtonStaffel1Bereich1Zwischenwerte.Click
+    Private Sub RadButtonZwischenwerte_Click(sender As Object, e As EventArgs) Handles RadButtonStaffel1Bereich1Zwischenwerte.Click, RadButtonStaffel5Bereich3Zwischenwerte.Click, RadButtonStaffel5Bereich2Zwischenwerte.Click, RadButtonStaffel5Bereich1Zwischenwerte.Click, RadButtonStaffel3Bereich3Zwischenwerte.Click, RadButtonStaffel3Bereich2Zwischenwerte.Click, RadButtonStaffel3Bereich1Zwischenwerte.Click, RadButtonStaffel2Bereich3Zwischenwerte.Click, RadButtonStaffel2Bereich2Zwischenwerte.Click, RadButtonStaffel2Bereich1Zwischenwerte.Click, RadButtonStaffel1Bereich3Zwischenwerte.Click, RadButtonStaffel1Bereich2Zwischenwerte.Click
         'TODO Dennis Ostroga
         'Hier muss der neue Dialog geöffnet werden
         Dim staffel As String = GetStaffel(sender)
         Dim bereich As String = GetBereich(sender)
-        Dim FZwischenwerte As New frmZwischenwerte(Me.objEichprozess, staffel, bereich)
+        Dim ersatzgewicht As Decimal = RadTextBoxControlStaffel1Bereich1Last1.Text
+
+        Dim FZwischenwerte As New frmZwischenwerte(Me.objEichprozess, staffel, bereich, ersatzgewicht)
         FZwischenwerte.ShowDialog()
     End Sub
 

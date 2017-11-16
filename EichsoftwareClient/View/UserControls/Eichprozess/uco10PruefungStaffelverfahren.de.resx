@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="RadButtonStaffel5Bereich3Zwischenwerte.Text" xml:space="preserve">
+    <value>Zwischenwerte</value>
+  </data>
   <data name="lblStaffel5Bereich3EFG.Text" xml:space="preserve">
     <value>EFG [kg]</value>
   </data>
@@ -133,6 +136,9 @@
   <data name="RadGroupBoxStaffel5Bereich3.Text" xml:space="preserve">
     <value>Bereich 3</value>
   </data>
+  <data name="RadButtonStaffel5Bereich2Zwischenwerte.Text" xml:space="preserve">
+    <value>Zwischenwerte</value>
+  </data>
   <data name="lblStaffel5Bereich2EFG.Text" xml:space="preserve">
     <value>EFG [kg]</value>
   </data>
@@ -147,6 +153,9 @@
   </data>
   <data name="RadGroupBoxStaffel5Bereich2.Text" xml:space="preserve">
     <value>Bereich 2</value>
+  </data>
+  <data name="RadButtonStaffel5Bereich1Zwischenwerte.Text" xml:space="preserve">
+    <value>Zwischenwerte</value>
   </data>
   <data name="lblStaffel5Bereich1EFG.Text" xml:space="preserve">
     <value>EFG [kg]</value>
@@ -163,6 +172,9 @@
   <data name="RadGroupBoxStaffel5Bereich1.Text" xml:space="preserve">
     <value>Bereich 1</value>
   </data>
+  <data name="RadButtonStaffel4Bereich3Zwischenwerte.Text" xml:space="preserve">
+    <value>Zwischenwerte</value>
+  </data>
   <data name="lblStaffel4Bereich3EFG.Text" xml:space="preserve">
     <value>EFG [kg]</value>
   </data>
@@ -177,6 +189,9 @@
   </data>
   <data name="RadGroupBoxStaffel4Bereich3.Text" xml:space="preserve">
     <value>Bereich 3</value>
+  </data>
+  <data name="RadButtonStaffel4Bereich2Zwischenwerte.Text" xml:space="preserve">
+    <value>Zwischenwerte</value>
   </data>
   <data name="lblStaffel4Bereich2EFG.Text" xml:space="preserve">
     <value>EFG [kg]</value>
@@ -193,6 +208,9 @@
   <data name="RadGroupBoxStaffel4Bereich2.Text" xml:space="preserve">
     <value>Bereich 2</value>
   </data>
+  <data name="RadButtonStaffel4Bereich1Zwischenwerte.Text" xml:space="preserve">
+    <value>Zwischenwerte</value>
+  </data>
   <data name="lblStaffel4Bereich1EFG.Text" xml:space="preserve">
     <value>EFG [kg]</value>
   </data>
@@ -207,6 +225,9 @@
   </data>
   <data name="RadGroupBoxStaffel4Bereich1.Text" xml:space="preserve">
     <value>Bereich 1</value>
+  </data>
+  <data name="RadButtonStaffel3Bereich3Zwischenwerte.Text" xml:space="preserve">
+    <value>Zwischenwerte</value>
   </data>
   <data name="lblStaffel3Bereich3EFG.Text" xml:space="preserve">
     <value>EFG [kg]</value>
@@ -223,6 +244,9 @@
   <data name="RadGroupBoxStaffel3Bereich3.Text" xml:space="preserve">
     <value>Bereich 3</value>
   </data>
+  <data name="RadButtonStaffel3Bereich2Zwischenwerte.Text" xml:space="preserve">
+    <value>Zwischenwerte</value>
+  </data>
   <data name="lblStaffel3Bereich2EFG.Text" xml:space="preserve">
     <value>EFG [kg]</value>
   </data>
@@ -237,6 +261,9 @@
   </data>
   <data name="RadGroupBoxStaffel3Bereich2.Text" xml:space="preserve">
     <value>Bereich 2</value>
+  </data>
+  <data name="RadButtonStaffel3Bereich1Zwischenwerte.Text" xml:space="preserve">
+    <value>Zwischenwerte</value>
   </data>
   <data name="lblStaffel3Bereich1EFG.Text" xml:space="preserve">
     <value>EFG [kg]</value>
@@ -253,6 +280,9 @@
   <data name="RadGroupBoxStaffel3Bereich1.Text" xml:space="preserve">
     <value>Bereich 1</value>
   </data>
+  <data name="RadButtonStaffel2Bereich3Zwischenwerte.Text" xml:space="preserve">
+    <value>Zwischenwerte</value>
+  </data>
   <data name="lblStaffel2Bereich3EFG.Text" xml:space="preserve">
     <value>EFG [kg]</value>
   </data>
@@ -267,6 +297,9 @@
   </data>
   <data name="RadGroupBoxStaffel2Bereich3.Text" xml:space="preserve">
     <value>Bereich 3</value>
+  </data>
+  <data name="RadButtonStaffel2Bereich2Zwischenwerte.Text" xml:space="preserve">
+    <value>Zwischenwerte</value>
   </data>
   <data name="lblStaffel2Bereich2EFG.Size" type="System.Drawing.Size, System.Drawing">
     <value>47, 18</value>
@@ -286,6 +319,9 @@
   <data name="RadGroupBoxStaffel2Bereich2.Text" xml:space="preserve">
     <value>Bereich 2</value>
   </data>
+  <data name="RadButtonStaffel2Bereich1Zwischenwerte.Text" xml:space="preserve">
+    <value>Zwischenwerte</value>
+  </data>
   <data name="lblStaffel2Bereich1EFG.Size" type="System.Drawing.Size, System.Drawing">
     <value>47, 18</value>
   </data>
@@ -303,6 +339,9 @@
   </data>
   <data name="RadGroupBoxStaffel2Bereich1.Text" xml:space="preserve">
     <value>Bereich 1</value>
+  </data>
+  <data name="RadButtonStaffel1Bereich3Zwischenwerte.Text" xml:space="preserve">
+    <value>Zwischenwerte</value>
   </data>
   <data name="lblStaffel1Bereich3EFG.Size" type="System.Drawing.Size, System.Drawing">
     <value>47, 18</value>
@@ -333,6 +372,9 @@
   </data>
   <data name="RadGroupBoxStaffel1Bereich3.Text" xml:space="preserve">
     <value>Bereich 3</value>
+  </data>
+  <data name="RadButtonStaffel1Bereich2Zwischenwerte.Text" xml:space="preserve">
+    <value>Zwischenwerte</value>
   </data>
   <data name="lblStaffel1Bereich2EFG.Size" type="System.Drawing.Size, System.Drawing">
     <value>47, 18</value>
