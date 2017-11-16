@@ -15,7 +15,9 @@ Es gibt einen SQL Replikationsserver. Dieser ist nur von Rhewa Intern zu erreich
 TODO
 Kontrolle Lesemodus Erfolgreiche Eichung RHEWA Alle
 Kontrolle Dateianhang
-
+Zwischenwerte Staffelverfahren
+Export Messprotokoll
+AP+ Andindung (2018)
 
 
 Proxy
