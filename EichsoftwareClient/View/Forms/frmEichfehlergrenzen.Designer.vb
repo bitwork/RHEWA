@@ -24,15 +24,15 @@ Partial Class frmEichfehlergrenzen
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmEichfehlergrenzen))
-        Me.UcoEichfehlergrenzen1 = New EichsoftwareClient.ucoEichfehlergrenzen()
+        Me.UcoEichfehlergrenzen = New EichsoftwareClient.ucoEichfehlergrenzen()
         Me.cmdOK = New Telerik.WinControls.UI.RadButton()
         CType(Me.cmdOK, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'UcoEichfehlergrenzen1
         '
-        resources.ApplyResources(Me.UcoEichfehlergrenzen1, "UcoEichfehlergrenzen1")
-        Me.UcoEichfehlergrenzen1.Name = "UcoEichfehlergrenzen1"
+        resources.ApplyResources(Me.UcoEichfehlergrenzen, "UcoEichfehlergrenzen1")
+        Me.UcoEichfehlergrenzen.Name = "UcoEichfehlergrenzen1"
         '
         'cmdOK
         '
@@ -44,12 +44,12 @@ Partial Class frmEichfehlergrenzen
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.cmdOK)
-        Me.Controls.Add(Me.UcoEichfehlergrenzen1)
+        Me.Controls.Add(Me.UcoEichfehlergrenzen)
         Me.Name = "frmEichfehlergrenzen"
         CType(Me.cmdOK, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents UcoEichfehlergrenzen1 As EichsoftwareClient.ucoEichfehlergrenzen
+    Friend WithEvents UcoEichfehlergrenzen As EichsoftwareClient.ucoEichfehlergrenzen
     Friend WithEvents cmdOK As Telerik.WinControls.UI.RadButton
 End Class

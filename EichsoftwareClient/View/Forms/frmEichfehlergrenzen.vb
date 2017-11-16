@@ -5,11 +5,11 @@
         ' This call is required by the designer.
         InitializeComponent()
 
-        Me.Controls.Remove(Me.UcoEichfehlergrenzen1)
+        Me.Controls.Remove(Me.UcoEichfehlergrenzen)
 
-        Me.UcoEichfehlergrenzen1 = New ucoEichfehlergrenzen(Nothing, pObjEichprozess)
+        Me.UcoEichfehlergrenzen = New ucoEichfehlergrenzen(Nothing, pObjEichprozess)
         ' Add any initialization after the InitializeComponent() call.
-        Me.Controls.Add(UcoEichfehlergrenzen1)
+        Me.Controls.Add(UcoEichfehlergrenzen)
     End Sub
 
     Private Sub cmdOK_Click(sender As Object, e As EventArgs) Handles cmdOK.Click

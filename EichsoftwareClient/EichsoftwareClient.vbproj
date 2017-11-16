@@ -387,6 +387,12 @@
     <Compile Include="View\Forms\frmPlausibiltaetspruefung.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="View\Forms\frmZwischenwerte.Designer.vb">
+      <DependentUpon>frmZwischenwerte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\frmZwischenwerte.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="View\UserControls\Allgemein\CustomVisualItem.vb" />
     <Compile Include="View\UserControls\Allgemein\iRhewaEditingDialog.vb" />
     <Compile Include="View\UserControls\Allgemein\ucoAmpel.Designer.vb">
@@ -459,6 +465,12 @@
       <DependentUpon>uco16Taraeinrichtung.vb</DependentUpon>
     </Compile>
     <Compile Include="View\UserControls\Eichprozess\uco16Taraeinrichtung.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\Allgemein\ucoZwischenwerte.Designer.vb">
+      <DependentUpon>ucoZwischenwerte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\Allgemein\ucoZwischenwerte.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="View\UserControls\Eichprozess\uco_9PruefungLinearitaet.Designer.vb">
@@ -653,6 +665,9 @@
     <EmbeddedResource Include="View\Forms\frmPlausibiltaetspruefung.resx">
       <DependentUpon>frmPlausibiltaetspruefung.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\frmZwischenwerte.resx">
+      <DependentUpon>frmZwischenwerte.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Allgemein\ucoAmpel.resx">
       <DependentUpon>ucoAmpel.vb</DependentUpon>
     </EmbeddedResource>
@@ -673,7 +688,16 @@
     <EmbeddedResource Include="View\UserControls\Allgemein\ucoEichfehlergrenzen.pl.resx">
       <DependentUpon>ucoEichfehlergrenzen.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Allgemein\ucoZwischenwerte.resx">
+      <DependentUpon>ucoZwischenwerte.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\uco10PruefungStaffelverfahren.de-DE.resx">
+      <DependentUpon>uco10PruefungStaffelverfahren.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco10PruefungStaffelverfahren.en.resx">
+      <DependentUpon>uco10PruefungStaffelverfahren.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\uco10PruefungStaffelverfahren.pl-PL.resx">
       <DependentUpon>uco10PruefungStaffelverfahren.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco11PruefungWiederholbarkeitBelastung.en.resx">

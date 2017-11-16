@@ -142,9 +142,19 @@ Public Class uco10PruefungStaffelverfahren
         _suspendEvents = False
     End Sub
 
-
+    Private Sub RadButtonStaffel1Bereich1Zwischenwerte_Click(sender As Object, e As EventArgs) Handles RadButtonStaffel1Bereich1Zwischenwerte.Click
+        'TODO Dennis Ostroga
+        'Hier muss der neue Dialog geöffnet werden
+        Dim staffel As String = GetStaffel(sender)
+        Dim bereich As String = GetBereich(sender)
+        Dim FZwischenwerte As New frmZwischenwerte(Me.objEichprozess, staffel, bereich)
+        FZwischenwerte.ShowDialog()
+    End Sub
 
 #Region "Hilfetexte"
+    Private Sub RadButtonStaffel1Bereich1Zwischenwerte_MouseEnter(sender As Object, e As EventArgs) Handles RadButtonStaffel1Bereich1Zwischenwerte.MouseEnter
+        ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungStaffelverfahrenZwischenwerte)
+    End Sub
     Private Sub RadTextBoxControlStaffel1Bereich1Last1_MouseEnter(sender As Object, e As EventArgs) Handles RadTextBoxControlStaffel1Bereich3Last4.MouseEnter, RadTextBoxControlStaffel1Bereich3Last3.MouseEnter, RadTextBoxControlStaffel1Bereich3Last1.MouseEnter, RadTextBoxControlStaffel1Bereich2Last4.MouseEnter, RadTextBoxControlStaffel1Bereich2Last3.MouseEnter, RadTextBoxControlStaffel1Bereich2Last1.MouseEnter, RadTextBoxControlStaffel1Bereich1Last4.MouseEnter, RadTextBoxControlStaffel1Bereich1Last3.MouseEnter, RadTextBoxControlStaffel1Bereich1Last1.MouseEnter
         ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungStaffelverfahrenNormallast)
     End Sub
@@ -1367,6 +1377,8 @@ Public Class uco10PruefungStaffelverfahren
         End If
         Return True
     End Function
+
+
 
 
 #End Region

@@ -506,6 +506,7 @@ Partial Class uco10PruefungStaffelverfahren
         Me.PictureBox12 = New System.Windows.Forms.PictureBox()
         Me.PictureBox13 = New System.Windows.Forms.PictureBox()
         Me.RadGroupBoxStaffel1Bereich1 = New Telerik.WinControls.UI.RadGroupBox()
+        Me.RadButtonStaffel1Bereich1Zwischenwerte = New Telerik.WinControls.UI.RadButton()
         Me.PictureBox140 = New System.Windows.Forms.PictureBox()
         Me.RadLabel5 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel4 = New Telerik.WinControls.UI.RadLabel()
@@ -1058,6 +1059,7 @@ Partial Class uco10PruefungStaffelverfahren
         CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBoxStaffel1Bereich1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxStaffel1Bereich1.SuspendLayout()
+        CType(Me.RadButtonStaffel1Bereich1Zwischenwerte, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox140, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -4438,6 +4440,7 @@ Partial Class uco10PruefungStaffelverfahren
         '
         resources.ApplyResources(Me.RadGroupBoxStaffel1Bereich1, "RadGroupBoxStaffel1Bereich1")
         Me.RadGroupBoxStaffel1Bereich1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.RadButtonStaffel1Bereich1Zwischenwerte)
         Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.PictureBox140)
         Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.RadLabel5)
         Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.RadLabel4)
@@ -4487,6 +4490,12 @@ Partial Class uco10PruefungStaffelverfahren
         Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.PictureBox1)
         Me.RadGroupBoxStaffel1Bereich1.Controls.Add(Me.PictureBox79)
         Me.RadGroupBoxStaffel1Bereich1.Name = "RadGroupBoxStaffel1Bereich1"
+        '
+        'RadButtonStaffel1Bereich1Zwischenwerte
+        '
+        resources.ApplyResources(Me.RadButtonStaffel1Bereich1Zwischenwerte, "RadButtonStaffel1Bereich1Zwischenwerte")
+        Me.RadButtonStaffel1Bereich1Zwischenwerte.Name = "RadButtonStaffel1Bereich1Zwischenwerte"
+        Me.RadButtonStaffel1Bereich1Zwischenwerte.ThemeName = "ControlDefault"
         '
         'PictureBox140
         '
@@ -5335,6 +5344,7 @@ Partial Class uco10PruefungStaffelverfahren
         CType(Me.RadGroupBoxStaffel1Bereich1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBoxStaffel1Bereich1.ResumeLayout(False)
         Me.RadGroupBoxStaffel1Bereich1.PerformLayout()
+        CType(Me.RadButtonStaffel1Bereich1Zwischenwerte, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox140, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel4, System.ComponentModel.ISupportInitialize).EndInit()
@@ -5926,4 +5936,5 @@ Partial Class uco10PruefungStaffelverfahren
     Friend WithEvents PictureBox141 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox139 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox140 As System.Windows.Forms.PictureBox
+    Friend WithEvents RadButtonStaffel1Bereich1Zwischenwerte As Telerik.WinControls.UI.RadButton
 End Class

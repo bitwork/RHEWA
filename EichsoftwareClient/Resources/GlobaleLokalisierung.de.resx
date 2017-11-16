@@ -646,6 +646,9 @@ RC3          3        15000                        0          2        1100</val
   <data name="Hilfe_PruefungStaffelverfahrenErsatzlastSoll" xml:space="preserve">
     <value>Eintragung des Wertes der mit einer Ersatzlast nachgebildet werden soll.</value>
   </data>
+  <data name="Hilfe_PruefungStaffelverfahrenZwischenwerte" xml:space="preserve">
+    <value>Ablesen und eintragen der Zwischenwerte beim aufbringen der Normalien im Staffelverfahren.</value>
+  </data>
   <data name="Hilfe_PruefungStaffelverfahrenNormallast" xml:space="preserve">
     <value>Ablesen und eintragen des Anzeigewertes der aufgebrachten Normallast.</value>
   </data>

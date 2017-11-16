@@ -651,6 +651,9 @@ RC3          3         15000                        0           2        1100</v
   <data name="Hilfe_PruefungStaffelverfahrenErsatzlastSoll" xml:space="preserve">
     <value>Wpisanie wartości, która ma być zreprodukowana za pomocą ciężaru zastępczego.</value>
   </data>
+  <data name="Hilfe_PruefungStaffelverfahrenZwischenwerte" xml:space="preserve">
+    <value>Odczytywanie i wprowadzanie wartości pośrednich przy stosowaniu standardów w procedurze rozłożenia.</value>
+  </data>
   <data name="Hilfe_PruefungStaffelverfahrenNormallast" xml:space="preserve">
     <value>Odczytanie i wpisanie wyświetlanej wartości naniesionego obciążenia wzorcowego.</value>
   </data>

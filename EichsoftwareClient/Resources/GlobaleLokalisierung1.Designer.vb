@@ -1105,6 +1105,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Ablesen und eintragen der Zwischenwerte beim aufbringen der Normalien im Staffelverfahren..
+        '''</summary>
+        Friend Shared ReadOnly Property Hilfe_PruefungStaffelverfahrenZwischenwerte() As String
+            Get
+                Return ResourceManager.GetString("Hilfe_PruefungStaffelverfahrenZwischenwerte", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to by lever works testing the tare function in accordance to EN 45501 Nr. 3.5.3.3 - 3.5.3.4, A 4.6.
         '''</summary>
         Friend Shared ReadOnly Property Hilfe_PruefungTaraEinrichtung() As String
