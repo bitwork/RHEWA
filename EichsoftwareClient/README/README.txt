@@ -16,6 +16,9 @@ TODO
 Kontrolle Lesemodus Erfolgreiche Eichung RHEWA Alle
 Kontrolle Dateianhang
 Zwischenwerte Staffelverfahren
+	-Einlesen der Formularfelder aus ParentDialog
+	-Hinweis Dialog beim Abbrechen
+	-Wenn sich Ersatzlast ändert => Hinweis Dialog
 Export Messprotokoll
 AP+ Andindung (2018)
 

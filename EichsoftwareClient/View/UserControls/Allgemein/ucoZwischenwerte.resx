@@ -730,13 +730,13 @@
     <value>344, 63</value>
   </data>
   <data name="lblBis1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 18</value>
+    <value>69, 18</value>
   </data>
   <data name="lblBis1.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
   <data name="lblBis1.Text" xml:space="preserve">
-    <value>(Ersatzlast + Normallast) [kg]</value>
+    <value>Anzeige [kg]</value>
   </data>
   <data name="&gt;&gt;lblBis1.Name" xml:space="preserve">
     <value>lblBis1</value>

@@ -147,7 +147,19 @@ Public Class uco10PruefungStaffelverfahren
         'Hier muss der neue Dialog geöffnet werden
         Dim staffel As String = GetStaffel(sender)
         Dim bereich As String = GetBereich(sender)
-        Dim ersatzgewicht As Decimal = RadTextBoxControlStaffel1Bereich1Last1.Text
+        Dim ersatzgewicht As Decimal
+        Try
+
+            'TODO Dennis OStroga - bitwork GmbH - Aktuelle TextBox einlesen
+            Dim ControlBlank = Controls("RadTextBoxControlStaffel1Bereich1Last1")
+            Dim Control As Telerik.WinControls.UI.RadTextBox = CType(ControlBlank, Telerik.WinControls.UI.RadTextBox)
+
+            'RadTextBoxControlStaffel2Bereich1Last1
+            ersatzgewicht = Control.Text 'RadTextBoxControlStaffel1Bereich1Last1.Text
+
+        Catch ex As Exception
+
+        End Try
 
         Dim FZwischenwerte As New frmZwischenwerte(Me.objEichprozess, staffel, bereich, ersatzgewicht)
         FZwischenwerte.ShowDialog()
